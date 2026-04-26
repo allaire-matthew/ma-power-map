@@ -4,6 +4,18 @@ import { MapBackground } from './MapBackground'
 import { usePersistence } from './persistence'
 import type { LayerState } from './LayerToggles'
 
+export function recenterCamera(editor: Editor) {
+  const el = editor.getContainer()
+  const vw = el.clientWidth
+  const vh = el.clientHeight
+  const z = Math.min(vw / 1700, vh / 1200)
+  editor.setCamera({
+    x: (vw - 1600 * z) / (2 * z),
+    y: (vh - 1100 * z) / (2 * z),
+    z,
+  })
+}
+
 export function Board({
   layers,
   onEditor,
@@ -21,28 +33,18 @@ export function Board({
       setCamera({ x: c.x, y: c.y, z: c.z })
     }
     update()
-    const unlisten = editor.store.listen(update, {
-      source: 'user',
-      scope: 'session',
-    })
+    // Listen to ALL camera changes, including programmatic ones from
+    // setCamera or loadSnapshot — otherwise the SVG falls out of sync
+    // when persistence rehydrates a stale camera.
+    const unlisten = editor.store.listen(update)
     return () => unlisten()
   }, [editor])
 
   useEffect(() => {
     if (!editor) return
-    // Frame the projected MA box (1600 x 1100) in the viewport on first mount.
-    const cam = editor.getCamera()
-    if (cam.x === 0 && cam.y === 0 && cam.z === 1) {
-      const el = editor.getContainer()
-      const vw = el.clientWidth
-      const vh = el.clientHeight
-      const z = Math.min(vw / 1700, vh / 1200)
-      editor.setCamera({
-        x: (vw - 1600 * z) / (2 * z),
-        y: (vh - 1100 * z) / (2 * z),
-        z,
-      })
-    }
+    // Always recenter on mount so users land on a framed view of MA
+    // regardless of whatever camera position got persisted.
+    recenterCamera(editor)
   }, [editor])
 
   usePersistence(editor)

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { Editor } from 'tldraw'
-import { Board } from './Board'
+import { Board, recenterCamera } from './Board'
 import { LayerToggles, type LayerState, defaultLayers } from './LayerToggles'
 import { FeatureRequestPanel } from './FeatureRequestPanel'
 import { IrlCouncilPanel } from './IrlCouncilPanel'
@@ -33,6 +33,11 @@ export default function App() {
     if (!confirm('Delete all shapes on the board?')) return
     const ids = Array.from(editor.getCurrentPageShapeIds())
     if (ids.length) editor.deleteShapes(ids)
+    recenterCamera(editor)
+  }
+
+  const recenter = () => {
+    if (editor) recenterCamera(editor)
   }
 
   return (
@@ -44,6 +49,14 @@ export default function App() {
         <div className="h-5 w-px bg-slate-200" />
         <LayerToggles value={layers} onChange={setLayers} />
         <div className="ml-auto flex items-center gap-2">
+          <button
+            type="button"
+            onClick={recenter}
+            className="text-sm px-3 py-1.5 rounded border border-slate-300 hover:bg-slate-50 text-slate-700"
+            title="Recenter map on Massachusetts"
+          >
+            Recenter
+          </button>
           <button
             type="button"
             onClick={clearBoard}
