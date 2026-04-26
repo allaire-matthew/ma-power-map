@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { Tldraw, type Editor } from 'tldraw'
+import { useEffect, useMemo, useState } from 'react'
+import { Tldraw, type Editor, type TLComponents } from 'tldraw'
 import { MapBackground } from './MapBackground'
 import { usePersistence } from './persistence'
 import type { LayerState } from './LayerToggles'
@@ -41,13 +41,19 @@ export function Board({ layers }: { layers: LayerState }) {
 
   usePersistence(editor)
 
+  const components = useMemo<TLComponents>(
+    () => ({ Background: () => null }),
+    [],
+  )
+
   return (
     <div className="absolute inset-0">
       <MapBackground camera={camera} layers={layers} />
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 tldraw-transparent">
         <Tldraw
           onMount={(e) => setEditor(e)}
           options={{ maxPages: 1 }}
+          components={components}
         />
       </div>
     </div>

@@ -11,3 +11,10 @@ body {
   background: #f8fafc;
   color: #0f172a;
 }
+
+/* Let the SVG basemap show through tldraw's canvas. */
+.tldraw-transparent .tl-container,
+.tldraw-transparent .tl-background,
+.tldraw-transparent .tl-canvas {
+  background: transparent !important;
+}
