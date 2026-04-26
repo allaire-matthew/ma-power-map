@@ -5,6 +5,7 @@ export type LayerKey =
   | 'congressional'
   | 'stateHouse'
   | 'stateSenate'
+  | 'irlCouncil'
 
 export type LayerState = Record<LayerKey, boolean>
 
@@ -15,6 +16,7 @@ export const defaultLayers: LayerState = {
   congressional: false,
   stateHouse: false,
   stateSenate: false,
+  irlCouncil: false,
 }
 
 const LABELS: { key: LayerKey; label: string; depends?: LayerKey }[] = [
@@ -24,6 +26,7 @@ const LABELS: { key: LayerKey; label: string; depends?: LayerKey }[] = [
   { key: 'congressional', label: 'US House' },
   { key: 'stateHouse', label: 'State House' },
   { key: 'stateSenate', label: 'State Senate' },
+  { key: 'irlCouncil', label: 'IRL Council' },
 ]
 
 export function LayerToggles({

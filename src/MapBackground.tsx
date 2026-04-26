@@ -7,6 +7,7 @@ import {
   type ProjectedLayer,
 } from './geo'
 import type { LayerState } from './LayerToggles'
+import { useIrlCouncils } from './irlCouncils'
 
 const STYLES: Record<
   LayerName,
@@ -50,6 +51,7 @@ export function MapBackground({
   layers: LayerState
 }) {
   const [data, setData] = useState<Partial<Record<LayerName, ProjectedLayer>>>({})
+  const { marked } = useIrlCouncils()
 
   useEffect(() => {
     const wanted = ORDER.filter((k) => layerEnabled(k, layers))
@@ -106,6 +108,19 @@ export function MapBackground({
             </g>
           )
         })}
+
+        {layers.irlCouncil &&
+          data.towns?.features.map((f) =>
+            marked[f.id] ? (
+              <path
+                key={`irl-${f.id}`}
+                d={f.d}
+                fill="rgba(16, 185, 129, 0.45)"
+                stroke="#047857"
+                strokeWidth={1.2 / camera.z}
+              />
+            ) : null,
+          )}
 
         {layers.towns &&
           layers.townLabels &&

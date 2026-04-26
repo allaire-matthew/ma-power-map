@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
+import type { Editor } from 'tldraw'
 import { Board } from './Board'
 import { LayerToggles, type LayerState, defaultLayers } from './LayerToggles'
 import { FeatureRequestPanel } from './FeatureRequestPanel'
+import { IrlCouncilPanel } from './IrlCouncilPanel'
 
 const LS_KEY = 'ma-power-map.layers'
 
@@ -15,13 +17,23 @@ function loadLayers(): LayerState {
   }
 }
 
+type Drawer = null | 'features' | 'irl'
+
 export default function App() {
   const [layers, setLayers] = useState<LayerState>(loadLayers)
-  const [drawerOpen, setDrawerOpen] = useState(false)
+  const [drawer, setDrawer] = useState<Drawer>(null)
+  const [editor, setEditor] = useState<Editor | null>(null)
 
   useEffect(() => {
     localStorage.setItem(LS_KEY, JSON.stringify(layers))
   }, [layers])
+
+  const clearBoard = () => {
+    if (!editor) return
+    if (!confirm('Delete all shapes on the board?')) return
+    const ids = Array.from(editor.getCurrentPageShapeIds())
+    if (ids.length) editor.deleteShapes(ids)
+  }
 
   return (
     <div className="flex flex-col h-screen w-screen">
@@ -31,11 +43,34 @@ export default function App() {
         </h1>
         <div className="h-5 w-px bg-slate-200" />
         <LayerToggles value={layers} onChange={setLayers} />
-        <div className="ml-auto">
+        <div className="ml-auto flex items-center gap-2">
           <button
             type="button"
-            onClick={() => setDrawerOpen((o) => !o)}
-            className="text-sm px-3 py-1.5 rounded border border-slate-300 hover:bg-slate-50"
+            onClick={clearBoard}
+            className="text-sm px-3 py-1.5 rounded border border-slate-300 hover:bg-slate-50 text-slate-700"
+            title="Delete all shapes on the board"
+          >
+            Clear board
+          </button>
+          <button
+            type="button"
+            onClick={() => setDrawer((d) => (d === 'irl' ? null : 'irl'))}
+            className={`text-sm px-3 py-1.5 rounded border ${
+              drawer === 'irl'
+                ? 'border-emerald-600 bg-emerald-50 text-emerald-800'
+                : 'border-slate-300 hover:bg-slate-50'
+            }`}
+          >
+            IRL Councils
+          </button>
+          <button
+            type="button"
+            onClick={() => setDrawer((d) => (d === 'features' ? null : 'features'))}
+            className={`text-sm px-3 py-1.5 rounded border ${
+              drawer === 'features'
+                ? 'border-indigo-600 bg-indigo-50 text-indigo-800'
+                : 'border-slate-300 hover:bg-slate-50'
+            }`}
           >
             Request a feature
           </button>
@@ -43,10 +78,17 @@ export default function App() {
       </header>
 
       <main className="flex-1 relative min-h-0">
-        <Board layers={layers} />
+        <Board layers={layers} onEditor={setEditor} />
       </main>
 
-      <FeatureRequestPanel open={drawerOpen} onClose={() => setDrawerOpen(false)} />
+      <FeatureRequestPanel
+        open={drawer === 'features'}
+        onClose={() => setDrawer(null)}
+      />
+      <IrlCouncilPanel
+        open={drawer === 'irl'}
+        onClose={() => setDrawer(null)}
+      />
     </div>
   )
 }

@@ -4,7 +4,13 @@ import { MapBackground } from './MapBackground'
 import { usePersistence } from './persistence'
 import type { LayerState } from './LayerToggles'
 
-export function Board({ layers }: { layers: LayerState }) {
+export function Board({
+  layers,
+  onEditor,
+}: {
+  layers: LayerState
+  onEditor?: (e: Editor) => void
+}) {
   const [editor, setEditor] = useState<Editor | null>(null)
   const [camera, setCamera] = useState({ x: 0, y: 0, z: 1 })
 
@@ -51,7 +57,10 @@ export function Board({ layers }: { layers: LayerState }) {
       <MapBackground camera={camera} layers={layers} />
       <div className="absolute inset-0 tldraw-transparent">
         <Tldraw
-          onMount={(e) => setEditor(e)}
+          onMount={(e) => {
+            setEditor(e)
+            onEditor?.(e)
+          }}
           options={{ maxPages: 1 }}
           components={components}
         />
