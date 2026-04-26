@@ -46,12 +46,18 @@ fetch "$TIGER/COUSUB/tl_2024_25_cousub.zip"     "$TMP/cousub.zip"
 fetch "$TIGER/CD/tl_2024_25_cd119.zip"          "$TMP/cd119.zip"
 fetch "$TIGER/SLDL/tl_2024_25_sldl.zip"         "$TMP/sldl.zip"
 fetch "$TIGER/SLDU/tl_2024_25_sldu.zip"         "$TMP/sldu.zip"
+fetch "$TIGER/UNSD/tl_2024_25_unsd.zip"         "$TMP/unsd.zip"
+fetch "$TIGER/ELSD/tl_2024_25_elsd.zip"         "$TMP/elsd.zip"
+fetch "$TIGER/SCSD/tl_2024_25_scsd.zip"         "$TMP/scsd.zip"
 
 unzip_to "$TMP/county.zip" "$TMP/county"
 unzip_to "$TMP/cousub.zip" "$TMP/cousub"
 unzip_to "$TMP/cd119.zip"  "$TMP/cd119"
 unzip_to "$TMP/sldl.zip"   "$TMP/sldl"
 unzip_to "$TMP/sldu.zip"   "$TMP/sldu"
+unzip_to "$TMP/unsd.zip"   "$TMP/unsd"
+unzip_to "$TMP/elsd.zip"   "$TMP/elsd"
+unzip_to "$TMP/scsd.zip"   "$TMP/scsd"
 
 # ---- 2. fetch population (Census 2020 DHC, by county subdivision) -----------
 POP_JSON="$TMP/pop.json"
@@ -86,11 +92,12 @@ $MS \
   -rename-fields name=NAME \
   -o format=geojson precision=0.0001 "$OUT/ma-counties.geojson"
 
-# ---- 4. towns (already MA-only; join population) ----------------------------
+# ---- 4. towns (already MA-only; filter water/non-MCD; join population) -----
 echo "==> building ma-towns.geojson with population"
 $MS \
   -i "$TMP/cousub/tl_2024_25_cousub.shp" \
-  -simplify 6% keep-shapes \
+  -filter 'ALAND > 0' \
+  -simplify 3% keep-shapes \
   -filter-fields STATEFP,COUNTYFP,COUSUBFP,GEOID,NAME,NAMELSAD \
   -join "$POP_CSV" keys=GEOID,GEOID field-types=GEOID:str,population:num \
   -rename-fields name=NAME,fullName=NAMELSAD \
@@ -145,6 +152,23 @@ $MS \
   -filter-fields STATEFP,SLDUST,GEOID,NAMELSAD \
   -rename-fields name=NAMELSAD \
   -o format=geojson precision=0.0001 "$OUT/ma-state-senate.geojson"
+
+# ---- 8. school districts (UNSD + ELSD + SCSD merged) ------------------------
+# MA uses unified regional districts (UNSD) for most regions plus stand-alone
+# elementary (ELSD) and secondary (SCSD) districts elsewhere. Combine all three
+# into one layer with a `kind` label (Unified / Elementary / Secondary).
+echo "==> building ma-school-districts.geojson"
+$MS \
+  -i "$TMP/unsd/tl_2024_25_unsd.shp" name=u \
+  -filter-fields target=u GEOID,NAME -each 'this.properties.kind="Unified"' target=u \
+  -i "$TMP/elsd/tl_2024_25_elsd.shp" name=e \
+  -filter-fields target=e GEOID,NAME -each 'this.properties.kind="Elementary"' target=e \
+  -i "$TMP/scsd/tl_2024_25_scsd.shp" name=s \
+  -filter-fields target=s GEOID,NAME -each 'this.properties.kind="Secondary"' target=s \
+  -merge-layers target=u,e,s force \
+  -rename-fields name=NAME \
+  -simplify 5% keep-shapes \
+  -o format=geojson precision=0.0001 "$OUT/ma-school-districts.geojson"
 
 echo
 echo "==> done. file sizes:"

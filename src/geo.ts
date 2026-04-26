@@ -14,6 +14,7 @@ export type ProjectedFeature = {
   d: string
   centroid: [number, number]
   population?: number
+  kind?: string
 }
 
 export type ProjectedLayer = {
@@ -26,6 +27,7 @@ export type LayerName =
   | 'congressional'
   | 'stateHouse'
   | 'stateSenate'
+  | 'schoolDistricts'
 
 const FILES: Record<LayerName, string> = {
   counties: 'ma-counties.geojson',
@@ -33,6 +35,7 @@ const FILES: Record<LayerName, string> = {
   congressional: 'ma-congressional.geojson',
   stateHouse: 'ma-state-house.geojson',
   stateSenate: 'ma-state-senate.geojson',
+  schoolDistricts: 'ma-school-districts.geojson',
 }
 
 let projectionPromise: Promise<ReturnType<typeof geoIdentity>> | null = null
@@ -90,12 +93,15 @@ export async function loadLayer(name: LayerName): Promise<ProjectedLayer> {
               typeof props.population === 'number'
                 ? (props.population as number)
                 : undefined
+            const kind =
+              typeof props.kind === 'string' ? (props.kind as string) : undefined
             return {
               id,
               name,
               d,
               centroid: [xy[0], xy[1]] as [number, number],
               population,
+              kind,
             }
           }),
         }

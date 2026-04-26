@@ -45,6 +45,13 @@ const STYLES: Record<
     dash: '6 3',
     label: 'MA Senate district',
   },
+  schoolDistricts: {
+    stroke: '#ca8a04',
+    fill: 'rgba(202,138,4,0.05)',
+    strokeWidth: 0.9,
+    dash: '5 2 1 2',
+    label: 'School district',
+  },
 }
 
 // Render order = z-order. Towns first (bottom, solid fill); outline layers on
@@ -53,6 +60,7 @@ const STYLES: Record<
 const ORDER: LayerName[] = [
   'towns',
   'counties',
+  'schoolDistricts',
   'congressional',
   'stateHouse',
   'stateSenate',
@@ -237,7 +245,9 @@ function FeatureCard({
       <div className="flex items-start justify-between p-2 border-b border-slate-200">
         <div>
           <div className="text-[11px] uppercase tracking-wide text-slate-500">
-            {STYLES[layer].label}
+            {layer === 'schoolDistricts' && feature.kind
+              ? `${feature.kind} school district`
+              : STYLES[layer].label}
           </div>
           <div className="font-semibold text-slate-900 leading-tight">
             {feature.name}
@@ -292,5 +302,7 @@ function layerEnabled(k: LayerName, l: LayerState): boolean {
       return l.stateHouse
     case 'stateSenate':
       return l.stateSenate
+    case 'schoolDistricts':
+      return l.schoolDistricts
   }
 }
