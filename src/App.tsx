@@ -4,6 +4,7 @@ import { Board, recenterCamera } from './Board'
 import { LayerToggles, type LayerState, defaultLayers } from './LayerToggles'
 import { FeatureRequestPanel } from './FeatureRequestPanel'
 import { IrlCouncilPanel } from './IrlCouncilPanel'
+import type { Selection } from './MapBackground'
 
 const LS_KEY = 'ma-power-map.layers'
 
@@ -23,10 +24,24 @@ export default function App() {
   const [layers, setLayers] = useState<LayerState>(loadLayers)
   const [drawer, setDrawer] = useState<Drawer>(null)
   const [editor, setEditor] = useState<Editor | null>(null)
+  const [inspect, setInspect] = useState(false)
+  const [selected, setSelected] = useState<Selection | null>(null)
 
   useEffect(() => {
     localStorage.setItem(LS_KEY, JSON.stringify(layers))
   }, [layers])
+
+  useEffect(() => {
+    if (!inspect) setSelected(null)
+  }, [inspect])
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelected(null)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
 
   const clearBoard = () => {
     if (!editor) return
@@ -49,6 +64,18 @@ export default function App() {
         <div className="h-5 w-px bg-slate-200" />
         <LayerToggles value={layers} onChange={setLayers} />
         <div className="ml-auto flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setInspect((v) => !v)}
+            className={`text-sm px-3 py-1.5 rounded border ${
+              inspect
+                ? 'border-indigo-600 bg-indigo-50 text-indigo-800'
+                : 'border-slate-300 hover:bg-slate-50 text-slate-700'
+            }`}
+            title="Click features to see info instead of drawing"
+          >
+            Inspect
+          </button>
           <button
             type="button"
             onClick={recenter}
@@ -91,7 +118,14 @@ export default function App() {
       </header>
 
       <main className="flex-1 relative min-h-0">
-        <Board layers={layers} onEditor={setEditor} />
+        <Board
+          layers={layers}
+          inspect={inspect}
+          selected={selected}
+          onSelect={setSelected}
+          onDismiss={() => setSelected(null)}
+          onEditor={setEditor}
+        />
       </main>
 
       <FeatureRequestPanel

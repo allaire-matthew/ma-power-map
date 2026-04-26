@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
 import {
   loadLayer,
-  MAP_W,
-  MAP_H,
   type LayerName,
+  type ProjectedFeature,
   type ProjectedLayer,
 } from './geo'
 import type { LayerState } from './LayerToggles'
@@ -11,30 +10,46 @@ import { useIrlCouncils } from './irlCouncils'
 
 const STYLES: Record<
   LayerName,
-  { stroke: string; fill: string; strokeWidth: number; dash?: string }
+  { stroke: string; fill: string; strokeWidth: number; dash?: string; label: string }
 > = {
-  counties: { stroke: '#475569', fill: 'transparent', strokeWidth: 1.4 },
-  towns: { stroke: '#94a3b8', fill: '#f1f5f9', strokeWidth: 0.5 },
+  counties: {
+    stroke: '#475569',
+    fill: 'transparent',
+    strokeWidth: 1.4,
+    label: 'County',
+  },
+  towns: {
+    stroke: '#94a3b8',
+    fill: '#f1f5f9',
+    strokeWidth: 0.5,
+    label: 'Town',
+  },
   congressional: {
     stroke: '#7c3aed',
     fill: 'rgba(124,58,237,0.04)',
     strokeWidth: 1.2,
     dash: '4 3',
+    label: 'US House district',
   },
   stateHouse: {
     stroke: '#0ea5e9',
     fill: 'transparent',
     strokeWidth: 0.7,
     dash: '2 2',
+    label: 'MA House district',
   },
   stateSenate: {
     stroke: '#dc2626',
     fill: 'transparent',
     strokeWidth: 1.0,
     dash: '6 3',
+    label: 'MA Senate district',
   },
 }
 
+// Render order = z-order. Towns first (bottom, solid fill); outline layers on
+// top so they remain visible. Click order follows: town body clicks land on
+// the town; clicks on a district stroke land on the district.
 const ORDER: LayerName[] = [
   'towns',
   'counties',
@@ -43,15 +58,30 @@ const ORDER: LayerName[] = [
   'stateSenate',
 ]
 
+export type Selection = {
+  layer: LayerName
+  geoid: string
+  x: number
+  y: number
+}
+
 export function MapBackground({
   camera,
   layers,
+  inspect,
+  selected,
+  onSelect,
+  onDismiss,
 }: {
   camera: { x: number; y: number; z: number }
   layers: LayerState
+  inspect: boolean
+  selected: Selection | null
+  onSelect: (s: Selection) => void
+  onDismiss: () => void
 }) {
   const [data, setData] = useState<Partial<Record<LayerName, ProjectedLayer>>>({})
-  const { marked } = useIrlCouncils()
+  const { marked, toggle: toggleIrl } = useIrlCouncils()
 
   useEffect(() => {
     const wanted = ORDER.filter((k) => layerEnabled(k, layers))
@@ -71,87 +101,182 @@ export function MapBackground({
     }
   }, [layers])
 
-  // tldraw camera: screen = world * z + (cam.x, cam.y) * z
-  // so SVG transform for world space is: scale(z) translate(cam.x, cam.y)
   const t = `translate(${camera.x * camera.z} ${camera.y * camera.z}) scale(${camera.z})`
 
+  const selectedFeature: ProjectedFeature | null =
+    (selected && data[selected.layer]?.features.find((f) => f.id === selected.geoid)) ??
+    null
+
   return (
-    <svg
-      className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{ background: '#f8fafc' }}
-    >
-      <g transform={t}>
-        {ORDER.map((k) => {
-          if (!layerEnabled(k, layers)) return null
-          const layer = data[k]
-          if (!layer) return null
-          const s = STYLES[k]
-          return (
-            <g key={k}>
-              {layer.features.map((f) => (
+    <>
+      <svg
+        className="absolute inset-0 w-full h-full"
+        style={{
+          background: '#f8fafc',
+          pointerEvents: inspect ? 'auto' : 'none',
+        }}
+        onClick={(e) => {
+          if (inspect && e.target === e.currentTarget) onDismiss()
+        }}
+      >
+        <g transform={t}>
+          {ORDER.map((k) => {
+            if (!layerEnabled(k, layers)) return null
+            const layer = data[k]
+            if (!layer) return null
+            const s = STYLES[k]
+            return (
+              <g key={k}>
+                {layer.features.map((f) => (
+                  <path
+                    key={f.id}
+                    d={f.d}
+                    fill={s.fill}
+                    stroke={s.stroke}
+                    strokeWidth={s.strokeWidth / camera.z}
+                    strokeDasharray={
+                      s.dash
+                        ? s.dash
+                            .split(' ')
+                            .map((n) => Number(n) / camera.z)
+                            .join(' ')
+                        : undefined
+                    }
+                    style={{
+                      cursor: inspect ? 'pointer' : undefined,
+                      pointerEvents: inspect ? 'visiblePainted' : 'none',
+                    }}
+                    onClick={
+                      inspect
+                        ? (ev) => {
+                            ev.stopPropagation()
+                            onSelect({
+                              layer: k,
+                              geoid: f.id,
+                              x: ev.clientX,
+                              y: ev.clientY,
+                            })
+                          }
+                        : undefined
+                    }
+                  />
+                ))}
+              </g>
+            )
+          })}
+
+          {layers.irlCouncil &&
+            data.towns?.features.map((f) =>
+              marked[f.id] ? (
                 <path
-                  key={f.id}
+                  key={`irl-${f.id}`}
                   d={f.d}
-                  fill={s.fill}
-                  stroke={s.stroke}
-                  strokeWidth={s.strokeWidth / camera.z}
-                  strokeDasharray={
-                    s.dash
-                      ? s.dash
-                          .split(' ')
-                          .map((n) => Number(n) / camera.z)
-                          .join(' ')
-                      : undefined
-                  }
+                  fill="rgba(16, 185, 129, 0.45)"
+                  stroke="#047857"
+                  strokeWidth={1.2 / camera.z}
+                  pointerEvents="none"
                 />
-              ))}
-            </g>
-          )
-        })}
+              ) : null,
+            )}
 
-        {layers.irlCouncil &&
-          data.towns?.features.map((f) =>
-            marked[f.id] ? (
-              <path
-                key={`irl-${f.id}`}
-                d={f.d}
-                fill="rgba(16, 185, 129, 0.45)"
-                stroke="#047857"
-                strokeWidth={1.2 / camera.z}
+          {selected && selectedFeature && (
+            <path
+              d={selectedFeature.d}
+              fill="rgba(99, 102, 241, 0.18)"
+              stroke="#4f46e5"
+              strokeWidth={1.8 / camera.z}
+              pointerEvents="none"
+            />
+          )}
+        </g>
+      </svg>
+
+      {selected && selectedFeature && (
+        <FeatureCard
+          layer={selected.layer}
+          feature={selectedFeature}
+          x={selected.x}
+          y={selected.y}
+          isCouncil={!!marked[selectedFeature.id]}
+          onToggleCouncil={() => toggleIrl(selectedFeature.id)}
+          onClose={onDismiss}
+        />
+      )}
+    </>
+  )
+}
+
+function FeatureCard({
+  layer,
+  feature,
+  x,
+  y,
+  isCouncil,
+  onToggleCouncil,
+  onClose,
+}: {
+  layer: LayerName
+  feature: ProjectedFeature
+  x: number
+  y: number
+  isCouncil: boolean
+  onToggleCouncil: () => void
+  onClose: () => void
+}) {
+  const W = 240
+  const left = Math.max(8, Math.min(window.innerWidth - W - 8, x - W / 2))
+  const top = Math.max(56, y + 12)
+  return (
+    <div
+      role="dialog"
+      onClick={(e) => e.stopPropagation()}
+      onMouseDown={(e) => e.stopPropagation()}
+      className="absolute z-40 bg-white border border-slate-300 rounded shadow-md text-sm"
+      style={{ left, top, width: W }}
+    >
+      <div className="flex items-start justify-between p-2 border-b border-slate-200">
+        <div>
+          <div className="text-[11px] uppercase tracking-wide text-slate-500">
+            {STYLES[layer].label}
+          </div>
+          <div className="font-semibold text-slate-900 leading-tight">
+            {feature.name}
+          </div>
+        </div>
+        <button
+          onClick={onClose}
+          className="text-slate-400 hover:text-slate-700 leading-none px-1 -mt-0.5"
+          aria-label="Close"
+        >
+          ×
+        </button>
+      </div>
+      <div className="p-2 space-y-2">
+        {layer === 'towns' && (
+          <>
+            <div className="text-slate-700">
+              Population:{' '}
+              <span className="font-medium tabular-nums">
+                {feature.population != null
+                  ? feature.population.toLocaleString()
+                  : '—'}
+              </span>
+            </div>
+            <label className="flex items-center gap-2 cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={isCouncil}
+                onChange={onToggleCouncil}
+                className="accent-emerald-600"
               />
-            ) : null,
-          )}
-
-        {layers.towns &&
-          layers.townLabels &&
-          data.towns?.features.map((f) =>
-            f.population != null ? (
-              <text
-                key={`pop-${f.id}`}
-                x={f.centroid[0]}
-                y={f.centroid[1]}
-                fontSize={Math.max(7, 9 / camera.z)}
-                fill="#334155"
-                textAnchor="middle"
-                dominantBaseline="middle"
-                style={{
-                  paintOrder: 'stroke',
-                  stroke: 'rgba(248,250,252,0.85)',
-                  strokeWidth: 3 / camera.z,
-                }}
-              >
-                {f.population.toLocaleString()}
-              </text>
-            ) : null,
-          )}
-      </g>
-
-      <g
-        transform={t}
-        pointerEvents="none"
-        style={{ mixBlendMode: 'multiply' }}
-      />
-    </svg>
+              <span className={isCouncil ? 'text-emerald-800 font-medium' : ''}>
+                IRL Council
+              </span>
+            </label>
+          </>
+        )}
+      </div>
+    </div>
   )
 }
 
@@ -169,6 +294,3 @@ function layerEnabled(k: LayerName, l: LayerState): boolean {
       return l.stateSenate
   }
 }
-
-void MAP_W
-void MAP_H

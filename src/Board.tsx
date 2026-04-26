@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Tldraw, type Editor, type TLComponents } from 'tldraw'
-import { MapBackground } from './MapBackground'
+import { MapBackground, type Selection } from './MapBackground'
 import { usePersistence } from './persistence'
 import type { LayerState } from './LayerToggles'
 
@@ -18,9 +18,17 @@ export function recenterCamera(editor: Editor) {
 
 export function Board({
   layers,
+  inspect,
+  selected,
+  onSelect,
+  onDismiss,
   onEditor,
 }: {
   layers: LayerState
+  inspect: boolean
+  selected: Selection | null
+  onSelect: (s: Selection) => void
+  onDismiss: () => void
   onEditor?: (e: Editor) => void
 }) {
   const [editor, setEditor] = useState<Editor | null>(null)
@@ -56,8 +64,19 @@ export function Board({
 
   return (
     <div className="absolute inset-0">
-      <MapBackground camera={camera} layers={layers} />
-      <div className="absolute inset-0 tldraw-transparent">
+      <MapBackground
+        camera={camera}
+        layers={layers}
+        inspect={inspect}
+        selected={selected}
+        onSelect={onSelect}
+        onDismiss={onDismiss}
+      />
+      <div
+        className={`absolute inset-0 tldraw-transparent ${
+          inspect ? 'tldraw-inert' : ''
+        }`}
+      >
         <Tldraw
           onMount={(e) => {
             setEditor(e)

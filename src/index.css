@@ -18,3 +18,9 @@ body {
 .tldraw-transparent .tl-canvas {
   background: transparent !important;
 }
+
+/* Inspect mode: mute tldraw input so SVG town paths can capture clicks. */
+.tldraw-inert,
+.tldraw-inert .tl-container {
+  pointer-events: none !important;
+}

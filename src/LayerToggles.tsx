@@ -1,7 +1,6 @@
 export type LayerKey =
   | 'counties'
   | 'towns'
-  | 'townLabels'
   | 'congressional'
   | 'stateHouse'
   | 'stateSenate'
@@ -12,7 +11,6 @@ export type LayerState = Record<LayerKey, boolean>
 export const defaultLayers: LayerState = {
   counties: false,
   towns: true,
-  townLabels: false,
   congressional: false,
   stateHouse: false,
   stateSenate: false,
@@ -22,7 +20,6 @@ export const defaultLayers: LayerState = {
 const LABELS: { key: LayerKey; label: string; depends?: LayerKey }[] = [
   { key: 'counties', label: 'Counties' },
   { key: 'towns', label: 'Towns' },
-  { key: 'townLabels', label: 'Town pop.', depends: 'towns' },
   { key: 'congressional', label: 'US House' },
   { key: 'stateHouse', label: 'State House' },
   { key: 'stateSenate', label: 'State Senate' },
