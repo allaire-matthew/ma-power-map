@@ -1,4 +1,8 @@
-import { geoMercator, geoPath, geoCentroid, type GeoPermissibleObjects } from 'd3-geo'
+import {
+  geoIdentity,
+  geoPath,
+  type GeoPermissibleObjects,
+} from 'd3-geo'
 import type { Feature, FeatureCollection } from 'geojson'
 
 export const MAP_W = 1600
@@ -31,7 +35,7 @@ const FILES: Record<LayerName, string> = {
   stateSenate: 'ma-state-senate.geojson',
 }
 
-let projectionPromise: Promise<ReturnType<typeof geoMercator>> | null = null
+let projectionPromise: Promise<ReturnType<typeof geoIdentity>> | null = null
 const layerCache = new Map<LayerName, Promise<ProjectedLayer>>()
 
 function geoUrl(file: string): string {
@@ -48,10 +52,12 @@ async function getProjection() {
   if (!projectionPromise) {
     projectionPromise = (async () => {
       const counties = await fetchJson<FeatureCollection>(geoUrl(FILES.counties))
-      return geoMercator().fitSize(
-        [MAP_W, MAP_H],
-        counties as unknown as GeoPermissibleObjects,
-      )
+      // geoIdentity has no spherical preclip, so geoPath outputs only the
+      // feature's own geometry — geoMercator was appending its clip frame
+      // (M1350,0...L250,0Z) to every path. reflectY puts north up.
+      return geoIdentity()
+        .reflectY(true)
+        .fitSize([MAP_W, MAP_H], counties as unknown as GeoPermissibleObjects)
     })()
   }
   return projectionPromise
@@ -74,11 +80,12 @@ export async function loadLayer(name: LayerName): Promise<ProjectedLayer> {
                 ? String(f.id)
                 : '')
             const name = (props.name as string | undefined) ?? id
-            const d = path(f as unknown as GeoPermissibleObjects) ?? ''
-            const lonlat = geoCentroid(
-              f as unknown as GeoPermissibleObjects,
-            ) as [number, number]
-            const xy = projection(lonlat) ?? [0, 0]
+            const geom = f as unknown as GeoPermissibleObjects
+            const d = path(geom) ?? ''
+            // path.centroid gives the projected planar centroid directly,
+            // sidestepping the wrong-winding antipode issue you get with
+            // geoCentroid + projection() for shapefile-sourced polygons.
+            const xy = path.centroid(geom)
             const population =
               typeof props.population === 'number'
                 ? (props.population as number)
