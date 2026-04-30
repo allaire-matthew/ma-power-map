@@ -898,6 +898,22 @@
       "lastVerified": "2026-04-30",
       "confidence": "medium"
     },
+    "2507110": {
+      "districtId": "2507110",
+      "districtName": "Lynn School District",
+      "tier": 2,
+      "policySummary": "Updated district-wide policy effective Sept 1, 2025: cell phones must be off and not visible during the school day, including during lunch and in hallways. Progressive discipline for repeat violations (parent contact → confiscation → detention → suspension). IEP/504/health-plan accommodations.",
+      "scope": "K-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2025-09",
+      "enrollment": 16000,
+      "sources": [
+        {"title": "Lynn Public Schools ring out new cell-phone rules", "url": "https://itemlive.com/2025/08/05/lynn-public-schools-ring-out-new-cellphone-rules/", "publisher": "Item Live", "date": "2025-08-05"},
+        {"title": "Student Device Policy", "url": "https://www.lynnschools.org/resources/student_resources/policies_and_codes/student_device_policy", "publisher": "Lynn Public Schools", "date": "2025-09-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
