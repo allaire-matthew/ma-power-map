@@ -745,6 +745,68 @@
       "lastVerified": "2026-04-30",
       "confidence": "high"
     },
+    "2504860": {
+      "districtId": "2504860",
+      "districtName": "Falmouth School District",
+      "tier": 2,
+      "policySummary": "Falmouth HS: cell phones not allowed during class times; silenced and placed in classroom holders. School Board approved April 2026 a stricter policy that bars personal electronic devices during the school day district-wide — full ban applies starting 2026-27 SY.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 3000,
+      "sources": [
+        {"title": "Falmouth schools pass cell phone ban in advance of new state law", "url": "https://www.pressherald.com/2026/04/20/falmouth-schools-pass-cell-phone-ban-in-advance-of-new-state-law-column/", "publisher": "Press Herald", "date": "2026-04-20"},
+        {"title": "FHS Student/Family Handbook 2024-2025", "url": "https://resources.finalsite.net/images/v1707159334/falmouthschoolsorg/kgacqg42hufynql0kgax/FHSStudent_FamilyHandbook2023-2024updated2_5_2024.pdf", "publisher": "Falmouth Public Schools", "date": "2024-08-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2512750": {
+      "districtId": "2512750",
+      "districtName": "Weston School District",
+      "tier": 2,
+      "policySummary": "School Committee adopted phased policy 2025-04-28. 2025-26 SY: pre-K through grade 8 prohibited from using personal electronic devices during school day; HS may use cellphones during class transitions, lunch, free blocks. 2026-27 SY: full district ban — HS laptops only, placed in designated storage during the day.",
+      "scope": "K-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2025-09",
+      "enrollment": 2400,
+      "sources": [
+        {"title": "Weston Public Schools implementing new cellphone policy", "url": "https://westonobserver.org/weston-public-schools-implementing-new-cellphone-policy/", "publisher": "Weston Observer", "date": "2025-05-01"},
+        {"title": "Weston School Committee Meeting Minutes Sept 9 2024", "url": "https://www.westonma.gov/AgendaCenter/ViewFile/Minutes/_09092024-7932", "publisher": "Town of Weston", "date": "2024-09-09"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2507320": {
+      "districtId": "2507320",
+      "districtName": "Marlborough School District",
+      "tier": 2,
+      "policySummary": "Marlborough HS uses 'cell phone hotels' — numbered cubby holes in classrooms where students place phones at the start of class and retrieve at the end. Off-and-away with light hardware enforcement.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 5300,
+      "sources": [
+        {"title": "Guidance — Marlborough High School", "url": "https://www.mps-edu.org/o/mhs/page/guidance", "publisher": "Marlborough Public Schools", "date": "2024-09-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2507530": {
+      "districtId": "2507530",
+      "districtName": "Medfield School District",
+      "tier": 2,
+      "policySummary": "Medfield HS Student Handbook (2025-2026): students may not make/take phone calls during the school day. Use of unapproved electronic devices restricted during the school day for all personal/non-academic purposes. Off-and-away enforcement; mechanism details (per-classroom storage etc.) not yet captured.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 2900,
+      "sources": [
+        {"title": "Medfield HS Student Handbook 2025-2026", "url": "https://sites.google.com/email.medfield.net/mhshandbook/general-information", "publisher": "Medfield Public Schools", "date": "2025-09-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
