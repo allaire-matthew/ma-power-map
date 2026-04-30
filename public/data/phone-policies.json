@@ -669,6 +669,51 @@
       "lastVerified": "2026-04-30",
       "confidence": "high"
     },
+    "2505490": {
+      "districtId": "2505490",
+      "districtName": "Greenfield School District",
+      "tier": 3,
+      "policySummary": "Greenfield Public School District uses Yondr pouches: students place phones in small gray pouches sealed magnetically at the beginning of the day; pouches can only be opened at the end of the day at a magnet station. Bell-to-bell hardware enforcement.",
+      "scope": "K-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-09",
+      "enrollment": 1700,
+      "sources": [
+        {"title": "Local schools weigh in on proposed statewide cellphone ban", "url": "https://gazettenet.com/2025/08/26/local-schools-weigh-in-on-proposed-statewide-cellphone-ban/", "publisher": "Daily Hampshire Gazette", "date": "2025-08-26"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2504590": {
+      "districtId": "2504590",
+      "districtName": "Easthampton School District",
+      "tier": 2,
+      "policySummary": "Easthampton Public Schools allow cellphone use before/after school, between classes, and at lunch. During class times students store phones in a phone pouch maintained by the teacher unless specifically allowed. Off-and-away with light hardware (teacher-held pouches).",
+      "scope": "K-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 1500,
+      "sources": [
+        {"title": "Local schools weigh in on proposed statewide cellphone ban", "url": "https://gazettenet.com/2025/08/26/local-schools-weigh-in-on-proposed-statewide-cellphone-ban/", "publisher": "Daily Hampshire Gazette", "date": "2025-08-26"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2503240": {
+      "districtId": "2503240",
+      "districtName": "Burlington School District",
+      "tier": 2,
+      "policySummary": "Burlington HS effective 2024-25: phones and headphones not allowed during school day except at lunch; devices stored in lockers, backpacks or pockets. Middle schools (Hunt, Edmunds) do not allow phones at all during the school day. Reportedly well-received by teachers and parents.",
+      "scope": "K-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 3500,
+      "sources": [
+        {"title": "Burlington High School (Massachusetts) — Grokipedia", "url": "https://grokipedia.com/page/Burlington_High_School_(Massachusetts)", "publisher": "Grokipedia", "date": "2024-12-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
