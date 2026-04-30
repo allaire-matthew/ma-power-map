@@ -488,6 +488,67 @@
       "lastVerified": "2026-04-30",
       "confidence": "high"
     },
+    "2506090": {
+      "districtId": "2506090",
+      "districtName": "Hingham School District",
+      "tier": 2,
+      "policySummary": "Hingham HS handbook: cell phones, smart watches, headphones must be silenced and put away when entering classroom; teacher may permit use for academic purposes. Allowed in cafeteria at lunch and at non-instructional times. Faculty/admin may confiscate non-compliant devices.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 4400,
+      "sources": [
+        {"title": "HHS Student Handbook & Code of Discipline 2025-2026", "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4900/Hhs/55eade5a-7b96-4b7e-bc21-987937b445a8/Student_Handbook_Code_of_Discipline_2025_2026.pdf", "publisher": "Hingham Public Schools", "date": "2025-09-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2512180": {
+      "districtId": "2512180",
+      "districtName": "Watertown School District",
+      "tier": 2,
+      "policySummary": "Watertown HS piloting the Doorman app in 2025-26 SY (first public school in the country) — software 'bricks' / disables cellphone communication during class periods. Separately, a district-wide draft cell-phone policy is in development per the School Committee.",
+      "scope": "9-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2025-09",
+      "enrollment": 2700,
+      "sources": [
+        {"title": "Tap into class: Watertown High will be first in country to test new cell phone-limiting tech", "url": "https://www.wbur.org/news/2025/08/25/watertown-cell-phone-school-ban-doorman-newsletter", "publisher": "WBUR", "date": "2025-08-25"},
+        {"title": "Watertown High School to Pilot App That Would Disable Student Cellphones During Class", "url": "https://www.watertownmanews.com/2025/08/20/watertown-high-school-to-pilot-app-that-would-disable-student-cellphones-during-class/", "publisher": "Watertown News", "date": "2025-08-20"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2504410": {
+      "districtId": "2504410",
+      "districtName": "Duxbury School District",
+      "tier": 2,
+      "policySummary": "Duxbury School Committee approved a new Cell Phone/Personal Device policy in force for the 2024-2025 academic year. Specific mechanism (hardware vs. off-and-away) not yet verified against district handbook.",
+      "scope": "varies",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 3000,
+      "sources": [
+        {"title": "Duxbury Public Schools News", "url": "https://www.duxbury.k12.ma.us/news", "publisher": "Duxbury Public Schools", "date": "2024-09-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "low"
+    },
+    "2507560": {
+      "districtId": "2507560",
+      "districtName": "Medford School District",
+      "tier": 1,
+      "policySummary": "No district-wide policy in force. Teachers create classroom-level rules at their own discretion; consistent enforcement reportedly lacking. Medford received $25,000 from the DESE FC729 cellphone-use pilot grant alongside Boston and Newton — district-wide policy expected to follow.",
+      "scope": "varies",
+      "enforcement": "honor",
+      "effectiveDate": "2024-09",
+      "enrollment": 4500,
+      "sources": [
+        {"title": "What students, teachers and parents think about banning phones in Mass. schools", "url": "https://www.wbur.org/news/2025/05/06/students-teachers-parents-cell-phone-restrictions-classrooms-massachusetts", "publisher": "WBUR", "date": "2025-05-06"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
