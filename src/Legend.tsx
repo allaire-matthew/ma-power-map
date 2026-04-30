@@ -1,5 +1,78 @@
+import { useEffect, useState } from 'react'
 import type { LayerState } from './LayerToggles'
 import { TIER_COLOR, TIER_LABEL } from './MapBackground'
+import {
+  getTownToDistrict,
+  loadLayer,
+  loadPhonePolicies,
+  type PhoneTier,
+} from './geo'
+
+type Coverage = {
+  totalPop: number
+  byTier: Record<1 | 2 | 3, number>
+  unresearchedPop: number
+  researchedDistrictCount: number
+}
+
+// Statewide mandate (S.2561) target effective date — front-of-2026-27 SY.
+const MANDATE_DATE = new Date('2026-09-01T00:00:00')
+
+function useCoverage(active: boolean): Coverage | null {
+  const [coverage, setCoverage] = useState<Coverage | null>(null)
+  useEffect(() => {
+    if (!active) return
+    let cancelled = false
+    void Promise.all([
+      loadLayer('towns'),
+      getTownToDistrict(),
+      loadPhonePolicies(),
+    ]).then(([towns, t2d, policies]) => {
+      if (cancelled) return
+      const byTier: Record<1 | 2 | 3, number> = { 1: 0, 2: 0, 3: 0 }
+      let totalPop = 0
+      let unresearchedPop = 0
+      const seen = new Set<string>()
+      for (const t of towns.features) {
+        const pop = t.population ?? 0
+        totalPop += pop
+        const dId = t2d[t.id]
+        const policy = dId ? policies[dId] : undefined
+        if (policy) {
+          seen.add(dId!)
+          byTier[policy.tier as 1 | 2 | 3] += pop
+        } else {
+          unresearchedPop += pop
+        }
+      }
+      setCoverage({
+        totalPop,
+        byTier,
+        unresearchedPop,
+        researchedDistrictCount: seen.size,
+      })
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [active])
+  return coverage
+}
+
+function formatPct(n: number, total: number): string {
+  if (!total) return '—'
+  return `${((n / total) * 100).toFixed(1)}%`
+}
+
+function formatDaysUntil(target: Date): { days: number; label: string } {
+  const now = Date.now()
+  const days = Math.ceil((target.getTime() - now) / (1000 * 60 * 60 * 24))
+  if (days < 0) return { days, label: 'in effect' }
+  if (days === 0) return { days, label: 'today' }
+  if (days < 60) return { days, label: `in ${days} days` }
+  const months = Math.round(days / 30.4)
+  return { days, label: `in ~${months} months` }
+}
 
 export function Legend({ layers }: { layers: LayerState }) {
   const showPhone = layers.phoneFree
@@ -7,6 +80,9 @@ export function Legend({ layers }: { layers: LayerState }) {
   const showCong = layers.congressional
   const showLeg = layers.stateLegislature
   const showSchool = layers.schoolDistricts
+
+  const coverage = useCoverage(showPhone)
+  const mandate = formatDaysUntil(MANDATE_DATE)
 
   if (!showPhone && !showSize && !showCong && !showLeg && !showSchool) return null
 
@@ -47,6 +123,43 @@ export function Legend({ layers }: { layers: LayerState }) {
             </ul>
             <div className="text-[10px] text-slate-400 mt-1.5 leading-snug">
               Districts not yet researched default to tier 1, lighter shade.
+            </div>
+            {coverage && (
+              <div className="mt-2 pt-2 border-t border-slate-100 space-y-0.5">
+                <div className="text-[10px] uppercase tracking-wider text-slate-500">
+                  Population coverage
+                </div>
+                {([3, 2, 1] as const).map((t) => (
+                  <div key={t} className="flex items-center gap-1.5">
+                    <span
+                      className="w-2 h-2 rounded-sm shrink-0"
+                      style={{ background: TIER_COLOR[t as PhoneTier] }}
+                    />
+                    <span className="text-[11px] text-slate-700 tabular-nums">
+                      {formatPct(coverage.byTier[t], coverage.totalPop)}
+                    </span>
+                    <span className="text-[10px] text-slate-500">
+                      tier {t}
+                    </span>
+                  </div>
+                ))}
+                <div className="flex items-center gap-1.5 pt-0.5 text-[10px] text-slate-400">
+                  {formatPct(coverage.unresearchedPop, coverage.totalPop)} of MA
+                  population in {306 - coverage.researchedDistrictCount} unresearched districts.
+                </div>
+              </div>
+            )}
+            <div className="mt-2 pt-2 border-t border-slate-100 text-[10px] text-slate-500 leading-snug">
+              <div className="font-medium text-slate-700">Statewide mandate</div>
+              <div>S.2561: bell-to-bell in all MA public schools</div>
+              <div className="text-slate-400">
+                {MANDATE_DATE.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric',
+                })}{' '}
+                · {mandate.label}
+              </div>
             </div>
           </div>
         )}
