@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { Editor } from 'tldraw'
 import { Board, recenterCamera } from './Board'
 import { LayerToggles, type LayerState, defaultLayers } from './LayerToggles'
 import { Legend } from './Legend'
 import { TownPopup } from './TownPopup'
-import type { PhoneTier } from './geo'
+import { loadLayer, type PhoneTier, type ProjectedFeature } from './geo'
 
 export type TierFilter = 'all' | PhoneTier
 
@@ -27,6 +27,31 @@ export default function App() {
   const [editor, setEditor] = useState<Editor | null>(null)
   const [popupTownId, setPopupTownId] = useState<string | null>(null)
   const [tierFilter, setTierFilter] = useState<TierFilter>('all')
+  const [townOptions, setTownOptions] = useState<ProjectedFeature[]>([])
+  const [searchQuery, setSearchQuery] = useState('')
+
+  useEffect(() => {
+    let cancelled = false
+    void loadLayer('towns').then((l) => {
+      if (!cancelled) setTownOptions(l.features)
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  const searchMatches = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase()
+    if (!q) return []
+    return townOptions
+      .filter((t) => t.name.toLowerCase().includes(q))
+      .slice(0, 8)
+  }, [searchQuery, townOptions])
+
+  const pickTown = (id: string) => {
+    setPopupTownId(id)
+    setSearchQuery('')
+  }
 
   useEffect(() => {
     localStorage.setItem(LS_KEY, JSON.stringify(layers))
@@ -67,7 +92,43 @@ export default function App() {
         </h1>
         <div className="h-5 w-px bg-slate-200" />
         <LayerToggles value={layers} onChange={setLayers} />
-        <div className="ml-auto flex items-center gap-1">
+        <div className="ml-auto flex items-center gap-2">
+          <div className="relative">
+            <input
+              type="search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search town…"
+              className="h-8 w-44 px-2 text-xs border border-slate-300 rounded focus:outline-none focus:ring-1 focus:ring-indigo-500"
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && searchMatches.length > 0) {
+                  pickTown(searchMatches[0].id)
+                } else if (e.key === 'Escape') {
+                  setSearchQuery('')
+                }
+              }}
+            />
+            {searchMatches.length > 0 && (
+              <ul className="absolute right-0 top-9 w-56 max-h-64 overflow-auto bg-white border border-slate-200 rounded shadow-lg z-30">
+                {searchMatches.map((t) => (
+                  <li key={t.id}>
+                    <button
+                      type="button"
+                      onClick={() => pickTown(t.id)}
+                      className="block w-full text-left px-2 py-1 text-xs hover:bg-slate-100"
+                    >
+                      <span className="text-slate-900">{t.name}</span>
+                      {t.population != null && (
+                        <span className="text-slate-400 ml-1.5 tabular-nums">
+                          {t.population.toLocaleString()}
+                        </span>
+                      )}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
           <IconButton onClick={() => zoomBy(1.25)} label="Zoom in">
             +
           </IconButton>
