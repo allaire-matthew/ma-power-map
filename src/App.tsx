@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react'
 import type { Editor } from 'tldraw'
 import { Board, recenterCamera } from './Board'
 import { LayerToggles, type LayerState, defaultLayers } from './LayerToggles'
-import { FeatureRequestPanel } from './FeatureRequestPanel'
-import { IrlCouncilPanel } from './IrlCouncilPanel'
-import type { Selection } from './MapBackground'
+import { Legend } from './Legend'
+import { TownPopup } from './TownPopup'
 
 const LS_KEY = 'ma-power-map.layers'
 
@@ -18,40 +17,39 @@ function loadLayers(): LayerState {
   }
 }
 
-type Drawer = null | 'features' | 'irl'
-
 export default function App() {
   const [layers, setLayers] = useState<LayerState>(loadLayers)
-  const [drawer, setDrawer] = useState<Drawer>(null)
   const [editor, setEditor] = useState<Editor | null>(null)
-  const [inspect, setInspect] = useState(false)
-  const [selected, setSelected] = useState<Selection | null>(null)
+  const [popupTownId, setPopupTownId] = useState<string | null>(null)
 
   useEffect(() => {
     localStorage.setItem(LS_KEY, JSON.stringify(layers))
   }, [layers])
 
   useEffect(() => {
-    if (!inspect) setSelected(null)
-  }, [inspect])
-
-  useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setSelected(null)
+      if (e.key === 'Escape') setPopupTownId(null)
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
-  const clearBoard = () => {
+  const zoomBy = (factor: number) => {
     if (!editor) return
-    if (!confirm('Delete all shapes on the board?')) return
-    const ids = Array.from(editor.getCurrentPageShapeIds())
-    if (ids.length) editor.deleteShapes(ids)
-    recenterCamera(editor)
+    const c = editor.getCamera()
+    const el = editor.getContainer()
+    const cx = el.clientWidth / 2
+    const cy = el.clientHeight / 2
+    const newZ = Math.max(0.1, Math.min(8, c.z * factor))
+    // Keep the screen-center pinned while zooming.
+    const wx = cx / c.z - c.x
+    const wy = cy / c.z - c.y
+    const newX = cx / newZ - wx
+    const newY = cy / newZ - wy
+    editor.setCamera({ x: newX, y: newY, z: newZ })
   }
 
-  const recenter = () => {
+  const reset = () => {
     if (editor) recenterCamera(editor)
   }
 
@@ -63,79 +61,56 @@ export default function App() {
         </h1>
         <div className="h-5 w-px bg-slate-200" />
         <LayerToggles value={layers} onChange={setLayers} />
-        <div className="ml-auto flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => setInspect((v) => !v)}
-            className={`text-sm px-3 py-1.5 rounded border ${
-              inspect
-                ? 'border-indigo-600 bg-indigo-50 text-indigo-800'
-                : 'border-slate-300 hover:bg-slate-50 text-slate-700'
-            }`}
-            title="Click features to see info instead of drawing"
-          >
-            Inspect
-          </button>
-          <button
-            type="button"
-            onClick={recenter}
-            className="text-sm px-3 py-1.5 rounded border border-slate-300 hover:bg-slate-50 text-slate-700"
-            title="Recenter map on Massachusetts"
-          >
-            Recenter
-          </button>
-          <button
-            type="button"
-            onClick={clearBoard}
-            className="text-sm px-3 py-1.5 rounded border border-slate-300 hover:bg-slate-50 text-slate-700"
-            title="Delete all shapes on the board"
-          >
-            Clear board
-          </button>
-          <button
-            type="button"
-            onClick={() => setDrawer((d) => (d === 'irl' ? null : 'irl'))}
-            className={`text-sm px-3 py-1.5 rounded border ${
-              drawer === 'irl'
-                ? 'border-emerald-600 bg-emerald-50 text-emerald-800'
-                : 'border-slate-300 hover:bg-slate-50'
-            }`}
-          >
-            IRL Councils
-          </button>
-          <button
-            type="button"
-            onClick={() => setDrawer((d) => (d === 'features' ? null : 'features'))}
-            className={`text-sm px-3 py-1.5 rounded border ${
-              drawer === 'features'
-                ? 'border-indigo-600 bg-indigo-50 text-indigo-800'
-                : 'border-slate-300 hover:bg-slate-50'
-            }`}
-          >
-            Request a feature
-          </button>
+        <div className="ml-auto flex items-center gap-1">
+          <IconButton onClick={() => zoomBy(1.25)} label="Zoom in">
+            +
+          </IconButton>
+          <IconButton onClick={() => zoomBy(1 / 1.25)} label="Zoom out">
+            −
+          </IconButton>
+          <IconButton onClick={reset} label="Reset view">
+            ⟲
+          </IconButton>
         </div>
       </header>
 
       <main className="flex-1 relative min-h-0">
         <Board
           layers={layers}
-          inspect={inspect}
-          selected={selected}
-          onSelect={setSelected}
-          onDismiss={() => setSelected(null)}
+          popupTownId={popupTownId}
+          onTownClick={setPopupTownId}
           onEditor={setEditor}
         />
+        <Legend layers={layers} />
+        {popupTownId && (
+          <TownPopup
+            townId={popupTownId}
+            onClose={() => setPopupTownId(null)}
+          />
+        )}
       </main>
-
-      <FeatureRequestPanel
-        open={drawer === 'features'}
-        onClose={() => setDrawer(null)}
-      />
-      <IrlCouncilPanel
-        open={drawer === 'irl'}
-        onClose={() => setDrawer(null)}
-      />
     </div>
+  )
+}
+
+function IconButton({
+  onClick,
+  label,
+  children,
+}: {
+  onClick: () => void
+  label: string
+  children: React.ReactNode
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      title={label}
+      aria-label={label}
+      className="w-8 h-8 flex items-center justify-center rounded border border-slate-300 hover:bg-slate-50 text-slate-700 text-base font-medium leading-none"
+    >
+      {children}
+    </button>
   )
 }

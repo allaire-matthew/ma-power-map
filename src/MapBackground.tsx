@@ -11,14 +11,16 @@ import {
   type ProjectedLayer,
 } from './geo'
 import type { LayerState } from './LayerToggles'
-import { useIrlCouncils } from './irlCouncils'
 
 const STYLES: Record<
   LayerName,
   { stroke: string; strokeWidth: number; dash?: string; label: string }
 > = {
   counties: { stroke: '#475569', strokeWidth: 1.4, label: 'County' },
-  towns: { stroke: '#cbd5e1', strokeWidth: 0.4, label: 'Town' },
+  // Town strokes are the structural skeleton of the map. Need to be visible
+  // against the semi-transparent district fills, especially around Cape Cod
+  // and the islands where small polygons otherwise blob together.
+  towns: { stroke: '#94a3b8', strokeWidth: 0.55, label: 'Town' },
   congressional: {
     stroke: '#7c3aed',
     strokeWidth: 1.2,
@@ -45,53 +47,35 @@ const STYLES: Record<
   },
 }
 
-const TIER_COLOR: Record<PhoneTier, string> = {
-  1: '#ef4444', // red — no district policy
-  2: '#eab308', // yellow — partial / non-hardware
-  3: '#22c55e', // green — full hardware K-12
+export const TIER_COLOR: Record<PhoneTier, string> = {
+  1: '#ef4444',
+  2: '#eab308',
+  3: '#22c55e',
 }
 
-const TIER_LABEL: Record<PhoneTier, string> = {
+export const TIER_LABEL: Record<PhoneTier, string> = {
   1: 'Tier 1 — No district policy',
   2: 'Tier 2 — Partial / non-hardware',
   3: 'Tier 3 — Hardware ban K-12',
 }
 
-export type Selection = {
-  layer: LayerName
-  geoid: string
-  x: number
-  y: number
-}
-
 export function MapBackground({
   camera,
   layers,
-  inspect,
-  selected,
-  onSelect,
-  onDismiss,
+  popupTownId,
+  onTownClick,
 }: {
   camera: { x: number; y: number; z: number }
   layers: LayerState
-  inspect: boolean
-  selected: Selection | null
-  onSelect: (s: Selection) => void
-  onDismiss: () => void
+  popupTownId: string | null
+  onTownClick: (townId: string | null) => void
 }) {
   const [data, setData] = useState<Partial<Record<LayerName, ProjectedLayer>>>({})
   const [policies, setPolicies] = useState<Record<string, PhonePolicy>>({})
-  const { marked, toggle: toggleIrl } = useIrlCouncils()
   const svgRef = useRef<SVGSVGElement | null>(null)
   const groupRefs = useRef<Partial<Record<LayerName, SVGGElement | null>>>({})
-  const [hover, setHover] = useState<{
-    layer: LayerName
-    name: string
-    x: number
-    y: number
-  } | null>(null)
+  const [hover, setHover] = useState<{ name: string; x: number; y: number } | null>(null)
 
-  // Decide which geo files we need based on the toggle state.
   const needed = useMemo<LayerName[]>(() => {
     const want = new Set<LayerName>(['towns'])
     if (
@@ -105,6 +89,9 @@ export function MapBackground({
       want.add('stateHouse')
       want.add('stateSenate')
     }
+    // Always load schoolDistricts so the click→district lookup works
+    // for the popup, even when the visual layer is off.
+    want.add('schoolDistricts')
     return Array.from(want)
   }, [layers])
 
@@ -135,9 +122,6 @@ export function MapBackground({
     }
   }, [])
 
-  // Per-district size score: average of normalized polygon area and
-  // normalized enrollment (when available). Districts without enrollment
-  // fall back to area-only so the gradient still ranks them.
   const sizeScore = useMemo<Record<string, number>>(() => {
     const districts = data.schoolDistricts?.features ?? []
     if (!districts.length) return {}
@@ -161,45 +145,40 @@ export function MapBackground({
     return out
   }, [data.schoolDistricts, policies])
 
-  // Hover-name detection across the tldraw layer above us.
-  // isPointInFill is pure geometry so it works regardless of pointer-events.
+  // Hover ALWAYS resolves to the town under the cursor — districts and
+  // legislative outlines never fight the tooltip for hits.
   useEffect(() => {
     const svg = svgRef.current
     if (!svg) return
     let raf = 0
     let pending: { x: number; y: number } | null = null
-    // Hover priority: districts first (most informative), then districts of
-    // government layers if present, then towns as fallback.
-    const hoverOrder: LayerName[] = [
-      'schoolDistricts',
-      'congressional',
-      'stateSenate',
-      'stateHouse',
-      'towns',
-    ]
     const process = () => {
       raf = 0
       if (!pending) return
       const { x: cx, y: cy } = pending
       pending = null
-      for (const layerName of hoverOrder) {
-        const g = groupRefs.current[layerName]
-        if (!g) continue
-        const ctm = g.getScreenCTM()
-        if (!ctm) continue
-        const screenPt = svg.createSVGPoint()
-        screenPt.x = cx
-        screenPt.y = cy
-        const localPt = screenPt.matrixTransform(ctm.inverse())
-        const paths = g.querySelectorAll<SVGPathElement>('path[data-id]')
-        for (const p of paths) {
-          if (p.isPointInFill(localPt)) {
-            const id = p.dataset.id!
-            const feature = data[layerName]?.features.find((f) => f.id === id)
-            if (feature) {
-              setHover({ layer: layerName, name: feature.name, x: cx, y: cy })
-              return
-            }
+      const g = groupRefs.current.towns
+      if (!g) {
+        setHover(null)
+        return
+      }
+      const ctm = g.getScreenCTM()
+      if (!ctm) {
+        setHover(null)
+        return
+      }
+      const screenPt = svg.createSVGPoint()
+      screenPt.x = cx
+      screenPt.y = cy
+      const localPt = screenPt.matrixTransform(ctm.inverse())
+      const paths = g.querySelectorAll<SVGPathElement>('path[data-id]')
+      for (const p of paths) {
+        if (p.isPointInFill(localPt)) {
+          const id = p.dataset.id!
+          const feature = data.towns?.features.find((f) => f.id === id)
+          if (feature) {
+            setHover({ name: feature.name, x: cx, y: cy })
+            return
           }
         }
       }
@@ -217,13 +196,40 @@ export function MapBackground({
       window.removeEventListener('mouseleave', onLeave)
       if (raf) cancelAnimationFrame(raf)
     }
-  }, [data, layers, camera])
+  }, [data.towns])
+
+  // Click → town resolution. We listen on window in capture phase so we
+  // see clicks before tldraw can stop propagation. Hits use the same
+  // isPointInFill trick as hover; misses leave the popup state alone.
+  useEffect(() => {
+    const svg = svgRef.current
+    if (!svg) return
+    const onClick = (e: MouseEvent) => {
+      const g = groupRefs.current.towns
+      if (!g) return
+      const ctm = g.getScreenCTM()
+      if (!ctm) return
+      const screenPt = svg.createSVGPoint()
+      screenPt.x = e.clientX
+      screenPt.y = e.clientY
+      const localPt = screenPt.matrixTransform(ctm.inverse())
+      const paths = g.querySelectorAll<SVGPathElement>('path[data-id]')
+      for (const p of paths) {
+        if (p.isPointInFill(localPt)) {
+          const id = p.dataset.id!
+          // Ignore clicks on UI chrome (popup, legend, header, etc.)
+          const target = e.target as Element | null
+          if (target?.closest('[data-map-ui]')) return
+          onTownClick(id)
+          return
+        }
+      }
+    }
+    window.addEventListener('click', onClick, true)
+    return () => window.removeEventListener('click', onClick, true)
+  }, [data.towns, onTownClick])
 
   const t = `translate(${camera.x * camera.z} ${camera.y * camera.z}) scale(${camera.z})`
-
-  const selectedFeature: ProjectedFeature | null =
-    (selected && data[selected.layer]?.features.find((f) => f.id === selected.geoid)) ??
-    null
 
   const districts = data.schoolDistricts?.features ?? []
   const congressional = data.congressional?.features ?? []
@@ -231,29 +237,19 @@ export function MapBackground({
   const stateSenate = data.stateSenate?.features ?? []
   const towns = data.towns?.features ?? []
 
-  const onPathClick = (k: LayerName, f: ProjectedFeature) =>
-    inspect
-      ? (ev: React.MouseEvent) => {
-          ev.stopPropagation()
-          onSelect({ layer: k, geoid: f.id, x: ev.clientX, y: ev.clientY })
-        }
-      : undefined
+  const popupTown = popupTownId
+    ? towns.find((f) => f.id === popupTownId) ?? null
+    : null
 
   return (
     <>
       <svg
         ref={svgRef}
         className="absolute inset-0 w-full h-full"
-        style={{
-          background: '#f8fafc',
-          pointerEvents: inspect ? 'auto' : 'none',
-        }}
-        onClick={(e) => {
-          if (inspect && e.target === e.currentTarget) onDismiss()
-        }}
+        style={{ background: '#f8fafc', pointerEvents: 'none' }}
       >
         <g transform={t}>
-          {/* Base towns layer — always on, very faint, just for context. */}
+          {/* Towns — base skeleton, always rendered. */}
           <g
             ref={(el) => {
               groupRefs.current.towns = el
@@ -267,16 +263,11 @@ export function MapBackground({
                 fill="#f8fafc"
                 stroke={STYLES.towns.stroke}
                 strokeWidth={STYLES.towns.strokeWidth / camera.z}
-                style={{
-                  cursor: inspect ? 'pointer' : undefined,
-                  pointerEvents: inspect ? 'visiblePainted' : 'none',
-                }}
-                onClick={onPathClick('towns', f)}
               />
             ))}
           </g>
 
-          {/* School districts — fill driven by phoneFree tier and/or size gradient. */}
+          {/* School-district fills (phone-free tier and/or size gradient). */}
           {(layers.phoneFree || layers.sizeGradient) && (
             <g
               ref={(el) => {
@@ -303,23 +294,20 @@ export function MapBackground({
                 return (
                   <path
                     key={f.id}
-                    data-id={f.id}
                     d={f.d}
                     fill={fill}
                     fillOpacity={alpha}
-                    stroke="none"
-                    style={{
-                      cursor: inspect ? 'pointer' : undefined,
-                      pointerEvents: inspect ? 'visiblePainted' : 'none',
-                    }}
-                    onClick={onPathClick('schoolDistricts', f)}
+                    // A hairline outline keeps Cape Cod's overlapping
+                    // district shapes visually separated against the towns.
+                    stroke="rgba(15,23,42,0.18)"
+                    strokeWidth={0.4 / camera.z}
                   />
                 )
               })}
             </g>
           )}
 
-          {/* School district outlines — only when explicitly toggled on. */}
+          {/* Explicit school-district outlines (toggle on top of fills). */}
           {layers.schoolDistricts &&
             districts.map((f) => (
               <path
@@ -332,151 +320,80 @@ export function MapBackground({
                   .split(' ')
                   .map((n) => Number(n) / camera.z)
                   .join(' ')}
-                pointerEvents="none"
               />
             ))}
 
-          {/* State legislature — both house and senate together. */}
+          {/* State legislature — both chambers together. */}
           {layers.stateLegislature && (
             <>
-              <g
-                ref={(el) => {
-                  groupRefs.current.stateHouse = el
-                }}
-              >
-                {stateHouse.map((f) => (
-                  <path
-                    key={f.id}
-                    data-id={f.id}
-                    d={f.d}
-                    fill="transparent"
-                    stroke={STYLES.stateHouse.stroke}
-                    strokeWidth={STYLES.stateHouse.strokeWidth / camera.z}
-                    strokeDasharray={STYLES.stateHouse.dash!
-                      .split(' ')
-                      .map((n) => Number(n) / camera.z)
-                      .join(' ')}
-                    style={{
-                      cursor: inspect ? 'pointer' : undefined,
-                      pointerEvents: inspect ? 'visiblePainted' : 'none',
-                    }}
-                    onClick={onPathClick('stateHouse', f)}
-                  />
-                ))}
-              </g>
-              <g
-                ref={(el) => {
-                  groupRefs.current.stateSenate = el
-                }}
-              >
-                {stateSenate.map((f) => (
-                  <path
-                    key={f.id}
-                    data-id={f.id}
-                    d={f.d}
-                    fill="transparent"
-                    stroke={STYLES.stateSenate.stroke}
-                    strokeWidth={STYLES.stateSenate.strokeWidth / camera.z}
-                    strokeDasharray={STYLES.stateSenate.dash!
-                      .split(' ')
-                      .map((n) => Number(n) / camera.z)
-                      .join(' ')}
-                    style={{
-                      cursor: inspect ? 'pointer' : undefined,
-                      pointerEvents: inspect ? 'visiblePainted' : 'none',
-                    }}
-                    onClick={onPathClick('stateSenate', f)}
-                  />
-                ))}
-              </g>
-            </>
-          )}
-
-          {/* US House outlines. */}
-          {layers.congressional && (
-            <g
-              ref={(el) => {
-                groupRefs.current.congressional = el
-              }}
-            >
-              {congressional.map((f) => (
+              {stateHouse.map((f) => (
                 <path
-                  key={f.id}
-                  data-id={f.id}
+                  key={`sh-${f.id}`}
                   d={f.d}
-                  fill="rgba(124,58,237,0.04)"
-                  stroke={STYLES.congressional.stroke}
-                  strokeWidth={STYLES.congressional.strokeWidth / camera.z}
-                  strokeDasharray={STYLES.congressional.dash!
+                  fill="transparent"
+                  stroke={STYLES.stateHouse.stroke}
+                  strokeWidth={STYLES.stateHouse.strokeWidth / camera.z}
+                  strokeDasharray={STYLES.stateHouse.dash!
                     .split(' ')
                     .map((n) => Number(n) / camera.z)
                     .join(' ')}
-                  style={{
-                    cursor: inspect ? 'pointer' : undefined,
-                    pointerEvents: inspect ? 'visiblePainted' : 'none',
-                  }}
-                  onClick={onPathClick('congressional', f)}
                 />
               ))}
-            </g>
+              {stateSenate.map((f) => (
+                <path
+                  key={`ss-${f.id}`}
+                  d={f.d}
+                  fill="transparent"
+                  stroke={STYLES.stateSenate.stroke}
+                  strokeWidth={STYLES.stateSenate.strokeWidth / camera.z}
+                  strokeDasharray={STYLES.stateSenate.dash!
+                    .split(' ')
+                    .map((n) => Number(n) / camera.z)
+                    .join(' ')}
+                />
+              ))}
+            </>
           )}
 
-          {/* IRL Council per-town overlay. */}
-          {layers.irlCouncil &&
-            towns.map((f) =>
-              marked[f.id] ? (
-                <path
-                  key={`irl-${f.id}`}
-                  d={f.d}
-                  fill="rgba(16, 185, 129, 0.45)"
-                  stroke="#047857"
-                  strokeWidth={1.2 / camera.z}
-                  pointerEvents="none"
-                />
-              ) : null,
-            )}
+          {/* US House outlines + outside-the-border number labels. */}
+          {layers.congressional &&
+            congressional.map((f) => (
+              <path
+                key={`cd-${f.id}`}
+                d={f.d}
+                fill="rgba(124,58,237,0.04)"
+                stroke={STYLES.congressional.stroke}
+                strokeWidth={STYLES.congressional.strokeWidth / camera.z}
+                strokeDasharray={STYLES.congressional.dash!
+                  .split(' ')
+                  .map((n) => Number(n) / camera.z)
+                  .join(' ')}
+              />
+            ))}
+          {layers.congressional && congressional.length > 0 && (
+            <CongressionalLabels features={congressional} cameraZ={camera.z} />
+          )}
 
-          {selected && selectedFeature && (
+          {/* Popup town highlight. */}
+          {popupTown && (
             <path
-              d={selectedFeature.d}
+              d={popupTown.d}
               fill="rgba(99, 102, 241, 0.18)"
               stroke="#4f46e5"
               strokeWidth={1.8 / camera.z}
-              pointerEvents="none"
             />
-          )}
-
-          {/* Congressional district number labels — placed outside the map
-              boundary along a ray from the state center through each
-              district's centroid. */}
-          {layers.congressional && congressional.length > 0 && (
-            <CongressionalLabels features={congressional} cameraZ={camera.z} />
           )}
         </g>
       </svg>
 
-      {hover && !selected && (
+      {hover && (
         <div
+          data-map-ui
           className="absolute z-30 pointer-events-none px-2 py-1 bg-slate-900 text-white text-xs rounded shadow whitespace-nowrap"
           style={{ left: hover.x + 12, top: hover.y + 12 }}
         >
           {hover.name}
         </div>
-      )}
-
-      {selected && selectedFeature && (
-        <FeatureCard
-          layer={selected.layer}
-          feature={selectedFeature}
-          policy={
-            selected.layer === 'schoolDistricts' ? policies[selectedFeature.id] : undefined
-          }
-          x={selected.x}
-          y={selected.y}
-          isCouncil={!!marked[selectedFeature.id]}
-          onToggleCouncil={() => toggleIrl(selectedFeature.id)}
-          onClose={onDismiss}
-        />
       )}
     </>
   )
@@ -503,22 +420,19 @@ function CongressionalLabels({
       const sx = dx === 0 ? Infinity : (MAP_W / 2 + margin) / Math.abs(dx)
       const sy = dy === 0 ? Infinity : (MAP_H / 2 + margin) / Math.abs(dy)
       const s = Math.min(sx, sy)
-      const lx = cx0 + dx * s
-      const ly = cy0 + dy * s
-      return { num, cx, cy, lx, ly }
+      return { num, cx, cy, lx: cx0 + dx * s, ly: cy0 + dy * s }
     })
     .filter(Boolean) as { num: number; cx: number; cy: number; lx: number; ly: number }[]
 
-  // Simple de-overlap: sort by angle, nudge same-quadrant labels apart along
-  // the perimeter so urban (Boston-cluster) labels don't pile up.
-  labels.sort((a, b) => Math.atan2(a.ly - cy0, a.lx - cx0) - Math.atan2(b.ly - cy0, b.lx - cx0))
+  labels.sort(
+    (a, b) => Math.atan2(a.ly - cy0, a.lx - cx0) - Math.atan2(b.ly - cy0, b.lx - cx0),
+  )
   const minSep = 60
   for (let i = 1; i < labels.length; i++) {
     const prev = labels[i - 1]
     const cur = labels[i]
     const d = Math.hypot(cur.lx - prev.lx, cur.ly - prev.ly)
     if (d < minSep) {
-      // Nudge cur further along its outward ray
       const dx = cur.lx - cx0
       const dy = cur.ly - cy0
       const len = Math.hypot(dx, dy) || 1
@@ -529,7 +443,7 @@ function CongressionalLabels({
   }
 
   return (
-    <g pointerEvents="none">
+    <g>
       {labels.map((l) => (
         <g key={l.num}>
           <line
@@ -565,153 +479,5 @@ function CongressionalLabels({
         </g>
       ))}
     </g>
-  )
-}
-
-function FeatureCard({
-  layer,
-  feature,
-  policy,
-  x,
-  y,
-  isCouncil,
-  onToggleCouncil,
-  onClose,
-}: {
-  layer: LayerName
-  feature: ProjectedFeature
-  policy: PhonePolicy | undefined
-  x: number
-  y: number
-  isCouncil: boolean
-  onToggleCouncil: () => void
-  onClose: () => void
-}) {
-  const W = 280
-  const left = Math.max(8, Math.min(window.innerWidth - W - 8, x - W / 2))
-  const top = Math.max(56, y + 12)
-  return (
-    <div
-      role="dialog"
-      onClick={(e) => e.stopPropagation()}
-      onMouseDown={(e) => e.stopPropagation()}
-      className="absolute z-40 bg-white border border-slate-300 rounded shadow-md text-sm"
-      style={{ left, top, width: W }}
-    >
-      <div className="flex items-start justify-between p-2 border-b border-slate-200">
-        <div>
-          <div className="text-[11px] uppercase tracking-wide text-slate-500">
-            {layer === 'schoolDistricts' && feature.kind
-              ? `${feature.kind} school district`
-              : STYLES[layer].label}
-          </div>
-          <div className="font-semibold text-slate-900 leading-tight">
-            {feature.name}
-          </div>
-        </div>
-        <button
-          onClick={onClose}
-          className="text-slate-400 hover:text-slate-700 leading-none px-1 -mt-0.5"
-          aria-label="Close"
-        >
-          ×
-        </button>
-      </div>
-      <div className="p-2 space-y-2">
-        {layer === 'towns' && (
-          <>
-            <div className="text-slate-700">
-              Population:{' '}
-              <span className="font-medium tabular-nums">
-                {feature.population != null
-                  ? feature.population.toLocaleString()
-                  : '—'}
-              </span>
-            </div>
-            <label className="flex items-center gap-2 cursor-pointer select-none">
-              <input
-                type="checkbox"
-                checked={isCouncil}
-                onChange={onToggleCouncil}
-                className="accent-emerald-600"
-              />
-              <span className={isCouncil ? 'text-emerald-800 font-medium' : ''}>
-                IRL Council
-              </span>
-            </label>
-          </>
-        )}
-
-        {layer === 'schoolDistricts' && (
-          <PhonePolicyBlock policy={policy} />
-        )}
-      </div>
-    </div>
-  )
-}
-
-function PhonePolicyBlock({ policy }: { policy: PhonePolicy | undefined }) {
-  const tier: PhoneTier = policy?.tier ?? 1
-  return (
-    <div className="space-y-1.5">
-      <div className="flex items-center gap-2">
-        <span
-          className="inline-block w-2.5 h-2.5 rounded-full"
-          style={{ background: TIER_COLOR[tier] }}
-        />
-        <span className="text-xs font-medium text-slate-800">
-          {TIER_LABEL[tier]}
-        </span>
-      </div>
-      {policy ? (
-        <>
-          <div className="text-slate-700 text-[13px] leading-snug">
-            {policy.policySummary}
-          </div>
-          <div className="text-[11px] text-slate-500 grid grid-cols-2 gap-x-2 gap-y-0.5">
-            <div>Scope: <span className="text-slate-700">{policy.scope}</span></div>
-            <div>Enforcement: <span className="text-slate-700">{policy.enforcement}</span></div>
-            <div>Effective: <span className="text-slate-700">{policy.effectiveDate}</span></div>
-            {policy.enrollment != null && (
-              <div>
-                Enrollment:{' '}
-                <span className="text-slate-700 tabular-nums">
-                  {policy.enrollment.toLocaleString()}
-                </span>
-              </div>
-            )}
-            <div className="col-span-2">
-              Confidence: <span className="text-slate-700">{policy.confidence}</span>
-              {' · '}Verified: <span className="text-slate-700">{policy.lastVerified}</span>
-            </div>
-          </div>
-          {policy.sources.length > 0 && (
-            <div className="text-[11px] pt-1 border-t border-slate-100">
-              <div className="text-slate-500 mb-0.5">Sources</div>
-              <ul className="space-y-0.5">
-                {policy.sources.map((s, i) => (
-                  <li key={i}>
-                    <a
-                      href={s.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-indigo-600 hover:underline"
-                    >
-                      {s.publisher}
-                    </a>
-                    {s.date ? ` · ${s.date}` : ''}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </>
-      ) : (
-        <div className="text-[12px] text-slate-500 italic">
-          No policy on file. Defaults to tier 1 until researched. See
-          RESEARCH_SPEC_PHONE_POLICIES.md.
-        </div>
-      )}
-    </div>
   )
 }

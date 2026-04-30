@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Tldraw, type Editor, type TLComponents } from 'tldraw'
-import { MapBackground, type Selection } from './MapBackground'
+import { MapBackground } from './MapBackground'
 import { usePersistence } from './persistence'
 import type { LayerState } from './LayerToggles'
 
@@ -18,17 +18,13 @@ export function recenterCamera(editor: Editor) {
 
 export function Board({
   layers,
-  inspect,
-  selected,
-  onSelect,
-  onDismiss,
+  popupTownId,
+  onTownClick,
   onEditor,
 }: {
   layers: LayerState
-  inspect: boolean
-  selected: Selection | null
-  onSelect: (s: Selection) => void
-  onDismiss: () => void
+  popupTownId: string | null
+  onTownClick: (townId: string | null) => void
   onEditor?: (e: Editor) => void
 }) {
   const [editor, setEditor] = useState<Editor | null>(null)
@@ -41,17 +37,12 @@ export function Board({
       setCamera({ x: c.x, y: c.y, z: c.z })
     }
     update()
-    // Listen to ALL camera changes, including programmatic ones from
-    // setCamera or loadSnapshot — otherwise the SVG falls out of sync
-    // when persistence rehydrates a stale camera.
     const unlisten = editor.store.listen(update)
     return () => unlisten()
   }, [editor])
 
   useEffect(() => {
     if (!editor) return
-    // Always recenter on mount so users land on a framed view of MA
-    // regardless of whatever camera position got persisted.
     recenterCamera(editor)
   }, [editor])
 
@@ -67,16 +58,10 @@ export function Board({
       <MapBackground
         camera={camera}
         layers={layers}
-        inspect={inspect}
-        selected={selected}
-        onSelect={onSelect}
-        onDismiss={onDismiss}
+        popupTownId={popupTownId}
+        onTownClick={onTownClick}
       />
-      <div
-        className={`absolute inset-0 tldraw-transparent ${
-          inspect ? 'tldraw-inert' : ''
-        }`}
-      >
+      <div className="absolute inset-0 tldraw-transparent">
         <Tldraw
           onMount={(e) => {
             setEditor(e)

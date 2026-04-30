@@ -130,6 +130,23 @@
       "lastVerified": "2026-04-30",
       "confidence": "low"
     },
+    "2503090": {
+      "districtId": "2503090",
+      "districtName": "Brockton School District",
+      "tier": 2,
+      "policySummary": "District-wide Yondr pouch requirement for grades 7-12. Pouches distributed each morning during Breakfast & Advisory, locked in front of staff, kept by student all day. School Committee approved unanimously in March 2024 amid safety/violence concerns at Brockton HS. K-6 not covered.",
+      "scope": "9-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-04",
+      "enrollment": 16000,
+      "sources": [
+        {"title": "Stricter cellphone policy for Brockton High School approved amid reports of violence", "url": "https://www.bostonglobe.com/2024/03/06/metro/new-cellphone-policy-for-brockton-high-school/", "publisher": "Boston Globe", "date": "2024-03-06"},
+        {"title": "Details of new Brockton High School secure cell phone policy revealed", "url": "https://www.boston25news.com/news/local/details-new-brockton-high-school-secure-cell-phone-policy-revealed/E2R3KW2DURCAHIMTQIH3V4UJ2A/", "publisher": "Boston 25 News", "date": "2024-04-01"},
+        {"title": "How locking up phones has changed life inside Brockton High School", "url": "https://www.cbsnews.com/boston/news/brockton-high-school-locking-up-student-phones/", "publisher": "CBS Boston", "date": "2024-09-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
     "2510380": {
       "districtId": "2510380",
       "districtName": "Salem School District",

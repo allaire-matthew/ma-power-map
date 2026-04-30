@@ -1,4 +1,6 @@
 import {
+  geoCentroid,
+  geoContains,
   geoIdentity,
   geoPath,
   type GeoPermissibleObjects,
@@ -81,6 +83,43 @@ export type PhonePolicy = {
   sources: { title: string; url: string; publisher: string; date: string }[]
   lastVerified: string
   confidence: 'high' | 'medium' | 'low'
+}
+
+let townToDistrictPromise: Promise<Record<string, string>> | null = null
+
+// Build townId → districtId map by checking which district polygon
+// contains each town's geographic centroid. Brute-force O(N×M) ≈ 100k
+// containment checks at first call — ~1s, then cached for the session.
+export async function getTownToDistrict(): Promise<Record<string, string>> {
+  if (!townToDistrictPromise) {
+    townToDistrictPromise = (async () => {
+      const [townsFC, districtsFC] = await Promise.all([
+        fetchJson<FeatureCollection>(geoUrl(FILES.towns)),
+        fetchJson<FeatureCollection>(geoUrl(FILES.schoolDistricts)),
+      ])
+      const map: Record<string, string> = {}
+      for (const tf of townsFC.features) {
+        const tProps = (tf.properties ?? {}) as Record<string, unknown>
+        const tId =
+          (tProps.GEOID as string | undefined) ??
+          (tf.id != null ? String(tf.id) : '')
+        if (!tId) continue
+        const tc = geoCentroid(tf as unknown as GeoPermissibleObjects)
+        for (const df of districtsFC.features) {
+          if (geoContains(df as unknown as GeoPermissibleObjects, tc)) {
+            const dProps = (df.properties ?? {}) as Record<string, unknown>
+            const dId =
+              (dProps.GEOID as string | undefined) ??
+              (df.id != null ? String(df.id) : '')
+            if (dId) map[tId] = dId
+            break
+          }
+        }
+      }
+      return map
+    })()
+  }
+  return townToDistrictPromise
 }
 
 let phonePoliciesPromise: Promise<Record<string, PhonePolicy>> | null = null
