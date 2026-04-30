@@ -86,8 +86,8 @@ export default function App() {
 
   return (
     <div className="flex flex-col h-screen w-screen">
-      <header className="flex items-center gap-3 px-4 h-12 border-b border-slate-200 bg-white shrink-0">
-        <h1 className="font-semibold text-slate-900 text-sm tracking-tight">
+      <header className="flex items-center gap-3 px-4 h-12 border-b border-slate-200 bg-white shrink-0 overflow-x-auto">
+        <h1 className="font-semibold text-slate-900 text-sm tracking-tight whitespace-nowrap">
           MA Power Map
         </h1>
         <div className="h-5 w-px bg-slate-200" />

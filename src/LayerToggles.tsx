@@ -31,11 +31,11 @@ export function LayerToggles({
   onChange: (v: LayerState) => void
 }) {
   return (
-    <div className="flex items-center gap-3 text-xs text-slate-700">
+    <div className="flex items-center gap-3 text-xs text-slate-700 whitespace-nowrap">
       {LABELS.map(({ key, label }) => (
         <label
           key={key}
-          className="flex items-center gap-1.5 cursor-pointer select-none"
+          className="flex items-center gap-1.5 cursor-pointer select-none whitespace-nowrap"
         >
           <input
             type="checkbox"
