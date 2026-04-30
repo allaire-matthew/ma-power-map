@@ -333,6 +333,99 @@
       "lastVerified": "2026-04-30",
       "confidence": "high"
     },
+    "2508370": {
+      "districtId": "2508370",
+      "districtName": "Needham School District",
+      "tier": 2,
+      "policySummary": "Needham HS uses 'phone hotels' (shoe-bag-style hangers near classroom doors) — students place phones in assigned slots for class duration. K-8: phones discouraged; if brought, stored in coat/backpack/cubby. School Committee approved late May 2024. Explicitly NOT Yondr.",
+      "scope": "K-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 5500,
+      "sources": [
+        {"title": "New approaches cut cell phone use in schools", "url": "https://needhamobserver.com/new-approaches-cut-cell-phone-use-in-schools/", "publisher": "Needham Observer", "date": "2024-09-15"},
+        {"title": "Cell Phone Policy", "url": "https://nhs.needham.k12.ma.us/health_services/cell_phone_policy", "publisher": "Needham High School", "date": "2024-08-30"},
+        {"title": "Community Weighs Value of Phones in Schools", "url": "https://needhamlocal.org/2024/07/community-weighs-value-of-phones-in-schools/", "publisher": "Needham Local", "date": "2024-07-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2504980": {
+      "districtId": "2504980",
+      "districtName": "Framingham School District",
+      "tier": 2,
+      "policySummary": "Framingham HS adopted no-cell-phones-in-classroom restriction; allowed in hallways and at lunch. District-wide K-12 scope not yet verified. (Christa McAuliffe Charter School in Framingham uses Yondr but is a charter, not district.)",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 9500,
+      "sources": [
+        {"title": "Educators Seek Restrictions on Phones, Electronic Devices", "url": "https://www.massteacher.org/MTAtoday/all-news-articles/educators-seek-restrictions-phones-electronic-devices", "publisher": "Massachusetts Teachers Association", "date": "2024-12-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2503870": {
+      "districtId": "2503870",
+      "districtName": "Concord-Carlisle School District",
+      "tier": 2,
+      "policySummary": "Concord-Carlisle HS handbook: students store phones in caddies during class time; access between classes and at lunch. Regional School Committee opted to hold off on stricter rules in 2025; 'Cell Phone Policy Process' on December 2025 committee agenda — district still actively evaluating.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 1300,
+      "sources": [
+        {"title": "Hold the phone: School boards weigh cell bans during class time", "url": "https://concordbridge.org/index.php/2025/05/23/hold-the-phone-school-boards-weigh-cell-bans-during-class-time/", "publisher": "Concord Bridge", "date": "2025-05-23"},
+        {"title": "Concord schools need a phone-free policy", "url": "https://concordbridge.org/index.php/2025/02/28/concord-schools-need-a-phone-free-policy/", "publisher": "Concord Bridge", "date": "2025-02-28"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2512210": {
+      "districtId": "2512210",
+      "districtName": "Wayland School District",
+      "tier": 2,
+      "policySummary": "Wayland HS administrative council enacted policy October 2024: phones kept in secure holders or powered off in backpacks; in-class enforcement at teacher discretion. Policy followed extensive community input (~800 parent + ~800 student + ~200 staff survey responses); >80% MS/HS parents supported clear expectations.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-10",
+      "enrollment": 2700,
+      "sources": [
+        {"title": "Parents Favor Blanket Cell Phone Bans, Schools Lean Towards Nuanced Approach", "url": "https://www.waylandpost.org/community/schools/parents-favor-blanket-cell-phone-bansschools-lean-towards-nuanced-approach/", "publisher": "Wayland Post", "date": "2024-12-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2501710": {
+      "districtId": "2501710",
+      "districtName": "Acton-Boxborough Regional School District",
+      "tier": 2,
+      "policySummary": "Acton-Boxborough Regional HS for 2025-26 SY: cell phones placed in classroom cubbies during class; allowed during free periods and lunch in cafe / student centers / non-class times. NOT Yondr. Elementary/middle scope not yet verified.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2025-09",
+      "enrollment": 5400,
+      "sources": [
+        {"title": "Acton-Boxborough Regional School Committee policy meeting (Apr 17 2025)", "url": "https://www.boxborough-ma.gov/AgendaCenter/ViewFile/Agenda/_04172025-4399", "publisher": "Acton-Boxborough RSD", "date": "2025-04-17"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2509720": {
+      "districtId": "2509720",
+      "districtName": "Plymouth School District",
+      "tier": 2,
+      "policySummary": "Plymouth Public Schools: 'put away for the day' approach in force ~2 years (since ~2023). Phones in students' bags or teacher classroom cases; only used when instructor requests for educational purposes. Specific grade-level scope and mechanism details not fully verified.",
+      "scope": "varies",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2023-09",
+      "enrollment": 7400,
+      "sources": [
+        {"title": "Plymouth Schools Ahead Of Curve Banning Cell Phones", "url": "https://959watd.com/blog/2025/09/plymouth-schools-ahead-of-the-curve-in-banning-of-cell-phones/", "publisher": "WATD 95.9 FM", "date": "2025-09-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
