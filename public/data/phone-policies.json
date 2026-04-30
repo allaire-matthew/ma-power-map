@@ -287,6 +287,52 @@
       "lastVerified": "2026-04-30",
       "confidence": "high"
     },
+    "2513230": {
+      "districtId": "2513230",
+      "districtName": "Worcester School District",
+      "tier": 2,
+      "policySummary": "School Committee approved revised policy in 2024: cell phone use barred during instructional time without teacher permission for educational purposes; limited use allowed during lunch and other non-instructional time for educational communication (email, chat). Off-and-away enforcement.",
+      "scope": "K-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 25000,
+      "sources": [
+        {"title": "Massachusetts eyes limits on student phone, social media use", "url": "https://theworcesterguardian.org/f/massachusetts-eyes-limits-on-student-phone-social-media-use/", "publisher": "The Worcester Guardian", "date": "2024-09-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2509870": {
+      "districtId": "2509870",
+      "districtName": "Quincy School District",
+      "tier": 2,
+      "policySummary": "Quincy School Committee subcommittee unanimously moved a strict all-day Yondr pouch policy out of committee in April 2026; full School Committee vote pending. Coverage: every middle and high school student. Phones turned off and locked in Yondr at start of day, kept by student, unlocked at dismissal.",
+      "scope": "9-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2026-04",
+      "enrollment": 9700,
+      "sources": [
+        {"title": "Mass. House to vote on youth social media ban, strict school cellphone ban", "url": "https://www.boston.com/news/local-news/2026/04/06/mass-house-to-vote-on-youth-social-media-ban-strict-school-cellphone-ban/", "publisher": "Boston.com", "date": "2026-04-06"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2511520": {
+      "districtId": "2511520",
+      "districtName": "Taunton School District",
+      "tier": 2,
+      "policySummary": "Taunton HS uses Yondr pouches: phones turned off and locked at start of school day, carried by student all day, unlocked at dismissal. Cited by Quincy School Committee as a peer with reported gains (improved grades; reduced bullying, suspensions, fighting, cheating). Middle/elementary scope not verified.",
+      "scope": "9-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-09",
+      "enrollment": 8200,
+      "sources": [
+        {"title": "Taunton High School announces cell phone ban", "url": "https://whdh.com/regional/taunton-high-school-announces-cell-phone-ban/", "publisher": "WHDH 7News", "date": "2024-08-15"},
+        {"title": "Stop the Yondr Pouch Implementation in Taunton High School! (petition)", "url": "https://www.change.org/p/stop-the-yondr-pouch-implementation-in-taunton-high-school", "publisher": "Change.org", "date": "2024-09-10"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
