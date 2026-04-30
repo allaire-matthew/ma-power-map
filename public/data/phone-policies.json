@@ -426,6 +426,68 @@
       "lastVerified": "2026-04-30",
       "confidence": "medium"
     },
+    "2502490": {
+      "districtId": "2502490",
+      "districtName": "Belmont School District",
+      "tier": 2,
+      "policySummary": "Belmont HS adopted policy requiring phones off-and-away in all classes from fall 2024; phones stored in cell phone holders during class. Replaces prior teacher-discretion regime. Approved by School Committee in June 2024.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 4900,
+      "sources": [
+        {"title": "Belmont High to Ban Cell Phones in the Classroom", "url": "https://belmontvoice.org/belmont-high-to-ban-cell-phones-in-the-classroom/", "publisher": "The Belmont Voice", "date": "2024-06-15"},
+        {"title": "Belmont High Considering In-Class Cell Phone Ban", "url": "https://belmontvoice.org/belmont-high-considering-in-class-cell-phone/", "publisher": "The Belmont Voice", "date": "2024-04-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2507260": {
+      "districtId": "2507260",
+      "districtName": "Marblehead School District",
+      "tier": 2,
+      "policySummary": "Marblehead HS: students may not use phones during class hours; use allowed between classes and at lunch. Collection is at individual teacher's discretion (principal explicitly framed as preparing students for 'real world responsibility'). Off-and-away — not Yondr.",
+      "scope": "9-12",
+      "enforcement": "honor",
+      "effectiveDate": "2024-09",
+      "enrollment": 2700,
+      "sources": [
+        {"title": "MHS Implements New Security, Cell Phone, Attendance Policies", "url": "https://marbleheadbeacon.com/mhs-implements-new-security-cell-phone-attendance-policies", "publisher": "Marblehead Beacon", "date": "2024-09-15"},
+        {"title": "MHS Student Handbook 2025-26", "url": "https://resources.finalsite.net/images/v1764610310/marbleheadschoolsorg/mk1jlxchlsplpxx1hv2i/MHS_Student_Handbook_25-26docx.pdf", "publisher": "Marblehead Public Schools", "date": "2025-09-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2509990": {
+      "districtId": "2509990",
+      "districtName": "Reading School District",
+      "tier": 2,
+      "policySummary": "Middle school: phones turned off and stored in lockers during the school day. Reading HS handbook contains no cell phone policy. Statewide mandate (S.2561, fall 2026) will force a HS policy.",
+      "scope": "K-8",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-09",
+      "enrollment": 4400,
+      "sources": [
+        {"title": "School cell phone policies still developing as academic year begins", "url": "https://homenewshere.com/middlesex_east/article_7cb12b44-7f2e-11ef-82f4-b37b4e1364d5.html", "publisher": "Middlesex East / HomeNewsHere", "date": "2024-09-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2508340": {
+      "districtId": "2508340",
+      "districtName": "Natick School District",
+      "tier": 2,
+      "policySummary": "Natick HS Student Handbook (2023-24, in force): phones must be off and not visible in classrooms during class periods (also in bathrooms during the school day). Use allowed in dining hall, courtyard, and other designated areas. Teachers may approve educational use in class. Off-and-away enforcement.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2023-09",
+      "enrollment": 5400,
+      "sources": [
+        {"title": "Natick High School Student Handbook 2023-2024", "url": "https://natickschools.novusagenda.com/agendapublic/AttachmentViewer.ashx?AttachmentID=3777&ItemID=4672", "publisher": "Natick Public Schools", "date": "2023-09-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
