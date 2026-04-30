@@ -883,6 +883,21 @@
       "lastVerified": "2026-04-30",
       "confidence": "high"
     },
+    "2510680": {
+      "districtId": "2510680",
+      "districtName": "Shrewsbury School District",
+      "tier": 2,
+      "policySummary": "Shrewsbury HS implemented policy: students place cell phones in 'phone holder' at front of classroom at beginning of each period. Initial student resistance but described as a positive change to classroom environment. Off-and-away enforcement.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 6300,
+      "sources": [
+        {"title": "The Rise of Phone Bans in Schools (Shrewsbury reference)", "url": "https://www.closeup.org/public-schools-phone-bans/", "publisher": "Close Up Foundation", "date": "2024-12-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
