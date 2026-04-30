@@ -317,6 +317,45 @@ export function MapBackground({
               />
             ))}
 
+          {/* Tier-3 callouts. Hardware bans are rare enough that they
+              deserve a visible badge — easier to spot than scanning the
+              fill colors. */}
+          {layers.phoneFree &&
+            districts.map((f) => {
+              const policy = policies[f.id]
+              if (policy?.tier !== 3) return null
+              const [cx, cy] = f.centroid
+              return (
+                <g key={`tier3-${f.id}`} pointerEvents="none">
+                  <circle
+                    cx={cx}
+                    cy={cy}
+                    r={6 / camera.z}
+                    fill="#22c55e"
+                    stroke="#15803d"
+                    strokeWidth={1.4 / camera.z}
+                  />
+                  <text
+                    x={cx}
+                    y={cy + 14 / camera.z}
+                    textAnchor="middle"
+                    fontSize={11 / camera.z}
+                    fontWeight={600}
+                    fill="#14532d"
+                    style={{
+                      fontFamily: 'system-ui, sans-serif',
+                      paintOrder: 'stroke',
+                      stroke: 'white',
+                      strokeWidth: 3 / camera.z,
+                      strokeLinejoin: 'round',
+                    }}
+                  >
+                    {f.name.replace(/ School District$/, '')}
+                  </text>
+                </g>
+              )
+            })}
+
           {/* State legislature — both chambers together. */}
           {layers.stateLegislature && (
             <>
