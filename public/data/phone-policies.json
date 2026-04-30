@@ -945,6 +945,21 @@
       "lastVerified": "2026-04-30",
       "confidence": "medium"
     },
+    "2507860": {
+      "districtId": "2507860",
+      "districtName": "Milford School District",
+      "tier": 2,
+      "policySummary": "Milford HS implemented a policy prohibiting cell-phone use in classrooms and hallways since 2019 — one of the earlier MA districts to adopt restrictions. Off-and-away enforcement.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2019-09",
+      "enrollment": 4100,
+      "sources": [
+        {"title": "Mass. education department 'likely' to encourage schools to restrict phones (Milford reference)", "url": "https://www.boston.com/news/local-news/2023/05/25/mass-education-department-likely-to-encourage-schools-to-restrict-phones/", "publisher": "Boston.com", "date": "2023-05-25"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "low"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
