@@ -837,6 +837,52 @@
       "lastVerified": "2026-04-30",
       "confidence": "low"
     },
+    "2502400": {
+      "districtId": "2502400",
+      "districtName": "Bedford School District",
+      "tier": 2,
+      "policySummary": "Bedford HS pilot 'bell-to-bell no cell' policy in 2024-25: phones collected before each class session; access during lunch and other breaks. Cited successful peer districts as model. Hardware-light enforcement (per-class collection).",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 2400,
+      "sources": [
+        {"title": "Under Pilot Policy, BHS Students will Forego Phones in Class", "url": "https://thebedfordcitizen.org/2024/04/under-pilot-policy-bhs-students-will-forego-phones-in-class/", "publisher": "The Bedford Citizen", "date": "2024-04-15"},
+        {"title": "BHS Student Handbook 2024-25 (draft)", "url": "https://www.bedfordps.org/sites/g/files/vyhlif2786/f/uploads/bhs_student_handbook_2024-25_draft.pdf", "publisher": "Bedford Public Schools", "date": "2024-08-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2511580": {
+      "districtId": "2511580",
+      "districtName": "Tewksbury School District",
+      "tier": 2,
+      "policySummary": "Wynn Middle School piloted magnetic pouches (Yondr-style) starting April 2024. Fully implemented for 2024-25 SY at the middle school. Teachers reported up to 60% reduction in student time out of classroom since restriction. Tier-2 — MS hardware in force; HS scope unverified.",
+      "scope": "K-8",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-09",
+      "enrollment": 3300,
+      "sources": [
+        {"title": "School cell phone policies still developing as academic year begins", "url": "https://homenewshere.com/middlesex_east/article_7cb12b44-7f2e-11ef-82f4-b37b4e1364d5.html", "publisher": "Middlesex East / HomeNewsHere", "date": "2024-09-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2502670": {
+      "districtId": "2502670",
+      "districtName": "Billerica School District",
+      "tier": 2,
+      "policySummary": "Billerica policy in force 2025-26 SY: all student phones and smartwatches kept in student lockers, turned off, for the duration of the school day. Locker access at scheduled times (morning, after period 3, before PE, before last period special, end of day). Hardware-style separation via locker storage.",
+      "scope": "K-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2025-09",
+      "enrollment": 4800,
+      "sources": [
+        {"title": "Life at the Locke Issue #2 2025-2026", "url": "https://billericak12.com/life-at-the-locke-issue-2-2025-2026/", "publisher": "Billerica Public Schools", "date": "2025-09-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
