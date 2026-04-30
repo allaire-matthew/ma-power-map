@@ -13,6 +13,7 @@ export type ProjectedFeature = {
   name: string
   d: string
   centroid: [number, number]
+  area: number
   population?: number
   kind?: string
 }
@@ -66,6 +67,39 @@ async function getProjection() {
   return projectionPromise
 }
 
+export type PhoneTier = 1 | 2 | 3
+
+export type PhonePolicy = {
+  districtId: string
+  districtName: string
+  tier: PhoneTier
+  policySummary: string
+  scope: string
+  enforcement: string
+  effectiveDate: string
+  enrollment: number | null
+  sources: { title: string; url: string; publisher: string; date: string }[]
+  lastVerified: string
+  confidence: 'high' | 'medium' | 'low'
+}
+
+let phonePoliciesPromise: Promise<Record<string, PhonePolicy>> | null = null
+
+export async function loadPhonePolicies(): Promise<Record<string, PhonePolicy>> {
+  if (!phonePoliciesPromise) {
+    phonePoliciesPromise = (async () => {
+      try {
+        const url = `${import.meta.env.BASE_URL}data/phone-policies.json`
+        const json = await fetchJson<{ policies: Record<string, PhonePolicy> }>(url)
+        return json.policies ?? {}
+      } catch {
+        return {}
+      }
+    })()
+  }
+  return phonePoliciesPromise
+}
+
 export async function loadLayer(name: LayerName): Promise<ProjectedLayer> {
   if (!layerCache.has(name)) {
     layerCache.set(
@@ -89,6 +123,7 @@ export async function loadLayer(name: LayerName): Promise<ProjectedLayer> {
             // sidestepping the wrong-winding antipode issue you get with
             // geoCentroid + projection() for shapefile-sourced polygons.
             const xy = path.centroid(geom)
+            const area = path.area(geom)
             const population =
               typeof props.population === 'number'
                 ? (props.population as number)
@@ -100,6 +135,7 @@ export async function loadLayer(name: LayerName): Promise<ProjectedLayer> {
               name,
               d,
               centroid: [xy[0], xy[1]] as [number, number],
+              area,
               population,
               kind,
             }

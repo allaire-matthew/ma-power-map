@@ -1,0 +1,143 @@
+{
+  "_schemaVersion": 1,
+  "_lastUpdated": "2026-04-30",
+  "_notes": "Seed data — see RESEARCH_SPEC_PHONE_POLICIES.md. Many entries are confidence:low and need verification. Districts not present default to tier 1 (no policy) in the UI.",
+  "policies": {
+    "2502790": {
+      "districtId": "2502790",
+      "districtName": "Boston School District",
+      "tier": 2,
+      "policySummary": "Yondr pouch program available across roughly 31 BPS schools (4+ high schools, 9 elementary) on opt-in basis under a 3-year contract. Not yet a uniform district-wide K-12 mandate.",
+      "scope": "varies",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-09",
+      "enrollment": 48800,
+      "sources": [
+        {"title": "Some high schoolers say a school cell phone ban boosted grades and connections", "url": "https://www.bostonglobe.com/2025/08/12/metro/boston-cell-phone-ban-schools/", "publisher": "Boston Globe", "date": "2025-08-12"},
+        {"title": "Phone Restrictions Make 'Immense Difference' at Boston Schools", "url": "https://www.govtech.com/education/k-12/phone-restrictions-make-immense-difference-at-boston-schools", "publisher": "GovTech", "date": "2025-08-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2504830": {
+      "districtId": "2504830",
+      "districtName": "Fall River School District",
+      "tier": 3,
+      "policySummary": "District-wide Yondr pouch ban: all electronic devices secured in locked Yondr pouches upon entry, returned at end of day.",
+      "scope": "K-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-09",
+      "enrollment": 9700,
+      "sources": [
+        {"title": "Mass. AG cell phone policy recommendations", "url": "https://www.govtech.com/education/k-12/mass-ag-issues-phone-policy-recommendations-for-schools", "publisher": "GovTech", "date": "2025-06"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2507740": {
+      "districtId": "2507740",
+      "districtName": "Methuen School District",
+      "tier": 3,
+      "policySummary": "Cited by state Senate sponsors as an early adopter of a full school-day phone ban. Verify hardware-vs-honor enforcement specifics.",
+      "scope": "K-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-09",
+      "enrollment": 6800,
+      "sources": [
+        {"title": "Mass. lawmakers approve cell phone ban for public schools", "url": "https://www.bostonglobe.com/2025/07/31/metro/cell-phone-ban-massachusetts-schools-senate/", "publisher": "Boston Globe", "date": "2025-07-31"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "low"
+    },
+    "2508610": {
+      "districtId": "2508610",
+      "districtName": "Newton School District",
+      "tier": 2,
+      "policySummary": "District has adopted a phone ban; specific enforcement mechanism (hardware vs. off-and-away) not yet verified at K-12 scope.",
+      "scope": "varies",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 12000,
+      "sources": [
+        {"title": "Mass. Senate passes school cell phone ban", "url": "https://www.boston.com/news/local-news/2025/08/01/mass-senate-passes-school-cell-phone-ban/", "publisher": "Boston.com", "date": "2025-08-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "low"
+    },
+    "2503150": {
+      "districtId": "2503150",
+      "districtName": "Brookline School District",
+      "tier": 2,
+      "policySummary": "Phone storage measures (off-and-away style) reported in statewide coverage; not full hardware-level ban district-wide.",
+      "scope": "varies",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 7900,
+      "sources": [
+        {"title": "What students, teachers and parents think about banning phones in Mass. schools", "url": "https://www.wbur.org/news/2025/05/06/students-teachers-parents-cell-phone-restrictions-classrooms-massachusetts", "publisher": "WBUR", "date": "2025-05-06"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "low"
+    },
+    "2512660": {
+      "districtId": "2512660",
+      "districtName": "Westford School District",
+      "tier": 2,
+      "policySummary": "Yondr pouches in use at the middle schools since 2024; high schools not yet on the same hardware regimen.",
+      "scope": "K-8",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-09",
+      "enrollment": 4900,
+      "sources": [
+        {"title": "Westford educators react to proposed school cell phone ban", "url": "https://westfordcat.org/2025/08/westford-educators-react-proposed-school-cellphone-ban/", "publisher": "WestfordCAT", "date": "2025-08-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2508580": {
+      "districtId": "2508580",
+      "districtName": "Newburyport School District",
+      "tier": 2,
+      "policySummary": "Newburyport HS implemented a classroom phone ban; verify district-wide scope and enforcement type.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 2400,
+      "sources": [
+        {"title": "2 Massachusetts high schools banned cellphones in class", "url": "https://www.cbsnews.com/boston/news/massachusetts-ipswich-newburyport-cellphones-school-ban/", "publisher": "CBS Boston", "date": "2025-09-12"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "low"
+    },
+    "2506480": {
+      "districtId": "2506480",
+      "districtName": "Ipswich School District",
+      "tier": 2,
+      "policySummary": "Ipswich HS implemented a classroom phone ban; district-wide hardware enforcement unverified.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 1900,
+      "sources": [
+        {"title": "2 Massachusetts high schools banned cellphones in class", "url": "https://www.cbsnews.com/boston/news/massachusetts-ipswich-newburyport-cellphones-school-ban/", "publisher": "CBS Boston", "date": "2025-09-12"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "low"
+    },
+    "2510380": {
+      "districtId": "2510380",
+      "districtName": "Salem School District",
+      "tier": 2,
+      "policySummary": "Yondr pouches used at the middle school level (cited in statewide reporting); high school scope unverified.",
+      "scope": "K-8",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-09",
+      "enrollment": 4000,
+      "sources": [
+        {"title": "Schools across U.S. turn to a locked magnetic pouch as a cellphone ban solution", "url": "https://www.cbsnews.com/news/yondr-pouches-school-cell-phone-ban/", "publisher": "CBS News", "date": "2024-08-24"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "low"
+    }
+  }
+}

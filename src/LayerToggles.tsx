@@ -1,30 +1,27 @@
 export type LayerKey =
-  | 'counties'
-  | 'towns'
+  | 'phoneFree'
+  | 'sizeGradient'
   | 'congressional'
-  | 'stateHouse'
-  | 'stateSenate'
+  | 'stateLegislature'
   | 'schoolDistricts'
   | 'irlCouncil'
 
 export type LayerState = Record<LayerKey, boolean>
 
 export const defaultLayers: LayerState = {
-  counties: true,
-  towns: false,
+  phoneFree: true,
+  sizeGradient: false,
   congressional: false,
-  stateHouse: false,
-  stateSenate: false,
+  stateLegislature: false,
   schoolDistricts: false,
   irlCouncil: false,
 }
 
-const LABELS: { key: LayerKey; label: string; depends?: LayerKey }[] = [
-  { key: 'counties', label: 'Counties' },
-  { key: 'towns', label: 'Towns' },
+const LABELS: { key: LayerKey; label: string }[] = [
+  { key: 'phoneFree', label: 'Phone-free status' },
+  { key: 'sizeGradient', label: 'Size gradient' },
   { key: 'congressional', label: 'US House' },
-  { key: 'stateHouse', label: 'State House' },
-  { key: 'stateSenate', label: 'State Senate' },
+  { key: 'stateLegislature', label: 'State legislature' },
   { key: 'schoolDistricts', label: 'School districts' },
   { key: 'irlCouncil', label: 'IRL Council' },
 ]
@@ -38,26 +35,20 @@ export function LayerToggles({
 }) {
   return (
     <div className="flex items-center gap-3 text-xs text-slate-700">
-      {LABELS.map(({ key, label, depends }) => {
-        const disabled = depends ? !value[depends] : false
-        return (
-          <label
-            key={key}
-            className={`flex items-center gap-1.5 cursor-pointer select-none ${
-              disabled ? 'opacity-40 cursor-not-allowed' : ''
-            }`}
-          >
-            <input
-              type="checkbox"
-              checked={value[key] && !disabled}
-              disabled={disabled}
-              onChange={(e) => onChange({ ...value, [key]: e.target.checked })}
-              className="accent-indigo-600"
-            />
-            {label}
-          </label>
-        )
-      })}
+      {LABELS.map(({ key, label }) => (
+        <label
+          key={key}
+          className="flex items-center gap-1.5 cursor-pointer select-none"
+        >
+          <input
+            type="checkbox"
+            checked={value[key]}
+            onChange={(e) => onChange({ ...value, [key]: e.target.checked })}
+            className="accent-indigo-600"
+          />
+          {label}
+        </label>
+      ))}
     </div>
   )
 }
