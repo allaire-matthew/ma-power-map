@@ -268,23 +268,24 @@ export function MapBackground({
               const dId = townToDistrict[f.id]
               const policy = dId ? policies[dId] : undefined
               const tier: PhoneTier = policy?.tier ?? 1
+              const score = dId ? sizeScore[dId] ?? 0 : 0
               let fill = '#f8fafc'
               let alpha = 1
-              if (layers.phoneFree || layers.sizeGradient) {
-                fill = layers.phoneFree ? TIER_COLOR[tier] : '#64748b'
-                const baseAlpha = layers.phoneFree
-                  ? tier === 3
-                    ? 0.55
-                    : tier === 2
-                      ? 0.45
-                      : policy
-                        ? 0.35
-                        : 0.18
-                  : 0.05
-                const sizeMul = layers.sizeGradient && dId
-                  ? 0.25 + 0.9 * (sizeScore[dId] ?? 0)
-                  : 1
-                alpha = Math.min(0.85, baseAlpha * sizeMul)
+              if (layers.phoneFree && layers.sizeGradient) {
+                // Tier color, modulated by district size for clearly
+                // visible gradient between small/large districts.
+                fill = TIER_COLOR[tier]
+                const baseAlpha =
+                  tier === 3 ? 0.6 : tier === 2 ? 0.5 : policy ? 0.4 : 0.25
+                alpha = Math.min(0.9, baseAlpha * (0.45 + 0.85 * score))
+              } else if (layers.phoneFree) {
+                fill = TIER_COLOR[tier]
+                alpha =
+                  tier === 3 ? 0.55 : tier === 2 ? 0.45 : policy ? 0.35 : 0.2
+              } else if (layers.sizeGradient) {
+                // Standalone gray ramp — must be plainly visible.
+                fill = '#334155'
+                alpha = 0.12 + 0.7 * score
               }
               return (
                 <path

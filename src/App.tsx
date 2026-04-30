@@ -5,7 +5,9 @@ import { LayerToggles, type LayerState, defaultLayers } from './LayerToggles'
 import { Legend } from './Legend'
 import { TownPopup } from './TownPopup'
 
-const LS_KEY = 'ma-power-map.layers'
+// Bumped from `ma-power-map.layers` to force-clear the stale toggle set
+// (counties/towns/irlCouncil) that lingered after the redesign.
+const LS_KEY = 'ma-power-map.layers.v2'
 
 function loadLayers(): LayerState {
   try {
