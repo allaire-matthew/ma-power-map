@@ -10,8 +10,8 @@ export type LayerKey =
 export type LayerState = Record<LayerKey, boolean>
 
 export const defaultLayers: LayerState = {
-  counties: false,
-  towns: true,
+  counties: true,
+  towns: false,
   congressional: false,
   stateHouse: false,
   stateSenate: false,

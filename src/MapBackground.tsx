@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   loadLayer,
   type LayerName,
@@ -90,6 +90,67 @@ export function MapBackground({
 }) {
   const [data, setData] = useState<Partial<Record<LayerName, ProjectedLayer>>>({})
   const { marked, toggle: toggleIrl } = useIrlCouncils()
+  const svgRef = useRef<SVGSVGElement | null>(null)
+  const groupRefs = useRef<Partial<Record<LayerName, SVGGElement | null>>>({})
+  const [hover, setHover] = useState<{
+    layer: LayerName
+    name: string
+    x: number
+    y: number
+  } | null>(null)
+
+  useEffect(() => {
+    const svg = svgRef.current
+    if (!svg) return
+    let raf = 0
+    let pending: { x: number; y: number } | null = null
+    const process = () => {
+      raf = 0
+      if (!pending) return
+      const { x: cx, y: cy } = pending
+      pending = null
+      // Iterate layers from topmost-rendered to bottom so the most specific
+      // outline wins when several overlap. isPointInFill is a geometry
+      // method — it works regardless of pointer-events / stacking, which is
+      // why we can hover-detect through the tldraw layer above us.
+      for (let i = ORDER.length - 1; i >= 0; i--) {
+        const layerName = ORDER[i]
+        if (!layerEnabled(layerName, layers)) continue
+        const g = groupRefs.current[layerName]
+        if (!g) continue
+        const ctm = g.getScreenCTM()
+        if (!ctm) continue
+        const screenPt = svg.createSVGPoint()
+        screenPt.x = cx
+        screenPt.y = cy
+        const localPt = screenPt.matrixTransform(ctm.inverse())
+        const paths = g.querySelectorAll<SVGPathElement>('path[data-id]')
+        for (const p of paths) {
+          if (p.isPointInFill(localPt)) {
+            const id = p.dataset.id!
+            const feature = data[layerName]?.features.find((f) => f.id === id)
+            if (feature) {
+              setHover({ layer: layerName, name: feature.name, x: cx, y: cy })
+              return
+            }
+          }
+        }
+      }
+      setHover(null)
+    }
+    const onMove = (e: MouseEvent) => {
+      pending = { x: e.clientX, y: e.clientY }
+      if (!raf) raf = requestAnimationFrame(process)
+    }
+    const onLeave = () => setHover(null)
+    window.addEventListener('mousemove', onMove)
+    window.addEventListener('mouseleave', onLeave)
+    return () => {
+      window.removeEventListener('mousemove', onMove)
+      window.removeEventListener('mouseleave', onLeave)
+      if (raf) cancelAnimationFrame(raf)
+    }
+  }, [data, layers, camera])
 
   useEffect(() => {
     const wanted = ORDER.filter((k) => layerEnabled(k, layers))
@@ -118,6 +179,7 @@ export function MapBackground({
   return (
     <>
       <svg
+        ref={svgRef}
         className="absolute inset-0 w-full h-full"
         style={{
           background: '#f8fafc',
@@ -134,10 +196,16 @@ export function MapBackground({
             if (!layer) return null
             const s = STYLES[k]
             return (
-              <g key={k}>
+              <g
+                key={k}
+                ref={(el) => {
+                  groupRefs.current[k] = el
+                }}
+              >
                 {layer.features.map((f) => (
                   <path
                     key={f.id}
+                    data-id={f.id}
                     d={f.d}
                     fill={s.fill}
                     stroke={s.stroke}
@@ -198,6 +266,15 @@ export function MapBackground({
           )}
         </g>
       </svg>
+
+      {hover && !selected && (
+        <div
+          className="absolute z-30 pointer-events-none px-2 py-1 bg-slate-900 text-white text-xs rounded shadow whitespace-nowrap"
+          style={{ left: hover.x + 12, top: hover.y + 12 }}
+        >
+          {hover.name}
+        </div>
+      )}
 
       {selected && selectedFeature && (
         <FeatureCard
