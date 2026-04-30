@@ -807,6 +807,36 @@
       "lastVerified": "2026-04-30",
       "confidence": "medium"
     },
+    "2512840": {
+      "districtId": "2512840",
+      "districtName": "Weymouth School District",
+      "tier": 2,
+      "policySummary": "Weymouth HS implemented cell-phone-free classroom policy: classrooms and common spaces have cell phone holders. Students place phones in holders upon entry and retrieve at end of period. Use allowed during passing, study periods, and lunch.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 6300,
+      "sources": [
+        {"title": "Weymouth High School", "url": "https://secure.smore.com/n/bcawv-weymouth-high-school", "publisher": "Weymouth High School newsletter", "date": "2024-09-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2506330": {
+      "districtId": "2506330",
+      "districtName": "Hopkinton School District",
+      "tier": 2,
+      "policySummary": "Hopkinton HS implemented cell-phone policy changes for 2024-25 SY; school improvement plan references collecting feedback on impact. Specific mechanism (off-and-away vs. hardware) and grade-level scope not yet verified against district handbook.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 4400,
+      "sources": [
+        {"title": "Hopkinton HS School Improvement Plan", "url": "https://highschool.hopkinton.k12.ma.us/about/school-improvement-plan", "publisher": "Hopkinton Public Schools", "date": "2024-09-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "low"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
