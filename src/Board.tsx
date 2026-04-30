@@ -54,9 +54,23 @@ export function Board({
   const components = useMemo<TLComponents>(
     () => ({
       Background: () => null,
-      // Suppress tldraw's right-side style panel — it visually overlaps
-      // our Legend in the top-right.
+      // The map is a data viewer — drawing tools are visual clutter and
+      // the floating UI overlaps our own controls. Suppress everything
+      // tldraw renders, but keep the editor mounted for pan/zoom + the
+      // tldraw-driven camera state our SVG layer follows.
       StylePanel: () => null,
+      Toolbar: () => null,
+      MenuPanel: () => null,
+      NavigationPanel: () => null,
+      QuickActions: () => null,
+      ActionsMenu: () => null,
+      HelpMenu: () => null,
+      DebugPanel: () => null,
+      DebugMenu: () => null,
+      ZoomMenu: () => null,
+      MainMenu: () => null,
+      PageMenu: () => null,
+      KeyboardShortcutsDialog: () => null,
     }),
     [],
   )
