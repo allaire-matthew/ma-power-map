@@ -4,6 +4,9 @@ import { Board, recenterCamera } from './Board'
 import { LayerToggles, type LayerState, defaultLayers } from './LayerToggles'
 import { Legend } from './Legend'
 import { TownPopup } from './TownPopup'
+import type { PhoneTier } from './geo'
+
+export type TierFilter = 'all' | PhoneTier
 
 // Bumped from `ma-power-map.layers` to force-clear the stale toggle set
 // (counties/towns/irlCouncil) that lingered after the redesign.
@@ -23,6 +26,7 @@ export default function App() {
   const [layers, setLayers] = useState<LayerState>(loadLayers)
   const [editor, setEditor] = useState<Editor | null>(null)
   const [popupTownId, setPopupTownId] = useState<string | null>(null)
+  const [tierFilter, setTierFilter] = useState<TierFilter>('all')
 
   useEffect(() => {
     localStorage.setItem(LS_KEY, JSON.stringify(layers))
@@ -82,8 +86,13 @@ export default function App() {
           popupTownId={popupTownId}
           onTownClick={setPopupTownId}
           onEditor={setEditor}
+          tierFilter={tierFilter}
         />
-        <Legend layers={layers} />
+        <Legend
+          layers={layers}
+          tierFilter={tierFilter}
+          onTierFilter={setTierFilter}
+        />
         {popupTownId && (
           <TownPopup
             townId={popupTownId}

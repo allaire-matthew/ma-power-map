@@ -3,6 +3,7 @@ import { Tldraw, type Editor, type TLComponents } from 'tldraw'
 import { MapBackground } from './MapBackground'
 import { usePersistence } from './persistence'
 import type { LayerState } from './LayerToggles'
+import type { TierFilter } from './App'
 
 export function recenterCamera(editor: Editor) {
   const el = editor.getContainer()
@@ -21,11 +22,13 @@ export function Board({
   popupTownId,
   onTownClick,
   onEditor,
+  tierFilter,
 }: {
   layers: LayerState
   popupTownId: string | null
   onTownClick: (townId: string | null) => void
   onEditor?: (e: Editor) => void
+  tierFilter: TierFilter
 }) {
   const [editor, setEditor] = useState<Editor | null>(null)
   const [camera, setCamera] = useState({ x: 0, y: 0, z: 1 })
@@ -60,6 +63,7 @@ export function Board({
         layers={layers}
         popupTownId={popupTownId}
         onTownClick={onTownClick}
+        tierFilter={tierFilter}
       />
       <div className="absolute inset-0 tldraw-transparent">
         <Tldraw

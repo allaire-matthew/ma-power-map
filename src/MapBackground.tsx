@@ -12,6 +12,7 @@ import {
   type ProjectedLayer,
 } from './geo'
 import type { LayerState } from './LayerToggles'
+import type { TierFilter } from './App'
 
 const STYLES: Record<
   LayerName,
@@ -65,11 +66,13 @@ export function MapBackground({
   layers,
   popupTownId,
   onTownClick,
+  tierFilter,
 }: {
   camera: { x: number; y: number; z: number }
   layers: LayerState
   popupTownId: string | null
   onTownClick: (townId: string | null) => void
+  tierFilter: TierFilter
 }) {
   const [data, setData] = useState<Partial<Record<LayerName, ProjectedLayer>>>({})
   const [policies, setPolicies] = useState<Record<string, PhonePolicy>>({})
@@ -271,7 +274,12 @@ export function MapBackground({
               const score = dId ? sizeScore[dId] ?? 0 : 0
               let fill = '#f8fafc'
               let alpha = 1
-              if (layers.phoneFree && layers.sizeGradient) {
+              const filteredOut =
+                layers.phoneFree && tierFilter !== 'all' && tier !== tierFilter
+              if (filteredOut) {
+                fill = '#cbd5e1'
+                alpha = 0.18
+              } else if (layers.phoneFree && layers.sizeGradient) {
                 // Tier color, modulated by district size for clearly
                 // visible gradient between small/large districts.
                 fill = TIER_COLOR[tier]

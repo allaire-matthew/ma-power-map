@@ -7,6 +7,7 @@ import {
   loadPhonePolicies,
   type PhoneTier,
 } from './geo'
+import type { TierFilter } from './App'
 
 type Coverage = {
   totalPop: number
@@ -74,7 +75,15 @@ function formatDaysUntil(target: Date): { days: number; label: string } {
   return { days, label: `in ~${months} months` }
 }
 
-export function Legend({ layers }: { layers: LayerState }) {
+export function Legend({
+  layers,
+  tierFilter,
+  onTierFilter,
+}: {
+  layers: LayerState
+  tierFilter: TierFilter
+  onTierFilter: (t: TierFilter) => void
+}) {
   const showPhone = layers.phoneFree
   const showSize = layers.sizeGradient
   const showCong = layers.congressional
@@ -109,18 +118,45 @@ export function Legend({ layers }: { layers: LayerState }) {
               Phone-free status
             </div>
             <ul className="space-y-1">
-              {[3, 2, 1].map((t) => (
-                <li key={t} className="flex items-center gap-2">
-                  <span
-                    className="w-3.5 h-3.5 rounded-sm border border-slate-300"
-                    style={{ background: TIER_COLOR[t as 1 | 2 | 3] }}
-                  />
-                  <span className="leading-tight">
-                    {TIER_LABEL[t as 1 | 2 | 3]}
-                  </span>
-                </li>
-              ))}
+              {[3, 2, 1].map((t) => {
+                const tier = t as PhoneTier
+                const active = tierFilter === tier
+                const dimmed = tierFilter !== 'all' && !active
+                return (
+                  <li key={t}>
+                    <button
+                      type="button"
+                      onClick={() => onTierFilter(active ? 'all' : tier)}
+                      className={`flex items-center gap-2 w-full text-left px-1 -mx-1 py-0.5 rounded ${
+                        active
+                          ? 'bg-slate-100 ring-1 ring-slate-300'
+                          : 'hover:bg-slate-50'
+                      } ${dimmed ? 'opacity-40' : ''}`}
+                      title={
+                        active
+                          ? 'Click to clear filter'
+                          : `Click to show only tier ${tier}`
+                      }
+                    >
+                      <span
+                        className="w-3.5 h-3.5 rounded-sm border border-slate-300 shrink-0"
+                        style={{ background: TIER_COLOR[tier] }}
+                      />
+                      <span className="leading-tight">{TIER_LABEL[tier]}</span>
+                    </button>
+                  </li>
+                )
+              })}
             </ul>
+            {tierFilter !== 'all' && (
+              <button
+                type="button"
+                onClick={() => onTierFilter('all')}
+                className="text-[10px] text-indigo-600 hover:underline mt-1"
+              >
+                Clear filter
+              </button>
+            )}
             <div className="text-[10px] text-slate-400 mt-1.5 leading-snug">
               Districts not yet researched default to tier 1, lighter shade.
             </div>
