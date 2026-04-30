@@ -276,6 +276,16 @@ export function Legend({ layers }: { layers: LayerState }) {
 
         <div className="pt-2 border-t border-slate-100 text-[10px] text-slate-400 leading-snug">
           Click any town for details. Hover for the town name.
+          <div className="mt-1">
+            <a
+              href={`${import.meta.env.BASE_URL}data/phone-policies.json`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:underline"
+            >
+              Download phone-policies.json
+            </a>
+          </div>
         </div>
       </div>
     </aside>
