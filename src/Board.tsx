@@ -52,7 +52,12 @@ export function Board({
   usePersistence(editor)
 
   const components = useMemo<TLComponents>(
-    () => ({ Background: () => null }),
+    () => ({
+      Background: () => null,
+      // Suppress tldraw's right-side style panel — it visually overlaps
+      // our Legend in the top-right.
+      StylePanel: () => null,
+    }),
     [],
   )
 
