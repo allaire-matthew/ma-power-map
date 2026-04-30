@@ -714,6 +714,37 @@
       "lastVerified": "2026-04-30",
       "confidence": "medium"
     },
+    "2512510": {
+      "districtId": "2512510",
+      "districtName": "West Springfield School District",
+      "tier": 2,
+      "policySummary": "West Springfield HS implemented phone restrictions in 2024-25: students place phones in pouches when entering, released from pouches when leaving. Superintendent reports improved student engagement and mental-health benefits.",
+      "scope": "9-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-09",
+      "enrollment": 4000,
+      "sources": [
+        {"title": "Massachusetts lawmakers look to ban cell phone use in schools", "url": "https://www.westernmassnews.com/2025/07/10/massachusetts-lawmakers-look-ban-cell-phone-use-schools/", "publisher": "Western Mass News", "date": "2025-07-10"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2505970": {
+      "districtId": "2505970",
+      "districtName": "Haverhill School District",
+      "tier": 2,
+      "policySummary": "School Committee approved district-wide policy July 2024, in force 2024-25. Phones placed in designated classroom container or silent in backpack during class; allowed between classes and at lunch. Confiscation + ban for violations; one-day suspension for unauthorized photo/video.",
+      "scope": "K-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 7300,
+      "sources": [
+        {"title": "Haverhill Schools Adopt New Policy Limiting Student Phone Use", "url": "https://whav.net/2024/07/30/haverhill-schools-adopt-new-policy-limiting-student-phone-use/", "publisher": "WHAV", "date": "2024-07-30"},
+        {"title": "Haverhill High Principal Downs to Brief School Committee on New Policy Limiting Phone Use", "url": "https://whav.net/2024/07/24/haverhill-high-principal-downs-to-brief-school-committee-on-new-policy-limiting-phone-use/", "publisher": "WHAV", "date": "2024-07-24"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
