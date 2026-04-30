@@ -914,6 +914,37 @@
       "lastVerified": "2026-04-30",
       "confidence": "high"
     },
+    "2503990": {
+      "districtId": "2503990",
+      "districtName": "Danvers School District",
+      "tier": 2,
+      "policySummary": "Danvers HS current policy allows phones during lunch and passing periods; prohibits use during instruction unless teacher permits. Reported inconsistent enforcement across classrooms. School Committee discussed an update June 2025 with new principal Alan Strauss.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 3500,
+      "sources": [
+        {"title": "DHS discusses new cell phone policy amid state legislative changes", "url": "https://citizenportal.ai/articles/3796789/Town-of-Danvers/Essex-County/Massachusetts/DHS-discusses-new-cell-phone-policy-amid-state-legislative-changes", "publisher": "CitizenPortal.ai", "date": "2025-06-09"},
+        {"title": "DHS Responsible Use Policy", "url": "https://danverspublicschools.org/dhs-responsible-use-policy/", "publisher": "Danvers Public Schools", "date": "2024-09-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2511220": {
+      "districtId": "2511220",
+      "districtName": "Stoneham School District",
+      "tier": 2,
+      "policySummary": "Stoneham HS handbook: cellular telephones and headphones/earbuds put away before entering all classrooms. Use allowed during lunch and hall passing.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 2300,
+      "sources": [
+        {"title": "School cell phone policies still developing as academic year begins", "url": "https://homenewshere.com/middlesex_east/article_7cb12b44-7f2e-11ef-82f4-b37b4e1364d5.html", "publisher": "Middlesex East / HomeNewsHere", "date": "2024-09-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
