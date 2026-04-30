@@ -549,6 +549,126 @@
       "lastVerified": "2026-04-30",
       "confidence": "medium"
     },
+    "2508850": {
+      "districtId": "2508850",
+      "districtName": "Northampton School District",
+      "tier": 3,
+      "policySummary": "Board-approved June 12, 2025 (Cell Phone Policy Direction A): all cell phones and electronic devices collected at the beginning of the day by staff and returned at end of day. Students must power down and secure devices in school-provided pouches upon entry. Earbuds/headphones banned without explicit teacher permission. Earned/lost as a privilege. District-wide K-12.",
+      "scope": "K-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2025-09",
+      "enrollment": 2400,
+      "sources": [
+        {"title": "Cell Phone Policy Direction A (June 12, 2025)", "url": "https://go.boarddocs.com/ma/northampton/Board.nsf/files/DHDJ7B4BC516/$file/Cell%20Phone%20Policy%20Direction%20A.pdf", "publisher": "Northampton Public Schools (BoardDocs)", "date": "2025-06-12"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2501920": {
+      "districtId": "2501920",
+      "districtName": "Amherst-Pelham School District",
+      "tier": 2,
+      "policySummary": "Amherst Regional HS current policy: phones in cell phone pouches when entering classroom; access between classes and at lunch. New 'bell-to-bell' policy approved for September 2026 implementation per Amherst Indy reporting. Currently tier 2 (hardware in classroom only).",
+      "scope": "9-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-09",
+      "enrollment": 1300,
+      "sources": [
+        {"title": "New Bell to Bell Cell Phone Policy on Deck for September 2026 Brings Mixed Feelings at ARHS", "url": "https://www.amherstindy.org/2025/11/14/new-bell-to-bell-cell-phone-policy-on-deck-for-september-2026-brings-mixed-feelings-at-arhs/", "publisher": "Amherst Indy", "date": "2025-11-14"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2502310": {
+      "districtId": "2502310",
+      "districtName": "Barnstable School District",
+      "tier": 2,
+      "policySummary": "Barnstable HS bans cell phone use; district-wide cell phone policy under review. Cape News reporting from 2024 confirms HS-level prohibition; mechanism (off-and-away vs. hardware) and elementary scope not yet verified.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 5000,
+      "sources": [
+        {"title": "Mashpee School Committee Debates Cellphone Policy (references Barnstable)", "url": "https://www.capenews.net/mashpee/news/mashpee-school-committee-debates-cellphone-policy/article_1fce3900-8a0b-5096-b063-4421a3eef11e.html", "publisher": "Cape News", "date": "2024-08-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2507440": {
+      "districtId": "2507440",
+      "districtName": "Mashpee School District",
+      "tier": 2,
+      "policySummary": "Mashpee schools' cell phone policy restricts use during school hours but allows use during homeroom, breakfast, and lunch. School Committee debated in August 2024 whether to tighten the policy to match neighboring Sandwich.",
+      "scope": "K-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 1900,
+      "sources": [
+        {"title": "Mashpee School Committee Debates Cellphone Policy", "url": "https://www.capenews.net/mashpee/news/mashpee-school-committee-debates-cellphone-policy/article_1fce3900-8a0b-5096-b063-4421a3eef11e.html", "publisher": "Cape News", "date": "2024-08-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2509360": {
+      "districtId": "2509360",
+      "districtName": "Peabody School District",
+      "tier": 2,
+      "policySummary": "Peabody School Committee approved restrictions on student cell phone use. Peabody Veterans HS implemented a pilot policy that bans cell phones during academic periods, with reasonable exceptions for medical conditions, IEP, off-campus travel, and emergencies. Tier-2 off-and-away during instructional time.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 5800,
+      "sources": [
+        {"title": "Peabody Veterans High To Ban Cell Phones In Class Starting This Fall", "url": "https://patch.com/massachusetts/peabody/peabody-veterans-high-ban-cell-phones-class-starting-fall", "publisher": "Patch — Peabody MA", "date": "2024-08-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2509630": {
+      "districtId": "2509630",
+      "districtName": "Pittsfield School District",
+      "tier": 2,
+      "policySummary": "Revised Pittsfield Public Schools cell phone policy in force; on a second infraction students' phones are held in the main office. Reported as effective: 156 referrals (significant decrease from prior years) and described by educators as a 'definite deterrent' due to clear policy and well-defined consequences.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 5000,
+      "sources": [
+        {"title": "Pittsfield Schools' New Cell Phone Policy Effective So Far", "url": "https://www.iberkshires.com/story/76656/Pittsfield-Schools-New-Cell-Phone-Policy-Effective-So-Far.html", "publisher": "iBerkshires.com", "date": "2024-12-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2506750": {
+      "districtId": "2506750",
+      "districtName": "Lenox School District",
+      "tier": 2,
+      "policySummary": "Lenox bans cellphone use by middle school students. Some Lenox schools allow no usage during classes without teacher permission; access during nonclass time. Tier 2 (partial — focused at middle school).",
+      "scope": "K-8",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 1100,
+      "sources": [
+        {"title": "Lenox bans cellphone use by middle school students", "url": "https://www.berkshireeagle.com/archives/lenox-bans-cellphone-use-by-middle-school-students/article_68140f49-4668-5107-b590-b829e3f00638.html", "publisher": "Berkshire Eagle", "date": "2024-08-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2505740": {
+      "districtId": "2505740",
+      "districtName": "Hampshire School District",
+      "tier": 2,
+      "policySummary": "Hampshire Regional HS requires students to store phones in pouches during the school day. Hardware-style enforcement at the high-school level.",
+      "scope": "9-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-09",
+      "enrollment": 800,
+      "sources": [
+        {"title": "Local schools weigh in on proposed statewide cellphone ban", "url": "https://gazettenet.com/2025/08/26/local-schools-weigh-in-on-proposed-statewide-cellphone-ban/", "publisher": "Daily Hampshire Gazette", "date": "2025-08-26"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
