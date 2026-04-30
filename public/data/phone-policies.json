@@ -240,6 +240,53 @@
       "lastVerified": "2026-04-30",
       "confidence": "low"
     },
+    "2503270": {
+      "districtId": "2503270",
+      "districtName": "Cambridge School District",
+      "tier": 2,
+      "policySummary": "All middle and high schools (grades 6-12 incl. Cambridge Rindge and Latin School) collect phones at the start of each period using cubbies / clear pencil cases / cardboard boxes; phones returned at end of each period. Phones allowed at lunch, between classes, before/after school. Effective fall 2024 — no formal Yondr deployment yet.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 7000,
+      "sources": [
+        {"title": "Cambridge Schools Go Analog With No-Phones Policy", "url": "https://www.thecrimson.com/article/2024/9/5/cambridge-school-phone-confiscation/", "publisher": "The Harvard Crimson", "date": "2024-09-05"},
+        {"title": "As Mass. Legislators Work to Ban Phones in Schools, CPS Students See Ups and Downs", "url": "https://www.thecrimson.com/article/2025/2/6/cell-phone-ban-cambridge-schools/", "publisher": "The Harvard Crimson", "date": "2025-02-06"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2506840": {
+      "districtId": "2506840",
+      "districtName": "Lexington School District",
+      "tier": 2,
+      "policySummary": "School Committee approved February 2025: pre-K through grade 8 banned during school day (no devices visible); grades 9-12 must place phones in teacher-designated holding area during class. Honor-system / off-and-away — no Yondr. Implementation rollout was uneven; not all parents received district communication after approval.",
+      "scope": "K-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2025-02",
+      "enrollment": 7300,
+      "sources": [
+        {"title": "New cellphone policy in Lexington Public Schools", "url": "https://lexobserver.org/2025/04/04/new-cellphone-policy-in-lexington-public-schools/", "publisher": "Lexington Observer", "date": "2025-04-04"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2512270": {
+      "districtId": "2512270",
+      "districtName": "Wellesley School District",
+      "tier": 2,
+      "policySummary": "K-8 ban on phones, smart watches and personal devices; Wellesley Middle School uses Yondr pouches (entry-to-exit) funded by Wellesley Education Foundation. Wellesley HS allows teacher-permission use; in academic spaces phones go on silent in the classroom's designated space for the class period. Effective 2025-26 SY.",
+      "scope": "K-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2025-09",
+      "enrollment": 5000,
+      "sources": [
+        {"title": "New Cell Phone and Smart Device Procedures for Students", "url": "https://wellesleyps.org/student-cell-phone-procedures/", "publisher": "Wellesley Public Schools", "date": "2025-08-15"},
+        {"title": "Cell phones in the Wellesley schools — an issue that cries out for stronger policies", "url": "https://theswellesleyreport.com/2024/09/cell-phones-in-the-wellesley-schools-an-issue-that-cries-out-for-stronger-policies/", "publisher": "The Swellesley Report", "date": "2024-09-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
