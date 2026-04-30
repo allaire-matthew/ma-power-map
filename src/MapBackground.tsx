@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
+  getTownToDistrict,
   loadLayer,
   loadPhonePolicies,
   MAP_H,
@@ -72,6 +73,7 @@ export function MapBackground({
 }) {
   const [data, setData] = useState<Partial<Record<LayerName, ProjectedLayer>>>({})
   const [policies, setPolicies] = useState<Record<string, PhonePolicy>>({})
+  const [townToDistrict, setTownToDistrict] = useState<Record<string, string>>({})
   const svgRef = useRef<SVGSVGElement | null>(null)
   const groupRefs = useRef<Partial<Record<LayerName, SVGGElement | null>>>({})
   const [hover, setHover] = useState<{ name: string; x: number; y: number } | null>(null)
@@ -116,6 +118,9 @@ export function MapBackground({
     let cancelled = false
     void loadPhonePolicies().then((p) => {
       if (!cancelled) setPolicies(p)
+    })
+    void getTownToDistrict().then((m) => {
+      if (!cancelled) setTownToDistrict(m)
     })
     return () => {
       cancelled = true
@@ -249,35 +254,24 @@ export function MapBackground({
         style={{ background: '#f8fafc', pointerEvents: 'none' }}
       >
         <g transform={t}>
-          {/* Towns — base skeleton, always rendered. */}
+          {/* Towns are the only land render — fill is driven by the
+              containing school district's phone-free tier (and modulated
+              by size gradient when on). This keeps the visible land mass
+              tight to actual coastlines and avoids the "puffy ocean"
+              effect of rendering coarse school-district polygons. */}
           <g
             ref={(el) => {
               groupRefs.current.towns = el
             }}
           >
-            {towns.map((f) => (
-              <path
-                key={f.id}
-                data-id={f.id}
-                d={f.d}
-                fill="#f8fafc"
-                stroke={STYLES.towns.stroke}
-                strokeWidth={STYLES.towns.strokeWidth / camera.z}
-              />
-            ))}
-          </g>
-
-          {/* School-district fills (phone-free tier and/or size gradient). */}
-          {(layers.phoneFree || layers.sizeGradient) && (
-            <g
-              ref={(el) => {
-                groupRefs.current.schoolDistricts = el
-              }}
-            >
-              {districts.map((f) => {
-                const policy = policies[f.id]
-                const tier: PhoneTier = policy?.tier ?? 1
-                const fill = layers.phoneFree ? TIER_COLOR[tier] : '#64748b'
+            {towns.map((f) => {
+              const dId = townToDistrict[f.id]
+              const policy = dId ? policies[dId] : undefined
+              const tier: PhoneTier = policy?.tier ?? 1
+              let fill = '#f8fafc'
+              let alpha = 1
+              if (layers.phoneFree || layers.sizeGradient) {
+                fill = layers.phoneFree ? TIER_COLOR[tier] : '#64748b'
                 const baseAlpha = layers.phoneFree
                   ? tier === 3
                     ? 0.55
@@ -287,25 +281,24 @@ export function MapBackground({
                         ? 0.35
                         : 0.18
                   : 0.05
-                const sizeMul = layers.sizeGradient
-                  ? 0.25 + 0.9 * (sizeScore[f.id] ?? 0)
+                const sizeMul = layers.sizeGradient && dId
+                  ? 0.25 + 0.9 * (sizeScore[dId] ?? 0)
                   : 1
-                const alpha = Math.min(0.85, baseAlpha * sizeMul)
-                return (
-                  <path
-                    key={f.id}
-                    d={f.d}
-                    fill={fill}
-                    fillOpacity={alpha}
-                    // A hairline outline keeps Cape Cod's overlapping
-                    // district shapes visually separated against the towns.
-                    stroke="rgba(15,23,42,0.18)"
-                    strokeWidth={0.4 / camera.z}
-                  />
-                )
-              })}
-            </g>
-          )}
+                alpha = Math.min(0.85, baseAlpha * sizeMul)
+              }
+              return (
+                <path
+                  key={f.id}
+                  data-id={f.id}
+                  d={f.d}
+                  fill={fill}
+                  fillOpacity={alpha}
+                  stroke={STYLES.towns.stroke}
+                  strokeWidth={STYLES.towns.strokeWidth / camera.z}
+                />
+              )
+            })}
+          </g>
 
           {/* Explicit school-district outlines (toggle on top of fills). */}
           {layers.schoolDistricts &&
