@@ -1,4 +1,5 @@
 import {
+  geoArea,
   geoCentroid,
   geoContains,
   geoIdentity,
@@ -6,6 +7,29 @@ import {
   type GeoPermissibleObjects,
 } from 'd3-geo'
 import type { Feature, FeatureCollection } from 'geojson'
+
+// MA TIGER shapefile polygons are wound clockwise — opposite of GeoJSON
+// spec — which makes d3-geo treat each polygon as "the entire sphere
+// minus this region." geoArea returns ~4π and geoContains matches
+// everywhere outside the actual feature. Detect by the impossible-area
+// signature and reverse the ring order.
+function rewindIfInverted<T extends Feature>(feat: T): T {
+  if (
+    !feat.geometry ||
+    (feat.geometry.type !== 'Polygon' && feat.geometry.type !== 'MultiPolygon')
+  )
+    return feat
+  if (geoArea(feat as unknown as GeoPermissibleObjects) <= 2 * Math.PI) return feat
+  const g = feat.geometry
+  if (g.type === 'Polygon') {
+    g.coordinates = g.coordinates.map((ring) => [...ring].reverse())
+  } else {
+    g.coordinates = g.coordinates.map((poly) =>
+      poly.map((ring) => [...ring].reverse()),
+    )
+  }
+  return feat
+}
 
 export const MAP_W = 1600
 export const MAP_H = 1100
@@ -97,6 +121,8 @@ export async function getTownToDistrict(): Promise<Record<string, string>> {
         fetchJson<FeatureCollection>(geoUrl(FILES.towns)),
         fetchJson<FeatureCollection>(geoUrl(FILES.schoolDistricts)),
       ])
+      townsFC.features.forEach(rewindIfInverted)
+      districtsFC.features.forEach(rewindIfInverted)
       const map: Record<string, string> = {}
       for (const tf of townsFC.features) {
         const tProps = (tf.properties ?? {}) as Record<string, unknown>
