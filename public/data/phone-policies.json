@@ -147,6 +147,114 @@
       "lastVerified": "2026-04-30",
       "confidence": "high"
     },
+    "2507020": {
+      "districtId": "2507020",
+      "districtName": "Lowell School District",
+      "tier": 2,
+      "policySummary": "Lowell HS implemented hardware-based phone collection (Nightlock units installed summer 2023; ~1,200 storage units). Phones placed in classroom containers at start of class; allowed in hallways and at lunch. HS-only policy — middle and elementary scope unverified.",
+      "scope": "9-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2023-09",
+      "enrollment": 14000,
+      "sources": [
+        {"title": "New cell phone policy at Lowell High School prompts pushback from students", "url": "https://www.boston25news.com/news/local/new-cell-phone-policy-lowell-high-school-prompts-pushback-students/SQEPOZP3IZFQ3BJBEKUOTQHK2I/", "publisher": "Boston 25 News", "date": "2024-01-25"},
+        {"title": "Lowell High wants to lock up cell phones. Students are fighting back.", "url": "https://www.boston.com/news/local-news/2024/01/25/lowell-high-wants-to-lock-up-cell-phones-students-are-fighting-back/", "publisher": "Boston.com", "date": "2024-01-25"},
+        {"title": "Cell Phone Policy", "url": "https://www.lowell.k12.ma.us/domain/3289", "publisher": "Lowell Public Schools", "date": "2024-01-15"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2508430": {
+      "districtId": "2508430",
+      "districtName": "New Bedford School District",
+      "tier": 2,
+      "policySummary": "Roosevelt Middle uses Yondr pouches (~800 students, $16K spend); Normandin Middle uses homeroom lockboxes. New Bedford HS originally planned full Yondr but reduced to violator-only Yondr after student pushback. District announced 'Disconnect to Reconnect' Yondr expansion to grades 6-12 starting 2025-26.",
+      "scope": "K-8",
+      "enforcement": "hardware",
+      "effectiveDate": "2024-09",
+      "enrollment": 13000,
+      "sources": [
+        {"title": "New cell phone policies for Normandin, Roosevelt, and New Bedford High", "url": "https://newbedfordlight.org/new-bedford-schools-roll-out-new-cell-phone-policies/", "publisher": "New Bedford Light", "date": "2024-08-28"},
+        {"title": "New Bedford Schools outline plan to roll out Yondr pouches after middle-school cellphone enforcement showed early gains", "url": "https://citizenportal.ai/articles/6292875/Massachusetts/New-Bedford-Schools-outline-plan-to-roll-out-Yondr-pouches-after-middle-school-cellphone-enforcement-showed-early-gains", "publisher": "CitizenPortal.ai", "date": "2025-04-01"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "high"
+    },
+    "2510470": {
+      "districtId": "2510470",
+      "districtName": "Sandwich School District",
+      "tier": 2,
+      "policySummary": "Cited by Boston Globe (Aug 2024) as among MA districts implementing 2024-25 cell-phone restrictions. Specific mechanism and grade scope not yet verified against district handbook.",
+      "scope": "varies",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 2700,
+      "sources": [
+        {"title": "Cellphone bans in schools: Mass. school districts crack down", "url": "https://www.bostonglobe.com/2024/08/27/metro/school-cellphone-bans-massachusetts/", "publisher": "Boston Globe", "date": "2024-08-27"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "low"
+    },
+    "2503660": {
+      "districtId": "2503660",
+      "districtName": "Chicopee School District",
+      "tier": 2,
+      "policySummary": "Cited by Boston.com (Nov 2024) as among Boston-area districts taking a stand on cell phones. Mechanism and grade scope not yet verified against district handbook.",
+      "scope": "varies",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 7700,
+      "sources": [
+        {"title": "Cell phones have been taking over classrooms. These Boston-area schools are making a stand.", "url": "https://www.boston.com/news/local-news/2024/11/04/cell-phones-have-been-taking-over-classrooms-these-boston-area-schools-are-making-a-stand/", "publisher": "Boston.com", "date": "2024-11-04"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "low"
+    },
+    "2511130": {
+      "districtId": "2511130",
+      "districtName": "Springfield School District",
+      "tier": 2,
+      "policySummary": "Springfield Central HS deploys Yondr pouches since 2022. District-wide policy across the ~50 schools in Springfield not verified — likely school-by-school.",
+      "scope": "9-12",
+      "enforcement": "hardware",
+      "effectiveDate": "2022-09",
+      "enrollment": 23000,
+      "sources": [
+        {"title": "Cell phones have been taking over classrooms. These Boston-area schools are making a stand.", "url": "https://www.boston.com/news/local-news/2024/11/04/cell-phones-have-been-taking-over-classrooms-these-boston-area-schools-are-making-a-stand/", "publisher": "Boston.com", "date": "2024-11-04"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "medium"
+    },
+    "2511400": {
+      "districtId": "2511400",
+      "districtName": "Sutton School District",
+      "tier": 2,
+      "policySummary": "Sutton HS named among Massachusetts schools implementing phone restrictions; specific mechanism not verified against district handbook.",
+      "scope": "9-12",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-09",
+      "enrollment": 1500,
+      "sources": [
+        {"title": "Cell phones have been taking over classrooms. These Boston-area schools are making a stand.", "url": "https://www.boston.com/news/local-news/2024/11/04/cell-phones-have-been-taking-over-classrooms-these-boston-area-schools-are-making-a-stand/", "publisher": "Boston.com", "date": "2024-11-04"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "low"
+    },
+    "2509600": {
+      "districtId": "2509600",
+      "districtName": "Pioneer Valley School District",
+      "tier": 2,
+      "policySummary": "Cited by Boston Globe (Aug 2024) as having a phone policy starting August 2024. Specific mechanism and grade scope not yet verified against district handbook.",
+      "scope": "varies",
+      "enforcement": "off-and-away",
+      "effectiveDate": "2024-08",
+      "enrollment": 800,
+      "sources": [
+        {"title": "Cellphone bans in schools: Mass. school districts crack down", "url": "https://www.bostonglobe.com/2024/08/27/metro/school-cellphone-bans-massachusetts/", "publisher": "Boston Globe", "date": "2024-08-27"}
+      ],
+      "lastVerified": "2026-04-30",
+      "confidence": "low"
+    },
     "2510380": {
       "districtId": "2510380",
       "districtName": "Salem School District",
