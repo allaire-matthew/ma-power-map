@@ -83,17 +83,10 @@ export function MapBackground({
 
   const needed = useMemo<LayerName[]>(() => {
     const want = new Set<LayerName>(['towns'])
-    if (
-      layers.phoneFree ||
-      layers.sizeGradient ||
-      layers.schoolDistricts
-    )
-      want.add('schoolDistricts')
+    if (layers.counties) want.add('counties')
     if (layers.congressional) want.add('congressional')
-    if (layers.stateLegislature) {
-      want.add('stateHouse')
-      want.add('stateSenate')
-    }
+    if (layers.stateHouse) want.add('stateHouse')
+    if (layers.stateSenate) want.add('stateSenate')
     // Always load schoolDistricts so the click→district lookup works
     // for the popup, even when the visual layer is off.
     want.add('schoolDistricts')
@@ -243,6 +236,7 @@ export function MapBackground({
   const congressional = data.congressional?.features ?? []
   const stateHouse = data.stateHouse?.features ?? []
   const stateSenate = data.stateSenate?.features ?? []
+  const counties = data.counties?.features ?? []
   const towns = data.towns?.features ?? []
 
   const popupTown = popupTownId
@@ -364,37 +358,49 @@ export function MapBackground({
               )
             })}
 
-          {/* State legislature — both chambers together. */}
-          {layers.stateLegislature && (
-            <>
-              {stateHouse.map((f) => (
-                <path
-                  key={`sh-${f.id}`}
-                  d={f.d}
-                  fill="transparent"
-                  stroke={STYLES.stateHouse.stroke}
-                  strokeWidth={STYLES.stateHouse.strokeWidth / camera.z}
-                  strokeDasharray={STYLES.stateHouse.dash!
-                    .split(' ')
-                    .map((n) => Number(n) / camera.z)
-                    .join(' ')}
-                />
-              ))}
-              {stateSenate.map((f) => (
-                <path
-                  key={`ss-${f.id}`}
-                  d={f.d}
-                  fill="transparent"
-                  stroke={STYLES.stateSenate.stroke}
-                  strokeWidth={STYLES.stateSenate.strokeWidth / camera.z}
-                  strokeDasharray={STYLES.stateSenate.dash!
-                    .split(' ')
-                    .map((n) => Number(n) / camera.z)
-                    .join(' ')}
-                />
-              ))}
-            </>
-          )}
+          {/* Counties — coarsest political subunit, solid outline. */}
+          {layers.counties &&
+            counties.map((f) => (
+              <path
+                key={`co-${f.id}`}
+                d={f.d}
+                fill="transparent"
+                stroke={STYLES.counties.stroke}
+                strokeWidth={STYLES.counties.strokeWidth / camera.z}
+              />
+            ))}
+
+          {/* MA House (160 districts) — fine dashed outline. */}
+          {layers.stateHouse &&
+            stateHouse.map((f) => (
+              <path
+                key={`sh-${f.id}`}
+                d={f.d}
+                fill="transparent"
+                stroke={STYLES.stateHouse.stroke}
+                strokeWidth={STYLES.stateHouse.strokeWidth / camera.z}
+                strokeDasharray={STYLES.stateHouse.dash!
+                  .split(' ')
+                  .map((n) => Number(n) / camera.z)
+                  .join(' ')}
+              />
+            ))}
+
+          {/* MA Senate (40 districts) — heavier dashed outline. */}
+          {layers.stateSenate &&
+            stateSenate.map((f) => (
+              <path
+                key={`ss-${f.id}`}
+                d={f.d}
+                fill="transparent"
+                stroke={STYLES.stateSenate.stroke}
+                strokeWidth={STYLES.stateSenate.strokeWidth / camera.z}
+                strokeDasharray={STYLES.stateSenate.dash!
+                  .split(' ')
+                  .map((n) => Number(n) / camera.z)
+                  .join(' ')}
+              />
+            ))}
 
           {/* US House outlines + outside-the-border number labels. */}
           {layers.congressional &&

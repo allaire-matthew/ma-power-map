@@ -8,9 +8,10 @@ import { loadLayer, type PhoneTier, type ProjectedFeature } from './geo'
 
 export type TierFilter = 'all' | PhoneTier
 
-// Bumped from `ma-power-map.layers` to force-clear the stale toggle set
-// (counties/towns/irlCouncil) that lingered after the redesign.
-const LS_KEY = 'ma-power-map.layers.v2'
+// v3: split stateLegislature into stateSenate + stateHouse and added counties
+// as a first-class geographic layer. Older clients with v2 keys get the new
+// defaults instead of a stuck-on combined-leg toggle.
+const LS_KEY = 'ma-power-map.layers.v3'
 
 function loadLayers(): LayerState {
   try {

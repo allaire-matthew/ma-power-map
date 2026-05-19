@@ -86,14 +86,25 @@ export function Legend({
 }) {
   const showPhone = layers.phoneFree
   const showSize = layers.sizeGradient
+  const showCounties = layers.counties
   const showCong = layers.congressional
-  const showLeg = layers.stateLegislature
+  const showSenate = layers.stateSenate
+  const showHouse = layers.stateHouse
   const showSchool = layers.schoolDistricts
 
   const coverage = useCoverage(showPhone)
   const mandate = formatDaysUntil(MANDATE_DATE)
 
-  if (!showPhone && !showSize && !showCong && !showLeg && !showSchool) return null
+  if (
+    !showPhone &&
+    !showSize &&
+    !showCounties &&
+    !showCong &&
+    !showSenate &&
+    !showHouse &&
+    !showSchool
+  )
+    return null
 
   return (
     <aside
@@ -224,10 +235,31 @@ export function Legend({
           </div>
         )}
 
+        {showCounties && (
+          <div>
+            <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider mb-1.5">
+              Counties (14)
+            </div>
+            <div className="flex items-center gap-2">
+              <svg width="32" height="10" className="shrink-0">
+                <line
+                  x1="0"
+                  y1="5"
+                  x2="32"
+                  y2="5"
+                  stroke="#475569"
+                  strokeWidth="1.6"
+                />
+              </svg>
+              <span>County boundary</span>
+            </div>
+          </div>
+        )}
+
         {showCong && (
           <div>
             <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider mb-1.5">
-              US House
+              US House (9 districts)
             </div>
             <div className="flex items-center gap-2">
               <svg width="32" height="10" className="shrink-0">
@@ -252,10 +284,32 @@ export function Legend({
           </div>
         )}
 
-        {showLeg && (
+        {showSenate && (
           <div>
             <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider mb-1.5">
-              State legislature
+              MA Senate (40 districts)
+            </div>
+            <div className="flex items-center gap-2">
+              <svg width="32" height="10" className="shrink-0">
+                <line
+                  x1="0"
+                  y1="5"
+                  x2="32"
+                  y2="5"
+                  stroke="#dc2626"
+                  strokeWidth="1.4"
+                  strokeDasharray="6 3"
+                />
+              </svg>
+              <span>District boundary</span>
+            </div>
+          </div>
+        )}
+
+        {showHouse && (
+          <div>
+            <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider mb-1.5">
+              MA House (160 districts)
             </div>
             <div className="flex items-center gap-2">
               <svg width="32" height="10" className="shrink-0">
@@ -269,21 +323,7 @@ export function Legend({
                   strokeDasharray="2 2"
                 />
               </svg>
-              <span>MA House</span>
-            </div>
-            <div className="flex items-center gap-2 mt-1">
-              <svg width="32" height="10" className="shrink-0">
-                <line
-                  x1="0"
-                  y1="5"
-                  x2="32"
-                  y2="5"
-                  stroke="#dc2626"
-                  strokeWidth="1.4"
-                  strokeDasharray="6 3"
-                />
-              </svg>
-              <span>MA Senate</span>
+              <span>District boundary</span>
             </div>
           </div>
         )}
