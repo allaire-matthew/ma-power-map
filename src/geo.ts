@@ -225,6 +225,42 @@ export async function loadPhonePolicies(): Promise<Record<string, PhonePolicy>> 
   return phonePoliciesPromise
 }
 
+export type SchoolCommitteeLink = {
+  name: string
+  town: string
+  calendar_url: string
+  tier: number
+  geography: 'ma4' | 'boston_metro_20mi'
+}
+
+let schoolCommitteeLinksPromise: Promise<Record<string, SchoolCommitteeLink>> | null = null
+
+// Lookup keyed by normalized lowercase district name AND town name (the
+// JSON includes town-keyed fallbacks for districts whose names don't begin
+// with the town name). Sourced from ~/code/weekly-events-pull/seeds.yaml.
+export async function loadSchoolCommitteeLinks(): Promise<
+  Record<string, SchoolCommitteeLink>
+> {
+  if (!schoolCommitteeLinksPromise) {
+    schoolCommitteeLinksPromise = (async () => {
+      try {
+        const url = `${import.meta.env.BASE_URL}data/school-committee-links.json`
+        const json = await fetchJson<{
+          links: Record<string, SchoolCommitteeLink>
+        }>(url)
+        return json.links ?? {}
+      } catch {
+        return {}
+      }
+    })()
+  }
+  return schoolCommitteeLinksPromise
+}
+
+export function normalizeDistrictKey(s: string): string {
+  return s.trim().toLowerCase().replace(/\s+/g, ' ')
+}
+
 export async function loadLayer(name: LayerName): Promise<ProjectedLayer> {
   if (!layerCache.has(name)) {
     layerCache.set(

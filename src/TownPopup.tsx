@@ -3,9 +3,12 @@ import {
   getTownToDistrict,
   loadLayer,
   loadPhonePolicies,
+  loadSchoolCommitteeLinks,
+  normalizeDistrictKey,
   type PhonePolicy,
   type PhoneTier,
   type ProjectedFeature,
+  type SchoolCommitteeLink,
 } from './geo'
 import { TIER_COLOR, TIER_LABEL } from './MapBackground'
 
@@ -19,6 +22,7 @@ export function TownPopup({
   const [town, setTown] = useState<ProjectedFeature | null>(null)
   const [districtName, setDistrictName] = useState<string | null>(null)
   const [policy, setPolicy] = useState<PhonePolicy | null>(null)
+  const [schoolLink, setSchoolLink] = useState<SchoolCommitteeLink | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -27,13 +31,16 @@ export function TownPopup({
     setTown(null)
     setDistrictName(null)
     setPolicy(null)
+    setSchoolLink(null)
     ;(async () => {
-      const [townsLayer, districtsLayer, policies, tToD] = await Promise.all([
-        loadLayer('towns'),
-        loadLayer('schoolDistricts'),
-        loadPhonePolicies(),
-        getTownToDistrict(),
-      ])
+      const [townsLayer, districtsLayer, policies, tToD, scLinks] =
+        await Promise.all([
+          loadLayer('towns'),
+          loadLayer('schoolDistricts'),
+          loadPhonePolicies(),
+          getTownToDistrict(),
+          loadSchoolCommitteeLinks(),
+        ])
       if (cancelled) return
       const tf = townsLayer.features.find((f) => f.id === townId) ?? null
       const dId = tToD[townId]
@@ -41,9 +48,15 @@ export function TownPopup({
         ? districtsLayer.features.find((f) => f.id === dId) ?? null
         : null
       const pol = dId ? policies[dId] ?? null : null
+      // Try lookup by district name first, then town name as fallback.
+      const dKey = df ? normalizeDistrictKey(df.name) : null
+      const tKey = tf ? normalizeDistrictKey(tf.name) : null
+      const link =
+        (dKey && scLinks[dKey]) || (tKey && scLinks[tKey]) || null
       setTown(tf)
       setDistrictName(df?.name ?? null)
       setPolicy(pol)
+      setSchoolLink(link)
       setLoading(false)
     })()
     return () => {
@@ -94,10 +107,73 @@ export function TownPopup({
           <div className="text-slate-900 text-[13px]">
             {districtName ?? (loading ? 'Loading…' : '—')}
           </div>
+          {schoolLink && (
+            <a
+              href={schoolLink.calendar_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-[12px] text-indigo-600 hover:underline mt-0.5"
+            >
+              School committee calendar →
+            </a>
+          )}
+          {!schoolLink && !loading && districtName && (
+            <div className="text-[10.5px] text-slate-400 italic mt-0.5">
+              Committee calendar URL not yet on file.
+            </div>
+          )}
         </div>
 
         <PhonePolicyBlock policy={policy} loading={loading} hasDistrict={!!districtName} />
+
+        <EventsBlock townName={town?.name ?? null} />
       </div>
+    </div>
+  )
+}
+
+function EventsBlock({ townName }: { townName: string | null }) {
+  return (
+    <div className="pt-1 border-t border-slate-100">
+      <div className="text-[10px] uppercase tracking-wider text-slate-500 mb-1">
+        Statewide events
+      </div>
+      <ul className="text-[12px] space-y-0.5">
+        <li>
+          <a
+            href="https://malegislature.gov/Events"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 hover:underline"
+          >
+            MA Legislature hearings →
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.boston.gov/public-notices"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 hover:underline"
+          >
+            Boston public notices →
+          </a>
+        </li>
+        {townName && (
+          <li>
+            <a
+              href={`https://www.google.com/search?q=${encodeURIComponent(
+                `${townName} MA town meeting calendar`,
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:underline"
+            >
+              {townName} town meeting (search) →
+            </a>
+          </li>
+        )}
+      </ul>
     </div>
   )
 }

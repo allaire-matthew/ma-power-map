@@ -1,0 +1,329 @@
+{
+  "_schemaVersion": 1,
+  "_lastUpdated": "2026-05-19",
+  "_notes": "School-committee meeting calendars for districts in MA-4 \u222a Boston-metro-20mi. Sourced from ~/code/weekly-events-pull/seeds.yaml. Keys are normalized lowercase district names AND town names (town-keyed entries are fallback when district name lookup misses).",
+  "links": {
+    "newton public schools": {
+      "name": "Newton Public Schools",
+      "town": "Newton",
+      "calendar_url": "https://www.newton.k12.ma.us/school-committee/calendar",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "newton": {
+      "name": "Newton Public Schools",
+      "town": "Newton",
+      "calendar_url": "https://www.newton.k12.ma.us/school-committee/calendar",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "brookline public schools": {
+      "name": "Brookline Public Schools",
+      "town": "Brookline",
+      "calendar_url": "https://www.psbma.org/district/school-committee/",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "brookline": {
+      "name": "Brookline Public Schools",
+      "town": "Brookline",
+      "calendar_url": "https://www.psbma.org/district/school-committee/",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "wellesley public schools": {
+      "name": "Wellesley Public Schools",
+      "town": "Wellesley",
+      "calendar_url": "https://wellesleyps.org/schoolcommittee/",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "wellesley": {
+      "name": "Wellesley Public Schools",
+      "town": "Wellesley",
+      "calendar_url": "https://wellesleyps.org/schoolcommittee/",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "needham public schools": {
+      "name": "Needham Public Schools",
+      "town": "Needham",
+      "calendar_url": "https://www.needham.k12.ma.us/district_info/school_committee/meeting_dates",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "needham": {
+      "name": "Needham Public Schools",
+      "town": "Needham",
+      "calendar_url": "https://www.needham.k12.ma.us/district_info/school_committee/meeting_dates",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "dover-sherborn regional": {
+      "name": "Dover-Sherborn Regional",
+      "town": "Dover/Sherborn",
+      "calendar_url": "https://www.doversherborn.org/school-committee",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "dover/sherborn": {
+      "name": "Dover-Sherborn Regional",
+      "town": "Dover/Sherborn",
+      "calendar_url": "https://www.doversherborn.org/school-committee",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "taunton public schools": {
+      "name": "Taunton Public Schools",
+      "town": "Taunton",
+      "calendar_url": "https://www.tauntonschools.org/apps/pages/index.jsp?uREC_ID=1722389&type=d&pREC_ID=2247664",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "taunton": {
+      "name": "Taunton Public Schools",
+      "town": "Taunton",
+      "calendar_url": "https://www.tauntonschools.org/apps/pages/index.jsp?uREC_ID=1722389&type=d&pREC_ID=2247664",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "attleboro public schools": {
+      "name": "Attleboro Public Schools",
+      "town": "Attleboro",
+      "calendar_url": "https://www.attleboroschools.com/school_committee/meeting_schedule",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "attleboro": {
+      "name": "Attleboro Public Schools",
+      "town": "Attleboro",
+      "calendar_url": "https://www.attleboroschools.com/school_committee/meeting_schedule",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "fall river public schools": {
+      "name": "Fall River Public Schools",
+      "town": "Fall River",
+      "calendar_url": "https://www.fallriverschools.org/school-committee",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "fall river": {
+      "name": "Fall River Public Schools",
+      "town": "Fall River",
+      "calendar_url": "https://www.fallriverschools.org/school-committee",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "norfolk public schools": {
+      "name": "Norfolk Public Schools",
+      "town": "Norfolk",
+      "calendar_url": "https://www.norfolk.k12.ma.us/school-committee",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "norfolk": {
+      "name": "Norfolk Public Schools",
+      "town": "Norfolk",
+      "calendar_url": "https://www.norfolk.k12.ma.us/school-committee",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "king philip regional": {
+      "name": "King Philip Regional",
+      "town": "Wrentham/Plainville/Norfolk",
+      "calendar_url": "https://www.kingphilip.org/about/school-committee/",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "wrentham/plainville/norfolk": {
+      "name": "King Philip Regional",
+      "town": "Wrentham/Plainville/Norfolk",
+      "calendar_url": "https://www.kingphilip.org/about/school-committee/",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "franklin public schools": {
+      "name": "Franklin Public Schools",
+      "town": "Franklin",
+      "calendar_url": "https://www.franklinps.net/o/fpsd/page/school-committee",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "franklin": {
+      "name": "Franklin Public Schools",
+      "town": "Franklin",
+      "calendar_url": "https://www.franklinps.net/o/fpsd/page/school-committee",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "foxborough public schools": {
+      "name": "Foxborough Public Schools",
+      "town": "Foxborough",
+      "calendar_url": "https://www.foxborough.k12.ma.us/school_committee/meetings",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "foxborough": {
+      "name": "Foxborough Public Schools",
+      "town": "Foxborough",
+      "calendar_url": "https://www.foxborough.k12.ma.us/school_committee/meetings",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "milford public schools": {
+      "name": "Milford Public Schools",
+      "town": "Milford",
+      "calendar_url": "https://www.milfordpublicschools.com/about/school-committee",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "milford": {
+      "name": "Milford Public Schools",
+      "town": "Milford",
+      "calendar_url": "https://www.milfordpublicschools.com/about/school-committee",
+      "tier": 2,
+      "geography": "ma4"
+    },
+    "boston public schools": {
+      "name": "Boston Public Schools",
+      "town": "Boston",
+      "calendar_url": "https://www.bostonpublicschools.org/schoolcommittee",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "boston": {
+      "name": "Boston Public Schools",
+      "town": "Boston",
+      "calendar_url": "https://www.bostonpublicschools.org/schoolcommittee",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "cambridge public schools": {
+      "name": "Cambridge Public Schools",
+      "town": "Cambridge",
+      "calendar_url": "https://www.cpsd.us/school_committee/overview",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "cambridge": {
+      "name": "Cambridge Public Schools",
+      "town": "Cambridge",
+      "calendar_url": "https://www.cpsd.us/school_committee/overview",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "arlington public schools": {
+      "name": "Arlington Public Schools",
+      "town": "Arlington",
+      "calendar_url": "https://www.arlington.k12.ma.us/apps/pages/index.jsp?uREC_ID=4412125&type=d&pREC_ID=2643936",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "arlington": {
+      "name": "Arlington Public Schools",
+      "town": "Arlington",
+      "calendar_url": "https://www.arlington.k12.ma.us/apps/pages/index.jsp?uREC_ID=4412125&type=d&pREC_ID=2643936",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "watertown public schools": {
+      "name": "Watertown Public Schools",
+      "town": "Watertown",
+      "calendar_url": "https://www.watertown.k12.ma.us/79652_2",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "watertown": {
+      "name": "Watertown Public Schools",
+      "town": "Watertown",
+      "calendar_url": "https://www.watertown.k12.ma.us/79652_2",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "belmont public schools": {
+      "name": "Belmont Public Schools",
+      "town": "Belmont",
+      "calendar_url": "https://www.belmont.k12.ma.us/page/schedule-and-calendar",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "belmont": {
+      "name": "Belmont Public Schools",
+      "town": "Belmont",
+      "calendar_url": "https://www.belmont.k12.ma.us/page/schedule-and-calendar",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "milton public schools": {
+      "name": "Milton Public Schools",
+      "town": "Milton",
+      "calendar_url": "https://www.miltonps.org/page/school-committee-24-25-school-year",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "milton": {
+      "name": "Milton Public Schools",
+      "town": "Milton",
+      "calendar_url": "https://www.miltonps.org/page/school-committee-24-25-school-year",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "framingham public schools": {
+      "name": "Framingham Public Schools",
+      "town": "Framingham",
+      "calendar_url": "https://www.framingham.k12.ma.us/24580",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "framingham": {
+      "name": "Framingham Public Schools",
+      "town": "Framingham",
+      "calendar_url": "https://www.framingham.k12.ma.us/24580",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "medford public schools": {
+      "name": "Medford Public Schools",
+      "town": "Medford",
+      "calendar_url": "https://www.mps02155.org/about/events-calendar",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "medford": {
+      "name": "Medford Public Schools",
+      "town": "Medford",
+      "calendar_url": "https://www.mps02155.org/about/events-calendar",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "concord-carlisle regional": {
+      "name": "Concord-Carlisle Regional",
+      "town": "Concord/Carlisle",
+      "calendar_url": "https://www.concordps.org/school-committee/meetings-and-minutes",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "concord/carlisle": {
+      "name": "Concord-Carlisle Regional",
+      "town": "Concord/Carlisle",
+      "calendar_url": "https://www.concordps.org/school-committee/meetings-and-minutes",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "lincoln-sudbury regional": {
+      "name": "Lincoln-Sudbury Regional",
+      "town": "Lincoln/Sudbury",
+      "calendar_url": "https://sudbury.ma.us/lsschoolcomm/",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    },
+    "lincoln/sudbury": {
+      "name": "Lincoln-Sudbury Regional",
+      "town": "Lincoln/Sudbury",
+      "calendar_url": "https://sudbury.ma.us/lsschoolcomm/",
+      "tier": 2,
+      "geography": "boston_metro_20mi"
+    }
+  }
+}
