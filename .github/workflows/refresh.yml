@@ -18,6 +18,9 @@ jobs:
       - name: Refresh town orgs
         run: python3 scripts/refresh_town_orgs.py
         continue-on-error: true
+      - name: Refresh next school committee meetings
+        run: python3 scripts/refresh_school_meetings.py
+        continue-on-error: true
       - name: Commit
         run: |
           git config user.name "ma-power-map-bot"

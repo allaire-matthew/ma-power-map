@@ -391,6 +391,35 @@ export async function loadTownOrgs(): Promise<TownOrgsData | null> {
   return townOrgsPromise
 }
 
+export type NextMeetingEntry = {
+  next_meeting: string | null
+  additional_upcoming?: string[]
+  checked: string
+  source_url: string
+  status: 'ok' | 'no_future_date' | 'fetch_failed'
+}
+
+export type NextMeetingsData = {
+  _lastUpdated: string
+  byKey: Record<string, NextMeetingEntry>
+}
+
+let nextMeetingsPromise: Promise<NextMeetingsData | null> | null = null
+
+export async function loadNextMeetings(): Promise<NextMeetingsData | null> {
+  if (!nextMeetingsPromise) {
+    nextMeetingsPromise = (async () => {
+      try {
+        const url = `${import.meta.env.BASE_URL}data/next-school-committee-meetings.json`
+        return await fetchJson<NextMeetingsData>(url)
+      } catch {
+        return null
+      }
+    })()
+  }
+  return nextMeetingsPromise
+}
+
 let legislatorsPromise: Promise<LegislatorsData | null> | null = null
 
 export async function loadLegislators(): Promise<LegislatorsData | null> {

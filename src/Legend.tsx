@@ -4,7 +4,9 @@ import { TIER_COLOR, TIER_LABEL } from './MapBackground'
 import {
   getTownToDistrict,
   loadLayer,
+  loadLegislators,
   loadPhonePolicies,
+  loadTownOrgs,
   type PhoneTier,
 } from './geo'
 import type { TierFilter } from './App'
@@ -94,6 +96,7 @@ export function Legend({
 
   const coverage = useCoverage(showPhone)
   const mandate = formatDaysUntil(MANDATE_DATE)
+  const dataAges = useDataAges()
 
   if (
     !showPhone &&
@@ -362,8 +365,57 @@ export function Legend({
               Download phone-policies.json
             </a>
           </div>
+          {dataAges && (
+            <div className="mt-2 pt-1 border-t border-slate-100 text-slate-400">
+              <div className="font-medium text-slate-500">Data freshness</div>
+              <div>Legislators: {dataAges.legislators ?? '—'}</div>
+              <div>Org chapters: {dataAges.orgs ?? '—'}</div>
+              <div>Phone policies: {dataAges.policies ?? '—'}</div>
+              <div className="mt-0.5 text-[9.5px] text-slate-400">
+                Refreshed daily at 07:17 UTC by GitHub Action.
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </aside>
   )
+}
+
+function useDataAges(): {
+  legislators: string | null
+  orgs: string | null
+  policies: string | null
+} | null {
+  const [ages, setAges] = useState<{
+    legislators: string | null
+    orgs: string | null
+    policies: string | null
+  } | null>(null)
+  useEffect(() => {
+    let cancelled = false
+    void Promise.all([
+      loadLegislators(),
+      loadTownOrgs(),
+      // Phone policies file has _lastUpdated but the loader returns just the
+      // policies dict; fetch the wrapper directly for the date.
+      fetch(`${import.meta.env.BASE_URL}data/phone-policies.json`)
+        .then((r) => r.json())
+        .catch(() => null),
+    ]).then(([leg, orgs, pol]) => {
+      if (cancelled) return
+      setAges({
+        legislators: leg?._lastUpdated ?? null,
+        orgs: orgs?._lastUpdated ?? null,
+        policies:
+          (pol && typeof pol === 'object' && '_lastUpdated' in pol
+            ? (pol as { _lastUpdated?: string })._lastUpdated
+            : null) ?? null,
+      })
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [])
+  return ages
 }

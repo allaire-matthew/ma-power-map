@@ -4,11 +4,13 @@ import {
   getTownToLayer,
   loadLayer,
   loadLegislators,
+  loadNextMeetings,
   loadPhonePolicies,
   loadSchoolCommitteeLinks,
   loadTownOrgs,
   normalizeDistrictKey,
   type LegislatorsData,
+  type NextMeetingEntry,
   type PhonePolicy,
   type PhoneTier,
   type ProjectedFeature,
@@ -36,6 +38,7 @@ export function TownPopup({
   const [countyName, setCountyName] = useState<string | null>(null)
   const [legislators, setLegislators] = useState<LegislatorsData | null>(null)
   const [orgs, setOrgs] = useState<TownOrgChapter[]>([])
+  const [nextMeeting, setNextMeeting] = useState<NextMeetingEntry | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -52,6 +55,7 @@ export function TownPopup({
     setStateHouseName(null)
     setCountyName(null)
     setOrgs([])
+    setNextMeeting(null)
     ;(async () => {
       const [
         townsLayer,
@@ -69,6 +73,7 @@ export function TownPopup({
         scLinks,
         legData,
         townOrgs,
+        nextMtgs,
       ] = await Promise.all([
         loadLayer('towns'),
         loadLayer('schoolDistricts'),
@@ -85,6 +90,7 @@ export function TownPopup({
         loadSchoolCommitteeLinks(),
         loadLegislators(),
         loadTownOrgs(),
+        loadNextMeetings(),
       ])
       if (cancelled) return
       const tf = townsLayer.features.find((f) => f.id === townId) ?? null
@@ -123,6 +129,12 @@ export function TownPopup({
       const townOrgList =
         townOrgs && orgKey ? townOrgs.byTown[orgKey] ?? [] : []
 
+      // Next school committee meeting — same district/town key strategy
+      const nm =
+        (dKey && nextMtgs?.byKey[dKey]) ||
+        (tKey && nextMtgs?.byKey[tKey]) ||
+        null
+
       setTown(tf)
       setDistrictName(df?.name ?? null)
       setPolicy(pol)
@@ -153,6 +165,7 @@ export function TownPopup({
       setCountyName(ctyF?.name ?? null)
       setLegislators(legData)
       setOrgs(townOrgList)
+      setNextMeeting(nm)
       setLoading(false)
     })()
     return () => {
@@ -358,6 +371,56 @@ function RepsBlock({
           </li>
         )}
       </ul>
+    </div>
+  )
+}
+
+function NextMeetingLine({
+  nextMeeting,
+  loading,
+}: {
+  nextMeeting: NextMeetingEntry | null
+  loading: boolean
+}) {
+  if (loading && !nextMeeting) return null
+  if (!nextMeeting) {
+    return (
+      <div className="text-[10.5px] text-slate-400 italic mt-0.5">
+        Next meeting: not yet scraped.
+      </div>
+    )
+  }
+  if (nextMeeting.status === 'fetch_failed') {
+    return (
+      <div className="text-[10.5px] text-amber-600 italic mt-0.5">
+        Next meeting: calendar page unreachable on last check ({nextMeeting.checked}).
+      </div>
+    )
+  }
+  if (nextMeeting.status === 'no_future_date' || !nextMeeting.next_meeting) {
+    return (
+      <div className="text-[10.5px] text-slate-400 italic mt-0.5">
+        Next meeting: no upcoming date listed on calendar (checked {nextMeeting.checked}).
+      </div>
+    )
+  }
+  // Format YYYY-MM-DD as readable date
+  const d = new Date(nextMeeting.next_meeting + 'T00:00:00')
+  const label = d.toLocaleDateString('en-US', {
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric',
+  })
+  return (
+    <div className="text-[11.5px] text-slate-700 mt-0.5">
+      <span className="text-slate-500">Next meeting:</span>{' '}
+      <span className="font-medium">{label}</span>
+      {nextMeeting.additional_upcoming && nextMeeting.additional_upcoming.length > 0 && (
+        <span className="text-slate-400">
+          {' '}
+          (+{nextMeeting.additional_upcoming.length} more upcoming)
+        </span>
+      )}
     </div>
   )
 }
