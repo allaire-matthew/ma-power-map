@@ -122,10 +122,10 @@
     "2503150": {
       "districtId": "2503150",
       "districtName": "Brookline School District",
-      "tier": 1,
-      "policySummary": "Handbook reviewed: Visits/Animals on School Grounds\u200b \u200b \u200b Smoke Free/Drug Free School \u200b \u200b Student Responsibilities/Student Dress \u200b \u200b Student\u2019s Safety\u200b \u200b \u200b \u200b Technology & Plagiarism\u200b \u200b \u200b \u200b \u200b Telephone Messages & Usage\u200b \u200b ",
-      "scope": "varies",
-      "enforcement": "none",
+      "tier": 3,
+      "policySummary": "Public Schools of Brookline: bell-to-bell phone-free policy for K-8. Phones must be put away at start of day and not used until dismissal. (User-verified 2026-05-20; supersedes earlier handbook auto-extraction that mis-pulled a same-named district in NH.)",
+      "scope": "K-8",
+      "enforcement": "hardware",
       "effectiveDate": "2024-09",
       "enrollment": 7900,
       "sources": [
@@ -140,19 +140,12 @@
           "url": "https://thelocallens.org/brookline-school-committee-considers-new-mobile-device-policy-amid-broader-policy-manual-overhaul/",
           "publisher": "LocalLens",
           "date": "2024-10-12"
-        },
-        {
-          "title": "Student handbook (pdftotext)",
-          "url": "https://resources.finalsite.net/images/v1755001297/sau41org/z7mszi4ikttfzzcfbssi/Brookline24-25StudentParentHandbookdocx.pdf",
-          "publisher": "district",
-          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://resources.finalsite.net/images/v1755001297/sau41org/z7mszi4ikttfzzcfbssi/Brookline24-25StudentParentHandbookdocx.pdf",
-      "extraction_method": "pdftotext"
+      "status": "news_verified",
+      "news_verified_by": "user_2026-05-20"
     },
     "2512660": {
       "districtId": "2512660",
@@ -2341,19 +2334,9 @@
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [
-        {
-          "title": "Student handbook (pdftotext)",
-          "url": "https://irp.cdn-website.com/9f6d812e/files/uploaded/StudentHandbookFINAL10242022.pdf",
-          "publisher": "district",
-          "date": "2026-05-20"
-        }
-      ],
+      "sources": [],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://irp.cdn-website.com/9f6d812e/files/uploaded/StudentHandbookFINAL10242022.pdf",
-      "extraction_method": "pdftotext"
+      "confidence": "low"
     },
     "2505790": {
       "districtId": "2505790",
@@ -2511,19 +2494,9 @@
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [
-        {
-          "title": "Student handbook (pdftotext)",
-          "url": "https://www.lawrence.k12.ma.us/files/lps/LHSCurriculumGuides/Faculty_Coverpage_and_Handbook_LHS_2017-18.pdf",
-          "publisher": "district",
-          "date": "2026-05-20"
-        }
-      ],
+      "sources": [],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://www.lawrence.k12.ma.us/files/lps/LHSCurriculumGuides/Faculty_Coverpage_and_Handbook_LHS_2017-18.pdf",
-      "extraction_method": "pdftotext"
+      "confidence": "low"
     },
     "2506690": {
       "districtId": "2506690",
@@ -3007,19 +2980,10 @@
           "url": "https://www.northandoverpublicschools.com/",
           "publisher": "",
           "date": "2026-05-20"
-        },
-        {
-          "title": "Student handbook (pdftotext)",
-          "url": "https://resources.finalsite.net/images/v1674241058/northandoverpublicschoolscom/hc8o04rnr3xqt7guzjxc/NAPSEmployeeHandbook12-16-21.pdf",
-          "publisher": "district",
-          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://resources.finalsite.net/images/v1674241058/northandoverpublicschoolscom/hc8o04rnr3xqt7guzjxc/NAPSEmployeeHandbook12-16-21.pdf",
-      "extraction_method": "pdftotext"
+      "confidence": "low"
     },
     "2508730": {
       "districtId": "2508730",
@@ -3216,19 +3180,10 @@
           "url": "https://www.oxps.org/",
           "publisher": "",
           "date": "2026-05-20"
-        },
-        {
-          "title": "Student handbook (pdftotext)",
-          "url": "https://secure.infosnap.com/resources/682/files/OSD%20Elementary%20Handbook%2016-17.pdf",
-          "publisher": "district",
-          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://secure.infosnap.com/resources/682/files/OSD%20Elementary%20Handbook%2016-17.pdf",
-      "extraction_method": "pdftotext"
+      "confidence": "low"
     },
     "2509300": {
       "districtId": "2509300",
@@ -4487,19 +4442,9 @@
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [
-        {
-          "title": "Student handbook (pdftotext)",
-          "url": "https://schoolstarttime.org/wp-content/uploads/2011/06/silver-lake-regional-2011-12-middle-school-student-handbook.pdf",
-          "publisher": "district",
-          "date": "2026-05-20"
-        }
-      ],
+      "sources": [],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://schoolstarttime.org/wp-content/uploads/2011/06/silver-lake-regional-2011-12-middle-school-student-handbook.pdf",
-      "extraction_method": "pdftotext"
+      "confidence": "low"
     },
     "2505760": {
       "districtId": "2505760",

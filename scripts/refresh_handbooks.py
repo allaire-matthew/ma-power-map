@@ -304,8 +304,12 @@ def main():
         if not r.get("verified"):
             continue
         old = policies.get(geoid, {})
+        # NEVER overwrite a news-verified entry — news reports are authoritative
+        # and supersede any auto-extracted handbook classification.
+        if old.get("status") == "news_verified":
+            print(f"  · {geoid} {old.get('districtName')}: news_verified — handbook will not override", file=sys.stderr)
+            continue
         sources = list(old.get("sources", []))
-        # Avoid duplicate source URL
         if not any(s.get("url") == r["handbook_url"] for s in sources):
             sources.append({
                 "title": f"Student handbook ({r.get('extraction_method', '?')})",
