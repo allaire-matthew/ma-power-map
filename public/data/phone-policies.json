@@ -1,21 +1,36 @@
 {
   "_schemaVersion": 1,
-  "_lastUpdated": "2026-04-30",
-  "_notes": "Seed data — see RESEARCH_SPEC_PHONE_POLICIES.md. Each entry is backed by at least one primary source (district handbook, school committee material, or district-specific local-news report). Districts not present default to tier 1 (no policy) in the UI.",
+  "_lastUpdated": "2026-05-20",
+  "_notes": "MA school district phone policies. Initial 64 high-confidence entries from 2026-04-30 overnight session. Bulk breadth-first sweep 2026-05-20 added best-effort tier assignments for the remaining 228 districts. Many bulk entries are confidence:low and should be re-verified against district handbooks via the V2 spec (RESEARCH_SPEC_PHONE_POLICIES_V2.md). See sanitization filter in scripts/merge-policies.py \u2014 cross-state misattributions are downgraded to tier 1 with explanatory note.",
   "policies": {
     "2502790": {
       "districtId": "2502790",
       "districtName": "Boston School District",
       "tier": 2,
-      "policySummary": "BPS Code of Conduct prohibits student cell-phone use during the school day district-wide (off-and-away baseline; second offense triggers parent-only return). Yondr-style hardware ban layered on top at ~31 BPS schools (4+ high schools, 9 elementary) under a 3-year contract — opt-in by school, not district-wide.",
+      "policySummary": "BPS Code of Conduct prohibits student cell-phone use during the school day district-wide (off-and-away baseline; second offense triggers parent-only return). Yondr-style hardware ban layered on top at ~31 BPS schools (4+ high schools, 9 elementary) under a 3-year contract \u2014 opt-in by school, not district-wide.",
       "scope": "K-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
       "enrollment": 48800,
       "sources": [
-        {"title": "BPS Code of Conduct — Mobile (Cell) Phones", "url": "https://www.bostonpublicschools.org/bps-departments/rights-and-responsibilities/code-of-conduct", "publisher": "Boston Public Schools", "date": "2025-09-01"},
-        {"title": "Some high schoolers say a school cell phone ban boosted grades and connections", "url": "https://www.bostonglobe.com/2025/08/12/metro/boston-cell-phone-ban-schools/", "publisher": "Boston Globe", "date": "2025-08-12"},
-        {"title": "As State Mulls Cellphone Ban, English High Provides Model Already in Use", "url": "https://jamaicaplainnews.com/2025/08/22/as-state-mulls-cellphone-ban-in-schools-english-high-provides-model-already-in-use/681669", "publisher": "Jamaica Plain News", "date": "2025-08-22"}
+        {
+          "title": "BPS Code of Conduct \u2014 Mobile (Cell) Phones",
+          "url": "https://www.bostonpublicschools.org/bps-departments/rights-and-responsibilities/code-of-conduct",
+          "publisher": "Boston Public Schools",
+          "date": "2025-09-01"
+        },
+        {
+          "title": "Some high schoolers say a school cell phone ban boosted grades and connections",
+          "url": "https://www.bostonglobe.com/2025/08/12/metro/boston-cell-phone-ban-schools/",
+          "publisher": "Boston Globe",
+          "date": "2025-08-12"
+        },
+        {
+          "title": "As State Mulls Cellphone Ban, English High Provides Model Already in Use",
+          "url": "https://jamaicaplainnews.com/2025/08/22/as-state-mulls-cellphone-ban-in-schools-english-high-provides-model-already-in-use/681669",
+          "publisher": "Jamaica Plain News",
+          "date": "2025-08-22"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -30,9 +45,24 @@
       "effectiveDate": "2024-10",
       "enrollment": 9700,
       "sources": [
-        {"title": "New cell phone policy begins for certain Fall River Public Schools", "url": "https://fallriverreporter.com/new-cell-phone-policy-begins-for-certain-fall-river-public-schools/", "publisher": "Fall River Reporter", "date": "2024-10-16"},
-        {"title": "Cell phone use to be off limits for students at several Fall River Public Schools", "url": "https://fallriverreporter.com/cell-phone-use-to-be-off-limits-for-students-at-several-fall-river-public-schools/", "publisher": "Fall River Reporter", "date": "2024-08-15"},
-        {"title": "Policies and Procedures", "url": "https://www.fallriverschools.org/district-information/policies-and-procedures", "publisher": "Fall River Public Schools", "date": "2024-08-15"}
+        {
+          "title": "New cell phone policy begins for certain Fall River Public Schools",
+          "url": "https://fallriverreporter.com/new-cell-phone-policy-begins-for-certain-fall-river-public-schools/",
+          "publisher": "Fall River Reporter",
+          "date": "2024-10-16"
+        },
+        {
+          "title": "Cell phone use to be off limits for students at several Fall River Public Schools",
+          "url": "https://fallriverreporter.com/cell-phone-use-to-be-off-limits-for-students-at-several-fall-river-public-schools/",
+          "publisher": "Fall River Reporter",
+          "date": "2024-08-15"
+        },
+        {
+          "title": "Policies and Procedures",
+          "url": "https://www.fallriverschools.org/district-information/policies-and-procedures",
+          "publisher": "Fall River Public Schools",
+          "date": "2024-08-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -41,14 +71,24 @@
       "districtId": "2507740",
       "districtName": "Methuen School District",
       "tier": 2,
-      "policySummary": "District-wide ban on cell-phone use during instructional time, finalized August 2024. NOT Yondr — students place phones in clear bins or pocket charts during class; phones may stay in bags if unseen. Also enforced at school events (e.g. dances). IEP/504 carve-outs.",
+      "policySummary": "District-wide ban on cell-phone use during instructional time, finalized August 2024. NOT Yondr \u2014 students place phones in clear bins or pocket charts during class; phones may stay in bags if unseen. Also enforced at school events (e.g. dances). IEP/504 carve-outs.",
       "scope": "K-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-08",
       "enrollment": 6800,
       "sources": [
-        {"title": "Methuen schools ban cellphones, superintendent says devices are \"addictions\" for students", "url": "https://www.cbsnews.com/boston/news/methuen-massachusetts-schools-cellphone-ban/", "publisher": "CBS Boston", "date": "2024-08-19"},
-        {"title": "Methuen schools finalize student cell phone ban in classrooms", "url": "https://www.boston.com/news/local-news/2024/08/19/methuen-schools-finalize-student-cell-phone-ban-in-classrooms/", "publisher": "Boston.com", "date": "2024-08-19"}
+        {
+          "title": "Methuen schools ban cellphones, superintendent says devices are \"addictions\" for students",
+          "url": "https://www.cbsnews.com/boston/news/methuen-massachusetts-schools-cellphone-ban/",
+          "publisher": "CBS Boston",
+          "date": "2024-08-19"
+        },
+        {
+          "title": "Methuen schools finalize student cell phone ban in classrooms",
+          "url": "https://www.boston.com/news/local-news/2024/08/19/methuen-schools-finalize-student-cell-phone-ban-in-classrooms/",
+          "publisher": "Boston.com",
+          "date": "2024-08-19"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -57,14 +97,24 @@
       "districtId": "2508610",
       "districtName": "Newton School District",
       "tier": 2,
-      "policySummary": "District-wide \"Off & Away\" policy adopted unanimously by School Committee Sept 2024. Yondr pouches in elementary and middle schools all day; high schools (Newton North, Newton South) require phones stored away during academic time only — no Yondr at HS level. Day Middle and Newton North piloted 2023-24.",
+      "policySummary": "District-wide \"Off & Away\" policy adopted unanimously by School Committee Sept 2024. Yondr pouches in elementary and middle schools all day; high schools (Newton North, Newton South) require phones stored away during academic time only \u2014 no Yondr at HS level. Day Middle and Newton North piloted 2023-24.",
       "scope": "K-12",
       "enforcement": "hardware",
       "effectiveDate": "2024-09",
       "enrollment": 12000,
       "sources": [
-        {"title": "Do Not Disturb: Newton starts school year with new cell phone policy", "url": "https://www.newtonbeacon.org/newtons-cell-phone-pouch-program-expanded-for-new-school-year/", "publisher": "Newton Beacon", "date": "2024-09-04"},
-        {"title": "Cell phones at school: Parents sound alarm, NPS discusses ways to limit access", "url": "https://figcitynews.com/2024/05/cell-phones-at-school-parents-sound-alarm-nps-discusses-ways-to-limit-access/", "publisher": "Fig City News", "date": "2024-05-15"}
+        {
+          "title": "Do Not Disturb: Newton starts school year with new cell phone policy",
+          "url": "https://www.newtonbeacon.org/newtons-cell-phone-pouch-program-expanded-for-new-school-year/",
+          "publisher": "Newton Beacon",
+          "date": "2024-09-04"
+        },
+        {
+          "title": "Cell phones at school: Parents sound alarm, NPS discusses ways to limit access",
+          "url": "https://figcitynews.com/2024/05/cell-phones-at-school-parents-sound-alarm-nps-discusses-ways-to-limit-access/",
+          "publisher": "Fig City News",
+          "date": "2024-05-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -73,14 +123,24 @@
       "districtId": "2503150",
       "districtName": "Brookline School District",
       "tier": 1,
-      "policySummary": "No formal district-wide policy as of late 2024. Individual schools running pilots — Lawrence and Hayes elementary/middle schools at \"off and away,\" varied approaches elsewhere. School Committee drafting a comprehensive policy with K-8 vs. high-school tracks; BHS approach contemplates phones away in class but allowed during passing/lunch.",
+      "policySummary": "No formal district-wide policy as of late 2024. Individual schools running pilots \u2014 Lawrence and Hayes elementary/middle schools at \"off and away,\" varied approaches elsewhere. School Committee drafting a comprehensive policy with K-8 vs. high-school tracks; BHS approach contemplates phones away in class but allowed during passing/lunch.",
       "scope": "varies",
       "enforcement": "honor",
       "effectiveDate": "2024-09",
       "enrollment": 7900,
       "sources": [
-        {"title": "School districts across the country are rolling out new policies for mobile devices. What's Brookline's plan?", "url": "https://brookline.news/school-districts-across-the-country-are-rolling-out-new-policies-for-mobile-devices-whats-brooklines-plan/", "publisher": "Brookline.News", "date": "2024-10-08"},
-        {"title": "Brookline School Committee Considers New Mobile Device Policy", "url": "https://thelocallens.org/brookline-school-committee-considers-new-mobile-device-policy-amid-broader-policy-manual-overhaul/", "publisher": "LocalLens", "date": "2024-10-12"}
+        {
+          "title": "School districts across the country are rolling out new policies for mobile devices. What's Brookline's plan?",
+          "url": "https://brookline.news/school-districts-across-the-country-are-rolling-out-new-policies-for-mobile-devices-whats-brooklines-plan/",
+          "publisher": "Brookline.News",
+          "date": "2024-10-08"
+        },
+        {
+          "title": "Brookline School Committee Considers New Mobile Device Policy",
+          "url": "https://thelocallens.org/brookline-school-committee-considers-new-mobile-device-policy-amid-broader-policy-manual-overhaul/",
+          "publisher": "LocalLens",
+          "date": "2024-10-12"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -95,7 +155,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 4900,
       "sources": [
-        {"title": "Westford educators react to proposed school cell phone ban", "url": "https://westfordcat.org/2025/08/westford-educators-react-proposed-school-cellphone-ban/", "publisher": "WestfordCAT", "date": "2025-08-15"}
+        {
+          "title": "Westford educators react to proposed school cell phone ban",
+          "url": "https://westfordcat.org/2025/08/westford-educators-react-proposed-school-cellphone-ban/",
+          "publisher": "WestfordCAT",
+          "date": "2025-08-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -110,7 +175,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 2400,
       "sources": [
-        {"title": "2 Massachusetts high schools banned cellphones in class", "url": "https://www.cbsnews.com/boston/news/massachusetts-ipswich-newburyport-cellphones-school-ban/", "publisher": "CBS Boston", "date": "2025-09-12"}
+        {
+          "title": "2 Massachusetts high schools banned cellphones in class",
+          "url": "https://www.cbsnews.com/boston/news/massachusetts-ipswich-newburyport-cellphones-school-ban/",
+          "publisher": "CBS Boston",
+          "date": "2025-09-12"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "low"
@@ -125,7 +195,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 1900,
       "sources": [
-        {"title": "2 Massachusetts high schools banned cellphones in class", "url": "https://www.cbsnews.com/boston/news/massachusetts-ipswich-newburyport-cellphones-school-ban/", "publisher": "CBS Boston", "date": "2025-09-12"}
+        {
+          "title": "2 Massachusetts high schools banned cellphones in class",
+          "url": "https://www.cbsnews.com/boston/news/massachusetts-ipswich-newburyport-cellphones-school-ban/",
+          "publisher": "CBS Boston",
+          "date": "2025-09-12"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "low"
@@ -140,9 +215,24 @@
       "effectiveDate": "2024-04",
       "enrollment": 16000,
       "sources": [
-        {"title": "Stricter cellphone policy for Brockton High School approved amid reports of violence", "url": "https://www.bostonglobe.com/2024/03/06/metro/new-cellphone-policy-for-brockton-high-school/", "publisher": "Boston Globe", "date": "2024-03-06"},
-        {"title": "Details of new Brockton High School secure cell phone policy revealed", "url": "https://www.boston25news.com/news/local/details-new-brockton-high-school-secure-cell-phone-policy-revealed/E2R3KW2DURCAHIMTQIH3V4UJ2A/", "publisher": "Boston 25 News", "date": "2024-04-01"},
-        {"title": "How locking up phones has changed life inside Brockton High School", "url": "https://www.cbsnews.com/boston/news/brockton-high-school-locking-up-student-phones/", "publisher": "CBS Boston", "date": "2024-09-15"}
+        {
+          "title": "Stricter cellphone policy for Brockton High School approved amid reports of violence",
+          "url": "https://www.bostonglobe.com/2024/03/06/metro/new-cellphone-policy-for-brockton-high-school/",
+          "publisher": "Boston Globe",
+          "date": "2024-03-06"
+        },
+        {
+          "title": "Details of new Brockton High School secure cell phone policy revealed",
+          "url": "https://www.boston25news.com/news/local/details-new-brockton-high-school-secure-cell-phone-policy-revealed/E2R3KW2DURCAHIMTQIH3V4UJ2A/",
+          "publisher": "Boston 25 News",
+          "date": "2024-04-01"
+        },
+        {
+          "title": "How locking up phones has changed life inside Brockton High School",
+          "url": "https://www.cbsnews.com/boston/news/brockton-high-school-locking-up-student-phones/",
+          "publisher": "CBS Boston",
+          "date": "2024-09-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -151,15 +241,30 @@
       "districtId": "2507020",
       "districtName": "Lowell School District",
       "tier": 2,
-      "policySummary": "Lowell HS implemented hardware-based phone collection (Nightlock units installed summer 2023; ~1,200 storage units). Phones placed in classroom containers at start of class; allowed in hallways and at lunch. HS-only policy — middle and elementary scope unverified.",
+      "policySummary": "Lowell HS implemented hardware-based phone collection (Nightlock units installed summer 2023; ~1,200 storage units). Phones placed in classroom containers at start of class; allowed in hallways and at lunch. HS-only policy \u2014 middle and elementary scope unverified.",
       "scope": "9-12",
       "enforcement": "hardware",
       "effectiveDate": "2023-09",
       "enrollment": 14000,
       "sources": [
-        {"title": "New cell phone policy at Lowell High School prompts pushback from students", "url": "https://www.boston25news.com/news/local/new-cell-phone-policy-lowell-high-school-prompts-pushback-students/SQEPOZP3IZFQ3BJBEKUOTQHK2I/", "publisher": "Boston 25 News", "date": "2024-01-25"},
-        {"title": "Lowell High wants to lock up cell phones. Students are fighting back.", "url": "https://www.boston.com/news/local-news/2024/01/25/lowell-high-wants-to-lock-up-cell-phones-students-are-fighting-back/", "publisher": "Boston.com", "date": "2024-01-25"},
-        {"title": "Cell Phone Policy", "url": "https://www.lowell.k12.ma.us/domain/3289", "publisher": "Lowell Public Schools", "date": "2024-01-15"}
+        {
+          "title": "New cell phone policy at Lowell High School prompts pushback from students",
+          "url": "https://www.boston25news.com/news/local/new-cell-phone-policy-lowell-high-school-prompts-pushback-students/SQEPOZP3IZFQ3BJBEKUOTQHK2I/",
+          "publisher": "Boston 25 News",
+          "date": "2024-01-25"
+        },
+        {
+          "title": "Lowell High wants to lock up cell phones. Students are fighting back.",
+          "url": "https://www.boston.com/news/local-news/2024/01/25/lowell-high-wants-to-lock-up-cell-phones-students-are-fighting-back/",
+          "publisher": "Boston.com",
+          "date": "2024-01-25"
+        },
+        {
+          "title": "Cell Phone Policy",
+          "url": "https://www.lowell.k12.ma.us/domain/3289",
+          "publisher": "Lowell Public Schools",
+          "date": "2024-01-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -174,8 +279,18 @@
       "effectiveDate": "2024-09",
       "enrollment": 13000,
       "sources": [
-        {"title": "New cell phone policies for Normandin, Roosevelt, and New Bedford High", "url": "https://newbedfordlight.org/new-bedford-schools-roll-out-new-cell-phone-policies/", "publisher": "New Bedford Light", "date": "2024-08-28"},
-        {"title": "New Bedford Schools outline plan to roll out Yondr pouches after middle-school cellphone enforcement showed early gains", "url": "https://citizenportal.ai/articles/6292875/Massachusetts/New-Bedford-Schools-outline-plan-to-roll-out-Yondr-pouches-after-middle-school-cellphone-enforcement-showed-early-gains", "publisher": "CitizenPortal.ai", "date": "2025-04-01"}
+        {
+          "title": "New cell phone policies for Normandin, Roosevelt, and New Bedford High",
+          "url": "https://newbedfordlight.org/new-bedford-schools-roll-out-new-cell-phone-policies/",
+          "publisher": "New Bedford Light",
+          "date": "2024-08-28"
+        },
+        {
+          "title": "New Bedford Schools outline plan to roll out Yondr pouches after middle-school cellphone enforcement showed early gains",
+          "url": "https://citizenportal.ai/articles/6292875/Massachusetts/New-Bedford-Schools-outline-plan-to-roll-out-Yondr-pouches-after-middle-school-cellphone-enforcement-showed-early-gains",
+          "publisher": "CitizenPortal.ai",
+          "date": "2025-04-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -190,7 +305,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 2700,
       "sources": [
-        {"title": "Cellphone bans in schools: Mass. school districts crack down", "url": "https://www.bostonglobe.com/2024/08/27/metro/school-cellphone-bans-massachusetts/", "publisher": "Boston Globe", "date": "2024-08-27"}
+        {
+          "title": "Cellphone bans in schools: Mass. school districts crack down",
+          "url": "https://www.bostonglobe.com/2024/08/27/metro/school-cellphone-bans-massachusetts/",
+          "publisher": "Boston Globe",
+          "date": "2024-08-27"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "low"
@@ -205,7 +325,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 7700,
       "sources": [
-        {"title": "Cell phones have been taking over classrooms. These Boston-area schools are making a stand.", "url": "https://www.boston.com/news/local-news/2024/11/04/cell-phones-have-been-taking-over-classrooms-these-boston-area-schools-are-making-a-stand/", "publisher": "Boston.com", "date": "2024-11-04"}
+        {
+          "title": "Cell phones have been taking over classrooms. These Boston-area schools are making a stand.",
+          "url": "https://www.boston.com/news/local-news/2024/11/04/cell-phones-have-been-taking-over-classrooms-these-boston-area-schools-are-making-a-stand/",
+          "publisher": "Boston.com",
+          "date": "2024-11-04"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "low"
@@ -214,13 +339,18 @@
       "districtId": "2511130",
       "districtName": "Springfield School District",
       "tier": 2,
-      "policySummary": "Springfield Central HS deploys Yondr pouches since 2022. District-wide policy across the ~50 schools in Springfield not verified — likely school-by-school.",
+      "policySummary": "Springfield Central HS deploys Yondr pouches since 2022. District-wide policy across the ~50 schools in Springfield not verified \u2014 likely school-by-school.",
       "scope": "9-12",
       "enforcement": "hardware",
       "effectiveDate": "2022-09",
       "enrollment": 23000,
       "sources": [
-        {"title": "Cell phones have been taking over classrooms. These Boston-area schools are making a stand.", "url": "https://www.boston.com/news/local-news/2024/11/04/cell-phones-have-been-taking-over-classrooms-these-boston-area-schools-are-making-a-stand/", "publisher": "Boston.com", "date": "2024-11-04"}
+        {
+          "title": "Cell phones have been taking over classrooms. These Boston-area schools are making a stand.",
+          "url": "https://www.boston.com/news/local-news/2024/11/04/cell-phones-have-been-taking-over-classrooms-these-boston-area-schools-are-making-a-stand/",
+          "publisher": "Boston.com",
+          "date": "2024-11-04"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -235,7 +365,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 1500,
       "sources": [
-        {"title": "Cell phones have been taking over classrooms. These Boston-area schools are making a stand.", "url": "https://www.boston.com/news/local-news/2024/11/04/cell-phones-have-been-taking-over-classrooms-these-boston-area-schools-are-making-a-stand/", "publisher": "Boston.com", "date": "2024-11-04"}
+        {
+          "title": "Cell phones have been taking over classrooms. These Boston-area schools are making a stand.",
+          "url": "https://www.boston.com/news/local-news/2024/11/04/cell-phones-have-been-taking-over-classrooms-these-boston-area-schools-are-making-a-stand/",
+          "publisher": "Boston.com",
+          "date": "2024-11-04"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "low"
@@ -244,14 +379,24 @@
       "districtId": "2503270",
       "districtName": "Cambridge School District",
       "tier": 2,
-      "policySummary": "All middle and high schools (grades 6-12 incl. Cambridge Rindge and Latin School) collect phones at the start of each period using cubbies / clear pencil cases / cardboard boxes; phones returned at end of each period. Phones allowed at lunch, between classes, before/after school. Effective fall 2024 — no formal Yondr deployment yet.",
+      "policySummary": "All middle and high schools (grades 6-12 incl. Cambridge Rindge and Latin School) collect phones at the start of each period using cubbies / clear pencil cases / cardboard boxes; phones returned at end of each period. Phones allowed at lunch, between classes, before/after school. Effective fall 2024 \u2014 no formal Yondr deployment yet.",
       "scope": "9-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
       "enrollment": 7000,
       "sources": [
-        {"title": "Cambridge Schools Go Analog With No-Phones Policy", "url": "https://www.thecrimson.com/article/2024/9/5/cambridge-school-phone-confiscation/", "publisher": "The Harvard Crimson", "date": "2024-09-05"},
-        {"title": "As Mass. Legislators Work to Ban Phones in Schools, CPS Students See Ups and Downs", "url": "https://www.thecrimson.com/article/2025/2/6/cell-phone-ban-cambridge-schools/", "publisher": "The Harvard Crimson", "date": "2025-02-06"}
+        {
+          "title": "Cambridge Schools Go Analog With No-Phones Policy",
+          "url": "https://www.thecrimson.com/article/2024/9/5/cambridge-school-phone-confiscation/",
+          "publisher": "The Harvard Crimson",
+          "date": "2024-09-05"
+        },
+        {
+          "title": "As Mass. Legislators Work to Ban Phones in Schools, CPS Students See Ups and Downs",
+          "url": "https://www.thecrimson.com/article/2025/2/6/cell-phone-ban-cambridge-schools/",
+          "publisher": "The Harvard Crimson",
+          "date": "2025-02-06"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -260,13 +405,18 @@
       "districtId": "2506840",
       "districtName": "Lexington School District",
       "tier": 2,
-      "policySummary": "School Committee approved February 2025: pre-K through grade 8 banned during school day (no devices visible); grades 9-12 must place phones in teacher-designated holding area during class. Honor-system / off-and-away — no Yondr. Implementation rollout was uneven; not all parents received district communication after approval.",
+      "policySummary": "School Committee approved February 2025: pre-K through grade 8 banned during school day (no devices visible); grades 9-12 must place phones in teacher-designated holding area during class. Honor-system / off-and-away \u2014 no Yondr. Implementation rollout was uneven; not all parents received district communication after approval.",
       "scope": "K-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2025-02",
       "enrollment": 7300,
       "sources": [
-        {"title": "New cellphone policy in Lexington Public Schools", "url": "https://lexobserver.org/2025/04/04/new-cellphone-policy-in-lexington-public-schools/", "publisher": "Lexington Observer", "date": "2025-04-04"}
+        {
+          "title": "New cellphone policy in Lexington Public Schools",
+          "url": "https://lexobserver.org/2025/04/04/new-cellphone-policy-in-lexington-public-schools/",
+          "publisher": "Lexington Observer",
+          "date": "2025-04-04"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -281,8 +431,18 @@
       "effectiveDate": "2025-09",
       "enrollment": 5000,
       "sources": [
-        {"title": "New Cell Phone and Smart Device Procedures for Students", "url": "https://wellesleyps.org/student-cell-phone-procedures/", "publisher": "Wellesley Public Schools", "date": "2025-08-15"},
-        {"title": "Cell phones in the Wellesley schools — an issue that cries out for stronger policies", "url": "https://theswellesleyreport.com/2024/09/cell-phones-in-the-wellesley-schools-an-issue-that-cries-out-for-stronger-policies/", "publisher": "The Swellesley Report", "date": "2024-09-15"}
+        {
+          "title": "New Cell Phone and Smart Device Procedures for Students",
+          "url": "https://wellesleyps.org/student-cell-phone-procedures/",
+          "publisher": "Wellesley Public Schools",
+          "date": "2025-08-15"
+        },
+        {
+          "title": "Cell phones in the Wellesley schools \u2014 an issue that cries out for stronger policies",
+          "url": "https://theswellesleyreport.com/2024/09/cell-phones-in-the-wellesley-schools-an-issue-that-cries-out-for-stronger-policies/",
+          "publisher": "The Swellesley Report",
+          "date": "2024-09-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -297,7 +457,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 25000,
       "sources": [
-        {"title": "Massachusetts eyes limits on student phone, social media use", "url": "https://theworcesterguardian.org/f/massachusetts-eyes-limits-on-student-phone-social-media-use/", "publisher": "The Worcester Guardian", "date": "2024-09-15"}
+        {
+          "title": "Massachusetts eyes limits on student phone, social media use",
+          "url": "https://theworcesterguardian.org/f/massachusetts-eyes-limits-on-student-phone-social-media-use/",
+          "publisher": "The Worcester Guardian",
+          "date": "2024-09-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -312,7 +477,12 @@
       "effectiveDate": "2026-04",
       "enrollment": 9700,
       "sources": [
-        {"title": "Mass. House to vote on youth social media ban, strict school cellphone ban", "url": "https://www.boston.com/news/local-news/2026/04/06/mass-house-to-vote-on-youth-social-media-ban-strict-school-cellphone-ban/", "publisher": "Boston.com", "date": "2026-04-06"}
+        {
+          "title": "Mass. House to vote on youth social media ban, strict school cellphone ban",
+          "url": "https://www.boston.com/news/local-news/2026/04/06/mass-house-to-vote-on-youth-social-media-ban-strict-school-cellphone-ban/",
+          "publisher": "Boston.com",
+          "date": "2026-04-06"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -327,8 +497,18 @@
       "effectiveDate": "2024-09",
       "enrollment": 8200,
       "sources": [
-        {"title": "Taunton High School announces cell phone ban", "url": "https://whdh.com/regional/taunton-high-school-announces-cell-phone-ban/", "publisher": "WHDH 7News", "date": "2024-08-15"},
-        {"title": "Stop the Yondr Pouch Implementation in Taunton High School! (petition)", "url": "https://www.change.org/p/stop-the-yondr-pouch-implementation-in-taunton-high-school", "publisher": "Change.org", "date": "2024-09-10"}
+        {
+          "title": "Taunton High School announces cell phone ban",
+          "url": "https://whdh.com/regional/taunton-high-school-announces-cell-phone-ban/",
+          "publisher": "WHDH 7News",
+          "date": "2024-08-15"
+        },
+        {
+          "title": "Stop the Yondr Pouch Implementation in Taunton High School! (petition)",
+          "url": "https://www.change.org/p/stop-the-yondr-pouch-implementation-in-taunton-high-school",
+          "publisher": "Change.org",
+          "date": "2024-09-10"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -337,15 +517,30 @@
       "districtId": "2508370",
       "districtName": "Needham School District",
       "tier": 2,
-      "policySummary": "Needham HS uses 'phone hotels' (shoe-bag-style hangers near classroom doors) — students place phones in assigned slots for class duration. K-8: phones discouraged; if brought, stored in coat/backpack/cubby. School Committee approved late May 2024. Explicitly NOT Yondr.",
+      "policySummary": "Needham HS uses 'phone hotels' (shoe-bag-style hangers near classroom doors) \u2014 students place phones in assigned slots for class duration. K-8: phones discouraged; if brought, stored in coat/backpack/cubby. School Committee approved late May 2024. Explicitly NOT Yondr.",
       "scope": "K-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
       "enrollment": 5500,
       "sources": [
-        {"title": "New approaches cut cell phone use in schools", "url": "https://needhamobserver.com/new-approaches-cut-cell-phone-use-in-schools/", "publisher": "Needham Observer", "date": "2024-09-15"},
-        {"title": "Cell Phone Policy", "url": "https://nhs.needham.k12.ma.us/health_services/cell_phone_policy", "publisher": "Needham High School", "date": "2024-08-30"},
-        {"title": "Community Weighs Value of Phones in Schools", "url": "https://needhamlocal.org/2024/07/community-weighs-value-of-phones-in-schools/", "publisher": "Needham Local", "date": "2024-07-15"}
+        {
+          "title": "New approaches cut cell phone use in schools",
+          "url": "https://needhamobserver.com/new-approaches-cut-cell-phone-use-in-schools/",
+          "publisher": "Needham Observer",
+          "date": "2024-09-15"
+        },
+        {
+          "title": "Cell Phone Policy",
+          "url": "https://nhs.needham.k12.ma.us/health_services/cell_phone_policy",
+          "publisher": "Needham High School",
+          "date": "2024-08-30"
+        },
+        {
+          "title": "Community Weighs Value of Phones in Schools",
+          "url": "https://needhamlocal.org/2024/07/community-weighs-value-of-phones-in-schools/",
+          "publisher": "Needham Local",
+          "date": "2024-07-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -360,7 +555,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 9500,
       "sources": [
-        {"title": "Educators Seek Restrictions on Phones, Electronic Devices", "url": "https://www.massteacher.org/MTAtoday/all-news-articles/educators-seek-restrictions-phones-electronic-devices", "publisher": "Massachusetts Teachers Association", "date": "2024-12-01"}
+        {
+          "title": "Educators Seek Restrictions on Phones, Electronic Devices",
+          "url": "https://www.massteacher.org/MTAtoday/all-news-articles/educators-seek-restrictions-phones-electronic-devices",
+          "publisher": "Massachusetts Teachers Association",
+          "date": "2024-12-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -369,14 +569,24 @@
       "districtId": "2503870",
       "districtName": "Concord-Carlisle School District",
       "tier": 2,
-      "policySummary": "Concord-Carlisle HS handbook: students store phones in caddies during class time; access between classes and at lunch. Regional School Committee opted to hold off on stricter rules in 2025; 'Cell Phone Policy Process' on December 2025 committee agenda — district still actively evaluating.",
+      "policySummary": "Concord-Carlisle HS handbook: students store phones in caddies during class time; access between classes and at lunch. Regional School Committee opted to hold off on stricter rules in 2025; 'Cell Phone Policy Process' on December 2025 committee agenda \u2014 district still actively evaluating.",
       "scope": "9-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
       "enrollment": 1300,
       "sources": [
-        {"title": "Hold the phone: School boards weigh cell bans during class time", "url": "https://concordbridge.org/index.php/2025/05/23/hold-the-phone-school-boards-weigh-cell-bans-during-class-time/", "publisher": "Concord Bridge", "date": "2025-05-23"},
-        {"title": "Concord schools need a phone-free policy", "url": "https://concordbridge.org/index.php/2025/02/28/concord-schools-need-a-phone-free-policy/", "publisher": "Concord Bridge", "date": "2025-02-28"}
+        {
+          "title": "Hold the phone: School boards weigh cell bans during class time",
+          "url": "https://concordbridge.org/index.php/2025/05/23/hold-the-phone-school-boards-weigh-cell-bans-during-class-time/",
+          "publisher": "Concord Bridge",
+          "date": "2025-05-23"
+        },
+        {
+          "title": "Concord schools need a phone-free policy",
+          "url": "https://concordbridge.org/index.php/2025/02/28/concord-schools-need-a-phone-free-policy/",
+          "publisher": "Concord Bridge",
+          "date": "2025-02-28"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -391,7 +601,12 @@
       "effectiveDate": "2024-10",
       "enrollment": 2700,
       "sources": [
-        {"title": "Parents Favor Blanket Cell Phone Bans, Schools Lean Towards Nuanced Approach", "url": "https://www.waylandpost.org/community/schools/parents-favor-blanket-cell-phone-bansschools-lean-towards-nuanced-approach/", "publisher": "Wayland Post", "date": "2024-12-01"}
+        {
+          "title": "Parents Favor Blanket Cell Phone Bans, Schools Lean Towards Nuanced Approach",
+          "url": "https://www.waylandpost.org/community/schools/parents-favor-blanket-cell-phone-bansschools-lean-towards-nuanced-approach/",
+          "publisher": "Wayland Post",
+          "date": "2024-12-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -406,7 +621,12 @@
       "effectiveDate": "2025-09",
       "enrollment": 5400,
       "sources": [
-        {"title": "Acton-Boxborough Regional School Committee policy meeting (Apr 17 2025)", "url": "https://www.boxborough-ma.gov/AgendaCenter/ViewFile/Agenda/_04172025-4399", "publisher": "Acton-Boxborough RSD", "date": "2025-04-17"}
+        {
+          "title": "Acton-Boxborough Regional School Committee policy meeting (Apr 17 2025)",
+          "url": "https://www.boxborough-ma.gov/AgendaCenter/ViewFile/Agenda/_04172025-4399",
+          "publisher": "Acton-Boxborough RSD",
+          "date": "2025-04-17"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -421,7 +641,12 @@
       "effectiveDate": "2023-09",
       "enrollment": 7400,
       "sources": [
-        {"title": "Plymouth Schools Ahead Of Curve Banning Cell Phones", "url": "https://959watd.com/blog/2025/09/plymouth-schools-ahead-of-the-curve-in-banning-of-cell-phones/", "publisher": "WATD 95.9 FM", "date": "2025-09-15"}
+        {
+          "title": "Plymouth Schools Ahead Of Curve Banning Cell Phones",
+          "url": "https://959watd.com/blog/2025/09/plymouth-schools-ahead-of-the-curve-in-banning-of-cell-phones/",
+          "publisher": "WATD 95.9 FM",
+          "date": "2025-09-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -436,8 +661,18 @@
       "effectiveDate": "2024-09",
       "enrollment": 4900,
       "sources": [
-        {"title": "Belmont High to Ban Cell Phones in the Classroom", "url": "https://belmontvoice.org/belmont-high-to-ban-cell-phones-in-the-classroom/", "publisher": "The Belmont Voice", "date": "2024-06-15"},
-        {"title": "Belmont High Considering In-Class Cell Phone Ban", "url": "https://belmontvoice.org/belmont-high-considering-in-class-cell-phone/", "publisher": "The Belmont Voice", "date": "2024-04-15"}
+        {
+          "title": "Belmont High to Ban Cell Phones in the Classroom",
+          "url": "https://belmontvoice.org/belmont-high-to-ban-cell-phones-in-the-classroom/",
+          "publisher": "The Belmont Voice",
+          "date": "2024-06-15"
+        },
+        {
+          "title": "Belmont High Considering In-Class Cell Phone Ban",
+          "url": "https://belmontvoice.org/belmont-high-considering-in-class-cell-phone/",
+          "publisher": "The Belmont Voice",
+          "date": "2024-04-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -446,14 +681,24 @@
       "districtId": "2507260",
       "districtName": "Marblehead School District",
       "tier": 2,
-      "policySummary": "Marblehead HS: students may not use phones during class hours; use allowed between classes and at lunch. Collection is at individual teacher's discretion (principal explicitly framed as preparing students for 'real world responsibility'). Off-and-away — not Yondr.",
+      "policySummary": "Marblehead HS: students may not use phones during class hours; use allowed between classes and at lunch. Collection is at individual teacher's discretion (principal explicitly framed as preparing students for 'real world responsibility'). Off-and-away \u2014 not Yondr.",
       "scope": "9-12",
       "enforcement": "honor",
       "effectiveDate": "2024-09",
       "enrollment": 2700,
       "sources": [
-        {"title": "MHS Implements New Security, Cell Phone, Attendance Policies", "url": "https://marbleheadbeacon.com/mhs-implements-new-security-cell-phone-attendance-policies", "publisher": "Marblehead Beacon", "date": "2024-09-15"},
-        {"title": "MHS Student Handbook 2025-26", "url": "https://resources.finalsite.net/images/v1764610310/marbleheadschoolsorg/mk1jlxchlsplpxx1hv2i/MHS_Student_Handbook_25-26docx.pdf", "publisher": "Marblehead Public Schools", "date": "2025-09-01"}
+        {
+          "title": "MHS Implements New Security, Cell Phone, Attendance Policies",
+          "url": "https://marbleheadbeacon.com/mhs-implements-new-security-cell-phone-attendance-policies",
+          "publisher": "Marblehead Beacon",
+          "date": "2024-09-15"
+        },
+        {
+          "title": "MHS Student Handbook 2025-26",
+          "url": "https://resources.finalsite.net/images/v1764610310/marbleheadschoolsorg/mk1jlxchlsplpxx1hv2i/MHS_Student_Handbook_25-26docx.pdf",
+          "publisher": "Marblehead Public Schools",
+          "date": "2025-09-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -468,7 +713,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 4400,
       "sources": [
-        {"title": "School cell phone policies still developing as academic year begins", "url": "https://homenewshere.com/middlesex_east/article_7cb12b44-7f2e-11ef-82f4-b37b4e1364d5.html", "publisher": "Middlesex East / HomeNewsHere", "date": "2024-09-15"}
+        {
+          "title": "School cell phone policies still developing as academic year begins",
+          "url": "https://homenewshere.com/middlesex_east/article_7cb12b44-7f2e-11ef-82f4-b37b4e1364d5.html",
+          "publisher": "Middlesex East / HomeNewsHere",
+          "date": "2024-09-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -483,7 +733,12 @@
       "effectiveDate": "2023-09",
       "enrollment": 5400,
       "sources": [
-        {"title": "Natick High School Student Handbook 2023-2024", "url": "https://natickschools.novusagenda.com/agendapublic/AttachmentViewer.ashx?AttachmentID=3777&ItemID=4672", "publisher": "Natick Public Schools", "date": "2023-09-01"}
+        {
+          "title": "Natick High School Student Handbook 2023-2024",
+          "url": "https://natickschools.novusagenda.com/agendapublic/AttachmentViewer.ashx?AttachmentID=3777&ItemID=4672",
+          "publisher": "Natick Public Schools",
+          "date": "2023-09-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -498,7 +753,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 4400,
       "sources": [
-        {"title": "HHS Student Handbook & Code of Discipline 2025-2026", "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4900/Hhs/55eade5a-7b96-4b7e-bc21-987937b445a8/Student_Handbook_Code_of_Discipline_2025_2026.pdf", "publisher": "Hingham Public Schools", "date": "2025-09-01"}
+        {
+          "title": "HHS Student Handbook & Code of Discipline 2025-2026",
+          "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4900/Hhs/55eade5a-7b96-4b7e-bc21-987937b445a8/Student_Handbook_Code_of_Discipline_2025_2026.pdf",
+          "publisher": "Hingham Public Schools",
+          "date": "2025-09-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -507,14 +767,24 @@
       "districtId": "2512180",
       "districtName": "Watertown School District",
       "tier": 2,
-      "policySummary": "Watertown HS piloting the Doorman app in 2025-26 SY (first public school in the country) — software 'bricks' / disables cellphone communication during class periods. Separately, a district-wide draft cell-phone policy is in development per the School Committee.",
+      "policySummary": "Watertown HS piloting the Doorman app in 2025-26 SY (first public school in the country) \u2014 software 'bricks' / disables cellphone communication during class periods. Separately, a district-wide draft cell-phone policy is in development per the School Committee.",
       "scope": "9-12",
       "enforcement": "hardware",
       "effectiveDate": "2025-09",
       "enrollment": 2700,
       "sources": [
-        {"title": "Tap into class: Watertown High will be first in country to test new cell phone-limiting tech", "url": "https://www.wbur.org/news/2025/08/25/watertown-cell-phone-school-ban-doorman-newsletter", "publisher": "WBUR", "date": "2025-08-25"},
-        {"title": "Watertown High School to Pilot App That Would Disable Student Cellphones During Class", "url": "https://www.watertownmanews.com/2025/08/20/watertown-high-school-to-pilot-app-that-would-disable-student-cellphones-during-class/", "publisher": "Watertown News", "date": "2025-08-20"}
+        {
+          "title": "Tap into class: Watertown High will be first in country to test new cell phone-limiting tech",
+          "url": "https://www.wbur.org/news/2025/08/25/watertown-cell-phone-school-ban-doorman-newsletter",
+          "publisher": "WBUR",
+          "date": "2025-08-25"
+        },
+        {
+          "title": "Watertown High School to Pilot App That Would Disable Student Cellphones During Class",
+          "url": "https://www.watertownmanews.com/2025/08/20/watertown-high-school-to-pilot-app-that-would-disable-student-cellphones-during-class/",
+          "publisher": "Watertown News",
+          "date": "2025-08-20"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -529,7 +799,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 3000,
       "sources": [
-        {"title": "Duxbury Public Schools News", "url": "https://www.duxbury.k12.ma.us/news", "publisher": "Duxbury Public Schools", "date": "2024-09-01"}
+        {
+          "title": "Duxbury Public Schools News",
+          "url": "https://www.duxbury.k12.ma.us/news",
+          "publisher": "Duxbury Public Schools",
+          "date": "2024-09-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "low"
@@ -538,13 +813,18 @@
       "districtId": "2507560",
       "districtName": "Medford School District",
       "tier": 1,
-      "policySummary": "No district-wide policy in force. Teachers create classroom-level rules at their own discretion; consistent enforcement reportedly lacking. Medford received $25,000 from the DESE FC729 cellphone-use pilot grant alongside Boston and Newton — district-wide policy expected to follow.",
+      "policySummary": "No district-wide policy in force. Teachers create classroom-level rules at their own discretion; consistent enforcement reportedly lacking. Medford received $25,000 from the DESE FC729 cellphone-use pilot grant alongside Boston and Newton \u2014 district-wide policy expected to follow.",
       "scope": "varies",
       "enforcement": "honor",
       "effectiveDate": "2024-09",
       "enrollment": 4500,
       "sources": [
-        {"title": "What students, teachers and parents think about banning phones in Mass. schools", "url": "https://www.wbur.org/news/2025/05/06/students-teachers-parents-cell-phone-restrictions-classrooms-massachusetts", "publisher": "WBUR", "date": "2025-05-06"}
+        {
+          "title": "What students, teachers and parents think about banning phones in Mass. schools",
+          "url": "https://www.wbur.org/news/2025/05/06/students-teachers-parents-cell-phone-restrictions-classrooms-massachusetts",
+          "publisher": "WBUR",
+          "date": "2025-05-06"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -559,7 +839,12 @@
       "effectiveDate": "2025-09",
       "enrollment": 2400,
       "sources": [
-        {"title": "Cell Phone Policy Direction A (June 12, 2025)", "url": "https://go.boarddocs.com/ma/northampton/Board.nsf/files/DHDJ7B4BC516/$file/Cell%20Phone%20Policy%20Direction%20A.pdf", "publisher": "Northampton Public Schools (BoardDocs)", "date": "2025-06-12"}
+        {
+          "title": "Cell Phone Policy Direction A (June 12, 2025)",
+          "url": "https://go.boarddocs.com/ma/northampton/Board.nsf/files/DHDJ7B4BC516/$file/Cell%20Phone%20Policy%20Direction%20A.pdf",
+          "publisher": "Northampton Public Schools (BoardDocs)",
+          "date": "2025-06-12"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -574,7 +859,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 1300,
       "sources": [
-        {"title": "New Bell to Bell Cell Phone Policy on Deck for September 2026 Brings Mixed Feelings at ARHS", "url": "https://www.amherstindy.org/2025/11/14/new-bell-to-bell-cell-phone-policy-on-deck-for-september-2026-brings-mixed-feelings-at-arhs/", "publisher": "Amherst Indy", "date": "2025-11-14"}
+        {
+          "title": "New Bell to Bell Cell Phone Policy on Deck for September 2026 Brings Mixed Feelings at ARHS",
+          "url": "https://www.amherstindy.org/2025/11/14/new-bell-to-bell-cell-phone-policy-on-deck-for-september-2026-brings-mixed-feelings-at-arhs/",
+          "publisher": "Amherst Indy",
+          "date": "2025-11-14"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -589,7 +879,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 5000,
       "sources": [
-        {"title": "Mashpee School Committee Debates Cellphone Policy (references Barnstable)", "url": "https://www.capenews.net/mashpee/news/mashpee-school-committee-debates-cellphone-policy/article_1fce3900-8a0b-5096-b063-4421a3eef11e.html", "publisher": "Cape News", "date": "2024-08-15"}
+        {
+          "title": "Mashpee School Committee Debates Cellphone Policy (references Barnstable)",
+          "url": "https://www.capenews.net/mashpee/news/mashpee-school-committee-debates-cellphone-policy/article_1fce3900-8a0b-5096-b063-4421a3eef11e.html",
+          "publisher": "Cape News",
+          "date": "2024-08-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -604,7 +899,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 1900,
       "sources": [
-        {"title": "Mashpee School Committee Debates Cellphone Policy", "url": "https://www.capenews.net/mashpee/news/mashpee-school-committee-debates-cellphone-policy/article_1fce3900-8a0b-5096-b063-4421a3eef11e.html", "publisher": "Cape News", "date": "2024-08-15"}
+        {
+          "title": "Mashpee School Committee Debates Cellphone Policy",
+          "url": "https://www.capenews.net/mashpee/news/mashpee-school-committee-debates-cellphone-policy/article_1fce3900-8a0b-5096-b063-4421a3eef11e.html",
+          "publisher": "Cape News",
+          "date": "2024-08-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -619,7 +919,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 5800,
       "sources": [
-        {"title": "Peabody Veterans High To Ban Cell Phones In Class Starting This Fall", "url": "https://patch.com/massachusetts/peabody/peabody-veterans-high-ban-cell-phones-class-starting-fall", "publisher": "Patch — Peabody MA", "date": "2024-08-15"}
+        {
+          "title": "Peabody Veterans High To Ban Cell Phones In Class Starting This Fall",
+          "url": "https://patch.com/massachusetts/peabody/peabody-veterans-high-ban-cell-phones-class-starting-fall",
+          "publisher": "Patch \u2014 Peabody MA",
+          "date": "2024-08-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -634,7 +939,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 5000,
       "sources": [
-        {"title": "Pittsfield Schools' New Cell Phone Policy Effective So Far", "url": "https://www.iberkshires.com/story/76656/Pittsfield-Schools-New-Cell-Phone-Policy-Effective-So-Far.html", "publisher": "iBerkshires.com", "date": "2024-12-15"}
+        {
+          "title": "Pittsfield Schools' New Cell Phone Policy Effective So Far",
+          "url": "https://www.iberkshires.com/story/76656/Pittsfield-Schools-New-Cell-Phone-Policy-Effective-So-Far.html",
+          "publisher": "iBerkshires.com",
+          "date": "2024-12-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -643,13 +953,18 @@
       "districtId": "2506750",
       "districtName": "Lenox School District",
       "tier": 2,
-      "policySummary": "Lenox bans cellphone use by middle school students. Some Lenox schools allow no usage during classes without teacher permission; access during nonclass time. Tier 2 (partial — focused at middle school).",
+      "policySummary": "Lenox bans cellphone use by middle school students. Some Lenox schools allow no usage during classes without teacher permission; access during nonclass time. Tier 2 (partial \u2014 focused at middle school).",
       "scope": "K-8",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
       "enrollment": 1100,
       "sources": [
-        {"title": "Lenox bans cellphone use by middle school students", "url": "https://www.berkshireeagle.com/archives/lenox-bans-cellphone-use-by-middle-school-students/article_68140f49-4668-5107-b590-b829e3f00638.html", "publisher": "Berkshire Eagle", "date": "2024-08-15"}
+        {
+          "title": "Lenox bans cellphone use by middle school students",
+          "url": "https://www.berkshireeagle.com/archives/lenox-bans-cellphone-use-by-middle-school-students/article_68140f49-4668-5107-b590-b829e3f00638.html",
+          "publisher": "Berkshire Eagle",
+          "date": "2024-08-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -664,7 +979,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 800,
       "sources": [
-        {"title": "Local schools weigh in on proposed statewide cellphone ban", "url": "https://gazettenet.com/2025/08/26/local-schools-weigh-in-on-proposed-statewide-cellphone-ban/", "publisher": "Daily Hampshire Gazette", "date": "2025-08-26"}
+        {
+          "title": "Local schools weigh in on proposed statewide cellphone ban",
+          "url": "https://gazettenet.com/2025/08/26/local-schools-weigh-in-on-proposed-statewide-cellphone-ban/",
+          "publisher": "Daily Hampshire Gazette",
+          "date": "2025-08-26"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -679,7 +999,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 1700,
       "sources": [
-        {"title": "Local schools weigh in on proposed statewide cellphone ban", "url": "https://gazettenet.com/2025/08/26/local-schools-weigh-in-on-proposed-statewide-cellphone-ban/", "publisher": "Daily Hampshire Gazette", "date": "2025-08-26"}
+        {
+          "title": "Local schools weigh in on proposed statewide cellphone ban",
+          "url": "https://gazettenet.com/2025/08/26/local-schools-weigh-in-on-proposed-statewide-cellphone-ban/",
+          "publisher": "Daily Hampshire Gazette",
+          "date": "2025-08-26"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -694,7 +1019,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 1500,
       "sources": [
-        {"title": "Local schools weigh in on proposed statewide cellphone ban", "url": "https://gazettenet.com/2025/08/26/local-schools-weigh-in-on-proposed-statewide-cellphone-ban/", "publisher": "Daily Hampshire Gazette", "date": "2025-08-26"}
+        {
+          "title": "Local schools weigh in on proposed statewide cellphone ban",
+          "url": "https://gazettenet.com/2025/08/26/local-schools-weigh-in-on-proposed-statewide-cellphone-ban/",
+          "publisher": "Daily Hampshire Gazette",
+          "date": "2025-08-26"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -709,7 +1039,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 3500,
       "sources": [
-        {"title": "Burlington High School (Massachusetts) — Grokipedia", "url": "https://grokipedia.com/page/Burlington_High_School_(Massachusetts)", "publisher": "Grokipedia", "date": "2024-12-01"}
+        {
+          "title": "Burlington High School (Massachusetts) \u2014 Grokipedia",
+          "url": "https://grokipedia.com/page/Burlington_High_School_(Massachusetts)",
+          "publisher": "Grokipedia",
+          "date": "2024-12-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -724,7 +1059,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 4000,
       "sources": [
-        {"title": "Massachusetts lawmakers look to ban cell phone use in schools", "url": "https://www.westernmassnews.com/2025/07/10/massachusetts-lawmakers-look-ban-cell-phone-use-schools/", "publisher": "Western Mass News", "date": "2025-07-10"}
+        {
+          "title": "Massachusetts lawmakers look to ban cell phone use in schools",
+          "url": "https://www.westernmassnews.com/2025/07/10/massachusetts-lawmakers-look-ban-cell-phone-use-schools/",
+          "publisher": "Western Mass News",
+          "date": "2025-07-10"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -739,8 +1079,18 @@
       "effectiveDate": "2024-09",
       "enrollment": 7300,
       "sources": [
-        {"title": "Haverhill Schools Adopt New Policy Limiting Student Phone Use", "url": "https://whav.net/2024/07/30/haverhill-schools-adopt-new-policy-limiting-student-phone-use/", "publisher": "WHAV", "date": "2024-07-30"},
-        {"title": "Haverhill High Principal Downs to Brief School Committee on New Policy Limiting Phone Use", "url": "https://whav.net/2024/07/24/haverhill-high-principal-downs-to-brief-school-committee-on-new-policy-limiting-phone-use/", "publisher": "WHAV", "date": "2024-07-24"}
+        {
+          "title": "Haverhill Schools Adopt New Policy Limiting Student Phone Use",
+          "url": "https://whav.net/2024/07/30/haverhill-schools-adopt-new-policy-limiting-student-phone-use/",
+          "publisher": "WHAV",
+          "date": "2024-07-30"
+        },
+        {
+          "title": "Haverhill High Principal Downs to Brief School Committee on New Policy Limiting Phone Use",
+          "url": "https://whav.net/2024/07/24/haverhill-high-principal-downs-to-brief-school-committee-on-new-policy-limiting-phone-use/",
+          "publisher": "WHAV",
+          "date": "2024-07-24"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -749,14 +1099,24 @@
       "districtId": "2504860",
       "districtName": "Falmouth School District",
       "tier": 2,
-      "policySummary": "Falmouth HS: cell phones not allowed during class times; silenced and placed in classroom holders. School Board approved April 2026 a stricter policy that bars personal electronic devices during the school day district-wide — full ban applies starting 2026-27 SY.",
+      "policySummary": "Falmouth HS: cell phones not allowed during class times; silenced and placed in classroom holders. School Board approved April 2026 a stricter policy that bars personal electronic devices during the school day district-wide \u2014 full ban applies starting 2026-27 SY.",
       "scope": "9-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
       "enrollment": 3000,
       "sources": [
-        {"title": "Falmouth schools pass cell phone ban in advance of new state law", "url": "https://www.pressherald.com/2026/04/20/falmouth-schools-pass-cell-phone-ban-in-advance-of-new-state-law-column/", "publisher": "Press Herald", "date": "2026-04-20"},
-        {"title": "FHS Student/Family Handbook 2024-2025", "url": "https://resources.finalsite.net/images/v1707159334/falmouthschoolsorg/kgacqg42hufynql0kgax/FHSStudent_FamilyHandbook2023-2024updated2_5_2024.pdf", "publisher": "Falmouth Public Schools", "date": "2024-08-01"}
+        {
+          "title": "Falmouth schools pass cell phone ban in advance of new state law",
+          "url": "https://www.pressherald.com/2026/04/20/falmouth-schools-pass-cell-phone-ban-in-advance-of-new-state-law-column/",
+          "publisher": "Press Herald",
+          "date": "2026-04-20"
+        },
+        {
+          "title": "FHS Student/Family Handbook 2024-2025",
+          "url": "https://resources.finalsite.net/images/v1707159334/falmouthschoolsorg/kgacqg42hufynql0kgax/FHSStudent_FamilyHandbook2023-2024updated2_5_2024.pdf",
+          "publisher": "Falmouth Public Schools",
+          "date": "2024-08-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -765,14 +1125,24 @@
       "districtId": "2512750",
       "districtName": "Weston School District",
       "tier": 2,
-      "policySummary": "School Committee adopted phased policy 2025-04-28. 2025-26 SY: pre-K through grade 8 prohibited from using personal electronic devices during school day; HS may use cellphones during class transitions, lunch, free blocks. 2026-27 SY: full district ban — HS laptops only, placed in designated storage during the day.",
+      "policySummary": "School Committee adopted phased policy 2025-04-28. 2025-26 SY: pre-K through grade 8 prohibited from using personal electronic devices during school day; HS may use cellphones during class transitions, lunch, free blocks. 2026-27 SY: full district ban \u2014 HS laptops only, placed in designated storage during the day.",
       "scope": "K-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2025-09",
       "enrollment": 2400,
       "sources": [
-        {"title": "Weston Public Schools implementing new cellphone policy", "url": "https://westonobserver.org/weston-public-schools-implementing-new-cellphone-policy/", "publisher": "Weston Observer", "date": "2025-05-01"},
-        {"title": "Weston School Committee Meeting Minutes Sept 9 2024", "url": "https://www.westonma.gov/AgendaCenter/ViewFile/Minutes/_09092024-7932", "publisher": "Town of Weston", "date": "2024-09-09"}
+        {
+          "title": "Weston Public Schools implementing new cellphone policy",
+          "url": "https://westonobserver.org/weston-public-schools-implementing-new-cellphone-policy/",
+          "publisher": "Weston Observer",
+          "date": "2025-05-01"
+        },
+        {
+          "title": "Weston School Committee Meeting Minutes Sept 9 2024",
+          "url": "https://www.westonma.gov/AgendaCenter/ViewFile/Minutes/_09092024-7932",
+          "publisher": "Town of Weston",
+          "date": "2024-09-09"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -781,13 +1151,18 @@
       "districtId": "2507320",
       "districtName": "Marlborough School District",
       "tier": 2,
-      "policySummary": "Marlborough HS uses 'cell phone hotels' — numbered cubby holes in classrooms where students place phones at the start of class and retrieve at the end. Off-and-away with light hardware enforcement.",
+      "policySummary": "Marlborough HS uses 'cell phone hotels' \u2014 numbered cubby holes in classrooms where students place phones at the start of class and retrieve at the end. Off-and-away with light hardware enforcement.",
       "scope": "9-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
       "enrollment": 5300,
       "sources": [
-        {"title": "Guidance — Marlborough High School", "url": "https://www.mps-edu.org/o/mhs/page/guidance", "publisher": "Marlborough Public Schools", "date": "2024-09-01"}
+        {
+          "title": "Guidance \u2014 Marlborough High School",
+          "url": "https://www.mps-edu.org/o/mhs/page/guidance",
+          "publisher": "Marlborough Public Schools",
+          "date": "2024-09-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -802,7 +1177,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 2900,
       "sources": [
-        {"title": "Medfield HS Student Handbook 2025-2026", "url": "https://sites.google.com/email.medfield.net/mhshandbook/general-information", "publisher": "Medfield Public Schools", "date": "2025-09-01"}
+        {
+          "title": "Medfield HS Student Handbook 2025-2026",
+          "url": "https://sites.google.com/email.medfield.net/mhshandbook/general-information",
+          "publisher": "Medfield Public Schools",
+          "date": "2025-09-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -817,7 +1197,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 6300,
       "sources": [
-        {"title": "Weymouth High School", "url": "https://secure.smore.com/n/bcawv-weymouth-high-school", "publisher": "Weymouth High School newsletter", "date": "2024-09-15"}
+        {
+          "title": "Weymouth High School",
+          "url": "https://secure.smore.com/n/bcawv-weymouth-high-school",
+          "publisher": "Weymouth High School newsletter",
+          "date": "2024-09-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -832,7 +1217,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 4400,
       "sources": [
-        {"title": "Hopkinton HS School Improvement Plan", "url": "https://highschool.hopkinton.k12.ma.us/about/school-improvement-plan", "publisher": "Hopkinton Public Schools", "date": "2024-09-01"}
+        {
+          "title": "Hopkinton HS School Improvement Plan",
+          "url": "https://highschool.hopkinton.k12.ma.us/about/school-improvement-plan",
+          "publisher": "Hopkinton Public Schools",
+          "date": "2024-09-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "low"
@@ -847,8 +1237,18 @@
       "effectiveDate": "2024-09",
       "enrollment": 2400,
       "sources": [
-        {"title": "Under Pilot Policy, BHS Students will Forego Phones in Class", "url": "https://thebedfordcitizen.org/2024/04/under-pilot-policy-bhs-students-will-forego-phones-in-class/", "publisher": "The Bedford Citizen", "date": "2024-04-15"},
-        {"title": "BHS Student Handbook 2024-25 (draft)", "url": "https://www.bedfordps.org/sites/g/files/vyhlif2786/f/uploads/bhs_student_handbook_2024-25_draft.pdf", "publisher": "Bedford Public Schools", "date": "2024-08-01"}
+        {
+          "title": "Under Pilot Policy, BHS Students will Forego Phones in Class",
+          "url": "https://thebedfordcitizen.org/2024/04/under-pilot-policy-bhs-students-will-forego-phones-in-class/",
+          "publisher": "The Bedford Citizen",
+          "date": "2024-04-15"
+        },
+        {
+          "title": "BHS Student Handbook 2024-25 (draft)",
+          "url": "https://www.bedfordps.org/sites/g/files/vyhlif2786/f/uploads/bhs_student_handbook_2024-25_draft.pdf",
+          "publisher": "Bedford Public Schools",
+          "date": "2024-08-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -857,13 +1257,18 @@
       "districtId": "2511580",
       "districtName": "Tewksbury School District",
       "tier": 2,
-      "policySummary": "Wynn Middle School piloted magnetic pouches (Yondr-style) starting April 2024. Fully implemented for 2024-25 SY at the middle school. Teachers reported up to 60% reduction in student time out of classroom since restriction. Tier-2 — MS hardware in force; HS scope unverified.",
+      "policySummary": "Wynn Middle School piloted magnetic pouches (Yondr-style) starting April 2024. Fully implemented for 2024-25 SY at the middle school. Teachers reported up to 60% reduction in student time out of classroom since restriction. Tier-2 \u2014 MS hardware in force; HS scope unverified.",
       "scope": "K-8",
       "enforcement": "hardware",
       "effectiveDate": "2024-09",
       "enrollment": 3300,
       "sources": [
-        {"title": "School cell phone policies still developing as academic year begins", "url": "https://homenewshere.com/middlesex_east/article_7cb12b44-7f2e-11ef-82f4-b37b4e1364d5.html", "publisher": "Middlesex East / HomeNewsHere", "date": "2024-09-15"}
+        {
+          "title": "School cell phone policies still developing as academic year begins",
+          "url": "https://homenewshere.com/middlesex_east/article_7cb12b44-7f2e-11ef-82f4-b37b4e1364d5.html",
+          "publisher": "Middlesex East / HomeNewsHere",
+          "date": "2024-09-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -878,7 +1283,12 @@
       "effectiveDate": "2025-09",
       "enrollment": 4800,
       "sources": [
-        {"title": "Life at the Locke Issue #2 2025-2026", "url": "https://billericak12.com/life-at-the-locke-issue-2-2025-2026/", "publisher": "Billerica Public Schools", "date": "2025-09-15"}
+        {
+          "title": "Life at the Locke Issue #2 2025-2026",
+          "url": "https://billericak12.com/life-at-the-locke-issue-2-2025-2026/",
+          "publisher": "Billerica Public Schools",
+          "date": "2025-09-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -893,7 +1303,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 6300,
       "sources": [
-        {"title": "The Rise of Phone Bans in Schools (Shrewsbury reference)", "url": "https://www.closeup.org/public-schools-phone-bans/", "publisher": "Close Up Foundation", "date": "2024-12-01"}
+        {
+          "title": "The Rise of Phone Bans in Schools (Shrewsbury reference)",
+          "url": "https://www.closeup.org/public-schools-phone-bans/",
+          "publisher": "Close Up Foundation",
+          "date": "2024-12-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -902,14 +1317,24 @@
       "districtId": "2507110",
       "districtName": "Lynn School District",
       "tier": 2,
-      "policySummary": "Updated district-wide policy effective Sept 1, 2025: cell phones must be off and not visible during the school day, including during lunch and in hallways. Progressive discipline for repeat violations (parent contact → confiscation → detention → suspension). IEP/504/health-plan accommodations.",
+      "policySummary": "Updated district-wide policy effective Sept 1, 2025: cell phones must be off and not visible during the school day, including during lunch and in hallways. Progressive discipline for repeat violations (parent contact \u2192 confiscation \u2192 detention \u2192 suspension). IEP/504/health-plan accommodations.",
       "scope": "K-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2025-09",
       "enrollment": 16000,
       "sources": [
-        {"title": "Lynn Public Schools ring out new cell-phone rules", "url": "https://itemlive.com/2025/08/05/lynn-public-schools-ring-out-new-cellphone-rules/", "publisher": "Item Live", "date": "2025-08-05"},
-        {"title": "Student Device Policy", "url": "https://www.lynnschools.org/resources/student_resources/policies_and_codes/student_device_policy", "publisher": "Lynn Public Schools", "date": "2025-09-01"}
+        {
+          "title": "Lynn Public Schools ring out new cell-phone rules",
+          "url": "https://itemlive.com/2025/08/05/lynn-public-schools-ring-out-new-cellphone-rules/",
+          "publisher": "Item Live",
+          "date": "2025-08-05"
+        },
+        {
+          "title": "Student Device Policy",
+          "url": "https://www.lynnschools.org/resources/student_resources/policies_and_codes/student_device_policy",
+          "publisher": "Lynn Public Schools",
+          "date": "2025-09-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -924,8 +1349,18 @@
       "effectiveDate": "2024-09",
       "enrollment": 3500,
       "sources": [
-        {"title": "DHS discusses new cell phone policy amid state legislative changes", "url": "https://citizenportal.ai/articles/3796789/Town-of-Danvers/Essex-County/Massachusetts/DHS-discusses-new-cell-phone-policy-amid-state-legislative-changes", "publisher": "CitizenPortal.ai", "date": "2025-06-09"},
-        {"title": "DHS Responsible Use Policy", "url": "https://danverspublicschools.org/dhs-responsible-use-policy/", "publisher": "Danvers Public Schools", "date": "2024-09-01"}
+        {
+          "title": "DHS discusses new cell phone policy amid state legislative changes",
+          "url": "https://citizenportal.ai/articles/3796789/Town-of-Danvers/Essex-County/Massachusetts/DHS-discusses-new-cell-phone-policy-amid-state-legislative-changes",
+          "publisher": "CitizenPortal.ai",
+          "date": "2025-06-09"
+        },
+        {
+          "title": "DHS Responsible Use Policy",
+          "url": "https://danverspublicschools.org/dhs-responsible-use-policy/",
+          "publisher": "Danvers Public Schools",
+          "date": "2024-09-01"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
@@ -940,7 +1375,12 @@
       "effectiveDate": "2024-09",
       "enrollment": 2300,
       "sources": [
-        {"title": "School cell phone policies still developing as academic year begins", "url": "https://homenewshere.com/middlesex_east/article_7cb12b44-7f2e-11ef-82f4-b37b4e1364d5.html", "publisher": "Middlesex East / HomeNewsHere", "date": "2024-09-15"}
+        {
+          "title": "School cell phone policies still developing as academic year begins",
+          "url": "https://homenewshere.com/middlesex_east/article_7cb12b44-7f2e-11ef-82f4-b37b4e1364d5.html",
+          "publisher": "Middlesex East / HomeNewsHere",
+          "date": "2024-09-15"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
@@ -949,13 +1389,18 @@
       "districtId": "2507860",
       "districtName": "Milford School District",
       "tier": 2,
-      "policySummary": "Milford HS implemented a policy prohibiting cell-phone use in classrooms and hallways since 2019 — one of the earlier MA districts to adopt restrictions. Off-and-away enforcement.",
+      "policySummary": "Milford HS implemented a policy prohibiting cell-phone use in classrooms and hallways since 2019 \u2014 one of the earlier MA districts to adopt restrictions. Off-and-away enforcement.",
       "scope": "9-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2019-09",
       "enrollment": 4100,
       "sources": [
-        {"title": "Mass. education department 'likely' to encourage schools to restrict phones (Milford reference)", "url": "https://www.boston.com/news/local-news/2023/05/25/mass-education-department-likely-to-encourage-schools-to-restrict-phones/", "publisher": "Boston.com", "date": "2023-05-25"}
+        {
+          "title": "Mass. education department 'likely' to encourage schools to restrict phones (Milford reference)",
+          "url": "https://www.boston.com/news/local-news/2023/05/25/mass-education-department-likely-to-encourage-schools-to-restrict-phones/",
+          "publisher": "Boston.com",
+          "date": "2023-05-25"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "low"
@@ -970,7 +1415,12 @@
       "effectiveDate": "2024-08",
       "enrollment": 800,
       "sources": [
-        {"title": "Cellphone bans in schools: Mass. school districts crack down", "url": "https://www.bostonglobe.com/2024/08/27/metro/school-cellphone-bans-massachusetts/", "publisher": "Boston Globe", "date": "2024-08-27"}
+        {
+          "title": "Cellphone bans in schools: Mass. school districts crack down",
+          "url": "https://www.bostonglobe.com/2024/08/27/metro/school-cellphone-bans-massachusetts/",
+          "publisher": "Boston Globe",
+          "date": "2024-08-27"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "low"
@@ -979,17 +1429,3034 @@
       "districtId": "2510380",
       "districtName": "Salem School District",
       "tier": 2,
-      "policySummary": "Salem High School uses Yondr pouches (since 2023-24). Two-strike enforcement: warning, then phone to front office, then parent involvement. Middle and elementary scope not verified — likely tier 1 elsewhere in district.",
+      "policySummary": "Salem High School uses Yondr pouches (since 2023-24). Two-strike enforcement: warning, then phone to front office, then parent involvement. Middle and elementary scope not verified \u2014 likely tier 1 elsewhere in district.",
       "scope": "9-12",
       "enforcement": "hardware",
       "effectiveDate": "2023-09",
       "enrollment": 4000,
       "sources": [
-        {"title": "Why some Mass. schools made the call to lock up student phones", "url": "https://www.wbur.org/news/2023/09/20/salem-high-school-student-cellphones-restrictions", "publisher": "WBUR", "date": "2023-09-20"},
-        {"title": "Cell phones have been taking over classrooms. These Boston-area schools are making a stand.", "url": "https://www.boston.com/news/local-news/2024/11/04/cell-phones-have-been-taking-over-classrooms-these-boston-area-schools-are-making-a-stand/", "publisher": "Boston.com", "date": "2024-11-04"}
+        {
+          "title": "Why some Mass. schools made the call to lock up student phones",
+          "url": "https://www.wbur.org/news/2023/09/20/salem-high-school-student-cellphones-restrictions",
+          "publisher": "WBUR",
+          "date": "2023-09-20"
+        },
+        {
+          "title": "Cell phones have been taking over classrooms. These Boston-area schools are making a stand.",
+          "url": "https://www.boston.com/news/local-news/2024/11/04/cell-phones-have-been-taking-over-classrooms-these-boston-area-schools-are-making-a-stand/",
+          "publisher": "Boston.com",
+          "date": "2024-11-04"
+        }
       ],
       "lastVerified": "2026-04-30",
       "confidence": "medium"
+    },
+    "2500001": {
+      "districtId": "2500001",
+      "districtName": "Quabbin School District",
+      "tier": 2,
+      "policySummary": "District has policy manual with March 2023 update; S.2561 MA legislation requires cell phone-free adoption by fall 2026.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2500002": {
+      "districtId": "2500002",
+      "districtName": "Spencer-East Brookfield School District",
+      "tier": 2,
+      "policySummary": "Middle and high school students asked to keep phones away during day; honor system approach with teaching responsibility and wellness focus.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://spencerjournal.com/debate-grows-on-cell-phone-use-in-schools/"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2500013": {
+      "districtId": "2500013",
+      "districtName": "Southwick-Tolland-Granville Regional School District",
+      "tier": 2,
+      "policySummary": "District has Policy Manual available; specific cell phone policy details not located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2500067": {
+      "districtId": "2500067",
+      "districtName": "Manchester Essex Regional School District",
+      "tier": 2,
+      "policySummary": "Middle school handbook references Cell Phone Contract as part of school behavior expectations; specific restrictions not detailed.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2500542": {
+      "districtId": "2500542",
+      "districtName": "Ayer-Shirley School District",
+      "tier": 2,
+      "policySummary": "District has phone policy in place; user review mentioned 'new phone policy' but specific details not located.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2500544": {
+      "districtId": "2500544",
+      "districtName": "Monomoy Regional School District",
+      "tier": 2,
+      "policySummary": "Middle/high school: camera/cell phones prohibited in locker rooms/bathrooms; confiscation for 1 month for misuse; up to one month loss of privilege.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://www.monomoy.edu/our-district/school-handbooks/monomoy-regional-middle-school-handbook"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2501650": {
+      "districtId": "2501650",
+      "districtName": "Abington School District",
+      "tier": 3,
+      "policySummary": "Full ban: middle school all-day ban; high school ban during class with access at lunch/passing periods; cell phone hotels for storage; exceptions for medical/IEP.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://www.southshore.news/p/abington-schools-ban-cell-phones",
+        "https://www.inquirer.com/education/abington-school-district-cellphone-ban-20240814.html"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2501780": {
+      "districtId": "2501780",
+      "districtName": "Hoosac Valley School District",
+      "tier": 2,
+      "policySummary": "Updated May 2025 to match NYS law; principals designate storage locations; consequences updated; office phone available for calls home.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://hoosicvalley.org/2025/07/14/updated-cell-phone-policy/"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2501800": {
+      "districtId": "2501800",
+      "districtName": "Agawam School District",
+      "tier": 2,
+      "policySummary": "No cell phone use during classroom times unless emergency; non-teaching times only per personnel policy; staff-focused documentation.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2501860": {
+      "districtId": "2501860",
+      "districtName": "Amesbury School District",
+      "tier": 2,
+      "policySummary": "Parent Handbook with system-wide policies available; specific cell phone policy details not located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2501950": {
+      "districtId": "2501950",
+      "districtName": "Andover School District",
+      "tier": 2,
+      "policySummary": "School board approved cell phone ban for high school in Feb 2026; state law S.2561 requires district-wide adoption by fall 2026.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2501980": {
+      "districtId": "2501980",
+      "districtName": "Arlington School District",
+      "tier": 2,
+      "policySummary": "Off and away: phones must be off and in locked locker unless teacher permission; no calls home via cell; confiscation for violations.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://www.arlingtonschools.org/page/cell-phones"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2502040": {
+      "districtId": "2502040",
+      "districtName": "Ashburnham-Westminster School District",
+      "tier": 2,
+      "policySummary": "Policy manual available online; social media/communication policies referenced but student cell phone policy details not located.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2502100": {
+      "districtId": "2502100",
+      "districtName": "Ashland School District",
+      "tier": 2,
+      "policySummary": "High school policy in place as of fall 2024; one ISS for violations; district considering wider adoption with 1+ ISS per infraction.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2502160": {
+      "districtId": "2502160",
+      "districtName": "Athol-Royalston School District",
+      "tier": 3,
+      "policySummary": "Full hardware ban: Yondr pouches for all students; 10-day pouch loss for violations; bell-to-bell prohibition with medical/IEP exceptions.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://atholdailynews.com/2025/08/24/athol-royalston-schools-ban-cell-phone-use/"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2502190": {
+      "districtId": "2502190",
+      "districtName": "Attleboro School District",
+      "tier": 2,
+      "policySummary": "High school: classroom cell phone pouches during academic time; access at lunch/before-after school; parent communication via house office.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://ahs.attleboroschools.com/o/ahs/article/2386225"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2502220": {
+      "districtId": "2502220",
+      "districtName": "Auburn School District",
+      "tier": 2,
+      "policySummary": "MA Auburn: elementary devices silenced/stored in backpack/locker; middle/high use only at lunch/before/after class.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2502250": {
+      "districtId": "2502250",
+      "districtName": "Avon School District",
+      "tier": 1,
+      "policySummary": "No MA Avon district policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2502430": {
+      "districtId": "2502430",
+      "districtName": "Belchertown School District",
+      "tier": 2,
+      "policySummary": "District policy manual available; specific cell phone policy details not located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2502460": {
+      "districtId": "2502460",
+      "districtName": "Bellingham School District",
+      "tier": 2,
+      "policySummary": "High school: use only at lunch/passing periods; classroom prohibition; middle school and elementary stricter; no personal liability for loss/theft.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://bellinghamschools.org/policies/3245-policy/"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2502530": {
+      "districtId": "2502530",
+      "districtName": "Berkshire Hills School District",
+      "tier": 2,
+      "policySummary": "Devices stored in bags/lockers/away from start to end of classes; elementary in cubbies, middle in lockers, high school in bags; use at lunch OK.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://www.berkshireeagle.com/news/southern_berkshires/cell-phone-ban-schools-great-barrington-berkshire-hills-policy-social-media/"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2502580": {
+      "districtId": "2502580",
+      "districtName": "Berlin-Boylston School District",
+      "tier": 1,
+      "policySummary": "No MA Berlin-Boylston policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2502640": {
+      "districtId": "2502640",
+      "districtName": "Beverly School District",
+      "tier": 2,
+      "policySummary": "State law S.2561 requires cell phone-free adoption by fall 2026; district-specific policy details not located.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2502715": {
+      "districtId": "2502715",
+      "districtName": "Blackstone-Millville School District",
+      "tier": 2,
+      "policySummary": "High school piloting lock box in five classrooms; positive teacher feedback on focus; concerns on scalability and consistency across all classrooms.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://thelocallens.org/blackstone-millville-school-committee-faces-student-opposition-to-new-cell-phone-policy/"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2502820": {
+      "districtId": "2502820",
+      "districtName": "Bourne School District",
+      "tier": 2,
+      "policySummary": "State law S.2561 requires cell phone-free adoption by fall 2026; district-specific policy details not located.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2502940": {
+      "districtId": "2502940",
+      "districtName": "Braintree School District",
+      "tier": 2,
+      "policySummary": "Bring Your Own Device (BYOD) program for grades 5-12 for educational purposes; specific cell phone policy details not located.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2503030": {
+      "districtId": "2503030",
+      "districtName": "Bridgewater-Raynham School District",
+      "tier": 2,
+      "policySummary": "Policy manual available; specific cell phone policy details accessible through MASC searchable database.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2503300": {
+      "districtId": "2503300",
+      "districtName": "Canton School District",
+      "tier": 2,
+      "policySummary": "Policy manual available through MASC website; specific cell phone policy details not located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2503360": {
+      "districtId": "2503360",
+      "districtName": "Carver School District",
+      "tier": 2,
+      "policySummary": "Policy manual approved June 5, 2023; state law S.2561 requires cell phone-free adoption by fall 2026; specific policy details not located.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2503390": {
+      "districtId": "2503390",
+      "districtName": "Central Berkshire School District",
+      "tier": 3,
+      "policySummary": "Full hardware ban with Yondr pouches in middle/high school since 2023; reduced infractions from ~200/month to 11-20/month; zero suspensions for cell phone violations.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://www.iberkshires.com/story/79884/Central-Berkshire-Cell-Phone-Policy-A-Gamechanger-.html"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2503510": {
+      "districtId": "2503510",
+      "districtName": "Chelmsford School District",
+      "tier": 2,
+      "policySummary": "District seeking community feedback on cell phone/social media policy; state law S.2561 requires adoption by fall 2026.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2503540": {
+      "districtId": "2503540",
+      "districtName": "Chelsea School District",
+      "tier": 3,
+      "policySummary": "Full hardware ban: district implementing Yondr pouches for bell-to-bell storage; all students assigned pouches; pilot at Browne middle school successful.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://chsbleuprint.com/10255/showcase/phones-overthrown-administration-prohibits-phones-from-classrooms/",
+        "http://chelsearecord.com/2024/11/21/school-committee-looks-to-implement-district-wide-cellphone-policy/"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2503750": {
+      "districtId": "2503750",
+      "districtName": "Clinton School District",
+      "tier": 2,
+      "policySummary": "MA Clinton middle school: phones banned during school day with classroom enforcement; confiscation if found.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2503780": {
+      "districtId": "2503780",
+      "districtName": "Cohasset School District",
+      "tier": 3,
+      "policySummary": "High school: unanimous full ban during school hours including lunch/breaks (2025-26); middle school: away for the day policy since 2018-19; phones must be off or in locker.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://www.southshore.news/p/cohasset-school-committee-approves-c68",
+        "https://cohasseteducation.org/1289-2/"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2504020": {
+      "districtId": "2504020",
+      "districtName": "Dartmouth School District",
+      "tier": 2,
+      "policySummary": "High school: cell hotels in each classroom; phones checked at door; violations carry escalating after-sessions (5 min, 30 min, 60 min); elementary: phones in lockers.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://www.nbcboston.com/news/local/dartmouth-mass-high-school-to-hold-student-phones-in-cell-hotels-to-limit-class-distractions/2796410/"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2504050": {
+      "districtId": "2504050",
+      "districtName": "Dedham School District",
+      "tier": 1,
+      "policySummary": "Classroom cell phone policies at discretion of individual teachers; no uniform district-wide policy.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2504140": {
+      "districtId": "2504140",
+      "districtName": "Dennis-Yarmouth School District",
+      "tier": 2,
+      "policySummary": "Policy manual available on district website; specific cell phone policy details not located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504200": {
+      "districtId": "2504200",
+      "districtName": "Dighton-Rehoboth School District",
+      "tier": 1,
+      "policySummary": "Superintendent: 'no substantive changes'; fine line between distraction and educational use acknowledged; Chromebooks reduce phone need.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504230": {
+      "districtId": "2504230",
+      "districtName": "Douglas School District",
+      "tier": 2,
+      "policySummary": "Policy manual available; specific cell phone policy details not located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504320": {
+      "districtId": "2504320",
+      "districtName": "Dracut School District",
+      "tier": 2,
+      "policySummary": "District policies available online; state law S.2561 requires cell phone-free adoption by fall 2026; specific policy details not located.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504360": {
+      "districtId": "2504360",
+      "districtName": "Dudley-Charlton Regional School District",
+      "tier": 2,
+      "policySummary": "Personal devices allowed on guest wireless for educational use; no district IT support; non-guest network access prohibited.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://www.dcrsd.org/about-dcrsd/district-policies/ijndba"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2504440": {
+      "districtId": "2504440",
+      "districtName": "East Bridgewater School District",
+      "tier": 2,
+      "policySummary": "High school bell-to-bell pilot (Feb 2026): phones in classroom holders during instruction; exceptions for medical/IEP; access at passing periods.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://www.southshore.news/p/east-bridgewater-high-school-to-pilot"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2504500": {
+      "districtId": "2504500",
+      "districtName": "East Longmeadow School District",
+      "tier": 2,
+      "policySummary": "Middle and high school: phones in assigned pouches at start of class; implemented 2023-24; continued per committee vote June 3, 2026.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://thereminder.com/local-news/hampden-county/east-longmeadow/east-longmeadow-school-committee-approves-cell-phone-policy-for-2024-25-school-year/"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2504620": {
+      "districtId": "2504620",
+      "districtName": "Easton School District",
+      "tier": 2,
+      "policySummary": "District considering unified policy; middle school: devices off/in lockers all day (including Apple watches); high school: locked pouches in classes.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://eastoncourier.news/2025/06/07/er9-consider-adopting-cell-phone-policy-pending-community-comments/"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2504770": {
+      "districtId": "2504770",
+      "districtName": "Everett School District",
+      "tier": 2,
+      "policySummary": "Personal devices allowed for educational use at teacher discretion; confiscation for violations with potential suspension/expulsion; district assumes no responsibility.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2504800": {
+      "districtId": "2504800",
+      "districtName": "Fairhaven School District",
+      "tier": 2,
+      "policySummary": "No policy located in 2026-05-20 search; policies available on district website.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504890": {
+      "districtId": "2504890",
+      "districtName": "Fitchburg School District",
+      "tier": 3,
+      "policySummary": "Full hardware ban: phones locked away for 7 hours per day next school year per Change.org petition details.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://www.change.org/p/stop-the-phone-ban-in-fitchburg-public-schools"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504950": {
+      "districtId": "2504950",
+      "districtName": "Foxborough School District",
+      "tier": 2,
+      "policySummary": "Student handbook includes cell phone policy; specific details not located; state law S.2561 requires adoption by fall 2026.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505010": {
+      "districtId": "2505010",
+      "districtName": "Franklin School District",
+      "tier": 2,
+      "policySummary": "Social media policy for employees available; student cell phone policy details not located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505070": {
+      "districtId": "2505070",
+      "districtName": "Freetown-Lakeville School District",
+      "tier": 2,
+      "policySummary": "Policy manual available on district website; specific cell phone policy details not located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505130": {
+      "districtId": "2505130",
+      "districtName": "Gardner School District",
+      "tier": 2,
+      "policySummary": "Phones locked in phone cases; progressive discipline: warning/call home, then confiscation; part of PBIS Be Ready initiative.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [
+        "https://www.gardnerk12.org/DocumentCenter/View/3691/2025-2026-Student-Handbook"
+      ],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2505160": {
+      "districtId": "2505160",
+      "districtName": "Gateway School District",
+      "tier": 2,
+      "policySummary": "State law S.2561 requires cell phone-free adoption by fall 2026; district-specific policy details not located.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505220": {
+      "districtId": "2505220",
+      "districtName": "Georgetown School District",
+      "tier": 2,
+      "policySummary": "Students must turn in cell phones at class start; loss of phone privileges for non-compliance; parents instructed not to call/text during day.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2505270": {
+      "districtId": "2505270",
+      "districtName": "Gill-Montague School District",
+      "tier": 1,
+      "policySummary": "No policy located in 2026-05-20 search; district information available.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505280": {
+      "districtId": "2505280",
+      "districtName": "Gloucester School District",
+      "tier": 2,
+      "policySummary": "State law S.2561 requires cell phone-free adoption by fall 2026; district-specific policy details not located.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505340": {
+      "districtId": "2505340",
+      "districtName": "Gosnold School District",
+      "tier": 2,
+      "policySummary": "State law S.2561 requires cell phone-free adoption by fall 2026; district-specific policy details not located.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505370": {
+      "districtId": "2505370",
+      "districtName": "Grafton School District",
+      "tier": 2,
+      "policySummary": "Cell phone policy listed under code JICJA; state law S.2561 requires adoption by fall 2026; specific details not located.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505400": {
+      "districtId": "2505400",
+      "districtName": "Granby School District",
+      "tier": 1,
+      "policySummary": "No district-specific cell phone policy located; state mandate requires implementation by fall 2026.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505500": {
+      "districtId": "2505500",
+      "districtName": "Groton-Dunstable School District",
+      "tier": 1,
+      "policySummary": "No specific cell phone policy details found in search; district maintains policy manual but details not accessible.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505580": {
+      "districtId": "2505580",
+      "districtName": "Hadley School District",
+      "tier": 1,
+      "policySummary": "District has policies page but specific cell phone policy not found; state mandate requires compliance by 2026.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505670": {
+      "districtId": "2505670",
+      "districtName": "Hamilton-Wenham School District",
+      "tier": 3,
+      "policySummary": "High school: phones stored in trays all day; middle school: off and out of sight; new policy for 2025-26 adds Yondr pouches.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2505730": {
+      "districtId": "2505730",
+      "districtName": "Hampden-Wilbraham School District",
+      "tier": 1,
+      "policySummary": "No specific cell phone policy found; general district information available but detailed policy not accessible.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505790": {
+      "districtId": "2505790",
+      "districtName": "Hanover School District",
+      "tier": 1,
+      "policySummary": "MA Hanover has policy manual but specific cell phone policy not located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505880": {
+      "districtId": "2505880",
+      "districtName": "Harvard School District",
+      "tier": 1,
+      "policySummary": "No Harvard MA-specific policy found; search returned Cambridge and state-level information.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505940": {
+      "districtId": "2505940",
+      "districtName": "Hatfield School District",
+      "tier": 1,
+      "policySummary": "No specific cell phone policy located in web search results.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2506150": {
+      "districtId": "2506150",
+      "districtName": "Holbrook School District",
+      "tier": 1,
+      "policySummary": "District policy manual exists with cell phones/electronic devices policy (JICJA) but specific details not accessible.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2506240": {
+      "districtId": "2506240",
+      "districtName": "Holliston School District",
+      "tier": 1,
+      "policySummary": "Search found acceptable use and technology policies but no standalone cell phone policy details.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2506270": {
+      "districtId": "2506270",
+      "districtName": "Holyoke School District",
+      "tier": 3,
+      "policySummary": "Full Yondr pouch policy; grades 6-12 lock phones in pouches; bell-to-bell restriction; emergency exceptions for medical needs.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2506300": {
+      "districtId": "2506300",
+      "districtName": "Hopedale School District",
+      "tier": 2,
+      "policySummary": "Phones must be off/silent during instructional hours; emergencies permitted with teacher approval; texting/social media prohibited.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2506390": {
+      "districtId": "2506390",
+      "districtName": "Hudson School District",
+      "tier": 3,
+      "policySummary": "Bell-to-bell ban for all grades; devices powered off and stored in lockers; progressive discipline; no verbal warnings.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2506420": {
+      "districtId": "2506420",
+      "districtName": "Hull School District",
+      "tier": 2,
+      "policySummary": "Away for the day policy: devices silent/off when entering campus; not allowed in cafeteria, library, or hallways; confiscation on 2nd violation.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2506660": {
+      "districtId": "2506660",
+      "districtName": "Lawrence School District",
+      "tier": 1,
+      "policySummary": "No MA Lawrence policy details located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2506690": {
+      "districtId": "2506690",
+      "districtName": "Lee School District",
+      "tier": 3,
+      "policySummary": "Bell-to-bell ban (7:58 a.m. to 2:30 p.m.); phones powered off in pockets allowed; smartwatches/headphones included; confiscation escalates to parent pickup.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2506720": {
+      "districtId": "2506720",
+      "districtName": "Leicester School District",
+      "tier": 1,
+      "policySummary": "No specific cell phone policy found; district website exists but policy details not accessible.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2506780": {
+      "districtId": "2506780",
+      "districtName": "Leominster School District",
+      "tier": 2,
+      "policySummary": "High school: phones in classroom holders for entire class; use loss for remainder of day; phones allowed between classes/at lunch.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2506960": {
+      "districtId": "2506960",
+      "districtName": "Littleton School District",
+      "tier": 3,
+      "policySummary": "K-8 complete ban, phones left in lockers/backpacks all day; high school allowed in off-periods; smartwatches included; mixed student compliance.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2506990": {
+      "districtId": "2506990",
+      "districtName": "Longmeadow School District",
+      "tier": 2,
+      "policySummary": "K-5: devices not allowed; Middle: in backpack/locker, teacher permission for learning activities; High: available at lunch/passing periods, otherwise lockers/hotel.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2507050": {
+      "districtId": "2507050",
+      "districtName": "Ludlow School District",
+      "tier": 1,
+      "policySummary": "No specific cell phone policy found; district website exists but details not accessible.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507080": {
+      "districtId": "2507080",
+      "districtName": "Lunenburg School District",
+      "tier": 2,
+      "policySummary": "Elementary: phones allowed before/after dismissal; Middle/High: off in locker during school hours; complies with state mandate.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2507140": {
+      "districtId": "2507140",
+      "districtName": "Lynnfield School District",
+      "tier": 2,
+      "policySummary": "Middle school: phones in lockers all day; High school: phones in bags with use allowed between periods/lunch; policy extended through both levels.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2507170": {
+      "districtId": "2507170",
+      "districtName": "Malden School District",
+      "tier": 1,
+      "policySummary": "No Malden MA-specific policy found; state S.2561 bill requires bell-to-bell ban by fall 2026 for all MA districts.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507230": {
+      "districtId": "2507230",
+      "districtName": "Mansfield School District",
+      "tier": 1,
+      "policySummary": "No MA Mansfield policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507350": {
+      "districtId": "2507350",
+      "districtName": "Marshfield School District",
+      "tier": 1,
+      "policySummary": "MA Marshfield policy not located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507500": {
+      "districtId": "2507500",
+      "districtName": "Maynard School District",
+      "tier": 1,
+      "policySummary": "Acceptable use policy exists but specific cell phone details not accessible.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507590": {
+      "districtId": "2507590",
+      "districtName": "Medway School District",
+      "tier": 2,
+      "policySummary": "Elementary discourages phones; if brought, must be off in backpack all day; middle/high school policies not specified in search.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507620": {
+      "districtId": "2507620",
+      "districtName": "Melrose School District",
+      "tier": 1,
+      "policySummary": "Policy page exists but specific cell phone policy details not found in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507680": {
+      "districtId": "2507680",
+      "districtName": "Mendon-Upton School District",
+      "tier": 1,
+      "policySummary": "No specific cell phone policy found for Massachusetts Mendon-Upton RSD.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507770": {
+      "districtId": "2507770",
+      "districtName": "Middleborough School District",
+      "tier": 1,
+      "policySummary": "MA Middleborough policy details not located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507890": {
+      "districtId": "2507890",
+      "districtName": "Millbury School District",
+      "tier": 1,
+      "policySummary": "Student handbook references policies but specific cell phone policy details not accessible in search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507920": {
+      "districtId": "2507920",
+      "districtName": "Millis School District",
+      "tier": 1,
+      "policySummary": "Responsible use policy covers district/personal technology but no standalone cell phone policy found.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507980": {
+      "districtId": "2507980",
+      "districtName": "Milton School District",
+      "tier": 2,
+      "policySummary": "Promotes Wait Until 8th pledge; state mandate requires bell-to-bell policy implementation by fall 2026.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507990": {
+      "districtId": "2507990",
+      "districtName": "Mohawk Trail School District",
+      "tier": 2,
+      "policySummary": "Off and away all day, grades 7-12 (7:45 a.m. to 2:20 p.m.); grades 9-12 lunch exception; grades 7-8 no breaks; progressive discipline.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2508040": {
+      "districtId": "2508040",
+      "districtName": "Monson School District",
+      "tier": 3,
+      "policySummary": "Yondr technology policy adopted (2022); 48 of 50 staff in favor; addresses pervasive phone use affecting academics and wellness.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2508160": {
+      "districtId": "2508160",
+      "districtName": "Mount Greylock School District",
+      "tier": 3,
+      "policySummary": "Full ban K-12; devices in lockers or front office storage; off and away all day; exceptions for medical/IEP/504 needs; community 100% supportive.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2508250": {
+      "districtId": "2508250",
+      "districtName": "Nantucket School District",
+      "tier": 3,
+      "policySummary": "Yondr magnetically locked bags required K-12; phones/smartwatches retrieved at end of day; $30K annual cost covered by district; 90% staff approval.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2508280": {
+      "districtId": "2508280",
+      "districtName": "Narragansett School District",
+      "tier": 2,
+      "policySummary": "Off and away all day; devices powered off and stored out of sight; no use during transitions/lunch/recess; defined consequences for non-compliance.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2508310": {
+      "districtId": "2508310",
+      "districtName": "Nashoba School District",
+      "tier": 2,
+      "policySummary": "New policy emphasizing removal from school atmosphere; positive teacher response; increased classroom engagement reported.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2508670": {
+      "districtId": "2508670",
+      "districtName": "North Adams School District",
+      "tier": 3,
+      "policySummary": "Yondr pouch ban implemented; 75% drop in referrals in last Q of 2024; previously had power struggles with off-during-class-only approach.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2508700": {
+      "districtId": "2508700",
+      "districtName": "North Andover School District",
+      "tier": 1,
+      "policySummary": "No specific North Andover, MA policy found; policies page exists but details not accessible.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2508730": {
+      "districtId": "2508730",
+      "districtName": "North Attleborough School District",
+      "tier": 1,
+      "policySummary": "Policies page exists but specific cell phone policy details not accessible in search results.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2508760": {
+      "districtId": "2508760",
+      "districtName": "North Brookfield School District",
+      "tier": 1,
+      "policySummary": "Policy manual exists but specific cell phone policy not found; district website available.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2508790": {
+      "districtId": "2508790",
+      "districtName": "North Middlesex School District",
+      "tier": 1,
+      "policySummary": "Policy page exists but specific cell phone policy details not accessible in search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2508820": {
+      "districtId": "2508820",
+      "districtName": "North Reading School District",
+      "tier": 1,
+      "policySummary": "District website and acceptable use policy exist but specific cell phone policy details not found.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2508940": {
+      "districtId": "2508940",
+      "districtName": "Northbridge School District",
+      "tier": 2,
+      "policySummary": "Cell phone pouch policy for middle/high schools; cost for replacements if lost/damaged.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2509000": {
+      "districtId": "2509000",
+      "districtName": "Norton School District",
+      "tier": 2,
+      "policySummary": "New policy for high/middle schools: phones in racks/hanging holders during class; approved June 2025.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2509030": {
+      "districtId": "2509030",
+      "districtName": "Norwell School District",
+      "tier": 1,
+      "policySummary": "Policies page exists but specific cell phone policy details not found.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2509060": {
+      "districtId": "2509060",
+      "districtName": "Norwood School District",
+      "tier": 1,
+      "policySummary": "No specific Norwood MA policy found in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2509270": {
+      "districtId": "2509270",
+      "districtName": "Oxford School District",
+      "tier": 1,
+      "policySummary": "No MA Oxford policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2509300": {
+      "districtId": "2509300",
+      "districtName": "Palmer School District",
+      "tier": 1,
+      "policySummary": "No MA Palmer policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2509420": {
+      "districtId": "2509420",
+      "districtName": "Pembroke School District",
+      "tier": 2,
+      "policySummary": "Phones off and stored in lockers all day; new plan for 2025-26 per state law; third violation creates individual student plan.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2509450": {
+      "districtId": "2509450",
+      "districtName": "Pentucket School District",
+      "tier": 2,
+      "policySummary": "Cell hotel system (numbered pouches per class); no phones in hallways; allowed in study hall/lunch; mixed student reactions.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2509840": {
+      "districtId": "2509840",
+      "districtName": "Provincetown School District",
+      "tier": 1,
+      "policySummary": "No specific cell phone policy found; district contact info available but policy details not accessible.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2509930": {
+      "districtId": "2509930",
+      "districtName": "Randolph School District",
+      "tier": 1,
+      "policySummary": "No MA Randolph policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510050": {
+      "districtId": "2510050",
+      "districtName": "Revere School District",
+      "tier": 2,
+      "policySummary": "High school: phones in classroom lockers each period; lunch cafeteria use allowed; prohibited in hallways/bathrooms; exceptions for medical needs.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2510170": {
+      "districtId": "2510170",
+      "districtName": "Rockland School District",
+      "tier": 1,
+      "policySummary": "No MA Rockland policy found in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510200": {
+      "districtId": "2510200",
+      "districtName": "Rockport School District",
+      "tier": 1,
+      "policySummary": "No MA Rockport-specific policy found in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510500": {
+      "districtId": "2510500",
+      "districtName": "Saugus School District",
+      "tier": 2,
+      "policySummary": "Cellphones in lockers or at home 7:50 a.m. to 2:15 p.m.; some teachers use pouches for classroom storage.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2510560": {
+      "districtId": "2510560",
+      "districtName": "Scituate School District",
+      "tier": 2,
+      "policySummary": "Middle school 'away for the day' policy; high school teaches responsible use.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2510590": {
+      "districtId": "2510590",
+      "districtName": "Seekonk School District",
+      "tier": 1,
+      "policySummary": "No policy details found in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510620": {
+      "districtId": "2510620",
+      "districtName": "Sharon School District",
+      "tier": 1,
+      "policySummary": "No MA Sharon-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510770": {
+      "districtId": "2510770",
+      "districtName": "Shrewsbury School District",
+      "tier": 2,
+      "policySummary": "No devices allowed in Extended School Care program; limited details for regular school hours.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510890": {
+      "districtId": "2510890",
+      "districtName": "Somerville School District",
+      "tier": 1,
+      "policySummary": "No specific policy found in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510920": {
+      "districtId": "2510920",
+      "districtName": "South Hadley School District",
+      "tier": 1,
+      "policySummary": "No policy details found in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511010": {
+      "districtId": "2511010",
+      "districtName": "Southbridge School District",
+      "tier": 1,
+      "policySummary": "No policy details found in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511040": {
+      "districtId": "2511040",
+      "districtName": "Southern Berkshire School District",
+      "tier": 2,
+      "policySummary": "Elementary phones forbidden; experimenting with classroom cubbies and all-day collection; no unified policy.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511250": {
+      "districtId": "2511250",
+      "districtName": "Stoughton School District",
+      "tier": 2,
+      "policySummary": "Personal electronic devices allowed if they do not distract; teacher discretion; storage for hour or day if violations occur.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511430": {
+      "districtId": "2511430",
+      "districtName": "Swampscott School District",
+      "tier": 2,
+      "policySummary": "Phones turned off and in backpacks during school; limited details in search.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511460": {
+      "districtId": "2511460",
+      "districtName": "Swansea School District",
+      "tier": 1,
+      "policySummary": "No MA Swansea policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511740": {
+      "districtId": "2511740",
+      "districtName": "Triton School District",
+      "tier": 1,
+      "policySummary": "No MA Triton-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511760": {
+      "districtId": "2511760",
+      "districtName": "Tyngsborough School District",
+      "tier": 1,
+      "policySummary": "Policies exist but specific cell phone policy details not found.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511850": {
+      "districtId": "2511850",
+      "districtName": "Uxbridge School District",
+      "tier": 1,
+      "policySummary": "No specific policy details found.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511880": {
+      "districtId": "2511880",
+      "districtName": "Wachusett School District",
+      "tier": 1,
+      "policySummary": "No specific policy details found.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511910": {
+      "districtId": "2511910",
+      "districtName": "Wakefield School District",
+      "tier": 1,
+      "policySummary": "No MA Wakefield-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511970": {
+      "districtId": "2511970",
+      "districtName": "Walpole School District",
+      "tier": 1,
+      "policySummary": "No specific policy found; handbooks likely contain policies.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2512000": {
+      "districtId": "2512000",
+      "districtName": "Waltham School District",
+      "tier": 1,
+      "policySummary": "No specific policy found.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2512030": {
+      "districtId": "2512030",
+      "districtName": "Ware School District",
+      "tier": 1,
+      "policySummary": "No MA Ware-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2512060": {
+      "districtId": "2512060",
+      "districtName": "Wareham School District",
+      "tier": 3,
+      "policySummary": "High school lockbox policy; phones stored in portable lock-boxes during class.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2512100": {
+      "districtId": "2512100",
+      "districtName": "Quaboag Regional School District",
+      "tier": 1,
+      "policySummary": "No specific policy found; policies page exists but content not retrieved.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2512240": {
+      "districtId": "2512240",
+      "districtName": "Webster School District",
+      "tier": 1,
+      "policySummary": "No MA Webster-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2512390": {
+      "districtId": "2512390",
+      "districtName": "West Boylston School District",
+      "tier": 1,
+      "policySummary": "Policy pages exist but no specific content found.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2512420": {
+      "districtId": "2512420",
+      "districtName": "West Bridgewater School District",
+      "tier": 1,
+      "policySummary": "No specific policy details found; website present but content inaccessible.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2512600": {
+      "districtId": "2512600",
+      "districtName": "Westborough School District",
+      "tier": 2,
+      "policySummary": "Other electronic devices not allowed except district Chromebooks; no responsibility for lost phones.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2512630": {
+      "districtId": "2512630",
+      "districtName": "Westfield School District",
+      "tier": 2,
+      "policySummary": "High school 'bell to bell' off-and-away; app-based solution (Doorman) pilot tested.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2512780": {
+      "districtId": "2512780",
+      "districtName": "Westport School District",
+      "tier": 1,
+      "policySummary": "Superintendent proposing full ban; currently unfettered use at high school except during instruction.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2512810": {
+      "districtId": "2512810",
+      "districtName": "Westwood School District",
+      "tier": 1,
+      "policySummary": "No MA Westwood-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2512930": {
+      "districtId": "2512930",
+      "districtName": "Whitman-Hanson School District",
+      "tier": 1,
+      "policySummary": "Policy manual exists; specific cell phone policy details not found.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2513050": {
+      "districtId": "2513050",
+      "districtName": "Wilmington School District",
+      "tier": 2,
+      "policySummary": "Grades 7-8 ban; high school at teacher discretion; board discussed further restrictions.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2513080": {
+      "districtId": "2513080",
+      "districtName": "Winchendon School District",
+      "tier": 1,
+      "policySummary": "Policy pages exist online; specific cell phone policy details not retrieved.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2513110": {
+      "districtId": "2513110",
+      "districtName": "Winchester School District",
+      "tier": 2,
+      "policySummary": "MA Winchester: 'class-to-class' policy (not bell-to-bell); phones allowed in hallways and cafeteria.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2513170": {
+      "districtId": "2513170",
+      "districtName": "Winthrop School District",
+      "tier": 1,
+      "policySummary": "No MA Winthrop-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2513200": {
+      "districtId": "2513200",
+      "districtName": "Woburn School District",
+      "tier": 1,
+      "policySummary": "No specific policy details found in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2500014": {
+      "districtId": "2500014",
+      "districtName": "Chesterfield-Goshen School District",
+      "tier": 1,
+      "policySummary": "No MA Chesterfield-Goshen-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2500043": {
+      "districtId": "2500043",
+      "districtName": "Up-Island Regional School District",
+      "tier": 1,
+      "policySummary": "No specific policy found.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2501740": {
+      "districtId": "2501740",
+      "districtName": "Acushnet School District",
+      "tier": 1,
+      "policySummary": "Policy manual exists; specific cell phone policy not found.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2501890": {
+      "districtId": "2501890",
+      "districtName": "Amherst School District",
+      "tier": 1,
+      "policySummary": "No MA Amherst-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2502520": {
+      "districtId": "2502520",
+      "districtName": "Berkley School District",
+      "tier": 1,
+      "policySummary": "No MA Berkley-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2502880": {
+      "districtId": "2502880",
+      "districtName": "Boxford School District",
+      "tier": 1,
+      "policySummary": "No specific policy found in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2502970": {
+      "districtId": "2502970",
+      "districtName": "Brewster School District",
+      "tier": 1,
+      "policySummary": "No MA Brewster-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2503060": {
+      "districtId": "2503060",
+      "districtName": "Brimfield School District",
+      "tier": 1,
+      "policySummary": "No MA Brimfield-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2503120": {
+      "districtId": "2503120",
+      "districtName": "Brookfield School District",
+      "tier": 1,
+      "policySummary": "No MA Brookfield-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2503330": {
+      "districtId": "2503330",
+      "districtName": "Carlisle School District",
+      "tier": 1,
+      "policySummary": "No MA Carlisle-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2503720": {
+      "districtId": "2503720",
+      "districtName": "Clarksburg School District",
+      "tier": 1,
+      "policySummary": "No MA district-specific policy located in 2026-05-20 sweep (initial agent result conflated with same-named district elsewhere).",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2503840": {
+      "districtId": "2503840",
+      "districtName": "Concord School District",
+      "tier": 2,
+      "policySummary": "MA Concord (CPS): caddies/honor system in elementary; integrated with Concord-Carlisle high school policy.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2503900": {
+      "districtId": "2503900",
+      "districtName": "Conway School District",
+      "tier": 1,
+      "policySummary": "No MA Conway-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504080": {
+      "districtId": "2504080",
+      "districtName": "Deerfield School District",
+      "tier": 2,
+      "policySummary": "Some Deerfield-related schools require off during school day; specifics by school vary.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504260": {
+      "districtId": "2504260",
+      "districtName": "Dover School District",
+      "tier": 1,
+      "policySummary": "No MA Dover-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504530": {
+      "districtId": "2504530",
+      "districtName": "Eastham School District",
+      "tier": 2,
+      "policySummary": "Eastham Elementary (MA): not used during instructional day; remain in backpack.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504650": {
+      "districtId": "2504650",
+      "districtName": "Oak Bluffs School District",
+      "tier": 1,
+      "policySummary": "No specific cell phone policy found.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504710": {
+      "districtId": "2504710",
+      "districtName": "Erving School District",
+      "tier": 1,
+      "policySummary": "No specific policy found.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504920": {
+      "districtId": "2504920",
+      "districtName": "Florida School District",
+      "tier": 1,
+      "policySummary": "No MA-town-of-Florida-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505610": {
+      "districtId": "2505610",
+      "districtName": "Halifax School District",
+      "tier": 1,
+      "policySummary": "No MA Halifax-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505760": {
+      "districtId": "2505760",
+      "districtName": "Hancock School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. MA legislation S.2561 requires adoption by fall 2026.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2506000": {
+      "districtId": "2506000",
+      "districtName": "Hawlemont School District",
+      "tier": 2,
+      "policySummary": "2024-2025: High school students required to turn off phones and keep packed away throughout school day.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2506210": {
+      "districtId": "2506210",
+      "districtName": "Holland School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. MA legislation S.2561 requires adoption by fall 2026.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2506540": {
+      "districtId": "2506540",
+      "districtName": "Kingston School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Part of Silver Lake Regional SD. Manual available on website.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2506810": {
+      "districtId": "2506810",
+      "districtName": "Leverett School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Policy manual available on district website.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2506900": {
+      "districtId": "2506900",
+      "districtName": "Lincoln School District",
+      "tier": 1,
+      "policySummary": "No comprehensive cell phone policy located. Acceptable Usage Policy found for technology only.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507290": {
+      "districtId": "2507290",
+      "districtName": "Marion School District",
+      "tier": 2,
+      "policySummary": "Students not allowed to use personal cell phones and electronic devices during school day. Confiscation policy in place.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2507470": {
+      "districtId": "2507470",
+      "districtName": "Mattapoisett School District",
+      "tier": 2,
+      "policySummary": "Old Rochester Regional JH: phones off, stored in lockers. Pilot Yondr pouch program planned with $13K grant.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2507830": {
+      "districtId": "2507830",
+      "districtName": "Middleton School District",
+      "tier": 1,
+      "policySummary": "No MA Middleton-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2508220": {
+      "districtId": "2508220",
+      "districtName": "Nahant School District",
+      "tier": 2,
+      "policySummary": "Student reviews indicate pretty strict policies including no phone rule.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2508530": {
+      "districtId": "2508530",
+      "districtName": "New Salem-Wendell School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Union 28 affiliated.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2508640": {
+      "districtId": "2508640",
+      "districtName": "Norfolk School District",
+      "tier": 1,
+      "policySummary": "No MA Norfolk-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2508880": {
+      "districtId": "2508880",
+      "districtName": "Northborough School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Part of Northborough-Southborough Regional.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2509090": {
+      "districtId": "2509090",
+      "districtName": "Edgartown School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Policies page exists but content not accessible.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2509180": {
+      "districtId": "2509180",
+      "districtName": "Orange School District",
+      "tier": 2,
+      "policySummary": "Ralph C. Mahar Regional: phones/devices allowed before/after school, breaks, lunch, passing periods. Policy varies by classroom.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2509210": {
+      "districtId": "2509210",
+      "districtName": "Orleans School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Part of Nauset Regional SD.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2509390": {
+      "districtId": "2509390",
+      "districtName": "Pelham School District",
+      "tier": 3,
+      "policySummary": "2024-2025: High school phones banned from classrooms, stored in calculator pouches during class. Essentially full-day ban.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2509540": {
+      "districtId": "2509540",
+      "districtName": "Petersham School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. K-6 elementary school.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2509690": {
+      "districtId": "2509690",
+      "districtName": "Plainville School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Policy manual available on district website.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2509780": {
+      "districtId": "2509780",
+      "districtName": "Plympton School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Part of Silver Lake Regional SD.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510080": {
+      "districtId": "2510080",
+      "districtName": "Richmond School District",
+      "tier": 1,
+      "policySummary": "No MA Richmond-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510140": {
+      "districtId": "2510140",
+      "districtName": "Rochester School District",
+      "tier": 2,
+      "policySummary": "Green/red zones model: red zones include bathrooms, class time (unless teacher allows). Confiscation escalation policy.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2510230": {
+      "districtId": "2510230",
+      "districtName": "Rowe School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Pre-K through 6 elementary school.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510530": {
+      "districtId": "2510530",
+      "districtName": "Savoy School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Elementary school.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510710": {
+      "districtId": "2510710",
+      "districtName": "Sherborn School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Part of Dover-Sherborn Regional SD.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510800": {
+      "districtId": "2510800",
+      "districtName": "Shutesbury School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Union 28 affiliated, Pre-K through 6.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510860": {
+      "districtId": "2510860",
+      "districtName": "Somerset School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Somerset-Berkley Regional. Policy manual available on website.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2510950": {
+      "districtId": "2510950",
+      "districtName": "Southampton School District",
+      "tier": 2,
+      "policySummary": "Phones/devices not visible/heard in instructional spaces. Allowed in non-instructional areas (lunch, study hall). Off during class.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2510980": {
+      "districtId": "2510980",
+      "districtName": "Southborough School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Part of Northborough-Southborough Regional.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511310": {
+      "districtId": "2511310",
+      "districtName": "Sturbridge School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. MA legislation S.2561 requires adoption by fall 2026.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511340": {
+      "districtId": "2511340",
+      "districtName": "Sudbury School District",
+      "tier": 2,
+      "policySummary": "Partial: phones not used during lockdown. Calling home permitted when recommended by staff. Limited emergency-only use.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2511370": {
+      "districtId": "2511370",
+      "districtName": "Sunderland School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Union 38/FRSU38 affiliated.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511670": {
+      "districtId": "2511670",
+      "districtName": "Topsfield School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Part of Masconomet Regional & Tri-Town Union.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511730": {
+      "districtId": "2511730",
+      "districtName": "Truro School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Pre-K through 5 elementary school.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511940": {
+      "districtId": "2511940",
+      "districtName": "Wales School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Part of Tantasqua Regional SD.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2512300": {
+      "districtId": "2512300",
+      "districtName": "Wellfleet School District",
+      "tier": 2,
+      "policySummary": "Devices not expected during instructional day, remain in backpack unless authorized. Parent choice re: providing devices.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2512570": {
+      "districtId": "2512570",
+      "districtName": "Tisbury School District",
+      "tier": 2,
+      "policySummary": "Parents should call school office during school hours, not child's phone. Students encouraged to store phones/devices.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "medium"
+    },
+    "2512690": {
+      "districtId": "2512690",
+      "districtName": "Westhampton School District",
+      "tier": 1,
+      "policySummary": "No MA Westhampton-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2512870": {
+      "districtId": "2512870",
+      "districtName": "Whately School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Union 38/FRSU38 affiliated.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2512990": {
+      "districtId": "2512990",
+      "districtName": "Williamsburg School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. MA legislation S.2561 requires adoption by fall 2026.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2513260": {
+      "districtId": "2513260",
+      "districtName": "Worthington School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. MA legislation S.2561 requires adoption by fall 2026.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2513290": {
+      "districtId": "2513290",
+      "districtName": "Wrentham School District",
+      "tier": 2,
+      "policySummary": "Students may bring phones but must remain off and in backpacks throughout school day. Confiscation policy in place.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2513321": {
+      "districtId": "2513321",
+      "districtName": "Farmington River Regional School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. PreK-6 elementary. Policy manual available on website.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2513323": {
+      "districtId": "2513323",
+      "districtName": "Warwick School District",
+      "tier": 1,
+      "policySummary": "No MA Warwick-specific policy located in 2026-05-20 search.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2509150": {
+      "districtId": "2509150",
+      "districtName": "Old Rochester School District",
+      "tier": 2,
+      "policySummary": "Junior High: phones off, stored in lockers all day. Pilot Yondr pouch program with $13K grant pending.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2510830": {
+      "districtId": "2510830",
+      "districtName": "Silver Lake School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Student handbook available on district website.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507410": {
+      "districtId": "2507410",
+      "districtName": "Masconomet School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Policies under MASAC review. Contact district for details.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504290": {
+      "districtId": "2504290",
+      "districtName": "Dover-Sherborn School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Policy manual available on district website.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2506930": {
+      "districtId": "2506930",
+      "districtName": "Lincoln-Sudbury School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Policies section on website; handbook available.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2506510": {
+      "districtId": "2506510",
+      "districtName": "King Philip School District",
+      "tier": 2,
+      "policySummary": "Middle School: phones banned during school. Confiscation with progressive consequences (detention, parent pickup, admin meeting).",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2500541": {
+      "districtId": "2500541",
+      "districtName": "Somerset-Berkley School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Policy manual available on district website.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2504560": {
+      "districtId": "2504560",
+      "districtName": "Nauset School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Policy/handbook available on district website.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2505100": {
+      "districtId": "2505100",
+      "districtName": "Frontier School District",
+      "tier": 2,
+      "policySummary": "High school: phones stored in containers/charging racks during class. Superintendent opposes full-day ban; prefers local control.",
+      "scope": "unknown",
+      "enforcement": "off-and-away",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2509900": {
+      "districtId": "2509900",
+      "districtName": "Ralph C. Mahar School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Serves Orange, Petersham, New Salem, Wendell grades 7-12.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2507380": {
+      "districtId": "2507380",
+      "districtName": "Martha's Vineyard School District",
+      "tier": 3,
+      "policySummary": "MVRHS 'away for the day': all devices locked in Yondr pouches (phones, earbuds, smartwatches, devices). Full-day ban.",
+      "scope": "unknown",
+      "enforcement": "hardware",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "high"
+    },
+    "2508910": {
+      "districtId": "2508910",
+      "districtName": "Northborough-Southborough School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. District website and policy manual available.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
+    },
+    "2511490": {
+      "districtId": "2511490",
+      "districtName": "Tantasqua School District",
+      "tier": 1,
+      "policySummary": "No district-specific policy located. Forms/documents available on district website.",
+      "scope": "unknown",
+      "enforcement": "none",
+      "effectiveDate": "",
+      "enrollment": null,
+      "sources": [],
+      "lastVerified": "2026-05-20",
+      "confidence": "low"
     }
   }
 }
