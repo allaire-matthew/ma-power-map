@@ -1,0 +1,221 @@
+{
+  "_schemaVersion": 1,
+  "_lastUpdated": "2026-05-20",
+  "_source": "Google Sheet 16q_wrfljGEbMuUyeAeovZKk_TVTuoGgUf7mqb1uLqtw / IRL Councils tab. Refresh via scripts/refresh-town-orgs.py.",
+  "byTown": {
+    "needham": [
+      {
+        "org": "Schools Beyond Screens",
+        "chapterName": "Schools Beyond Screens Needham",
+        "town": "Needham",
+        "leadName": "Melissa Rotman",
+        "leadEmail": "speechmelissa@gmail.com",
+        "type": "community lead",
+        "notes": null
+      }
+    ],
+    "sudbury": [
+      {
+        "org": "Turning Life On",
+        "chapterName": "Sudbury for Digital Balance",
+        "town": "Sudbury",
+        "leadName": "Laura Willard",
+        "leadEmail": "info@sudburyfordigitalbalance.org",
+        "type": "community lead",
+        "notes": null
+      }
+    ],
+    "bedford": [
+      {
+        "org": "Turning Life On",
+        "chapterName": "Bedford",
+        "town": "Bedford",
+        "leadName": "Jill Marquis",
+        "leadEmail": "obiejill@yahoo.com",
+        "type": "member (no formal lead)",
+        "notes": "No Community Lead designated; only other member"
+      }
+    ],
+    "lexington": [
+      {
+        "org": "Turning Life On",
+        "chapterName": "Lex Kids Be Kids",
+        "town": "Lexington",
+        "leadName": "Wendi Hoffer",
+        "leadEmail": "wendilr@gmail.com",
+        "type": "community lead",
+        "notes": null
+      }
+    ],
+    "lincoln": [
+      {
+        "org": "Turning Life On",
+        "chapterName": "Lincoln Wait",
+        "town": "Lincoln",
+        "leadName": "Thomas Wilcox",
+        "leadEmail": "thomas.m.wilcox@gmail.com",
+        "type": "community lead",
+        "notes": null
+      }
+    ],
+    "manchester": [
+      {
+        "org": "Turning Life On",
+        "chapterName": "Manchester-by-the-Sea",
+        "town": "Manchester",
+        "leadName": "Mckenzie Love",
+        "leadEmail": "mckenzie@anxiousgeneration.com",
+        "type": "member (no formal lead)",
+        "notes": "No Community Lead designated; Mckenzie is Anxious Generation staff"
+      }
+    ],
+    "winchester": [
+      {
+        "org": "Turning Life On",
+        "chapterName": "Let Kids Be Kids - Winchester",
+        "town": "Winchester",
+        "leadName": "Erica Walsh",
+        "leadEmail": "erica.mercke@gmail.com",
+        "type": "community lead",
+        "notes": null
+      },
+      {
+        "org": "Independent",
+        "chapterName": "Winchester Unplugged",
+        "town": "Winchester",
+        "leadName": "Sara Yablon-Smith",
+        "leadEmail": "sara.yablon.smith@gmail.com",
+        "type": "community lead",
+        "notes": null
+      }
+    ],
+    "stow": [
+      {
+        "org": "Turning Life On",
+        "chapterName": "ReConnect Nashoba Valley",
+        "town": "Stow",
+        "leadName": "Jennifer Henderson",
+        "leadEmail": "jennifer@turninglifeon.org",
+        "type": "community lead",
+        "notes": "VP, Turning Life On; SFC US Leadership Council"
+      }
+    ],
+    "concord": [
+      {
+        "org": "Turning Life On",
+        "chapterName": "TLO Concord",
+        "town": "Concord",
+        "leadName": "Adrienne Principe",
+        "leadEmail": "adrienne.principe@gmail.com",
+        "type": "community lead",
+        "notes": "TLO founder; member of nearly every TLO/Balance Project chapter"
+      },
+      {
+        "org": "The Balance Project",
+        "chapterName": "Concord, MA",
+        "town": "Concord",
+        "leadName": "Lingzi Tashakkor",
+        "leadEmail": "lindseydax@gmail.com",
+        "type": "community lead",
+        "notes": null
+      }
+    ],
+    "grafton": [
+      {
+        "org": "The Balance Project",
+        "chapterName": "Grafton MA",
+        "town": "Grafton",
+        "leadName": "Katherine Giacometti",
+        "leadEmail": "katiegiacometti@gmail.com",
+        "type": "community lead",
+        "notes": null
+      }
+    ],
+    "newton": [
+      {
+        "org": "The Balance Project",
+        "chapterName": "Marion, MA",
+        "town": "West Newton",
+        "leadName": "Matthew Allaire",
+        "leadEmail": "matthew@allaire.com",
+        "type": "community lead (self)",
+        "notes": "You are the Community Lead"
+      },
+      {
+        "org": "Independent",
+        "chapterName": "Commonwealth IRL",
+        "town": "West Newton",
+        "leadName": "Matthew Allaire",
+        "leadEmail": "matthew@allaire.com",
+        "type": "community lead (self)",
+        "notes": "You are the Community Lead"
+      }
+    ],
+    "norwell": [
+      {
+        "org": "The Balance Project",
+        "chapterName": "Norwell, MA",
+        "town": "Norwell",
+        "leadName": "Kristin Dorfman",
+        "leadEmail": "kristy.dorfman@gmail.com",
+        "type": "community lead",
+        "notes": null
+      }
+    ],
+    "beverly": [
+      {
+        "org": "The Balance Project",
+        "chapterName": "Beverly, MA",
+        "town": "Beverly",
+        "leadName": "Cristina Rivera",
+        "leadEmail": "ms.c.rivera@gmail.com",
+        "type": "member (no formal lead)",
+        "notes": "No Community Lead designated; only other member"
+      }
+    ],
+    "natick": [
+      {
+        "org": "The Balance Project",
+        "chapterName": "Natick",
+        "town": "Natick",
+        "leadName": "Maria Josayova",
+        "leadEmail": "mariajosayova@hotmail.com",
+        "type": "member (no formal lead)",
+        "notes": "No Community Lead designated; only other member"
+      }
+    ],
+    "holliston": [
+      {
+        "org": "The Balance Project",
+        "chapterName": "Holliston, MA",
+        "town": "Holliston",
+        "leadName": "Jenna Espinosa",
+        "leadEmail": "jennaaloughlin@gmail.com",
+        "type": "community lead",
+        "notes": null
+      }
+    ],
+    "brookline": [
+      {
+        "org": "The Balance Project",
+        "chapterName": "Arlington, MA",
+        "town": "Brookline",
+        "leadName": "Anushya Chandran",
+        "leadEmail": "anushyac@gmail.com",
+        "type": "community lead",
+        "notes": null
+      }
+    ],
+    "arlington": [
+      {
+        "org": "Independent",
+        "chapterName": "Tech-Wise Arlington",
+        "town": "Arlington",
+        "leadName": "Jeffrey Miller",
+        "leadEmail": "jeff.b.miller@gmail.com",
+        "type": "community lead",
+        "notes": null
+      }
+    ]
+  }
+}

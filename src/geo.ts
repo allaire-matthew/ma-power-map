@@ -343,11 +343,52 @@ export type USHouseRep = {
   since: number
 }
 
+export type StateLegislator = {
+  district_name: string
+  name: string
+  party: string
+  url: string
+  profile_id: string
+}
+
 export type LegislatorsData = {
   us_house: Record<string, USHouseRep>
+  ma_senate: Record<string, StateLegislator>
+  ma_house: Record<string, StateLegislator>
   ma_senate_directory_url: string
   ma_house_directory_url: string
   _lastUpdated: string
+}
+
+export type TownOrgChapter = {
+  org: string
+  chapterName: string
+  town: string
+  leadName: string | null
+  leadEmail: string | null
+  type: string
+  notes: string | null
+}
+
+export type TownOrgsData = {
+  _lastUpdated: string
+  byTown: Record<string, TownOrgChapter[]>
+}
+
+let townOrgsPromise: Promise<TownOrgsData | null> | null = null
+
+export async function loadTownOrgs(): Promise<TownOrgsData | null> {
+  if (!townOrgsPromise) {
+    townOrgsPromise = (async () => {
+      try {
+        const url = `${import.meta.env.BASE_URL}data/town-orgs.json`
+        return await fetchJson<TownOrgsData>(url)
+      } catch {
+        return null
+      }
+    })()
+  }
+  return townOrgsPromise
 }
 
 let legislatorsPromise: Promise<LegislatorsData | null> | null = null
