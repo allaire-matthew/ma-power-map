@@ -4625,15 +4625,25 @@
     "2510860": {
       "districtId": "2510860",
       "districtName": "Somerset School District",
-      "tier": 1,
-      "policySummary": "No district-specific policy located. Somerset-Berkley Regional. Policy manual available on website.",
+      "tier": 2,
+      "policySummary": "Handbook (off-and-away): ected to immediately notify the Administration if any breaches of security are observed. The SRO has access to school cameras and the student management system. The Administration carries radios with them throughout the school day. Calls can be directly conveyed to the police department via cell pho",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://d16k74nzx9emoe.cloudfront.net/e6fdddf7-0f92-41a6-9eb1-6e1ef2edbd6c/SY26%20Student%20and%20Family%20HandbookFinal%20-1.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://d16k74nzx9emoe.cloudfront.net/e6fdddf7-0f92-41a6-9eb1-6e1ef2edbd6c/SY26%20Student%20and%20Family%20HandbookFinal%20-1.pdf",
+      "extraction_method": "pdftotext"
     },
     "2510950": {
       "districtId": "2510950",
@@ -4844,14 +4854,24 @@
       "districtId": "2513321",
       "districtName": "Farmington River Regional School District",
       "tier": 1,
-      "policySummary": "No district-specific policy located. PreK-6 elementary. Policy manual available on website.",
+      "policySummary": "Handbook reviewed; no clear restriction pattern: .................................................................. 27 School Insurance ...................................................................................... 28 Visitors...............",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://frrsd.org/wp-content/uploads/2026/03/2025-26-Student-Handbook-3.16.26.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://frrsd.org/wp-content/uploads/2026/03/2025-26-Student-Handbook-3.16.26.pdf",
+      "extraction_method": "pdftotext"
     },
     "2513323": {
       "districtId": "2513323",

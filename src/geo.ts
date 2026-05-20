@@ -86,6 +86,9 @@ export type PhonePolicy = {
   sources: { title: string; url: string; publisher: string; date: string }[]
   lastVerified: string
   confidence: 'high' | 'medium' | 'low'
+  status?: string
+  handbook_url?: string
+  extraction_method?: string
 }
 
 const townToLayerPromises: Partial<Record<LayerName, Promise<Record<string, string>>>> = {}

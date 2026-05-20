@@ -575,6 +575,23 @@ function PhonePolicyBlock({
               {' · '}Verified: <span className="text-slate-700">{policy.lastVerified}</span>
             </div>
           </div>
+          {policy.handbook_url && (
+            <div className="text-[12px] pt-1 border-t border-slate-100">
+              <a
+                href={policy.handbook_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-600 hover:underline font-medium"
+              >
+                Student handbook (PDF) →
+              </a>
+              {policy.extraction_method && (
+                <span className="text-[10px] text-slate-400 ml-1.5">
+                  · verified via {policy.extraction_method.replace(/_/g, ' ')}
+                </span>
+              )}
+            </div>
+          )}
           {policy.sources.length > 0 && (
             <div className="text-[11px] pt-1 border-t border-slate-100">
               <div className="text-slate-500 mb-0.5">Sources</div>
@@ -587,7 +604,7 @@ function PhonePolicyBlock({
                       rel="noopener noreferrer"
                       className="text-indigo-600 hover:underline"
                     >
-                      {s.publisher}
+                      {s.publisher || s.title || 'Source'}
                     </a>
                     {s.date ? ` · ${s.date}` : ''}
                   </li>
