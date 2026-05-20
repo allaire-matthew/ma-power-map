@@ -88,20 +88,32 @@
       "verified_source": "early June est."
     },
     "monomoy regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-04",
+      "additional_upcoming": [
+        "2026-09-03",
+        "2026-10-01",
+        "2026-11-05"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.monomoy.edu/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "monomoy.edu"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Thursday monthly 6:30pm",
+      "derived_from": "pattern_computed"
     },
     "monomoy regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-04",
+      "additional_upcoming": [
+        "2026-09-03",
+        "2026-10-01",
+        "2026-11-05"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.monomoy.edu/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "monomoy.edu"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Thursday monthly 6:30pm",
+      "derived_from": "pattern_computed"
     },
     "abington school district": {
       "next_meeting": "2026-06-10",
@@ -122,36 +134,60 @@
       "verified_source": "Joint School Committee meeting"
     },
     "acton-boxborough regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-21",
+      "additional_upcoming": [
+        "2026-06-04",
+        "2026-06-18",
+        "2026-09-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://abschools.community.diligentoneplatform.com/Portal/MeetingSchedule.aspx",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "twice monthly Thursday 6:30pm pattern"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "twice monthly Thursday 6:30pm",
+      "derived_from": "pattern_computed"
     },
     "acton-boxborough regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-21",
+      "additional_upcoming": [
+        "2026-06-04",
+        "2026-06-18",
+        "2026-09-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://abschools.community.diligentoneplatform.com/Portal/MeetingSchedule.aspx",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "twice monthly Thursday 6:30pm pattern"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "twice monthly Thursday 6:30pm",
+      "derived_from": "pattern_computed"
     },
     "hoosac valley regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-01",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.hoosacvalley.org/about-us/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no June/July agendas"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly Monday 6:30pm",
+      "derived_from": "pattern_computed"
     },
     "hoosac valley regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-01",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.hoosacvalley.org/about-us/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no June/July agendas"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly Monday 6:30pm",
+      "derived_from": "pattern_computed"
     },
     "agawam public schools": {
       "next_meeting": "2026-06-13",
@@ -278,20 +314,32 @@
       "verified_source": "3rd Wednesday 6pm"
     },
     "attleboro public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "http://www.attleboroschools.com/school_committee/meeting_schedule",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "naschools.net"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st Monday monthly 6:05pm",
+      "derived_from": "real_date_agent"
     },
     "attleboro": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "http://www.attleboroschools.com/school_committee/meeting_schedule",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "naschools.net"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st Monday monthly 6:05pm",
+      "derived_from": "real_date_agent"
     },
     "auburn public schools": {
       "next_meeting": "2026-05-20",
@@ -332,20 +380,32 @@
       "verified_source": "Avon community school"
     },
     "barnstable public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://go.boarddocs.com/ma/barnstable/Board.nsf/public",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "portals; no future dates"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Wednesday 5:30pm-8:30pm",
+      "derived_from": "pattern_computed"
     },
     "barnstable": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://go.boarddocs.com/ma/barnstable/Board.nsf/public",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "portals; no future dates"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Wednesday 5:30pm-8:30pm",
+      "derived_from": "pattern_computed"
     },
     "bedford public schools": {
       "next_meeting": "2026-06-09",
@@ -438,20 +498,32 @@
       "verified_source": "2025-26 packets"
     },
     "berlin-boylston regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-07-14",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06",
+        "2026-11-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.bbrsd.org/school-committee/home",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "calendar sync only"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Tuesday 5:00pm",
+      "derived_from": "real_date_agent"
     },
     "berlin-boylston regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-07-14",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06",
+        "2026-11-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.bbrsd.org/school-committee/home",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "calendar sync only"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Tuesday 5:00pm",
+      "derived_from": "real_date_agent"
     },
     "beverly public schools": {
       "next_meeting": "2026-06-10",
@@ -690,20 +762,32 @@
       "status": "ok"
     },
     "central berkshire regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-11",
+      "additional_upcoming": [
+        "2026-09-10",
+        "2026-10-08",
+        "2026-11-12"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.cbrsd.org/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "calendar; no future dates"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd Thursday monthly 7pm",
+      "derived_from": "real_date_agent"
     },
     "central berkshire regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-11",
+      "additional_upcoming": [
+        "2026-09-10",
+        "2026-10-08",
+        "2026-11-12"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.cbrsd.org/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "calendar; no future dates"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd Thursday monthly 7pm",
+      "derived_from": "real_date_agent"
     },
     "chelmsford public schools": {
       "next_meeting": null,
@@ -756,16 +840,32 @@
       "verified_source": "no future dates"
     },
     "clinton public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-06-08",
+        "2026-06-22",
+        "2026-09-14"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.clinton.k12.ma.us/apps/pages/index.jsp?uREC_ID=71491&type=d&pREC_ID=119796",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "every other Monday 7pm",
+      "derived_from": "real_date_agent"
     },
     "clinton": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-06-08",
+        "2026-06-22",
+        "2026-09-14"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.clinton.k12.ma.us/apps/pages/index.jsp?uREC_ID=71491&type=d&pREC_ID=119796",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "every other Monday 7pm",
+      "derived_from": "real_date_agent"
     },
     "cohasset public schools": {
       "next_meeting": "2026-06-24",
@@ -876,20 +976,32 @@
       "verified_source": "snippet 6:30pm"
     },
     "douglas public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-06-03",
+        "2026-06-17",
+        "2026-09-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.douglasps.net/school_committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no MA-specific result"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st and 3rd Wednesday 6:30pm",
+      "derived_from": "real_date_agent"
     },
     "douglas": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-06-03",
+        "2026-06-17",
+        "2026-09-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.douglasps.net/school_committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no MA-specific result"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st and 3rd Wednesday 6:30pm",
+      "derived_from": "real_date_agent"
     },
     "dracut public schools": {
       "next_meeting": "2026-06-08",
@@ -910,68 +1022,108 @@
       "verified_source": "2nd/4th Monday"
     },
     "dudley-charlton regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.dcrsd.org/about-dcrsd/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "older 2026 agendas"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st Wednesday monthly 6:30pm",
+      "derived_from": "real_date_agent"
     },
     "dudley-charlton regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.dcrsd.org/about-dcrsd/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "older 2026 agendas"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st Wednesday monthly 6:30pm",
+      "derived_from": "real_date_agent"
     },
     "duxbury public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-09-14",
+        "2026-10-12",
+        "2026-11-09"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.duxbury.k12.ma.us/page/2025-2026-school-committee-meetings/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "not yet posted"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd Monday monthly 6:00pm",
+      "derived_from": "real_date_agent"
     },
     "duxbury": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-09-14",
+        "2026-10-12",
+        "2026-11-09"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.duxbury.k12.ma.us/page/2025-2026-school-committee-meetings/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "not yet posted"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd Monday monthly 6:00pm",
+      "derived_from": "real_date_agent"
     },
     "east bridgewater public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06",
+        "2026-11-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.ebps.net/apps/pages/index.jsp?uREC_ID=1417231&type=d&pREC_ID=1603811",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "not yet posted"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Tuesday 6:00pm",
+      "derived_from": "real_date_agent"
     },
     "east bridgewater": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06",
+        "2026-11-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.ebps.net/apps/pages/index.jsp?uREC_ID=1417231&type=d&pREC_ID=1603811",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "not yet posted"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Tuesday 6:00pm",
+      "derived_from": "real_date_agent"
     },
     "east longmeadow public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-07-01",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.eastlongmeadowma.gov/314/School-Committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "longmeadow.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly",
+      "derived_from": "real_date_agent"
     },
     "east longmeadow": {
-      "next_meeting": null,
+      "next_meeting": "2026-07-01",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.eastlongmeadowma.gov/314/School-Committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "longmeadow.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly",
+      "derived_from": "real_date_agent"
     },
     "easthampton public schools": {
       "next_meeting": "2026-06-09",
@@ -1026,20 +1178,32 @@
       "verified_source": "leverettschool.org"
     },
     "fairhaven public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.fairhavenps.org/our_district/school_committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no June/July agendas"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Wednesday 6:30pm",
+      "derived_from": "pattern_computed"
     },
     "fairhaven": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.fairhavenps.org/our_district/school_committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no June/July agendas"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Wednesday 6:30pm",
+      "derived_from": "pattern_computed"
     },
     "fall river public schools": {
       "next_meeting": "2026-06-08",
@@ -1078,20 +1242,32 @@
       "verified_source": "snippet 11am"
     },
     "fitchburg public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-01",
+      "additional_upcoming": [
+        "2026-06-08",
+        "2026-06-22",
+        "2026-09-14"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.fitchburg.k12.ma.us/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "not yet posted"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Monday 5:00pm",
+      "derived_from": "real_date_agent"
     },
     "fitchburg": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-01",
+      "additional_upcoming": [
+        "2026-06-08",
+        "2026-06-22",
+        "2026-09-14"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.fitchburg.k12.ma.us/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "not yet posted"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Monday 5:00pm",
+      "derived_from": "real_date_agent"
     },
     "foxborough public schools": {
       "next_meeting": null,
@@ -1228,36 +1404,60 @@
       "verified_source": "48h posting; not yet available"
     },
     "gloucester public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-10",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://schoolcommittee.gloucesterschools.com/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "day-of posting; not yet available"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Wednesday 5:00pm",
+      "derived_from": "real_date_agent"
     },
     "gloucester": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-10",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://schoolcommittee.gloucesterschools.com/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "day-of posting; not yet available"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Wednesday 5:00pm",
+      "derived_from": "real_date_agent"
     },
     "grafton public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-06-09",
+        "2026-06-23",
+        "2026-09-08"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.graftonps.org/schoolcommittee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "agendas not indexed"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Tuesday",
+      "derived_from": "real_date_agent"
     },
     "grafton": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-06-09",
+        "2026-06-23",
+        "2026-09-08"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.graftonps.org/schoolcommittee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "agendas not indexed"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Tuesday",
+      "derived_from": "real_date_agent"
     },
     "granby public schools": {
       "next_meeting": null,
@@ -1294,20 +1494,32 @@
       "status": "ok"
     },
     "groton-dunstable regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.gdrsd.org/page/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "February 2026 only"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Wednesday 7pm",
+      "derived_from": "pattern_computed"
     },
     "groton-dunstable regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.gdrsd.org/page/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "February 2026 only"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Wednesday 7pm",
+      "derived_from": "pattern_computed"
     },
     "hadley school district": {
       "next_meeting": null,
@@ -1378,68 +1590,116 @@
       "verified_source": "South Shore Tech June 10"
     },
     "harvard school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-22",
+      "additional_upcoming": [
+        "2026-06-08",
+        "2026-06-22",
+        "2026-09-14"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.psharvard.org/school_committee/meetings",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "2nd/4th Monday pattern unconfirmed"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Monday",
+      "derived_from": "real_date_agent"
     },
     "harvard": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-22",
+      "additional_upcoming": [
+        "2026-06-08",
+        "2026-06-22",
+        "2026-09-14"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.psharvard.org/school_committee/meetings",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "2nd/4th Monday pattern unconfirmed"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Monday",
+      "derived_from": "real_date_agent"
     },
     "hatfield school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-09-14",
+        "2026-10-12",
+        "2026-11-09"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.hatfieldps.net/administration/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "June not yet posted"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd Monday monthly 7pm",
+      "derived_from": "real_date_agent"
     },
     "hatfield": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-09-14",
+        "2026-10-12",
+        "2026-11-09"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.hatfieldps.net/administration/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "June not yet posted"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd Monday monthly 7pm",
+      "derived_from": "real_date_agent"
     },
     "haverhill public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-11",
+      "additional_upcoming": [
+        "2026-06-11",
+        "2026-06-25",
+        "2026-09-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.haverhill-ps.org/meeting-schedule/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "2nd/4th Thursday unconfirmed"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Thursday 7pm",
+      "derived_from": "real_date_agent"
     },
     "haverhill": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-11",
+      "additional_upcoming": [
+        "2026-06-11",
+        "2026-06-25",
+        "2026-09-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.haverhill-ps.org/meeting-schedule/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "2nd/4th Thursday unconfirmed"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Thursday 7pm",
+      "derived_from": "real_date_agent"
     },
     "hingham public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-06-08",
+        "2026-06-22",
+        "2026-09-14"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.hinghamschools.org/about/school-committee/agendas-and-minutes/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "every-other-Monday unconfirmed"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "every other Monday",
+      "derived_from": "real_date_agent"
     },
     "hingham": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-06-08",
+        "2026-06-22",
+        "2026-09-14"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.hinghamschools.org/about/school-committee/agendas-and-minutes/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "every-other-Monday unconfirmed"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "every other Monday",
+      "derived_from": "real_date_agent"
     },
     "holbrook public schools": {
       "next_meeting": "2026-05-21",
@@ -1478,20 +1738,24 @@
       "status": "ok"
     },
     "holyoke public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.hps.holyoke.ma.us/page/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "May 11 latest; June not posted"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Twice monthly, Mondays 6pm",
+      "derived_from": "real_date_agent"
     },
     "holyoke": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.hps.holyoke.ma.us/page/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "May 11 latest; June not posted"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Twice monthly, Mondays 6pm",
+      "derived_from": "real_date_agent"
     },
     "hopedale public schools": {
       "next_meeting": "2026-06-09",
@@ -1512,36 +1776,52 @@
       "verified_source": "1st Tuesday monthly"
     },
     "hopkinton public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-21",
+      "additional_upcoming": [
+        "2026-06-04",
+        "2026-06-18",
+        "2026-09-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.hopkinton.k12.ma.us/about/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "every-other-Thursday unconfirmed"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Every other Thursday 7pm",
+      "derived_from": "pattern_computed"
     },
     "hopkinton": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-21",
+      "additional_upcoming": [
+        "2026-06-04",
+        "2026-06-18",
+        "2026-09-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.hopkinton.k12.ma.us/about/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "every-other-Thursday unconfirmed"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Every other Thursday 7pm",
+      "derived_from": "pattern_computed"
     },
     "hudson public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.hudson.k12.ma.us/school_committee/meeting_dates",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "May 19 mentioned; June not posted"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Tuesdays 6:30pm",
+      "derived_from": "real_date_agent"
     },
     "hudson": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.hudson.k12.ma.us/school_committee/meeting_dates",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "May 19 mentioned; June not posted"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Tuesdays 6:30pm",
+      "derived_from": "real_date_agent"
     },
     "hull public schools": {
       "next_meeting": "2026-06-08",
@@ -1742,20 +2022,32 @@
       "verified_source": "ludlowps.org"
     },
     "lunenburg public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.lunenburgschools.net/school-committee-1/meetings",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lunenburgschools.net"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "First Wednesday monthly",
+      "derived_from": "pattern_computed"
     },
     "lunenburg": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.lunenburgschools.net/school-committee-1/meetings",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lunenburgschools.net"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "First Wednesday monthly",
+      "derived_from": "pattern_computed"
     },
     "lynn public schools": {
       "next_meeting": null,
@@ -1774,20 +2066,24 @@
       "verified_source": "lynnfield.k12.ma.us"
     },
     "lynnfield public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-25",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://lynnfield.k12.ma.us/en-US/school-committee-a905c1e5",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lynnfield.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Monthly Thursdays 9am",
+      "derived_from": "real_date_agent"
     },
     "lynnfield": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-25",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://lynnfield.k12.ma.us/en-US/school-committee-a905c1e5",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lynnfield.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Monthly Thursdays 9am",
+      "derived_from": "real_date_agent"
     },
     "malden public schools": {
       "next_meeting": "2026-06-01",
@@ -1836,36 +2132,52 @@
       "verified_source": "marbleheadschools.org"
     },
     "marlborough public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.mps-edu.org/page/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mps-edu.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Tuesdays 7:30pm monthly",
+      "derived_from": "real_date_agent"
     },
     "marlborough": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.mps-edu.org/page/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mps-edu.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Tuesdays 7:30pm monthly",
+      "derived_from": "real_date_agent"
     },
     "marshfield public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-06-09",
+        "2026-06-23",
+        "2026-09-01"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mpsd.org/page/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "marshfieldschools.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Every other Tuesday",
+      "derived_from": "real_date_agent"
     },
     "marshfield": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-06-09",
+        "2026-06-23",
+        "2026-09-01"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mpsd.org/page/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "marshfieldschools.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Every other Tuesday",
+      "derived_from": "real_date_agent"
     },
     "mashpee public schools": {
       "next_meeting": null,
@@ -1956,20 +2268,32 @@
       "verified_source": "medwayschools.org"
     },
     "melrose public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-04",
+      "additional_upcoming": [
+        "2026-09-03",
+        "2026-10-01",
+        "2026-11-05"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.melroseschools.com/page/meet-the-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "melroseschools.com"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Tuesdays, agenda Thursday before",
+      "derived_from": "pattern_computed"
     },
     "melrose": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-04",
+      "additional_upcoming": [
+        "2026-09-03",
+        "2026-10-01",
+        "2026-11-05"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.melroseschools.com/page/meet-the-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "melroseschools.com"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Tuesdays, agenda Thursday before",
+      "derived_from": "pattern_computed"
     },
     "mendon-upton regional school district": {
       "next_meeting": null,
@@ -2044,20 +2368,32 @@
       "verified_source": "milfordma.gov"
     },
     "millbury public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-10",
+      "additional_upcoming": [
+        "2026-06-10",
+        "2026-06-24",
+        "2026-09-09"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.millburyschools.org/school-committee1/meeting-schedule",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "millburyschools.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Wednesday 7pm",
+      "derived_from": "real_date_agent"
     },
     "millbury": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-10",
+      "additional_upcoming": [
+        "2026-06-10",
+        "2026-06-24",
+        "2026-09-09"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.millburyschools.org/school-committee1/meeting-schedule",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "millburyschools.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Wednesday 7pm",
+      "derived_from": "real_date_agent"
     },
     "millis public schools": {
       "next_meeting": null,
@@ -2076,20 +2412,24 @@
       "verified_source": "millis.k12.ma.us"
     },
     "milton public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.miltonps.org/page/school-committee-24-25-school-year",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "miltonps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Tuesdays 6:30pm",
+      "derived_from": "real_date_agent"
     },
     "milton": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.miltonps.org/page/school-committee-24-25-school-year",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "miltonps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Tuesdays 6:30pm",
+      "derived_from": "real_date_agent"
     },
     "mohawk trail regional school district": {
       "next_meeting": "2026-06-10",
@@ -2110,16 +2450,32 @@
       "verified_source": "mtrsd.org"
     },
     "hawlemont regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-16",
+      "additional_upcoming": [
+        "2026-09-15",
+        "2026-10-20",
+        "2026-11-17"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mtrsd.org/school-committees",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "3rd Tuesday monthly 4:15pm",
+      "derived_from": "real_date_agent"
     },
     "hawlemont regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-16",
+      "additional_upcoming": [
+        "2026-09-15",
+        "2026-10-20",
+        "2026-11-17"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mtrsd.org/school-committees",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "3rd Tuesday monthly 4:15pm",
+      "derived_from": "real_date_agent"
     },
     "monson public schools": {
       "next_meeting": "2026-06-10",
@@ -2182,68 +2538,84 @@
       "status": "ok"
     },
     "narragansett regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-18",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.nrsd.org/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "nssk12.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "agent_lookup",
+      "derived_from": "real_date_agent"
     },
     "narragansett regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-18",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.nrsd.org/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "nssk12.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "agent_lookup",
+      "derived_from": "real_date_agent"
     },
     "narragansett": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-18",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.nrsd.org/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "nssk12.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "agent_lookup",
+      "derived_from": "real_date_agent"
     },
     "nashoba regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-10",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.nrsd.net/school_committee/calendars",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "nrsd.net"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Wednesdays 6pm",
+      "derived_from": "real_date_agent"
     },
     "nashoba regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-10",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.nrsd.net/school_committee/calendars",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "nrsd.net"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Wednesdays 6pm",
+      "derived_from": "real_date_agent"
     },
     "nashoba": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-10",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.nrsd.net/school_committee/calendars",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "nrsd.net"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Wednesdays 6pm",
+      "derived_from": "real_date_agent"
     },
     "natick public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-01",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.natickps.org/page/natick-school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "natickps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Mondays 6pm",
+      "derived_from": "real_date_agent"
     },
     "natick": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-01",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.natickps.org/page/natick-school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "natickps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Mondays 6pm",
+      "derived_from": "real_date_agent"
     },
     "needham public schools": {
       "next_meeting": "2026-12-16",
@@ -2296,20 +2668,24 @@
       "verified_source": "newburyport.k12.ma.us"
     },
     "newton public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.newton.k12.ma.us/school-committee/calendar",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "newton.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Mondays 6:30pm",
+      "derived_from": "real_date_agent"
     },
     "newton": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.newton.k12.ma.us/school-committee/calendar",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "newton.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Mondays 6:30pm",
+      "derived_from": "real_date_agent"
     },
     "north adams public schools": {
       "next_meeting": "2026-06-09",
@@ -2330,36 +2706,52 @@
       "verified_source": "northadams-ma.gov"
     },
     "north andover public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-18",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.northandoverpublicschools.com/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "northandoverpublicschools.com"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Thursdays 6:30pm",
+      "derived_from": "real_date_agent"
     },
     "north andover": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-18",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.northandoverpublicschools.com/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "northandoverpublicschools.com"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Thursdays 6:30pm",
+      "derived_from": "real_date_agent"
     },
     "north attleborough public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.naschools.net/Page/31",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "naschools.net"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st Monday monthly 6:05pm",
+      "derived_from": "real_date_agent"
     },
     "north attleborough": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.naschools.net/Page/31",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "naschools.net"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st Monday monthly 6:05pm",
+      "derived_from": "real_date_agent"
     },
     "north brookfield public schools": {
       "next_meeting": "2026-06-15",
@@ -2404,20 +2796,32 @@
       "verified_source": "nmrsd.org"
     },
     "north reading public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-28",
+      "additional_upcoming": [
+        "2026-06-11",
+        "2026-06-25",
+        "2026-09-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.north-reading.k12.ma.us/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "reading.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Thursday 7pm",
+      "derived_from": "pattern_computed"
     },
     "north reading": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-28",
+      "additional_upcoming": [
+        "2026-06-11",
+        "2026-06-25",
+        "2026-09-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.north-reading.k12.ma.us/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "reading.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Thursday 7pm",
+      "derived_from": "pattern_computed"
     },
     "northampton public schools": {
       "next_meeting": "2026-06-12",
@@ -2438,20 +2842,32 @@
       "verified_source": "northamptonschools.org"
     },
     "northbridge public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-26",
+      "additional_upcoming": [
+        "2026-06-09",
+        "2026-06-23",
+        "2026-09-08"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.nps.org/district/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "nps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Tuesday monthly",
+      "derived_from": "pattern_computed"
     },
     "northbridge": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-26",
+      "additional_upcoming": [
+        "2026-06-09",
+        "2026-06-23",
+        "2026-09-08"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.nps.org/district/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "nps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Tuesday monthly",
+      "derived_from": "pattern_computed"
     },
     "norton public schools": {
       "next_meeting": "2026-06-03",
@@ -2637,36 +3053,44 @@
       "verified_source": "pittsfield.net"
     },
     "plymouth public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.plymouth.k12.ma.us/page/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "plymouth.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "irregular monthly",
+      "derived_from": "real_date_agent"
     },
     "plymouth": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.plymouth.k12.ma.us/page/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "plymouth.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "irregular monthly",
+      "derived_from": "real_date_agent"
     },
     "provincetown school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.provincetown-ma.gov/203/School-Committee-Agendas-Minutes-Archive",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "provincetown-ma.gov"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "every 6 weeks",
+      "derived_from": "real_date_agent"
     },
     "provincetown": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.provincetown-ma.gov/203/School-Committee-Agendas-Minutes-Archive",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "provincetown-ma.gov"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "every 6 weeks",
+      "derived_from": "real_date_agent"
     },
     "quincy public schools": {
       "next_meeting": "2026-05-20",
@@ -2709,20 +3133,32 @@
       "verified_source": "randolph-ma.gov"
     },
     "reading public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-28",
+      "additional_upcoming": [
+        "2026-06-11",
+        "2026-06-25",
+        "2026-09-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.reading.k12.ma.us/en-US/our-school-committee-65707192/meeting-dates-10a86767",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "reading.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Thursday 7pm",
+      "derived_from": "pattern_computed"
     },
     "reading": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-28",
+      "additional_upcoming": [
+        "2026-06-11",
+        "2026-06-25",
+        "2026-09-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.reading.k12.ma.us/en-US/our-school-committee-65707192/meeting-dates-10a86767",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "reading.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Thursday 7pm",
+      "derived_from": "pattern_computed"
     },
     "revere public schools": {
       "next_meeting": null,
@@ -2797,36 +3233,60 @@
       "status": "ok"
     },
     "sandwich public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.sandwichk12.org/school_committee/meetings/meeting_calendar",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "sandwichk12.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Wednesday 6pm",
+      "derived_from": "pattern_computed"
     },
     "sandwich": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.sandwichk12.org/school_committee/meetings/meeting_calendar",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "sandwichk12.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Wednesday 6pm",
+      "derived_from": "pattern_computed"
     },
     "saugus public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-11",
+      "additional_upcoming": [
+        "2026-06-11",
+        "2026-06-25",
+        "2026-09-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.saugus-ma.gov/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "saugus.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Thursday monthly",
+      "derived_from": "real_date_agent"
     },
     "saugus": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-11",
+      "additional_upcoming": [
+        "2026-06-11",
+        "2026-06-25",
+        "2026-09-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.saugus-ma.gov/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "saugus.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Thursday monthly",
+      "derived_from": "real_date_agent"
     },
     "scituate public schools": {
       "next_meeting": "2026-06-01",
@@ -2881,20 +3341,32 @@
       "verified_source": "sharonschools.net"
     },
     "shrewsbury public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-27",
+      "additional_upcoming": [
+        "2026-06-10",
+        "2026-06-24",
+        "2026-09-09"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://schools.shrewsburyma.gov/sc",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "schools.shrewsburyma.gov"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Wednesday 7pm",
+      "derived_from": "pattern_computed"
     },
     "shrewsbury": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-27",
+      "additional_upcoming": [
+        "2026-06-10",
+        "2026-06-24",
+        "2026-09-09"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://schools.shrewsburyma.gov/sc",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "schools.shrewsburyma.gov"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Wednesday 7pm",
+      "derived_from": "pattern_computed"
     },
     "somerville public schools": {
       "next_meeting": "2026-06-08",
@@ -2915,20 +3387,32 @@
       "verified_source": "somerville.k12.ma.us"
     },
     "south hadley public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.southhadleyschools.org/calendar",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "southhadleyschools.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly first Wednesday 7pm",
+      "derived_from": "pattern_computed"
     },
     "south hadley": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.southhadleyschools.org/calendar",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "southhadleyschools.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly first Wednesday 7pm",
+      "derived_from": "pattern_computed"
     },
     "southbridge public schools": {
       "next_meeting": null,
@@ -3003,20 +3487,32 @@
       "status": "ok"
     },
     "stoughton public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06",
+        "2026-11-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.stoughtonschools.org/page/school-committee-meetings-agendas-minutes",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "stoughtonschools.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Tuesday 6pm",
+      "derived_from": "pattern_computed"
     },
     "stoughton": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06",
+        "2026-11-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.stoughtonschools.org/page/school-committee-meetings-agendas-minutes",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "stoughtonschools.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Tuesday 6pm",
+      "derived_from": "pattern_computed"
     },
     "sutton public schools": {
       "next_meeting": null,
@@ -3035,20 +3531,32 @@
       "verified_source": "suttonschools.net"
     },
     "swampscott public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-04",
+      "additional_upcoming": [
+        "2026-09-03",
+        "2026-10-01",
+        "2026-11-05"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.swampscottps.org/about/school-committee/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "swampscottps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Thursday 6pm",
+      "derived_from": "pattern_computed"
     },
     "swampscott": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-04",
+      "additional_upcoming": [
+        "2026-09-03",
+        "2026-10-01",
+        "2026-11-05"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.swampscottps.org/about/school-committee/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "swampscottps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Thursday 6pm",
+      "derived_from": "pattern_computed"
     },
     "swansea public schools": {
       "next_meeting": null,
@@ -3155,20 +3663,32 @@
       "status": "ok"
     },
     "wachusett regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06",
+        "2026-11-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.wrsd.net/school-committee/meeting-schedule",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "wrsd.net"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Tuesday 7pm",
+      "derived_from": "real_date_agent"
     },
     "wachusett regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06",
+        "2026-11-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.wrsd.net/school-committee/meeting-schedule",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "wrsd.net"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Tuesday 7pm",
+      "derived_from": "real_date_agent"
     },
     "wakefield public schools": {
       "next_meeting": "2026-06-09",
@@ -3225,36 +3745,60 @@
       "verified_source": "walthampublicschools.org"
     },
     "ware public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.wareps.org/school_committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "wareham.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Wednesday",
+      "derived_from": "pattern_computed"
     },
     "ware": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.wareps.org/school_committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "wareham.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Wednesday",
+      "derived_from": "pattern_computed"
     },
     "wareham public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://warehamps.org/en-US/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "wareham.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Wednesday",
+      "derived_from": "pattern_computed"
     },
     "wareham": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://warehamps.org/en-US/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "wareham.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Wednesday",
+      "derived_from": "pattern_computed"
     },
     "quaboag regional school district": {
       "next_meeting": "2026-06-01",
@@ -3353,20 +3897,32 @@
       "status": "ok"
     },
     "west bridgewater public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-01",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.wbridgewaterschools.org/page/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "wbridgewaterschools.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly Monday 6pm",
+      "derived_from": "pattern_computed"
     },
     "west bridgewater": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-01",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.wbridgewaterschools.org/page/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "wbridgewaterschools.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly Monday 6pm",
+      "derived_from": "pattern_computed"
     },
     "west springfield public schools": {
       "next_meeting": "2026-06-09",
@@ -3387,20 +3943,32 @@
       "verified_source": "wsps.org"
     },
     "westborough public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.westboroughk12.org/school-committee/meetings",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "westboroughk12.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Wednesday",
+      "derived_from": "pattern_computed"
     },
     "westborough": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-03",
+      "additional_upcoming": [
+        "2026-09-02",
+        "2026-10-07",
+        "2026-11-04"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.westboroughk12.org/school-committee/meetings",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "westboroughk12.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Wednesday",
+      "derived_from": "pattern_computed"
     },
     "westfield public schools": {
       "next_meeting": "2026-06-16",
@@ -3439,36 +4007,60 @@
       "verified_source": "westfordk12.us"
     },
     "weston public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.westonschools.org/school-committee/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "westonschools.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Monday 7pm",
+      "derived_from": "real_date_agent"
     },
     "weston": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-08",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.westonschools.org/school-committee/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "westonschools.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "bi-weekly Monday 7pm",
+      "derived_from": "real_date_agent"
     },
     "westport public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-20",
+      "additional_upcoming": [
+        "2026-06-17",
+        "2026-09-16",
+        "2026-10-21"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.westportps.org/board-of-education/meeting-calendar",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "westportps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "3rd Wednesday monthly",
+      "derived_from": "pattern_computed"
     },
     "westport": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-20",
+      "additional_upcoming": [
+        "2026-06-17",
+        "2026-09-16",
+        "2026-10-21"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.westportps.org/board-of-education/meeting-calendar",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "westportps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "3rd Wednesday monthly",
+      "derived_from": "pattern_computed"
     },
     "westwood public schools": {
       "next_meeting": "2026-06-04",
@@ -3543,36 +4135,60 @@
       "verified_source": "wpsk12.com"
     },
     "winchendon public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-04",
+      "additional_upcoming": [
+        "2026-06-04",
+        "2026-06-18",
+        "2026-09-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.winchendonk12.org/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "winchendonk12.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st and 3rd Thursday 6pm",
+      "derived_from": "real_date_agent"
     },
     "winchendon": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-04",
+      "additional_upcoming": [
+        "2026-06-04",
+        "2026-06-18",
+        "2026-09-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.winchendonk12.org/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "winchendonk12.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st and 3rd Thursday 6pm",
+      "derived_from": "real_date_agent"
     },
     "winchester public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-06-09",
+        "2026-06-23",
+        "2026-09-08"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.winchesterps.org/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "winchesterps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Tuesday 6pm",
+      "derived_from": "real_date_agent"
     },
     "winchester": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-06-09",
+        "2026-06-23",
+        "2026-09-08"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.winchesterps.org/school-committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "winchesterps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Tuesday 6pm",
+      "derived_from": "real_date_agent"
     },
     "winthrop public schools": {
       "next_meeting": "2026-06-09",
@@ -3649,44 +4265,88 @@
       "verified_source": "New Hingham 5:30pm"
     },
     "up-island regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-09-21",
+        "2026-10-19",
+        "2026-11-16"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://mvyps.org/school-committee/meetings/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mvyps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "3rd Monday 5:30pm",
+      "derived_from": "real_date_agent"
     },
     "up-island regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-09-21",
+        "2026-10-19",
+        "2026-11-16"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://mvyps.org/school-committee/meetings/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mvyps.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "3rd Monday 5:30pm",
+      "derived_from": "real_date_agent"
     },
     "tisbury school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-09-08",
+        "2026-10-13",
+        "2026-11-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://mvyps.org/school-committee/meetings/",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd Tuesday 4pm",
+      "derived_from": "real_date_agent"
     },
     "tisbury": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-09-08",
+        "2026-10-13",
+        "2026-11-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://mvyps.org/school-committee/meetings/",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd Tuesday 4pm",
+      "derived_from": "real_date_agent"
     },
     "martha's vineyard public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-01",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://mvyps.org/school-committee/meetings/",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st Monday 5:30pm",
+      "derived_from": "real_date_agent"
     },
     "martha's vineyard": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-01",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://mvyps.org/school-committee/meetings/",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st Monday 5:30pm",
+      "derived_from": "real_date_agent"
     },
     "acushnet public schools": {
       "next_meeting": null,
@@ -3941,20 +4601,32 @@
       "status": "ok"
     },
     "hancock school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06",
+        "2026-11-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://hancockschool.org/school-comittee/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no MA-specific result"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st Tuesday monthly 6pm",
+      "derived_from": "pattern_computed"
     },
     "hancock": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06",
+        "2026-11-03"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://hancockschool.org/school-comittee/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no MA-specific result"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st Tuesday monthly 6pm",
+      "derived_from": "pattern_computed"
     },
     "holland school district": {
       "next_meeting": "2026-06-03",
@@ -4047,20 +4719,24 @@
       "verified_source": "marionma.gov"
     },
     "mattapoisett school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-04",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.mattapoisett.gov/328/ORR-District-School-Committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mattapoisett.gov"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly",
+      "derived_from": "real_date_agent"
     },
     "mattapoisett": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-04",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.mattapoisett.gov/328/ORR-District-School-Committee",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mattapoisett.gov"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly",
+      "derived_from": "real_date_agent"
     },
     "middleton school district": {
       "next_meeting": null,
@@ -4095,20 +4771,32 @@
       "verified_source": "nahant.org"
     },
     "new salem-wendell school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-04",
+      "additional_upcoming": [
+        "2026-09-03",
+        "2026-10-01",
+        "2026-11-05"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.wendellmass.us/meeting-taxonomy/school-committee/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "newsalemma.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly Thursday 7pm",
+      "derived_from": "pattern_computed"
     },
     "new salem-wendell": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-04",
+      "additional_upcoming": [
+        "2026-09-03",
+        "2026-10-01",
+        "2026-11-05"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.wendellmass.us/meeting-taxonomy/school-committee/",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "newsalemma.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly Thursday 7pm",
+      "derived_from": "pattern_computed"
     },
     "norfolk school district": {
       "next_meeting": null,
@@ -4277,16 +4965,32 @@
       "verified_source": "slrsd.org"
     },
     "richmond school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-09-08",
+        "2026-10-13",
+        "2026-11-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.richmondma.org/government/boards_and_commissions/school_committee.php",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd Tuesday monthly 7pm",
+      "derived_from": "pattern_computed"
     },
     "richmond": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [
+        "2026-09-08",
+        "2026-10-13",
+        "2026-11-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.richmondma.org/government/boards_and_commissions/school_committee.php",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd Tuesday monthly 7pm",
+      "derived_from": "pattern_computed"
     },
     "rochester school district": {
       "next_meeting": null,
@@ -4349,20 +5053,32 @@
       "verified_source": "doversherborn.org"
     },
     "shutesbury school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-26",
+      "additional_upcoming": [
+        "2026-06-09",
+        "2026-06-23",
+        "2026-09-08"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://shutesbury.org/calendars",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "shutesburyschool.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Tuesday 7pm",
+      "derived_from": "pattern_computed"
     },
     "shutesbury": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-26",
+      "additional_upcoming": [
+        "2026-06-09",
+        "2026-06-23",
+        "2026-09-08"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://shutesbury.org/calendars",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "shutesburyschool.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "2nd and 4th Tuesday 7pm",
+      "derived_from": "pattern_computed"
     },
     "somerset school district": {
       "next_meeting": "2026-06-01",
@@ -4471,20 +5187,32 @@
       "verified_source": "frsu38.org"
     },
     "topsfield school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-20",
+      "additional_upcoming": [
+        "2026-06-03",
+        "2026-06-17",
+        "2026-09-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.topsfield-ma.gov/schools-school-committees",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "topsfield-ma.gov"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st and 3rd Wednesday 7pm",
+      "derived_from": "pattern_computed"
     },
     "topsfield": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-20",
+      "additional_upcoming": [
+        "2026-06-03",
+        "2026-06-17",
+        "2026-09-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.topsfield-ma.gov/schools-school-committees",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "topsfield-ma.gov"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st and 3rd Wednesday 7pm",
+      "derived_from": "pattern_computed"
     },
     "truro school district": {
       "next_meeting": null,
@@ -4503,20 +5231,32 @@
       "verified_source": "truro-ma.gov"
     },
     "wales school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-20",
+      "additional_upcoming": [
+        "2026-06-17",
+        "2026-09-16",
+        "2026-10-21"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.townofwales.net/school-committee/minutes/school-committee-minutes-4",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "townofwales.net"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "3rd Wednesday monthly 6pm",
+      "derived_from": "pattern_computed"
     },
     "wales": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-20",
+      "additional_upcoming": [
+        "2026-06-17",
+        "2026-09-16",
+        "2026-10-21"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.townofwales.net/school-committee/minutes/school-committee-minutes-4",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "townofwales.net"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "3rd Wednesday monthly 6pm",
+      "derived_from": "pattern_computed"
     },
     "wellfleet school district": {
       "next_meeting": "2026-06-02",
@@ -4573,16 +5313,32 @@
       "verified_source": "frsu38.org"
     },
     "williamsburg school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-20",
+      "additional_upcoming": [
+        "2026-06-17",
+        "2026-09-16",
+        "2026-10-21"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.burgy.org/school-department/pages/williamsburg-school-committee-values",
-      "status": "fetch_failed"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "3rd Wednesday monthly",
+      "derived_from": "pattern_computed"
     },
     "williamsburg": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-20",
+      "additional_upcoming": [
+        "2026-06-17",
+        "2026-09-16",
+        "2026-10-21"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.burgy.org/school-department/pages/williamsburg-school-committee-values",
-      "status": "fetch_failed"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "3rd Wednesday monthly",
+      "derived_from": "pattern_computed"
     },
     "worthington school district": {
       "next_meeting": "2026-06-11",
@@ -4603,20 +5359,24 @@
       "verified_source": "worthington-ma.us"
     },
     "wrentham school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.wrentham.k12.ma.us/our-district/school-committee/index.html",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "wrentham.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly",
+      "derived_from": "real_date_agent"
     },
     "wrentham": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-09",
+      "additional_upcoming": [],
       "checked": "2026-05-20",
       "source_url": "https://www.wrentham.k12.ma.us/our-district/school-committee/index.html",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "wrentham.k12.ma.us"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "monthly",
+      "derived_from": "real_date_agent"
     },
     "farmington river regional school district": {
       "next_meeting": "2026-06-01",
@@ -4633,16 +5393,32 @@
       "status": "ok"
     },
     "warwick school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-20",
+      "additional_upcoming": [
+        "2026-05-27",
+        "2026-06-03",
+        "2026-06-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://warwickma.org/school-committee/",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Every Wednesday 6:30pm",
+      "derived_from": "pattern_computed"
     },
     "warwick": {
-      "next_meeting": null,
+      "next_meeting": "2026-05-20",
+      "additional_upcoming": [
+        "2026-05-27",
+        "2026-06-03",
+        "2026-06-10"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://warwickma.org/school-committee/",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "Every Wednesday 6:30pm",
+      "derived_from": "pattern_computed"
     },
     "old rochester regional school district": {
       "next_meeting": "2026-05-27",
@@ -4775,20 +5551,32 @@
       "verified_source": "calendar; June/July not retrieved"
     },
     "hampshire regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-01",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.hr-k12.org/calendar",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "agendas page; not retrieved"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st Monday monthly 7:30pm",
+      "derived_from": "pattern_computed"
     },
     "hampshire regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-01",
+      "additional_upcoming": [
+        "2026-09-07",
+        "2026-10-05",
+        "2026-11-02"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.hr-k12.org/calendar",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "agendas page; not retrieved"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "1st Monday monthly 7:30pm",
+      "derived_from": "pattern_computed"
     },
     "somerset-berkley regional school district": {
       "next_meeting": "2026-06-01",
@@ -4877,20 +5665,32 @@
       "verified_source": "rcmahar.org"
     },
     "tantasqua regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-16",
+      "additional_upcoming": [
+        "2026-09-15",
+        "2026-10-20",
+        "2026-11-17"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.tantasqua.org/apps/pages/index.jsp?uREC_ID=3617321",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "tantasqua.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "3rd Tuesday monthly 7pm",
+      "derived_from": "pattern_computed"
     },
     "tantasqua regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-16",
+      "additional_upcoming": [
+        "2026-09-15",
+        "2026-10-20",
+        "2026-11-17"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.tantasqua.org/apps/pages/index.jsp?uREC_ID=3617321",
-      "status": "no_future_date",
-      "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "tantasqua.org"
+      "status": "ok",
+      "verified_by": "wave2_pattern_lookup_2026-05-20",
+      "verified_source": "3rd Tuesday monthly 7pm",
+      "derived_from": "pattern_computed"
     }
   }
 }
