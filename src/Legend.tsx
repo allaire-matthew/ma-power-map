@@ -88,6 +88,7 @@ export function Legend({
 }) {
   const showPhone = layers.phoneFree
   const showSize = layers.sizeGradient
+  const showParents = layers.parentPresence
   const showCounties = layers.counties
   const showCong = layers.congressional
   const showSenate = layers.stateSenate
@@ -101,6 +102,7 @@ export function Legend({
   if (
     !showPhone &&
     !showSize &&
+    !showParents &&
     !showCounties &&
     !showCong &&
     !showSenate &&
@@ -210,6 +212,24 @@ export function Legend({
                 })}{' '}
                 · {mandate.label}
               </div>
+            </div>
+          </div>
+        )}
+
+        {showParents && (
+          <div>
+            <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider mb-1.5">
+              Parent presence
+            </div>
+            <div className="flex items-center gap-2">
+              <span
+                className="w-3 h-3 rounded-full shrink-0 border border-white shadow-sm"
+                style={{ background: '#7c3aed' }}
+              />
+              <span>Town has a chapter on file</span>
+            </div>
+            <div className="text-[10px] text-slate-400 mt-1 leading-snug">
+              From CIRL IRL-Councils sheet (Turning Life On, Balance Project, Schools Beyond Screens, Independent). Multi-chapter towns show a count inside the dot.
             </div>
           </div>
         )}

@@ -1,6 +1,7 @@
 export type LayerKey =
   | 'phoneFree'
   | 'sizeGradient'
+  | 'parentPresence'
   | 'counties'
   | 'congressional'
   | 'stateSenate'
@@ -12,6 +13,7 @@ export type LayerState = Record<LayerKey, boolean>
 export const defaultLayers: LayerState = {
   phoneFree: true,
   sizeGradient: false,
+  parentPresence: true,
   counties: false,
   congressional: false,
   stateSenate: false,
@@ -26,6 +28,7 @@ export const defaultLayers: LayerState = {
 const LABELS: { key: LayerKey; label: string; group: 'attribute' | 'geo' }[] = [
   { key: 'phoneFree', label: 'Phone-free status', group: 'attribute' },
   { key: 'sizeGradient', label: 'Size gradient', group: 'attribute' },
+  { key: 'parentPresence', label: 'Parent presence', group: 'attribute' },
   { key: 'counties', label: 'Counties', group: 'geo' },
   { key: 'congressional', label: 'US House', group: 'geo' },
   { key: 'stateSenate', label: 'MA Senate', group: 'geo' },

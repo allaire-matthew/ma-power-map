@@ -3,6 +3,7 @@ import {
   getTownToDistrict,
   loadLayer,
   loadPhonePolicies,
+  loadTownOrgs,
   MAP_H,
   MAP_W,
   type LayerName,
@@ -10,6 +11,7 @@ import {
   type PhoneTier,
   type ProjectedFeature,
   type ProjectedLayer,
+  type TownOrgChapter,
 } from './geo'
 import type { LayerState } from './LayerToggles'
 import type { TierFilter } from './App'
@@ -77,6 +79,7 @@ export function MapBackground({
   const [data, setData] = useState<Partial<Record<LayerName, ProjectedLayer>>>({})
   const [policies, setPolicies] = useState<Record<string, PhonePolicy>>({})
   const [townToDistrict, setTownToDistrict] = useState<Record<string, string>>({})
+  const [townOrgs, setTownOrgs] = useState<Record<string, TownOrgChapter[]>>({})
   const svgRef = useRef<SVGSVGElement | null>(null)
   const groupRefs = useRef<Partial<Record<LayerName, SVGGElement | null>>>({})
   const [hover, setHover] = useState<{ name: string; x: number; y: number } | null>(null)
@@ -117,6 +120,9 @@ export function MapBackground({
     })
     void getTownToDistrict().then((m) => {
       if (!cancelled) setTownToDistrict(m)
+    })
+    void loadTownOrgs().then((d) => {
+      if (!cancelled && d) setTownOrgs(d.byTown ?? {})
     })
     return () => {
       cancelled = true
@@ -321,6 +327,43 @@ export function MapBackground({
                   .join(' ')}
               />
             ))}
+
+          {/* Parent-presence dots. Each town with a chapter in
+              town-orgs.json gets a small purple dot at its centroid. */}
+          {layers.parentPresence &&
+            towns.map((f) => {
+              const key = (f.name || '').trim().toLowerCase()
+              const chapters = townOrgs[key]
+              if (!chapters || chapters.length === 0) return null
+              const [cx, cy] = f.centroid
+              const count = chapters.length
+              return (
+                <g key={`org-${f.id}`} pointerEvents="none">
+                  <circle
+                    cx={cx}
+                    cy={cy}
+                    r={(count > 1 ? 4.5 : 3.5) / camera.z}
+                    fill="#7c3aed"
+                    stroke="white"
+                    strokeWidth={1.0 / camera.z}
+                  />
+                  {count > 1 && (
+                    <text
+                      x={cx}
+                      y={cy + 1 / camera.z}
+                      textAnchor="middle"
+                      dominantBaseline="central"
+                      fontSize={6 / camera.z}
+                      fontWeight={700}
+                      fill="white"
+                      style={{ fontFamily: 'system-ui, sans-serif' }}
+                    >
+                      {count}
+                    </text>
+                  )}
+                </g>
+              )
+            })}
 
           {/* Tier-3 callouts. Hardware bans are rare enough that they
               deserve a visible badge — easier to spot than scanning the
