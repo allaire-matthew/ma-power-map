@@ -3482,6 +3482,62 @@
       "town": "Sturbridge/Wales",
       "calendar_url": "https://www.tantasqua.org/apps/pages/index.jsp?uREC_ID=3617321",
       "tier": 2
+    },
+    "gosnold school district": {
+      "name": "Gosnold School District",
+      "town": "Gosnold",
+      "calendar_url": "https://www.townofgosnold.org/school",
+      "tier": 2,
+      "notes": "One-room schoolhouse on Cuttyhunk Island; last graduate 2019. District remains open in case students enroll. Town clerk page is the canonical reference."
+    },
+    "gosnold": {
+      "name": "Gosnold School District",
+      "town": "Gosnold",
+      "calendar_url": "https://www.townofgosnold.org/school",
+      "tier": 2,
+      "notes": "One-room schoolhouse on Cuttyhunk Island; last graduate 2019. District remains open in case students enroll. Town clerk page is the canonical reference."
+    },
+    "berkley public schools": {
+      "name": "Berkley Public Schools",
+      "town": "Berkley",
+      "calendar_url": "https://www.townofberkleyma.com/school-committee",
+      "tier": 2,
+      "notes": "Berkley elementary (K-6) committee. Secondary grades served by Somerset-Berkley Regional."
+    },
+    "berkley": {
+      "name": "Berkley Public Schools",
+      "town": "Berkley",
+      "calendar_url": "https://www.townofberkleyma.com/school-committee",
+      "tier": 2,
+      "notes": "Berkley elementary (K-6) committee. Secondary grades served by Somerset-Berkley Regional."
+    },
+    "brookfield public schools": {
+      "name": "Brookfield Public Schools",
+      "town": "Brookfield",
+      "calendar_url": "https://brookfield.bpsma.org/",
+      "tier": 2,
+      "notes": "Brookfield Elementary School. Standalone K-6; secondary via Tantasqua Regional."
+    },
+    "brookfield": {
+      "name": "Brookfield Public Schools",
+      "town": "Brookfield",
+      "calendar_url": "https://brookfield.bpsma.org/",
+      "tier": 2,
+      "notes": "Brookfield Elementary School. Standalone K-6; secondary via Tantasqua Regional."
+    },
+    "florida public schools": {
+      "name": "Florida Public Schools",
+      "town": "Florida",
+      "calendar_url": "https://www.cbrsd.org/school-committee",
+      "tier": 2,
+      "notes": "Town of Florida MA (Berkshire County hilltown). Served by North Berkshire School Union; primary school is Abbott Memorial (K-8). Secondary via North Adams Public Schools. Joined regionalization exploratory group 2024."
+    },
+    "florida": {
+      "name": "Florida Public Schools",
+      "town": "Florida",
+      "calendar_url": "https://www.cbrsd.org/school-committee",
+      "tier": 2,
+      "notes": "Town of Florida MA (Berkshire County hilltown). Served by North Berkshire School Union; primary school is Abbott Memorial (K-8). Secondary via North Adams Public Schools. Joined regionalization exploratory group 2024."
     }
   }
 }
