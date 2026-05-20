@@ -45,16 +45,130 @@ OFF_AWAY_PATTERNS = [
     re.compile(r"\b(devices?|phones?)\s+(must|will|shall)\s+(be\s+)?(turned\s+off|silenced|stored|placed)", re.I),
     re.compile(r"\bbell[-\s]to[-\s]bell\b", re.I),
 ]
-BAD_DOMAINS = [re.compile(p, re.I) for p in [r"sau41\.org", r"apsva\.us", r"\.wpsd\.org", r"warwicksd\.org", r"\.in\.us\b", r"\.k12\.(ny|ri|ct|nj|pa|in|wi|ia|tx|ga|fl|sc|nc|va|md|ky|mo|oh|ar|me|nh|vt)\b"]]
+BAD_DOMAINS = [re.compile(p, re.I) for p in [
+    r"sau41",                  # NH SAU 41 = Brookline NH (same name as MA Brookline)
+    r"apsva\.us",              # VA Arlington Public Schools
+    r"\.wpsd\.org", r"wpsdiowa",
+    r"warwicksd\.org",         # RI Warwick
+    r"\.in\.us\b",
+    r"\.k12\.(ny|ri|ct|nj|pa|in|wi|ia|tx|ga|fl|sc|nc|va|md|ky|mo|oh|ar|me|nh|vt|ks|al|tn|mn|ms|la|or|wa|ca|az|nv|co|mt|id|nm|ut|wy|ak|hi|sd|nd)\b",
+]]
+
+# Reject URLs whose filename indicates a NON-student-policy document.
+WRONG_TYPE_URL = [re.compile(p, re.I) for p in [
+    r"employee.?handbook",
+    r"faculty.?(handbook|manual)",
+    r"athletic.?handbook",
+    r"student.?athlete.?handbook",
+    r"substitute.?(handbook|manual)",
+    r"curriculum.?guide",
+    r"course.?catalog",
+]]
+
+NEWS_PUBLISHER_HINTS = (
+    "news", "lens", "globe", "wbur", "gbh", "boston.com", "nbcboston",
+    "wcvb", "necn", "cbs", "wgbh", "patch", "wickedlocal", "telegram",
+    "berkshireeagle", "cape cod times", "sentinel", "gazette", "enterprise",
+)
 
 
 def is_bad_domain(url: str) -> bool:
     return any(p.search(url) for p in BAD_DOMAINS)
 
 
+def is_wrong_type_url(url: str) -> bool:
+    return any(p.search(url) for p in WRONG_TYPE_URL)
+
+
+def is_news_source(source: dict) -> bool:
+    """Heuristic: publisher contains a news org hint, or URL is on a news domain."""
+    pub = (source.get("publisher", "") or "").lower()
+    url = (source.get("url", "") or "").lower()
+    title = (source.get("title", "") or "").lower()
+    if any(h in pub or h in url for h in NEWS_PUBLISHER_HINTS):
+        return True
+    if "press release" in title:
+        return False  # press releases come from the district itself
+    return False
+
+
+def parse_date(s: str | None) -> str:
+    """Coerce various date forms to YYYY-MM-DD for comparison.
+
+    Accepts: '2024-10-08', '2025-26', '24-25', 'FY25', '2024'.
+    Returns '0000-00-00' if unparseable.
+    """
+    if not s:
+        return "0000-00-00"
+    s = str(s).strip()
+    # Already ISO
+    m = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", s)
+    if m:
+        return s
+    # School year YYYY-YY or YYYY-YYYY → start at Sept 1 of first year
+    m = re.match(r"^(\d{4})-\d{2,4}$", s)
+    if m:
+        return f"{m.group(1)}-09-01"
+    # YY-YY → assume 20YY-09-01
+    m = re.match(r"^(\d{2})-\d{2}$", s)
+    if m:
+        return f"20{m.group(1)}-09-01"
+    # FY25 → 2024-09-01 (FY25 = academic year 2024-25)
+    m = re.match(r"^FY(\d{2})$", s, re.I)
+    if m:
+        yr = int(m.group(1))
+        return f"20{yr-1:02d}-09-01"
+    # Single year
+    m = re.match(r"^(\d{4})$", s)
+    if m:
+        return f"{s}-01-01"
+    return "0000-00-00"
+
+
+def url_date(url: str) -> str:
+    """Extract the most plausible date from a handbook URL or filename.
+
+    Looks for school-year patterns ('2024-25', '24-25', '2025-2026', 'FY25')
+    and Unix timestamps from finalsite-style URLs ('v1755001297').
+    Returns YYYY-MM-DD or '0000-00-00'.
+    """
+    if not url:
+        return "0000-00-00"
+    # Finalsite-style Unix timestamp: vNNNNNNNNNN
+    m = re.search(r"/v(\d{10})/", url)
+    if m:
+        import datetime
+        try:
+            return datetime.date.fromtimestamp(int(m.group(1))).isoformat()
+        except Exception:
+            pass
+    # School year patterns in path/filename
+    for pat in [
+        r"(20\d{2})[-_](\d{4})",   # 2024-2025
+        r"(20\d{2})[-_](\d{2})",   # 2024-25
+        r"(\d{2})[-_](\d{2})(?!\d)",  # 24-25
+        r"FY(\d{2})",
+        r"(20\d{2})",  # bare year, last fallback
+    ]:
+        m = re.search(pat, url, re.I)
+        if m:
+            return parse_date(m.group(0))
+    return "0000-00-00"
+
+
+def latest_news_date(sources: list) -> str:
+    """Return the YYYY-MM-DD of the most recent news source in `sources`, or '0000-00-00'."""
+    news = [s for s in sources if is_news_source(s)]
+    if not news:
+        return "0000-00-00"
+    return max(parse_date(s.get("date")) for s in news)
+
+
 def fetch(url: str, max_bytes: int = 5_000_000) -> tuple[bytes, str]:
     if is_bad_domain(url):
         return b"", "cross_state"
+    if is_wrong_type_url(url):
+        return b"", "wrong_type_handbook"
     try:
         req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
         with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
@@ -304,10 +418,27 @@ def main():
         if not r.get("verified"):
             continue
         old = policies.get(geoid, {})
-        # NEVER overwrite a news-verified entry — news reports are authoritative
-        # and supersede any auto-extracted handbook classification.
+        # NEVER overwrite a news-verified entry.
         if old.get("status") == "news_verified":
             print(f"  · {geoid} {old.get('districtName')}: news_verified — handbook will not override", file=sys.stderr)
+            continue
+        # If the existing entry has a news source MORE RECENT than this handbook,
+        # the news source wins — leave the entry's tier alone, only add the
+        # handbook as a confirming-source-only.
+        news_date = latest_news_date(old.get("sources", []))
+        hb_date = url_date(r["handbook_url"])
+        if news_date > hb_date and news_date != "0000-00-00":
+            print(f"  · {geoid} {old.get('districtName')}: news source ({news_date}) more recent than handbook ({hb_date}) — handbook attached as source-only, tier preserved", file=sys.stderr)
+            sources = list(old.get("sources", []))
+            if not any(s.get("url") == r["handbook_url"] for s in sources):
+                sources.append({
+                    "title": f"Student handbook ({r.get('extraction_method','?')}, dated {hb_date or 'unknown'}, older than news)",
+                    "url": r["handbook_url"],
+                    "publisher": "district",
+                    "date": hb_date if hb_date != "0000-00-00" else "",
+                })
+            old["sources"] = sources
+            old["handbook_url"] = r["handbook_url"]
             continue
         sources = list(old.get("sources", []))
         if not any(s.get("url") == r["handbook_url"] for s in sources):

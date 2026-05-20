@@ -33,7 +33,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "confidence": "medium",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2025-08-22",
+      "news_supersedes_handbook_publisher": "Boston Globe"
     },
     "2504830": {
       "districtId": "2504830",
@@ -91,7 +94,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-08-19",
+      "news_supersedes_handbook_publisher": "CBS Boston"
     },
     "2508610": {
       "districtId": "2508610",
@@ -117,7 +123,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-05-15",
+      "news_supersedes_handbook_publisher": "Fig City News"
     },
     "2503150": {
       "districtId": "2503150",
@@ -185,7 +194,10 @@
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2026-05-20",
+      "news_supersedes_handbook_publisher": ""
     },
     "2506480": {
       "districtId": "2506480",
@@ -205,7 +217,10 @@
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2026-05-20",
+      "news_supersedes_handbook_publisher": ""
     },
     "2503090": {
       "districtId": "2503090",
@@ -237,7 +252,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-09-15",
+      "news_supersedes_handbook_publisher": "Boston Globe"
     },
     "2507020": {
       "districtId": "2507020",
@@ -269,7 +287,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-01-25",
+      "news_supersedes_handbook_publisher": "Boston 25 News"
     },
     "2508430": {
       "districtId": "2508430",
@@ -315,7 +336,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "low"
+      "confidence": "low",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-08-27",
+      "news_supersedes_handbook_publisher": "Boston Globe"
     },
     "2503660": {
       "districtId": "2503660",
@@ -335,7 +359,10 @@
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2026-05-20",
+      "news_supersedes_handbook_publisher": ""
     },
     "2511130": {
       "districtId": "2511130",
@@ -355,7 +382,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "confidence": "medium",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-11-04",
+      "news_supersedes_handbook_publisher": "Boston.com"
     },
     "2511400": {
       "districtId": "2511400",
@@ -375,7 +405,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "low"
+      "confidence": "low",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-11-04",
+      "news_supersedes_handbook_publisher": "Boston.com"
     },
     "2503270": {
       "districtId": "2503270",
@@ -487,7 +520,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "confidence": "medium",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2026-04-06",
+      "news_supersedes_handbook_publisher": "Boston.com"
     },
     "2511520": {
       "districtId": "2511520",
@@ -513,7 +549,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-08-15",
+      "news_supersedes_handbook_publisher": "WHDH 7News"
     },
     "2508370": {
       "districtId": "2508370",
@@ -565,7 +604,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "confidence": "medium",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-12-01",
+      "news_supersedes_handbook_publisher": "Massachusetts Teachers Association"
     },
     "2503870": {
       "districtId": "2503870",
@@ -723,7 +765,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "confidence": "medium",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-09-15",
+      "news_supersedes_handbook_publisher": "Middlesex East / HomeNewsHere"
     },
     "2508340": {
       "districtId": "2508340",
@@ -789,7 +834,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2025-08-25",
+      "news_supersedes_handbook_publisher": "WBUR"
     },
     "2504410": {
       "districtId": "2504410",
@@ -898,7 +946,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "confidence": "medium",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-08-15",
+      "news_supersedes_handbook_publisher": "Cape News"
     },
     "2507440": {
       "districtId": "2507440",
@@ -918,7 +969,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "confidence": "medium",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-08-15",
+      "news_supersedes_handbook_publisher": "Cape News"
     },
     "2509360": {
       "districtId": "2509360",
@@ -938,7 +992,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-08-15",
+      "news_supersedes_handbook_publisher": "Patch \u2014 Peabody MA"
     },
     "2509630": {
       "districtId": "2509630",
@@ -978,7 +1035,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "confidence": "medium",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-08-15",
+      "news_supersedes_handbook_publisher": "Berkshire Eagle"
     },
     "2505740": {
       "districtId": "2505740",
@@ -998,7 +1058,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2025-08-26",
+      "news_supersedes_handbook_publisher": "Daily Hampshire Gazette"
     },
     "2505490": {
       "districtId": "2505490",
@@ -1018,7 +1081,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2025-08-26",
+      "news_supersedes_handbook_publisher": "Daily Hampshire Gazette"
     },
     "2504590": {
       "districtId": "2504590",
@@ -1038,7 +1104,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2025-08-26",
+      "news_supersedes_handbook_publisher": "Daily Hampshire Gazette"
     },
     "2503240": {
       "districtId": "2503240",
@@ -1078,7 +1147,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "confidence": "medium",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2025-07-10",
+      "news_supersedes_handbook_publisher": "Western Mass News"
     },
     "2505970": {
       "districtId": "2505970",
@@ -1216,7 +1288,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "confidence": "medium",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-09-15",
+      "news_supersedes_handbook_publisher": "Weymouth High School newsletter"
     },
     "2506330": {
       "districtId": "2506330",
@@ -1236,7 +1311,10 @@
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2026-05-20",
+      "news_supersedes_handbook_publisher": ""
     },
     "2502400": {
       "districtId": "2502400",
@@ -1282,7 +1360,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "confidence": "medium",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-09-15",
+      "news_supersedes_handbook_publisher": "Middlesex East / HomeNewsHere"
     },
     "2502670": {
       "districtId": "2502670",
@@ -1394,7 +1475,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "confidence": "medium",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-09-15",
+      "news_supersedes_handbook_publisher": "Middlesex East / HomeNewsHere"
     },
     "2507860": {
       "districtId": "2507860",
@@ -1414,7 +1498,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "low"
+      "confidence": "low",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2023-05-25",
+      "news_supersedes_handbook_publisher": "Boston.com"
     },
     "2509600": {
       "districtId": "2509600",
@@ -1460,7 +1547,10 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "confidence": "medium",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2024-11-04",
+      "news_supersedes_handbook_publisher": "WBUR"
     },
     "2500001": {
       "districtId": "2500001",
@@ -2165,7 +2255,10 @@
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "news_supersedes_handbook": true,
+      "news_supersedes_handbook_date": "2026-05-20",
+      "news_supersedes_handbook_publisher": ""
     },
     "2505070": {
       "districtId": "2505070",
