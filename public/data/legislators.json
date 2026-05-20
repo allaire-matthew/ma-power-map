@@ -1,7 +1,7 @@
 {
   "_schemaVersion": 1,
   "_lastUpdated": "2026-05-20",
-  "_notes": "us_house = 9 verified MA federal reps. ma_senate = 40, ma_house = 158 (160 expected \u2014 2 vacancies). Sourced from malegislature.gov/Legislators/Members/{Senate,House} as of _lastUpdated. Refreshed by scripts/refresh-legislators.py.",
+  "_notes": "us_house = 9 verified MA federal reps (manually maintained). ma_senate + ma_house = MA Legislature (current session), refreshed from malegislature.gov by scripts/refresh_legislators.py.",
   "us_house": {
     "2501": {
       "district": 1,
@@ -67,8 +67,6 @@
       "since": 2013
     }
   },
-  "ma_senate_directory_url": "https://malegislature.gov/Legislators/Members/Senate",
-  "ma_house_directory_url": "https://malegislature.gov/Legislators/Members/House",
   "ma_senate": {
     "25D15": {
       "district_name": "Third Middlesex District",
@@ -1458,5 +1456,7 @@
       "url": "https://malegislature.gov/Legislators/Profile/JDZ1",
       "profile_id": "JDZ1"
     }
-  }
+  },
+  "ma_senate_directory_url": "https://malegislature.gov/Legislators/Members/Senate",
+  "ma_house_directory_url": "https://malegislature.gov/Legislators/Members/House"
 }

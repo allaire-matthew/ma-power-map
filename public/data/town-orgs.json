@@ -1,7 +1,7 @@
 {
   "_schemaVersion": 1,
   "_lastUpdated": "2026-05-20",
-  "_source": "Google Sheet 16q_wrfljGEbMuUyeAeovZKk_TVTuoGgUf7mqb1uLqtw / IRL Councils tab. Refresh via scripts/refresh-town-orgs.py.",
+  "_source": "Google Sheet 16q_wrfljGEbMuUyeAeovZKk_TVTuoGgUf7mqb1uLqtw / IRL Councils tab.",
   "byTown": {
     "needham": [
       {
@@ -10,6 +10,26 @@
         "town": "Needham",
         "leadName": "Melissa Rotman",
         "leadEmail": "speechmelissa@gmail.com",
+        "type": "community lead",
+        "notes": null
+      }
+    ],
+    "brookline": [
+      {
+        "org": "Independent",
+        "chapterName": "Brookline Kids Unplugged",
+        "town": "Brookline",
+        "leadName": "Michelle Lai",
+        "leadEmail": "ml435@yahoo.com",
+        "type": "community lead",
+        "notes": null
+      },
+      {
+        "org": "The Balance Project",
+        "chapterName": "Arlington, MA",
+        "town": "Brookline",
+        "leadName": "Anushya Chandran",
+        "leadEmail": "anushyac@gmail.com",
         "type": "community lead",
         "notes": null
       }
@@ -131,24 +151,15 @@
         "notes": null
       }
     ],
-    "newton": [
+    "marion": [
       {
         "org": "The Balance Project",
         "chapterName": "Marion, MA",
-        "town": "West Newton",
-        "leadName": "Matthew Allaire",
-        "leadEmail": "matthew@allaire.com",
-        "type": "community lead (self)",
-        "notes": "You are the Community Lead"
-      },
-      {
-        "org": "Independent",
-        "chapterName": "Commonwealth IRL",
-        "town": "West Newton",
-        "leadName": "Matthew Allaire",
-        "leadEmail": "matthew@allaire.com",
-        "type": "community lead (self)",
-        "notes": "You are the Community Lead"
+        "town": "Marion",
+        "leadName": "Jessica Barrett",
+        "leadEmail": "jbarrett525@gmail.com",
+        "type": "community lead",
+        "notes": null
       }
     ],
     "norwell": [
@@ -191,17 +202,6 @@
         "town": "Holliston",
         "leadName": "Jenna Espinosa",
         "leadEmail": "jennaaloughlin@gmail.com",
-        "type": "community lead",
-        "notes": null
-      }
-    ],
-    "brookline": [
-      {
-        "org": "The Balance Project",
-        "chapterName": "Arlington, MA",
-        "town": "Brookline",
-        "leadName": "Anushya Chandran",
-        "leadEmail": "anushyac@gmail.com",
         "type": "community lead",
         "notes": null
       }

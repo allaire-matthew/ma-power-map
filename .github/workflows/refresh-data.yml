@@ -1,0 +1,59 @@
+name: Refresh live data
+
+# Daily at 07:17 UTC (= 03:17 ET in spring/fall). Off-the-hour so we don't
+# collide with everyone else's :00/:30 cron jobs.
+on:
+  schedule:
+    - cron: "17 7 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh legislators (Senate + House from malegislature.gov)
+        run: python3 scripts/refresh_legislators.py
+
+      - name: Refresh town orgs (CIRL Google Sheet IRL Councils tab)
+        run: python3 scripts/refresh_town_orgs.py
+        # Don't fail the whole run if the sheet isn't public-shared — orgs
+        # data is treated as a soft dependency. The legislator refresh above
+        # is the hard requirement.
+        continue-on-error: true
+
+      - name: Show diff summary
+        run: |
+          git diff --stat public/data/ || true
+          git diff public/data/legislators.json | head -200 || true
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "ma-power-map-bot"
+          git config user.email "bot@allaire-matthew.github.io"
+          if git diff --quiet public/data/; then
+            echo "No data changes — skipping commit."
+            exit 0
+          fi
+          git add public/data/
+          git commit -m "chore(data): refresh from upstream sources
+
+$(date -u +%Y-%m-%dT%H:%M:%SZ)
+
+Auto-committed by .github/workflows/refresh-data.yml."
+          git push
