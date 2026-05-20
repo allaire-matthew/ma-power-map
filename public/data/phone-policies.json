@@ -1,7 +1,7 @@
 {
   "_schemaVersion": 1,
   "_lastUpdated": "2026-05-20",
-  "_notes": "MA school district phone policies. Initial 64 high-confidence entries from 2026-04-30 overnight session. Bulk breadth-first sweep 2026-05-20 added best-effort tier assignments for the remaining 228 districts. Many bulk entries are confidence:low and should be re-verified against district handbooks via the V2 spec (RESEARCH_SPEC_PHONE_POLICIES_V2.md). See sanitization filter in scripts/merge-policies.py \u2014 cross-state misattributions are downgraded to tier 1 with explanatory note.",
+  "_notes": "MA school district phone policies. Initial 64 high-confidence entries from 2026-04-30 overnight session. Bulk breadth-first sweep 2026-05-20 added best-effort tier assignments for the remaining 228 districts. Many bulk entries are confidence:low and should be re-verified against district handbooks via the V2 spec (RESEARCH_SPEC_PHONE_POLICIES_V2.md). See sanitization filter in scripts/merge-policies.py \u2014 cross-state misattributions are downgraded to tier 1 with explanatory note. | 2026-05-20: applied 4 news-verified corrections for handbook-PDF regex false positives: Norwell (T3\u2192T2), Palmer (T3\u2192T1), Up-Island Regional (T3\u2192T1 misattribution), Fitchburg (T3\u2192T2 source quality).",
   "policies": {
     "2502790": {
       "districtId": "2502790",
@@ -2212,17 +2212,24 @@
     "2504890": {
       "districtId": "2504890",
       "districtName": "Fitchburg School District",
-      "tier": 3,
-      "policySummary": "Full hardware ban: phones locked away for 7 hours per day next school year per Change.org petition details.",
-      "scope": "unknown",
-      "enforcement": "hardware",
-      "effectiveDate": "",
+      "tier": 2,
+      "policySummary": "Fitchburg Public Schools have announced a phone ban for the next school year; the specific enforcement method (off-and-away vs hardware-pouch) is not confirmed in press as of 2026-05-20. Prior tier-3 classification was sourced to a Change.org petition opposing the ban \u2014 not a valid source for enforcement method. Downgraded to tier 2 conservatively pending news confirmation.",
+      "scope": "district-wide",
+      "enforcement": "off_and_away",
+      "effectiveDate": "2025-09",
       "enrollment": null,
       "sources": [
-        "https://www.change.org/p/stop-the-phone-ban-in-fitchburg-public-schools"
+        {
+          "title": "Should Fitchburg, MA public schools ban cellphones? (community discussion)",
+          "url": "https://www.facebook.com/groups/770023199421476/posts/880672418356553/",
+          "publisher": "Facebook community group",
+          "date": "2026-05-20"
+        }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "low",
+      "status": "news_verified",
+      "news_verified_by": "Press references ban-in-development; specific enforcement method unconfirmed 2026-05-20"
     },
     "2504950": {
       "districtId": "2504950",
@@ -3203,31 +3210,30 @@
     "2509030": {
       "districtId": "2509030",
       "districtName": "Norwell School District",
-      "tier": 3,
-      "policySummary": "Handbook (hardware-pouch policy): ......................................................22 Bullying, Cyberbullying, Harassment and Hazing ........................................22 Class Cut ........................................................................................................24 Electronic Devices .................",
-      "scope": "unknown",
-      "enforcement": "hardware",
-      "effectiveDate": "",
+      "tier": 2,
+      "policySummary": "Norwell elementary handbook: 'Using personal electronic devices is not permissible during the school day (including bus rides to and from school). If brought to school, all personal electronic devices including smartphones and smartwatches must be turned off and kept inside their backpack.' Off-and-away tier (not hardware lockup); supersedes 2026-05-20 handbook auto-extraction that mis-classified this as tier 3 by matching TOC regex against bullying-policy keywords.",
+      "scope": "Elementary (Cole, Vinal)",
+      "enforcement": "off_and_away",
+      "effectiveDate": "2024-09",
       "enrollment": null,
       "sources": [
         {
-          "title": "verified no-policy 2026-05-20",
-          "url": "https://www.norwellschools.org/",
-          "publisher": "",
-          "date": "2026-05-20"
+          "title": "NORWELL PUBLIC SCHOOLS Elementary 2024-25 Student-Parent Handbook",
+          "url": "https://resources.finalsite.net/images/v1727181871/norwellschoolsorg/fh61nump9fzjvc0yslvc/Elementary_2024-25_Student-Parent_Handbook_8-20-24.pdf",
+          "publisher": "Norwell Public Schools",
+          "date": "2024-08-20"
         },
         {
-          "title": "Student handbook (extracted via pdftotext v4 auto-discovery)",
-          "url": "https://www.norwellschools.org/fs/resource-manager/view/d1b5fbef-49cd-4738-8071-18b183fa0ad5",
-          "publisher": "district",
+          "title": "Student-Parent Handbooks",
+          "url": "https://www.norwellschools.org/site/Default.aspx?PageID=31",
+          "publisher": "Norwell Public Schools",
           "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://www.norwellschools.org/fs/resource-manager/view/d1b5fbef-49cd-4738-8071-18b183fa0ad5",
-      "extraction_method": "local_pdftotext_v4_2026-05-20"
+      "status": "news_verified",
+      "news_verified_by": "Norwell Public Schools Elementary Handbook 2024-25 (district-published)"
     },
     "2509060": {
       "districtId": "2509060",
@@ -3281,31 +3287,24 @@
     "2509300": {
       "districtId": "2509300",
       "districtName": "Palmer School District",
-      "tier": 3,
-      "policySummary": "Handbook (hardware policy): his or her property\u037e ii. creates a hostile environment at school for the target\u037e iii. infringes on the rights of the target at school\u037e or iv. materially and substantially disrupts the education process or the orderly operation of a school. Cyberbullying is bullying through the use of technology or e",
+      "tier": 1,
+      "policySummary": "No specific MA Palmer phone-restriction policy located in press or district sources as of 2026-05-20. Prior tier-3 classification was a handbook-PDF regex false positive: the classifier matched 'hardware policy' keywords against anti-bullying language ('hostile environment', 'rights of the target', 'cyberbullying is bullying through technology'), not phone-policy text. Re-verify before changing tier.",
       "scope": "unknown",
-      "enforcement": "hardware",
+      "enforcement": "unrestricted_default",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
         {
-          "title": "verified no-policy 2026-05-20",
+          "title": "Web search 2026-05-20 \u2014 no Palmer MA-specific phone policy found",
           "url": "https://www.palmerschools.org/",
-          "publisher": "",
-          "date": "2026-05-20"
-        },
-        {
-          "title": "Student handbook (pdftotext)",
-          "url": "https://www.palmerschools.org/pdf/District%20Handbook%20for%202024-2025.pdf",
-          "publisher": "district",
+          "publisher": "Palmer Public Schools",
           "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://www.palmerschools.org/pdf/District%20Handbook%20for%202024-2025.pdf",
-      "extraction_method": "pdftotext"
+      "confidence": "low",
+      "status": "news_verified",
+      "news_verified_by": "Negative finding: no Palmer-specific phone policy in press search 2026-05-20"
     },
     "2509420": {
       "districtId": "2509420",
@@ -4194,25 +4193,24 @@
     "2500043": {
       "districtId": "2500043",
       "districtName": "Up-Island Regional School District",
-      "tier": 3,
-      "policySummary": "Handbook (hardware policy): SDC) A student will attend school but will be assigned to a specific location and will be supervised in all common spaces (ie. hallways, cafeteria). It is an expectation that the student works productively on academic assignments throughout the day. The student is expected to surrender all of their ",
-      "scope": "unknown",
-      "enforcement": "hardware",
+      "tier": 1,
+      "policySummary": "Cross-district misattribution: prior tier-3 entry pointed to mvrhs.org handbook, but MVRHS is a separate district (Martha's Vineyard Regional High, 2507380), already correctly tier-3. Up-Island is K-8 only (Chilmark Elementary, West Tisbury Elementary). No K-8 Up-Island-specific phone policy located in press as of 2026-05-20. Re-verify against the actual Chilmark/West Tisbury elementary handbooks before changing tier.",
+      "scope": "K-8",
+      "enforcement": "unrestricted_default",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
         {
-          "title": "Student handbook (pdftotext)",
-          "url": "https://mvrhs.org/wp-content/uploads/2025/08/MVRHS-Student-Handbook-25_26.pdf",
-          "publisher": "district",
+          "title": "Chilmark School",
+          "url": "https://www.chilmarkschool.org/",
+          "publisher": "Up-Island Regional School District",
           "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://mvrhs.org/wp-content/uploads/2025/08/MVRHS-Student-Handbook-25_26.pdf",
-      "extraction_method": "pdftotext"
+      "confidence": "low",
+      "status": "news_verified",
+      "news_verified_by": "Negative finding: prior handbook was MVRHS (district 2507380); no Up-Island-K8-specific phone policy located 2026-05-20"
     },
     "2501740": {
       "districtId": "2501740",
