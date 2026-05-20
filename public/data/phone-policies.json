@@ -1746,15 +1746,25 @@
     "2502580": {
       "districtId": "2502580",
       "districtName": "Berlin-Boylston School District",
-      "tier": 1,
-      "policySummary": "No MA Berlin-Boylston policy located in 2026-05-20 search.",
+      "tier": 2,
+      "policySummary": "Handbook excerpt (off-and-away / restriction detected): VALUABLES BROUGHT TO SCHOOL (MONEY, ELECTRONIC DEVICES, ETC.) When children bring money to school we ask that parents place the money in an envelope, include a note inside stating the reason for the money being sent, and include both the child and the teacher's name on the envelope.",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1724615794/bbrsdorg/crpulx6gc1koljnpcsuv/besfamilyhandbook-24.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1724615794/bbrsdorg/crpulx6gc1koljnpcsuv/besfamilyhandbook-24.pdf",
+      "extraction_method": "local_pdftotext_2026-05-20"
     },
     "2502640": {
       "districtId": "2502640",
@@ -1967,14 +1977,24 @@
       "districtId": "2504200",
       "districtName": "Dighton-Rehoboth School District",
       "tier": 1,
-      "policySummary": "Superintendent: 'no substantive changes'; fine line between distraction and educational use acknowledged; Chromebooks reduce phone need.",
+      "policySummary": "Handbook reviewed; phone keywords appear but no clear restriction pattern matched. Likely teacher-discretion or no district-wide policy.",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext)",
+          "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3223/Drhs/9cefa189-bafd-41b3-bb83-29f7c8a936ab/Draft_to_SC_9_8_22_FINAL_DRRHS_Student_Handboo.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3223/Drhs/9cefa189-bafd-41b3-bb83-29f7c8a936ab/Draft_to_SC_9_8_22_FINAL_DRRHS_Student_Handboo.pdf",
+      "extraction_method": "local_pdftotext_2026-05-20"
     },
     "2504230": {
       "districtId": "2504230",
@@ -2310,15 +2330,25 @@
     "2505790": {
       "districtId": "2505790",
       "districtName": "Hanover School District",
-      "tier": 1,
-      "policySummary": "MA Hanover has policy manual but specific cell phone policy not located in 2026-05-20 search.",
+      "tier": 2,
+      "policySummary": "Handbook excerpt (off-and-away / restriction detected): This includes but is not limited to all types of electronic devices.",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext)",
+          "url": "https://www.hanoverschools.org/sites/g/files/vyhlif3221/f/uploads/hhs_handbook_2025-2026.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://www.hanoverschools.org/sites/g/files/vyhlif3221/f/uploads/hhs_handbook_2025-2026.pdf",
+      "extraction_method": "local_pdftotext_2026-05-20"
     },
     "2505880": {
       "districtId": "2505880",
@@ -2349,15 +2379,25 @@
     "2506150": {
       "districtId": "2506150",
       "districtName": "Holbrook School District",
-      "tier": 1,
-      "policySummary": "District policy manual exists with cell phones/electronic devices policy (JICJA) but specific details not accessible.",
+      "tier": 2,
+      "policySummary": "Handbook excerpt (off-and-away / restriction detected): \u200b CELL PHONES & SMART WATCHES Cell phone and smartwatch use has become an increasing issue and disrupts the educational process.",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1756428386/holbrookk12maus/r0tl5tke4wkwgxmolqwd/JFKStudentHandbook2025-2026.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1756428386/holbrookk12maus/r0tl5tke4wkwgxmolqwd/JFKStudentHandbook2025-2026.pdf",
+      "extraction_method": "local_pdftotext_2026-05-20"
     },
     "2506240": {
       "districtId": "2506240",
@@ -2571,28 +2611,48 @@
     "2507230": {
       "districtId": "2507230",
       "districtName": "Mansfield School District",
-      "tier": 1,
-      "policySummary": "No MA Mansfield policy located in 2026-05-20 search.",
+      "tier": 2,
+      "policySummary": "Handbook excerpt (off-and-away / restriction detected): Cell Phones & Personal Listening Devices Policy 3245 Cell phones and electronic devices are NOT allowed at school.",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1760376189/mansfieldwednetedu/ez1y5v4m41aogfmynzm9/2025-26StudentHandbook-Official.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1760376189/mansfieldwednetedu/ez1y5v4m41aogfmynzm9/2025-26StudentHandbook-Official.pdf",
+      "extraction_method": "local_pdftotext_2026-05-20"
     },
     "2507350": {
       "districtId": "2507350",
       "districtName": "Marshfield School District",
       "tier": 1,
-      "policySummary": "MA Marshfield policy not located in 2026-05-20 search.",
+      "policySummary": "Handbook reviewed; phone keywords appear but no clear restriction pattern matched. Likely teacher-discretion or no district-wide policy.",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1753988034/marshfieldschoolsorg/hrgt1n8hrbv1ohlxxfnu/MHSStudentHandbook.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1753988034/marshfieldschoolsorg/hrgt1n8hrbv1ohlxxfnu/MHSStudentHandbook.pdf",
+      "extraction_method": "local_pdftotext_2026-05-20"
     },
     "2507500": {
       "districtId": "2507500",
@@ -4053,15 +4113,25 @@
     "2504650": {
       "districtId": "2504650",
       "districtName": "Oak Bluffs School District",
-      "tier": 1,
-      "policySummary": "No specific cell phone policy found.",
+      "tier": 2,
+      "policySummary": "Handbook excerpt (off-and-away / restriction detected): Electronic Communication Devices Students may not use cellphones, handheld electronic games, laser pens, or similar devices in school including recess.",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext)",
+          "url": "https://cdnsm5-ss11.sharpschool.com/UserFiles/Servers/Server_8231008/File/For%20Students/Student%20Handbook/1920_handbook_ob_school(2).pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://cdnsm5-ss11.sharpschool.com/UserFiles/Servers/Server_8231008/File/For%20Students/Student%20Handbook/1920_handbook_ob_school(2).pdf",
+      "extraction_method": "local_pdftotext_2026-05-20"
     },
     "2504710": {
       "districtId": "2504710",
@@ -4333,28 +4403,48 @@
     "2509540": {
       "districtId": "2509540",
       "districtName": "Petersham School District",
-      "tier": 1,
-      "policySummary": "No district-specific policy located. K-6 elementary school.",
+      "tier": 2,
+      "policySummary": "Handbook excerpt (off-and-away / restriction detected): We do not allow electronics (for example, Nintendo Switch, iPads, DS, or cell phones) to be used in school, in class, at recess or lunch, or on the school bus.",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext)",
+          "url": "https://tb2cdn.schoolwebmasters.com/accnt_676659/site_687443/Documents/Parent-Handbook.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://tb2cdn.schoolwebmasters.com/accnt_676659/site_687443/Documents/Parent-Handbook.pdf",
+      "extraction_method": "local_pdftotext_2026-05-20"
     },
     "2509690": {
       "districtId": "2509690",
       "districtName": "Plainville School District",
-      "tier": 1,
-      "policySummary": "No district-specific policy located. Policy manual available on district website.",
+      "tier": 2,
+      "policySummary": "Handbook excerpt (off-and-away / restriction detected): S\u2019 SAFETY \u2013 VISITORS/VOLUNTEERS\u200b 29 NON DISCRIMINATION POLICY\u200b 30 Section 504: Non Discrimination On The Basis Of Handicap\u200b 33 Non Discrimination On The Basis Of Title VI And Title IX\u200b 34 CELL PHONES OR SIMILAR ELECTRONIC DEVICES\u200b 34 COMPLAINTS AND GRIEVANCES\u200b 35 CONFERENCES\u200b 35 C.O.R.I.",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1758033905/plainvillek12maus/tmvnk7ox1ndlgw3j4uuy/FINAL-FamilyStudentHandbook2025-2026.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1758033905/plainvillek12maus/tmvnk7ox1ndlgw3j4uuy/FINAL-FamilyStudentHandbook2025-2026.pdf",
+      "extraction_method": "local_pdftotext_2026-05-20"
     },
     "2509780": {
       "districtId": "2509780",
@@ -4372,15 +4462,25 @@
     "2510080": {
       "districtId": "2510080",
       "districtName": "Richmond School District",
-      "tier": 1,
-      "policySummary": "No MA Richmond-specific policy located in 2026-05-20 search.",
+      "tier": 2,
+      "policySummary": "Handbook excerpt (off-and-away / restriction detected): 7 Student Mobil Communication Devices Students may have cell phones at school, however, cell phones will be kept turned off during the school day.",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext)",
+          "url": "https://d16k74nzx9emoe.cloudfront.net/2b39aa29-f104-4f19-a441-e138f0fc418d/Richmond%20School%2025-26%20handbook.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://d16k74nzx9emoe.cloudfront.net/2b39aa29-f104-4f19-a441-e138f0fc418d/Richmond%20School%2025-26%20handbook.pdf",
+      "extraction_method": "local_pdftotext_2026-05-20"
     },
     "2510140": {
       "districtId": "2510140",
@@ -4411,15 +4511,25 @@
     "2510530": {
       "districtId": "2510530",
       "districtName": "Savoy School District",
-      "tier": 1,
-      "policySummary": "No district-specific policy located. Elementary school.",
+      "tier": 2,
+      "policySummary": "Handbook excerpt (off-and-away / restriction detected): 33 Electronic Devices and Technology Resources.\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026 .",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext)",
+          "url": "https://content.myconnectsuite.com/api/documents/e9f3a8dd88e841588842fcf32f68ac6d",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://content.myconnectsuite.com/api/documents/e9f3a8dd88e841588842fcf32f68ac6d",
+      "extraction_method": "local_pdftotext_2026-05-20"
     },
     "2510710": {
       "districtId": "2510710",
@@ -4542,14 +4652,24 @@
       "districtId": "2511730",
       "districtName": "Truro School District",
       "tier": 1,
-      "policySummary": "No district-specific policy located. Pre-K through 5 elementary school.",
+      "policySummary": "Handbook reviewed; phone keywords appear but no clear restriction pattern matched. Likely teacher-discretion or no district-wide policy.",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext)",
+          "url": "https://truromass.org/TCS%20Student%20Handbook%2024-25_docx.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://truromass.org/TCS%20Student%20Handbook%2024-25_docx.pdf",
+      "extraction_method": "local_pdftotext_2026-05-20"
     },
     "2511940": {
       "districtId": "2511940",
@@ -4762,15 +4882,25 @@
     "2500541": {
       "districtId": "2500541",
       "districtName": "Somerset-Berkley School District",
-      "tier": 1,
-      "policySummary": "No district-specific policy located. Policy manual available on district website.",
+      "tier": 2,
+      "policySummary": "Handbook excerpt (off-and-away / restriction detected): (Student receives a zero on the assignment) INAPPROPRIATE USE OR POSSESSION OF WIRELESS COMMUNICATIONS OR ELECTRONIC DEVICES: See the wireless communications and electronic devices citation located in the general information section of this handbook for more information regarding these devices.",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext)",
+          "url": "https://www.somersetschools.org/documents/2023-24-Elementary-Handbook-9-15-23.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://www.somersetschools.org/documents/2023-24-Elementary-Handbook-9-15-23.pdf",
+      "extraction_method": "local_pdftotext_2026-05-20"
     },
     "2504560": {
       "districtId": "2504560",
