@@ -88,6 +88,7 @@ export type PhonePolicy = {
   confidence: 'high' | 'medium' | 'low'
 }
 
+const townToLayerPromises: Partial<Record<LayerName, Promise<Record<string, string>>>> = {}
 let townToDistrictPromise: Promise<Record<string, string>> | null = null
 
 // Planar ray-cast point-in-polygon, even-odd rule. Reliable across all
@@ -137,6 +138,79 @@ function pointInGeometry(
 // Tiebreaker for towns matched by multiple districts: prefer the
 // district whose name starts with the town's name (covers single-town
 // districts like "Boston School District").
+// Generic town → containing-layer-feature map. `layer` is any of the
+// non-towns layer names. Result keys are town GEOIDs; values are the
+// containing feature's GEOID. The school-districts-specific
+// `getTownToDistrict` below is a thin wrapper for backwards compat.
+export async function getTownToLayer(
+  layer: Exclude<LayerName, 'towns'>,
+): Promise<Record<string, string>> {
+  if (!townToLayerPromises[layer]) {
+    townToLayerPromises[layer] = (async () => {
+      const projection = await getProjection()
+      const path = geoPath(projection)
+      const [townsFC, layerFC] = await Promise.all([
+        fetchJson<FeatureCollection>(geoUrl(FILES.towns)),
+        fetchJson<FeatureCollection>(geoUrl(FILES[layer])),
+      ])
+
+      const projectedFeatures = layerFC.features.map((df) => {
+        const dProps = (df.properties ?? {}) as Record<string, unknown>
+        const dId =
+          (dProps.GEOID as string | undefined) ??
+          (df.id != null ? String(df.id) : '')
+        const dName = (dProps.name as string | undefined) ?? ''
+        const geom = df.geometry
+        let projected: { type: string; coordinates: unknown } | null = null
+        if (geom?.type === 'Polygon') {
+          projected = {
+            type: 'Polygon',
+            coordinates: (geom.coordinates as number[][][]).map((ring) =>
+              ring.map((pt) => projection(pt as [number, number]) ?? [0, 0]),
+            ),
+          }
+        } else if (geom?.type === 'MultiPolygon') {
+          projected = {
+            type: 'MultiPolygon',
+            coordinates: (geom.coordinates as number[][][][]).map((poly) =>
+              poly.map((ring) =>
+                ring.map((pt) => projection(pt as [number, number]) ?? [0, 0]),
+              ),
+            ),
+          }
+        }
+        return { id: dId, name: dName, geom: projected }
+      })
+
+      const map: Record<string, string> = {}
+      for (const tf of townsFC.features) {
+        const tProps = (tf.properties ?? {}) as Record<string, unknown>
+        const tId =
+          (tProps.GEOID as string | undefined) ??
+          (tf.id != null ? String(tf.id) : '')
+        if (!tId) continue
+        const tName = (tProps.name as string | undefined) ?? ''
+        const centroid = path.centroid(tf as unknown as GeoPermissibleObjects)
+        const pt: [number, number] = [centroid[0], centroid[1]]
+
+        const containers: { id: string; name: string }[] = []
+        for (const d of projectedFeatures) {
+          if (d.geom && d.id && pointInGeometry(pt, d.geom)) {
+            containers.push({ id: d.id, name: d.name })
+          }
+        }
+        if (!containers.length) continue
+        const named = containers.find((c) =>
+          c.name.toLowerCase().startsWith(tName.toLowerCase()),
+        )
+        map[tId] = (named ?? containers[0]).id
+      }
+      return map
+    })()
+  }
+  return townToLayerPromises[layer]!
+}
+
 export async function getTownToDistrict(): Promise<Record<string, string>> {
   if (!townToDistrictPromise) {
     townToDistrictPromise = (async () => {
@@ -259,6 +333,37 @@ export async function loadSchoolCommitteeLinks(): Promise<
 
 export function normalizeDistrictKey(s: string): string {
   return s.trim().toLowerCase().replace(/\s+/g, ' ')
+}
+
+export type USHouseRep = {
+  district: number
+  name: string
+  party: string
+  url: string
+  since: number
+}
+
+export type LegislatorsData = {
+  us_house: Record<string, USHouseRep>
+  ma_senate_directory_url: string
+  ma_house_directory_url: string
+  _lastUpdated: string
+}
+
+let legislatorsPromise: Promise<LegislatorsData | null> | null = null
+
+export async function loadLegislators(): Promise<LegislatorsData | null> {
+  if (!legislatorsPromise) {
+    legislatorsPromise = (async () => {
+      try {
+        const url = `${import.meta.env.BASE_URL}data/legislators.json`
+        return await fetchJson<LegislatorsData>(url)
+      } catch {
+        return null
+      }
+    })()
+  }
+  return legislatorsPromise
 }
 
 export async function loadLayer(name: LayerName): Promise<ProjectedLayer> {

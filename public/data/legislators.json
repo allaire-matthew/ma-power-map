@@ -1,0 +1,72 @@
+{
+  "_schemaVersion": 1,
+  "_lastUpdated": "2026-05-20",
+  "_notes": "MA federal + state legislator directory. us_house is keyed by GEOID matching ma-congressional.geojson (25NN). ma_senate and ma_house are placeholders \u2014 directory links to malegislature.gov until per-district reps are verified.",
+  "us_house": {
+    "2501": {
+      "district": 1,
+      "name": "Richard Neal",
+      "party": "D",
+      "url": "https://neal.house.gov/",
+      "since": 1989
+    },
+    "2502": {
+      "district": 2,
+      "name": "Jim McGovern",
+      "party": "D",
+      "url": "https://mcgovern.house.gov/",
+      "since": 1997
+    },
+    "2503": {
+      "district": 3,
+      "name": "Lori Trahan",
+      "party": "D",
+      "url": "https://trahan.house.gov/",
+      "since": 2019
+    },
+    "2504": {
+      "district": 4,
+      "name": "Jake Auchincloss",
+      "party": "D",
+      "url": "https://auchincloss.house.gov/",
+      "since": 2021
+    },
+    "2505": {
+      "district": 5,
+      "name": "Katherine Clark",
+      "party": "D",
+      "url": "https://katherineclark.house.gov/",
+      "since": 2013
+    },
+    "2506": {
+      "district": 6,
+      "name": "Seth Moulton",
+      "party": "D",
+      "url": "https://moulton.house.gov/",
+      "since": 2015
+    },
+    "2507": {
+      "district": 7,
+      "name": "Ayanna Pressley",
+      "party": "D",
+      "url": "https://pressley.house.gov/",
+      "since": 2019
+    },
+    "2508": {
+      "district": 8,
+      "name": "Stephen Lynch",
+      "party": "D",
+      "url": "https://lynch.house.gov/",
+      "since": 2001
+    },
+    "2509": {
+      "district": 9,
+      "name": "Bill Keating",
+      "party": "D",
+      "url": "https://keating.house.gov/",
+      "since": 2013
+    }
+  },
+  "ma_senate_directory_url": "https://malegislature.gov/Legislators/Members/Senate",
+  "ma_house_directory_url": "https://malegislature.gov/Legislators/Members/House"
+}

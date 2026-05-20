@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react'
 import {
   getTownToDistrict,
+  getTownToLayer,
   loadLayer,
+  loadLegislators,
   loadPhonePolicies,
   loadSchoolCommitteeLinks,
   normalizeDistrictKey,
+  type LegislatorsData,
   type PhonePolicy,
   type PhoneTier,
   type ProjectedFeature,
@@ -23,6 +26,11 @@ export function TownPopup({
   const [districtName, setDistrictName] = useState<string | null>(null)
   const [policy, setPolicy] = useState<PhonePolicy | null>(null)
   const [schoolLink, setSchoolLink] = useState<SchoolCommitteeLink | null>(null)
+  const [usHouseRep, setUsHouseRep] = useState<{ name: string; party: string; url: string; district: number } | null>(null)
+  const [stateSenateName, setStateSenateName] = useState<string | null>(null)
+  const [stateHouseName, setStateHouseName] = useState<string | null>(null)
+  const [countyName, setCountyName] = useState<string | null>(null)
+  const [legislators, setLegislators] = useState<LegislatorsData | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -32,15 +40,42 @@ export function TownPopup({
     setDistrictName(null)
     setPolicy(null)
     setSchoolLink(null)
+    setUsHouseRep(null)
+    setStateSenateName(null)
+    setStateHouseName(null)
+    setCountyName(null)
     ;(async () => {
-      const [townsLayer, districtsLayer, policies, tToD, scLinks] =
-        await Promise.all([
-          loadLayer('towns'),
-          loadLayer('schoolDistricts'),
-          loadPhonePolicies(),
-          getTownToDistrict(),
-          loadSchoolCommitteeLinks(),
-        ])
+      const [
+        townsLayer,
+        districtsLayer,
+        congressionalLayer,
+        stateSenateLayer,
+        stateHouseLayer,
+        countiesLayer,
+        policies,
+        tToD,
+        tToCong,
+        tToSenate,
+        tToHouse,
+        tToCounty,
+        scLinks,
+        legData,
+      ] = await Promise.all([
+        loadLayer('towns'),
+        loadLayer('schoolDistricts'),
+        loadLayer('congressional'),
+        loadLayer('stateSenate'),
+        loadLayer('stateHouse'),
+        loadLayer('counties'),
+        loadPhonePolicies(),
+        getTownToDistrict(),
+        getTownToLayer('congressional'),
+        getTownToLayer('stateSenate'),
+        getTownToLayer('stateHouse'),
+        getTownToLayer('counties'),
+        loadSchoolCommitteeLinks(),
+        loadLegislators(),
+      ])
       if (cancelled) return
       const tf = townsLayer.features.find((f) => f.id === townId) ?? null
       const dId = tToD[townId]
@@ -48,15 +83,37 @@ export function TownPopup({
         ? districtsLayer.features.find((f) => f.id === dId) ?? null
         : null
       const pol = dId ? policies[dId] ?? null : null
-      // Try lookup by district name first, then town name as fallback.
       const dKey = df ? normalizeDistrictKey(df.name) : null
       const tKey = tf ? normalizeDistrictKey(tf.name) : null
-      const link =
-        (dKey && scLinks[dKey]) || (tKey && scLinks[tKey]) || null
+      const link = (dKey && scLinks[dKey]) || (tKey && scLinks[tKey]) || null
+
+      // Containing federal + state + county subunits
+      const congId = tToCong[townId]
+      const ush = legData && congId ? legData.us_house[congId] ?? null : null
+      const senId = tToSenate[townId]
+      const senF = senId
+        ? stateSenateLayer.features.find((f) => f.id === senId)
+        : null
+      const houseId = tToHouse[townId]
+      const houseF = houseId
+        ? stateHouseLayer.features.find((f) => f.id === houseId)
+        : null
+      const ctyId = tToCounty[townId]
+      const ctyF = ctyId
+        ? countiesLayer.features.find((f) => f.id === ctyId)
+        : null
+      // Silence unused-var warnings — these layers are loaded for future use.
+      void congressionalLayer
+
       setTown(tf)
       setDistrictName(df?.name ?? null)
       setPolicy(pol)
       setSchoolLink(link)
+      setUsHouseRep(ush)
+      setStateSenateName(senF?.name ?? null)
+      setStateHouseName(houseF?.name ?? null)
+      setCountyName(ctyF?.name ?? null)
+      setLegislators(legData)
       setLoading(false)
     })()
     return () => {
@@ -124,10 +181,112 @@ export function TownPopup({
           )}
         </div>
 
+        <RepsBlock
+          loading={loading}
+          county={countyName}
+          usHouse={usHouseRep}
+          stateSenate={stateSenateName}
+          stateHouse={stateHouseName}
+          legislators={legislators}
+        />
+
         <PhonePolicyBlock policy={policy} loading={loading} hasDistrict={!!districtName} />
 
         <EventsBlock townName={town?.name ?? null} />
       </div>
+    </div>
+  )
+}
+
+function RepsBlock({
+  loading,
+  county,
+  usHouse,
+  stateSenate,
+  stateHouse,
+  legislators,
+}: {
+  loading: boolean
+  county: string | null
+  usHouse: { name: string; party: string; url: string; district: number } | null
+  stateSenate: string | null
+  stateHouse: string | null
+  legislators: LegislatorsData | null
+}) {
+  if (loading && !county && !usHouse && !stateSenate && !stateHouse) {
+    return (
+      <div className="pt-1 border-t border-slate-100">
+        <div className="text-[10px] uppercase tracking-wider text-slate-500 mb-1">
+          Your representatives
+        </div>
+        <div className="text-[11.5px] text-slate-400 italic">Loading…</div>
+      </div>
+    )
+  }
+  return (
+    <div className="pt-1 border-t border-slate-100">
+      <div className="text-[10px] uppercase tracking-wider text-slate-500 mb-1">
+        Your representatives
+      </div>
+      <ul className="text-[12px] space-y-1">
+        {usHouse && (
+          <li>
+            <div className="text-[10px] text-slate-500">
+              US House · District {usHouse.district} ({usHouse.party})
+            </div>
+            <a
+              href={usHouse.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:underline"
+            >
+              {usHouse.name} →
+            </a>
+          </li>
+        )}
+        {stateSenate && (
+          <li>
+            <div className="text-[10px] text-slate-500">
+              MA Senate · {stateSenate}
+            </div>
+            <a
+              href={
+                legislators?.ma_senate_directory_url ??
+                'https://malegislature.gov/Legislators/Members/Senate'
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:underline"
+            >
+              Find senator →
+            </a>
+          </li>
+        )}
+        {stateHouse && (
+          <li>
+            <div className="text-[10px] text-slate-500">
+              MA House · {stateHouse}
+            </div>
+            <a
+              href={
+                legislators?.ma_house_directory_url ??
+                'https://malegislature.gov/Legislators/Members/House'
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:underline"
+            >
+              Find representative →
+            </a>
+          </li>
+        )}
+        {county && (
+          <li>
+            <div className="text-[10px] text-slate-500">County</div>
+            <span className="text-slate-900">{county} County</span>
+          </li>
+        )}
+      </ul>
     </div>
   )
 }
