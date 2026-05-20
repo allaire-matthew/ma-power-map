@@ -218,9 +218,12 @@ export function MapBackground({
       for (const p of paths) {
         if (p.isPointInFill(localPt)) {
           const id = p.dataset.id!
-          // Ignore clicks on UI chrome (popup, legend, header, etc.)
-          const target = e.target as Element | null
-          if (target?.closest('[data-map-ui]')) return
+          // Ignore clicks on UI chrome (popup, legend, header, etc.).
+          // Guard against synthetic events whose target isn't an Element
+          // (e.g. window-dispatched MouseEvents used by debug/verify rigs).
+          const target = e.target as { closest?: (s: string) => Element | null } | null
+          if (typeof target?.closest === 'function' && target.closest('[data-map-ui]'))
+            return
           onTownClick(id)
           return
         }
