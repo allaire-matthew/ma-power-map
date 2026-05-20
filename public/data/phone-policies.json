@@ -2758,7 +2758,7 @@
       "districtId": "2507890",
       "districtName": "Millbury School District",
       "tier": 1,
-      "policySummary": "Student handbook references policies but specific cell phone policy details not accessible in search.",
+      "policySummary": "Handbook reviewed; phone keywords found but no clear restriction: 117 School Events Conduct\u200b 118 Dress Code\u200b 118",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -2769,10 +2769,19 @@
           "url": "https://www.millburyschools.org/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (extracted via pdftotext v4 auto-discovery)",
+          "url": "https://files.smartsites.parentsquare.com/7597/sy24-25_mps_district_handbook---english.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://files.smartsites.parentsquare.com/7597/sy24-25_mps_district_handbook---english.pdf",
+      "extraction_method": "local_pdftotext_v4_2026-05-20"
     },
     "2507920": {
       "districtId": "2507920",
@@ -3034,10 +3043,10 @@
     "2509030": {
       "districtId": "2509030",
       "districtName": "Norwell School District",
-      "tier": 1,
-      "policySummary": "Policies page exists but specific cell phone policy details not found.",
+      "tier": 3,
+      "policySummary": "Handbook (hardware-pouch policy): ......................................................22 Bullying, Cyberbullying, Harassment and Hazing ........................................22 Class Cut ........................................................................................................24 Electronic Devices .................",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "hardware",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -3046,18 +3055,27 @@
           "url": "https://www.norwellschools.org/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (extracted via pdftotext v4 auto-discovery)",
+          "url": "https://www.norwellschools.org/fs/resource-manager/view/d1b5fbef-49cd-4738-8071-18b183fa0ad5",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://www.norwellschools.org/fs/resource-manager/view/d1b5fbef-49cd-4738-8071-18b183fa0ad5",
+      "extraction_method": "local_pdftotext_v4_2026-05-20"
     },
     "2509060": {
       "districtId": "2509060",
       "districtName": "Norwood School District",
-      "tier": 1,
-      "policySummary": "No specific Norwood MA policy found in 2026-05-20 search.",
+      "tier": 2,
+      "policySummary": "Handbook (off-and-away / restriction): 28 Out-of-room 28 Dining Hall 28 Directed Study 28 Library 28 Cellphones and other Electronic Devices 28-29 Deliveries",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -3066,10 +3084,19 @@
           "url": "https://www.norwood.k12.ma.us/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (extracted via pdftotext v4 auto-discovery)",
+          "url": "https://www.norwood.k12.ma.us/about/files/StudentHandbooks/NHSStudentHandbook2025-2026.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://www.norwood.k12.ma.us/about/files/StudentHandbooks/NHSStudentHandbook2025-2026.pdf",
+      "extraction_method": "local_pdftotext_v4_2026-05-20"
     },
     "2509270": {
       "districtId": "2509270",
@@ -3161,14 +3188,24 @@
       "districtId": "2509930",
       "districtName": "Randolph School District",
       "tier": 1,
-      "policySummary": "No MA Randolph policy located in 2026-05-20 search.",
+      "policySummary": "Handbook reviewed; phone keywords found but no clear restriction: ed to have conceded to a reasonable search of their person and effects. School administrators and officials may conduct reasonable searches on the school property of lockers, desks, vehicles and perso",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext v4 auto-discovery)",
+          "url": "https://www.randolph.k12.ma.us/families/files/documents/25-26%20RPS%20District%20Code%20of%20Conduct%20(Final%20Version).docx.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://www.randolph.k12.ma.us/families/files/documents/25-26%20RPS%20District%20Code%20of%20Conduct%20(Final%20Version).docx.pdf",
+      "extraction_method": "local_pdftotext_v4_2026-05-20"
     },
     "2510050": {
       "districtId": "2510050",
@@ -3353,7 +3390,7 @@
       "districtId": "2511010",
       "districtName": "Southbridge School District",
       "tier": 1,
-      "policySummary": "No policy details found in 2026-05-20 search.",
+      "policySummary": "Handbook downloaded but no phone-policy keywords found.",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -3364,10 +3401,19 @@
           "url": "https://www.southbridgepublic.org/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (extracted via pdftotext v4 auto-discovery)",
+          "url": "https://4.files.edl.io/8c4c/08/30/23/141118-7cd7ec3e-0816-4769-8bbc-5272a1ee1755.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://4.files.edl.io/8c4c/08/30/23/141118-7cd7ec3e-0816-4769-8bbc-5272a1ee1755.pdf",
+      "extraction_method": "local_pdftotext_v4_2026-05-20"
     },
     "2511040": {
       "districtId": "2511040",
@@ -3593,7 +3639,7 @@
       "districtId": "2512030",
       "districtName": "Ware School District",
       "tier": 1,
-      "policySummary": "No MA Ware-specific policy located in 2026-05-20 search.",
+      "policySummary": "Handbook reviewed; phone keywords found but no clear restriction: IONS ................................................................................................................................ 36 DISCIPLINE OF STUDENTS WITH DISABILITIES ......................",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -3604,10 +3650,19 @@
           "url": "https://www.wareps.org/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (extracted via pdftotext v4 auto-discovery)",
+          "url": "http://www.wareps.org/common/pages/DisplayFile.aspx?itemId=65688305",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "http://www.wareps.org/common/pages/DisplayFile.aspx?itemId=65688305",
+      "extraction_method": "local_pdftotext_v4_2026-05-20"
     },
     "2512060": {
       "districtId": "2512060",
@@ -4150,14 +4205,24 @@
       "districtId": "2504920",
       "districtName": "Florida School District",
       "tier": 1,
-      "policySummary": "No MA-town-of-Florida-specific policy located in 2026-05-20 search.",
+      "policySummary": "Handbook reviewed; phone keywords found but no clear restriction: nal, inappropriate relationships with students. Examples of unprofessional relationships include, but are not limited to: employees fraternizing or communicating with students as if employees and stud",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (extracted via pdftotext v4 auto-discovery)",
+          "url": "https://www.cbrsd.org/fs/resource-manager/view/663eda09-371b-425d-bd93-bbc24cf27b90",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://www.cbrsd.org/fs/resource-manager/view/663eda09-371b-425d-bd93-bbc24cf27b90",
+      "extraction_method": "local_pdftotext_v4_2026-05-20"
     },
     "2505610": {
       "districtId": "2505610",
