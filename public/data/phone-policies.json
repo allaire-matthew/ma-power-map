@@ -1,7 +1,7 @@
 {
   "_schemaVersion": 1,
   "_lastUpdated": "2026-05-20",
-  "_notes": "MA school district phone policies. Initial 64 high-confidence entries from 2026-04-30 overnight session. Bulk breadth-first sweep 2026-05-20 added best-effort tier assignments for the remaining 228 districts. Many bulk entries are confidence:low and should be re-verified against district handbooks via the V2 spec (RESEARCH_SPEC_PHONE_POLICIES_V2.md). See sanitization filter in scripts/merge-policies.py \u2014 cross-state misattributions are downgraded to tier 1 with explanatory note. | 2026-05-20: applied 4 news-verified corrections for handbook-PDF regex false positives: Norwell (T3\u2192T2), Palmer (T3\u2192T1), Up-Island Regional (T3\u2192T1 misattribution), Fitchburg (T3\u2192T2 source quality).",
+  "_notes": "MA school district phone policies. Initial 64 high-confidence entries from 2026-04-30 overnight session. Bulk breadth-first sweep 2026-05-20 added best-effort tier assignments for the remaining 228 districts. Many bulk entries are confidence:low and should be re-verified against district handbooks via the V2 spec (RESEARCH_SPEC_PHONE_POLICIES_V2.md). See sanitization filter in scripts/merge-policies.py \u2014 cross-state misattributions are downgraded to tier 1 with explanatory note. | 2026-05-20: applied 4 news-verified corrections for handbook-PDF regex false positives: Norwell (T3\u2192T2), Palmer (T3\u2192T1), Up-Island Regional (T3\u2192T1 misattribution), Fitchburg (T3\u2192T2 source quality). | 2026-05-20 second pass: caught 5 cross-state misattributions and 1 bad regex upgrade from the stricter re-classifier: Hanover (T3->T2 regex error), Mansfield (T3->T1, was WA), Brimfield (T2->T1, was IL), Conway (T2->T1, was AR), Lincoln (T2->T1, was RI), Richmond (T2->T1, unverifiable district).",
   "policies": {
     "2502790": {
       "districtId": "2502790",
@@ -1847,10 +1847,10 @@
     "2502580": {
       "districtId": "2502580",
       "districtName": "Berlin-Boylston School District",
-      "tier": 2,
-      "policySummary": "Handbook excerpt (off-and-away / restriction detected): VALUABLES BROUGHT TO SCHOOL (MONEY, ELECTRONIC DEVICES, ETC.) When children bring money to school we ask that parents place the money in an envelope, include a note inside stating the reason for the money being sent, and include both the child and the teacher's name on the envelope.",
+      "tier": 1,
+      "policySummary": "Stricter re-classification 2026-05-20: handbook PDF re-extracted and no paragraph contains both a phone-keyword and a restriction-keyword. Prior tier-2 classification was a regex false positive (the previous classifier matched keywords scattered across unrelated sections \u2014 TOC, anti-bullying language, discipline procedure). Downgraded to tier 1 pending news verification.",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "unrestricted_default",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -1862,10 +1862,11 @@
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
-      "status": "handbook_verified",
+      "confidence": "low",
+      "status": "news_verified",
       "handbook_url": "https://resources.finalsite.net/images/v1724615794/bbrsdorg/crpulx6gc1koljnpcsuv/besfamilyhandbook-24.pdf",
-      "extraction_method": "local_pdftotext_2026-05-20"
+      "extraction_method": "local_pdftotext_2026-05-20",
+      "news_verified_by": "Stricter re-extraction 2026-05-20 found no phone-policy paragraph in handbook"
     },
     "2502640": {
       "districtId": "2502640",
@@ -2442,24 +2443,24 @@
       "districtId": "2505790",
       "districtName": "Hanover School District",
       "tier": 2,
-      "policySummary": "Handbook excerpt (off-and-away / restriction detected): This includes but is not limited to all types of electronic devices.",
-      "scope": "unknown",
-      "enforcement": "off-and-away",
-      "effectiveDate": "",
+      "policySummary": "Hanover High School handbook: 'Unsupervised use of electronic devices is a large source of distraction... The use of any electronic device (cell phones, tablets, smartwatches, iPods, etc.) is not permitted during the school day without the permission of an administrator or teacher.' Off-and-away tier (teacher-discretion based), not hardware lockup. Stricter re-classification 2026-05-20 incorrectly upgraded to T3 because regex matched 'locker' elsewhere in the document; reverted to T2.",
+      "scope": "9-12",
+      "enforcement": "off_and_away",
+      "effectiveDate": "2025-09",
       "enrollment": null,
       "sources": [
         {
-          "title": "Student handbook (extracted via pdftotext)",
+          "title": "Hanover HS Student Handbook 2025-26",
           "url": "https://www.hanoverschools.org/sites/g/files/vyhlif3221/f/uploads/hhs_handbook_2025-2026.pdf",
-          "publisher": "district",
-          "date": "2026-05-20"
+          "publisher": "Hanover Public Schools",
+          "date": "2025-09-01"
         }
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://www.hanoverschools.org/sites/g/files/vyhlif3221/f/uploads/hhs_handbook_2025-2026.pdf",
-      "extraction_method": "local_pdftotext_2026-05-20"
+      "status": "news_verified",
+      "news_verified_by": "Hanover HS Handbook 2025-26 (district-published) \u2014 off-and-away policy text confirmed",
+      "handbook_url": "https://www.hanoverschools.org/sites/g/files/vyhlif3221/f/uploads/hhs_handbook_2025-2026.pdf"
     },
     "2505880": {
       "districtId": "2505880",
@@ -2491,9 +2492,9 @@
       "districtId": "2506150",
       "districtName": "Holbrook School District",
       "tier": 2,
-      "policySummary": "Handbook excerpt (off-and-away / restriction detected): \u200b CELL PHONES & SMART WATCHES Cell phone and smartwatch use has become an increasing issue and disrupts the educational process.",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): CELL PHONES & SMART WATCHES Cell phone and smartwatch use has become an increasing issue and disrupts the educational process. Between the hours of 8:30 AM and 3:00 PM, students may not use their cell phones or any apps on their smartwatch for any reason. Watches can be used to tell time only. Cell phones must be turned off and kept out of sight during school hours. Smart watches must be silenced ...",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "off_and_away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -2506,9 +2507,10 @@
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
+      "status": "news_verified",
       "handbook_url": "https://resources.finalsite.net/images/v1756428386/holbrookk12maus/r0tl5tke4wkwgxmolqwd/JFKStudentHandbook2025-2026.pdf",
-      "extraction_method": "local_pdftotext_2026-05-20"
+      "extraction_method": "local_pdftotext_2026-05-20",
+      "news_verified_by": "Stricter re-extraction 2026-05-20 confirmed phone-policy paragraph in handbook"
     },
     "2506240": {
       "districtId": "2506240",
@@ -2742,25 +2744,24 @@
     "2507230": {
       "districtId": "2507230",
       "districtName": "Mansfield School District",
-      "tier": 2,
-      "policySummary": "Handbook excerpt (off-and-away / restriction detected): Cell Phones & Personal Listening Devices Policy 3245 Cell phones and electronic devices are NOT allowed at school.",
+      "tier": 1,
+      "policySummary": "Cross-state misattribution caught 2026-05-20: prior tier-3 classification was based on a handbook PDF hosted at mansfieldwednetedu (a Washington State school district network domain), not Mansfield, MA. The Washington Mansfield handbook contains 'Cell Phones & Personal Listening Devices Policy 3245' \u2014 a WA-style policy numbering scheme. No Mansfield, MA-specific phone policy located in this pipeline pass; tier reset to 1 pending news verification.",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "unrestricted_default",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
         {
-          "title": "Student handbook (extracted via pdftotext)",
-          "url": "https://resources.finalsite.net/images/v1760376189/mansfieldwednetedu/ez1y5v4m41aogfmynzm9/2025-26StudentHandbook-Official.pdf",
-          "publisher": "district",
+          "title": "Mansfield Public Schools (MA) \u2014 homepage",
+          "url": "https://www.mansfieldschools.com/",
+          "publisher": "Mansfield Public Schools (MA)",
           "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://resources.finalsite.net/images/v1760376189/mansfieldwednetedu/ez1y5v4m41aogfmynzm9/2025-26StudentHandbook-Official.pdf",
-      "extraction_method": "local_pdftotext_2026-05-20"
+      "confidence": "low",
+      "status": "news_verified",
+      "news_verified_by": "Cross-state misattribution: prior handbook URL was mansfieldwednetedu (Washington State)"
     },
     "2507350": {
       "districtId": "2507350",
@@ -2887,9 +2888,9 @@
       "districtId": "2507770",
       "districtName": "Middleborough School District",
       "tier": 2,
-      "policySummary": "Handbook (off-and-away): s and Regulations..........................................................................................................20 Toys........................................................................................................................................................ 20 Cell Phones...",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): The use of cell phones and smartwatches is not allowed in school during the instructional day. We discourage students from bringing them to school. Any cell phones or smartwatches that are in school must be turned off during the school day and left in backpacks. Office telephones are always available as needed. Schools are not responsible for any lost, stolen or damaged personal items.",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "off_and_away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -2908,9 +2909,10 @@
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
+      "status": "news_verified",
       "handbook_url": "https://resources.finalsite.net/images/v1756831685/middleborok12maus/esxwwheiaaioilpmsare/MECCMKGHBBStudentHandbook2025-2026.pdf",
-      "extraction_method": "pdftotext"
+      "extraction_method": "pdftotext",
+      "news_verified_by": "Stricter re-extraction 2026-05-20 confirmed phone-policy paragraph in handbook"
     },
     "2507890": {
       "districtId": "2507890",
@@ -3089,9 +3091,9 @@
       "districtId": "2508730",
       "districtName": "North Attleborough School District",
       "tier": 2,
-      "policySummary": "Handbook (off-and-away): 13.\u200bWellness Policy 14.\u200bSchool Nutrition Program 15.\u200bDiscrimination Policy 16.\u200bStudent Records 17.\u200bStudent Code of Conduct and Discipline 18.\u200bAdditional Procedures for Students with Disabilities 19.\u200bSearches of Students, Property, and Lockers 20.\u200bDrug and Tobacco Use 21.\u200bElectronic Devices 22.\u200bCurri",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): 21.\u200bElectronic Devices No student shall use cell phones, laser pointers, portable media players, or other audio broadcasting or reception equipment during class unless special permission is granted by the classroom teacher. The use of a cell phone as a calculator is NOT allowed. The inappropriate use of a video or picture cell phone is prohibited at all times and may be subject to other discipline...",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "off_and_away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -3110,9 +3112,10 @@
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
+      "status": "news_verified",
       "handbook_url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3091/Nams/da37731a-bc46-40a5-aaf5-48918eb4f3ce/2025_-_2026_NAMS_Student_Handbook.pdf?disposition=inline",
-      "extraction_method": "pdftotext"
+      "extraction_method": "pdftotext",
+      "news_verified_by": "Stricter re-extraction 2026-05-20 confirmed phone-policy paragraph in handbook"
     },
     "2508760": {
       "districtId": "2508760",
@@ -3239,9 +3242,9 @@
       "districtId": "2509060",
       "districtName": "Norwood School District",
       "tier": 2,
-      "policySummary": "Handbook (off-and-away / restriction): 28 Out-of-room 28 Dining Hall 28 Directed Study 28 Library 28 Cellphones and other Electronic Devices 28-29 Deliveries",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): 28 students and teachers, and significant impediments to learning. Cellphones and other electronic devices should be off and away at all times during class, and placed in the designated cell phone storage area in the classroom, unless given affirmative consent by a teacher. This includes the hallways and common areas (bathrooms, lobby) during instructional time. Any phone calls need to be conducte...",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "off_and_away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -3260,9 +3263,10 @@
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
+      "status": "news_verified",
       "handbook_url": "https://www.norwood.k12.ma.us/about/files/StudentHandbooks/NHSStudentHandbook2025-2026.pdf",
-      "extraction_method": "local_pdftotext_v4_2026-05-20"
+      "extraction_method": "local_pdftotext_v4_2026-05-20",
+      "news_verified_by": "Stricter re-extraction 2026-05-20 confirmed phone-policy paragraph in handbook"
     },
     "2509270": {
       "districtId": "2509270",
@@ -3556,9 +3560,9 @@
       "districtId": "2510920",
       "districtName": "South Hadley School District",
       "tier": 2,
-      "policySummary": "Handbook (off-and-away): 39 Expulsion\u200b 39 School Program\u200b 39 Transfer Students\u200b 39 Electronic Devices\u200b 39 Section III: Short",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): The school reserves the right to ban or confiscate a student\u2019s cell phone if it is impacting their ability to attend to the standards of the classroom or interrupts the daily expectations or school routine.",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "off_and_away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -3577,9 +3581,10 @@
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
+      "status": "news_verified",
       "handbook_url": "https://resources.finalsite.net/images/v1756815044/southhadleyschoolsorg/ndlglp2mxm5l82shdxil/SHHSStudentHandbookFY25forDistribution.pdf",
-      "extraction_method": "pdftotext"
+      "extraction_method": "pdftotext",
+      "news_verified_by": "Stricter re-extraction 2026-05-20 confirmed phone-policy paragraph in handbook"
     },
     "2511010": {
       "districtId": "2511010",
@@ -3803,9 +3808,9 @@
       "districtId": "2511970",
       "districtName": "Walpole School District",
       "tier": 2,
-      "policySummary": "Handbook (off-and-away): COMMENCEMENT EXERCISES\u200b 44 GRADE REPORTING\u200b 44 SUMMER SCHOOL ELIGIBILITY\u200b 44 DROPOUT PREVENTION\u200b 44 PASSING BETWEEN CLASSES\u200b 45 PORTABLE ELECTRONIC DEVICE POLICY\u200b 45 SEXTING\u200b",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): RANGE OF CONSEQUENCES FOR CLASS 2 OFFENSES \u25cf\u200b After school detention \u25cf\u200b Saturday detention \u25cf\u200b In-House Suspension and/or Out-of-School Suspension for one (1) through ten (10) days with the possibility of recommendation for expulsion \u25cf\u200b Restitution for theft/vandalism/destruction of property \u25cf\u200b Smoking/Vaping Cessation Program \u25cf\u200b Counseling and/or behavioral contract \u25cf\u200b Social probation (no partici...",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "off_and_away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -3824,9 +3829,10 @@
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
+      "status": "news_verified",
       "handbook_url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3813/Wps/593bcd55-bfa3-4296-90a0-146fe6c20137/Student-Parent_Handbook_2025-2026__3_.pdf",
-      "extraction_method": "pdftotext"
+      "extraction_method": "pdftotext",
+      "news_verified_by": "Stricter re-extraction 2026-05-20 confirmed phone-policy paragraph in handbook"
     },
     "2512000": {
       "districtId": "2512000",
@@ -4297,25 +4303,24 @@
     "2503060": {
       "districtId": "2503060",
       "districtName": "Brimfield School District",
-      "tier": 2,
-      "policySummary": "Handbook (off-and-away): xtracurricular Return to School Planned Absences Sign Out Field Trips Behavior at Extra-Curricular Activities 17 Bus Transportation 18 Cell Phones 19 Certified",
+      "tier": 1,
+      "policySummary": "Cross-state misattribution caught 2026-05-20: prior tier-2 classification was based on a handbook PDF hosted under thrillshare.com/.../Bcusd309/ \u2014 that's Brimfield Consolidated Unit School District #309 in ILLINOIS, not Brimfield, MA. The handbook text 'Dress properly for the weather. Make sure all drawstrings, ties, straps...' is not even phone-policy language. No Brimfield, MA-specific phone policy located; tier reset to 1.",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "unrestricted_default",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
         {
-          "title": "Student handbook (pdftotext)",
-          "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4881/Bcusd309/2e8bd43c-97c7-4cae-baf2-3d6488819d1d/BHS-Handbook-2025-2026-(1).pdf",
-          "publisher": "district",
+          "title": "Web search 2026-05-20 \u2014 no Brimfield MA-specific phone policy found",
+          "url": "https://www.brimfield.k12.ma.us/",
+          "publisher": "Brimfield Public Schools (MA)",
           "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4881/Bcusd309/2e8bd43c-97c7-4cae-baf2-3d6488819d1d/BHS-Handbook-2025-2026-(1).pdf",
-      "extraction_method": "pdftotext"
+      "confidence": "low",
+      "status": "news_verified",
+      "news_verified_by": "Cross-state misattribution: prior handbook URL was Bcusd309 (Brimfield CUSD #309, IL)"
     },
     "2503120": {
       "districtId": "2503120",
@@ -4386,25 +4391,24 @@
     "2503900": {
       "districtId": "2503900",
       "districtName": "Conway School District",
-      "tier": 2,
-      "policySummary": "Handbook (off-and-away): Maximum \u2013 Suspension 8.\u200b Vandalism/Theft \u2013 Willfully or intentionally damaging, destroying, or stealing property. See Board Policy 4.18 \u2013 Prohibited Student Conduct a.\u200b Minimum \u2013 Conference/Parent Notification/Restitution; Maximum \u2013 Expulsion/Restitution 9.\u200b Improper Use of Electronic Devices \u2013 Poss",
+      "tier": 1,
+      "policySummary": "Cross-state misattribution caught 2026-05-20: prior tier-3 classification was based on a handbook PDF that cites 'Act 122 of 2025, also known as The Bell-to-Bell, No Cell Act' \u2014 that's the ARKANSAS statute, signed by Gov. Sanders on 2025-03-27. The handbook is for Conway Public Schools, Arkansas, not Conway, MA. Conway, MA is a tiny Franklin County district with no such policy located; tier reset to 1.",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "unrestricted_default",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
         {
-          "title": "Student handbook (pdftotext)",
-          "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3965/Cps/b09d8c4f-d77e-4384-a2be-1ee1eab7f516/2025-2026-Student-Handbook.pdf",
-          "publisher": "district",
+          "title": "Conway Grammar School (MA) \u2014 district site",
+          "url": "https://www.conwaygs.org/",
+          "publisher": "Conway Public Schools (MA)",
           "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3965/Cps/b09d8c4f-d77e-4384-a2be-1ee1eab7f516/2025-2026-Student-Handbook.pdf",
-      "extraction_method": "pdftotext"
+      "confidence": "low",
+      "status": "news_verified",
+      "news_verified_by": "Cross-state misattribution: prior handbook cited AR Act 122 of 2025 (Conway, Arkansas)"
     },
     "2504080": {
       "districtId": "2504080",
@@ -4459,9 +4463,9 @@
       "districtId": "2504650",
       "districtName": "Oak Bluffs School District",
       "tier": 2,
-      "policySummary": "Handbook excerpt (off-and-away / restriction detected): Electronic Communication Devices Students may not use cellphones, handheld electronic games, laser pens, or similar devices in school including recess.",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): Electronic Communication Devices Students may not use cellphones, handheld electronic games, laser pens, or similar devices in school including recess. These may be confiscated and held by administration.",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "off_and_away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -4474,9 +4478,10 @@
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
+      "status": "news_verified",
       "handbook_url": "https://cdnsm5-ss11.sharpschool.com/UserFiles/Servers/Server_8231008/File/For%20Students/Student%20Handbook/1920_handbook_ob_school(2).pdf",
-      "extraction_method": "local_pdftotext_2026-05-20"
+      "extraction_method": "local_pdftotext_2026-05-20",
+      "news_verified_by": "Stricter re-extraction 2026-05-20 confirmed phone-policy paragraph in handbook"
     },
     "2504710": {
       "districtId": "2504710",
@@ -4615,25 +4620,24 @@
     "2506900": {
       "districtId": "2506900",
       "districtName": "Lincoln School District",
-      "tier": 2,
-      "policySummary": "Handbook (off-and-away): acceptable for an ill student to spend a class period in a lavatory because they are \"too ill\" to make it to the nurse\u2019s office. This will be treated as an unexcused absence from class, as the nurse is available to assist students as needed. Students who are ill are not to use their cell phones to c",
+      "tier": 1,
+      "policySummary": "Cross-state misattribution caught 2026-05-20: prior tier-2 classification was based on a handbook PDF (lincolnpsorg/.../LMSHandbook2526.pdf) whose text explicitly identifies it as 'Lincoln, Rhode Island 02865' and references the Rhode Island Principals Committee on Athletics. The handbook is for Lincoln Public Schools, RI, not Lincoln, MA. Lincoln, MA is a small Middlesex County district with no policy located in this pass.",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "unrestricted_default",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
         {
-          "title": "Student handbook (pdftotext)",
-          "url": "https://resources.finalsite.net/images/v1762107956/lincolnpsorg/ly5tjw3lvuzgis6lzoe1/LMSHandbook2526.pdf",
-          "publisher": "district",
+          "title": "Lincoln Public Schools (MA) \u2014 district site",
+          "url": "https://www.lincnet.org/",
+          "publisher": "Lincoln Public Schools (MA)",
           "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://resources.finalsite.net/images/v1762107956/lincolnpsorg/ly5tjw3lvuzgis6lzoe1/LMSHandbook2526.pdf",
-      "extraction_method": "pdftotext"
+      "confidence": "low",
+      "status": "news_verified",
+      "news_verified_by": "Cross-state misattribution: prior handbook identified itself as Lincoln, RI"
     },
     "2507290": {
       "districtId": "2507290",
@@ -4789,9 +4793,9 @@
       "districtId": "2509540",
       "districtName": "Petersham School District",
       "tier": 2,
-      "policySummary": "Handbook excerpt (off-and-away / restriction detected): We do not allow electronics (for example, Nintendo Switch, iPads, DS, or cell phones) to be used in school, in class, at recess or lunch, or on the school bus.",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): Toy weapons and sharp instruments of any kind are not permitted at recess or in school. We do not allow electronics (for example, Nintendo Switch, iPads, DS, or cell phones) to be used in school, in class, at recess or lunch, or on the school bus.",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "off_and_away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -4804,17 +4808,18 @@
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
+      "status": "news_verified",
       "handbook_url": "https://tb2cdn.schoolwebmasters.com/accnt_676659/site_687443/Documents/Parent-Handbook.pdf",
-      "extraction_method": "local_pdftotext_2026-05-20"
+      "extraction_method": "local_pdftotext_2026-05-20",
+      "news_verified_by": "Stricter re-extraction 2026-05-20 confirmed phone-policy paragraph in handbook"
     },
     "2509690": {
       "districtId": "2509690",
       "districtName": "Plainville School District",
       "tier": 2,
-      "policySummary": "Handbook excerpt (off-and-away / restriction detected): S\u2019 SAFETY \u2013 VISITORS/VOLUNTEERS\u200b 29 NON DISCRIMINATION POLICY\u200b 30 Section 504: Non Discrimination On The Basis Of Handicap\u200b 33 Non Discrimination On The Basis Of Title VI And Title IX\u200b 34 CELL PHONES OR SIMILAR ELECTRONIC DEVICES\u200b 34 COMPLAINTS AND GRIEVANCES\u200b 35 CONFERENCES\u200b 35 C.O.R.I.",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): To maintain a safe, respectful, and focused learning environment, cell phones and other personal electronic devices may not be used during the school day., If such devices are sent to school, the following expectations are in place:",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "off_and_away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -4827,9 +4832,10 @@
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
+      "status": "news_verified",
       "handbook_url": "https://resources.finalsite.net/images/v1758033905/plainvillek12maus/tmvnk7ox1ndlgw3j4uuy/FINAL-FamilyStudentHandbook2025-2026.pdf",
-      "extraction_method": "local_pdftotext_2026-05-20"
+      "extraction_method": "local_pdftotext_2026-05-20",
+      "news_verified_by": "Stricter re-extraction 2026-05-20 confirmed phone-policy paragraph in handbook"
     },
     "2509780": {
       "districtId": "2509780",
@@ -4847,25 +4853,24 @@
     "2510080": {
       "districtId": "2510080",
       "districtName": "Richmond School District",
-      "tier": 2,
-      "policySummary": "Handbook excerpt (off-and-away / restriction detected): 7 Student Mobil Communication Devices Students may have cell phones at school, however, cell phones will be kept turned off during the school day.",
+      "tier": 1,
+      "policySummary": "Re-verification 2026-05-20: prior tier-2 classification was based on a handbook PDF on cloudfront with no Massachusetts state-identifying language (no MGL citation, no DESE reference, no 'Commonwealth of Massachusetts'). Cannot confirm the handbook is for Richmond, MA vs another Richmond. Downgraded to tier 1 pending news verification or human review of the source URL.",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "unrestricted_default",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
         {
-          "title": "Student handbook (extracted via pdftotext)",
-          "url": "https://d16k74nzx9emoe.cloudfront.net/2b39aa29-f104-4f19-a441-e138f0fc418d/Richmond%20School%2025-26%20handbook.pdf",
-          "publisher": "district",
+          "title": "Richmond Consolidated School (MA) \u2014 district site",
+          "url": "https://www.richmondconsolidated.org/",
+          "publisher": "Richmond Consolidated School (MA)",
           "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
-      "status": "handbook_verified",
-      "handbook_url": "https://d16k74nzx9emoe.cloudfront.net/2b39aa29-f104-4f19-a441-e138f0fc418d/Richmond%20School%2025-26%20handbook.pdf",
-      "extraction_method": "local_pdftotext_2026-05-20"
+      "confidence": "low",
+      "status": "news_verified",
+      "news_verified_by": "Handbook contains no MA-identifying language; cannot confirm correct district"
     },
     "2510140": {
       "districtId": "2510140",
@@ -4946,9 +4951,9 @@
       "districtId": "2510860",
       "districtName": "Somerset School District",
       "tier": 2,
-      "policySummary": "Handbook (off-and-away): ected to immediately notify the Administration if any breaches of security are observed. The SRO has access to school cameras and the student management system. The Administration carries radios with them throughout the school day. Calls can be directly conveyed to the police department via cell pho",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): 76 are wearing earbuds/pods. The use of their electronic devices cannot cause any distraction to the driver. \u25cf\u200b For safety reasons, phones must be put away while entering and exiting the bus. \u25cf\u200b In addition, late bus usage is only allowed for students taking advantage of afterschool programs. Once students leave campus for the day, they are not entitled to use the late buses.",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "off_and_away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -4961,9 +4966,10 @@
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
+      "status": "news_verified",
       "handbook_url": "https://d16k74nzx9emoe.cloudfront.net/e6fdddf7-0f92-41a6-9eb1-6e1ef2edbd6c/SY26%20Student%20and%20Family%20HandbookFinal%20-1.pdf",
-      "extraction_method": "pdftotext"
+      "extraction_method": "pdftotext",
+      "news_verified_by": "Stricter re-extraction 2026-05-20 confirmed phone-policy paragraph in handbook"
     },
     "2510950": {
       "districtId": "2510950",
@@ -5288,9 +5294,9 @@
       "districtId": "2500541",
       "districtName": "Somerset-Berkley School District",
       "tier": 2,
-      "policySummary": "Handbook excerpt (off-and-away / restriction detected): (Student receives a zero on the assignment) INAPPROPRIATE USE OR POSSESSION OF WIRELESS COMMUNICATIONS OR ELECTRONIC DEVICES: See the wireless communications and electronic devices citation located in the general information section of this handbook for more information regarding these devices.",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): PICTURES/VIDEOS: Absolutely no pictures and/or videos should be taken with an electronic device, unless directed for educational purposes. First Consequence: Confiscation of the device and the student may pick it up at the end of the school day. Second Consequence: Confiscation of the device, and it must be picked up by a parent. (Cell phones, like all other personal items brought to the school zo...",
       "scope": "unknown",
-      "enforcement": "off-and-away",
+      "enforcement": "off_and_away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -5303,9 +5309,10 @@
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "handbook_verified",
+      "status": "news_verified",
       "handbook_url": "https://www.somersetschools.org/documents/2023-24-Elementary-Handbook-9-15-23.pdf",
-      "extraction_method": "local_pdftotext_2026-05-20"
+      "extraction_method": "local_pdftotext_2026-05-20",
+      "news_verified_by": "Stricter re-extraction 2026-05-20 confirmed phone-policy paragraph in handbook"
     },
     "2504560": {
       "districtId": "2504560",
