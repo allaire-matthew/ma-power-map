@@ -292,13 +292,63 @@ def main():
         }
         print(f"  ✓ tier {tier} | {enforcement} | {method} | {pdf_url[:60]}", file=sys.stderr, flush=True)
 
-    out = pathlib.Path("/tmp/handbook-v5-results.json")
-    out.write_text(json.dumps(results, indent=2))
+    # Persist raw results for audit (useful in CI logs / debugging)
+    audit_path = REPO / "scripts" / ".handbook-run-latest.json"
+    audit_path.write_text(json.dumps(results, indent=2))
+
+    # Merge verified findings into phone-policies.json
+    upgrades = 0
+    sources_added = 0
+    rank = {"high": 3, "medium": 2, "low": 1}
+    for geoid, r in results.items():
+        if not r.get("verified"):
+            continue
+        old = policies.get(geoid, {})
+        sources = list(old.get("sources", []))
+        # Avoid duplicate source URL
+        if not any(s.get("url") == r["handbook_url"] for s in sources):
+            sources.append({
+                "title": f"Student handbook ({r.get('extraction_method', '?')})",
+                "url": r["handbook_url"],
+                "publisher": "district",
+                "date": "2026-05-20",
+            })
+        # Don't downgrade existing high-confidence entries
+        if rank.get(old.get("confidence"), 1) > rank.get(r["confidence"], 1):
+            old["sources"] = sources
+            old["handbook_url"] = r["handbook_url"]
+            sources_added += 1
+            continue
+        policies[geoid] = {
+            **old,
+            "districtId": geoid,
+            "districtName": old.get("districtName", ""),
+            "tier": r["tier"],
+            "policySummary": r["policySummary"][:500],
+            "enforcement": r["enforcement"],
+            "sources": sources,
+            "lastVerified": "2026-05-20",
+            "confidence": r["confidence"],
+            "status": "handbook_verified",
+            "handbook_url": r["handbook_url"],
+            "extraction_method": r.get("extraction_method", "unknown"),
+        }
+        upgrades += 1
+
+    if upgrades or sources_added:
+        pol_data = json.loads(POL.read_text())  # re-read to preserve _notes etc.
+        pol_data["policies"] = policies
+        pol_data["_lastUpdated"] = "2026-05-20"
+        POL.write_text(json.dumps(pol_data, indent=2) + "\n")
+        print(f"\nMerged into phone-policies.json: {upgrades} upgrades, {sources_added} source-only updates", file=sys.stderr)
+    else:
+        print("\nNo phone-policies.json changes.", file=sys.stderr)
+
     from collections import Counter
     ver = sum(1 for r in results.values() if r.get("verified"))
     tiers = Counter(r.get("tier") for r in results.values() if r.get("verified"))
     methods = Counter(r.get("extraction_method") for r in results.values() if r.get("verified"))
-    print(f"\nVerified: {ver}/{len(results)} ({100*ver//max(len(results),1)}%)", file=sys.stderr)
+    print(f"Verified: {ver}/{len(results)} ({100*ver//max(len(results),1)}%)", file=sys.stderr)
     print(f"Tier distribution: {dict(tiers)}", file=sys.stderr)
     print(f"Extraction methods: {dict(methods)}", file=sys.stderr)
 
