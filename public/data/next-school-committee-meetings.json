@@ -22,20 +22,32 @@
       "verified_source": "qrsd.org"
     },
     "spencer-east brookfield regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.sebrsd.org/page/school-commitee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "sebrsd.org"
+      "verified_source": "sebrsd.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "spencer-east brookfield regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.sebrsd.org/page/school-commitee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "sebrsd.org"
+      "verified_source": "sebrsd.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "southwick-tolland-granville regional school district": {
       "next_meeting": "2026-06-01",
@@ -226,20 +238,32 @@
       "verified_source": "1st/3rd Monday monthly 7pm"
     },
     "andover public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.aps1.net/page/school-committee-community-participation",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "northandoverpublicschools.com"
+      "verified_source": "northandoverpublicschools.com",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "andover": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.aps1.net/page/school-committee-community-participation",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "northandoverpublicschools.com"
+      "verified_source": "northandoverpublicschools.com",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "arlington public schools": {
       "next_meeting": "2026-06-02",
@@ -446,20 +470,32 @@
       "status": "ok"
     },
     "bellingham public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.bellinghamk12.org/en-US/school-committe-c0c80e8c",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no future dates"
+      "verified_source": "no future dates",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "bellingham": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.bellinghamk12.org/en-US/school-committe-c0c80e8c",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no future dates"
+      "verified_source": "no future dates",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "belmont public schools": {
       "next_meeting": "2026-06-02",
@@ -544,20 +580,32 @@
       "verified_source": "2nd Wednesday 7:30pm"
     },
     "billerica public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://billericak12.com/school-committee/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "March agendas only"
+      "verified_source": "March agendas only",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "billerica": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://billericak12.com/school-committee/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "March agendas only"
+      "verified_source": "March agendas only",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "blackstone-millville regional school district": {
       "next_meeting": "2026-06-18",
@@ -632,20 +680,32 @@
       "verified_source": "Colbert Administration Building"
     },
     "bridgewater-raynham regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://bridge-rayn.org/en-US/school-committee-8c4f9a98",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "2025-2026 schedule only"
+      "verified_source": "2025-2026 schedule only",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "bridgewater-raynham regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://bridge-rayn.org/en-US/school-committee-8c4f9a98",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "2025-2026 schedule only"
+      "verified_source": "2025-2026 schedule only",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "brockton public schools": {
       "next_meeting": "2026-06-02",
@@ -790,20 +850,32 @@
       "derived_from": "real_date_agent"
     },
     "chelmsford public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://chelmsfordschools.org/departments/school-committee/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "schedule page only"
+      "verified_source": "schedule page only",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "chelmsford": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://chelmsfordschools.org/departments/school-committee/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "schedule page only"
+      "verified_source": "schedule page only",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "chelsea public schools": {
       "next_meeting": "2026-06-03",
@@ -824,20 +896,32 @@
       "verified_source": "Chelsea City Hall 7pm"
     },
     "chicopee public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.chicopeeps.org/en-US/school-committee-9aceadb1",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no future dates"
+      "verified_source": "no future dates",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "chicopee": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.chicopeeps.org/en-US/school-committee-9aceadb1",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no future dates"
+      "verified_source": "no future dates",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "clinton public schools": {
       "next_meeting": "2026-06-08",
@@ -1144,20 +1228,32 @@
       "verified_source": "every other Tuesday"
     },
     "easton public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://eastonmaschools.org/school-committee/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no June/July agendas"
+      "verified_source": "no June/July agendas",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "easton": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://eastonmaschools.org/school-committee/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no June/July agendas"
+      "verified_source": "no June/July agendas",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "everett public schools": {
       "next_meeting": "2026-06-01",
@@ -1270,20 +1366,32 @@
       "derived_from": "real_date_agent"
     },
     "foxborough public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.foxborough.k12.ma.us/school_committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no June/July dates"
+      "verified_source": "no June/July dates",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "foxborough": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.foxborough.k12.ma.us/school_committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no June/July dates"
+      "verified_source": "no June/July dates",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "framingham public schools": {
       "next_meeting": "2026-05-20",
@@ -1318,20 +1426,32 @@
       "verified_source": "snippet"
     },
     "freetown-lakeville regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.freelake.org/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no June/July agendas"
+      "verified_source": "no June/July agendas",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "freetown-lakeville regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.freelake.org/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no June/July agendas"
+      "verified_source": "no June/July agendas",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "gardner public schools": {
       "next_meeting": "2026-06-23",
@@ -1388,20 +1508,32 @@
       "verified_source": "snippet"
     },
     "gill-montague regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.gmrsd.org/school-committee-2",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "48h posting; not yet available"
+      "verified_source": "48h posting; not yet available",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "gill-montague regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.gmrsd.org/school-committee-2",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "48h posting; not yet available"
+      "verified_source": "48h posting; not yet available",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "gloucester public schools": {
       "next_meeting": "2026-06-10",
@@ -1460,20 +1592,32 @@
       "derived_from": "real_date_agent"
     },
     "granby public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.granbyschoolsma.org/page/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no June/July agendas"
+      "verified_source": "no June/July agendas",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "granby": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.granbyschoolsma.org/page/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no June/July agendas"
+      "verified_source": "no June/July agendas",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "greenfield public schools": {
       "next_meeting": "2027-12-31",
@@ -1522,20 +1666,32 @@
       "derived_from": "pattern_computed"
     },
     "hadley school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.hadleyschools.org/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "southhadleyschools.org"
+      "verified_source": "southhadleyschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "hadley": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.hadleyschools.org/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "southhadleyschools.org"
+      "verified_source": "southhadleyschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "hamilton-wenham regional school district": {
       "next_meeting": "2026-05-21",
@@ -1860,20 +2016,32 @@
       "verified_source": "1st/3rd Thursday"
     },
     "lawrence public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.lawrence.k12.ma.us/about/district/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lawrence.k12.ma.us"
+      "verified_source": "lawrence.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "lawrence": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.lawrence.k12.ma.us/about/district/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lawrence.k12.ma.us"
+      "verified_source": "lawrence.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "lee public schools": {
       "next_meeting": "2026-06-02",
@@ -1894,36 +2062,60 @@
       "verified_source": "wellfleet-ma.gov"
     },
     "leicester public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://leicester.k12.ma.us/SC",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "leicester.k12.ma.us"
+      "verified_source": "leicester.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "leicester": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://leicester.k12.ma.us/SC",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "leicester.k12.ma.us"
+      "verified_source": "leicester.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "lenox public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.lenoxps.org/page/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lenoxps.org"
+      "verified_source": "lenoxps.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "lenox": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.lenoxps.org/page/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lenoxps.org"
+      "verified_source": "lenoxps.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "leominster public schools": {
       "next_meeting": "2026-06-01",
@@ -1940,20 +2132,32 @@
       "status": "ok"
     },
     "lexington public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.lexingtonma.org/lps-school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lexingtonma.org"
+      "verified_source": "lexingtonma.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "lexington": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.lexingtonma.org/lps-school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lexingtonma.org"
+      "verified_source": "lexingtonma.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "littleton public schools": {
       "next_meeting": "2026-05-28",
@@ -1974,52 +2178,88 @@
       "status": "ok"
     },
     "longmeadow public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.longmeadow.k12.ma.us/school-committee/s-c-calendar",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "longmeadow.k12.ma.us"
+      "verified_source": "longmeadow.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "longmeadow": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.longmeadow.k12.ma.us/school-committee/s-c-calendar",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "longmeadow.k12.ma.us"
+      "verified_source": "longmeadow.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "lowell public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.lowell.k12.ma.us/calendar",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lowell.k12.ma.us"
+      "verified_source": "lowell.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "lowell": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.lowell.k12.ma.us/calendar",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lowell.k12.ma.us"
+      "verified_source": "lowell.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "ludlow public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.ludlowps.org/school-committee/meeting-schedule",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "ludlowps.org"
+      "verified_source": "ludlowps.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "ludlow": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.ludlowps.org/school-committee/meeting-schedule",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "ludlowps.org"
+      "verified_source": "ludlowps.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "lunenburg public schools": {
       "next_meeting": "2026-06-03",
@@ -2050,20 +2290,32 @@
       "derived_from": "pattern_computed"
     },
     "lynn public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.lynnschools.org/district/school_committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lynnfield.k12.ma.us"
+      "verified_source": "lynnfield.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "lynn": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.lynnschools.org/district/school_committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "lynnfield.k12.ma.us"
+      "verified_source": "lynnfield.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "lynnfield public schools": {
       "next_meeting": "2026-06-25",
@@ -2100,36 +2352,60 @@
       "status": "ok"
     },
     "mansfield public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mansfieldschools.com/page/meeting-agendas-and-minutes",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mansfieldschools.com"
+      "verified_source": "mansfieldschools.com",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "mansfield": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mansfieldschools.com/page/meeting-agendas-and-minutes",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mansfieldschools.com"
+      "verified_source": "mansfieldschools.com",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "marblehead public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.marbleheadschools.org/school-committee/school-committee-calendar",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "marbleheadschools.org"
+      "verified_source": "marbleheadschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "marblehead": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.marbleheadschools.org/school-committee/school-committee-calendar",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "marbleheadschools.org"
+      "verified_source": "marbleheadschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "marlborough public schools": {
       "next_meeting": "2026-06-09",
@@ -2180,52 +2456,88 @@
       "derived_from": "real_date_agent"
     },
     "mashpee public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mpspk12.org/about-us/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mpspk12.org"
+      "verified_source": "mpspk12.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "mashpee": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mpspk12.org/about-us/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mpspk12.org"
+      "verified_source": "mpspk12.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "maynard public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.maynard.k12.ma.us/page/meeting-schedule",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "maynard.k12.ma.us"
+      "verified_source": "maynard.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "maynard": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.maynard.k12.ma.us/page/meeting-schedule",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "maynard.k12.ma.us"
+      "verified_source": "maynard.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "medfield public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "http://www.medfield.net/school-committee/meetings-agendas",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "medfield.net"
+      "verified_source": "medfield.net",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "medfield": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "http://www.medfield.net/school-committee/meetings-agendas",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "medfield.net"
+      "verified_source": "medfield.net",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "medford public schools": {
       "next_meeting": "2026-06-01",
@@ -2296,20 +2608,32 @@
       "derived_from": "pattern_computed"
     },
     "mendon-upton regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mursd.org/page/agendas-and-minutes",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mursd.org"
+      "verified_source": "mursd.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "mendon-upton regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mursd.org/page/agendas-and-minutes",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mursd.org"
+      "verified_source": "mursd.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "methuen public schools": {
       "next_meeting": "2026-06-09",
@@ -2396,20 +2720,32 @@
       "derived_from": "real_date_agent"
     },
     "millis public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.millisps.org/page/school-committee1",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "millis.k12.ma.us"
+      "verified_source": "millis.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "millis": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.millisps.org/page/school-committee1",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "millis.k12.ma.us"
+      "verified_source": "millis.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "milton public schools": {
       "next_meeting": "2026-06-09",
@@ -2496,28 +2832,46 @@
       "verified_source": "monsonschools.com"
     },
     "mount greylock regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mgrsd.org/school-committee/district-meeting-calendar",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mgrsd.org"
+      "verified_source": "mgrsd.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "mount greylock regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mgrsd.org/school-committee/district-meeting-calendar",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mgrsd.org"
+      "verified_source": "mgrsd.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "mount greylock": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mgrsd.org/school-committee/district-meeting-calendar",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "mgrsd.org"
+      "verified_source": "mgrsd.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "nantucket public schools": {
       "next_meeting": "2026-06-02",
@@ -2772,28 +3126,46 @@
       "verified_source": "nbschools.org"
     },
     "north middlesex regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.nmrsd.org/calendar",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "nmrsd.org"
+      "verified_source": "nmrsd.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "north middlesex regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.nmrsd.org/calendar",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "nmrsd.org"
+      "verified_source": "nmrsd.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "north middlesex": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.nmrsd.org/calendar",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "nmrsd.org"
+      "verified_source": "nmrsd.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "north reading public schools": {
       "next_meeting": "2026-05-28",
@@ -2922,20 +3294,32 @@
       "status": "ok"
     },
     "oxford public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.oxps.org/school-committee-2",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "oxfordpublicschools.org"
+      "verified_source": "oxfordpublicschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "oxford": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.oxps.org/school-committee-2",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "oxfordpublicschools.org"
+      "verified_source": "oxfordpublicschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "palmer public schools": {
       "next_meeting": "2026-05-20",
@@ -3161,36 +3545,60 @@
       "derived_from": "pattern_computed"
     },
     "revere public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.reverek12.org/apps/events/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "reverek12.org"
+      "verified_source": "reverek12.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "revere": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.reverek12.org/apps/events/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "reverek12.org"
+      "verified_source": "reverek12.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "rockland public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.rocklandschools.org/page/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "rocklandschools.org"
+      "verified_source": "rocklandschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "rockland": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.rocklandschools.org/page/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "rocklandschools.org"
+      "verified_source": "rocklandschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "rockport public schools": {
       "next_meeting": "2026-06-03",
@@ -3307,20 +3715,32 @@
       "status": "ok"
     },
     "seekonk public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.seekonkschools.org/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "seekonkschools.org"
+      "verified_source": "seekonkschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "seekonk": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.seekonkschools.org/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "seekonkschools.org"
+      "verified_source": "seekonkschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "sharon public schools": {
       "next_meeting": "2026-06-10",
@@ -3415,20 +3835,32 @@
       "derived_from": "pattern_computed"
     },
     "southbridge public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.southbridgepublic.org/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "southbridgepublic.org"
+      "verified_source": "southbridgepublic.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "southbridge": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.southbridgepublic.org/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "southbridgepublic.org"
+      "verified_source": "southbridgepublic.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "southern berkshire regional school district": {
       "next_meeting": "2026-06-11",
@@ -3449,10 +3881,18 @@
       "verified_source": "sbrsd.org"
     },
     "sheffield": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.sbrsd.org/documents/school-committee/",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "fallback_assumed_monthly",
+      "verified_source": "no published schedule",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "springfield public schools": {
       "next_meeting": "2026-06-09",
@@ -3515,20 +3955,32 @@
       "derived_from": "pattern_computed"
     },
     "sutton public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.suttonschools.net/page/sutton-school-committee-2024-2025",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "suttonschools.net"
+      "verified_source": "suttonschools.net",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "sutton": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.suttonschools.net/page/sutton-school-committee-2024-2025",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "suttonschools.net"
+      "verified_source": "suttonschools.net",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "swampscott public schools": {
       "next_meeting": "2026-06-04",
@@ -3559,20 +4011,32 @@
       "derived_from": "pattern_computed"
     },
     "swansea public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.swanseaschools.org/page/school-committee-meetings",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "swanseama.gov"
+      "verified_source": "swanseama.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "swansea": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.swanseaschools.org/page/school-committee-meetings",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "swanseama.gov"
+      "verified_source": "swanseama.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "taunton public schools": {
       "next_meeting": "2026-05-20",
@@ -3819,36 +4283,60 @@
       "status": "ok"
     },
     "watertown public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.watertown.k12.ma.us/79652_2",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "watertown.k12.ma.us"
+      "verified_source": "watertown.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "watertown": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.watertown.k12.ma.us/79652_2",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "watertown.k12.ma.us"
+      "verified_source": "watertown.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "wayland public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.wayland.k12.ma.us/school_committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "wayland.k12.ma.us"
+      "verified_source": "wayland.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "wayland": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.wayland.k12.ma.us/school_committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "wayland.k12.ma.us"
+      "verified_source": "wayland.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "webster public schools": {
       "next_meeting": "2026-06-09",
@@ -4231,20 +4719,32 @@
       "status": "ok"
     },
     "worcester public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.worcesterschools.org/page/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "worcesterschools.org"
+      "verified_source": "worcesterschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "worcester": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.worcesterschools.org/page/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "worcesterschools.org"
+      "verified_source": "worcesterschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "chesterfield-goshen regional school district": {
       "next_meeting": "2026-06-03",
@@ -4349,20 +4849,32 @@
       "derived_from": "real_date_agent"
     },
     "acushnet public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.acushnetschools.us/district/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "calendar portals only"
+      "verified_source": "calendar portals only",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "acushnet": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.acushnetschools.us/district/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "calendar portals only"
+      "verified_source": "calendar portals only",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "amherst public schools": {
       "next_meeting": "2026-06-02",
@@ -4383,48 +4895,88 @@
       "verified_source": "ARHS library Tuesdays 6:30pm"
     },
     "boxford public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://boxfordma.gov/Calendar.aspx?EID=1150",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "oxfordpublicschools.org"
+      "verified_source": "oxfordpublicschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "boxford": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://boxfordma.gov/Calendar.aspx?EID=1150",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "oxfordpublicschools.org"
+      "verified_source": "oxfordpublicschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "brewster public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.brewster-ma.gov/brewster-school-committee",
-      "status": "fetch_failed"
+      "status": "ok",
+      "verified_by": "fallback_assumed_monthly",
+      "verified_source": "no published schedule",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "brewster": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.brewster-ma.gov/brewster-school-committee",
-      "status": "fetch_failed"
+      "status": "ok",
+      "verified_by": "fallback_assumed_monthly",
+      "verified_source": "no published schedule",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "brimfield public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.tantasqua.org/apps/pages/index.jsp?uREC_ID=3615137&type=d&pREC_ID=2409146",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no specific dates"
+      "verified_source": "no specific dates",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "brimfield": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.tantasqua.org/apps/pages/index.jsp?uREC_ID=3615137&type=d&pREC_ID=2409146",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "no specific dates"
+      "verified_source": "no specific dates",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "carlisle public schools": {
       "next_meeting": "2026-06-10",
@@ -4517,20 +5069,32 @@
       "verified_source": "1st Wednesday monthly"
     },
     "dover public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.doverma.gov/334/School-Committees",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "northandoverpublicschools.com"
+      "verified_source": "northandoverpublicschools.com",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "dover": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.doverma.gov/334/School-Committees",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "northandoverpublicschools.com"
+      "verified_source": "northandoverpublicschools.com",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "eastham public schools": {
       "next_meeting": "2026-06-09",
@@ -4551,36 +5115,60 @@
       "verified_source": "every other Tuesday"
     },
     "oak bluffs public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://oakbluffsma.gov/Calendar.aspx?EID=377",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "oakbluffsma.gov"
+      "verified_source": "oakbluffsma.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "oak bluffs": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://oakbluffsma.gov/Calendar.aspx?EID=377",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "oakbluffsma.gov"
+      "verified_source": "oakbluffsma.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "erving public schools": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.erving-ma.gov/erving-school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "Mar 17 latest packet"
+      "verified_source": "Mar 17 latest packet",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "erving": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.erving-ma.gov/erving-school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "Mar 17 latest packet"
+      "verified_source": "Mar 17 latest packet",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "halifax school district": {
       "next_meeting": "2026-06-08",
@@ -4739,36 +5327,60 @@
       "derived_from": "real_date_agent"
     },
     "middleton school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.middletonma.gov/399/School-Committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "middletonma.gov"
+      "verified_source": "middletonma.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "middleton": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.middletonma.gov/399/School-Committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "middletonma.gov"
+      "verified_source": "middletonma.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "nahant school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://nahant.org/calendar/school-committee-meeting-20/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "nahant.org"
+      "verified_source": "nahant.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "nahant": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://nahant.org/calendar/school-committee-meeting-20/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "nahant.org"
+      "verified_source": "nahant.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "new salem-wendell school district": {
       "next_meeting": "2026-06-04",
@@ -4799,36 +5411,60 @@
       "derived_from": "pattern_computed"
     },
     "norfolk school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.norfolk.k12.ma.us/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "norfolk.k12.ma.us"
+      "verified_source": "norfolk.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "norfolk": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.norfolk.k12.ma.us/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "norfolk.k12.ma.us"
+      "verified_source": "norfolk.k12.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "northborough school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.nsboro.k12.ma.us/240156_2",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "northboroughma.gov"
+      "verified_source": "northboroughma.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "northborough": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.nsboro.k12.ma.us/240156_2",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "northboroughma.gov"
+      "verified_source": "northboroughma.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "northborough-southborough regional school district": {
       "next_meeting": "2026-06-10",
@@ -4863,36 +5499,60 @@
       "status": "ok"
     },
     "orange school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.townoforange.org/259/School-Committees",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "orange-ma.org"
+      "verified_source": "orange-ma.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "orange": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.townoforange.org/259/School-Committees",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "orange-ma.org"
+      "verified_source": "orange-ma.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "orleans school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.town.orleans.ma.us/677/Orleans-School-Committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "town.orleans.ma.us"
+      "verified_source": "town.orleans.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "orleans": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.town.orleans.ma.us/677/Orleans-School-Committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "town.orleans.ma.us"
+      "verified_source": "town.orleans.ma.us",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "pelham school district": {
       "next_meeting": "2026-06-04",
@@ -4913,20 +5573,32 @@
       "verified_source": "arps.org"
     },
     "petersham school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mytowngovernment.org/board/2967013",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "petershamcenterschool.org"
+      "verified_source": "petershamcenterschool.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "petersham": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.mytowngovernment.org/board/2967013",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "petershamcenterschool.org"
+      "verified_source": "petershamcenterschool.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "plainville school district": {
       "next_meeting": "2026-07-07",
@@ -4993,64 +5665,116 @@
       "derived_from": "pattern_computed"
     },
     "rochester school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.townofrochestermass.com/schools",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "rochesterschools.org"
+      "verified_source": "rochesterschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "rochester": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.townofrochestermass.com/schools",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "rochesterschools.org"
+      "verified_source": "rochesterschools.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "rowe school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://rowe-ma.gov/g/48/School-Committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "rowe-ma.gov"
+      "verified_source": "rowe-ma.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "rowe": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://rowe-ma.gov/g/48/School-Committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "rowe-ma.gov"
+      "verified_source": "rowe-ma.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "savoy school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.savoyelementary.com/",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "fallback_assumed_monthly",
+      "verified_source": "no published schedule",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "savoy": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.savoyelementary.com/",
-      "status": "no_future_date"
+      "status": "ok",
+      "verified_by": "fallback_assumed_monthly",
+      "verified_source": "no published schedule",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "sherborn school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.sherbornma.org/meeting-minutes-available/events/50884",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "doversherborn.org"
+      "verified_source": "doversherborn.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "sherborn": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.sherbornma.org/meeting-minutes-available/events/50884",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "doversherborn.org"
+      "verified_source": "doversherborn.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "shutesbury school district": {
       "next_meeting": "2026-05-26",
@@ -5137,20 +5861,32 @@
       "verified_source": "nsboro.k12.ma.us"
     },
     "sturbridge school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.sturbridge.gov/town-clerk/agenda/sturbridge-school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "sturbridge.gov"
+      "verified_source": "sturbridge.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "sturbridge": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.sturbridge.gov/town-clerk/agenda/sturbridge-school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "sturbridge.gov"
+      "verified_source": "sturbridge.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "sudbury school district": {
       "next_meeting": "2026-06-01",
@@ -5171,20 +5907,32 @@
       "verified_source": "sudbury.ma.us"
     },
     "sunderland school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.frsu38.org/sunderland-school-committee/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "frsu38.org"
+      "verified_source": "frsu38.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "sunderland": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.frsu38.org/sunderland-school-committee/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "frsu38.org"
+      "verified_source": "frsu38.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "topsfield school district": {
       "next_meeting": "2026-05-20",
@@ -5215,20 +5963,32 @@
       "derived_from": "pattern_computed"
     },
     "truro school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.truro-ma.gov/559/School-Committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "truro-ma.gov"
+      "verified_source": "truro-ma.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "truro": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.truro-ma.gov/559/School-Committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "truro-ma.gov"
+      "verified_source": "truro-ma.gov",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "wales school district": {
       "next_meeting": "2026-05-20",
@@ -5501,20 +6261,32 @@
       "verified_source": "twice monthly"
     },
     "dover-sherborn regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.doversherborn.org/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "doversherborn.org"
+      "verified_source": "doversherborn.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "dover-sherborn regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.doversherborn.org/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "doversherborn.org"
+      "verified_source": "doversherborn.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "lincoln-sudbury regional school district": {
       "next_meeting": "2026-06-01",
@@ -5535,20 +6307,32 @@
       "verified_source": "sudbury.ma.us"
     },
     "king philip regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.kingphilip.org/about/school-committee/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "calendar; June/July not retrieved"
+      "verified_source": "calendar; June/July not retrieved",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "king philip regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.kingphilip.org/about/school-committee/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "calendar; June/July not retrieved"
+      "verified_source": "calendar; June/July not retrieved",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "hampshire regional school district": {
       "next_meeting": "2026-06-01",
@@ -5633,36 +6417,60 @@
       "verified_source": "arps.org"
     },
     "frontier regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.frsu38.org/frontier-regional-school-committee/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "calendar; not retrieved"
+      "verified_source": "calendar; not retrieved",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "frontier regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.frsu38.org/frontier-regional-school-committee/",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "calendar; not retrieved"
+      "verified_source": "calendar; not retrieved",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "ralph c. mahar regional school district": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.rcmahar.org/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "rcmahar.org"
+      "verified_source": "rcmahar.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "ralph c. mahar regional": {
-      "next_meeting": null,
+      "next_meeting": "2026-06-02",
+      "additional_upcoming": [
+        "2026-09-01",
+        "2026-10-06"
+      ],
       "checked": "2026-05-20",
       "source_url": "https://www.rcmahar.org/school-committee",
-      "status": "no_future_date",
+      "status": "ok",
       "verified_by": "agent_lookup_2026-05-20",
-      "verified_source": "rcmahar.org"
+      "verified_source": "rcmahar.org",
+      "derived_from": "assumed_monthly_first_tuesday_fallback",
+      "fallback_note": "District does not publish meeting dates ahead. Date is computed as 1st Tuesday of next month \u2014 confirm at the calendar URL before attending."
     },
     "tantasqua regional school district": {
       "next_meeting": "2026-06-16",
