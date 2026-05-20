@@ -123,9 +123,9 @@
       "districtId": "2503150",
       "districtName": "Brookline School District",
       "tier": 1,
-      "policySummary": "No formal district-wide policy as of late 2024. Individual schools running pilots \u2014 Lawrence and Hayes elementary/middle schools at \"off and away,\" varied approaches elsewhere. School Committee drafting a comprehensive policy with K-8 vs. high-school tracks; BHS approach contemplates phones away in class but allowed during passing/lunch.",
+      "policySummary": "Handbook reviewed: Visits/Animals on School Grounds\u200b \u200b \u200b Smoke Free/Drug Free School \u200b \u200b Student Responsibilities/Student Dress \u200b \u200b Student\u2019s Safety\u200b \u200b \u200b \u200b Technology & Plagiarism\u200b \u200b \u200b \u200b \u200b Telephone Messages & Usage\u200b \u200b ",
       "scope": "varies",
-      "enforcement": "honor",
+      "enforcement": "none",
       "effectiveDate": "2024-09",
       "enrollment": 7900,
       "sources": [
@@ -140,10 +140,19 @@
           "url": "https://thelocallens.org/brookline-school-committee-considers-new-mobile-device-policy-amid-broader-policy-manual-overhaul/",
           "publisher": "LocalLens",
           "date": "2024-10-12"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1755001297/sau41org/z7mszi4ikttfzzcfbssi/Brookline24-25StudentParentHandbookdocx.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
-      "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "lastVerified": "2026-05-20",
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1755001297/sau41org/z7mszi4ikttfzzcfbssi/Brookline24-25StudentParentHandbookdocx.pdf",
+      "extraction_method": "pdftotext"
     },
     "2512660": {
       "districtId": "2512660",
@@ -813,9 +822,9 @@
       "districtId": "2507560",
       "districtName": "Medford School District",
       "tier": 1,
-      "policySummary": "No district-wide policy in force. Teachers create classroom-level rules at their own discretion; consistent enforcement reportedly lacking. Medford received $25,000 from the DESE FC729 cellphone-use pilot grant alongside Boston and Newton \u2014 district-wide policy expected to follow.",
+      "policySummary": "Handbook reviewed: rted to law enforcement officials. E. Hazing See Violation of Chapter 536 - Hazing in this handbook. F. Pattern of Behavior The repetition or combination of disciplinary infractions justifying Tier I ",
       "scope": "varies",
-      "enforcement": "honor",
+      "enforcement": "none",
       "effectiveDate": "2024-09",
       "enrollment": 4500,
       "sources": [
@@ -824,10 +833,19 @@
           "url": "https://www.wbur.org/news/2025/05/06/students-teachers-parents-cell-phone-restrictions-classrooms-massachusetts",
           "publisher": "WBUR",
           "date": "2025-05-06"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1758742025/mps02155org/wl7rg2imcsntv8qxh3sy/MedfordHighSchoolStudentHandbookSY25-262.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
-      "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "lastVerified": "2026-05-20",
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1758742025/mps02155org/wl7rg2imcsntv8qxh3sy/MedfordHighSchoolStudentHandbookSY25-262.pdf",
+      "extraction_method": "pdftotext"
     },
     "2508850": {
       "districtId": "2508850",
@@ -2403,14 +2421,24 @@
       "districtId": "2506240",
       "districtName": "Holliston School District",
       "tier": 1,
-      "policySummary": "Search found acceptable use and technology policies but no standalone cell phone policy details.",
+      "policySummary": "Handbook reviewed: Dog Sniff Searches Activities Credits Attendance Dress/Appearance Participation Fees Health Services Directed Study Block",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1662229846/hollistonk12maus/wxlcd7f5efk4m8b2bnif/2022-23HHSStudentParentHandbook.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1662229846/hollistonk12maus/wxlcd7f5efk4m8b2bnif/2022-23HHSStudentParentHandbook.pdf",
+      "extraction_method": "pdftotext"
     },
     "2506270": {
       "districtId": "2506270",
@@ -2494,14 +2522,24 @@
       "districtId": "2506720",
       "districtName": "Leicester School District",
       "tier": 1,
-      "policySummary": "No specific cell phone policy found; district website exists but policy details not accessible.",
+      "policySummary": "Handbook reviewed: 21 LMS SCHOOL DAY 4 Acceptable Use Policy 21 Arrival 4 Social Networking 23 Class Session/Lunch 4 Texting/Instant Messaging 24 Dismissal 4",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://cdnsm5-ss13.sharpschool.com/UserFiles/Servers/Server_341326/File/LMS%20Student%20Handbook%2018-19.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://cdnsm5-ss13.sharpschool.com/UserFiles/Servers/Server_341326/File/LMS%20Student%20Handbook%2018-19.pdf",
+      "extraction_method": "pdftotext"
     },
     "2506780": {
       "districtId": "2506780",
@@ -2718,7 +2756,7 @@
       "districtId": "2507680",
       "districtName": "Mendon-Upton School District",
       "tier": 1,
-      "policySummary": "No specific cell phone policy found for Massachusetts Mendon-Upton RSD.",
+      "policySummary": "Handbook reviewed: y, and morality, or likely to disrupt the teaching/learning process, parents/guardians will be called. Please take note of your child\u2019s attire and help us enforce these guidelines. When a student is a",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -2729,10 +2767,19 @@
           "url": "https://www.mursd.org/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://core-docs.s3.amazonaws.com/documents/asset/uploaded_file/435822/2019_2020_Memorial_Student_Handbook_for_website__1_.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://core-docs.s3.amazonaws.com/documents/asset/uploaded_file/435822/2019_2020_Memorial_Student_Handbook_for_website__1_.pdf",
+      "extraction_method": "pdftotext"
     },
     "2507770": {
       "districtId": "2507770",
@@ -2930,10 +2977,10 @@
     "2508730": {
       "districtId": "2508730",
       "districtName": "North Attleborough School District",
-      "tier": 1,
-      "policySummary": "Policies page exists but specific cell phone policy details not accessible in search results.",
+      "tier": 2,
+      "policySummary": "Handbook (off-and-away): 13.\u200bWellness Policy 14.\u200bSchool Nutrition Program 15.\u200bDiscrimination Policy 16.\u200bStudent Records 17.\u200bStudent Code of Conduct and Discipline 18.\u200bAdditional Procedures for Students with Disabilities 19.\u200bSearches of Students, Property, and Lockers 20.\u200bDrug and Tobacco Use 21.\u200bElectronic Devices 22.\u200bCurri",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -2942,10 +2989,19 @@
           "url": "https://www.naschools.net/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3091/Nams/da37731a-bc46-40a5-aaf5-48918eb4f3ce/2025_-_2026_NAMS_Student_Handbook.pdf?disposition=inline",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3091/Nams/da37731a-bc46-40a5-aaf5-48918eb4f3ce/2025_-_2026_NAMS_Student_Handbook.pdf?disposition=inline",
+      "extraction_method": "pdftotext"
     },
     "2508760": {
       "districtId": "2508760",
@@ -3121,10 +3177,10 @@
     "2509300": {
       "districtId": "2509300",
       "districtName": "Palmer School District",
-      "tier": 1,
-      "policySummary": "No MA Palmer policy located in 2026-05-20 search.",
+      "tier": 3,
+      "policySummary": "Handbook (hardware policy): his or her property\u037e ii. creates a hostile environment at school for the target\u037e iii. infringes on the rights of the target at school\u037e or iv. materially and substantially disrupts the education process or the orderly operation of a school. Cyberbullying is bullying through the use of technology or e",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "hardware",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -3133,10 +3189,19 @@
           "url": "https://www.palmerschools.org/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://www.palmerschools.org/pdf/District%20Handbook%20for%202024-2025.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://www.palmerschools.org/pdf/District%20Handbook%20for%202024-2025.pdf",
+      "extraction_method": "pdftotext"
     },
     "2509420": {
       "districtId": "2509420",
@@ -3224,7 +3289,7 @@
       "districtId": "2510170",
       "districtName": "Rockland School District",
       "tier": 1,
-      "policySummary": "No MA Rockland policy found in 2026-05-20 search.",
+      "policySummary": "Handbook reviewed: Shirt straps must be at least two (2) inches in width. During the winter months, when the weather permits, students will be going outside. Long pants are required during cold days. At the principal's ",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -3235,10 +3300,19 @@
           "url": "https://profiles.doe.mass.edu/profiles/general.aspx?orgcode=02170000",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://core-docs.s3.amazonaws.com/documents/asset/uploaded_file/1284/Esten/2402151/2022-2023__E_Handbook.docx.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://core-docs.s3.amazonaws.com/documents/asset/uploaded_file/1284/Esten/2402151/2022-2023__E_Handbook.docx.pdf",
+      "extraction_method": "pdftotext"
     },
     "2510200": {
       "districtId": "2510200",
@@ -3310,7 +3384,7 @@
       "districtId": "2510620",
       "districtName": "Sharon School District",
       "tier": 1,
-      "policySummary": "No MA Sharon-specific policy located in 2026-05-20 search.",
+      "policySummary": "Handbook reviewed: AND FACILITIES 27 SCHOOL DANCES 28 LOST AND FOUND 28 STUDENT SALES 28 USE OF",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -3321,10 +3395,19 @@
           "url": "https://sharon.k12.ma.us/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/501/District/4719456/Sharon_Student_Handbook_2024-2025.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/501/District/4719456/Sharon_Student_Handbook_2024-2025.pdf",
+      "extraction_method": "pdftotext"
     },
     "2510770": {
       "districtId": "2510770",
@@ -3559,7 +3642,7 @@
       "districtId": "2511880",
       "districtName": "Wachusett School District",
       "tier": 1,
-      "policySummary": "No specific policy details found.",
+      "policySummary": "Handbook reviewed: ty immediately adjacent to school grounds, at a school sponsored or school-related activity, at a function or program whether on or off school grounds, at a school bus stop, on a school bus or other v",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -3570,10 +3653,19 @@
           "url": "https://www.wrsd.net/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://www.wrsdonline.net/handbooks/WRHSHandbook.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://www.wrsdonline.net/handbooks/WRHSHandbook.pdf",
+      "extraction_method": "pdftotext"
     },
     "2511910": {
       "districtId": "2511910",
@@ -3834,7 +3926,7 @@
       "districtId": "2512930",
       "districtName": "Whitman-Hanson School District",
       "tier": 1,
-      "policySummary": "Policy manual exists; specific cell phone policy details not found.",
+      "policySummary": "Handbook reviewed: 31 \u200b Financial Responsibilities and Obligations\u200b 31 \u200b School Dances/Proms\u200b 31 \u200b Substitute Teachers\u200b 31 \u200b Teacher Detention\u200b 32 \u200b",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -3845,10 +3937,19 @@
           "url": "https://www.whrsd.org/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://cdnsm5-ss10.sharpschool.com/UserFiles/Servers/Server_18535382/File/For%20Parents/Student%20Handbooks/25-26%20High%20School%20Handbook%20FINAL%20(2).pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://cdnsm5-ss10.sharpschool.com/UserFiles/Servers/Server_18535382/File/For%20Parents/Student%20Handbooks/25-26%20High%20School%20Handbook%20FINAL%20(2).pdf",
+      "extraction_method": "pdftotext"
     },
     "2513050": {
       "districtId": "2513050",
@@ -4025,27 +4126,47 @@
       "districtId": "2502970",
       "districtName": "Brewster School District",
       "tier": 1,
-      "policySummary": "No MA Brewster-specific policy located in 2026-05-20 search.",
+      "policySummary": "Handbook reviewed: ounds. \u2022\u200b Accessing an area on school grounds that is not in accordance with the student\u2019s schedule. \u2022\u200b Running in the hallways. \u2022\u200b Senior pranks. \u2022\u200b Computer/electronic communications misuse, includi",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1752257253/brewsterschoolsorg/zl2fno7bpda5pbypjyic/BHSStudentHandbook2024-25.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1752257253/brewsterschoolsorg/zl2fno7bpda5pbypjyic/BHSStudentHandbook2024-25.pdf",
+      "extraction_method": "pdftotext"
     },
     "2503060": {
       "districtId": "2503060",
       "districtName": "Brimfield School District",
-      "tier": 1,
-      "policySummary": "No MA Brimfield-specific policy located in 2026-05-20 search.",
+      "tier": 2,
+      "policySummary": "Handbook (off-and-away): xtracurricular Return to School Planned Absences Sign Out Field Trips Behavior at Extra-Curricular Activities 17 Bus Transportation 18 Cell Phones 19 Certified",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4881/Bcusd309/2e8bd43c-97c7-4cae-baf2-3d6488819d1d/BHS-Handbook-2025-2026-(1).pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4881/Bcusd309/2e8bd43c-97c7-4cae-baf2-3d6488819d1d/BHS-Handbook-2025-2026-(1).pdf",
+      "extraction_method": "pdftotext"
     },
     "2503120": {
       "districtId": "2503120",
@@ -4116,15 +4237,25 @@
     "2503900": {
       "districtId": "2503900",
       "districtName": "Conway School District",
-      "tier": 1,
-      "policySummary": "No MA Conway-specific policy located in 2026-05-20 search.",
+      "tier": 2,
+      "policySummary": "Handbook (off-and-away): Maximum \u2013 Suspension 8.\u200b Vandalism/Theft \u2013 Willfully or intentionally damaging, destroying, or stealing property. See Board Policy 4.18 \u2013 Prohibited Student Conduct a.\u200b Minimum \u2013 Conference/Parent Notification/Restitution; Maximum \u2013 Expulsion/Restitution 9.\u200b Improper Use of Electronic Devices \u2013 Poss",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3965/Cps/b09d8c4f-d77e-4384-a2be-1ee1eab7f516/2025-2026-Student-Handbook.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3965/Cps/b09d8c4f-d77e-4384-a2be-1ee1eab7f516/2025-2026-Student-Handbook.pdf",
+      "extraction_method": "pdftotext"
     },
     "2504080": {
       "districtId": "2504080",
@@ -4143,14 +4274,24 @@
       "districtId": "2504260",
       "districtName": "Dover School District",
       "tier": 1,
-      "policySummary": "No MA Dover-specific policy located in 2026-05-20 search.",
+      "policySummary": "Handbook reviewed: of Seat Belts .............................................................................................................................................. 62 Longboards/Skateboards, Scooters, Hoverb",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://www.doversherborn.org/uploaded/Our_Schools/HighSchool/Z_Publications_Other_HS/StudentHandbook_2021-2022_(2).pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://www.doversherborn.org/uploaded/Our_Schools/HighSchool/Z_Publications_Other_HS/StudentHandbook_2021-2022_(2).pdf",
+      "extraction_method": "pdftotext"
     },
     "2504530": {
       "districtId": "2504530",
@@ -4191,15 +4332,25 @@
     "2504710": {
       "districtId": "2504710",
       "districtName": "Erving School District",
-      "tier": 1,
-      "policySummary": "No specific policy found.",
+      "tier": 2,
+      "policySummary": "Handbook (off-and-away): \u2026..\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026 Student Illness\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026..\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.. Ticks\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026..\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026 Live Animals SCPM IMG Link\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026..\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.. Emergency Procedures SCPM EBC Link Technology \u200b Empowered Digital Student Use Contract\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026..\u2026\u2026\u2026 \u200b Cell Phones & Other Electronics ",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://union28-erv.ss5.sharpschool.com/information/e_e_s_studdent_handbook",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://union28-erv.ss5.sharpschool.com/information/e_e_s_studdent_handbook",
+      "extraction_method": "pdftotext"
     },
     "2504920": {
       "districtId": "2504920",
