@@ -231,6 +231,7 @@ export function TownPopup({
               Committee calendar URL not yet on file.
             </div>
           )}
+          <NextMeetingLine nextMeeting={nextMeeting} loading={loading} />
         </div>
 
         <RepsBlock
