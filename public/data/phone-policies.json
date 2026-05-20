@@ -2336,14 +2336,24 @@
       "districtId": "2505730",
       "districtName": "Hampden-Wilbraham School District",
       "tier": 1,
-      "policySummary": "No specific cell phone policy found; general district information available but detailed policy not accessible.",
+      "policySummary": "Handbook reviewed: c t : _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ Home Address: _________________________ Email Address: ___________________ Home Phone:___________________________",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://irp.cdn-website.com/9f6d812e/files/uploaded/StudentHandbookFINAL10242022.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://irp.cdn-website.com/9f6d812e/files/uploaded/StudentHandbookFINAL10242022.pdf",
+      "extraction_method": "pdftotext"
     },
     "2505790": {
       "districtId": "2505790",
@@ -2496,14 +2506,24 @@
       "districtId": "2506660",
       "districtName": "Lawrence School District",
       "tier": 1,
-      "policySummary": "No MA Lawrence policy details located in 2026-05-20 search.",
+      "policySummary": "Handbook reviewed: ministrator Signature Chaperone Signature Please sign below giving your permission for your child to attend. Por favor firme abajo dando su permiso para que su hijo\\a asista. Parent Emergency Contact ",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://www.lawrence.k12.ma.us/files/lps/LHSCurriculumGuides/Faculty_Coverpage_and_Handbook_LHS_2017-18.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://www.lawrence.k12.ma.us/files/lps/LHSCurriculumGuides/Faculty_Coverpage_and_Handbook_LHS_2017-18.pdf",
+      "extraction_method": "pdftotext"
     },
     "2506690": {
       "districtId": "2506690",
@@ -2696,7 +2716,7 @@
       "districtId": "2507500",
       "districtName": "Maynard School District",
       "tier": 1,
-      "policySummary": "Acceptable use policy exists but specific cell phone details not accessible.",
+      "policySummary": "Handbook reviewed: ..... 27 4.27 STUDENT SEXUAL HARASSMENT .......................................................................................... 27 4.28 LASER POINTERS ..............................................",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -2707,10 +2727,19 @@
           "url": "https://malegislature.gov/PressRoom/Detail?pressReleaseId=238",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3056/Msd/042a86f9-c776-4dd4-990a-e7ef50870fda/Section_4_-_Students.pdf?disposition=inline",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3056/Msd/042a86f9-c776-4dd4-990a-e7ef50870fda/Section_4_-_Students.pdf?disposition=inline",
+      "extraction_method": "pdftotext"
     },
     "2507590": {
       "districtId": "2507590",
@@ -2784,10 +2813,10 @@
     "2507770": {
       "districtId": "2507770",
       "districtName": "Middleborough School District",
-      "tier": 1,
-      "policySummary": "MA Middleborough policy details not located in 2026-05-20 search.",
+      "tier": 2,
+      "policySummary": "Handbook (off-and-away): s and Regulations..........................................................................................................20 Toys........................................................................................................................................................ 20 Cell Phones...",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -2796,10 +2825,19 @@
           "url": "https://www.middleboro.k12.ma.us/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1756831685/middleborok12maus/esxwwheiaaioilpmsare/MECCMKGHBBStudentHandbook2025-2026.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1756831685/middleborok12maus/esxwwheiaaioilpmsare/MECCMKGHBBStudentHandbook2025-2026.pdf",
+      "extraction_method": "pdftotext"
     },
     "2507890": {
       "districtId": "2507890",
@@ -2958,7 +2996,7 @@
       "districtId": "2508700",
       "districtName": "North Andover School District",
       "tier": 1,
-      "policySummary": "No specific North Andover, MA policy found; policies page exists but details not accessible.",
+      "policySummary": "Handbook reviewed: as in person. Employees must conduct themselves in ways that do not distract from or disrupt the educational process. The orientation and reminders will give special emphasis to: 1. Improper fraterniz",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -2969,10 +3007,19 @@
           "url": "https://www.northandoverpublicschools.com/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1674241058/northandoverpublicschoolscom/hc8o04rnr3xqt7guzjxc/NAPSEmployeeHandbook12-16-21.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1674241058/northandoverpublicschoolscom/hc8o04rnr3xqt7guzjxc/NAPSEmployeeHandbook12-16-21.pdf",
+      "extraction_method": "pdftotext"
     },
     "2508730": {
       "districtId": "2508730",
@@ -3158,7 +3205,7 @@
       "districtId": "2509270",
       "districtName": "Oxford School District",
       "tier": 1,
-      "policySummary": "No MA Oxford policy located in 2026-05-20 search.",
+      "policySummary": "Handbook reviewed: ternoon Dismissal 9-10 After School Programs, Arrival to School, Assemblies, Assignment 10-11 Book, Attendance Policy Automated Calling System 11 Behavior, Buses, Cafeteria 12-13",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -3169,10 +3216,19 @@
           "url": "https://www.oxps.org/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://secure.infosnap.com/resources/682/files/OSD%20Elementary%20Handbook%2016-17.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://secure.infosnap.com/resources/682/files/OSD%20Elementary%20Handbook%2016-17.pdf",
+      "extraction_method": "pdftotext"
     },
     "2509300": {
       "districtId": "2509300",
@@ -3452,10 +3508,10 @@
     "2510920": {
       "districtId": "2510920",
       "districtName": "South Hadley School District",
-      "tier": 1,
-      "policySummary": "No policy details found in 2026-05-20 search.",
+      "tier": 2,
+      "policySummary": "Handbook (off-and-away): 39 Expulsion\u200b 39 School Program\u200b 39 Transfer Students\u200b 39 Electronic Devices\u200b 39 Section III: Short",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -3464,10 +3520,19 @@
           "url": "https://www.southhadleyschools.org/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1756815044/southhadleyschoolsorg/ndlglp2mxm5l82shdxil/SHHSStudentHandbookFY25forDistribution.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1756815044/southhadleyschoolsorg/ndlglp2mxm5l82shdxil/SHHSStudentHandbookFY25forDistribution.pdf",
+      "extraction_method": "pdftotext"
     },
     "2511010": {
       "districtId": "2511010",
@@ -3690,10 +3755,10 @@
     "2511970": {
       "districtId": "2511970",
       "districtName": "Walpole School District",
-      "tier": 1,
-      "policySummary": "No specific policy found; handbooks likely contain policies.",
+      "tier": 2,
+      "policySummary": "Handbook (off-and-away): COMMENCEMENT EXERCISES\u200b 44 GRADE REPORTING\u200b 44 SUMMER SCHOOL ELIGIBILITY\u200b 44 DROPOUT PREVENTION\u200b 44 PASSING BETWEEN CLASSES\u200b 45 PORTABLE ELECTRONIC DEVICE POLICY\u200b 45 SEXTING\u200b",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
@@ -3702,10 +3767,19 @@
           "url": "https://www.walpole.k12.ma.us/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3813/Wps/593bcd55-bfa3-4296-90a0-146fe6c20137/Student-Parent_Handbook_2025-2026__3_.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/3813/Wps/593bcd55-bfa3-4296-90a0-146fe6c20137/Student-Parent_Handbook_2025-2026__3_.pdf",
+      "extraction_method": "pdftotext"
     },
     "2512000": {
       "districtId": "2512000",
@@ -3813,7 +3887,7 @@
       "districtId": "2512390",
       "districtName": "West Boylston School District",
       "tier": 1,
-      "policySummary": "Policy pages exist but no specific content found.",
+      "policySummary": "Handbook reviewed: nd Responsibilities Student Concerns Age of Majority Participation in Athletics Transportation Student Dress and Appearance Police Investigations Search and Seizure Student Bullying and Cyberbullying ",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -3824,10 +3898,19 @@
           "url": "https://www.wbschools.com/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1719330924/wbsdorg/kzaxnwynsuuc8yglt5i6/StudentandFamilyHandbook-CURRENT.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1719330924/wbsdorg/kzaxnwynsuuc8yglt5i6/StudentandFamilyHandbook-CURRENT.pdf",
+      "extraction_method": "pdftotext"
     },
     "2512420": {
       "districtId": "2512420",
@@ -4041,27 +4124,47 @@
       "districtId": "2500014",
       "districtName": "Chesterfield-Goshen School District",
       "tier": 1,
-      "policySummary": "No MA Chesterfield-Goshen-specific policy located in 2026-05-20 search.",
+      "policySummary": "Handbook reviewed: emblems, or other gang identifiers are prohibited. 5.\u200b Hats, hoods, or other inappropriate headgear, including sunglasses may not be worn in the building unless required for medical reasons. Blankets ",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/3858/GLSD/5951973/2025-2026_GMS_Student_Handbook_.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/3858/GLSD/5951973/2025-2026_GMS_Student_Handbook_.pdf",
+      "extraction_method": "pdftotext"
     },
     "2500043": {
       "districtId": "2500043",
       "districtName": "Up-Island Regional School District",
-      "tier": 1,
-      "policySummary": "No specific policy found.",
+      "tier": 3,
+      "policySummary": "Handbook (hardware policy): SDC) A student will attend school but will be assigned to a specific location and will be supervised in all common spaces (ie. hallways, cafeteria). It is an expectation that the student works productively on academic assignments throughout the day. The student is expected to surrender all of their ",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "hardware",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://mvrhs.org/wp-content/uploads/2025/08/MVRHS-Student-Handbook-25_26.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://mvrhs.org/wp-content/uploads/2025/08/MVRHS-Student-Handbook-25_26.pdf",
+      "extraction_method": "pdftotext"
     },
     "2501740": {
       "districtId": "2501740",
@@ -4379,14 +4482,24 @@
       "districtId": "2505610",
       "districtName": "Halifax School District",
       "tier": 1,
-      "policySummary": "No MA Halifax-specific policy located in 2026-05-20 search.",
+      "policySummary": "Handbook reviewed: may also request a print-out from the cafeteria of TELEPHONES/ELECTRONIC EQUIPMENT an itemized list of debits. Students may not borrow money or food from other students for USE OF",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://schoolstarttime.org/wp-content/uploads/2011/06/silver-lake-regional-2011-12-middle-school-student-handbook.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://schoolstarttime.org/wp-content/uploads/2011/06/silver-lake-regional-2011-12-middle-school-student-handbook.pdf",
+      "extraction_method": "pdftotext"
     },
     "2505760": {
       "districtId": "2505760",
@@ -4444,27 +4557,47 @@
       "districtId": "2506810",
       "districtName": "Leverett School District",
       "tier": 1,
-      "policySummary": "No district-specific policy located. Policy manual available on district website.",
+      "policySummary": "Handbook reviewed: us windows \u25cf Limit conversations to people sitting in the same row of seats, where they can be heard using a normal tone of voice \u25cf Refrain from eating any food on the bus \u25cf Remain seated until the dr",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://cdnsm5-ss5.sharpschool.com/UserFiles/Servers/Server_3147859/File/LES%20Handbook%20FY24%20(Last%20Updated%20September%202023).pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://cdnsm5-ss5.sharpschool.com/UserFiles/Servers/Server_3147859/File/LES%20Handbook%20FY24%20(Last%20Updated%20September%202023).pdf",
+      "extraction_method": "pdftotext"
     },
     "2506900": {
       "districtId": "2506900",
       "districtName": "Lincoln School District",
-      "tier": 1,
-      "policySummary": "No comprehensive cell phone policy located. Acceptable Usage Policy found for technology only.",
+      "tier": 2,
+      "policySummary": "Handbook (off-and-away): acceptable for an ill student to spend a class period in a lavatory because they are \"too ill\" to make it to the nurse\u2019s office. This will be treated as an unexcused absence from class, as the nurse is available to assist students as needed. Students who are ill are not to use their cell phones to c",
       "scope": "unknown",
-      "enforcement": "none",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "title": "Student handbook (pdftotext)",
+          "url": "https://resources.finalsite.net/images/v1762107956/lincolnpsorg/ly5tjw3lvuzgis6lzoe1/LMSHandbook2526.pdf",
+          "publisher": "district",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "confidence": "high",
+      "status": "handbook_verified",
+      "handbook_url": "https://resources.finalsite.net/images/v1762107956/lincolnpsorg/ly5tjw3lvuzgis6lzoe1/LMSHandbook2526.pdf",
+      "extraction_method": "pdftotext"
     },
     "2507290": {
       "districtId": "2507290",
