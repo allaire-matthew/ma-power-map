@@ -1,7 +1,7 @@
 {
-  "_schemaVersion": "3.0.1",
+  "_schemaVersion": "3.1.0",
   "_lastUpdated": "2026-05-20",
-  "_notes": "Tier system (v3, 2026-05-20): 1 = no district policy; 2 = partial / non-hardware (off-and-away, instructional-time-only, etc.); 3 = hardware-level removal but scope-limited (K-8 only, HS only, has lunch/passing-time access, or has non-medical discretionary exceptions); 4 = bell-to-bell hardware-level K-12 with NO discretionary exceptions (federally-mandated medical/IEP/504 accommodations allowed). Tier 4 currently empty: candidates require live-source verification before promotion. No-mistakes policy: do not elevate to tier 4 from unsourced or AI-generated summary text. Sources arrays may include broader edtech news/action even when the tier itself is set strictly on phone policy.",
+  "_notes": "Tier system (v3, locked 2026-05-20 after red-team): 1 = no district policy; 2 = partial / non-hardware (off-and-away in pocket, instructional-time-only, class-period-only with lunch/passing access); 3 = hardware-level removal but scope-limited (K-8 only, HS only, has lunch/passing access, has non-medical discretionary exceptions); 4 = bell-to-bell hardware-level K-12 with NO discretionary exceptions (federally-mandated medical/IEP/504 OK). Each tier-3+ promotion requires district records + news + social media triangulation. redTeamVerified field marks entries that have been through the full source-verification process. edtechNotes field captures broader ed-tech activity per district even when not affecting tier rank.",
   "policies": {
     "2502790": {
       "districtId": "2502790",
@@ -131,30 +131,53 @@
     "2503150": {
       "districtId": "2503150",
       "districtName": "Brookline School District",
-      "tier": 3,
-      "policySummary": "Public Schools of Brookline: bell-to-bell phone-free policy for K-8. Phones must be put away at start of day and not used until dismissal. (User-verified 2026-05-20; supersedes earlier handbook auto-extraction that mis-pulled a same-named district in NH.)",
-      "scope": "K-8",
-      "enforcement": "hardware",
+      "tier": 2,
+      "policySummary": "K-8: school-by-school 'off and away' pilots (Lawrence, Hayes named) — NOT bell-to-bell hardware. BHS (9-12): SC-adopted Rule 1.4 April 10, 2025 — 'Limited Use': phones off/stored during instructional periods only; permitted in public spaces during passing time and free blocks. NO Yondr at any level.",
+      "scope": "K-12",
+      "enforcement": "mixed-non-hardware",
       "effectiveDate": "2024-09",
       "enrollment": 7900,
       "sources": [
         {
-          "title": "School districts across the country are rolling out new policies for mobile devices. What's Brookline's plan?",
-          "url": "https://brookline.news/school-districts-across-the-country-are-rolling-out-new-policies-for-mobile-devices-whats-brooklines-plan/",
-          "publisher": "Brookline.News",
-          "date": "2024-10-08"
+          "type": "district",
+          "title": "BHS Student Handbook 2025-26, Rule 1.4 Personal Electronic Devices",
+          "url": "https://bhs.brookline.k12.ma.us/uploads/8/0/1/5/801512/bhs_handbook25_26_v1a.pdf",
+          "publisher": "Brookline High School",
+          "date": "2025-04-10"
         },
         {
-          "title": "Brookline School Committee Considers New Mobile Device Policy",
-          "url": "https://thelocallens.org/brookline-school-committee-considers-new-mobile-device-policy-amid-broader-policy-manual-overhaul/",
-          "publisher": "LocalLens",
-          "date": "2024-10-12"
+          "type": "district",
+          "title": "PSB Mobile Device Policies (school-level pilots)",
+          "url": "https://www.brookline.k12.ma.us/cms/lib/MA01907509/Centricity/Domain/62/PSB%20Mobile%20Device%20Policies.pdf",
+          "publisher": "Public Schools of Brookline",
+          "date": "2024-09-23"
+        },
+        {
+          "type": "news",
+          "title": "What's Brookline's plan? (mobile device policies)",
+          "url": "https://brookline.news/school-districts-across-the-country-are-rolling-out-new-policies-for-mobile-devices-whats-brooklines-plan/",
+          "publisher": "Brookline.News",
+          "date": "2024-10-01"
         }
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
-      "status": "news_verified",
-      "news_verified_by": "user_2026-05-20"
+      "tier_history": [
+        {
+          "from": 3,
+          "to": 2,
+          "date": "2026-05-20",
+          "reason": "Red-team verification via district records + news + social media"
+        }
+      ],
+      "exceptionsFound": [
+        "IEP/504",
+        "Documented teacher permission for educational use",
+        "BHS public-space use during passing time and free blocks"
+      ],
+      "edtechNotes": "BYOD/laptops/tablets explicitly preserved for educational use.",
+      "redTeamFindings": "MAJOR CORRECTION TO 'news_verified' ENTRY. K-8 bell-to-bell hardware claim is NOT supported by primary district documents. K-8 uses 'off and away' pilots; no Yondr/hardware. BHS permits phones during passing time and free blocks — opposite of bell-to-bell.",
+      "redTeamVerified": "2026-05-20"
     },
     "2512660": {
       "districtId": "2512660",
@@ -203,24 +226,53 @@
       "districtId": "2506480",
       "districtName": "Ipswich School District",
       "tier": 3,
-      "policySummary": "Ipswich: students lock phones in caddies at start of day; true bell-to-bell — no use at lunch, passing time, or any other time.",
+      "policySummary": "IHS: phones locked in designated cabinet/caddy at start of day, retrieved at dismissal. True bell-to-bell — no use at lunch or passing per Principal Mitchell (CBS Boston Sept 2025). Policy in effect since Sept 2024. AG Andrea Campbell named IHS as model May 2026. K-8 schools have non-hardware bans.",
       "scope": "9-12",
       "enforcement": "hardware",
       "effectiveDate": "2024-09",
       "enrollment": 1900,
       "sources": [
         {
-          "title": "verified 2026-05-20",
+          "type": "news",
+          "title": "AG: Grant to help schools go phone-free inspired by Ipswich High",
+          "url": "https://www.gloucestertimes.com/news/local_news/ag-grant-to-help-schools-go-phone-free-inspired-by-ipswich-high/article_632bd0de-f4d4-449e-9403-70c056a34b98.html",
+          "publisher": "Gloucester Daily Times",
+          "date": "2026-05-09"
+        },
+        {
+          "type": "news",
+          "title": "Two MA high schools banned cellphones in class",
           "url": "https://www.cbsnews.com/boston/news/massachusetts-ipswich-newburyport-cellphones-school-ban/",
-          "publisher": "",
-          "date": "2026-05-20"
+          "publisher": "CBS Boston",
+          "date": "2025-09-05"
+        },
+        {
+          "type": "news",
+          "title": "AG: Ipswich should serve as model",
+          "url": "https://www.nbcboston.com/news/local/massachusetts-cell-phones-public-schools-announcement-andrea-campbell/3946935/",
+          "publisher": "NBC Boston",
+          "date": "2026-05-09"
+        },
+        {
+          "type": "news",
+          "title": "AG visits Ipswich High to promote cellphone-free schools",
+          "url": "https://thelocalnews.news/2026/05/08/attorney-general-visits-ipswich-high-to-promote-cellphone-free-schools/",
+          "publisher": "The Local News (Ipswich)",
+          "date": "2026-05-08"
         }
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
       "news_supersedes_handbook": true,
       "news_supersedes_handbook_date": "2026-05-20",
-      "news_supersedes_handbook_publisher": ""
+      "news_supersedes_handbook_publisher": "",
+      "exceptionsFound": [
+        "IEP/medical accommodations (standard)",
+        "K-8 enforcement is non-hardware"
+      ],
+      "edtechNotes": "Principal Mitchell publicly supports state-level standardization.",
+      "redTeamFindings": "Tier-3 by scope (HS-only). Bell-to-bell at IHS confirmed verbatim. K-8 has bans but not hardware. AG used Ipswich as statewide model.",
+      "redTeamVerified": "2026-05-20"
     },
     "2503090": {
       "districtId": "2503090",
@@ -345,24 +397,55 @@
       "districtId": "2503660",
       "districtName": "Chicopee School District",
       "tier": 3,
-      "policySummary": "Chicopee High School uses Yondr pouches since 2022; phones locked + staff receives locked pouch upon entry.",
-      "scope": "varies",
+      "policySummary": "Yondr magnetic pouches at Chicopee HS, Comprehensive HS, and Chicopee Academy since March 2022; SC formalized 9-1 vote. Phones locked at entry, unlocked at dismissal incl. lunch. Two middle schools (Bellamy, Fairview) and 9 elementary schools NOT covered.",
+      "scope": "secondary-schools-only",
       "enforcement": "hardware",
       "effectiveDate": "2024-09",
       "enrollment": 7700,
       "sources": [
         {
-          "title": "verified 2026-05-20",
+          "type": "news",
+          "title": "Chicopee Public Schools Stand by Cell Phone Ban, Storage",
+          "url": "https://www.govtech.com/education/k-12/chicopee-public-schools-stand-by-cell-phone-ban-storage",
+          "publisher": "GovTech",
+          "date": "2023-09-13"
+        },
+        {
+          "type": "news",
+          "title": "Chicopee High School's updated cell phone policy begins this week",
+          "url": "https://www.westernmassnews.com/2022/03/28/chicopee-high-schools-updated-cell-phone-policy-begins-this-week/",
+          "publisher": "Western Mass News",
+          "date": "2022-03-28"
+        },
+        {
+          "type": "news",
+          "title": "Chicopee High School continues to implement its own cellphone ban",
           "url": "https://www.wwlp.com/news/local-news/chicopee-high-school-continues-to-implement-its-own-cellphone-ban/",
-          "publisher": "",
-          "date": "2026-05-20"
+          "publisher": "WWLP",
+          "date": "2024-09-01"
+        },
+        {
+          "type": "news",
+          "title": "Chicopee School Committee discusses cellphone pouches",
+          "url": "https://www.westernmassnews.com/2023/03/01/getting-answers-chicopee-school-committee-reviews-cellphone-pouches/",
+          "publisher": "Western Mass News",
+          "date": "2023-03-01"
         }
       ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
       "news_supersedes_handbook": true,
       "news_supersedes_handbook_date": "2026-05-20",
-      "news_supersedes_handbook_publisher": ""
+      "news_supersedes_handbook_publisher": "",
+      "exceptionsFound": [
+        "Teacher-discretion educational use 'closely aligned with course content'",
+        "After-school sports/activities with coach/teacher/advisor permission",
+        "Medical tracking via written agreement",
+        "Emergency family contact via written agreement"
+      ],
+      "edtechNotes": "Middle schools and elementary not covered as of 2024 sources.",
+      "redTeamFindings": "Scope clarification: 3 secondary schools (not just CHS). Teacher-discretion 'educational use' carve-out disqualifies tier 4. Solidly tier 3.",
+      "redTeamVerified": "2026-05-20"
     },
     "2511130": {
       "districtId": "2511130",
@@ -891,22 +974,58 @@
     "2508850": {
       "districtId": "2508850",
       "districtName": "Northampton School District",
-      "tier": 3,
-      "policySummary": "Board-approved June 12, 2025 (Cell Phone Policy Direction A): all cell phones and electronic devices collected at the beginning of the day by staff and returned at end of day. Students must power down and secure devices in school-provided pouches upon entry. Earbuds/headphones banned without explicit teacher permission. Earned/lost as a privilege. District-wide K-12.",
-      "scope": "K-12",
-      "enforcement": "hardware",
+      "tier": 2,
+      "policySummary": "BoardDocs 'Cell Phone Policy Direction A' (2025-06-12) exists but adoption NOT verified — document title 'Direction A' implies discussion-option not final policy; no JICJ-coded policy in district manual. Gazette (2025-08-26, 2025-09-30) reports NHS still allows 'limited use during designated periods.' Activist Emily Boddy (Gazette 2026-04-09) still pushing 18 months in for bell-to-bell. Policy is in flux — SC has 'Ad Hoc Screen Time Subcommittee.'",
+      "scope": "varies",
+      "enforcement": "off-and-away",
       "effectiveDate": "2025-09",
       "enrollment": 2400,
       "sources": [
         {
-          "title": "Cell Phone Policy Direction A (June 12, 2025)",
+          "type": "district",
+          "title": "Cell Phone Policy Direction A",
           "url": "https://go.boarddocs.com/ma/northampton/Board.nsf/files/DHDJ7B4BC516/$file/Cell%20Phone%20Policy%20Direction%20A.pdf",
-          "publisher": "Northampton Public Schools (BoardDocs)",
+          "publisher": "Northampton PS BoardDocs",
           "date": "2025-06-12"
+        },
+        {
+          "type": "district",
+          "title": "Northampton Public Schools Policy Manual (no JICJ cell-phone policy)",
+          "url": "https://www.northamptonschools.org/140428_2",
+          "publisher": "Northampton Public Schools",
+          "date": "2026-05-20"
+        },
+        {
+          "type": "news",
+          "title": "School questions take center stage in candidates forum at NHS",
+          "url": "https://gazettenet.com/2025/09/30/school-questions-take-center-stage-in-candidates-forum-at-nhs/",
+          "publisher": "Daily Hampshire Gazette",
+          "date": "2025-09-30"
+        },
+        {
+          "type": "news",
+          "title": "Northampton resident pushing for school cellphone ban",
+          "url": "https://gazettenet.com/2026/04/09/northampton-resident-pushing-for-school-cellphone-ban-welcomes-new-social-media-bill-okd-by-house/",
+          "publisher": "Daily Hampshire Gazette",
+          "date": "2026-04-09"
+        },
+        {
+          "type": "news",
+          "title": "Guest Column: A case for reducing EdTech in Northampton public schools",
+          "url": "https://gazettenet.com/2026/04/17/guest-column-a-case-for-reducing-edtech-in-northampton-public-schools/",
+          "publisher": "Daily Hampshire Gazette",
+          "date": "2026-04-17"
+        },
+        {
+          "type": "social",
+          "title": "Vote for Schools Northampton (candidate questionnaire)",
+          "url": "https://www.voteforschoolsnorthampton.com/",
+          "publisher": "Vote for Schools Northampton",
+          "date": "2025-10-28"
         }
       ],
-      "lastVerified": "2026-04-30",
-      "confidence": "high",
+      "lastVerified": "2026-05-20",
+      "confidence": "medium",
       "tier_history": [
         {
           "from": 3,
@@ -919,8 +1038,22 @@
           "to": 3,
           "date": "2026-05-20",
           "reason": "Demoted: needs live-source verification before claiming tier-4. Either had explicit non-medical exception language, scope marked unknown, or zero sources on file."
+        },
+        {
+          "from": 3,
+          "to": 2,
+          "date": "2026-05-20",
+          "reason": "Red-team verification via district records + news + social media"
         }
-      ]
+      ],
+      "exceptionsFound": [
+        "Written-agreement carve-out: 'only exception ... through completion of a written agreement' (broad, non-medical)",
+        "Teacher/admin discretionary earbuds permission",
+        "NHS schedule-based 'limited use during designated periods'"
+      ],
+      "edtechNotes": "High-profile non-phone screen exposure debate: ~$200K/yr × 5 yrs proposed for Chromebooks. Guest column (Gazette 2026-04-17) by Marcus/Staub/Baumer + 9 signatories argues Chromebooks facilitate distraction.",
+      "redTeamFindings": "On-file claim was tier-4-shaped, materially wrong. (1) 'Direction A' is discussion document, no 'ADOPTED' stamp; (2) policy manual has no cell-phone-coded policy; (3) NHS still has 'limited use during designated periods'; (4) Apr 2026 op-ed refers to 'planned' (future) phone-free policy; (5) Boddy still pushing 18 months in.",
+      "redTeamVerified": "2026-05-20"
     },
     "2501920": {
       "districtId": "2501920",
@@ -1081,20 +1214,56 @@
       "districtId": "2505490",
       "districtName": "Greenfield School District",
       "tier": 3,
-      "policySummary": "Greenfield Public School District uses Yondr pouches: students place phones in small gray pouches sealed magnetically at the beginning of the day; pouches can only be opened at the end of the day at a magnet station. Bell-to-bell hardware enforcement.",
-      "scope": "K-12",
+      "policySummary": "GMS + GHS use Yondr-style cell phone pouches for 2025-26; phones/smartwatches off and secured until dismissal. Three elementary schools (Federal St, Newton, Discovery School at Four Corners) use 'off-and-away during instructional day' only — no hardware. Pouch rollout: Sept 2022.",
+      "scope": "varies",
       "enforcement": "hardware",
       "effectiveDate": "2024-09",
       "enrollment": 1700,
       "sources": [
         {
+          "type": "district",
+          "title": "Greenfield HS Family Handbook 2025-2026",
+          "url": "https://gpsk12.org/wp-content/uploads/2025/10/GHS-Handbook-2025-26-rev.pdf",
+          "publisher": "Greenfield Public Schools",
+          "date": "2025-10-01"
+        },
+        {
+          "type": "district",
+          "title": "Greenfield MS Family Handbook 2025-2026",
+          "url": "https://gpsk12.org/wp-content/uploads/2025/09/GMS-Handbook-UPDATED-2025-2026-1.pdf",
+          "publisher": "Greenfield Public Schools",
+          "date": "2025-09-01"
+        },
+        {
+          "type": "district",
+          "title": "Federal Street School Family Handbook 2025-2026",
+          "url": "https://gpsk12.org/wp-content/uploads/2025/10/Federal-Street-School-Handbook-2025-26-rev.pdf",
+          "publisher": "Greenfield Public Schools",
+          "date": "2025-10-01"
+        },
+        {
+          "type": "news",
           "title": "Local schools weigh in on proposed statewide cellphone ban",
           "url": "https://gazettenet.com/2025/08/26/local-schools-weigh-in-on-proposed-statewide-cellphone-ban/",
           "publisher": "Daily Hampshire Gazette",
           "date": "2025-08-26"
+        },
+        {
+          "type": "news",
+          "title": "Local school district leaders weigh in on student cellphone ban",
+          "url": "https://recorder.com/2025/08/19/massachusetts-school-cell-phone-ban/",
+          "publisher": "Greenfield Recorder",
+          "date": "2025-08-19"
+        },
+        {
+          "type": "social",
+          "title": "Cellphone pouches are a bad idea (op-ed)",
+          "url": "https://www.recorder.com/my-turn-Bogdanove-YONDR-Phone-Pouches-for-GPS-47554045",
+          "publisher": "Greenfield Recorder",
+          "date": "2022-08-11"
         }
       ],
-      "lastVerified": "2026-04-30",
+      "lastVerified": "2026-05-20",
       "confidence": "high",
       "news_supersedes_handbook": true,
       "news_supersedes_handbook_date": "2025-08-26",
@@ -1112,7 +1281,15 @@
           "date": "2026-05-20",
           "reason": "Demoted: needs live-source verification before claiming tier-4. Either had explicit non-medical exception language, scope marked unknown, or zero sources on file."
         }
-      ]
+      ],
+      "exceptionsFound": [
+        "Open-ended principal-discretion accommodation clause (broader than IEP/504)",
+        "Elementary schools no hardware",
+        "Handbook says 'instructional day' not 'bell-to-bell'"
+      ],
+      "edtechNotes": "Early MA Yondr adopter (Sept 2022); recurring cost ~$12K/yr.",
+      "redTeamFindings": "On-file claim was tier-4-shaped. Three material errors: scope NOT K-12 (elementary excluded); 'instructional day' not 'bell-to-bell'; open-ended principal accommodation clause exists.",
+      "redTeamVerified": "2026-05-20"
     },
     "2504590": {
       "districtId": "2504590",
@@ -1534,22 +1711,65 @@
     "2509600": {
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
-      "tier": 3,
-      "policySummary": "Pioneer Valley Regional: full blanket ban on personal electronic devices during school day; 95% reduction in cafeteria phone use post-implementation.",
-      "scope": "varies",
+      "tier": 4,
+      "policySummary": "School Committee unanimously adopted June 6, 2024; effective August 2024. Magnetic Yondr pouches across ALL 3 PVRSD schools: PVRS (7-12, Northfield), Bernardston Elementary, Northfield Elementary. K-12 within district footprint (Warwick + Leyden elementary feeders are separate districts). Phones, smartwatches, earbuds, tablets all powered-off + locked at start of day, unlocked at dismissal. Featured in MA Attorney General's Office statewide toolkit.",
+      "scope": "K-12-within-district",
       "enforcement": "hardware",
       "effectiveDate": "2024-08",
       "enrollment": 800,
       "sources": [
         {
-          "title": "verified 2026-05-20",
+          "type": "news",
+          "title": "Student cellphone use prohibited at Pioneer district schools starting in August",
+          "url": "https://www.recorder.com/Student-cellphone-use-prohibited-at-Pioneer-district-schools-starting-in-August-55476924",
+          "publisher": "Greenfield Recorder",
+          "date": "2024-06-07"
+        },
+        {
+          "type": "news",
+          "title": "Pioneer eyes policy to curb student cellphone use",
+          "url": "https://www.recorder.com/Pioneer-eyes-policy-to-rein-in-student-cellphone-use-55289851",
+          "publisher": "Greenfield Recorder",
+          "date": "2024-05-24"
+        },
+        {
+          "type": "news",
+          "title": "Pioneer Valley Regional School Shares Cell Phone Policy",
           "url": "https://communitiesthatcarecoalition.com/pioneer-valley-regional-school-shares-cell-phone-policy/",
-          "publisher": "",
-          "date": "2026-05-20"
+          "publisher": "Communities That Care Coalition",
+          "date": "2024-06-06"
+        },
+        {
+          "type": "news",
+          "title": "Local school district leaders weigh in on student cellphone ban",
+          "url": "https://atholdailynews.com/2025/08/24/massachusetts-school-cell-phone-ban/",
+          "publisher": "Athol Daily News",
+          "date": "2025-08-24"
+        },
+        {
+          "type": "district",
+          "title": "PVRSD home (schools list)",
+          "url": "https://www.pvrsdk12.org/",
+          "publisher": "Pioneer Valley Regional School District",
+          "date": "2025-09-01"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "tier_history": [
+        {
+          "from": 3,
+          "to": 4,
+          "date": "2026-05-20",
+          "reason": "Red-team verification via district records + news + social media"
+        }
+      ],
+      "exceptionsFound": [
+        "'Accommodations can be made if absolutely necessary' (SC Chair Reina Dastous) — functions as standard medical/IEP/504 stand-in"
+      ],
+      "edtechNotes": "Policy covers smartwatches, earbuds, tablets — broader than just phones. MA AG's Office incorporated PVRSD into statewide schools toolkit.",
+      "redTeamFindings": "Cleanest tier-4 case in dataset. K-12 within district verified (Bernardston + Northfield elementaries + PVRS 7-12). '95% reduction in cafeteria phone use' figure on file was INVERTED — actual quote: 95% had phones out BEFORE the ban. Discretionary 'accommodations as necessary' language reads as functional medical/IEP/504 stand-in.",
+      "redTeamVerified": "2026-05-20"
     },
     "2510380": {
       "districtId": "2510380",
@@ -1666,17 +1886,43 @@
       "districtId": "2501650",
       "districtName": "Abington School District",
       "tier": 3,
-      "policySummary": "Full ban: middle school all-day ban; high school ban during class with access at lunch/passing periods; cell phone hotels for storage; exceptions for medical/IEP.",
-      "scope": "unknown",
-      "enforcement": "hardware",
+      "policySummary": "Abington MS (5-8): bell-to-bell ban per 2025-26 handbook ('not permitted... during school hours... powered off and put away'). Abington HS: restricts phones during instructional time only; students retain access during homeroom, passing periods, lunch. Storage by bin/backpack/locker. 'Cell phone hotels' not in handbook text.",
+      "scope": "varies",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
-        "https://www.southshore.news/p/abington-schools-ban-cell-phones",
-        "https://www.inquirer.com/education/abington-school-district-cellphone-ban-20240814.html"
+        {
+          "type": "district",
+          "title": "Abington MS Student Handbook 2025-2026",
+          "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4756/Ams/1ca97821-2f88-4a1c-8d5f-350467246cdd/AMS_Handbook25-26_final.pdf",
+          "publisher": "Abington Public Schools (MA)",
+          "date": "2025-08-01"
+        },
+        {
+          "type": "district",
+          "title": "Abington HS Student Handbook 2025-2026",
+          "url": "https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4756/Ahs/c458315f-9e74-40a1-98b1-c77356a83176/3_AHS_Student_Handbook_2025-2026.Updated_08-26.pdf",
+          "publisher": "Abington Public Schools (MA)",
+          "date": "2025-08-26"
+        },
+        {
+          "type": "news",
+          "title": "BLOCKED: Principals say they'll enforce phone ban",
+          "url": "https://abingtonnews.org/2024/08/22/blocked-principals-say-theyll-enforce-phone-ban-in-middle-high-school-classrooms/",
+          "publisher": "Abington News (student paper)",
+          "date": "2024-08-22"
+        }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "exceptionsFound": [
+        "HS: teachers may permit phone use in class for lesson-related purposes",
+        "General 504/IEP applies"
+      ],
+      "edtechNotes": "Handbook permits tablets, e-readers, recording devices at teacher discretion.",
+      "redTeamFindings": "Substantively correct on scope. 'Cell phone hotels' is colloquial. WATCH: Abington MA frequently conflated with Abington PA in LLM summaries.",
+      "redTeamVerified": "2026-05-20"
     },
     "2501780": {
       "districtId": "2501780",
@@ -1777,16 +2023,43 @@
       "districtId": "2502160",
       "districtName": "Athol-Royalston School District",
       "tier": 3,
-      "policySummary": "Full hardware ban: Yondr pouches for all students; 10-day pouch loss for violations; bell-to-bell prohibition with medical/IEP exceptions.",
-      "scope": "unknown",
+      "policySummary": "School Committee adopted policy 2025-08-20 barring personal electronic devices during school hours. Yondr pouches confirmed at Athol HS and Athol-Royalston MS (7-12); 10-day pouch loss for violations. Elementary inclusion (ACES PK-4, RCS K-6) NOT verified.",
+      "scope": "varies",
       "enforcement": "hardware",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
-        "https://atholdailynews.com/2025/08/24/athol-royalston-schools-ban-cell-phone-use/"
+        {
+          "type": "news",
+          "title": "Athol-Royalston schools ban cell phone use",
+          "url": "https://atholdailynews.com/2025/08/24/athol-royalston-cell-phone-ban/",
+          "publisher": "Athol Daily News",
+          "date": "2025-08-24"
+        },
+        {
+          "type": "news",
+          "title": "Athol-Royalston School Committee reviews phone ban",
+          "url": "https://atholdailynews.com/2025/09/22/athol-royalston-school-committee-reviews-phone-ban/",
+          "publisher": "Athol Daily News",
+          "date": "2025-09-22"
+        },
+        {
+          "type": "district",
+          "title": "Athol-Royalston Regional School District home",
+          "url": "https://www.arrsd.org/",
+          "publisher": "ARRSD",
+          "date": "2026-05-20"
+        },
+        {
+          "type": "social",
+          "title": "Athol-Royalston Regional School District (Facebook)",
+          "url": "https://www.facebook.com/atholroyalstonregionalschooldistrict/",
+          "publisher": "Facebook",
+          "date": "2026-05-20"
+        }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high",
+      "confidence": "medium",
       "tier_history": [
         {
           "from": 3,
@@ -1800,7 +2073,15 @@
           "date": "2026-05-20",
           "reason": "Demoted: needs live-source verification before claiming tier-4. Either had explicit non-medical exception language, scope marked unknown, or zero sources on file."
         }
-      ]
+      ],
+      "exceptionsFound": [
+        "medical conditions",
+        "disabilities",
+        "IEPs (504 not enumerated)"
+      ],
+      "edtechNotes": "Yondr procurement ~$16,000 startup; pouches store phones, earbuds, smartwatches.",
+      "redTeamFindings": "K-12 scope NOT confirmed: all implementation details map to 7-12 only. 'Bell-to-bell' is paraphrase. 504 not enumerated. Original on-file URL was broken (404). Cited correct URL.",
+      "redTeamVerified": "2026-05-20"
     },
     "2502190": {
       "districtId": "2502190",
@@ -2007,16 +2288,42 @@
       "districtId": "2503390",
       "districtName": "Central Berkshire School District",
       "tier": 3,
-      "policySummary": "Full hardware ban with Yondr pouches in middle/high school since 2023; reduced infractions from ~200/month to 11-20/month; zero suspensions for cell phone violations.",
-      "scope": "unknown",
+      "policySummary": "Yondr magnetic locking pouches in Nessacus Regional MS + Wahconah Regional HS since fall 2023. Monthly infractions dropped ~200 → 11 by May 2024. Three K-5 elementaries (Becket-Washington, Craneville, Kittredge) NOT covered.",
+      "scope": "6-12",
       "enforcement": "hardware",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
-        "https://www.iberkshires.com/story/79884/Central-Berkshire-Cell-Phone-Policy-A-Gamechanger-.html"
+        {
+          "type": "news",
+          "title": "Central Berkshire Cell Phone Policy A 'Gamechanger'",
+          "url": "https://www.iberkshires.com/story/79884/Central-Berkshire-Cell-Phone-Policy-A-Gamechanger-.html",
+          "publisher": "iBerkshires",
+          "date": "2025-08-03"
+        },
+        {
+          "type": "news",
+          "title": "Central Berkshire OKs Locked Cell Phone Pouches",
+          "url": "https://www.iberkshires.com/story/72849/Central-Berkshire-OKs-Locked-Cell-Phone-Pouches.html",
+          "publisher": "iBerkshires",
+          "date": "2023-08-28"
+        },
+        {
+          "type": "district",
+          "title": "Wahconah Regional HS Student Handbook",
+          "url": "https://docs.google.com/document/d/13G363O4tYuV3nv-0VE9l8VBfDC-us0XF06-oxpExytQ/edit",
+          "publisher": "CBRSD",
+          "date": "2025-09-01"
+        }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "exceptionsFound": [
+        "Students may opt to leave phones in lockers/cars rather than use pouch"
+      ],
+      "edtechNotes": "Initial pouch purchase funded by $20,000 grant.",
+      "redTeamFindings": "Existing claim accurate. Scope-limit to 6-12 correctly captured. K-5 not covered.",
+      "redTeamVerified": "2026-05-20"
     },
     "2503510": {
       "districtId": "2503510",
@@ -2035,17 +2342,37 @@
       "districtId": "2503540",
       "districtName": "Chelsea School District",
       "tier": 3,
-      "policySummary": "Full hardware ban: district implementing Yondr pouches for bell-to-bell storage; all students assigned pouches; pilot at Browne middle school successful.",
-      "scope": "unknown",
+      "policySummary": "Yondr at Chelsea HS (rolled out Spring 2025, in effect 2025-26) and Browne MS (2+ year pilot). Other two middle schools (Clark Ave, Wright) implied in Oct 2025 SC update but not separately confirmed. NO documented policy at 4 elementary schools (Berkowitz, Hooks, Kelly, Sokolowski; K-4).",
+      "scope": "6-12-partial",
       "enforcement": "hardware",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
-        "https://chsbleuprint.com/10255/showcase/phones-overthrown-administration-prohibits-phones-from-classrooms/",
-        "http://chelsearecord.com/2024/11/21/school-committee-looks-to-implement-district-wide-cellphone-policy/"
+        {
+          "type": "news",
+          "title": "School Committee gets Update on New Cellphone Policy",
+          "url": "http://chelsearecord.com/2025/10/16/school-committee-gets-update-on-new-cellphone-policy/",
+          "publisher": "Chelsea Record",
+          "date": "2025-10-16"
+        },
+        {
+          "type": "news",
+          "title": "SC Looks to Implement District-wide Cellphone Policy",
+          "url": "http://chelsearecord.com/2024/11/21/school-committee-looks-to-implement-district-wide-cellphone-policy/",
+          "publisher": "Chelsea Record",
+          "date": "2024-11-21"
+        }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "medium",
+      "exceptionsFound": [
+        "Forgotten pouch → phone goes to main office",
+        "Emergency magnets available 'for any particular reason' (admin discretion)",
+        "School-issued devices permitted"
+      ],
+      "edtechNotes": "Chromebooks/laptops remain in use; policy targets personal phones/earbuds/headphones.",
+      "redTeamFindings": "Yondr real at CHS + Browne MS. Wider MS rollout per Oct 2025 SC report but no per-school confirmation. 4 elementary schools have no documented hardware policy. 'Emergency magnet' admin-discretion clause is non-medical exception.",
+      "redTeamVerified": "2026-05-20"
     },
     "2503750": {
       "districtId": "2503750",
@@ -2063,18 +2390,62 @@
     "2503780": {
       "districtId": "2503780",
       "districtName": "Cohasset School District",
-      "tier": 3,
-      "policySummary": "High school: unanimous full ban during school hours including lunch/breaks (2025-26); middle school: away for the day policy since 2018-19; phones must be off or in locker.",
-      "scope": "unknown",
-      "enforcement": "hardware",
+      "tier": 2,
+      "policySummary": "CHS (2025-26): 'Personal Technology' off all day in all spaces — but enforcement is confiscation-on-violation, NOT hardware/Yondr. CMS: 'Away for the Day' since 2018-19, same off-and-away model. Both handbooks use identical 'Away for the Day' language; neither uses lockable pouches. Principal Brian Scott told SC enforcement is conversation-first.",
+      "scope": "varies",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
-        "https://www.southshore.news/p/cohasset-school-committee-approves-c68",
-        "https://cohasseteducation.org/1289-2/"
+        {
+          "type": "district",
+          "title": "Cohasset HS Student & Family Handbook 2025-26",
+          "url": "https://resources.finalsite.net/images/v1754922465/cohassetk12org/pcxvcieqkkojudo4b0yv/CHSStudentFamilyHandbook2025-2026.pdf",
+          "publisher": "Cohasset Public Schools",
+          "date": "2025-08-11"
+        },
+        {
+          "type": "district",
+          "title": "Cohasset MS Student-Family Handbook 2025-26",
+          "url": "https://resources.finalsite.net/images/v1754922465/cohassetk12org/jtwhgmu7hwlex5tg2v7l/CMSStudentFamilyHandbook2025-2026.pdf",
+          "publisher": "Cohasset Public Schools",
+          "date": "2025-08-11"
+        },
+        {
+          "type": "news",
+          "title": "Cohasset SC Approves Full Cell Phone Ban for HS",
+          "url": "https://www.southshore.news/p/cohasset-school-committee-approves-c68",
+          "publisher": "South Shore News",
+          "date": "2025-06-19"
+        },
+        {
+          "type": "news",
+          "title": "'No-cell phone' policy takes shape at Cohasset MS",
+          "url": "https://cohasseteducation.org/1289-2/",
+          "publisher": "Cohasset Education Foundation",
+          "date": "2018-09-04"
+        }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "tier_history": [
+        {
+          "from": 3,
+          "to": 2,
+          "date": "2026-05-20",
+          "reason": "Red-team verification via district records + news + social media"
+        }
+      ],
+      "exceptionsFound": [
+        "CHS: online courses requiring phone (per instructor)",
+        "CHS: medical reasons via school nurse",
+        "CHS: 'other situations with prior administrative approval' (discretionary)",
+        "CMS: teacher permission for instructional use",
+        "Both: BYOD laptops/tablets preserved"
+      ],
+      "edtechNotes": "Both schools explicit BYOD; phone policy narrowly framed as 'personal technology' carve-out.",
+      "redTeamFindings": "Original 'unanimous full ban' rhetorically correct (3-0 SC vote) but enforcement is OFF-AND-AWAY with confiscation-on-violation — NO Yondr/hardware/pouch. 'Other situations with prior administrative approval' is non-medical discretionary.",
+      "redTeamVerified": "2026-05-20"
     },
     "2504020": {
       "districtId": "2504020",
@@ -2459,14 +2830,44 @@
       "districtId": "2505670",
       "districtName": "Hamilton-Wenham School District",
       "tier": 3,
-      "policySummary": "High school: phones stored in trays all day; middle school: off and out of sight; new policy for 2025-26 adds Yondr pouches.",
-      "scope": "unknown",
+      "policySummary": "HWRHS 2025-26: phones deposited in a box in a locker from end of homeroom until end of day. SENIORS EXEMPT — allowed to keep phones in backpacks. MS (Miles River) uses 'off and away.' NO Yondr — storage is box-in-locker. Policy is principal-set, not formally SC-adopted.",
+      "scope": "HS-9-12-with-senior-exemption",
       "enforcement": "hardware",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "type": "news",
+          "title": "Hamilton-Wenham Schools Gear Up for New Cell Phone Policy",
+          "url": "https://thelocallens.org/hamilton-wenham-schools-gear-up-for-new-cell-phone-policy-amid-budget-challenges/",
+          "publisher": "LocalLens",
+          "date": "2025-05-01"
+        },
+        {
+          "type": "news",
+          "title": "Responses to the High School's New Cell Phone Policy",
+          "url": "https://hwrhsgeneralconsensus.com/12987/news/responses-to-the-high-schools-new-cell-phone-policy/",
+          "publisher": "The General Consensus (HWRHS student paper)",
+          "date": "2026-01-10"
+        },
+        {
+          "type": "district",
+          "title": "MRMS Cell Phone Acceptable Use Guidelines (2019-20)",
+          "url": "https://www.hwschools.net/uploaded/Miles_River_MS/Documents_PDF's/19-20/Cell_Phone_Guidelines_2019-2020_(1).pdf",
+          "publisher": "Miles River Middle School",
+          "date": "2019-09-01"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "exceptionsFound": [
+        "Seniors (12th grade) exempt — phones in backpacks",
+        "Medical needs per May 2025 LocalLens reporting",
+        "MS policy is teacher-discretion"
+      ],
+      "edtechNotes": "Student paper documents widespread workaround via school-issued Apple laptops.",
+      "redTeamFindings": "Original 'Yondr pouches' claim was WRONG — storage is box-in-locker per Jan 2026 HWRHS student paper. Senior exemption is real tier-3 disqualifier. Policy is administrative, not formal SC JICJ.",
+      "redTeamVerified": "2026-05-20"
     },
     "2505730": {
       "districtId": "2505730",
@@ -2581,14 +2982,51 @@
       "districtId": "2506270",
       "districtName": "Holyoke School District",
       "tier": 3,
-      "policySummary": "Full Yondr pouch policy; grades 6-12 lock phones in pouches; bell-to-bell restriction; emergency exceptions for medical needs.",
-      "scope": "unknown",
-      "enforcement": "hardware",
+      "policySummary": "Yondr at 6-12 starting 2023-24. As of Jan 27 2025 SC vote, HS principals granted building-level discretion on Yondr procedures (after admins reported only a minority of HS students used pouches regularly). Middle schools continue bell-to-bell. Emergency exception: phones unlocked at main office or use landlines.",
+      "scope": "MS-bell-to-bell-HS-principal-discretion",
+      "enforcement": "hardware-but-stale-at-HS",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "type": "news",
+          "title": "Holyoke Public Schools to implement Yondr pouch policies",
+          "url": "https://www.westernmassnews.com/2023/08/25/holyoke-public-schools-implement-yondr-pouch-policies/",
+          "publisher": "Western Mass News",
+          "date": "2023-08-25"
+        },
+        {
+          "type": "news",
+          "title": "Efforts continue to address cell phones in classrooms",
+          "url": "https://www.westernmassnews.com/2024/11/26/getting-answers-efforts-continue-address-cell-phones-classrooms/",
+          "publisher": "Western Mass News",
+          "date": "2024-11-26"
+        },
+        {
+          "type": "news",
+          "title": "Holyoke schools to retain local flexibility on Yondr phone-bag procedures",
+          "url": "https://citizenportal.ai/articles/6317631/Holyoke-schools-to-retain-local-flexibility-on-Yondr-phone-bag-procedures-principals-to-set-campus-rules",
+          "publisher": "CitizenPortal.ai",
+          "date": "2025-01-27"
+        },
+        {
+          "type": "district",
+          "title": "Middle and high school students use Yondr pouches for cell phones",
+          "url": "https://www.hps.holyoke.ma.us/article/1224812",
+          "publisher": "Holyoke Public Schools",
+          "date": "2023-09-01"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "exceptionsFound": [
+        "Emergency: main office unlock / landlines",
+        "HS principal-level discretion (post Jan 27 2025)",
+        "Smartwatch workaround documented"
+      ],
+      "edtechNotes": "Mayor Garcia framed implementation as 'pilot phase' in Nov 2024; enforcement gaps acknowledged.",
+      "redTeamFindings": "Original 'bell-to-bell restriction grades 6-12' is partially stale. HS is now principal-discretion as of Jan 27 2025.",
+      "redTeamVerified": "2026-05-20"
     },
     "2506300": {
       "districtId": "2506300",
@@ -2606,13 +3044,42 @@
     "2506390": {
       "districtId": "2506390",
       "districtName": "Hudson School District",
-      "tier": 3,
-      "policySummary": "Bell-to-bell ban for all grades; devices powered off and stored in lockers; progressive discipline; no verbal warnings.",
-      "scope": "unknown",
-      "enforcement": "hardware",
+      "tier": 2,
+      "policySummary": "Hudson MA has NO bell-to-bell hardware ban. HHS 2025-26: phones allowed before/after school, lunch, passing; stored in 'dedicated space' during class. Quinn MS (5-7): no use during school day; locker or backpack. Farley/Forest Ave/Mulready (PK-4): off and out of sight in pockets/backpacks; 3-strike confiscation. NO district JICJ policy adopted.",
+      "scope": "varies-no-hardware",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "type": "district",
+          "title": "Hudson HS Student Handbook AY2526",
+          "url": "https://drive.google.com/file/d/1vNG4G0y6Yywb8Nm5tajmcdoOwzk6IDJZ/view",
+          "publisher": "Hudson Public Schools",
+          "date": "2025-09-01"
+        },
+        {
+          "type": "district",
+          "title": "Quinn MS Parent/Student Handbook 2025-2026",
+          "url": "https://djquinn.hudson.k12.ma.us/UserFiles/Servers/Server_19993029/File/Quinn%20Handbook%202025-2026%20English%20Updated%2009022025.pdf",
+          "publisher": "David J. Quinn Middle School",
+          "date": "2025-09-02"
+        },
+        {
+          "type": "district",
+          "title": "JL Mulready Student Handbook 2025-2026",
+          "url": "https://jlmulready.hudson.k12.ma.us/UserFiles/Servers/Server_19992408/File/Mulready%20Handbook%202025-2026%20English%20Updated%2009022025.pdf",
+          "publisher": "Joseph L. Mulready Elementary",
+          "date": "2025-09-02"
+        },
+        {
+          "type": "district",
+          "title": "Hudson SC Agenda — Jan 13, 2026 (no phone-policy item)",
+          "url": "https://townofhudson.org/AgendaCenter/ViewFile/Agenda/_01132026-4122",
+          "publisher": "Hudson School Committee",
+          "date": "2026-01-13"
+        }
+      ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
       "tier_history": [
@@ -2627,8 +3094,22 @@
           "to": 3,
           "date": "2026-05-20",
           "reason": "Demoted: needs live-source verification before claiming tier-4. Either had explicit non-medical exception language, scope marked unknown, or zero sources on file."
+        },
+        {
+          "from": 3,
+          "to": 2,
+          "date": "2026-05-20",
+          "reason": "Red-team verification via district records + news + social media"
         }
-      ]
+      ],
+      "exceptionsFound": [
+        "HHS: 'rare or extenuating circumstances' teacher-discretion",
+        "HHS: teacher may permit devices to complement instruction",
+        "All schools: phones in health office with nurse permission"
+      ],
+      "edtechNotes": "1:1 Chromebook/iPad program (Fall 2017). Quinn restricts headphones even when disconnected.",
+      "redTeamFindings": "MAJOR — CROSS-STATE HALLUCINATION. On-file claim ('bell-to-bell, lockers, progressive discipline, no verbal warnings') is FALSE for Hudson MA. Matches Hudson NH JICJ policy verbatim (NH HB2, Aug 2025). On-file 'hudsontimes.net' source is Hudson NH local news. No Yondr/hardware in Hudson MA.",
+      "redTeamVerified": "2026-05-20"
     },
     "2506420": {
       "districtId": "2506420",
@@ -2659,15 +3140,45 @@
     "2506690": {
       "districtId": "2506690",
       "districtName": "Lee School District",
-      "tier": 3,
-      "policySummary": "Bell-to-bell ban (7:58 a.m. to 2:30 p.m.); phones powered off in pockets allowed; smartwatches/headphones included; confiscation escalates to parent pickup.",
-      "scope": "unknown",
-      "enforcement": "hardware",
+      "tier": 2,
+      "policySummary": "'Bell-to-bell' 7:58a-2:30p restriction effective Jan 22, 2024. Phones may stay in students' POCKETS but must be powered off. Smartwatches, AirPods, headphones included. NO hardware storage. Berkshire Eagle editorial explicitly contrasts Lee with hardware-using McCann (pouches) and Lenox (caddies).",
+      "scope": "6-12",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "type": "news",
+          "title": "Lee Middle and High School's new cellphone policy goes into effect Monday",
+          "url": "https://www.berkshireeagle.com/news/southern_berkshires/lee-high-school-cell-phone-policy-starts-monday/article_c8327ff8-b8ac-11ee-bc33-57c5ddf16263.html",
+          "publisher": "Berkshire Eagle",
+          "date": "2024-01-21"
+        },
+        {
+          "type": "news",
+          "title": "Our Opinion: Lee's no-cell-from-bell-to-bell policy worth observing",
+          "url": "https://www.berkshireeagle.com/opinion/editorials/our-opinion-lee-public-schools-no-cell-from-bell-to-bell-phone-policy/article_530e28a2-ba24-11ee-bb30-8b1df41d28e0.html",
+          "publisher": "Berkshire Eagle",
+          "date": "2024-01"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "tier_history": [
+        {
+          "from": 3,
+          "to": 2,
+          "date": "2026-05-20",
+          "reason": "Red-team verification via district records + news + social media"
+        }
+      ],
+      "exceptionsFound": [
+        "Emergency contact via main office phone",
+        "'Extraordinary emergency situation' carve-out (discretionary)"
+      ],
+      "edtechNotes": "",
+      "redTeamFindings": "Tier-3 classification was WRONG. Berkshire Eagle (Jan 21, 2024): 'students can have their phones in their pockets, but they must be turned off.' Pockets-with-off is textbook tier 2. Should never have been tier 3.",
+      "redTeamVerified": "2026-05-20"
     },
     "2506720": {
       "districtId": "2506720",
@@ -2708,15 +3219,53 @@
     "2506960": {
       "districtId": "2506960",
       "districtName": "Littleton School District",
-      "tier": 3,
-      "policySummary": "K-8 complete ban, phones left in lockers/backpacks all day; high school allowed in off-periods; smartwatches included; mixed student compliance.",
-      "scope": "unknown",
-      "enforcement": "hardware",
+      "tier": 2,
+      "policySummary": "Littleton MA has NO hardware-level cell phone storage at any school. LHS explicitly permits phones during study hall, lunch, passing times, and at teacher discretion. LMS prohibits use but phones stay with student; confiscation only on violation. RSS/SLS elementary same model. No lockers, caddies, or pouches required.",
+      "scope": "K-12-non-hardware",
+      "enforcement": "off-and-away",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "type": "district",
+          "title": "Littleton HS Student & Parent Handbook 2025-26",
+          "url": "https://drive.google.com/file/d/1A-K_JooPCCNQsidNiAkoZgu5cISCGdr2/view",
+          "publisher": "Littleton Public Schools (MA)",
+          "date": "2025-08-01"
+        },
+        {
+          "type": "district",
+          "title": "Littleton MS Student & Parent Handbook 2025-26",
+          "url": "https://drive.google.com/file/d/15he_YcLzps5b117BGeulxQxCVMVmEi4B/view",
+          "publisher": "Littleton Public Schools (MA)",
+          "date": "2025-08-01"
+        },
+        {
+          "type": "district",
+          "title": "Russell Street School (K-5) Handbook 2025-26",
+          "url": "https://drive.google.com/file/d/17RCbS5fKN4F1vGFP6x2vz_iUYArx0y_I/view",
+          "publisher": "Littleton Public Schools (MA)",
+          "date": "2025-08-01"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "tier_history": [
+        {
+          "from": 3,
+          "to": 2,
+          "date": "2026-05-20",
+          "reason": "Red-team verification via district records + news + social media"
+        }
+      ],
+      "exceptionsFound": [
+        "LHS: study hall, lunch, passing times, teacher discretion in class",
+        "LMS: staff-directed use permitted",
+        "Smart watches addressed separately"
+      ],
+      "edtechNotes": "RSS handbook calls out 'increase in students wearing Smart Watches'. IJNDB acceptable-use policy governs school-issued devices.",
+      "redTeamFindings": "Original tier-3 was WRONG. (1) Domain in original entry was Colorado Littleton, not MA. Correct: littletonps.org. (2) MA Littleton handbooks show NO hardware storage anywhere. Closer to off-and-away with broad permission.",
+      "redTeamVerified": "2026-05-20"
     },
     "2506990": {
       "districtId": "2506990",
@@ -2734,22 +3283,45 @@
     "2507050": {
       "districtId": "2507050",
       "districtName": "Ludlow School District",
-      "tier": 3,
-      "policySummary": "Ludlow uses Yondr pouches to keep students off phones during instructional time.",
-      "scope": "unknown",
-      "enforcement": "hardware",
+      "tier": 2,
+      "policySummary": "Split policy: Paul R. Baird Middle School (6-8) has Yondr pouches since fall 2024 (administrative, not board policy). Ludlow HS has NO Yondr — softer instructional-time policy. CTEC (vocational at LHS) had Yondr earliest.",
+      "scope": "varies-MS-only-Yondr",
+      "enforcement": "mixed",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
         {
-          "title": "verified 2026-05-20",
-          "url": "https://www.ludlowps.org/",
-          "publisher": "",
-          "date": "2026-05-20"
+          "type": "news",
+          "title": "Is Ludlow High School Destined To Be Yondr-fied?",
+          "url": "https://www.ludlowcub.com/news/2024/10/31/is-ludlow-high-school-destined-to-be-yondr-fied/",
+          "publisher": "The Cub (LHS student paper)",
+          "date": "2024-10-31"
+        },
+        {
+          "type": "district",
+          "title": "Paul R. Baird Middle School",
+          "url": "https://baird.ludlowps.org/",
+          "publisher": "Ludlow Public Schools",
+          "date": "2025-09-01"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "medium"
+      "confidence": "medium",
+      "tier_history": [
+        {
+          "from": 3,
+          "to": 2,
+          "date": "2026-05-20",
+          "reason": "Red-team verification via district records + news + social media"
+        }
+      ],
+      "exceptionsFound": [
+        "LHS has no hardware enforcement (whole HS is the carve-out)",
+        "Reported student workaround: pouches broken by slamming magnet"
+      ],
+      "edtechNotes": "Administrative implementation at BMS over summer 2024 — not a board policy change.",
+      "redTeamFindings": "Original tier-3 'Yondr during instructional time' conflated BMS (bell-to-bell Yondr) with LHS (no Yondr). District net is tier 2 because HS is partial/non-hardware.",
+      "redTeamVerified": "2026-05-20"
     },
     "2507080": {
       "districtId": "2507080",
@@ -3049,25 +3621,87 @@
       "districtId": "2508040",
       "districtName": "Monson School District",
       "tier": 3,
-      "policySummary": "Yondr technology policy adopted (2022); 48 of 50 staff in favor; addresses pervasive phone use affecting academics and wellness.",
-      "scope": "unknown",
+      "policySummary": "Monson HS (7-12) SC adopted Yondr plan Sep 8, 2022 with 48/50 staff support; principal targeted Nov 8, 2022 rollout. Elementary (Granite Valley, 1-6) NOT covered. No 2023+ source confirms sustained operation.",
+      "scope": "7-12",
       "enforcement": "hardware",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "type": "district",
+          "title": "School Committee Meeting Minutes — September 8, 2022",
+          "url": "https://www.monsonschools.com/post/september-8-2022",
+          "publisher": "Monson Public Schools",
+          "date": "2022-09-08"
+        },
+        {
+          "type": "district",
+          "title": "Granite Valley School profile (grades 1-6)",
+          "url": "https://profiles.doe.mass.edu/profiles/general.aspx?orgcode=01910030&orgtypecode=6",
+          "publisher": "MA DESE",
+          "date": "2026-05-20"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "medium"
+      "confidence": "low",
+      "exceptionsFound": [],
+      "edtechNotes": "",
+      "redTeamFindings": "Only source is Sep 8 2022 plan-adoption minutes; no post-rollout confirmation 2023-2026. Scope is 7-12 (HS includes grade 7), not 9-12. Confidence downgraded to low pending a 2024+ source.",
+      "redTeamVerified": "2026-05-20"
     },
     "2508160": {
       "districtId": "2508160",
       "districtName": "Mount Greylock School District",
       "tier": 3,
-      "policySummary": "Full ban K-12; devices in lockers or front office storage; off and away all day; exceptions for medical/IEP/504 needs; community 100% supportive.",
-      "scope": "unknown",
-      "enforcement": "hardware",
+      "policySummary": "Policy JT (School Committee adopted 2024-07-22, effective Sept 2024): student-owned devices must be powered off and stored bell-to-bell across all 3 schools (LES, WES PreK-6, MGRS 7-12). Storage: lockers at MGRS/LES, front office at WES. Tiered consequences 1st-3rd offense + ISS for refusal.",
+      "scope": "K-12",
+      "enforcement": "off-and-away-with-storage",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "type": "district",
+          "title": "Policy JT - Student-owned Technology Devices",
+          "url": "https://docs.google.com/document/d/1VCmK4knsMn9FqKlggxIl9xNvk6pRXc_jEMFCg7yLWuY/edit",
+          "publisher": "MGRSD",
+          "date": "2024-07-22"
+        },
+        {
+          "type": "district",
+          "title": "MGRS Student Handbook 2026-2027",
+          "url": "https://docs.google.com/document/d/1e2uQ6AhxW49tc3wWTRRxOPkwkHzyLsCAz7zSElegDag/edit",
+          "publisher": "MGRS",
+          "date": "2026-08-01"
+        },
+        {
+          "type": "district",
+          "title": "Our Schools — MGRSD district structure",
+          "url": "https://www.mgrsd.org/district-info/our-schools",
+          "publisher": "MGRSD",
+          "date": "2024-09-01"
+        },
+        {
+          "type": "news",
+          "title": "Mount Greylock School District Adopts No-Cell Phone Policy",
+          "url": "https://www.iberkshires.com/story/76060/Mount-Greylock-School-District-Adopts-No-Cell-Phone-Policy.html",
+          "publisher": "iBerkshires.com",
+          "date": "2024-07-23"
+        },
+        {
+          "type": "news",
+          "title": "When Mount Greylock untethered students from their phones, this happened",
+          "url": "https://www.berkshireeagle.com/opinion/columnists/when-mount-greylock-untethered-students-from-their-phones-this-happened/article_b4dbaf82-7b7b-11ef-b310-1fe28bc0a1a7.html",
+          "publisher": "Berkshire Eagle",
+          "date": "2024-10-02"
+        },
+        {
+          "type": "social",
+          "title": "Greylock Echo — 'The Phone Policy Experiment'",
+          "url": "https://greylockecho.mgrhs.org/6761/news/january-6-2025-print-edition/",
+          "publisher": "The Greylock Echo (student paper)",
+          "date": "2025-01-06"
+        }
+      ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
       "tier_history": [
@@ -3083,18 +3717,61 @@
           "date": "2026-05-20",
           "reason": "Demoted: needs live-source verification before claiming tier-4. Either had explicit non-medical exception language, scope marked unknown, or zero sources on file."
         }
-      ]
+      ],
+      "exceptionsFound": [
+        "Principal discretion for medical OR educational purposes (Policy JT §4) — broader than medical/IEP/504 alone",
+        "Common-area use before 7:36am and after 2:30pm"
+      ],
+      "edtechNotes": "District-issued Chromebooks are the only authorized computing device during school day. No Yondr — storage is locker-based or front-office. Tier 4 declined because 'educational purposes' is broader than medical/IEP/504.",
+      "redTeamFindings": "Strongest tier-4 case in dataset (K-12 verified, bell-to-bell, mandatory storage, tiered consequences). HELD AT 3 because Policy JT §4 grants principal discretion for 'medical or educational purposes' — broader than allowed under strict reading of 'no discretionary exceptions.' '100% supportive' claim was superintendent self-report at adoption, not survey data.",
+      "redTeamVerified": "2026-05-20"
     },
     "2508250": {
       "districtId": "2508250",
       "districtName": "Nantucket School District",
       "tier": 3,
-      "policySummary": "Yondr magnetically locked bags required K-12; phones/smartwatches retrieved at end of day; $30K annual cost covered by district; 90% staff approval.",
-      "scope": "unknown",
+      "policySummary": "Bell-to-bell Yondr magnetically-locked pouches required at Nantucket HS and Cyrus Peirce MS (grades 6-12); unanimous School Committee vote 6/25/2025, implemented fall 2025. Nantucket Elementary + Intermediate (K-5) is off-and-away only, NO Yondr.",
+      "scope": "6-12",
       "enforcement": "hardware",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "type": "district",
+          "title": "NHS Student Life — Yondr Pouch Policy",
+          "url": "https://nhs.npsk.org/student-life",
+          "publisher": "Nantucket Public Schools",
+          "date": "2025-09-01"
+        },
+        {
+          "type": "district",
+          "title": "Cyrus Peirce School Parent and Student Handbook 2025-2026",
+          "url": "https://resources.finalsite.net/images/v1761831257/npskorg/xzbazkpczmdibmx1zskt/CPSParentandStudentHandbook2025-2026.pdf",
+          "publisher": "Nantucket Public Schools",
+          "date": "2025-10-30"
+        },
+        {
+          "type": "news",
+          "title": "Nantucket School Committee Approves 'Bell-To-Bell' Cell Phone Ban",
+          "url": "https://nantucketcurrent.com/news/nantucket-school-committee-approves-bell-to-bell-cell-phone-ban",
+          "publisher": "Nantucket Current",
+          "date": "2025-06-25"
+        },
+        {
+          "type": "news",
+          "title": "Early Returns On Cell Phone Ban In Nantucket Schools: A Huge Success",
+          "url": "https://nantucketcurrent.com/news/early-returns-on-cell-phone-ban-in-nantucket-schools-a-huge-success",
+          "publisher": "Nantucket Current",
+          "date": "2025-10-23"
+        },
+        {
+          "type": "news",
+          "title": "School Survey Indicates Cell Phone Ban Success",
+          "url": "https://nantucketcurrent.com/news/school-survey-indicates-cell-phone-ban-success",
+          "publisher": "Nantucket Current",
+          "date": "2026-01-06"
+        }
+      ],
       "lastVerified": "2026-05-20",
       "confidence": "high",
       "tier_history": [
@@ -3110,7 +3787,15 @@
           "date": "2026-05-20",
           "reason": "Demoted: needs live-source verification before claiming tier-4. Either had explicit non-medical exception language, scope marked unknown, or zero sources on file."
         }
-      ]
+      ],
+      "exceptionsFound": [
+        "Medical conditions / disabilities",
+        "Administration-approved access (e.g., call a parent)",
+        "Signed Attestation Form opt-out submitted to Advisor"
+      ],
+      "edtechNotes": "District maintains AI Guidelines and Student Technology Account Agreement. $30K first-year Yondr cost. ~90% staff approval, ~75% parent, ~50% student opposed (Jan 2026 survey).",
+      "redTeamFindings": "File claim 'K-12 Yondr' was WRONG. Yondr is 6-12 only. K-5 is off-and-away.",
+      "redTeamVerified": "2026-05-20"
     },
     "2508280": {
       "districtId": "2508280",
@@ -3142,14 +3827,36 @@
       "districtId": "2508670",
       "districtName": "North Adams School District",
       "tier": 3,
-      "policySummary": "Yondr pouch ban implemented; 75% drop in referrals in last Q of 2024; previously had power struggles with off-during-class-only approach.",
-      "scope": "unknown",
-      "enforcement": "hardware",
+      "policySummary": "Drury HS (9-12) uses 'phone pouch system' per 2025-26 handbook ('Students must secure their phones in a pouch when they enter the building') — NOT confirmed Yondr-brand. K-8 students 'aren't allowed to take cellphones out during the school day' (off-and-away, not pouches). 75% drop in Drury referrals Q4 SY24 vs. prior year.",
+      "scope": "tiered-K-12",
+      "enforcement": "hardware-9-12-off-and-away-K-8",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "type": "district",
+          "title": "Drury HS Student Handbook 2025-2026",
+          "url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/1376/DHS/5999526/SY2025-26_DHS_Handbook_REV_8.29.25.pdf",
+          "publisher": "North Adams Public Schools",
+          "date": "2025-08-29"
+        },
+        {
+          "type": "news",
+          "title": "What Schools Look Like Without the Cellphone Distraction",
+          "url": "https://www.edweek.org/technology/what-schools-look-like-without-the-cellphone-distraction/2025/02",
+          "publisher": "Education Week",
+          "date": "2025-02-04"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "exceptionsFound": [
+        "Drury handbook: 'unless explicitly approved by the administration' — admin discretion broader than medical/IEP/504",
+        "$30 pouch replacement fee gates enforcement"
+      ],
+      "edtechNotes": "Every Drury student receives a school-issued Chromebook. District migrated from teacher-by-teacher locker pilot to district-wide pouches.",
+      "redTeamFindings": "Two corrections: (1) Pouches NOT confirmed Yondr-brand — handbook says generic 'phone pouch system.' McCann Technical (separate district) is the documented Yondr customer. (2) Policy is tiered — K-8 off-and-away, 9-12 hardware.",
+      "redTeamVerified": "2026-05-20"
     },
     "2508700": {
       "districtId": "2508700",
@@ -3971,14 +4678,36 @@
       "districtId": "2512060",
       "districtName": "Wareham School District",
       "tier": 3,
-      "policySummary": "High school lockbox policy; phones stored in portable lock-boxes during class.",
-      "scope": "unknown",
+      "policySummary": "Wareham HS adopted portable cell-phone lock-box policy May 16, 2024 (Principal Scott Palladino). Phones into lock-box at start of each period, returned at end. Students retain phone access before school, after school, between classes, AND during lunch. Hardware real but class-only at HS-only — NOT bell-to-bell.",
+      "scope": "9-12-class-only",
       "enforcement": "hardware",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "type": "news",
+          "title": "High school to use cell-phone lock boxes",
+          "url": "https://wareham.theweektoday.com/article/high-school-use-cell-phone-lock-boxes/69663",
+          "publisher": "Wareham Week",
+          "date": "2024-05-17"
+        },
+        {
+          "type": "news",
+          "title": "High school to form phone policy committee",
+          "url": "https://wareham.theweektoday.com/article/high-school-form-phone-policy-committee/65692",
+          "publisher": "Wareham Week",
+          "date": "2023-09-29"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "medium"
+      "confidence": "medium",
+      "exceptionsFound": [
+        "Lock-box portable — teachers carry during emergencies",
+        "IEP/504 presumed (not specified)"
+      ],
+      "edtechNotes": "No district 1:1 program detail surfaced.",
+      "redTeamFindings": "Borderline tier 2/3. Hardware (lock-box) real but access window is wide (before/after/passing/lunch all open). Holding at tier 3 because hardware is defining schema characteristic.",
+      "redTeamVerified": "2026-05-20"
     },
     "2512100": {
       "districtId": "2512100",
@@ -4863,15 +5592,42 @@
     "2509390": {
       "districtId": "2509390",
       "districtName": "Pelham School District",
-      "tier": 3,
-      "policySummary": "2024-2025: High school phones banned from classrooms, stored in calculator pouches during class. Essentially full-day ban.",
-      "scope": "unknown",
-      "enforcement": "hardware",
+      "tier": 1,
+      "policySummary": "Pelham is a K-6 elementary single-school district (Pelham Elementary, ~129 students). No high school. Grades 7-12 attend Amherst-Pelham Regional (separate district). Previous 'HS phones banned' entry was misattributed — Pelham has no HS to ban phones at.",
+      "scope": "K-6",
+      "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "type": "district",
+          "title": "Pelham Elementary | Amherst-Pelham Regional Public Schools",
+          "url": "https://arps.org/pe/",
+          "publisher": "ARPS",
+          "date": "2026-05-20"
+        },
+        {
+          "type": "news",
+          "title": "New Bell to Bell Cell Phone Policy on Deck for Sept 2026 Brings Mixed Feelings at ARHS",
+          "url": "https://www.amherstindy.org/2025/11/14/new-bell-to-bell-cell-phone-policy-on-deck-for-september-2026-brings-mixed-feelings-at-arhs/",
+          "publisher": "Amherst Indy",
+          "date": "2025-11-14"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "tier_history": [
+        {
+          "from": 3,
+          "to": 1,
+          "date": "2026-05-20",
+          "reason": "Red-team verification via district records + news + social media"
+        }
+      ],
+      "exceptionsFound": [],
+      "edtechNotes": "K-6 elementary; phone policy not a typical concern at this grade level. Verify Amherst-Pelham Regional separately for the secondary policy.",
+      "redTeamFindings": "MISATTRIBUTION CONFIRMED. Original claim of 'HS phones banned, calculator pouches' cannot belong to district 2509390 — there is no Pelham HS. Even Amherst-Pelham Regional doesn't match: ARHS policy is per-classroom with between-class access, bell-to-bell scheduled Sept 2026.",
+      "redTeamVerified": "2026-05-20"
     },
     "2509540": {
       "districtId": "2509540",
@@ -5441,14 +6197,44 @@
       "districtId": "2507380",
       "districtName": "Martha's Vineyard School District",
       "tier": 3,
-      "policySummary": "MVRHS 'away for the day': all devices locked in Yondr pouches (phones, earbuds, smartwatches, devices). Full-day ban.",
-      "scope": "unknown",
+      "policySummary": "MVRHS is the ONLY school under district 2507380 (NCES confirms 1 school, 9-12). 'Away for the day': at 7:30am bell, students lock phones, earbuds, smartwatches, devices into Yondr magnetic pouches; sealed until end-of-day. Approved 5-3 by MVRHS committee for 2024-25. Still in effect March 2026.",
+      "scope": "9-12",
       "enforcement": "hardware",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
+      "sources": [
+        {
+          "type": "news",
+          "title": "High school bans cell phones, other devices",
+          "url": "https://www.mvtimes.com/2024/08/21/high-school-bans-cell-phones-devices/",
+          "publisher": "Martha's Vineyard Times",
+          "date": "2024-08-21"
+        },
+        {
+          "type": "news",
+          "title": "Their Phones Off, High School Students React to New Policy",
+          "url": "https://vineyardgazette.com/news/2024/09/19/their-phones-high-school-students-react-new-policy",
+          "publisher": "Vineyard Gazette",
+          "date": "2024-09-19"
+        },
+        {
+          "type": "news",
+          "title": "Beyond Yondr: Fighting the grip of social media",
+          "url": "https://www.mvtimes.com/2026/03/19/beyond-yondr-fighting-grip-social-media/",
+          "publisher": "Martha's Vineyard Times",
+          "date": "2026-03-19"
+        }
+      ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "exceptionsFound": [
+        "Documented medical needs allowed to retain device under 504 plans",
+        "Office-staff override for parent contact / landline",
+        "First lost-pouch replacement $15; subsequent $30"
+      ],
+      "edtechNotes": "Yondr covers personal devices only. Beyond Yondr piece (March 2026) suggests district pursuing social-media-focused programming.",
+      "redTeamFindings": "STRUCTURALLY HS-ONLY — NCES confirms MVRHS is sole school under district 2507380. Tier-3 ceiling is schema artifact. Island K-8 districts are separate NCES IDs.",
+      "redTeamVerified": "2026-05-20"
     },
     "2508910": {
       "districtId": "2508910",
