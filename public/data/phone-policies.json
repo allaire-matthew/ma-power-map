@@ -1,7 +1,7 @@
 {
-  "_schemaVersion": "3.0.0",
+  "_schemaVersion": "3.0.1",
   "_lastUpdated": "2026-05-20",
-  "_notes": "Tier system (v3, 2026-05-20): 1 = no district policy; 2 = partial / non-hardware (off-and-away, instructional-time-only, etc.); 3 = hardware-level removal but scope-limited (K-8 only, HS only, has lunch/passing-time access, or not bell-to-bell); 4 = bell-to-bell hardware-level K-12 with no broad exceptions (standard medical/IEP carve-outs allowed). Sources arrays may include broader edtech news/action even when the tier itself is set strictly on phone policy.",
+  "_notes": "Tier system (v3, 2026-05-20): 1 = no district policy; 2 = partial / non-hardware (off-and-away, instructional-time-only, etc.); 3 = hardware-level removal but scope-limited (K-8 only, HS only, has lunch/passing-time access, or has non-medical discretionary exceptions); 4 = bell-to-bell hardware-level K-12 with NO discretionary exceptions (federally-mandated medical/IEP/504 accommodations allowed). Tier 4 currently empty: candidates require live-source verification before promotion. No-mistakes policy: do not elevate to tier 4 from unsourced or AI-generated summary text. Sources arrays may include broader edtech news/action even when the tier itself is set strictly on phone policy.",
   "policies": {
     "2502790": {
       "districtId": "2502790",
@@ -891,7 +891,7 @@
     "2508850": {
       "districtId": "2508850",
       "districtName": "Northampton School District",
-      "tier": 4,
+      "tier": 3,
       "policySummary": "Board-approved June 12, 2025 (Cell Phone Policy Direction A): all cell phones and electronic devices collected at the beginning of the day by staff and returned at end of day. Students must power down and secure devices in school-provided pouches upon entry. Earbuds/headphones banned without explicit teacher permission. Earned/lost as a privilege. District-wide K-12.",
       "scope": "K-12",
       "enforcement": "hardware",
@@ -913,6 +913,12 @@
           "to": 4,
           "date": "2026-05-20",
           "reason": "Bell-to-bell K-12 hardware-level, no broad exceptions"
+        },
+        {
+          "from": 4,
+          "to": 3,
+          "date": "2026-05-20",
+          "reason": "Demoted: needs live-source verification before claiming tier-4. Either had explicit non-medical exception language, scope marked unknown, or zero sources on file."
         }
       ]
     },
@@ -1074,7 +1080,7 @@
     "2505490": {
       "districtId": "2505490",
       "districtName": "Greenfield School District",
-      "tier": 4,
+      "tier": 3,
       "policySummary": "Greenfield Public School District uses Yondr pouches: students place phones in small gray pouches sealed magnetically at the beginning of the day; pouches can only be opened at the end of the day at a magnet station. Bell-to-bell hardware enforcement.",
       "scope": "K-12",
       "enforcement": "hardware",
@@ -1099,6 +1105,12 @@
           "to": 4,
           "date": "2026-05-20",
           "reason": "Bell-to-bell K-12 hardware-level, no broad exceptions"
+        },
+        {
+          "from": 4,
+          "to": 3,
+          "date": "2026-05-20",
+          "reason": "Demoted: needs live-source verification before claiming tier-4. Either had explicit non-medical exception language, scope marked unknown, or zero sources on file."
         }
       ]
     },
@@ -1764,7 +1776,7 @@
     "2502160": {
       "districtId": "2502160",
       "districtName": "Athol-Royalston School District",
-      "tier": 4,
+      "tier": 3,
       "policySummary": "Full hardware ban: Yondr pouches for all students; 10-day pouch loss for violations; bell-to-bell prohibition with medical/IEP exceptions.",
       "scope": "unknown",
       "enforcement": "hardware",
@@ -1781,6 +1793,12 @@
           "to": 4,
           "date": "2026-05-20",
           "reason": "Bell-to-bell K-12 hardware-level, no broad exceptions"
+        },
+        {
+          "from": 4,
+          "to": 3,
+          "date": "2026-05-20",
+          "reason": "Demoted: needs live-source verification before claiming tier-4. Either had explicit non-medical exception language, scope marked unknown, or zero sources on file."
         }
       ]
     },
@@ -2588,7 +2606,7 @@
     "2506390": {
       "districtId": "2506390",
       "districtName": "Hudson School District",
-      "tier": 4,
+      "tier": 3,
       "policySummary": "Bell-to-bell ban for all grades; devices powered off and stored in lockers; progressive discipline; no verbal warnings.",
       "scope": "unknown",
       "enforcement": "hardware",
@@ -2603,6 +2621,12 @@
           "to": 4,
           "date": "2026-05-20",
           "reason": "Bell-to-bell K-12 hardware-level, no broad exceptions"
+        },
+        {
+          "from": 4,
+          "to": 3,
+          "date": "2026-05-20",
+          "reason": "Demoted: needs live-source verification before claiming tier-4. Either had explicit non-medical exception language, scope marked unknown, or zero sources on file."
         }
       ]
     },
@@ -3037,7 +3061,7 @@
     "2508160": {
       "districtId": "2508160",
       "districtName": "Mount Greylock School District",
-      "tier": 4,
+      "tier": 3,
       "policySummary": "Full ban K-12; devices in lockers or front office storage; off and away all day; exceptions for medical/IEP/504 needs; community 100% supportive.",
       "scope": "unknown",
       "enforcement": "hardware",
@@ -3052,13 +3076,19 @@
           "to": 4,
           "date": "2026-05-20",
           "reason": "Bell-to-bell K-12 hardware-level, no broad exceptions"
+        },
+        {
+          "from": 4,
+          "to": 3,
+          "date": "2026-05-20",
+          "reason": "Demoted: needs live-source verification before claiming tier-4. Either had explicit non-medical exception language, scope marked unknown, or zero sources on file."
         }
       ]
     },
     "2508250": {
       "districtId": "2508250",
       "districtName": "Nantucket School District",
-      "tier": 4,
+      "tier": 3,
       "policySummary": "Yondr magnetically locked bags required K-12; phones/smartwatches retrieved at end of day; $30K annual cost covered by district; 90% staff approval.",
       "scope": "unknown",
       "enforcement": "hardware",
@@ -3073,6 +3103,12 @@
           "to": 4,
           "date": "2026-05-20",
           "reason": "Bell-to-bell K-12 hardware-level, no broad exceptions"
+        },
+        {
+          "from": 4,
+          "to": 3,
+          "date": "2026-05-20",
+          "reason": "Demoted: needs live-source verification before claiming tier-4. Either had explicit non-medical exception language, scope marked unknown, or zero sources on file."
         }
       ]
     },
