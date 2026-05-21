@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   getTownToDistrict,
+  loadDemographics,
   loadLayer,
   loadPhonePolicies,
   loadTownOrgs,
   MAP_H,
   MAP_W,
+  type DistrictDemographics,
   type LayerName,
   type PhonePolicy,
   type PhoneTier,
@@ -70,21 +72,28 @@ export function MapBackground({
   layers,
   popupTownId,
   onTownClick,
+  onShiftTownClick,
   tierFilter,
+  selectedTowns,
 }: {
   camera: { x: number; y: number; z: number }
   layers: LayerState
   popupTownId: string | null
   onTownClick: (townId: string | null) => void
+  onShiftTownClick?: (townId: string) => void
   tierFilter: TierFilter
+  selectedTowns?: Set<string>
 }) {
   const [data, setData] = useState<Partial<Record<LayerName, ProjectedLayer>>>({})
   const [policies, setPolicies] = useState<Record<string, PhonePolicy>>({})
   const [townToDistrict, setTownToDistrict] = useState<Record<string, string>>({})
   const [townOrgs, setTownOrgs] = useState<Record<string, TownOrgChapter[]>>({})
+  const [demographics, setDemographics] = useState<Record<string, DistrictDemographics>>({})
   const svgRef = useRef<SVGSVGElement | null>(null)
   const groupRefs = useRef<Partial<Record<LayerName, SVGGElement | null>>>({})
-  const [hover, setHover] = useState<{ name: string; x: number; y: number } | null>(null)
+  const [hover, setHover] = useState<{ townId: string; name: string; x: number; y: number } | null>(null)
+  const [dwellTownId, setDwellTownId] = useState<string | null>(null)
+  const dwellTimer = useRef<number | null>(null)
 
   const needed = useMemo<LayerName[]>(() => {
     const want = new Set<LayerName>(['towns'])
@@ -114,6 +123,16 @@ export function MapBackground({
       cancelled = true
     }
   }, [needed])
+
+  useEffect(() => {
+    let cancelled = false
+    void loadDemographics().then((d) => {
+      if (!cancelled && d) setDemographics(d.demographics)
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [])
 
   useEffect(() => {
     let cancelled = false
@@ -186,18 +205,42 @@ export function MapBackground({
           const id = p.dataset.id!
           const feature = data.towns?.features.find((f) => f.id === id)
           if (feature) {
-            setHover({ name: feature.name, x: cx, y: cy })
+            setHover((prev) => {
+              // If we're still hovering the same town, keep the existing
+              // dwell timer running. Just update position.
+              if (prev && prev.townId === id) return { townId: id, name: feature.name, x: cx, y: cy }
+              // New town — reset dwell.
+              if (dwellTimer.current) window.clearTimeout(dwellTimer.current)
+              setDwellTownId(null)
+              dwellTimer.current = window.setTimeout(() => {
+                setDwellTownId(id)
+              }, 2000)
+              return { townId: id, name: feature.name, x: cx, y: cy }
+            })
             return
           }
         }
       }
+      // No town under cursor — clear hover + dwell.
+      if (dwellTimer.current) {
+        window.clearTimeout(dwellTimer.current)
+        dwellTimer.current = null
+      }
+      setDwellTownId(null)
       setHover(null)
     }
     const onMove = (e: MouseEvent) => {
       pending = { x: e.clientX, y: e.clientY }
       if (!raf) raf = requestAnimationFrame(process)
     }
-    const onLeave = () => setHover(null)
+    const onLeave = () => {
+      if (dwellTimer.current) {
+        window.clearTimeout(dwellTimer.current)
+        dwellTimer.current = null
+      }
+      setDwellTownId(null)
+      setHover(null)
+    }
     window.addEventListener('mousemove', onMove)
     window.addEventListener('mouseleave', onLeave)
     return () => {
@@ -232,6 +275,15 @@ export function MapBackground({
           const target = e.target as { closest?: (s: string) => Element | null } | null
           if (typeof target?.closest === 'function' && target.closest('[data-map-ui]'))
             return
+          // Shift+click always toggles selection (regardless of the
+          // select-mode toggle in the header), so power users can
+          // pick a few towns without switching tools.
+          if (e.shiftKey && onShiftTownClick) {
+            onShiftTownClick(id)
+            e.preventDefault()
+            e.stopPropagation()
+            return
+          }
           onTownClick(id)
           return
         }
@@ -239,7 +291,7 @@ export function MapBackground({
     }
     window.addEventListener('click', onClick, true)
     return () => window.removeEventListener('click', onClick, true)
-  }, [data.towns, onTownClick])
+  }, [data.towns, onTownClick, onShiftTownClick])
 
   const t = `translate(${camera.x * camera.z} ${camera.y * camera.z}) scale(${camera.z})`
 
@@ -319,6 +371,24 @@ export function MapBackground({
               )
             })}
           </g>
+
+          {/* Selected-town outlines (multi-select tool). Indigo ring on top of
+              everything else — bright enough to read at any zoom. */}
+          {selectedTowns && selectedTowns.size > 0 && (
+            <g pointerEvents="none">
+              {towns
+                .filter((f) => selectedTowns.has(f.id))
+                .map((f) => (
+                  <path
+                    key={`sel-${f.id}`}
+                    d={f.d}
+                    fill="rgba(79, 70, 229, 0.12)"
+                    stroke="#4f46e5"
+                    strokeWidth={2.4 / camera.z}
+                  />
+                ))}
+            </g>
+          )}
 
           {/* Explicit school-district outlines (toggle on top of fills). */}
           {layers.schoolDistricts &&
@@ -478,7 +548,7 @@ export function MapBackground({
         </g>
       </svg>
 
-      {hover && (
+      {hover && dwellTownId !== hover.townId && (
         <div
           data-map-ui
           className="absolute z-30 pointer-events-none px-2 py-1 bg-slate-900 text-white text-xs rounded shadow whitespace-nowrap"
@@ -487,7 +557,152 @@ export function MapBackground({
           {hover.name}
         </div>
       )}
+      {hover && dwellTownId === hover.townId && (() => {
+        const town = towns.find((f) => f.id === dwellTownId)
+        const dId = townToDistrict[dwellTownId]
+        const policy = dId ? policies[dId] : undefined
+        const demo = dId ? demographics[dId] : undefined
+        if (!town) return null
+        return (
+          <DwellTooltip
+            x={hover.x}
+            y={hover.y}
+            townName={town.name}
+            townPopulation={town.population ?? null}
+            districtName={dId ? districts.find((d) => d.id === dId)?.name ?? null : null}
+            policy={policy ?? null}
+            demographics={demo ?? null}
+          />
+        )
+      })()}
     </>
+  )
+}
+
+function DwellTooltip({
+  x,
+  y,
+  townName,
+  townPopulation,
+  districtName,
+  policy,
+  demographics,
+}: {
+  x: number
+  y: number
+  townName: string
+  townPopulation: number | null
+  districtName: string | null
+  policy: PhonePolicy | null
+  demographics: DistrictDemographics | null
+}) {
+  const tier: PhoneTier = policy?.tier ?? 1
+  // Anchor near cursor but flip across the cursor when within ~280px of viewport edge.
+  const viewportW = typeof window !== 'undefined' ? window.innerWidth : 1200
+  const viewportH = typeof window !== 'undefined' ? window.innerHeight : 800
+  const W = 260
+  const left = x + 14 + W > viewportW ? Math.max(8, x - 14 - W) : x + 14
+  const top = y + 14 + 240 > viewportH ? Math.max(8, y - 14 - 240) : y + 14
+  const fmtPct = (n: number | null | undefined) =>
+    n == null ? '—' : `${n.toFixed(1)}%`
+  return (
+    <div
+      data-map-ui
+      className="absolute z-30 pointer-events-none px-3 py-2 bg-white border border-slate-200 rounded-md shadow-xl text-[11.5px] text-slate-700"
+      style={{ left, top, width: W }}
+    >
+      <div className="font-semibold text-slate-900 text-[13px] leading-tight">
+        {townName}
+      </div>
+      <div className="text-[10.5px] text-slate-500 mt-0.5">
+        {districtName ?? 'No district resolved'}
+      </div>
+      <div className="flex items-center gap-1.5 mt-1.5">
+        <span
+          className="inline-block w-2 h-2 rounded-full"
+          style={{ background: TIER_COLOR[tier] }}
+        />
+        <span className="text-[11px]">{TIER_LABEL[tier]}</span>
+      </div>
+      <div className="grid grid-cols-2 gap-x-2 gap-y-0.5 mt-2 text-[10.5px]">
+        <div className="text-slate-500">Town pop.</div>
+        <div className="text-slate-800 tabular-nums text-right">
+          {townPopulation != null ? townPopulation.toLocaleString() : '—'}
+        </div>
+        <div className="text-slate-500">Enrollment</div>
+        <div className="text-slate-800 tabular-nums text-right">
+          {demographics?.enrollment != null
+            ? demographics.enrollment.toLocaleString()
+            : policy?.enrollment != null
+              ? policy.enrollment.toLocaleString()
+              : '—'}
+        </div>
+        {demographics?.lowIncome != null && (
+          <>
+            <div className="text-slate-500">Low-income</div>
+            <div className="text-slate-800 tabular-nums text-right">
+              {fmtPct(demographics.lowIncome)}
+            </div>
+          </>
+        )}
+        {demographics?.ell != null && (
+          <>
+            <div className="text-slate-500">English learner</div>
+            <div className="text-slate-800 tabular-nums text-right">
+              {fmtPct(demographics.ell)}
+            </div>
+          </>
+        )}
+        {demographics?.swd != null && (
+          <>
+            <div className="text-slate-500">Students w/ disab.</div>
+            <div className="text-slate-800 tabular-nums text-right">
+              {fmtPct(demographics.swd)}
+            </div>
+          </>
+        )}
+        {demographics?.perPupilSpending != null && (
+          <>
+            <div className="text-slate-500">Per-pupil $</div>
+            <div className="text-slate-800 tabular-nums text-right">
+              ${demographics.perPupilSpending.toLocaleString()}
+            </div>
+          </>
+        )}
+      </div>
+      {demographics?.raceEthnicity && (
+        <div className="mt-2 pt-1.5 border-t border-slate-100">
+          <div className="text-[10px] uppercase tracking-wider text-slate-500 mb-1">
+            Race / ethnicity
+          </div>
+          <div className="space-y-0.5 text-[10.5px]">
+            {(['white', 'hispanic', 'black', 'asian', 'multiracial', 'native', 'pacific', 'other'] as const).map((k) => {
+              const v = demographics.raceEthnicity?.[k]
+              if (v == null) return null
+              return (
+                <div key={k} className="flex items-center justify-between">
+                  <span className="text-slate-600 capitalize">{k}</span>
+                  <span className="text-slate-800 tabular-nums">{fmtPct(v)}</span>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      )}
+      {demographics?.year && (
+        <div className="text-[9.5px] text-slate-400 mt-1.5 pt-1 border-t border-slate-100">
+          Data year: {demographics.year}
+          {demographics.source && (
+            <span className="ml-1.5 text-slate-300">· {new URL(demographics.source).hostname}</span>
+          )}
+        </div>
+      )}
+      {!demographics && (
+        <div className="text-[10px] text-slate-400 italic mt-1.5 pt-1 border-t border-slate-100">
+          Demographics not yet loaded for this district.
+        </div>
+      )}
+    </div>
   )
 }
 

@@ -21,14 +21,18 @@ export function Board({
   layers,
   popupTownId,
   onTownClick,
+  onShiftTownClick,
   onEditor,
   tierFilter,
+  selectedTowns,
 }: {
   layers: LayerState
   popupTownId: string | null
   onTownClick: (townId: string | null) => void
+  onShiftTownClick?: (townId: string) => void
   onEditor?: (e: Editor) => void
   tierFilter: TierFilter
+  selectedTowns?: Set<string>
 }) {
   const [editor, setEditor] = useState<Editor | null>(null)
   const [camera, setCamera] = useState({ x: 0, y: 0, z: 1 })
@@ -82,7 +86,9 @@ export function Board({
         layers={layers}
         popupTownId={popupTownId}
         onTownClick={onTownClick}
+        onShiftTownClick={onShiftTownClick}
         tierFilter={tierFilter}
+        selectedTowns={selectedTowns}
       />
       <div className="absolute inset-0 tldraw-transparent">
         <Tldraw

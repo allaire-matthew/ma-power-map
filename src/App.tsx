@@ -30,6 +30,18 @@ export default function App() {
   const [tierFilter, setTierFilter] = useState<TierFilter>('all')
   const [townOptions, setTownOptions] = useState<ProjectedFeature[]>([])
   const [searchQuery, setSearchQuery] = useState('')
+  const [selectMode, setSelectMode] = useState(false)
+  const [selectedTowns, setSelectedTowns] = useState<Set<string>>(new Set())
+
+  const toggleSelected = (id: string) => {
+    setSelectedTowns((prev) => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      return next
+    })
+  }
+  const clearSelected = () => setSelectedTowns(new Set())
 
   useEffect(() => {
     let cancelled = false
@@ -60,11 +72,14 @@ export default function App() {
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setPopupTownId(null)
+      if (e.key === 'Escape') {
+        if (selectMode) setSelectMode(false)
+        else setPopupTownId(null)
+      }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [])
+  }, [selectMode])
 
   const zoomBy = (factor: number) => {
     if (!editor) return
@@ -94,6 +109,27 @@ export default function App() {
         <div className="h-5 w-px bg-slate-200" />
         <LayerToggles value={layers} onChange={setLayers} />
         <div className="ml-auto flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setSelectMode((v) => !v)}
+            title="Toggle multi-select tool (click towns to add/remove). Shift+click also toggles regardless of this mode."
+            className={`h-8 px-2.5 text-xs rounded border transition-colors whitespace-nowrap ${
+              selectMode
+                ? 'bg-indigo-600 text-white border-indigo-700 hover:bg-indigo-700'
+                : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-50'
+            }`}
+          >
+            {selectMode ? '◉ Selecting' : '○ Select towns'}
+            {selectedTowns.size > 0 && (
+              <span
+                className={`ml-1.5 inline-flex items-center justify-center min-w-[18px] h-[18px] rounded-full text-[10px] tabular-nums font-semibold ${
+                  selectMode ? 'bg-white/20' : 'bg-indigo-100 text-indigo-700'
+                }`}
+              >
+                {selectedTowns.size}
+              </span>
+            )}
+          </button>
           <div className="relative">
             <input
               type="search"
@@ -146,15 +182,33 @@ export default function App() {
         <Board
           layers={layers}
           popupTownId={popupTownId}
-          onTownClick={setPopupTownId}
+          onTownClick={(id) => {
+            if (id == null) {
+              setPopupTownId(null)
+              return
+            }
+            if (selectMode) toggleSelected(id)
+            else setPopupTownId(id)
+          }}
+          onShiftTownClick={toggleSelected}
           onEditor={setEditor}
           tierFilter={tierFilter}
+          selectedTowns={selectedTowns}
         />
         <Legend
           layers={layers}
           tierFilter={tierFilter}
           onTierFilter={setTierFilter}
         />
+        {selectedTowns.size > 0 && (
+          <SelectionPanel
+            selectedIds={selectedTowns}
+            townOptions={townOptions}
+            onRemove={toggleSelected}
+            onClear={clearSelected}
+            onOpen={(id) => setPopupTownId(id)}
+          />
+        )}
         {popupTownId && (
           <TownPopup
             townId={popupTownId}
@@ -163,6 +217,83 @@ export default function App() {
         )}
       </main>
     </div>
+  )
+}
+
+function SelectionPanel({
+  selectedIds,
+  townOptions,
+  onRemove,
+  onClear,
+  onOpen,
+}: {
+  selectedIds: Set<string>
+  townOptions: ProjectedFeature[]
+  onRemove: (id: string) => void
+  onClear: () => void
+  onOpen: (id: string) => void
+}) {
+  const selected = townOptions
+    .filter((t) => selectedIds.has(t.id))
+    .sort((a, b) => a.name.localeCompare(b.name))
+  const totalPop = selected.reduce((sum, t) => sum + (t.population ?? 0), 0)
+  return (
+    <aside
+      data-map-ui
+      className="absolute left-3 top-3 z-20 w-64 bg-white/95 backdrop-blur border border-slate-200 rounded-md shadow-lg text-[12px] text-slate-700"
+      onMouseDown={(e) => e.stopPropagation()}
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="px-3 py-2 border-b border-slate-200 flex items-center justify-between">
+        <span className="font-semibold text-slate-900 text-[13px] tracking-tight">
+          Selected ({selected.length})
+        </span>
+        <button
+          type="button"
+          onClick={onClear}
+          className="text-[10px] uppercase tracking-wider text-slate-500 hover:text-rose-600"
+        >
+          Clear
+        </button>
+      </div>
+      <div className="p-3 space-y-1.5">
+        <div className="text-[10px] uppercase tracking-wider text-slate-500">
+          Combined population
+        </div>
+        <div className="text-slate-900 font-semibold tabular-nums">
+          {totalPop.toLocaleString()}
+        </div>
+      </div>
+      <ul className="max-h-72 overflow-auto border-t border-slate-100">
+        {selected.map((t) => (
+          <li
+            key={t.id}
+            className="flex items-center justify-between px-3 py-1.5 border-b border-slate-50 last:border-b-0 hover:bg-slate-50"
+          >
+            <button
+              type="button"
+              onClick={() => onOpen(t.id)}
+              className="text-left flex-1 min-w-0"
+            >
+              <div className="text-slate-900 truncate">{t.name}</div>
+              {t.population != null && (
+                <div className="text-[10px] text-slate-500 tabular-nums">
+                  {t.population.toLocaleString()}
+                </div>
+              )}
+            </button>
+            <button
+              type="button"
+              onClick={() => onRemove(t.id)}
+              title="Remove"
+              className="ml-2 text-slate-400 hover:text-rose-600 text-[14px] leading-none"
+            >
+              ×
+            </button>
+          </li>
+        ))}
+      </ul>
+    </aside>
   )
 }
 

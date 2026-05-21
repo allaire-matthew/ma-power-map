@@ -431,6 +431,48 @@ export async function loadNextMeetings(): Promise<NextMeetingsData | null> {
   return nextMeetingsPromise
 }
 
+export type DistrictDemographics = {
+  enrollment: number | null
+  raceEthnicity?: {
+    white?: number
+    hispanic?: number
+    black?: number
+    asian?: number
+    multiracial?: number
+    native?: number
+    pacific?: number
+    other?: number
+  }
+  lowIncome?: number | null
+  ell?: number | null
+  swd?: number | null
+  perPupilSpending?: number | null
+  year?: string
+  source?: string
+}
+
+export type DemographicsData = {
+  _lastUpdated: string
+  _source?: string
+  demographics: Record<string, DistrictDemographics>
+}
+
+let demographicsPromise: Promise<DemographicsData | null> | null = null
+
+export async function loadDemographics(): Promise<DemographicsData | null> {
+  if (!demographicsPromise) {
+    demographicsPromise = (async () => {
+      try {
+        const url = `${import.meta.env.BASE_URL}data/district-demographics.json`
+        return await fetchJson<DemographicsData>(url)
+      } catch {
+        return null
+      }
+    })()
+  }
+  return demographicsPromise
+}
+
 let legislatorsPromise: Promise<LegislatorsData | null> | null = null
 
 export async function loadLegislators(): Promise<LegislatorsData | null> {
