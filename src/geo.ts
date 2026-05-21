@@ -83,12 +83,20 @@ export type PhonePolicy = {
   enforcement: string
   effectiveDate: string
   enrollment: number | null
-  sources: { title: string; url: string; publisher: string; date: string }[]
+  sources: { title: string; url: string; publisher: string; date: string; type?: string }[]
   lastVerified: string
   confidence: 'high' | 'medium' | 'low'
   status?: string
   handbook_url?: string
   extraction_method?: string
+  // Red-team / Childhood Index annotations
+  redTeamVerified?: string
+  chIdxStrengths?: string[]
+  chIdxConcerns?: string[]
+  exceptionsFound?: string[]
+  edtechNotes?: string
+  redTeamFindings?: string
+  tier_history?: { from: number; to: number; date: string; reason: string }[]
 }
 
 const townToLayerPromises: Partial<Record<LayerName, Promise<Record<string, string>>>> = {}

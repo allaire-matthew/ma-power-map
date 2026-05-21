@@ -60,9 +60,9 @@ export const TIER_COLOR: Record<PhoneTier, string> = {
 
 export const TIER_LABEL: Record<PhoneTier, string> = {
   1: 'Tier 1 — No district policy',
-  2: 'Tier 2 — Partial / non-hardware',
-  3: 'Tier 3 — Hardware but limited (scope or exceptions)',
-  4: 'Tier 4 — Bell-to-bell hardware K-12, no exceptions',
+  2: 'Tier 2 — Partial / accessible storage',
+  3: 'Tier 3 — Inaccessible storage but scope-limited',
+  4: 'Tier 4 — Bell-to-bell, inaccessible storage, K-12',
 }
 
 export function MapBackground({

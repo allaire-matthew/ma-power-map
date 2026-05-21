@@ -592,12 +592,50 @@ function PhonePolicyBlock({
               )}
             </div>
           )}
+          {(policy.chIdxStrengths?.length || policy.chIdxConcerns?.length) ? (
+            <div className="text-[11px] pt-1 border-t border-slate-100 space-y-1">
+              {policy.chIdxStrengths?.length ? (
+                <div>
+                  <div className="text-emerald-700 font-medium mb-0.5">Strengths</div>
+                  <ul className="list-disc list-outside ml-3.5 space-y-0.5 text-slate-700">
+                    {policy.chIdxStrengths.map((s, i) => <li key={i}>{s}</li>)}
+                  </ul>
+                </div>
+              ) : null}
+              {policy.chIdxConcerns?.length ? (
+                <div>
+                  <div className="text-amber-700 font-medium mb-0.5">Concerns / loopholes</div>
+                  <ul className="list-disc list-outside ml-3.5 space-y-0.5 text-slate-700">
+                    {policy.chIdxConcerns.map((s, i) => <li key={i}>{s}</li>)}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+          ) : null}
+          {policy.edtechNotes ? (
+            <div className="text-[11px] pt-1 border-t border-slate-100">
+              <div className="text-slate-500 mb-0.5">Edtech / context</div>
+              <div className="text-slate-700 leading-snug">{policy.edtechNotes}</div>
+            </div>
+          ) : null}
           {policy.sources.length > 0 && (
             <div className="text-[11px] pt-1 border-t border-slate-100">
-              <div className="text-slate-500 mb-0.5">Sources</div>
+              <div className="text-slate-500 mb-0.5">
+                Sources
+                {policy.redTeamVerified && (
+                  <span className="ml-1.5 text-[9.5px] uppercase tracking-wider text-emerald-600">
+                    red-team verified {policy.redTeamVerified}
+                  </span>
+                )}
+              </div>
               <ul className="space-y-0.5">
                 {policy.sources.map((s, i) => (
                   <li key={i}>
+                    {s.type && (
+                      <span className="text-[9.5px] uppercase tracking-wider text-slate-400 mr-1">
+                        {s.type}
+                      </span>
+                    )}
                     <a
                       href={s.url}
                       target="_blank"

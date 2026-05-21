@@ -1,7 +1,7 @@
 {
-  "_schemaVersion": "3.1.0",
-  "_lastUpdated": "2026-05-20",
-  "_notes": "Tier system (v3, locked 2026-05-20 after red-team): 1 = no district policy; 2 = partial / non-hardware (off-and-away in pocket, instructional-time-only, class-period-only with lunch/passing access); 3 = hardware-level removal but scope-limited (K-8 only, HS only, has lunch/passing access, has non-medical discretionary exceptions); 4 = bell-to-bell hardware-level K-12 with NO discretionary exceptions (federally-mandated medical/IEP/504 OK). Each tier-3+ promotion requires district records + news + social media triangulation. redTeamVerified field marks entries that have been through the full source-verification process. edtechNotes field captures broader ed-tech activity per district even when not affecting tier rank.",
+  "_schemaVersion": "3.2.0",
+  "_lastUpdated": "2026-05-21",
+  "_notes": "Tier system (v3.2, anchored to Childhood Index / Distraction-Free Schools Policy Project spec, 2026-05-21): 1 = no district policy. 2 = partial — class-time only OR accessible storage (pockets, backpacks). 3 = inaccessible-storage hardware but scope-limited (< K-12) OR significant weakening loopholes. 4 = bell-to-bell + INACCESSIBLE storage (pouches/cabinets, NOT lockers/backpacks/pockets) + K-12 + all PEDs covered + narrow exceptions (IEP/504 + documented medical). Superintendent / principal discretion exemptions are FINE per spec. Loopholes flagged but not disqualifying: emergency-use exception, educational-use exception, suspension for violation alone, locker storage. chIdxStrengths / chIdxConcerns arrays track these per district for directional sense of progress. Don't adhere TOO tightly to the spec — this is for directional understanding, not pass/fail.",
   "policies": {
     "2502790": {
       "districtId": "2502790",
@@ -272,7 +272,15 @@
       ],
       "edtechNotes": "Principal Mitchell publicly supports state-level standardization.",
       "redTeamFindings": "Tier-3 by scope (HS-only). Bell-to-bell at IHS confirmed verbatim. K-8 has bans but not hardware. AG used Ipswich as statewide model.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Inaccessible caddy/cabinet storage at IHS",
+        "True bell-to-bell (no lunch/passing access)",
+        "AG named IHS as statewide model"
+      ],
+      "chIdxConcerns": [
+        "scope_lt_K12 (HS only — K-8 has non-hardware bans)"
+      ]
     },
     "2503090": {
       "districtId": "2503090",
@@ -445,7 +453,15 @@
       ],
       "edtechNotes": "Middle schools and elementary not covered as of 2024 sources.",
       "redTeamFindings": "Scope clarification: 3 secondary schools (not just CHS). Teacher-discretion 'educational use' carve-out disqualifies tier 4. Solidly tier 3.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Yondr inaccessible-storage at 3 secondary schools since 2022"
+      ],
+      "chIdxConcerns": [
+        "scope_lt_K12 (MS + 9 elementaries not covered)",
+        "educational_use_exception ('closely aligned with course content')",
+        "after_school_activities_exception"
+      ]
     },
     "2511130": {
       "districtId": "2511130",
@@ -1289,7 +1305,16 @@
       ],
       "edtechNotes": "Early MA Yondr adopter (Sept 2022); recurring cost ~$12K/yr.",
       "redTeamFindings": "On-file claim was tier-4-shaped. Three material errors: scope NOT K-12 (elementary excluded); 'instructional day' not 'bell-to-bell'; open-ended principal accommodation clause exists.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Yondr inaccessible-storage at GMS+GHS",
+        "Bell-to-bell at MS+HS",
+        "Hardware enforcement"
+      ],
+      "chIdxConcerns": [
+        "scope_lt_K12 (K-5 has off-and-away only)",
+        "open-ended principal accommodation broader than IEP/504/medical-with-documentation"
+      ]
     },
     "2504590": {
       "districtId": "2504590",
@@ -1712,7 +1737,7 @@
       "districtId": "2509600",
       "districtName": "Pioneer Valley School District",
       "tier": 4,
-      "policySummary": "School Committee unanimously adopted June 6, 2024; effective August 2024. Magnetic Yondr pouches across ALL 3 PVRSD schools: PVRS (7-12, Northfield), Bernardston Elementary, Northfield Elementary. K-12 within district footprint (Warwick + Leyden elementary feeders are separate districts). Phones, smartwatches, earbuds, tablets all powered-off + locked at start of day, unlocked at dismissal. Featured in MA Attorney General's Office statewide toolkit.",
+      "policySummary": "SC unanimously adopted 2024-06-06, effective Aug 2024. Yondr magnetic pouches (INACCESSIBLE STORAGE — meets Childhood Index gold standard) across ALL 3 PVRSD schools: PVRS (7-12), Bernardston Elementary, Northfield Elementary. K-12 within district footprint. Covers phones, smartwatches, earbuds, tablets — broader than phones. Featured in MA AG's Office statewide toolkit. SC Chair: 'accommodations can be made if absolutely necessary' (per Childhood Index: sup discretion is fine).",
       "scope": "K-12-within-district",
       "enforcement": "hardware",
       "effectiveDate": "2024-08",
@@ -1769,7 +1794,18 @@
       ],
       "edtechNotes": "Policy covers smartwatches, earbuds, tablets — broader than just phones. MA AG's Office incorporated PVRSD into statewide schools toolkit.",
       "redTeamFindings": "Cleanest tier-4 case in dataset. K-12 within district verified (Bernardston + Northfield elementaries + PVRS 7-12). '95% reduction in cafeteria phone use' figure on file was INVERTED — actual quote: 95% had phones out BEFORE the ban. Discretionary 'accommodations as necessary' language reads as functional medical/IEP/504 stand-in.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "K-12 scope (all 3 district schools)",
+        "Bell-to-bell",
+        "INACCESSIBLE storage (Yondr magnetic pouches — gold standard)",
+        "All PEDs covered (phones, watches, earbuds, tablets)",
+        "Featured in MA AG statewide toolkit",
+        "Unanimous SC adoption"
+      ],
+      "chIdxConcerns": [
+        "'Accommodations can be made if absolutely necessary' — broad rather than specifying IEP/504/documented-medical (but per Childhood Index, sup discretion is fine)"
+      ]
     },
     "2510380": {
       "districtId": "2510380",
@@ -1922,7 +1958,15 @@
       ],
       "edtechNotes": "Handbook permits tablets, e-readers, recording devices at teacher discretion.",
       "redTeamFindings": "Substantively correct on scope. 'Cell phone hotels' is colloquial. WATCH: Abington MA frequently conflated with Abington PA in LLM summaries.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "MS bell-to-bell",
+        "Storage by bin/locker/teacher collection"
+      ],
+      "chIdxConcerns": [
+        "HS_class_only_with_lunch_passing_access",
+        "scope_mixed_not_K12_bell_to_bell"
+      ]
     },
     "2501780": {
       "districtId": "2501780",
@@ -2081,7 +2125,15 @@
       ],
       "edtechNotes": "Yondr procurement ~$16,000 startup; pouches store phones, earbuds, smartwatches.",
       "redTeamFindings": "K-12 scope NOT confirmed: all implementation details map to 7-12 only. 'Bell-to-bell' is paraphrase. 504 not enumerated. Original on-file URL was broken (404). Cited correct URL.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Yondr inaccessible-storage at 7-12",
+        "Bell-to-bell at MS+HS"
+      ],
+      "chIdxConcerns": [
+        "scope_lt_K12 (PK-6 inclusion not verified)",
+        "504 not enumerated as exception"
+      ]
     },
     "2502190": {
       "districtId": "2502190",
@@ -2323,7 +2375,14 @@
       ],
       "edtechNotes": "Initial pouch purchase funded by $20,000 grant.",
       "redTeamFindings": "Existing claim accurate. Scope-limit to 6-12 correctly captured. K-5 not covered.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Yondr inaccessible-storage at MS+HS",
+        "Bell-to-bell at MS+HS"
+      ],
+      "chIdxConcerns": [
+        "scope_lt_K12 (K-5 not covered)"
+      ]
     },
     "2503510": {
       "districtId": "2503510",
@@ -2372,7 +2431,15 @@
       ],
       "edtechNotes": "Chromebooks/laptops remain in use; policy targets personal phones/earbuds/headphones.",
       "redTeamFindings": "Yondr real at CHS + Browne MS. Wider MS rollout per Oct 2025 SC report but no per-school confirmation. 4 elementary schools have no documented hardware policy. 'Emergency magnet' admin-discretion clause is non-medical exception.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Yondr at CHS + Browne MS"
+      ],
+      "chIdxConcerns": [
+        "scope_lt_K12 (4 elementaries not covered)",
+        "wider_MS_rollout_not_confirmed_per_school",
+        "emergency_magnet_admin_discretion"
+      ]
     },
     "2503750": {
       "districtId": "2503750",
@@ -2867,7 +2934,16 @@
       ],
       "edtechNotes": "Student paper documents widespread workaround via school-issued Apple laptops.",
       "redTeamFindings": "Original 'Yondr pouches' claim was WRONG — storage is box-in-locker per Jan 2026 HWRHS student paper. Senior exemption is real tier-3 disqualifier. Policy is administrative, not formal SC JICJ.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Box-in-locker storage at HWRHS (bell-to-bell)"
+      ],
+      "chIdxConcerns": [
+        "scope_lt_K12 (MS is non-hardware)",
+        "senior_exemption (grade 12 keeps phones in backpacks)",
+        "policy_is_administrative_not_formal_SC_JICJ",
+        "locker_storage_per_Childhood_Index_is_not_inaccessible_enough"
+      ]
     },
     "2505730": {
       "districtId": "2505730",
@@ -3026,7 +3102,15 @@
       ],
       "edtechNotes": "Mayor Garcia framed implementation as 'pilot phase' in Nov 2024; enforcement gaps acknowledged.",
       "redTeamFindings": "Original 'bell-to-bell restriction grades 6-12' is partially stale. HS is now principal-discretion as of Jan 27 2025.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Yondr inaccessible-storage at MS"
+      ],
+      "chIdxConcerns": [
+        "scope_lt_K12",
+        "HS_principal_discretion_post_Jan_2025 (uniform enforcement gap)",
+        "emergency_use_exception (main office unlock)"
+      ]
     },
     "2506300": {
       "districtId": "2506300",
@@ -3647,13 +3731,20 @@
       "exceptionsFound": [],
       "edtechNotes": "",
       "redTeamFindings": "Only source is Sep 8 2022 plan-adoption minutes; no post-rollout confirmation 2023-2026. Scope is 7-12 (HS includes grade 7), not 9-12. Confidence downgraded to low pending a 2024+ source.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Yondr plan adopted 2022 (per board minutes)"
+      ],
+      "chIdxConcerns": [
+        "scope_lt_K12 (7-12 only)",
+        "no_post_rollout_confirmation_2023_plus"
+      ]
     },
     "2508160": {
       "districtId": "2508160",
       "districtName": "Mount Greylock School District",
-      "tier": 3,
-      "policySummary": "Policy JT (School Committee adopted 2024-07-22, effective Sept 2024): student-owned devices must be powered off and stored bell-to-bell across all 3 schools (LES, WES PreK-6, MGRS 7-12). Storage: lockers at MGRS/LES, front office at WES. Tiered consequences 1st-3rd offense + ISS for refusal.",
+      "tier": 4,
+      "policySummary": "Policy JT (SC adopted 2024-07-22, effective Sept 2024): student-owned PEDs (phones, watches, tablets, earbuds, gaming, smart glasses) powered off and stored bell-to-bell across all 3 schools (LES, WES PreK-6, MGRS 7-12). Storage: lockers at MGRS/LES, front office at WES. Tiered consequences 1st-3rd offense + ISS. Principal discretion for medical or educational purposes (per Childhood Index spec, principal/sup discretion is fine).",
       "scope": "K-12",
       "enforcement": "off-and-away-with-storage",
       "effectiveDate": "",
@@ -3716,6 +3807,12 @@
           "to": 3,
           "date": "2026-05-20",
           "reason": "Demoted: needs live-source verification before claiming tier-4. Either had explicit non-medical exception language, scope marked unknown, or zero sources on file."
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "date": "2026-05-21",
+          "reason": "Re-rated against Childhood Index spec — sup/principal discretion is fine; locker storage is a concern but not disqualifying (\"don't adhere TOO tightly\")"
         }
       ],
       "exceptionsFound": [
@@ -3724,7 +3821,18 @@
       ],
       "edtechNotes": "District-issued Chromebooks are the only authorized computing device during school day. No Yondr — storage is locker-based or front-office. Tier 4 declined because 'educational purposes' is broader than medical/IEP/504.",
       "redTeamFindings": "Strongest tier-4 case in dataset (K-12 verified, bell-to-bell, mandatory storage, tiered consequences). HELD AT 3 because Policy JT §4 grants principal discretion for 'medical or educational purposes' — broader than allowed under strict reading of 'no discretionary exceptions.' '100% supportive' claim was superintendent self-report at adoption, not survey data.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxConcerns": [
+        "accessible_storage_lockers_at_MGRS_LES (Childhood Index: lockers are explicitly NOT inaccessible enough; spec wants pouches/cabinets)",
+        "educational_use_exception (Policy JT §4 includes 'educational purposes' carve-out — flagged as weakening but not disqualifying)"
+      ],
+      "chIdxStrengths": [
+        "K-12 scope (all 3 PVRSD schools)",
+        "Bell-to-bell (no lunch/passing access)",
+        "All PEDs covered (phones, watches, tablets, earbuds, gaming, smart glasses)",
+        "Tiered consequences without suspension as default",
+        "SC unanimously adopted with public hearings (procedural strength)"
+      ]
     },
     "2508250": {
       "districtId": "2508250",
@@ -3795,7 +3903,16 @@
       ],
       "edtechNotes": "District maintains AI Guidelines and Student Technology Account Agreement. $30K first-year Yondr cost. ~90% staff approval, ~75% parent, ~50% student opposed (Jan 2026 survey).",
       "redTeamFindings": "File claim 'K-12 Yondr' was WRONG. Yondr is 6-12 only. K-5 is off-and-away.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Yondr inaccessible-storage at 6-12",
+        "Bell-to-bell at MS+HS",
+        "Unanimous SC vote",
+        "All PEDs covered"
+      ],
+      "chIdxConcerns": [
+        "scope_lt_K12 (K-5 has off-and-away only)"
+      ]
     },
     "2508280": {
       "districtId": "2508280",
@@ -3856,7 +3973,15 @@
       ],
       "edtechNotes": "Every Drury student receives a school-issued Chromebook. District migrated from teacher-by-teacher locker pilot to district-wide pouches.",
       "redTeamFindings": "Two corrections: (1) Pouches NOT confirmed Yondr-brand — handbook says generic 'phone pouch system.' McCann Technical (separate district) is the documented Yondr customer. (2) Policy is tiered — K-8 off-and-away, 9-12 hardware.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Pouch system at Drury HS",
+        "K-8 off-and-away enforcement"
+      ],
+      "chIdxConcerns": [
+        "tiered_K-8_off_and_away_not_hardware",
+        "admin_discretion_'unless_explicitly_approved'"
+      ]
     },
     "2508700": {
       "districtId": "2508700",
@@ -4707,7 +4832,14 @@
       ],
       "edtechNotes": "No district 1:1 program detail surfaced.",
       "redTeamFindings": "Borderline tier 2/3. Hardware (lock-box) real but access window is wide (before/after/passing/lunch all open). Holding at tier 3 because hardware is defining schema characteristic.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Portable lock-box at WHS"
+      ],
+      "chIdxConcerns": [
+        "scope_HS_only_class_only",
+        "lunch_passing_access_at_HS_2024_policy"
+      ]
     },
     "2512100": {
       "districtId": "2512100",
@@ -6234,7 +6366,14 @@
       ],
       "edtechNotes": "Yondr covers personal devices only. Beyond Yondr piece (March 2026) suggests district pursuing social-media-focused programming.",
       "redTeamFindings": "STRUCTURALLY HS-ONLY — NCES confirms MVRHS is sole school under district 2507380. Tier-3 ceiling is schema artifact. Island K-8 districts are separate NCES IDs.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Yondr inaccessible-storage at MVRHS",
+        "Bell-to-bell"
+      ],
+      "chIdxConcerns": [
+        "scope_structurally_HS_only (NCES confirms MVRHS is sole school under this district ID)"
+      ]
     },
     "2508910": {
       "districtId": "2508910",
