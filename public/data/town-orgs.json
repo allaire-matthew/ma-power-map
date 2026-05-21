@@ -1,6 +1,6 @@
 {
   "_schemaVersion": 1,
-  "_lastUpdated": "2026-05-20",
+  "_lastUpdated": "2026-05-21",
   "_source": "Google Sheet 16q_wrfljGEbMuUyeAeovZKk_TVTuoGgUf7mqb1uLqtw / IRL Councils tab.",
   "byTown": {
     "needham": [
@@ -140,18 +140,16 @@
         "notes": null
       }
     ],
-    "grafton": [
+    "marion": [
       {
         "org": "The Balance Project",
-        "chapterName": "Grafton MA",
-        "town": "Grafton",
-        "leadName": "Katherine Giacometti",
-        "leadEmail": "katiegiacometti@gmail.com",
-        "type": "community lead",
-        "notes": null
-      }
-    ],
-    "marion": [
+        "chapterName": "Marion, MA",
+        "town": "Marion",
+        "leadName": "Jessica Barrett",
+        "leadEmail": "jbarrett525@gmail.com",
+        "type": "de-facto lead (Member status in FN, no formal Community Lead assigned)",
+        "notes": "Verified in Four Norms chapter; sole local member"
+      },
       {
         "org": "The Balance Project",
         "chapterName": "Marion, MA",
@@ -193,6 +191,15 @@
         "leadEmail": "mariajosayova@hotmail.com",
         "type": "member (no formal lead)",
         "notes": "No Community Lead designated; only other member"
+      },
+      {
+        "org": "ScreenStrong",
+        "chapterName": "ScreenStrong \u2013 Natick",
+        "town": "Natick",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": "SFC US locator (no public URL listed)"
       }
     ],
     "holliston": [
@@ -215,6 +222,249 @@
         "leadEmail": "jeff.b.miller@gmail.com",
         "type": "community lead",
         "notes": null
+      },
+      {
+        "org": "Independent",
+        "chapterName": "Arlington MA Smartphone Sense",
+        "town": "Arlington",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": "FB group 1379161002719463; SFC US locator"
+      }
+    ],
+    "malden": [
+      {
+        "org": "Reconnect",
+        "chapterName": "Reconnect Malden",
+        "town": "Malden",
+        "leadName": null,
+        "leadEmail": "info@reconnectmalden.com",
+        "type": "chapter",
+        "notes": "reconnectmalden.com; SFC US locator"
+      }
+    ],
+    "stoneham": [
+      {
+        "org": "Wait Until 8th",
+        "chapterName": "Wait Until 8th \u2013 Stoneham",
+        "town": "Stoneham",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": "FB group 295124101384483; SFC US locator"
+      }
+    ],
+    "braintree": [
+      {
+        "org": "Turning Life On",
+        "chapterName": "Reconnect Braintree",
+        "town": "Braintree",
+        "leadName": "ViVi Pierce",
+        "leadEmail": "vliousas@gmail.com",
+        "type": "community lead",
+        "notes": null
+      }
+    ],
+    "reading": [
+      {
+        "org": "Turning Life On",
+        "chapterName": "TLO Reading",
+        "town": "Reading",
+        "leadName": "Kasie Gates",
+        "leadEmail": "mikeandkasie123@gmail.com",
+        "type": "community lead",
+        "notes": "Four Norms; Parent; joined 6/20/2025; SFC US locator"
+      }
+    ],
+    "hingham": [
+      {
+        "org": "Wait Until 8th",
+        "chapterName": "Wait Until 8th \u2013 Hingham",
+        "town": "Hingham",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": "IG @waituntil8th_hingham; SFC US locator"
+      }
+    ],
+    "westwood": [
+      {
+        "org": "Wait Until 8th",
+        "chapterName": "Wait Until 8th \u2013 Westwood",
+        "town": "Westwood",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": "linktr.ee/waituntil8thwestwood; SFC US locator"
+      }
+    ],
+    "marblehead": [
+      {
+        "org": "Wait Until 8th",
+        "chapterName": "Wait Until 8th \u2013 Marblehead",
+        "town": "Marblehead",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": "FB group 647342045125213; SFC US locator"
+      }
+    ],
+    "canton": [
+      {
+        "org": "Wait Until 8th",
+        "chapterName": "Wait Until 8th \u2013 Canton",
+        "town": "Canton",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": "IG @waituntil8thcanton; SFC US locator"
+      }
+    ],
+    "cohasset": [
+      {
+        "org": "Wait Until 8th",
+        "chapterName": "Wait Until 8th \u2013 Cohasset",
+        "town": "Cohasset",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": "IG @waituntil8th_cohasset; SFC US locator"
+      }
+    ],
+    "scituate": [
+      {
+        "org": "Turning Life On / South Shore Digital Wellness",
+        "chapterName": "South Shore Digital Wellness",
+        "town": "Scituate",
+        "leadName": "Erika Zinsmeister",
+        "leadEmail": "erikamzinsmeister@gmail.com",
+        "type": "community lead (Four Norms)",
+        "notes": "Erika is Four Norms Community Lead for SSDW chapter; Katie Scopelleti (kscopelleti@gmail.com) is President of the SSDW 501c3 board; org email ssdigitalwellness@icloud.com. Site: southshoredigitalwellness.org"
+      },
+      {
+        "org": "Turning Life On",
+        "chapterName": "Opt Out Scituate",
+        "town": "Scituate",
+        "leadName": "Katie Scopelleti",
+        "leadEmail": "kscopelleti@gmail.com",
+        "type": "community lead",
+        "notes": "Four Norms chapter (separate from SSDW); Adrienne Principe also FN member"
+      }
+    ],
+    "andover": [
+      {
+        "org": "Wait Until 8th",
+        "chapterName": "Wait Until 8th \u2013 Andover",
+        "town": "Andover",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": "FB groups/waituntil8thandover; SFC US locator"
+      },
+      {
+        "org": "Independent (Four Norms hub)",
+        "chapterName": "Andover Caregivers Creating Thoughtful Tech & More Screen Free Experiences",
+        "town": "Andover",
+        "leadName": "Nichole Bukowski",
+        "leadEmail": "nichole.bukowski@gmail.com",
+        "type": "community lead",
+        "notes": "Four Norms hub chapter; separate from 'Wait Until 8th \u2013 Andover' (row 34 FB group)"
+      }
+    ],
+    "norfolk": [
+      {
+        "org": "Wait Until 8th",
+        "chapterName": "Wait Until 8th \u2013 Wrentham/Norfolk/Plainville",
+        "town": "Norfolk",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": null
+      }
+    ],
+    "medway": [
+      {
+        "org": "Wait Until 8th",
+        "chapterName": "Wait Until 8th \u2013 Medway",
+        "town": "Medway",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": "FB group 8783168518400840; SFC US locator"
+      }
+    ],
+    "kingston": [
+      {
+        "org": "Wait Until 8th",
+        "chapterName": "Wait Until 8th \u2013 Kingston",
+        "town": "Kingston",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": "FB share/g/17P6j5uMVx; SFC US locator"
+      },
+      {
+        "org": "Turning Life On / Wait Until 8th",
+        "chapterName": "Kingston, MA WU8",
+        "town": "Kingston",
+        "leadName": "Brittany Kooienga",
+        "leadEmail": "brittany.b.kooienga@gmail.com",
+        "type": "community lead",
+        "notes": "Four Norms Community Lead; SFC US locator linked to FB share/g/17P6j5uMVx; other FN members: Rachael Armstrong (Pembroke), Erin Bumpus (Bridgewater)"
+      }
+    ],
+    "marthas vineyard": [
+      {
+        "org": "Wait Until 8th",
+        "chapterName": "Wait Until 8th \u2013 Marthas Vineyard",
+        "town": "Marthas Vineyard",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": "IG @waituntil8th_marthasvineyard; SFC US locator"
+      }
+    ],
+    "northampton": [
+      {
+        "org": "Turning Life On",
+        "chapterName": "Reconnect Western MA",
+        "town": "Northampton",
+        "leadName": "Sarah Marcus / Sue Sullivan / Emily Boddy / Sheila Brosnan / Laura Carney Erny",
+        "leadEmail": "ReConnectWMA@gmail.com",
+        "type": "steering group",
+        "notes": "reconnectwma.org; SFC US locator; steering group; Emily Boddy overlap w/ TLO outreach list"
+      },
+      {
+        "org": "Turning Life On / Reconnect",
+        "chapterName": "ReConnect Western MA",
+        "town": "Northampton",
+        "leadName": "Emily Boddy",
+        "leadEmail": "emily@emilyboddy.com",
+        "type": "community lead",
+        "notes": "Four Norms Community Lead (confirmed); site reconnectwma.org; org email ReConnectWMA@gmail.com; steering group also: Sarah Marcus, Sue Sullivan (suesul@gmail.com, FN member), Sheila Brosnan, Laura Carney Erny; Maya Bajak (Leeds) also FN member. Emily already on TLO outreach list."
+      }
+    ],
+    "fitchburg": [
+      {
+        "org": "Independent (Four Norms hub)",
+        "chapterName": "Greater Fitchburg",
+        "town": "Fitchburg",
+        "leadName": "Madison Terho",
+        "leadEmail": "madison.k.terho@gmail.com",
+        "type": "community lead",
+        "notes": "Four Norms hub chapter; NOT on SFC US locator; mission: 'raise a community of children who are more confident and less dependent on technology'"
+      }
+    ],
+    "lanesborough": [
+      {
+        "org": "Independent (Four Norms hub)",
+        "chapterName": "Berkshire County Unplugged Childhood",
+        "town": "Lanesborough",
+        "leadName": "Isabel Stomberg Jackson",
+        "leadEmail": "isabelstomberg@gmail.com",
+        "type": "community lead",
+        "notes": "Four Norms hub chapter; NOT on SFC US locator; Anne Roecklein (North Adams) also FN member"
       }
     ]
   }
