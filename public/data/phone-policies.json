@@ -1,20 +1,20 @@
 {
-  "_schemaVersion": 1,
+  "_schemaVersion": "3.0.0",
   "_lastUpdated": "2026-05-20",
-  "_notes": "MA school district phone policies. Initial 64 high-confidence entries from 2026-04-30 overnight session. Bulk breadth-first sweep 2026-05-20 added best-effort tier assignments for the remaining 228 districts. Many bulk entries are confidence:low and should be re-verified against district handbooks via the V2 spec (RESEARCH_SPEC_PHONE_POLICIES_V2.md). See sanitization filter in scripts/merge-policies.py \u2014 cross-state misattributions are downgraded to tier 1 with explanatory note. | 2026-05-20: applied 4 news-verified corrections for handbook-PDF regex false positives: Norwell (T3\u2192T2), Palmer (T3\u2192T1), Up-Island Regional (T3\u2192T1 misattribution), Fitchburg (T3\u2192T2 source quality). | 2026-05-20 second pass: caught 5 cross-state misattributions and 1 bad regex upgrade from the stricter re-classifier: Hanover (T3->T2 regex error), Mansfield (T3->T1, was WA), Brimfield (T2->T1, was IL), Conway (T2->T1, was AR), Lincoln (T2->T1, was RI), Richmond (T2->T1, unverifiable district).",
+  "_notes": "Tier system (v3, 2026-05-20): 1 = no district policy; 2 = partial / non-hardware (off-and-away, instructional-time-only, etc.); 3 = hardware-level removal but scope-limited (K-8 only, HS only, has lunch/passing-time access, or not bell-to-bell); 4 = bell-to-bell hardware-level K-12 with no broad exceptions (standard medical/IEP carve-outs allowed). Sources arrays may include broader edtech news/action even when the tier itself is set strictly on phone policy.",
   "policies": {
     "2502790": {
       "districtId": "2502790",
       "districtName": "Boston School District",
       "tier": 2,
-      "policySummary": "BPS Code of Conduct prohibits student cell-phone use during the school day district-wide (off-and-away baseline; second offense triggers parent-only return). Yondr-style hardware ban layered on top at ~31 BPS schools (4+ high schools, 9 elementary) under a 3-year contract \u2014 opt-in by school, not district-wide.",
+      "policySummary": "BPS Code of Conduct prohibits student cell-phone use during the school day district-wide (off-and-away baseline; second offense triggers parent-only return). Yondr-style hardware ban layered on top at ~31 BPS schools (4+ high schools, 9 elementary) under a 3-year contract — opt-in by school, not district-wide.",
       "scope": "K-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
       "enrollment": 48800,
       "sources": [
         {
-          "title": "BPS Code of Conduct \u2014 Mobile (Cell) Phones",
+          "title": "BPS Code of Conduct — Mobile (Cell) Phones",
           "url": "https://www.bostonpublicschools.org/bps-departments/rights-and-responsibilities/code-of-conduct",
           "publisher": "Boston Public Schools",
           "date": "2025-09-01"
@@ -74,7 +74,7 @@
       "districtId": "2507740",
       "districtName": "Methuen School District",
       "tier": 2,
-      "policySummary": "District-wide ban on cell-phone use during instructional time, finalized August 2024. NOT Yondr \u2014 students place phones in clear bins or pocket charts during class; phones may stay in bags if unseen. Also enforced at school events (e.g. dances). IEP/504 carve-outs.",
+      "policySummary": "District-wide ban on cell-phone use during instructional time, finalized August 2024. NOT Yondr — students place phones in clear bins or pocket charts during class; phones may stay in bags if unseen. Also enforced at school events (e.g. dances). IEP/504 carve-outs.",
       "scope": "K-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-08",
@@ -103,7 +103,7 @@
       "districtId": "2508610",
       "districtName": "Newton School District",
       "tier": 2,
-      "policySummary": "District-wide \"Off & Away\" policy adopted unanimously by School Committee Sept 2024. Yondr pouches in elementary and middle schools all day; high schools (Newton North, Newton South) require phones stored away during academic time only \u2014 no Yondr at HS level. Day Middle and Newton North piloted 2023-24.",
+      "policySummary": "District-wide \"Off & Away\" policy adopted unanimously by School Committee Sept 2024. Yondr pouches in elementary and middle schools all day; high schools (Newton North, Newton South) require phones stored away during academic time only — no Yondr at HS level. Day Middle and Newton North piloted 2023-24.",
       "scope": "K-12",
       "enforcement": "hardware",
       "effectiveDate": "2024-09",
@@ -203,7 +203,7 @@
       "districtId": "2506480",
       "districtName": "Ipswich School District",
       "tier": 3,
-      "policySummary": "Ipswich: students lock phones in caddies at start of day; true bell-to-bell \u2014 no use at lunch, passing time, or any other time.",
+      "policySummary": "Ipswich: students lock phones in caddies at start of day; true bell-to-bell — no use at lunch, passing time, or any other time.",
       "scope": "9-12",
       "enforcement": "hardware",
       "effectiveDate": "2024-09",
@@ -261,7 +261,7 @@
       "districtId": "2507020",
       "districtName": "Lowell School District",
       "tier": 2,
-      "policySummary": "Lowell HS implemented hardware-based phone collection (Nightlock units installed summer 2023; ~1,200 storage units). Phones placed in classroom containers at start of class; allowed in hallways and at lunch. HS-only policy \u2014 middle and elementary scope unverified.",
+      "policySummary": "Lowell HS implemented hardware-based phone collection (Nightlock units installed summer 2023; ~1,200 storage units). Phones placed in classroom containers at start of class; allowed in hallways and at lunch. HS-only policy — middle and elementary scope unverified.",
       "scope": "9-12",
       "enforcement": "hardware",
       "effectiveDate": "2023-09",
@@ -368,7 +368,7 @@
       "districtId": "2511130",
       "districtName": "Springfield School District",
       "tier": 2,
-      "policySummary": "Springfield Central HS deploys Yondr pouches since 2022. District-wide policy across the ~50 schools in Springfield not verified \u2014 likely school-by-school.",
+      "policySummary": "Springfield Central HS deploys Yondr pouches since 2022. District-wide policy across the ~50 schools in Springfield not verified — likely school-by-school.",
       "scope": "9-12",
       "enforcement": "hardware",
       "effectiveDate": "2022-09",
@@ -414,7 +414,7 @@
       "districtId": "2503270",
       "districtName": "Cambridge School District",
       "tier": 2,
-      "policySummary": "All middle and high schools (grades 6-12 incl. Cambridge Rindge and Latin School) collect phones at the start of each period using cubbies / clear pencil cases / cardboard boxes; phones returned at end of each period. Phones allowed at lunch, between classes, before/after school. Effective fall 2024 \u2014 no formal Yondr deployment yet.",
+      "policySummary": "All middle and high schools (grades 6-12 incl. Cambridge Rindge and Latin School) collect phones at the start of each period using cubbies / clear pencil cases / cardboard boxes; phones returned at end of each period. Phones allowed at lunch, between classes, before/after school. Effective fall 2024 — no formal Yondr deployment yet.",
       "scope": "9-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
@@ -440,7 +440,7 @@
       "districtId": "2506840",
       "districtName": "Lexington School District",
       "tier": 2,
-      "policySummary": "School Committee approved February 2025: pre-K through grade 8 banned during school day (no devices visible); grades 9-12 must place phones in teacher-designated holding area during class. Honor-system / off-and-away \u2014 no Yondr. Implementation rollout was uneven; not all parents received district communication after approval.",
+      "policySummary": "School Committee approved February 2025: pre-K through grade 8 banned during school day (no devices visible); grades 9-12 must place phones in teacher-designated holding area during class. Honor-system / off-and-away — no Yondr. Implementation rollout was uneven; not all parents received district communication after approval.",
       "scope": "K-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2025-02",
@@ -473,7 +473,7 @@
           "date": "2025-08-15"
         },
         {
-          "title": "Cell phones in the Wellesley schools \u2014 an issue that cries out for stronger policies",
+          "title": "Cell phones in the Wellesley schools — an issue that cries out for stronger policies",
           "url": "https://theswellesleyreport.com/2024/09/cell-phones-in-the-wellesley-schools-an-issue-that-cries-out-for-stronger-policies/",
           "publisher": "The Swellesley Report",
           "date": "2024-09-15"
@@ -558,7 +558,7 @@
       "districtId": "2508370",
       "districtName": "Needham School District",
       "tier": 2,
-      "policySummary": "Needham HS uses 'phone hotels' (shoe-bag-style hangers near classroom doors) \u2014 students place phones in assigned slots for class duration. K-8: phones discouraged; if brought, stored in coat/backpack/cubby. School Committee approved late May 2024. Explicitly NOT Yondr.",
+      "policySummary": "Needham HS uses 'phone hotels' (shoe-bag-style hangers near classroom doors) — students place phones in assigned slots for class duration. K-8: phones discouraged; if brought, stored in coat/backpack/cubby. School Committee approved late May 2024. Explicitly NOT Yondr.",
       "scope": "K-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
@@ -613,7 +613,7 @@
       "districtId": "2503870",
       "districtName": "Concord-Carlisle School District",
       "tier": 2,
-      "policySummary": "Concord-Carlisle HS handbook: students store phones in caddies during class time; access between classes and at lunch. Regional School Committee opted to hold off on stricter rules in 2025; 'Cell Phone Policy Process' on December 2025 committee agenda \u2014 district still actively evaluating.",
+      "policySummary": "Concord-Carlisle HS handbook: students store phones in caddies during class time; access between classes and at lunch. Regional School Committee opted to hold off on stricter rules in 2025; 'Cell Phone Policy Process' on December 2025 committee agenda — district still actively evaluating.",
       "scope": "9-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
@@ -725,7 +725,7 @@
       "districtId": "2507260",
       "districtName": "Marblehead School District",
       "tier": 2,
-      "policySummary": "Marblehead HS: students may not use phones during class hours; use allowed between classes and at lunch. Collection is at individual teacher's discretion (principal explicitly framed as preparing students for 'real world responsibility'). Off-and-away \u2014 not Yondr.",
+      "policySummary": "Marblehead HS: students may not use phones during class hours; use allowed between classes and at lunch. Collection is at individual teacher's discretion (principal explicitly framed as preparing students for 'real world responsibility'). Off-and-away — not Yondr.",
       "scope": "9-12",
       "enforcement": "honor",
       "effectiveDate": "2024-09",
@@ -814,7 +814,7 @@
       "districtId": "2512180",
       "districtName": "Watertown School District",
       "tier": 2,
-      "policySummary": "Watertown HS piloting the Doorman app in 2025-26 SY (first public school in the country) \u2014 software 'bricks' / disables cellphone communication during class periods. Separately, a district-wide draft cell-phone policy is in development per the School Committee.",
+      "policySummary": "Watertown HS piloting the Doorman app in 2025-26 SY (first public school in the country) — software 'bricks' / disables cellphone communication during class periods. Separately, a district-wide draft cell-phone policy is in development per the School Committee.",
       "scope": "9-12",
       "enforcement": "hardware",
       "effectiveDate": "2025-09",
@@ -891,7 +891,7 @@
     "2508850": {
       "districtId": "2508850",
       "districtName": "Northampton School District",
-      "tier": 3,
+      "tier": 4,
       "policySummary": "Board-approved June 12, 2025 (Cell Phone Policy Direction A): all cell phones and electronic devices collected at the beginning of the day by staff and returned at end of day. Students must power down and secure devices in school-provided pouches upon entry. Earbuds/headphones banned without explicit teacher permission. Earned/lost as a privilege. District-wide K-12.",
       "scope": "K-12",
       "enforcement": "hardware",
@@ -906,7 +906,15 @@
         }
       ],
       "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "confidence": "high",
+      "tier_history": [
+        {
+          "from": 3,
+          "to": 4,
+          "date": "2026-05-20",
+          "reason": "Bell-to-bell K-12 hardware-level, no broad exceptions"
+        }
+      ]
     },
     "2501920": {
       "districtId": "2501920",
@@ -987,7 +995,7 @@
         {
           "title": "Peabody Veterans High To Ban Cell Phones In Class Starting This Fall",
           "url": "https://patch.com/massachusetts/peabody/peabody-veterans-high-ban-cell-phones-class-starting-fall",
-          "publisher": "Patch \u2014 Peabody MA",
+          "publisher": "Patch — Peabody MA",
           "date": "2024-08-15"
         }
       ],
@@ -995,7 +1003,7 @@
       "confidence": "high",
       "news_supersedes_handbook": true,
       "news_supersedes_handbook_date": "2024-08-15",
-      "news_supersedes_handbook_publisher": "Patch \u2014 Peabody MA"
+      "news_supersedes_handbook_publisher": "Patch — Peabody MA"
     },
     "2509630": {
       "districtId": "2509630",
@@ -1021,7 +1029,7 @@
       "districtId": "2506750",
       "districtName": "Lenox School District",
       "tier": 2,
-      "policySummary": "Lenox bans cellphone use by middle school students. Some Lenox schools allow no usage during classes without teacher permission; access during nonclass time. Tier 2 (partial \u2014 focused at middle school).",
+      "policySummary": "Lenox bans cellphone use by middle school students. Some Lenox schools allow no usage during classes without teacher permission; access during nonclass time. Tier 2 (partial — focused at middle school).",
       "scope": "K-8",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
@@ -1066,7 +1074,7 @@
     "2505490": {
       "districtId": "2505490",
       "districtName": "Greenfield School District",
-      "tier": 3,
+      "tier": 4,
       "policySummary": "Greenfield Public School District uses Yondr pouches: students place phones in small gray pouches sealed magnetically at the beginning of the day; pouches can only be opened at the end of the day at a magnet station. Bell-to-bell hardware enforcement.",
       "scope": "K-12",
       "enforcement": "hardware",
@@ -1084,7 +1092,15 @@
       "confidence": "high",
       "news_supersedes_handbook": true,
       "news_supersedes_handbook_date": "2025-08-26",
-      "news_supersedes_handbook_publisher": "Daily Hampshire Gazette"
+      "news_supersedes_handbook_publisher": "Daily Hampshire Gazette",
+      "tier_history": [
+        {
+          "from": 3,
+          "to": 4,
+          "date": "2026-05-20",
+          "reason": "Bell-to-bell K-12 hardware-level, no broad exceptions"
+        }
+      ]
     },
     "2504590": {
       "districtId": "2504590",
@@ -1120,7 +1136,7 @@
       "enrollment": 3500,
       "sources": [
         {
-          "title": "Burlington High School (Massachusetts) \u2014 Grokipedia",
+          "title": "Burlington High School (Massachusetts) — Grokipedia",
           "url": "https://grokipedia.com/page/Burlington_High_School_(Massachusetts)",
           "publisher": "Grokipedia",
           "date": "2024-12-01"
@@ -1182,7 +1198,7 @@
       "districtId": "2504860",
       "districtName": "Falmouth School District",
       "tier": 2,
-      "policySummary": "Falmouth HS: cell phones not allowed during class times; silenced and placed in classroom holders. School Board approved April 2026 a stricter policy that bars personal electronic devices during the school day district-wide \u2014 full ban applies starting 2026-27 SY.",
+      "policySummary": "Falmouth HS: cell phones not allowed during class times; silenced and placed in classroom holders. School Board approved April 2026 a stricter policy that bars personal electronic devices during the school day district-wide — full ban applies starting 2026-27 SY.",
       "scope": "9-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
@@ -1208,7 +1224,7 @@
       "districtId": "2512750",
       "districtName": "Weston School District",
       "tier": 2,
-      "policySummary": "School Committee adopted phased policy 2025-04-28. 2025-26 SY: pre-K through grade 8 prohibited from using personal electronic devices during school day; HS may use cellphones during class transitions, lunch, free blocks. 2026-27 SY: full district ban \u2014 HS laptops only, placed in designated storage during the day.",
+      "policySummary": "School Committee adopted phased policy 2025-04-28. 2025-26 SY: pre-K through grade 8 prohibited from using personal electronic devices during school day; HS may use cellphones during class transitions, lunch, free blocks. 2026-27 SY: full district ban — HS laptops only, placed in designated storage during the day.",
       "scope": "K-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2025-09",
@@ -1234,14 +1250,14 @@
       "districtId": "2507320",
       "districtName": "Marlborough School District",
       "tier": 2,
-      "policySummary": "Marlborough HS uses 'cell phone hotels' \u2014 numbered cubby holes in classrooms where students place phones at the start of class and retrieve at the end. Off-and-away with light hardware enforcement.",
+      "policySummary": "Marlborough HS uses 'cell phone hotels' — numbered cubby holes in classrooms where students place phones at the start of class and retrieve at the end. Off-and-away with light hardware enforcement.",
       "scope": "9-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
       "enrollment": 5300,
       "sources": [
         {
-          "title": "Guidance \u2014 Marlborough High School",
+          "title": "Guidance — Marlborough High School",
           "url": "https://www.mps-edu.org/o/mhs/page/guidance",
           "publisher": "Marlborough Public Schools",
           "date": "2024-09-01"
@@ -1346,7 +1362,7 @@
       "districtId": "2511580",
       "districtName": "Tewksbury School District",
       "tier": 2,
-      "policySummary": "Wynn Middle School piloted magnetic pouches (Yondr-style) starting April 2024. Fully implemented for 2024-25 SY at the middle school. Teachers reported up to 60% reduction in student time out of classroom since restriction. Tier-2 \u2014 MS hardware in force; HS scope unverified.",
+      "policySummary": "Wynn Middle School piloted magnetic pouches (Yondr-style) starting April 2024. Fully implemented for 2024-25 SY at the middle school. Teachers reported up to 60% reduction in student time out of classroom since restriction. Tier-2 — MS hardware in force; HS scope unverified.",
       "scope": "K-8",
       "enforcement": "hardware",
       "effectiveDate": "2024-09",
@@ -1409,7 +1425,7 @@
       "districtId": "2507110",
       "districtName": "Lynn School District",
       "tier": 2,
-      "policySummary": "Updated district-wide policy effective Sept 1, 2025: cell phones must be off and not visible during the school day, including during lunch and in hallways. Progressive discipline for repeat violations (parent contact \u2192 confiscation \u2192 detention \u2192 suspension). IEP/504/health-plan accommodations.",
+      "policySummary": "Updated district-wide policy effective Sept 1, 2025: cell phones must be off and not visible during the school day, including during lunch and in hallways. Progressive discipline for repeat violations (parent contact → confiscation → detention → suspension). IEP/504/health-plan accommodations.",
       "scope": "K-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2025-09",
@@ -1484,7 +1500,7 @@
       "districtId": "2507860",
       "districtName": "Milford School District",
       "tier": 2,
-      "policySummary": "Milford HS implemented a policy prohibiting cell-phone use in classrooms and hallways since 2019 \u2014 one of the earlier MA districts to adopt restrictions. Off-and-away enforcement.",
+      "policySummary": "Milford HS implemented a policy prohibiting cell-phone use in classrooms and hallways since 2019 — one of the earlier MA districts to adopt restrictions. Off-and-away enforcement.",
       "scope": "9-12",
       "enforcement": "off-and-away",
       "effectiveDate": "2019-09",
@@ -1527,7 +1543,7 @@
       "districtId": "2510380",
       "districtName": "Salem School District",
       "tier": 2,
-      "policySummary": "Salem High School uses Yondr pouches (since 2023-24). Two-strike enforcement: warning, then phone to front office, then parent involvement. Middle and elementary scope not verified \u2014 likely tier 1 elsewhere in district.",
+      "policySummary": "Salem High School uses Yondr pouches (since 2023-24). Two-strike enforcement: warning, then phone to front office, then parent involvement. Middle and elementary scope not verified — likely tier 1 elsewhere in district.",
       "scope": "9-12",
       "enforcement": "hardware",
       "effectiveDate": "2023-09",
@@ -1748,7 +1764,7 @@
     "2502160": {
       "districtId": "2502160",
       "districtName": "Athol-Royalston School District",
-      "tier": 3,
+      "tier": 4,
       "policySummary": "Full hardware ban: Yondr pouches for all students; 10-day pouch loss for violations; bell-to-bell prohibition with medical/IEP exceptions.",
       "scope": "unknown",
       "enforcement": "hardware",
@@ -1758,7 +1774,15 @@
         "https://atholdailynews.com/2025/08/24/athol-royalston-schools-ban-cell-phone-use/"
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "tier_history": [
+        {
+          "from": 3,
+          "to": 4,
+          "date": "2026-05-20",
+          "reason": "Bell-to-bell K-12 hardware-level, no broad exceptions"
+        }
+      ]
     },
     "2502190": {
       "districtId": "2502190",
@@ -1848,7 +1872,7 @@
       "districtId": "2502580",
       "districtName": "Berlin-Boylston School District",
       "tier": 1,
-      "policySummary": "Stricter re-classification 2026-05-20: handbook PDF re-extracted and no paragraph contains both a phone-keyword and a restriction-keyword. Prior tier-2 classification was a regex false positive (the previous classifier matched keywords scattered across unrelated sections \u2014 TOC, anti-bullying language, discipline procedure). Downgraded to tier 1 pending news verification.",
+      "policySummary": "Stricter re-classification 2026-05-20: handbook PDF re-extracted and no paragraph contains both a phone-keyword and a restriction-keyword. Prior tier-2 classification was a regex false positive (the previous classifier matched keywords scattered across unrelated sections — TOC, anti-bullying language, discipline procedure). Downgraded to tier 1 pending news verification.",
       "scope": "unknown",
       "enforcement": "unrestricted_default",
       "effectiveDate": "",
@@ -2214,7 +2238,7 @@
       "districtId": "2504890",
       "districtName": "Fitchburg School District",
       "tier": 2,
-      "policySummary": "Fitchburg Public Schools have announced a phone ban for the next school year; the specific enforcement method (off-and-away vs hardware-pouch) is not confirmed in press as of 2026-05-20. Prior tier-3 classification was sourced to a Change.org petition opposing the ban \u2014 not a valid source for enforcement method. Downgraded to tier 2 conservatively pending news confirmation.",
+      "policySummary": "Fitchburg Public Schools have announced a phone ban for the next school year; the specific enforcement method (off-and-away vs hardware-pouch) is not confirmed in press as of 2026-05-20. Prior tier-3 classification was sourced to a Change.org petition opposing the ban — not a valid source for enforcement method. Downgraded to tier 2 conservatively pending news confirmation.",
       "scope": "district-wide",
       "enforcement": "off_and_away",
       "effectiveDate": "2025-09",
@@ -2459,7 +2483,7 @@
       "lastVerified": "2026-05-20",
       "confidence": "high",
       "status": "news_verified",
-      "news_verified_by": "Hanover HS Handbook 2025-26 (district-published) \u2014 off-and-away policy text confirmed",
+      "news_verified_by": "Hanover HS Handbook 2025-26 (district-published) — off-and-away policy text confirmed",
       "handbook_url": "https://www.hanoverschools.org/sites/g/files/vyhlif3221/f/uploads/hhs_handbook_2025-2026.pdf"
     },
     "2505880": {
@@ -2564,7 +2588,7 @@
     "2506390": {
       "districtId": "2506390",
       "districtName": "Hudson School District",
-      "tier": 3,
+      "tier": 4,
       "policySummary": "Bell-to-bell ban for all grades; devices powered off and stored in lockers; progressive discipline; no verbal warnings.",
       "scope": "unknown",
       "enforcement": "hardware",
@@ -2572,7 +2596,15 @@
       "enrollment": null,
       "sources": [],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "tier_history": [
+        {
+          "from": 3,
+          "to": 4,
+          "date": "2026-05-20",
+          "reason": "Bell-to-bell K-12 hardware-level, no broad exceptions"
+        }
+      ]
     },
     "2506420": {
       "districtId": "2506420",
@@ -2745,14 +2777,14 @@
       "districtId": "2507230",
       "districtName": "Mansfield School District",
       "tier": 1,
-      "policySummary": "Cross-state misattribution caught 2026-05-20: prior tier-3 classification was based on a handbook PDF hosted at mansfieldwednetedu (a Washington State school district network domain), not Mansfield, MA. The Washington Mansfield handbook contains 'Cell Phones & Personal Listening Devices Policy 3245' \u2014 a WA-style policy numbering scheme. No Mansfield, MA-specific phone policy located in this pipeline pass; tier reset to 1 pending news verification.",
+      "policySummary": "Cross-state misattribution caught 2026-05-20: prior tier-3 classification was based on a handbook PDF hosted at mansfieldwednetedu (a Washington State school district network domain), not Mansfield, MA. The Washington Mansfield handbook contains 'Cell Phones & Personal Listening Devices Policy 3245' — a WA-style policy numbering scheme. No Mansfield, MA-specific phone policy located in this pipeline pass; tier reset to 1 pending news verification.",
       "scope": "unknown",
       "enforcement": "unrestricted_default",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
         {
-          "title": "Mansfield Public Schools (MA) \u2014 homepage",
+          "title": "Mansfield Public Schools (MA) — homepage",
           "url": "https://www.mansfieldschools.com/",
           "publisher": "Mansfield Public Schools (MA)",
           "date": "2026-05-20"
@@ -2859,7 +2891,7 @@
       "districtId": "2507680",
       "districtName": "Mendon-Upton School District",
       "tier": 1,
-      "policySummary": "Handbook reviewed: y, and morality, or likely to disrupt the teaching/learning process, parents/guardians will be called. Please take note of your child\u2019s attire and help us enforce these guidelines. When a student is a",
+      "policySummary": "Handbook reviewed: y, and morality, or likely to disrupt the teaching/learning process, parents/guardians will be called. Please take note of your child’s attire and help us enforce these guidelines. When a student is a",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -2918,7 +2950,7 @@
       "districtId": "2507890",
       "districtName": "Millbury School District",
       "tier": 1,
-      "policySummary": "Handbook reviewed; phone keywords found but no clear restriction: 117 School Events Conduct\u200b 118 Dress Code\u200b 118",
+      "policySummary": "Handbook reviewed; phone keywords found but no clear restriction: 117 School Events Conduct​ 118 Dress Code​ 118",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -3005,7 +3037,7 @@
     "2508160": {
       "districtId": "2508160",
       "districtName": "Mount Greylock School District",
-      "tier": 3,
+      "tier": 4,
       "policySummary": "Full ban K-12; devices in lockers or front office storage; off and away all day; exceptions for medical/IEP/504 needs; community 100% supportive.",
       "scope": "unknown",
       "enforcement": "hardware",
@@ -3013,12 +3045,20 @@
       "enrollment": null,
       "sources": [],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "tier_history": [
+        {
+          "from": 3,
+          "to": 4,
+          "date": "2026-05-20",
+          "reason": "Bell-to-bell K-12 hardware-level, no broad exceptions"
+        }
+      ]
     },
     "2508250": {
       "districtId": "2508250",
       "districtName": "Nantucket School District",
-      "tier": 3,
+      "tier": 4,
       "policySummary": "Yondr magnetically locked bags required K-12; phones/smartwatches retrieved at end of day; $30K annual cost covered by district; 90% staff approval.",
       "scope": "unknown",
       "enforcement": "hardware",
@@ -3026,7 +3066,15 @@
       "enrollment": null,
       "sources": [],
       "lastVerified": "2026-05-20",
-      "confidence": "high"
+      "confidence": "high",
+      "tier_history": [
+        {
+          "from": 3,
+          "to": 4,
+          "date": "2026-05-20",
+          "reason": "Bell-to-bell K-12 hardware-level, no broad exceptions"
+        }
+      ]
     },
     "2508280": {
       "districtId": "2508280",
@@ -3091,7 +3139,7 @@
       "districtId": "2508730",
       "districtName": "North Attleborough School District",
       "tier": 2,
-      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): 21.\u200bElectronic Devices No student shall use cell phones, laser pointers, portable media players, or other audio broadcasting or reception equipment during class unless special permission is granted by the classroom teacher. The use of a cell phone as a calculator is NOT allowed. The inappropriate use of a video or picture cell phone is prohibited at all times and may be subject to other discipline...",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): 21.​Electronic Devices No student shall use cell phones, laser pointers, portable media players, or other audio broadcasting or reception equipment during class unless special permission is granted by the classroom teacher. The use of a cell phone as a calculator is NOT allowed. The inappropriate use of a video or picture cell phone is prohibited at all times and may be subject to other discipline...",
       "scope": "unknown",
       "enforcement": "off_and_away",
       "effectiveDate": "",
@@ -3299,7 +3347,7 @@
       "enrollment": null,
       "sources": [
         {
-          "title": "Web search 2026-05-20 \u2014 no Palmer MA-specific phone policy found",
+          "title": "Web search 2026-05-20 — no Palmer MA-specific phone policy found",
           "url": "https://www.palmerschools.org/",
           "publisher": "Palmer Public Schools",
           "date": "2026-05-20"
@@ -3425,7 +3473,7 @@
       "districtId": "2510200",
       "districtName": "Rockport School District",
       "tier": 2,
-      "policySummary": "Rockport: Red Zone / Green Zone \u2014 phones stored during class, accessible between classes and lunch.",
+      "policySummary": "Rockport: Red Zone / Green Zone — phones stored during class, accessible between classes and lunch.",
       "scope": "unknown",
       "enforcement": "off-and-away",
       "effectiveDate": "",
@@ -3560,7 +3608,7 @@
       "districtId": "2510920",
       "districtName": "South Hadley School District",
       "tier": 2,
-      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): The school reserves the right to ban or confiscate a student\u2019s cell phone if it is impacting their ability to attend to the standards of the classroom or interrupts the daily expectations or school routine.",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): The school reserves the right to ban or confiscate a student’s cell phone if it is impacting their ability to attend to the standards of the classroom or interrupts the daily expectations or school routine.",
       "scope": "unknown",
       "enforcement": "off_and_away",
       "effectiveDate": "",
@@ -3808,7 +3856,7 @@
       "districtId": "2511970",
       "districtName": "Walpole School District",
       "tier": 2,
-      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): RANGE OF CONSEQUENCES FOR CLASS 2 OFFENSES \u25cf\u200b After school detention \u25cf\u200b Saturday detention \u25cf\u200b In-House Suspension and/or Out-of-School Suspension for one (1) through ten (10) days with the possibility of recommendation for expulsion \u25cf\u200b Restitution for theft/vandalism/destruction of property \u25cf\u200b Smoking/Vaping Cessation Program \u25cf\u200b Counseling and/or behavioral contract \u25cf\u200b Social probation (no partici...",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): RANGE OF CONSEQUENCES FOR CLASS 2 OFFENSES ●​ After school detention ●​ Saturday detention ●​ In-House Suspension and/or Out-of-School Suspension for one (1) through ten (10) days with the possibility of recommendation for expulsion ●​ Restitution for theft/vandalism/destruction of property ●​ Smoking/Vaping Cessation Program ●​ Counseling and/or behavioral contract ●​ Social probation (no partici...",
       "scope": "unknown",
       "enforcement": "off_and_away",
       "effectiveDate": "",
@@ -4062,7 +4110,7 @@
       "districtId": "2512930",
       "districtName": "Whitman-Hanson School District",
       "tier": 1,
-      "policySummary": "Handbook reviewed: 31 \u200b Financial Responsibilities and Obligations\u200b 31 \u200b School Dances/Proms\u200b 31 \u200b Substitute Teachers\u200b 31 \u200b Teacher Detention\u200b 32 \u200b",
+      "policySummary": "Handbook reviewed: 31 ​ Financial Responsibilities and Obligations​ 31 ​ School Dances/Proms​ 31 ​ Substitute Teachers​ 31 ​ Teacher Detention​ 32 ​",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -4177,7 +4225,7 @@
       "districtId": "2500014",
       "districtName": "Chesterfield-Goshen School District",
       "tier": 1,
-      "policySummary": "Handbook reviewed: emblems, or other gang identifiers are prohibited. 5.\u200b Hats, hoods, or other inappropriate headgear, including sunglasses may not be worn in the building unless required for medical reasons. Blankets ",
+      "policySummary": "Handbook reviewed: emblems, or other gang identifiers are prohibited. 5.​ Hats, hoods, or other inappropriate headgear, including sunglasses may not be worn in the building unless required for medical reasons. Blankets ",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -4281,7 +4329,7 @@
       "districtId": "2502970",
       "districtName": "Brewster School District",
       "tier": 1,
-      "policySummary": "Handbook reviewed: ounds. \u2022\u200b Accessing an area on school grounds that is not in accordance with the student\u2019s schedule. \u2022\u200b Running in the hallways. \u2022\u200b Senior pranks. \u2022\u200b Computer/electronic communications misuse, includi",
+      "policySummary": "Handbook reviewed: ounds. •​ Accessing an area on school grounds that is not in accordance with the student’s schedule. •​ Running in the hallways. •​ Senior pranks. •​ Computer/electronic communications misuse, includi",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -4304,14 +4352,14 @@
       "districtId": "2503060",
       "districtName": "Brimfield School District",
       "tier": 1,
-      "policySummary": "Cross-state misattribution caught 2026-05-20: prior tier-2 classification was based on a handbook PDF hosted under thrillshare.com/.../Bcusd309/ \u2014 that's Brimfield Consolidated Unit School District #309 in ILLINOIS, not Brimfield, MA. The handbook text 'Dress properly for the weather. Make sure all drawstrings, ties, straps...' is not even phone-policy language. No Brimfield, MA-specific phone policy located; tier reset to 1.",
+      "policySummary": "Cross-state misattribution caught 2026-05-20: prior tier-2 classification was based on a handbook PDF hosted under thrillshare.com/.../Bcusd309/ — that's Brimfield Consolidated Unit School District #309 in ILLINOIS, not Brimfield, MA. The handbook text 'Dress properly for the weather. Make sure all drawstrings, ties, straps...' is not even phone-policy language. No Brimfield, MA-specific phone policy located; tier reset to 1.",
       "scope": "unknown",
       "enforcement": "unrestricted_default",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
         {
-          "title": "Web search 2026-05-20 \u2014 no Brimfield MA-specific phone policy found",
+          "title": "Web search 2026-05-20 — no Brimfield MA-specific phone policy found",
           "url": "https://www.brimfield.k12.ma.us/",
           "publisher": "Brimfield Public Schools (MA)",
           "date": "2026-05-20"
@@ -4392,14 +4440,14 @@
       "districtId": "2503900",
       "districtName": "Conway School District",
       "tier": 1,
-      "policySummary": "Cross-state misattribution caught 2026-05-20: prior tier-3 classification was based on a handbook PDF that cites 'Act 122 of 2025, also known as The Bell-to-Bell, No Cell Act' \u2014 that's the ARKANSAS statute, signed by Gov. Sanders on 2025-03-27. The handbook is for Conway Public Schools, Arkansas, not Conway, MA. Conway, MA is a tiny Franklin County district with no such policy located; tier reset to 1.",
+      "policySummary": "Cross-state misattribution caught 2026-05-20: prior tier-3 classification was based on a handbook PDF that cites 'Act 122 of 2025, also known as The Bell-to-Bell, No Cell Act' — that's the ARKANSAS statute, signed by Gov. Sanders on 2025-03-27. The handbook is for Conway Public Schools, Arkansas, not Conway, MA. Conway, MA is a tiny Franklin County district with no such policy located; tier reset to 1.",
       "scope": "unknown",
       "enforcement": "unrestricted_default",
       "effectiveDate": "",
       "enrollment": null,
       "sources": [
         {
-          "title": "Conway Grammar School (MA) \u2014 district site",
+          "title": "Conway Grammar School (MA) — district site",
           "url": "https://www.conwaygs.org/",
           "publisher": "Conway Public Schools (MA)",
           "date": "2026-05-20"
@@ -4487,7 +4535,7 @@
       "districtId": "2504710",
       "districtName": "Erving School District",
       "tier": 2,
-      "policySummary": "Handbook (off-and-away): \u2026..\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026 Student Illness\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026..\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.. Ticks\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026..\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026 Live Animals SCPM IMG Link\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026..\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.. Emergency Procedures SCPM EBC Link Technology \u200b Empowered Digital Student Use Contract\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026..\u2026\u2026\u2026 \u200b Cell Phones & Other Electronics ",
+      "policySummary": "Handbook (off-and-away): …..………………………………………… Student Illness……………………………………..…………………………………….. Ticks……………………………………..………………………………………………… Live Animals SCPM IMG Link……………………………..……………………….. Emergency Procedures SCPM EBC Link Technology ​ Empowered Digital Student Use Contract……………………………………..……… ​ Cell Phones & Other Electronics ",
       "scope": "unknown",
       "enforcement": "off-and-away",
       "effectiveDate": "",
@@ -4598,7 +4646,7 @@
       "districtId": "2506810",
       "districtName": "Leverett School District",
       "tier": 1,
-      "policySummary": "Handbook reviewed: us windows \u25cf Limit conversations to people sitting in the same row of seats, where they can be heard using a normal tone of voice \u25cf Refrain from eating any food on the bus \u25cf Remain seated until the dr",
+      "policySummary": "Handbook reviewed: us windows ● Limit conversations to people sitting in the same row of seats, where they can be heard using a normal tone of voice ● Refrain from eating any food on the bus ● Remain seated until the dr",
       "scope": "unknown",
       "enforcement": "none",
       "effectiveDate": "",
@@ -4628,7 +4676,7 @@
       "enrollment": null,
       "sources": [
         {
-          "title": "Lincoln Public Schools (MA) \u2014 district site",
+          "title": "Lincoln Public Schools (MA) — district site",
           "url": "https://www.lincnet.org/",
           "publisher": "Lincoln Public Schools (MA)",
           "date": "2026-05-20"
@@ -4861,7 +4909,7 @@
       "enrollment": null,
       "sources": [
         {
-          "title": "Richmond Consolidated School (MA) \u2014 district site",
+          "title": "Richmond Consolidated School (MA) — district site",
           "url": "https://www.richmondconsolidated.org/",
           "publisher": "Richmond Consolidated School (MA)",
           "date": "2026-05-20"
@@ -4902,7 +4950,7 @@
       "districtId": "2510530",
       "districtName": "Savoy School District",
       "tier": 2,
-      "policySummary": "Handbook excerpt (off-and-away / restriction detected): 33 Electronic Devices and Technology Resources.\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026 .",
+      "policySummary": "Handbook excerpt (off-and-away / restriction detected): 33 Electronic Devices and Technology Resources.…………………………… .",
       "scope": "unknown",
       "enforcement": "off-and-away",
       "effectiveDate": "",
@@ -4951,7 +4999,7 @@
       "districtId": "2510860",
       "districtName": "Somerset School District",
       "tier": 2,
-      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): 76 are wearing earbuds/pods. The use of their electronic devices cannot cause any distraction to the driver. \u25cf\u200b For safety reasons, phones must be put away while entering and exiting the bus. \u25cf\u200b In addition, late bus usage is only allowed for students taking advantage of afterschool programs. Once students leave campus for the day, they are not entitled to use the late buses.",
+      "policySummary": "Handbook excerpt (re-extracted 2026-05-20 with stricter classifier requiring phone-kw + restriction-kw in same paragraph): 76 are wearing earbuds/pods. The use of their electronic devices cannot cause any distraction to the driver. ●​ For safety reasons, phones must be put away while entering and exiting the bus. ●​ In addition, late bus usage is only allowed for students taking advantage of afterschool programs. Once students leave campus for the day, they are not entitled to use the late buses.",
       "scope": "unknown",
       "enforcement": "off_and_away",
       "effectiveDate": "",
@@ -5410,7 +5458,7 @@
       "districtId": "2599001",
       "districtName": "Pioneer Valley School District in Warwick (7-12)",
       "tier": 1,
-      "policySummary": "Geojson polygon for Warwick grades 7-12 \u2014 students at these grade levels attend Pioneer Valley School District. Policy is whatever Pioneer Valley School District publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for Warwick grades 7-12 — students at these grade levels attend Pioneer Valley School District. Policy is whatever Pioneer Valley School District publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "7-12",
       "enforcement": "see parent district",
       "effectiveDate": "",
@@ -5425,7 +5473,7 @@
       "districtId": "2525015",
       "districtName": "Lee/Berkshire Hills in Farmington River Regional (7-12)",
       "tier": 1,
-      "policySummary": "Geojson polygon for Farmington River Regional grades 7-12 \u2014 students at these grade levels attend Lee/Berkshire Hills. Policy is whatever Lee/Berkshire Hills publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for Farmington River Regional grades 7-12 — students at these grade levels attend Lee/Berkshire Hills. Policy is whatever Lee/Berkshire Hills publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "7-12",
       "enforcement": "see parent district",
       "effectiveDate": "",
@@ -5440,7 +5488,7 @@
       "districtId": "2525010",
       "districtName": "Fairhaven/New Bedford School Districts in Acushnet (9-12)",
       "tier": 1,
-      "policySummary": "Geojson polygon for Acushnet grades 9-12 \u2014 students at these grade levels attend Fairhaven/New Bedford School Districts. Policy is whatever Fairhaven/New Bedford School Districts publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for Acushnet grades 9-12 — students at these grade levels attend Fairhaven/New Bedford School Districts. Policy is whatever Fairhaven/New Bedford School Districts publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "9-12",
       "enforcement": "see parent district",
       "effectiveDate": "",
@@ -5455,7 +5503,7 @@
       "districtId": "2525005",
       "districtName": "Swampscott School District in Nahant (7-12)",
       "tier": 1,
-      "policySummary": "Geojson polygon for Nahant grades 7-12 \u2014 students at these grade levels attend Swampscott School District. Policy is whatever Swampscott School District publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for Nahant grades 7-12 — students at these grade levels attend Swampscott School District. Policy is whatever Swampscott School District publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "7-12",
       "enforcement": "see parent district",
       "effectiveDate": "",
@@ -5470,7 +5518,7 @@
       "districtId": "2525006",
       "districtName": "Pittsfield School District in Richmond (9-12)",
       "tier": 1,
-      "policySummary": "Geojson polygon for Richmond grades 9-12 \u2014 students at these grade levels attend Pittsfield School District. Policy is whatever Pittsfield School District publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for Richmond grades 9-12 — students at these grade levels attend Pittsfield School District. Policy is whatever Pittsfield School District publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "9-12",
       "enforcement": "see parent district",
       "effectiveDate": "",
@@ -5485,7 +5533,7 @@
       "districtId": "2525007",
       "districtName": "Mohawk Trail School District in Rowe (7-12)",
       "tier": 1,
-      "policySummary": "Geojson polygon for Rowe grades 7-12 \u2014 students at these grade levels attend Mohawk Trail School District. Policy is whatever Mohawk Trail School District publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for Rowe grades 7-12 — students at these grade levels attend Mohawk Trail School District. Policy is whatever Mohawk Trail School District publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "7-12",
       "enforcement": "see parent district",
       "effectiveDate": "",
@@ -5500,7 +5548,7 @@
       "districtId": "2525012",
       "districtName": "Nauset/Provincetown School Districts in Turo (7-12)",
       "tier": 1,
-      "policySummary": "Geojson polygon for Turo grades 7-12 \u2014 students at these grade levels attend Nauset/Provincetown School Districts. Policy is whatever Nauset/Provincetown School Districts publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for Turo grades 7-12 — students at these grade levels attend Nauset/Provincetown School Districts. Policy is whatever Nauset/Provincetown School Districts publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "7-12",
       "enforcement": "see parent district",
       "effectiveDate": "",
@@ -5515,7 +5563,7 @@
       "districtId": "2525003",
       "districtName": "Gill-Montague School District in Erving (7-12)",
       "tier": 1,
-      "policySummary": "Geojson polygon for Erving grades 7-12 \u2014 students at these grade levels attend Gill-Montague School District. Policy is whatever Gill-Montague School District publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for Erving grades 7-12 — students at these grade levels attend Gill-Montague School District. Policy is whatever Gill-Montague School District publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "7-12",
       "enforcement": "see parent district",
       "effectiveDate": "",
@@ -5530,7 +5578,7 @@
       "districtId": "2525002",
       "districtName": "North Adams School District in Clarksburg (9-12)",
       "tier": 1,
-      "policySummary": "Geojson polygon for Clarksburg grades 9-12 \u2014 students at these grade levels attend North Adams School District. Policy is whatever North Adams School District publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for Clarksburg grades 9-12 — students at these grade levels attend North Adams School District. Policy is whatever North Adams School District publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "9-12",
       "enforcement": "see parent district",
       "effectiveDate": "",
@@ -5545,7 +5593,7 @@
       "districtId": "2525014",
       "districtName": "North Adams School District in Monroe (9-12)",
       "tier": 1,
-      "policySummary": "Geojson polygon for Monroe grades 9-12 \u2014 students at these grade levels attend North Adams School District. Policy is whatever North Adams School District publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for Monroe grades 9-12 — students at these grade levels attend North Adams School District. Policy is whatever North Adams School District publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "9-12",
       "enforcement": "see parent district",
       "effectiveDate": "",
@@ -5560,7 +5608,7 @@
       "districtId": "2525013",
       "districtName": "Mount Greylock/New Lebanon (NY) School Districts in Hancock (7-12)",
       "tier": 1,
-      "policySummary": "Geojson polygon for Hancock grades 7-12 \u2014 students at these grade levels attend Mount Greylock/New Lebanon (NY) School Districts. Policy is whatever Mount Greylock/New Lebanon (NY) School Districts publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for Hancock grades 7-12 — students at these grade levels attend Mount Greylock/New Lebanon (NY) School Districts. Policy is whatever Mount Greylock/New Lebanon (NY) School Districts publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "7-12",
       "enforcement": "see parent district",
       "effectiveDate": "",
@@ -5575,7 +5623,7 @@
       "districtId": "2522222",
       "districtName": "Mohawk Trail Regional School District in Hawley and Charlemont towns",
       "tier": 1,
-      "policySummary": "Geojson polygon for  grades  \u2014 students at these grade levels attend parent district. Policy is whatever parent district publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for  grades  — students at these grade levels attend parent district. Policy is whatever parent district publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "subset",
       "enforcement": "see parent district",
       "effectiveDate": "",
@@ -5590,7 +5638,7 @@
       "districtId": "2525008",
       "districtName": "Hoosac Valley School District in Savoy (7-12)",
       "tier": 1,
-      "policySummary": "Geojson polygon for Savoy grades 7-12 \u2014 students at these grade levels attend Hoosac Valley School District. Policy is whatever Hoosac Valley School District publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for Savoy grades 7-12 — students at these grade levels attend Hoosac Valley School District. Policy is whatever Hoosac Valley School District publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "7-12",
       "enforcement": "see parent district",
       "effectiveDate": "",
@@ -5605,7 +5653,7 @@
       "districtId": "2525009",
       "districtName": "North Adams School District in Florida (9-12)",
       "tier": 1,
-      "policySummary": "Geojson polygon for Florida grades 9-12 \u2014 students at these grade levels attend North Adams School District. Policy is whatever North Adams School District publishes; this entry is a placeholder for the geojson boundary.",
+      "policySummary": "Geojson polygon for Florida grades 9-12 — students at these grade levels attend North Adams School District. Policy is whatever North Adams School District publishes; this entry is a placeholder for the geojson boundary.",
       "scope": "9-12",
       "enforcement": "see parent district",
       "effectiveDate": "",

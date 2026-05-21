@@ -53,14 +53,16 @@ const STYLES: Record<
 
 export const TIER_COLOR: Record<PhoneTier, string> = {
   1: '#ef4444',
-  2: '#eab308',
-  3: '#22c55e',
+  2: '#f97316',
+  3: '#eab308',
+  4: '#22c55e',
 }
 
 export const TIER_LABEL: Record<PhoneTier, string> = {
   1: 'Tier 1 — No district policy',
   2: 'Tier 2 — Partial / non-hardware',
-  3: 'Tier 3 — Hardware ban K-12',
+  3: 'Tier 3 — Hardware but limited (scope or exceptions)',
+  4: 'Tier 4 — Bell-to-bell hardware K-12, no exceptions',
 }
 
 export function MapBackground({
@@ -287,12 +289,18 @@ export function MapBackground({
                 // visible gradient between small/large districts.
                 fill = TIER_COLOR[tier]
                 const baseAlpha =
-                  tier === 3 ? 0.6 : tier === 2 ? 0.5 : policy ? 0.4 : 0.25
+                  tier === 4 ? 0.65
+                    : tier === 3 ? 0.55
+                    : tier === 2 ? 0.5
+                    : policy ? 0.4 : 0.25
                 alpha = Math.min(0.9, baseAlpha * (0.45 + 0.85 * score))
               } else if (layers.phoneFree) {
                 fill = TIER_COLOR[tier]
                 alpha =
-                  tier === 3 ? 0.55 : tier === 2 ? 0.45 : policy ? 0.35 : 0.2
+                  tier === 4 ? 0.6
+                    : tier === 3 ? 0.5
+                    : tier === 2 ? 0.45
+                    : policy ? 0.35 : 0.2
               } else if (layers.sizeGradient) {
                 // Standalone gray ramp — must be plainly visible.
                 fill = '#334155'
@@ -365,24 +373,15 @@ export function MapBackground({
               )
             })}
 
-          {/* Tier-3 callouts. Hardware bans are rare enough that they
-              deserve a visible badge — easier to spot than scanning the
-              fill colors. */}
+          {/* Tier-4 callouts. Bell-to-bell K-12 hardware bans are rare;
+              they get a labeled badge on top of the green fill. */}
           {layers.phoneFree &&
             districts.map((f) => {
               const policy = policies[f.id]
-              if (policy?.tier !== 3) return null
+              if (policy?.tier !== 4) return null
               const [cx, cy] = f.centroid
               return (
-                <g key={`tier3-${f.id}`} pointerEvents="none">
-                  <circle
-                    cx={cx}
-                    cy={cy}
-                    r={6 / camera.z}
-                    fill="#22c55e"
-                    stroke="#15803d"
-                    strokeWidth={1.4 / camera.z}
-                  />
+                <g key={`tier4-${f.id}`} pointerEvents="none">
                   <text
                     x={cx}
                     y={cy + 14 / camera.z}

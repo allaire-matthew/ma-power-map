@@ -13,7 +13,7 @@ import type { TierFilter } from './App'
 
 type Coverage = {
   totalPop: number
-  byTier: Record<1 | 2 | 3, number>
+  byTier: Record<1 | 2 | 3 | 4, number>
   unresearchedPop: number
   researchedDistrictCount: number
 }
@@ -32,7 +32,7 @@ function useCoverage(active: boolean): Coverage | null {
       loadPhonePolicies(),
     ]).then(([towns, t2d, policies]) => {
       if (cancelled) return
-      const byTier: Record<1 | 2 | 3, number> = { 1: 0, 2: 0, 3: 0 }
+      const byTier: Record<1 | 2 | 3 | 4, number> = { 1: 0, 2: 0, 3: 0, 4: 0 }
       let totalPop = 0
       let unresearchedPop = 0
       const seen = new Set<string>()
@@ -43,7 +43,7 @@ function useCoverage(active: boolean): Coverage | null {
         const policy = dId ? policies[dId] : undefined
         if (policy) {
           seen.add(dId!)
-          byTier[policy.tier as 1 | 2 | 3] += pop
+          byTier[policy.tier as 1 | 2 | 3 | 4] += pop
         } else {
           unresearchedPop += pop
         }
@@ -134,7 +134,7 @@ export function Legend({
               Phone-free status
             </div>
             <ul className="space-y-1">
-              {[3, 2, 1].map((t) => {
+              {[4, 3, 2, 1].map((t) => {
                 const tier = t as PhoneTier
                 const active = tierFilter === tier
                 const dimmed = tierFilter !== 'all' && !active
@@ -181,7 +181,7 @@ export function Legend({
                 <div className="text-[10px] uppercase tracking-wider text-slate-500">
                   Population coverage
                 </div>
-                {([3, 2, 1] as const).map((t) => (
+                {([4, 3, 2, 1] as const).map((t) => (
                   <div key={t} className="flex items-center gap-1.5">
                     <span
                       className="w-2 h-2 rounded-sm shrink-0"

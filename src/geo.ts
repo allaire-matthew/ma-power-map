@@ -72,7 +72,7 @@ async function getProjection() {
   return projectionPromise
 }
 
-export type PhoneTier = 1 | 2 | 3
+export type PhoneTier = 1 | 2 | 3 | 4
 
 export type PhonePolicy = {
   districtId: string
