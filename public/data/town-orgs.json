@@ -1,6 +1,6 @@
 {
   "_schemaVersion": 1,
-  "_lastUpdated": "2026-05-21",
+  "_lastUpdated": "2026-05-22",
   "_source": "Google Sheet 16q_wrfljGEbMuUyeAeovZKk_TVTuoGgUf7mqb1uLqtw / IRL Councils tab.",
   "byTown": {
     "needham": [
@@ -363,7 +363,7 @@
         "notes": "FB groups/waituntil8thandover; SFC US locator"
       },
       {
-        "org": "Independent (Four Norms hub)",
+        "org": "Independent",
         "chapterName": "Andover Caregivers Creating Thoughtful Tech & More Screen Free Experiences",
         "town": "Andover",
         "leadName": "Nichole Bukowski",
@@ -447,7 +447,7 @@
     ],
     "fitchburg": [
       {
-        "org": "Independent (Four Norms hub)",
+        "org": "Independent",
         "chapterName": "Greater Fitchburg",
         "town": "Fitchburg",
         "leadName": "Madison Terho",
@@ -458,7 +458,7 @@
     ],
     "lanesborough": [
       {
-        "org": "Independent (Four Norms hub)",
+        "org": "Independent",
         "chapterName": "Berkshire County Unplugged Childhood",
         "town": "Lanesborough",
         "leadName": "Isabel Stomberg Jackson",
