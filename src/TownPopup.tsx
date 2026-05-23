@@ -180,51 +180,45 @@ export function TownPopup({
       role="dialog"
       onClick={(e) => e.stopPropagation()}
       onMouseDown={(e) => e.stopPropagation()}
-      className="absolute left-3 bottom-3 z-30 w-80 max-w-[calc(100vw-1.5rem)] max-h-[calc(100vh-1.5rem)] flex flex-col bg-white border border-slate-200 rounded-lg shadow-xl text-sm overflow-hidden"
+      className="absolute left-3 bottom-3 z-30 w-64 max-w-[calc(100vw-1.5rem)] max-h-[22rem] flex flex-col bg-white border border-slate-200 rounded-lg shadow-xl text-sm overflow-hidden"
+      style={{ borderTopColor: TIER_COLOR[tier], borderTopWidth: 3 }}
     >
-      {/* Sticky card header: town + district + tier strip. */}
-      <div className="shrink-0 border-b border-slate-200">
-        <div className="flex items-start justify-between gap-2 px-3 pt-2 pb-1.5">
-          <div className="min-w-0 flex-1">
-            <div className="flex items-baseline gap-2 min-w-0">
-              <div className="font-semibold text-slate-900 leading-tight truncate text-[15px]">
-                {town?.name ?? (loading ? 'Loading…' : townId)}
+      {/* Sticky compact card header */}
+      <div className="shrink-0 border-b border-slate-200 px-2.5 py-1.5 flex items-start gap-1.5">
+        <span
+          className="inline-block w-2 h-2 rounded-full shrink-0 mt-1.5"
+          style={{ background: TIER_COLOR[tier] }}
+          title={TIER_LABEL[tier]}
+        />
+        <div className="min-w-0 flex-1">
+          <div className="flex items-baseline gap-1.5 min-w-0">
+            <div className="font-semibold text-slate-900 leading-tight truncate text-[13px]">
+              {town?.name ?? (loading ? 'Loading…' : townId)}
+            </div>
+            {town?.population != null && (
+              <div className="text-[9.5px] text-slate-400 tabular-nums shrink-0">
+                {town.population.toLocaleString()}
               </div>
-              {town?.population != null && (
-                <div className="text-[10px] text-slate-400 tabular-nums shrink-0">
-                  {town.population.toLocaleString()}
-                </div>
-              )}
-            </div>
-            <div className="text-[11px] text-slate-600 leading-tight truncate mt-0.5">
-              {districtName ?? (loading ? '…' : 'No district resolved')}
-            </div>
+            )}
           </div>
-          <button
-            onClick={onClose}
-            className="text-slate-400 hover:text-slate-700 leading-none px-1 -mt-0.5 text-lg shrink-0"
-            aria-label="Close"
-          >
-            ×
-          </button>
+          <div className="text-[10.5px] text-slate-500 leading-tight truncate">
+            {districtName ?? (loading ? '…' : 'no district')}{' '}
+            <span className="text-slate-400">
+              · T{tier}
+            </span>
+          </div>
         </div>
-        {/* Tier strip — the spine of the card */}
-        <div
-          className="flex items-center gap-2 px-3 py-1.5 text-[11.5px]"
-          style={{ background: TIER_COLOR[tier] + '15' }}
+        <button
+          onClick={onClose}
+          className="text-slate-400 hover:text-slate-700 leading-none px-0.5 -mt-0.5 text-base shrink-0"
+          aria-label="Close"
         >
-          <span
-            className="inline-block w-2 h-2 rounded-full shrink-0"
-            style={{ background: TIER_COLOR[tier] }}
-          />
-          <span className="font-medium text-slate-800 leading-tight">
-            {TIER_LABEL[tier]}
-          </span>
-        </div>
+          ×
+        </button>
       </div>
 
       {/* Scrollable body */}
-      <div className="flex-1 overflow-y-auto px-3 py-2 space-y-2.5 [scrollbar-width:thin]">
+      <div className="flex-1 overflow-y-auto px-2.5 py-1.5 space-y-2 [scrollbar-width:thin]">
         <PhonePolicyBlock policy={policy} loading={loading} hasDistrict={!!districtName} />
 
         <SchoolBlock

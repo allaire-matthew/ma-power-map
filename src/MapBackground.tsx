@@ -251,12 +251,17 @@ export function MapBackground({
   }, [data.towns])
 
   // Click → town resolution. We listen on window in capture phase so we
-  // see clicks before tldraw can stop propagation. Hits use the same
-  // isPointInFill trick as hover; misses leave the popup state alone.
+  // see clicks before tldraw can stop propagation. Clicks on a town
+  // open/toggle the popup; clicks outside any town (and outside UI)
+  // close the open popup; shift+click toggles multi-select.
   useEffect(() => {
     const svg = svgRef.current
     if (!svg) return
     const onClick = (e: MouseEvent) => {
+      // Ignore clicks on UI chrome (popup, legend, header, etc.).
+      const target = e.target as { closest?: (s: string) => Element | null } | null
+      if (typeof target?.closest === 'function' && target.closest('[data-map-ui]'))
+        return
       const g = groupRefs.current.towns
       if (!g) return
       const ctm = g.getScreenCTM()
@@ -266,32 +271,35 @@ export function MapBackground({
       screenPt.y = e.clientY
       const localPt = screenPt.matrixTransform(ctm.inverse())
       const paths = g.querySelectorAll<SVGPathElement>('path[data-id]')
+      let hitId: string | null = null
       for (const p of paths) {
         if (p.isPointInFill(localPt)) {
-          const id = p.dataset.id!
-          // Ignore clicks on UI chrome (popup, legend, header, etc.).
-          // Guard against synthetic events whose target isn't an Element
-          // (e.g. window-dispatched MouseEvents used by debug/verify rigs).
-          const target = e.target as { closest?: (s: string) => Element | null } | null
-          if (typeof target?.closest === 'function' && target.closest('[data-map-ui]'))
-            return
-          // Shift+click always toggles selection (regardless of the
-          // select-mode toggle in the header), so power users can
-          // pick a few towns without switching tools.
-          if (e.shiftKey && onShiftTownClick) {
-            onShiftTownClick(id)
-            e.preventDefault()
-            e.stopPropagation()
-            return
-          }
-          onTownClick(id)
-          return
+          hitId = p.dataset.id!
+          break
         }
       }
+      // No town hit → close any open popup (and exit early).
+      if (hitId === null) {
+        if (popupTownId) onTownClick(null)
+        return
+      }
+      // Shift+click always toggles selection regardless of mode.
+      if (e.shiftKey && onShiftTownClick) {
+        onShiftTownClick(hitId)
+        e.preventDefault()
+        e.stopPropagation()
+        return
+      }
+      // Click on the already-open town → close the popup (toggle off).
+      if (hitId === popupTownId) {
+        onTownClick(null)
+        return
+      }
+      onTownClick(hitId)
     }
     window.addEventListener('click', onClick, true)
     return () => window.removeEventListener('click', onClick, true)
-  }, [data.towns, onTownClick, onShiftTownClick])
+  }, [data.towns, onTownClick, onShiftTownClick, popupTownId])
 
   const t = `translate(${camera.x * camera.z} ${camera.y * camera.z}) scale(${camera.z})`
 
