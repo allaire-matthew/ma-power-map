@@ -1,6 +1,6 @@
 {
-  "_schemaVersion": "3.2.0",
-  "_lastUpdated": "2026-05-21",
+  "_schemaVersion": "3.3.0",
+  "_lastUpdated": "2026-05-23",
   "_notes": "Tier system (v3.2, anchored to Childhood Index / Distraction-Free Schools Policy Project spec, 2026-05-21): 1 = no district policy. 2 = partial — class-time only OR accessible storage (pockets, backpacks). 3 = inaccessible-storage hardware but scope-limited (< K-12) OR significant weakening loopholes. 4 = bell-to-bell + INACCESSIBLE storage (pouches/cabinets, NOT lockers/backpacks/pockets) + K-12 + all PEDs covered + narrow exceptions (IEP/504 + documented medical). Superintendent / principal discretion exemptions are FINE per spec. Loopholes flagged but not disqualifying: emergency-use exception, educational-use exception, suspension for violation alone, locker storage. chIdxStrengths / chIdxConcerns arrays track these per district for directional sense of progress. Don't adhere TOO tightly to the spec — this is for directional understanding, not pass/fail.",
   "policies": {
     "2502790": {
@@ -177,7 +177,17 @@
       ],
       "edtechNotes": "BYOD/laptops/tablets explicitly preserved for educational use.",
       "redTeamFindings": "MAJOR CORRECTION TO 'news_verified' ENTRY. K-8 bell-to-bell hardware claim is NOT supported by primary district documents. K-8 uses 'off and away' pilots; no Yondr/hardware. BHS permits phones during passing time and free blocks — opposite of bell-to-bell.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "K-8 schools have some policy (off-and-away pilots)",
+        "BHS adopted Rule 1.4 April 10 2025 (SC formal action)",
+        "Policy text published in handbook"
+      ],
+      "chIdxConcerns": [
+        "accessible_storage (off-and-away at K-8, no hardware)",
+        "BHS allows phones during passing time and free blocks (NOT bell-to-bell)",
+        "no_unified_K12_policy (school-by-school pilots)"
+      ]
     },
     "2512660": {
       "districtId": "2512660",
@@ -912,31 +922,67 @@
     "2512180": {
       "districtId": "2512180",
       "districtName": "Watertown School District",
-      "tier": 2,
-      "policySummary": "Watertown HS piloting the Doorman app in 2025-26 SY (first public school in the country) — software 'bricks' / disables cellphone communication during class periods. Separately, a district-wide draft cell-phone policy is in development per the School Committee.",
-      "scope": "9-12",
-      "enforcement": "hardware",
-      "effectiveDate": "2025-09",
+      "tier": 3,
+      "policySummary": "School Committee unanimously approved Personal Electronic Device (PED) Policy on May 4, 2026. Devices off/silent first bell to dismissal incl. lunch and breaks. Covers phones, smartwatches, headphones, tablets, laptops, gaming. Storage method NOT mandated — left to 'each level.' WHS piloted Doorman app (software-based) for 2025-26. Sup retains discretion to 'approve other rare and extenuating circumstances.'",
+      "scope": "K-12",
+      "enforcement": "mixed",
+      "effectiveDate": "2026-09-01",
       "enrollment": 2700,
       "sources": [
         {
-          "title": "Tap into class: Watertown High will be first in country to test new cell phone-limiting tech",
+          "type": "news",
+          "title": "Student Cell Phone Ban During School Day Approved by School Committee",
+          "url": "https://www.watertownmanews.com/2026/05/05/student-cellphone-ban-during-school-day-approved-by-school-committee/",
+          "publisher": "Watertown News",
+          "date": "2026-05-05"
+        },
+        {
+          "type": "news",
+          "title": "LETTER: Group of Parents Support Bell-to-Bell Personal Electronic Device Ban",
+          "url": "https://www.watertownmanews.com/2026/04/21/letter-group-of-parents-support-bell-to-bell-personal-electronic-device-ban-in-watertown-schools/",
+          "publisher": "Watertown News",
+          "date": "2026-04-21"
+        },
+        {
+          "type": "news",
+          "title": "Watertown High will be first in country to test new cell phone-limiting tech (Doorman)",
           "url": "https://www.wbur.org/news/2025/08/25/watertown-cell-phone-school-ban-doorman-newsletter",
           "publisher": "WBUR",
           "date": "2025-08-25"
-        },
-        {
-          "title": "Watertown High School to Pilot App That Would Disable Student Cellphones During Class",
-          "url": "https://www.watertownmanews.com/2025/08/20/watertown-high-school-to-pilot-app-that-would-disable-student-cellphones-during-class/",
-          "publisher": "Watertown News",
-          "date": "2025-08-20"
         }
       ],
-      "lastVerified": "2026-04-30",
-      "confidence": "high",
+      "lastVerified": "2026-05-23",
+      "confidence": "medium",
       "news_supersedes_handbook": true,
       "news_supersedes_handbook_date": "2025-08-25",
-      "news_supersedes_handbook_publisher": "WBUR"
+      "news_supersedes_handbook_publisher": "WBUR",
+      "exceptionsFound": [
+        "Superintendent discretion for 'other rare and extenuating circumstances' (broad, non-medical)",
+        "Storage method not mandated"
+      ],
+      "edtechNotes": "WHS piloted Doorman app for 2025-26 — software-first alternative to Yondr. First U.S. district to test the technology.",
+      "redTeamFindings": "Adopted May 4, 2026 — bell-to-bell + K-12 + all PEDs in policy text, but: storage method left to 'each level' (could be accessible at elementary); Doorman pilot is software not hardware; effective Sept 2026 (aligned with statewide mandate, not yet in operation).",
+      "chIdxStrengths": [
+        "K-12 scope in policy text",
+        "Bell-to-bell language (first bell to dismissal incl. lunch and breaks)",
+        "All PEDs covered (phones, smartwatches, headphones, tablets, laptops, gaming)",
+        "Unanimous SC adoption (May 4 2026)",
+        "Doorman software pilot signals operational seriousness"
+      ],
+      "chIdxConcerns": [
+        "storage_method_not_mandated (policy leaves choice to each level — could be accessible at K-5)",
+        "doorman_software_not_hardware (per Childhood Index spec, hardware/inaccessible storage is the gold standard)",
+        "not_yet_in_operation (effective Sept 2026)"
+      ],
+      "redTeamVerified": "2026-05-23",
+      "tier_history": [
+        {
+          "from": 2,
+          "to": 3,
+          "date": "2026-05-23",
+          "reason": "Phase-3 sweep agent surfaced May 4 2026 PED policy adoption; classified tier 3 per Childhood Index criteria (storage not mandated + sup discretion)"
+        }
+      ]
     },
     "2504410": {
       "districtId": "2504410",
@@ -1069,7 +1115,19 @@
       ],
       "edtechNotes": "High-profile non-phone screen exposure debate: ~$200K/yr × 5 yrs proposed for Chromebooks. Guest column (Gazette 2026-04-17) by Marcus/Staub/Baumer + 9 signatories argues Chromebooks facilitate distraction.",
       "redTeamFindings": "On-file claim was tier-4-shaped, materially wrong. (1) 'Direction A' is discussion document, no 'ADOPTED' stamp; (2) policy manual has no cell-phone-coded policy; (3) NHS still has 'limited use during designated periods'; (4) Apr 2026 op-ed refers to 'planned' (future) phone-free policy; (5) Boddy still pushing 18 months in.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "BoardDocs 'Direction A' policy document exists from June 12 2025",
+        "School Committee has standing Ad Hoc Screen Time Subcommittee (active study)"
+      ],
+      "chIdxConcerns": [
+        "NO_JICJ_coded_policy_in_district_manual (adoption not verified)",
+        "'Direction_A'_filename_implies_discussion_option_not_final (no ADOPTED stamp)",
+        "NHS_allows_limited_use_during_designated_periods (Gazette 2025-08-26, 2025-09-30)",
+        "written_agreement_carve_out (broad, non-medical)",
+        "earbuds_teacher_permission_carve_out",
+        "activist_still_pushing_18_months_in (Boddy / Gazette 2026-04-09 — implies bell-to-bell not yet adopted)"
+      ]
     },
     "2501920": {
       "districtId": "2501920",
@@ -1614,26 +1672,6 @@
       ],
       "lastVerified": "2026-04-30",
       "confidence": "high"
-    },
-    "2510680": {
-      "districtId": "2510680",
-      "districtName": "Shrewsbury School District",
-      "tier": 2,
-      "policySummary": "Shrewsbury HS implemented policy: students place cell phones in 'phone holder' at front of classroom at beginning of each period. Initial student resistance but described as a positive change to classroom environment. Off-and-away enforcement.",
-      "scope": "9-12",
-      "enforcement": "off-and-away",
-      "effectiveDate": "2024-09",
-      "enrollment": 6300,
-      "sources": [
-        {
-          "title": "The Rise of Phone Bans in Schools (Shrewsbury reference)",
-          "url": "https://www.closeup.org/public-schools-phone-bans/",
-          "publisher": "Close Up Foundation",
-          "date": "2024-12-01"
-        }
-      ],
-      "lastVerified": "2026-04-30",
-      "confidence": "medium"
     },
     "2507110": {
       "districtId": "2507110",
@@ -2512,7 +2550,17 @@
       ],
       "edtechNotes": "Both schools explicit BYOD; phone policy narrowly framed as 'personal technology' carve-out.",
       "redTeamFindings": "Original 'unanimous full ban' rhetorically correct (3-0 SC vote) but enforcement is OFF-AND-AWAY with confiscation-on-violation — NO Yondr/hardware/pouch. 'Other situations with prior administrative approval' is non-medical discretionary.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "CHS policy unanimous 3-0 SC vote",
+        "MS 'Away for the Day' since 2018-19 (long-standing)",
+        "Both schools cover all-day, all-spaces"
+      ],
+      "chIdxConcerns": [
+        "confiscation_on_violation_not_hardware (NO Yondr/pouch — phones stay on student)",
+        "principal_conversation_first_enforcement (Principal Scott told SC enforcement = conversation, not discipline)",
+        "discretionary_admin_approval ('other situations with prior administrative approval' is broader than medical/IEP/504)"
+      ]
     },
     "2504020": {
       "districtId": "2504020",
@@ -3193,7 +3241,17 @@
       ],
       "edtechNotes": "1:1 Chromebook/iPad program (Fall 2017). Quinn restricts headphones even when disconnected.",
       "redTeamFindings": "MAJOR — CROSS-STATE HALLUCINATION. On-file claim ('bell-to-bell, lockers, progressive discipline, no verbal warnings') is FALSE for Hudson MA. Matches Hudson NH JICJ policy verbatim (NH HB2, Aug 2025). On-file 'hudsontimes.net' source is Hudson NH local news. No Yondr/hardware in Hudson MA.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Quinn MS bans phones during school day",
+        "HHS has classroom 'dedicated space' storage during class"
+      ],
+      "chIdxConcerns": [
+        "NO_district_JICJ_policy (never adopted)",
+        "HHS_allows_lunch_passing_before_after (not bell-to-bell at HS)",
+        "no_hardware_anywhere (no Yondr/pouches)",
+        "policy_was_cross_state_hallucination (on-file claim matched Hudson NH JICJ verbatim — corrected)"
+      ]
     },
     "2506420": {
       "districtId": "2506420",
@@ -3262,7 +3320,16 @@
       ],
       "edtechNotes": "",
       "redTeamFindings": "Tier-3 classification was WRONG. Berkshire Eagle (Jan 21, 2024): 'students can have their phones in their pockets, but they must be turned off.' Pockets-with-off is textbook tier 2. Should never have been tier 3.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "Bell-to-bell 7:58a-2:30p time window codified",
+        "Smartwatches/AirPods/headphones included in scope",
+        "Berkshire Eagle editorial praised consistency"
+      ],
+      "chIdxConcerns": [
+        "pockets_with_off_is_NOT_hardware (Eagle editorial explicitly contrasts Lee with hardware-using McCann/Lenox)",
+        "extraordinary_emergency_carve_out (admin-discretion exception beyond medical/IEP/504)"
+      ]
     },
     "2506720": {
       "districtId": "2506720",
@@ -3349,7 +3416,16 @@
       ],
       "edtechNotes": "RSS handbook calls out 'increase in students wearing Smart Watches'. IJNDB acceptable-use policy governs school-issued devices.",
       "redTeamFindings": "Original tier-3 was WRONG. (1) Domain in original entry was Colorado Littleton, not MA. Correct: littletonps.org. (2) MA Littleton handbooks show NO hardware storage anywhere. Closer to off-and-away with broad permission.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "LMS prohibits use during school day",
+        "Smart watch policy distinct from phone policy"
+      ],
+      "chIdxConcerns": [
+        "NO_hardware_storage_anywhere (no lockers, caddies, pouches at any school)",
+        "LHS_permits_phones_during_study_hall_lunch_passing_teacher_discretion (broad in-school permission)",
+        "original_entry_referenced_Colorado_Littleton (data-quality flag)"
+      ]
     },
     "2506990": {
       "districtId": "2506990",
@@ -3405,7 +3481,17 @@
       ],
       "edtechNotes": "Administrative implementation at BMS over summer 2024 — not a board policy change.",
       "redTeamFindings": "Original tier-3 'Yondr during instructional time' conflated BMS (bell-to-bell Yondr) with LHS (no Yondr). District net is tier 2 because HS is partial/non-hardware.",
-      "redTeamVerified": "2026-05-20"
+      "redTeamVerified": "2026-05-20",
+      "chIdxStrengths": [
+        "BMS has bell-to-bell Yondr since fall 2024",
+        "CTEC was earliest Yondr adopter in district"
+      ],
+      "chIdxConcerns": [
+        "split_district_policy (BMS Yondr, LHS no Yondr)",
+        "LHS_softer_policy_not_brought_to_board (LHS has instructional-time policy without hardware)",
+        "administrative_not_board_policy (BMS Yondr was admin decision, not SC vote)",
+        "documented_student_workaround (pouches broken by slamming magnet)"
+      ]
     },
     "2507080": {
       "districtId": "2507080",
@@ -4436,7 +4522,7 @@
       "districtId": "2510770",
       "districtName": "Shrewsbury School District",
       "tier": 2,
-      "policySummary": "Shrewsbury HS: phone holder system; classroom-based phone storage during periods.",
+      "policySummary": "Shrewsbury HS implemented policy: students place cell phones in 'phone holder' at front of classroom at beginning of each period. Initial student resistance but described as a positive change to classroom environment. Off-and-away enforcement.",
       "scope": "unknown",
       "enforcement": "off-and-away",
       "effectiveDate": "",
@@ -4447,10 +4533,24 @@
           "url": "https://schools.shrewsburyma.gov/",
           "publisher": "",
           "date": "2026-05-20"
+        },
+        {
+          "title": "The Rise of Phone Bans in Schools (Shrewsbury reference)",
+          "url": "https://www.closeup.org/public-schools-phone-bans/",
+          "publisher": "Close Up Foundation",
+          "date": "2024-12-01"
         }
       ],
       "lastVerified": "2026-05-20",
-      "confidence": "medium"
+      "confidence": "medium",
+      "tier_history": [
+        {
+          "from": 2,
+          "to": 2,
+          "date": "2026-05-23",
+          "reason": "Merged duplicate Shrewsbury entry from NCES 2510680 (incorrect ID) into 2510770 (correct ID per demographics crosswalk)"
+        }
+      ]
     },
     "2510890": {
       "districtId": "2510890",
