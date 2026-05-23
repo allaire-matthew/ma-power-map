@@ -173,66 +173,66 @@ export function TownPopup({
     }
   }, [townId])
 
+  const tier: PhoneTier = policy?.tier ?? 1
   return (
     <div
       data-map-ui
       role="dialog"
       onClick={(e) => e.stopPropagation()}
       onMouseDown={(e) => e.stopPropagation()}
-      className="absolute left-3 bottom-3 z-30 w-80 max-w-[calc(100vw-1.5rem)] bg-white border border-slate-200 rounded-md shadow-xl text-sm"
+      className="absolute left-3 bottom-3 z-30 w-80 max-w-[calc(100vw-1.5rem)] max-h-[calc(100vh-1.5rem)] flex flex-col bg-white border border-slate-200 rounded-lg shadow-xl text-sm overflow-hidden"
     >
-      <div className="flex items-start justify-between gap-2 px-3 py-2 border-b border-slate-200">
-        <div className="min-w-0">
-          <div className="text-[10px] uppercase tracking-wider text-slate-500">
-            Town
+      {/* Sticky card header: town + district + tier strip. */}
+      <div className="shrink-0 border-b border-slate-200">
+        <div className="flex items-start justify-between gap-2 px-3 pt-2 pb-1.5">
+          <div className="min-w-0 flex-1">
+            <div className="flex items-baseline gap-2 min-w-0">
+              <div className="font-semibold text-slate-900 leading-tight truncate text-[15px]">
+                {town?.name ?? (loading ? 'Loading…' : townId)}
+              </div>
+              {town?.population != null && (
+                <div className="text-[10px] text-slate-400 tabular-nums shrink-0">
+                  {town.population.toLocaleString()}
+                </div>
+              )}
+            </div>
+            <div className="text-[11px] text-slate-600 leading-tight truncate mt-0.5">
+              {districtName ?? (loading ? '…' : 'No district resolved')}
+            </div>
           </div>
-          <div className="font-semibold text-slate-900 leading-tight truncate">
-            {town?.name ?? (loading ? 'Loading…' : townId)}
-          </div>
+          <button
+            onClick={onClose}
+            className="text-slate-400 hover:text-slate-700 leading-none px-1 -mt-0.5 text-lg shrink-0"
+            aria-label="Close"
+          >
+            ×
+          </button>
         </div>
-        <button
-          onClick={onClose}
-          className="text-slate-400 hover:text-slate-700 leading-none px-1 -mt-0.5 text-lg"
-          aria-label="Close"
+        {/* Tier strip — the spine of the card */}
+        <div
+          className="flex items-center gap-2 px-3 py-1.5 text-[11.5px]"
+          style={{ background: TIER_COLOR[tier] + '15' }}
         >
-          ×
-        </button>
-      </div>
-
-      <div className="px-3 py-2 space-y-3">
-        <div className="text-slate-700 text-[13px]">
-          Population:{' '}
-          <span className="font-medium tabular-nums">
-            {town?.population != null
-              ? town.population.toLocaleString()
-              : '—'}
+          <span
+            className="inline-block w-2 h-2 rounded-full shrink-0"
+            style={{ background: TIER_COLOR[tier] }}
+          />
+          <span className="font-medium text-slate-800 leading-tight">
+            {TIER_LABEL[tier]}
           </span>
         </div>
+      </div>
 
-        <div>
-          <div className="text-[10px] uppercase tracking-wider text-slate-500 mb-0.5">
-            School district
-          </div>
-          <div className="text-slate-900 text-[13px]">
-            {districtName ?? (loading ? 'Loading…' : '—')}
-          </div>
-          {schoolLink && (
-            <a
-              href={schoolLink.calendar_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[12px] text-indigo-600 hover:underline mt-0.5"
-            >
-              School committee calendar →
-            </a>
-          )}
-          {!schoolLink && !loading && districtName && (
-            <div className="text-[10.5px] text-slate-400 italic mt-0.5">
-              Committee calendar URL not yet on file.
-            </div>
-          )}
-          <NextMeetingLine nextMeeting={nextMeeting} loading={loading} />
-        </div>
+      {/* Scrollable body */}
+      <div className="flex-1 overflow-y-auto px-3 py-2 space-y-2.5 [scrollbar-width:thin]">
+        <PhonePolicyBlock policy={policy} loading={loading} hasDistrict={!!districtName} />
+
+        <SchoolBlock
+          loading={loading}
+          districtName={districtName}
+          schoolLink={schoolLink}
+          nextMeeting={nextMeeting}
+        />
 
         <RepsBlock
           loading={loading}
@@ -247,10 +247,52 @@ export function TownPopup({
 
         <OrgsBlock loading={loading} orgs={orgs} townName={town?.name ?? null} />
 
-        <PhonePolicyBlock policy={policy} loading={loading} hasDistrict={!!districtName} />
-
         <EventsBlock townName={town?.name ?? null} />
       </div>
+    </div>
+  )
+}
+
+function SchoolBlock({
+  loading,
+  districtName,
+  schoolLink,
+  nextMeeting,
+}: {
+  loading: boolean
+  districtName: string | null
+  schoolLink: SchoolCommitteeLink | null
+  nextMeeting: NextMeetingEntry | null
+}) {
+  if (!districtName && !loading) return null
+  return (
+    <div className="pt-2 border-t border-slate-100">
+      <SectionLabel>School committee</SectionLabel>
+      {schoolLink ? (
+        <a
+          href={schoolLink.calendar_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-[12px] text-indigo-600 hover:underline"
+        >
+          Committee calendar →
+        </a>
+      ) : (
+        !loading && districtName && (
+          <div className="text-[10.5px] text-slate-400 italic">
+            Calendar URL not yet on file.
+          </div>
+        )
+      )}
+      <NextMeetingLine nextMeeting={nextMeeting} loading={loading} />
+    </div>
+  )
+}
+
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="text-[9.5px] uppercase tracking-wider text-slate-500 mb-1">
+      {children}
     </div>
   )
 }
@@ -541,125 +583,112 @@ function PhonePolicyBlock({
   loading: boolean
   hasDistrict: boolean
 }) {
-  const tier: PhoneTier = policy?.tier ?? 1
+  if (!policy) {
+    return (
+      <div className="text-[12px] text-slate-500 italic">
+        {loading
+          ? 'Looking up policy…'
+          : hasDistrict
+            ? 'No policy on file for this district. Defaults to tier 1 until researched.'
+            : 'No school district found for this town.'}
+      </div>
+    )
+  }
+  const scope = policy.scope?.replace(/_/g, ' ')
+  const enforcement = policy.enforcement?.replace(/-/g, ' ')
+  const sourceCount = (policy.sources || []).length
   return (
-    <div className="space-y-1.5 pt-1 border-t border-slate-100">
-      <div className="flex items-center gap-2">
-        <span
-          className="inline-block w-2.5 h-2.5 rounded-full"
-          style={{ background: TIER_COLOR[tier] }}
-        />
-        <span className="text-xs font-medium text-slate-800">
-          {TIER_LABEL[tier]}
+    <div className="space-y-1.5">
+      {/* Meta row */}
+      <div className="flex flex-wrap gap-x-2.5 gap-y-0.5 text-[10.5px] text-slate-500">
+        <span>
+          Scope <span className="text-slate-800">{scope || '—'}</span>
+        </span>
+        <span>
+          Enf. <span className="text-slate-800">{enforcement || '—'}</span>
+        </span>
+        <span>
+          Conf. <span className="text-slate-800">{policy.confidence}</span>
         </span>
       </div>
-      {policy ? (
-        <>
-          <div className="text-slate-700 text-[12.5px] leading-snug">
-            {policy.policySummary}
-          </div>
-          <div className="text-[11px] text-slate-500 grid grid-cols-2 gap-x-2 gap-y-0.5">
-            <div>Scope: <span className="text-slate-700">{policy.scope}</span></div>
-            <div>Enforcement: <span className="text-slate-700">{policy.enforcement}</span></div>
-            <div>Effective: <span className="text-slate-700">{policy.effectiveDate}</span></div>
-            {policy.enrollment != null && (
-              <div>
-                Enrollment:{' '}
-                <span className="text-slate-700 tabular-nums">
-                  {policy.enrollment.toLocaleString()}
-                </span>
-              </div>
-            )}
-            <div className="col-span-2">
-              Confidence: <span className="text-slate-700">{policy.confidence}</span>
-              {' · '}Verified: <span className="text-slate-700">{policy.lastVerified}</span>
-            </div>
-          </div>
-          {policy.handbook_url && (
-            <div className="text-[12px] pt-1 border-t border-slate-100">
-              <a
-                href={policy.handbook_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-indigo-600 hover:underline font-medium"
-              >
-                Student handbook (PDF) →
-              </a>
-              {policy.extraction_method && (
-                <span className="text-[10px] text-slate-400 ml-1.5">
-                  · verified via {policy.extraction_method.replace(/_/g, ' ')}
-                </span>
-              )}
-            </div>
-          )}
-          {(policy.chIdxStrengths?.length || policy.chIdxConcerns?.length) ? (
-            <div className="text-[11px] pt-1 border-t border-slate-100 space-y-1">
-              {policy.chIdxStrengths?.length ? (
-                <div>
-                  <div className="text-emerald-700 font-medium mb-0.5">Strengths</div>
-                  <ul className="list-disc list-outside ml-3.5 space-y-0.5 text-slate-700">
-                    {policy.chIdxStrengths.map((s, i) => <li key={i}>{s}</li>)}
-                  </ul>
-                </div>
-              ) : null}
-              {policy.chIdxConcerns?.length ? (
-                <div>
-                  <div className="text-amber-700 font-medium mb-0.5">Concerns / loopholes</div>
-                  <ul className="list-disc list-outside ml-3.5 space-y-0.5 text-slate-700">
-                    {policy.chIdxConcerns.map((s, i) => <li key={i}>{s}</li>)}
-                  </ul>
-                </div>
-              ) : null}
-            </div>
-          ) : null}
-          {policy.edtechNotes ? (
-            <div className="text-[11px] pt-1 border-t border-slate-100">
-              <div className="text-slate-500 mb-0.5">Edtech / context</div>
-              <div className="text-slate-700 leading-snug">{policy.edtechNotes}</div>
-            </div>
-          ) : null}
-          {policy.sources.length > 0 && (
-            <div className="text-[11px] pt-1 border-t border-slate-100">
-              <div className="text-slate-500 mb-0.5">
-                Sources
-                {policy.redTeamVerified && (
-                  <span className="ml-1.5 text-[9.5px] uppercase tracking-wider text-emerald-600">
-                    red-team verified {policy.redTeamVerified}
-                  </span>
-                )}
-              </div>
-              <ul className="space-y-0.5">
-                {policy.sources.map((s, i) => (
-                  <li key={i}>
-                    {s.type && (
-                      <span className="text-[9.5px] uppercase tracking-wider text-slate-400 mr-1">
-                        {s.type}
-                      </span>
-                    )}
-                    <a
-                      href={s.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-indigo-600 hover:underline"
-                    >
-                      {s.publisher || s.title || 'Source'}
-                    </a>
-                    {s.date ? ` · ${s.date}` : ''}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </>
-      ) : (
-        <div className="text-[12px] text-slate-500 italic">
-          {loading
-            ? 'Looking up policy…'
-            : hasDistrict
-              ? 'No policy on file for this district. Defaults to tier 1 until researched.'
-              : 'No school district found for this town.'}
+      {/* Summary */}
+      <p className="text-slate-700 text-[12px] leading-snug">
+        {policy.policySummary}
+      </p>
+      {/* chIdx strengths/concerns as tight, colored chips */}
+      {policy.chIdxStrengths?.length ? (
+        <ChipList kind="strength" items={policy.chIdxStrengths} />
+      ) : null}
+      {policy.chIdxConcerns?.length ? (
+        <ChipList kind="concern" items={policy.chIdxConcerns} />
+      ) : null}
+      {/* Edtech context, only if present */}
+      {policy.edtechNotes ? (
+        <div className="text-[10.5px] text-slate-600 leading-snug">
+          <span className="text-slate-400">Context: </span>
+          {policy.edtechNotes}
         </div>
-      )}
+      ) : null}
+      {/* Footer row: verification + source count + handbook link */}
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] text-slate-400 pt-0.5">
+        {policy.redTeamVerified && (
+          <span className="text-emerald-600 font-medium">
+            ✓ red-team verified {policy.redTeamVerified}
+          </span>
+        )}
+        {sourceCount > 0 && (
+          <span>
+            · {sourceCount} source{sourceCount === 1 ? '' : 's'} on file
+          </span>
+        )}
+        {policy.handbook_url && (
+          <a
+            href={policy.handbook_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 hover:underline"
+          >
+            · handbook PDF →
+          </a>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function ChipList({
+  kind,
+  items,
+}: {
+  kind: 'strength' | 'concern'
+  items: string[]
+}) {
+  const palette =
+    kind === 'strength'
+      ? { dot: '#10b981', bg: '#ecfdf5', text: '#065f46', label: 'Strengths' }
+      : { dot: '#f59e0b', bg: '#fffbeb', text: '#92400e', label: 'Concerns' }
+  return (
+    <div>
+      <div
+        className="text-[9.5px] uppercase tracking-wider mb-1"
+        style={{ color: palette.text }}
+      >
+        {palette.label}
+      </div>
+      <ul className="space-y-0.5">
+        {items.map((s, i) => (
+          <li
+            key={i}
+            className="text-[10.5px] leading-snug flex items-start gap-1.5"
+          >
+            <span
+              className="inline-block w-1 h-1 rounded-full shrink-0 mt-1.5"
+              style={{ background: palette.dot }}
+            />
+            <span className="text-slate-700">{s.replace(/_/g, ' ')}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

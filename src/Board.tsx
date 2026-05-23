@@ -95,6 +95,11 @@ export function Board({
           onMount={(e) => {
             setEditor(e)
             onEditor?.(e)
+            // Default to the Hand tool so a plain click-drag pans the map
+            // (like Google Maps / standard map UX). The town-click handler
+            // in MapBackground.tsx still fires on mouseup if it was a click
+            // rather than a drag.
+            e.setCurrentTool('hand')
           }}
           options={{ maxPages: 1 }}
           components={components}
