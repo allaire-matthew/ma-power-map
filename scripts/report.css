@@ -1,0 +1,11 @@
+@page { size: Letter; margin: 0.85in 0.8in; }
+body { font-family: 'Iowan Old Style', 'Charter', Georgia, serif; font-size: 11pt; line-height: 1.5; color: #0f172a; }
+h1 { font-size: 20pt; margin: 0 0 0.2em 0; }
+h2 { font-size: 14pt; margin: 1.5em 0 0.4em 0; border-bottom: 1px solid #cbd5e1; padding-bottom: 0.18em; page-break-after: avoid; }
+h3 { font-size: 12pt; margin: 1.2em 0 0.3em 0; color: #1e293b; page-break-after: avoid; }
+p { margin: 0.5em 0; }
+ul { margin: 0.3em 0 0.7em 1.3em; padding: 0; }
+li { margin: 0.18em 0; }
+em { color: #475569; }
+hr { border: 0; border-top: 1px solid #cbd5e1; margin: 1.6em 0; }
+a { color: #4338ca; text-decoration: none; }
