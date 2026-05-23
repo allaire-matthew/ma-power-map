@@ -1,5 +1,5 @@
 {
-  "_schemaVersion": "3.3.0",
+  "_schemaVersion": "3.4.0",
   "_lastUpdated": "2026-05-23",
   "_notes": "Tier system (v3.2, anchored to Childhood Index / Distraction-Free Schools Policy Project spec, 2026-05-21): 1 = no district policy. 2 = partial — class-time only OR accessible storage (pockets, backpacks). 3 = inaccessible-storage hardware but scope-limited (< K-12) OR significant weakening loopholes. 4 = bell-to-bell + INACCESSIBLE storage (pouches/cabinets, NOT lockers/backpacks/pockets) + K-12 + all PEDs covered + narrow exceptions (IEP/504 + documented medical). Superintendent / principal discretion exemptions are FINE per spec. Loopholes flagged but not disqualifying: emergency-use exception, educational-use exception, suspension for violation alone, locker storage. chIdxStrengths / chIdxConcerns arrays track these per district for directional sense of progress. Don't adhere TOO tightly to the spec — this is for directional understanding, not pass/fail.",
   "policies": {
@@ -7,36 +7,94 @@
       "districtId": "2502790",
       "districtName": "Boston School District",
       "tier": 2,
-      "policySummary": "BPS Code of Conduct prohibits student cell-phone use during the school day district-wide (off-and-away baseline; second offense triggers parent-only return). Yondr-style hardware ban layered on top at ~31 BPS schools (4+ high schools, 9 elementary) under a 3-year contract — opt-in by school, not district-wide.",
-      "scope": "K-12",
-      "enforcement": "off-and-away",
+      "policySummary": "Baseline 'off-and-away' policy K-12 since 2005 (no district bell-to-bell). $850K Yondr contract 2024-2027 layered on at ~31 of 125 schools by school-site opt-in (9 elementary + 4 HS fully live as of fall 2025, rest in rollout; grades 5-12 per contract). Cellphone Policy Working Group formed Oct 2025; Spring 2026 recommendation, Fall 2026 implementation expected (driven by S.2561). Boston City Council passed resolution Sept 2025 urging district-wide bell-to-bell.",
+      "scope": "K-12-off-and-away-with-school-by-school-Yondr-overlay",
+      "enforcement": "two-track: district off-and-away + ~31/125 schools Yondr opt-in",
       "effectiveDate": "2024-09",
       "enrollment": 48800,
       "sources": [
         {
-          "title": "BPS Code of Conduct — Mobile (Cell) Phones",
-          "url": "https://www.bostonpublicschools.org/bps-departments/rights-and-responsibilities/code-of-conduct",
+          "type": "district",
+          "title": "BPS Office of Youth Leadership memo to School Committee on Cell Phone Policy",
+          "url": "https://resources.finalsite.net/images/v1764801174/bostonpublicschoolsorg/etgasjvp91piycklfy5z/CellPhonePolicyMemo.pdf",
+          "publisher": "Boston Public Schools — Dennisse Rorie to Supt. Skipper",
+          "date": "2025-12-03"
+        },
+        {
+          "type": "district",
+          "title": "School-Based Rules — Rights & Responsibilities",
+          "url": "https://www.bostonpublicschools.org/bps-departments/rights-and-responsibilities/school-based-rules",
           "publisher": "Boston Public Schools",
           "date": "2025-09-01"
         },
         {
-          "title": "Some high schoolers say a school cell phone ban boosted grades and connections",
+          "type": "news",
+          "title": "Boston cell phone ban schools",
           "url": "https://www.bostonglobe.com/2025/08/12/metro/boston-cell-phone-ban-schools/",
           "publisher": "Boston Globe",
           "date": "2025-08-12"
         },
         {
-          "title": "As State Mulls Cellphone Ban, English High Provides Model Already in Use",
+          "type": "news",
+          "title": "Phone Restrictions Make Immense Difference at Boston Schools",
+          "url": "https://www.govtech.com/education/k-12/phone-restrictions-make-immense-difference-at-boston-schools",
+          "publisher": "GovTech",
+          "date": "2024-09-01"
+        },
+        {
+          "type": "district",
+          "title": "Boston City Council resolution backing bell-to-bell PED policy for BPS",
+          "url": "https://www.boston.gov/news/council-backs-bell-bell-mobile-phone-policy-boston-public-schools",
+          "publisher": "City of Boston",
+          "date": "2025-09-01"
+        },
+        {
+          "type": "social",
+          "title": "BSAC Takes a Stand With Petition Against Yondr Phone Pouch Policy",
+          "url": "https://teensinprint.com/bsac-takes-a-stand-with-petition-against-yondr-phone-pouch-policy/",
+          "publisher": "Teens in Print / Boston Student Advisory Council",
+          "date": "2024-12-01"
+        },
+        {
+          "type": "news",
+          "title": "As State Mulls Cellphone Ban in Schools, English High Provides Model",
           "url": "https://jamaicaplainnews.com/2025/08/22/as-state-mulls-cellphone-ban-in-schools-english-high-provides-model-already-in-use/681669",
           "publisher": "Jamaica Plain News",
           "date": "2025-08-22"
         }
       ],
-      "lastVerified": "2026-04-30",
-      "confidence": "medium",
+      "lastVerified": "2026-05-23",
+      "confidence": "high",
       "news_supersedes_handbook": true,
       "news_supersedes_handbook_date": "2025-08-22",
-      "news_supersedes_handbook_publisher": "Boston Globe"
+      "news_supersedes_handbook_publisher": "Boston Globe",
+      "exceptionsFound": [
+        "2005 baseline policy has no codified exceptions in published text",
+        "Yondr implementation case-by-case for medical / IEP / 504 assistive tech",
+        "Future policy (per BPS memo) will inherit S.2561 IEP/medical exceptions"
+      ],
+      "edtechNotes": "Active 1:1 Chromebook program (district-managed, distinct from personal phones). AI policy: BPS released Guidelines for AI in BPS (revised 2025); prohibits non-school-sanctioned AI uses, deepfake harassment, academic integrity. March 2026: Supt. Skipper announced $1M Paul English donation making AI literacy a graduation expectation — BPS is the first major US district to do so.",
+      "redTeamFindings": "Tier 2 is correct TODAY but Boston is on a clear glide path to tier 4 by Fall 2026 driven by S.2561. Set monitoring milestone for Spring 2026 (Working Group report) and Aug 2026 (Fall implementation). Tracker should not record bell-to-bell until BPS itself adopts. '31/125 schools' conflation in prior entry: 31 are in the Yondr pipeline but only 13 actively using pouches at start of 24-25.",
+      "chIdxStrengths": [
+        "District-wide off-and-away policy since 2005 (long-standing)",
+        "$850K Yondr contract 2024-2027 (operational investment)",
+        "Boston City Council Sept 2025 resolution backs bell-to-bell",
+        "Cellphone Policy Working Group formed Oct 2025 — Spring 2026 recommendation",
+        "S.2561 forcing Fall 2026 district-wide bell-to-bell",
+        "AI policy and Chromebook program separate from phone policy (clean governance)"
+      ],
+      "chIdxConcerns": [
+        "off_and_away_NOT_inaccessible_storage (baseline policy permits backpack/pocket retention)",
+        "Yondr_is_school_by_school_opt_in_not_district_mandate (~25% of schools as of fall 2025)",
+        "no_uniform_district_consequence_schedule (school-site councils set their own)",
+        "no_Superintendent_Circular_dedicated_to_PEDs (policy lives in school-site rules)",
+        "BSAC_student_petition_against_Yondr_1200_signatures (student-side resistance)"
+      ],
+      "redTeamVerified": "2026-05-23",
+      "monitoring_milestones": [
+        "2026-04-01: Cellphone Policy Working Group recommendation expected",
+        "2026-09-01: Fall implementation per BPS memo"
+      ]
     },
     "2504830": {
       "districtId": "2504830",
@@ -102,31 +160,85 @@
     "2508610": {
       "districtId": "2508610",
       "districtName": "Newton School District",
-      "tier": 2,
-      "policySummary": "District-wide \"Off & Away\" policy adopted unanimously by School Committee Sept 2024. Yondr pouches in elementary and middle schools all day; high schools (Newton North, Newton South) require phones stored away during academic time only — no Yondr at HS level. Day Middle and Newton North piloted 2023-24.",
-      "scope": "K-12",
-      "enforcement": "hardware",
+      "tier": 3,
+      "policySummary": "SC unanimous 8-0 vote Sept 9, 2024. K-8 (Bigelow, Brown, Day, Oak Hill MS): bell-to-bell phone-free via Yondr locking pouches — rolled out to all 4 MS by Jan 27, 2025. ~$50K/yr from mayoral earmark via State Sen. Cindy Creem. Newton North + Newton South HS: phones away during academic time only; allowed during passing, lunch, and outside buildings. Newton North uses non-locking 'shoe-organizer' style holders (NOT Yondr) because open-campus exits make all-day locking impractical. Universal restroom/locker-room ban all grades.",
+      "scope": "K-8-Yondr-bell-to-bell-HS-class-period-only",
+      "enforcement": "mixed-Yondr-K8-non-locking-HS",
       "effectiveDate": "2024-09",
       "enrollment": 12000,
       "sources": [
         {
-          "title": "Do Not Disturb: Newton starts school year with new cell phone policy",
-          "url": "https://www.newtonbeacon.org/newtons-cell-phone-pouch-program-expanded-for-new-school-year/",
-          "publisher": "Newton Beacon",
-          "date": "2024-09-04"
+          "type": "news",
+          "title": "As lawmakers debate statewide cellphone ban, one district says it works",
+          "url": "https://www.wgbh.org/news/local/2025-08-28/as-lawmakers-debate-statewide-school-cellphone-ban-one-district-says-it-works",
+          "publisher": "GBH",
+          "date": "2025-08-28"
         },
         {
-          "title": "Cell phones at school: Parents sound alarm, NPS discusses ways to limit access",
-          "url": "https://figcitynews.com/2024/05/cell-phones-at-school-parents-sound-alarm-nps-discusses-ways-to-limit-access/",
+          "type": "news",
+          "title": "School Committee unanimously approves NPS student cell phone ban",
+          "url": "https://figcitynews.com/2024/09/school-committee-unanimously-approves-nps-student-cell-phone-ban/",
           "publisher": "Fig City News",
-          "date": "2024-05-15"
+          "date": "2024-09-10"
+        },
+        {
+          "type": "news",
+          "title": "Newton's cell phone pouch program expanded for new school year",
+          "url": "https://www.newtonbeacon.org/newtons-cell-phone-pouch-program-expanded-for-new-school-year/",
+          "publisher": "Newton Beacon",
+          "date": "2024-09-01"
+        },
+        {
+          "type": "news",
+          "title": "Yondr pouch program expanded to all middle schools",
+          "url": "https://www.newtonbeacon.org/yondr-pouch-program-expanded-to-all-middle-schools/",
+          "publisher": "Newton Beacon",
+          "date": "2025-01-18"
+        },
+        {
+          "type": "district",
+          "title": "Newton R&R Handbook 2024-25 (Section III.G p.18)",
+          "url": "https://resources.finalsite.net/images/v1756838783/newtonk12maus/sowtgymcebt0oxoqgdez/FINAL_R_and_R_Handbook_2024-25.pdf",
+          "publisher": "Newton Public Schools",
+          "date": "2024-09-01"
         }
       ],
-      "lastVerified": "2026-04-30",
+      "lastVerified": "2026-05-23",
       "confidence": "high",
       "news_supersedes_handbook": true,
       "news_supersedes_handbook_date": "2024-05-15",
-      "news_supersedes_handbook_publisher": "Fig City News"
+      "news_supersedes_handbook_publisher": "Fig City News",
+      "tier_history": [
+        {
+          "from": 2,
+          "to": 3,
+          "date": "2026-05-23",
+          "reason": "Urban-district red-team batch: triangulated district records + news + social media"
+        }
+      ],
+      "exceptionsFound": [
+        "Medical / educational / health-needs accommodations (e.g., diabetes management apps, IEP/504)",
+        "Universal restroom/locker-room ban across all grades"
+      ],
+      "edtechNotes": "Day MS + Newton North HS piloted SY23-24. Funding via mayoral earmark from State Sen. Cindy Creem (~$50K/yr). Full MS rollout completed Jan 27, 2025. Supt. Anna Nolin is the public face — 'two-week period of upset teenagers and worried parents, then blissful compliance.' GBH and Boston Globe cite NPS as MA model. Chromebooks block social media + games; school wifi filters social.",
+      "redTeamFindings": "Prior tier 2 designation was incorrect. K-8 Yondr is genuine bell-to-bell + inaccessible — tier 4 in isolation. But HS is class-period-only with phones at lunch + passing + outside buildings. District tier = 3 (mixed; HS scope-limit is the binding constraint). GBH 'model' framing should be qualified: K-8 yes, HS no. WARNING: search results citing 'Newton High School' enforcement numbers are often from Newton, IOWA (newtondailynews.com) — NOT Newton MA. Don't pull Iowa data into MA tracker.",
+      "chIdxStrengths": [
+        "K-8 bell-to-bell with INACCESSIBLE Yondr storage (tier-4-internal for that grade band)",
+        "Universal restroom/locker-room ban all grades",
+        "Annual SC policy review built into policy",
+        "Public enforcement narrative (Nolin) reports compliance success",
+        "Consent-required photo/video rule",
+        "Chromebook social-media + game blocks",
+        "School wifi filters social media",
+        "Funded enforcement (mayoral earmark, ~$50K/yr)"
+      ],
+      "chIdxConcerns": [
+        "HS_NOT_bell_to_bell (phones allowed at lunch, passing, outside buildings)",
+        "Newton_North_uses_non_locking_shoe_organizer_pouches_easily_defeated",
+        "open_campus_exits_make_HS_locking_impractical_by_design",
+        "no_standalone_NPS_policy_code_handbook_defers_to_individual_school_policy"
+      ],
+      "redTeamVerified": "2026-05-23"
     },
     "2503150": {
       "districtId": "2503150",
@@ -296,97 +408,236 @@
       "districtId": "2503090",
       "districtName": "Brockton School District",
       "tier": 2,
-      "policySummary": "District-wide Yondr pouch requirement for grades 7-12. Pouches distributed each morning during Breakfast & Advisory, locked in front of staff, kept by student all day. School Committee approved unanimously in March 2024 amid safety/violence concerns at Brockton HS. K-6 not covered.",
-      "scope": "9-12",
-      "enforcement": "hardware",
+      "policySummary": "MIXED. BHS only is bell-to-bell Yondr since Sept 2024 ($40 lost-pouch replacement; pouch is school property). 6 middle schools allow phones at lunch + after-school + classroom-with-teacher-approval; Yondr only as 3rd-violation escalation. 10 K-5 elementaries + 1 K-8: phones prohibited inside building, confiscation but NO hardware storage. District aggregate floor = tier 2 because MS is the weak link.",
+      "scope": "mixed-BHS-Yondr-MS-weak-K-5-no-hardware",
+      "enforcement": "tiered-by-school-level",
       "effectiveDate": "2024-04",
       "enrollment": 16000,
       "sources": [
         {
-          "title": "Stricter cellphone policy for Brockton High School approved amid reports of violence",
+          "type": "district",
+          "title": "BPS Final SY26 BHS Handbook",
+          "url": "https://4.files.edl.io/737b/08/21/25/182846-84d2a553-b843-49a6-bd23-64d6066a3b05.docx",
+          "publisher": "Brockton Public Schools",
+          "date": "2025-08-21"
+        },
+        {
+          "type": "district",
+          "title": "BPS Final SY26 Middle Schools Handbook",
+          "url": "https://4.files.edl.io/0944/08/21/25/182845-f882ecd4-4de8-421d-aa75-b492d0131122.docx",
+          "publisher": "Brockton Public Schools",
+          "date": "2025-08-21"
+        },
+        {
+          "type": "district",
+          "title": "BPS Final SY26 Elementary Handbook",
+          "url": "https://4.files.edl.io/81ef/08/21/25/182845-53a8e60e-ef6c-40ab-95c0-0539448664f1.docx",
+          "publisher": "Brockton Public Schools",
+          "date": "2025-08-21"
+        },
+        {
+          "type": "news",
+          "title": "Brockton High School locking up student phones",
+          "url": "https://www.cbsnews.com/boston/news/brockton-high-school-locking-up-student-phones/",
+          "publisher": "CBS Boston",
+          "date": "2024-12-05"
+        },
+        {
+          "type": "news",
+          "title": "New cellphone policy for Brockton HS",
           "url": "https://www.bostonglobe.com/2024/03/06/metro/new-cellphone-policy-for-brockton-high-school/",
           "publisher": "Boston Globe",
           "date": "2024-03-06"
-        },
-        {
-          "title": "Details of new Brockton High School secure cell phone policy revealed",
-          "url": "https://www.boston25news.com/news/local/details-new-brockton-high-school-secure-cell-phone-policy-revealed/E2R3KW2DURCAHIMTQIH3V4UJ2A/",
-          "publisher": "Boston 25 News",
-          "date": "2024-04-01"
-        },
-        {
-          "title": "How locking up phones has changed life inside Brockton High School",
-          "url": "https://www.cbsnews.com/boston/news/brockton-high-school-locking-up-student-phones/",
-          "publisher": "CBS Boston",
-          "date": "2024-09-15"
         }
       ],
-      "lastVerified": "2026-04-30",
+      "lastVerified": "2026-05-23",
       "confidence": "high",
       "news_supersedes_handbook": true,
       "news_supersedes_handbook_date": "2024-09-15",
-      "news_supersedes_handbook_publisher": "Boston Globe"
+      "news_supersedes_handbook_publisher": "Boston Globe",
+      "exceptionsFound": [
+        "MS: cafeteria lunch period exempt",
+        "MS: designated outdoor lunch exempt",
+        "MS: after school except library/teacher offices",
+        "MS: in-class with prior teacher approval",
+        "BHS Senior ID Process (pre-dismissal unlock at House Office)",
+        "CBS reports students hiding phones in pockets / behind laptops to circumvent Yondr"
+      ],
+      "edtechNotes": "4,000 Yondr pouches at BHS only; $40 lost-pouch replacement. MS Yondr deployed only after 3 violations. Elementary has no storage hardware.",
+      "redTeamFindings": "Phase-3 label 'Brockton HS: Yondr only' correct at HS but undersells MS weakness — middle schools have one of the weakest policies in this tracker. Aggregate held at tier 2 by MS floor. BHS alone is tier-4-equivalent for HS scope only.",
+      "chIdxStrengths": [
+        "BHS is genuine tier-4-equivalent at the HS level (inaccessible + bell-to-bell + $40 teeth)",
+        "Elementary handbook restrictive on paper",
+        "Tied to documented fight-reduction outcomes (CBS Dec 2024)"
+      ],
+      "chIdxConcerns": [
+        "MS_explicit_cafeteria_lunch_carve_out (the binding constraint at district level)",
+        "MS_teacher_approval_classroom_use",
+        "MS_Yondr_only_as_3rd_violation_punitive_escalation",
+        "BHS_Senior_ID_Process_pre_dismissal_unlock",
+        "documented_student_workarounds (CBS: pocket-hiding, behind-laptop)",
+        "K_5_no_hardware_storage"
+      ],
+      "redTeamVerified": "2026-05-23"
     },
     "2507020": {
       "districtId": "2507020",
       "districtName": "Lowell School District",
       "tier": 2,
-      "policySummary": "Lowell HS implemented hardware-based phone collection (Nightlock units installed summer 2023; ~1,200 storage units). Phones placed in classroom containers at start of class; allowed in hallways and at lunch. HS-only policy — middle and elementary scope unverified.",
-      "scope": "9-12",
-      "enforcement": "hardware",
+      "policySummary": "LHS policy in force since Jan 29, 2024 (SY25-26 handbook p.28): 'cellphones prohibited during instructional time in all academic classes.' Phones collected into per-classroom cell phone BOXES (3 teacher-collection methods); permitted in hallways during passing, in cafeteria at lunch, and during advisory. Substitute teachers must enforce. Elementary + Middle (SY25-26): phones listed as 'Prohibited Items' alongside vapes/lighters/video games — no allowed use in building, confiscation only.",
+      "scope": "LHS-class-only-K-8-prohibited-no-hardware",
+      "enforcement": "classroom-cell-phone-boxes-not-lockers",
       "effectiveDate": "2023-09",
       "enrollment": 14000,
       "sources": [
         {
-          "title": "New cell phone policy at Lowell High School prompts pushback from students",
-          "url": "https://www.boston25news.com/news/local/new-cell-phone-policy-lowell-high-school-prompts-pushback-students/SQEPOZP3IZFQ3BJBEKUOTQHK2I/",
-          "publisher": "Boston 25 News",
-          "date": "2024-01-25"
-        },
-        {
-          "title": "Lowell High wants to lock up cell phones. Students are fighting back.",
-          "url": "https://www.boston.com/news/local-news/2024/01/25/lowell-high-wants-to-lock-up-cell-phones-students-are-fighting-back/",
-          "publisher": "Boston.com",
-          "date": "2024-01-25"
-        },
-        {
-          "title": "Cell Phone Policy",
-          "url": "https://www.lowell.k12.ma.us/domain/3289",
+          "type": "district",
+          "title": "LHS SY 2025-26 Parent/Guardian & Student Handbook",
+          "url": "https://www.lowellma.gov/AgendaCenter/ViewFile/Item/32200?fileID=77471",
           "publisher": "Lowell Public Schools",
-          "date": "2024-01-15"
+          "date": "2025-08-01"
+        },
+        {
+          "type": "district",
+          "title": "Lowell Elementary + Middle Schools Handbook SY 2025-26",
+          "url": "https://www.lowellma.gov/AgendaCenter/ViewFile/Item/32507?fileID=82029",
+          "publisher": "Lowell Public Schools",
+          "date": "2025-08-01"
+        },
+        {
+          "type": "district",
+          "title": "Head of School Fiato memo (Aug 2024): 690 infractions / 95% teacher approval / 92.9% engagement improvement",
+          "url": "https://www.lowellma.gov/AgendaCenter/ViewFile/Item/28763?fileID=58554",
+          "publisher": "Lowell Public Schools",
+          "date": "2024-08-01"
+        },
+        {
+          "type": "news",
+          "title": "Lowell High School cellphone ban",
+          "url": "https://www.cbsnews.com/boston/news/lowell-high-school-cellphone-ban/",
+          "publisher": "CBS Boston",
+          "date": "2024-01-29"
+        },
+        {
+          "type": "news",
+          "title": "New cell phone policy Lowell HS prompts pushback",
+          "url": "https://www.boston25news.com/news/local/new-cell-phone-policy-lowell-high-school-prompts-pushback-students/SQEPOZP3IZFQ3BJBEKUOTQHK2I/",
+          "publisher": "Boston 25",
+          "date": "2024-01-25"
         }
       ],
-      "lastVerified": "2026-04-30",
+      "lastVerified": "2026-05-23",
       "confidence": "high",
       "news_supersedes_handbook": true,
       "news_supersedes_handbook_date": "2024-01-25",
-      "news_supersedes_handbook_publisher": "Boston 25 News"
+      "news_supersedes_handbook_publisher": "Boston 25 News",
+      "exceptionsFound": [
+        "LHS: passing time between classes",
+        "LHS: cafeteria during lunch",
+        "LHS: advisory period",
+        "Photo/video exception requires permission",
+        "Head of School memo explicitly says teachers are NOT responsible for handling devices to minimize liability"
+      ],
+      "edtechNotes": "Classroom cell-phone BOXES (lock boxes per teacher) at LHS — NOT Yondr, NOT student lockers. 3 teacher-collection options. ~172 infractions/month at LHS Feb-May 2024.",
+      "redTeamFindings": "Phase-3 'lockers' should be 'classroom cell-phone boxes / lock boxes' (per Aug 2024 Fiato memo). Passing/lunch carve-outs correct. Best-documented K-12 implementation data in this tracker.",
+      "chIdxStrengths": [
+        "LHS strong implementation data (95% teacher approval, declining infractions)",
+        "Elementary + Middle handbook treats phones as fully prohibited",
+        "Concrete progressive discipline ladder (1st = 2:30pm pickup, 3rd = 40 days hand-in)"
+      ],
+      "chIdxConcerns": [
+        "LHS_passing_time_lunch_advisory_carve_outs (textbook tier 2 signature)",
+        "box_storage_NOT_inaccessible (student retrieves at end of every period ~7×/day)",
+        "teacher_not_responsible_design (signals enforcement-friction-aware permissiveness)",
+        "K_8_listed_as_prohibited_no_storage_protocol",
+        "phase_3_label_lockers_was_wrong (correct: classroom cell-phone boxes)"
+      ],
+      "redTeamVerified": "2026-05-23"
     },
     "2508430": {
       "districtId": "2508430",
       "districtName": "New Bedford School District",
-      "tier": 2,
-      "policySummary": "Roosevelt Middle uses Yondr pouches (~800 students, $16K spend); Normandin Middle uses homeroom lockboxes. New Bedford HS originally planned full Yondr but reduced to violator-only Yondr after student pushback. District announced 'Disconnect to Reconnect' Yondr expansion to grades 6-12 starting 2025-26.",
-      "scope": "K-8",
+      "tier": 3,
+      "policySummary": "MAJOR UPGRADE June 12, 2025: Supt. O'Leary announced district-wide Yondr locking pouches at New Bedford HS AND all 3 middle schools (Normandin, Roosevelt, Keith) — ~6,000 students. Bell-to-bell; students keep pouches but can't open until end of day. Reverses the SY24-25 NBHS arrangement where Yondr was reserved for repeat violators. K-5 elementary scope not yet confirmed — likely remains 'off and away' standard. Closest to tier 4 of any tier-3 district in dataset.",
+      "scope": "6-12-Yondr-K-5-TBD",
       "enforcement": "hardware",
       "effectiveDate": "2024-09",
       "enrollment": 13000,
       "sources": [
         {
-          "title": "New cell phone policies for Normandin, Roosevelt, and New Bedford High",
-          "url": "https://newbedfordlight.org/new-bedford-schools-roll-out-new-cell-phone-policies/",
+          "type": "news",
+          "title": "New Bedford High and all three middle schools to go phone-free",
+          "url": "https://newbedfordlight.org/new-bedford-high-and-all-three-middle-schools-to-go-phone-free/",
           "publisher": "New Bedford Light",
-          "date": "2024-08-28"
+          "date": "2025-06-13"
         },
         {
-          "title": "New Bedford Schools outline plan to roll out Yondr pouches after middle-school cellphone enforcement showed early gains",
+          "type": "news",
+          "title": "New Bedford schools roll out new cell phone policies (history)",
+          "url": "https://newbedfordlight.org/new-bedford-schools-roll-out-new-cell-phone-policies/",
+          "publisher": "New Bedford Light",
+          "date": "2024-09-01"
+        },
+        {
+          "type": "news",
+          "title": "New Bedford High considers restricting cell phone use",
+          "url": "https://newbedfordlight.org/new-bedford-high-considers-restricting-cell-phone-use/",
+          "publisher": "New Bedford Light",
+          "date": "2024-03-01"
+        },
+        {
+          "type": "district",
+          "title": "NBHS Student & Family Handbook 2023-24",
+          "url": "https://cdnsm5-ss16.sharpschool.com/UserFiles/Servers/Server_66938/File/Parents%20&%20Students/2023-2024%20School%20Handbooks/NBHS%20Student%20Family%20Handbook%202023-2024%20Final%20(002).pdf",
+          "publisher": "New Bedford Public Schools",
+          "date": "2023-08-01"
+        },
+        {
+          "type": "district",
+          "title": "NBPS 2025-26 Student Handbooks page",
+          "url": "https://www.newbedfordschools.org/parents___students/2025-2026_student_handbooks",
+          "publisher": "New Bedford Public Schools",
+          "date": "2025-09-01"
+        },
+        {
+          "type": "news",
+          "title": "NBPS outline plan to roll out Yondr pouches after MS enforcement showed early gains",
           "url": "https://citizenportal.ai/articles/6292875/Massachusetts/New-Bedford-Schools-outline-plan-to-roll-out-Yondr-pouches-after-middle-school-cellphone-enforcement-showed-early-gains",
           "publisher": "CitizenPortal.ai",
-          "date": "2025-04-01"
+          "date": "2025-05-01"
         }
       ],
-      "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "lastVerified": "2026-05-23",
+      "confidence": "high",
+      "tier_history": [
+        {
+          "from": 2,
+          "to": 3,
+          "date": "2026-05-23",
+          "reason": "Urban-district red-team batch: triangulated district records + news + social media"
+        }
+      ],
+      "exceptionsFound": [
+        "Sup O'Leary publicly stated openness to 'carve outs' after student feedback — including medically necessary access",
+        "IEP/504 language not yet visible in published 2025-26 handbook"
+      ],
+      "edtechNotes": "Roosevelt MS purchased ~$16K of Yondr pouches for ~800 students SY24-25. Normandin MS used homeroom lockboxes (cheaper). District-wide rollout for ~6,000 students implies $150-180K hardware cost + magnetic unlocker stations. Alma del Mar + Global Learning charter independently use lockboxes.",
+      "redTeamFindings": "Prior tier 2 designation is OUTDATED — the June 2025 NBPS announcement is a material upgrade. Treated as tier 3 (not 4) because K-5 elementary scope is not yet confirmed. If K-5 has hardware too, this is tier 4 — pull SY 25-26 elementary handbook to verify. SY24-25 NBHS rollback shows district is responsive to student pushback — possible weakening pressure.",
+      "chIdxStrengths": [
+        "Bell-to-bell at 6-12 (NBHS + Normandin + Roosevelt + Keith)",
+        "INACCESSIBLE Yondr storage",
+        "Covers PEDs broadly",
+        "Covers academic + non-academic spaces (hallways, gym, auditorium, bathrooms, athletic fields)",
+        "District-wide consistency across HS + all 3 MS",
+        "Documented consequence ladder"
+      ],
+      "chIdxConcerns": [
+        "scope_K_5_not_confirmed (likely soft off-and-away)",
+        "carve_outs_for_medical_need_announced_but_protocol_not_yet_in_handbook",
+        "SY24_25_rollback_history (responsive to student pushback — weakening risk)",
+        "no_published_consequences_ladder_yet_for_new_Yondr_era"
+      ],
+      "redTeamVerified": "2026-05-23"
     },
     "2510470": {
       "districtId": "2510470",
@@ -477,24 +728,75 @@
       "districtId": "2511130",
       "districtName": "Springfield School District",
       "tier": 2,
-      "policySummary": "Springfield Central HS deploys Yondr pouches since 2022. District-wide policy across the ~50 schools in Springfield not verified — likely school-by-school.",
-      "scope": "9-12",
-      "enforcement": "hardware",
+      "policySummary": "District policy 'Use of Cell Phones, Portable Communication Devices, and Electronic Devices' (adopted March 2010, revised Sept 2013) bans student USE throughout the academic school day ('start of day until last hour/bell is over'). Storage: 'completely turned off (not silent/vibrate) and out of sight' in student possession. Springfield Central HS (~2,000 students, grades 9-12) layered Yondr pouches on top in fall 2022. No confirmed district-wide Yondr expansion despite 2023 reports of Sci-Tech exploration. SPS spokesperson (June 2025): district 'found a bell-to-bell ban helpful.'",
+      "scope": "K-12-bell-to-bell-time-but-accessible-storage",
+      "enforcement": "off-and-away-at-district-level-Yondr-at-Central-HS-only",
       "effectiveDate": "2022-09",
       "enrollment": 23000,
       "sources": [
         {
-          "title": "Cell phones have been taking over classrooms. These Boston-area schools are making a stand.",
+          "type": "district",
+          "title": "SPS Cell Phone Policy (adopted 2010, last rev. Sept 2013)",
+          "url": "https://www.springfieldpublicschools.com/common/pages/DisplayFile.aspx?itemId=576000",
+          "publisher": "Springfield Public Schools",
+          "date": "2013-09-01"
+        },
+        {
+          "type": "news",
+          "title": "Cell phones taking over classrooms — Boston-area schools making a stand",
           "url": "https://www.boston.com/news/local-news/2024/11/04/cell-phones-have-been-taking-over-classrooms-these-boston-area-schools-are-making-a-stand/",
           "publisher": "Boston.com",
           "date": "2024-11-04"
+        },
+        {
+          "type": "news",
+          "title": "Some MA schools locking up phones — students aren't happy",
+          "url": "https://www.boston.com/news/local-news/2023/04/07/some-mass-schools-are-locking-up-phones-students-arent-happy-about-it/",
+          "publisher": "Boston.com",
+          "date": "2023-04-07"
+        },
+        {
+          "type": "news",
+          "title": "New push underway to remove cell phones from classrooms",
+          "url": "https://www.westernmassnews.com/2025/06/18/new-push-underway-remove-cell-phones-classrooms/",
+          "publisher": "Western Mass News",
+          "date": "2025-06-18"
+        },
+        {
+          "type": "news",
+          "title": "Getting Answers: efforts continue to address cell phones",
+          "url": "https://www.westernmassnews.com/2024/11/26/getting-answers-efforts-continue-address-cell-phones-classrooms/",
+          "publisher": "Western Mass News",
+          "date": "2024-11-26"
         }
       ],
-      "lastVerified": "2026-04-30",
-      "confidence": "medium",
+      "lastVerified": "2026-05-23",
+      "confidence": "high",
       "news_supersedes_handbook": true,
       "news_supersedes_handbook_date": "2024-11-04",
-      "news_supersedes_handbook_publisher": "Boston.com"
+      "news_supersedes_handbook_publisher": "Boston.com",
+      "exceptionsFound": [
+        "Before + after school hours (inside or outside building)",
+        "After-school / sports activities with coach permission",
+        "Photos require dual consent (administration + subject)"
+      ],
+      "edtechNotes": "Policy device list (last rev 2013) anachronistic — iPods, MP3 players, pagers, Palm Pilots. Catch-all language covers smartwatches/AirPods. SC has not formally revised policy since 2013 despite building-level Yondr rollouts.",
+      "redTeamFindings": "Strongest paper-policy bell-to-bell language in tier 2, but only Springfield Central HS (1 of ~60 SPS schools, ~8% enrollment) has confirmed Yondr/inaccessible storage. PHASE-3 SWEEP CORRECTION: be alert for 'Springfield' disambiguation — Ohio (WHIO), Oregon (OPB/KLCC), Missouri (sgfcitizen.org) all produce false positives in searches.",
+      "chIdxStrengths": [
+        "District policy explicitly defines 'academic school day' as bell-to-bell IN TIME SCOPE",
+        "Dual-consent photo guardrail (stronger than typical)",
+        "Aggressive escalation (in-house suspension by 3rd offense; 1-month device hold for repeated)",
+        "SC Central HS Yondr program mature (since fall 2022)",
+        "District communications affirm bell-to-bell framing"
+      ],
+      "chIdxConcerns": [
+        "Storage_accessible_in_student_possession (fails Tier 4 inaccessible-storage standard)",
+        "Yondr_school_by_school_not_district_wide (~8% of district enrollment at Central HS)",
+        "Policy_last_revised_2013_12_years_stale",
+        "No_public_confirmation_of_Sci_Tech_Putnam_Renaissance_or_middle_school_Yondr",
+        "Enforcement_inconsistent_in_practice_despite_paper_bell_to_bell"
+      ],
+      "redTeamVerified": "2026-05-23"
     },
     "2511400": {
       "districtId": "2511400",
@@ -522,28 +824,81 @@
     "2503270": {
       "districtId": "2503270",
       "districtName": "Cambridge School District",
-      "tier": 2,
-      "policySummary": "All middle and high schools (grades 6-12 incl. Cambridge Rindge and Latin School) collect phones at the start of each period using cubbies / clear pencil cases / cardboard boxes; phones returned at end of each period. Phones allowed at lunch, between classes, before/after school. Effective fall 2024 — no formal Yondr deployment yet.",
-      "scope": "9-12",
-      "enforcement": "off-and-away",
+      "tier": 3,
+      "policySummary": "TWO-TIER. CRLS (9-12) implemented Yondr magnetic pouches bell-to-bell at start of 2025-26. School Committee approved March 11, 2026 removal of the off-campus lunch unlock after February break 2026 — addressing increasing post-lunch phone usage. Upper schools (6-8) remain on 2024-25 period-by-period plastic-bag-during-class model with lunch/passing access. K-5 elementary policy not publicly documented. CRLS in isolation is near-tier-4 for HS; the K-8 gap holds the district at tier 3.",
+      "scope": "two-tier-CRLS-Yondr-upper-period-only",
+      "enforcement": "hardware-at-CRLS-only",
       "effectiveDate": "2024-09",
       "enrollment": 7000,
       "sources": [
         {
-          "title": "Cambridge Schools Go Analog With No-Phones Policy",
-          "url": "https://www.thecrimson.com/article/2024/9/5/cambridge-school-phone-confiscation/",
-          "publisher": "The Harvard Crimson",
-          "date": "2024-09-05"
+          "type": "news",
+          "title": "CRLS implements bell-to-bell phone restrictions ahead of 2025-26",
+          "url": "https://www.cambridgeday.com/2025/08/24/crls-implements-bell-to-bell-phone-restrictions-ahead-of-the-upcoming-school-year-in-cambridge/",
+          "publisher": "Cambridge Day",
+          "date": "2025-08-24"
         },
         {
-          "title": "As Mass. Legislators Work to Ban Phones in Schools, CPS Students See Ups and Downs",
+          "type": "news",
+          "title": "CRLS students reflect on semester without cell phones",
+          "url": "https://www.cambridgeday.com/2026/01/13/crls-students-semester-without-cell-phones/",
+          "publisher": "Cambridge Day",
+          "date": "2026-01-13"
+        },
+        {
+          "type": "news",
+          "title": "CRLS adopts phone plan — lunch unlock removed",
+          "url": "https://www.cambridgeday.com/2026/03/11/crls-adopts-phone-plan/",
+          "publisher": "Cambridge Day",
+          "date": "2026-03-11"
+        },
+        {
+          "type": "news",
+          "title": "Cambridge phone ban: ups and downs",
           "url": "https://www.thecrimson.com/article/2025/2/6/cell-phone-ban-cambridge-schools/",
-          "publisher": "The Harvard Crimson",
+          "publisher": "Harvard Crimson",
           "date": "2025-02-06"
+        },
+        {
+          "type": "social",
+          "title": "Screenagers Beware: CRLS to imprison phones this fall",
+          "url": "https://registerforum.org/20859/news/screenagers-beware-crls-to-imprison-phones-this-fall/",
+          "publisher": "Register Forum (CRLS student paper)",
+          "date": "2025-09-01"
         }
       ],
-      "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "lastVerified": "2026-05-23",
+      "confidence": "high",
+      "tier_history": [
+        {
+          "from": 2,
+          "to": 3,
+          "date": "2026-05-23",
+          "reason": "Urban-district red-team batch: triangulated district records + news + social media"
+        }
+      ],
+      "exceptionsFound": [
+        "Medical-accommodation adapted Yondr pouches available",
+        "IEP/504 phone-use accommodations",
+        "Upper schools (6-8) NOT on Yondr — period-by-period confiscation only",
+        "K-5 policy unverified"
+      ],
+      "edtechNotes": "Yondr at CRLS only. Upper schools use teacher-controlled plastic-bag-per-class (accessible storage). Cambridge Day documented student workarounds: locking decoy objects (old phones, decks of flashcards) in Yondr pouches.",
+      "redTeamFindings": "MAJOR PHASE-3 SWEEP ERROR CORRECTED. Phase-3 noted 'class-period plastic bag at HS; lunch allowed' which described the OLD 2024-25 CRLS policy. As of 2025-26, CRLS is on Yondr bell-to-bell since August 2025; lunch unlock removed after February break 2026. UPGRADE 2→3. CRLS-only is near-tier-4; the K-8 + K-5 gap is the binding constraint.",
+      "chIdxStrengths": [
+        "CRLS now bell-to-bell + INACCESSIBLE storage (Yondr) + lunch loophole closed March 2026",
+        "CRLS meets 3 of 4 tier-4 criteria in isolation",
+        "School Committee proactively tightened policy mid-year (March 2026 lunch unlock removal)",
+        "Public student journalism (Register Forum, Cambridge Day) tracking implementation rigorously"
+      ],
+      "chIdxConcerns": [
+        "scope_lt_K12 (Tier 4 requires K-12; only HS at hardware/inaccessible/bell-to-bell)",
+        "upper_schools_6_8_period_only_lunch_allowed (the binding constraint)",
+        "K_5_elementary_policy_not_publicly_documented",
+        "documented_student_workarounds (decoy objects in Yondr pouches)",
+        "March_2026_'policy'_approval_was_informal_committee_endorsement_no_formal_text"
+      ],
+      "redTeamVerified": "2026-05-23"
     },
     "2506840": {
       "districtId": "2506840",
@@ -595,44 +950,131 @@
       "districtId": "2513230",
       "districtName": "Worcester School District",
       "tier": 2,
-      "policySummary": "School Committee approved revised policy in 2024: cell phone use barred during instructional time without teacher permission for educational purposes; limited use allowed during lunch and other non-instructional time for educational communication (email, chat). Off-and-away enforcement.",
-      "scope": "K-12",
+      "policySummary": "Adopted by Worcester SC August 2024. Phones, smartphones, tablets, earbuds, cameras may be used for educational purposes only at teacher discretion. During class: powered off/silenced + stowed out of sight. During lunch + non-instructional time: permitted. Parent-student communication during class must route through school office. As of Sept 2025, district publicly 'standing ready to review' but has not adopted bell-to-bell or any pouch/locker requirement.",
+      "scope": "K-12-class-time-only",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
       "enrollment": 25000,
       "sources": [
         {
-          "title": "Massachusetts eyes limits on student phone, social media use",
-          "url": "https://theworcesterguardian.org/f/massachusetts-eyes-limits-on-student-phone-social-media-use/",
-          "publisher": "The Worcester Guardian",
-          "date": "2024-09-15"
+          "type": "news",
+          "title": "Parents Mixed on Worcester Schools' Cellphone Policy",
+          "url": "https://www.govtech.com/education/k-12/parents-mixed-on-worcester-schools-cellphone-policy",
+          "publisher": "GovTech",
+          "date": "2024-09-01"
+        },
+        {
+          "type": "news",
+          "title": "Worcester schools new phone policy",
+          "url": "https://spectrumnews1.com/ma/worcester/news/2024/08/23/worcester-schools-new-phone-policy-082324",
+          "publisher": "Spectrum News 1",
+          "date": "2024-08-23"
+        },
+        {
+          "type": "news",
+          "title": "Worcester Schools Stand Ready to Review Policy Changes",
+          "url": "https://wror.com/2025/09/17/worcester-schools-stand-ready-to-review-policy-changes-for-students-and-cell-phones/",
+          "publisher": "WROR",
+          "date": "2025-09-17"
+        },
+        {
+          "type": "district",
+          "title": "WPS Student Handbooks page",
+          "url": "https://www.worcesterschools.org/page/student-handbooks",
+          "publisher": "Worcester Public Schools",
+          "date": "2025-09-01"
         }
       ],
-      "lastVerified": "2026-04-30",
-      "confidence": "medium"
+      "lastVerified": "2026-05-23",
+      "confidence": "high",
+      "exceptionsFound": [
+        "Teacher discretion for educational use",
+        "Emergency contact when no staff available",
+        "Lunch + non-instructional periods (phones out)",
+        "Earbuds during non-instructional time if not disruptive"
+      ],
+      "edtechNotes": "No specific edtech vendor named. Devices used for educational purposes via 'district-approved applications' outside class time.",
+      "redTeamFindings": "No evidence of Yondr or inaccessible storage at any Worcester school. No bell-to-bell scope. Worcester (second-largest in MA) notably slow to harden policy; positioned to comply with state law rather than lead.",
+      "chIdxStrengths": [
+        "Adopted as formal SC policy (not just school-level rules)",
+        "Covers full device suite (phones, tablets, earbuds, cameras, smartwatches implied)",
+        "Bars parent-to-student class-time communication",
+        "Defines escalating enforcement"
+      ],
+      "chIdxConcerns": [
+        "NO_bell_to_bell (lunch + non-instructional explicitly permitted)",
+        "NO_inaccessible_storage ('out of sight' in possession only)",
+        "enforcement_falls_on_teachers_inconsistent",
+        "teacher_discretion_educational_use_broad_undefined",
+        "NO_Yondr_lockers_hardware_at_any_school",
+        "waiting_on_DESE_guidance_not_pre_empting"
+      ],
+      "redTeamVerified": "2026-05-23"
     },
     "2509870": {
       "districtId": "2509870",
       "districtName": "Quincy School District",
       "tier": 2,
-      "policySummary": "Quincy School Committee subcommittee unanimously moved a strict all-day Yondr pouch policy out of committee in April 2026; full School Committee vote pending. Coverage: every middle and high school student. Phones turned off and locked in Yondr at start of day, kept by student, unlocked at dismissal.",
-      "scope": "9-12",
-      "enforcement": "hardware",
+      "policySummary": "Operative May 2026: students must power down and put away phones during classes; no restriction at lunch or between classes. Subcommittee unanimously advanced a Yondr bell-to-bell policy April 1, 2026; scheduled for full SC vote April 8, 2026 (passage unconfirmed); implementation Fall 2026 at earliest. Pending policy would cover 6-12 only — K-5 excluded.",
+      "scope": "current-K-12-weak",
+      "enforcement": "off-and-away",
       "effectiveDate": "2026-04",
       "enrollment": 9700,
       "sources": [
         {
+          "type": "district",
+          "title": "Quincy SC Subcommittee on cell phone policy (April 1, 2026)",
+          "url": "https://www.youtube.com/watch?v=IoeLD-Cqiwo",
+          "publisher": "Quincy Public Schools",
+          "date": "2026-04-01"
+        },
+        {
+          "type": "district",
+          "title": "QPS School Committee agendas + minutes",
+          "url": "https://www.quincypublicschools.com/school_committee/agendas_and_minutes",
+          "publisher": "Quincy Public Schools",
+          "date": "2026-05-01"
+        },
+        {
+          "type": "district",
+          "title": "QPS policy manual",
+          "url": "https://www.quincypublicschools.com/school_committee/policy_manual",
+          "publisher": "Quincy Public Schools",
+          "date": "2026-05-01"
+        },
+        {
+          "type": "news",
           "title": "Mass. House to vote on youth social media ban, strict school cellphone ban",
           "url": "https://www.boston.com/news/local-news/2026/04/06/mass-house-to-vote-on-youth-social-media-ban-strict-school-cellphone-ban/",
           "publisher": "Boston.com",
           "date": "2026-04-06"
         }
       ],
-      "lastVerified": "2026-04-30",
-      "confidence": "medium",
+      "lastVerified": "2026-05-23",
+      "confidence": "high",
       "news_supersedes_handbook": true,
       "news_supersedes_handbook_date": "2026-04-06",
-      "news_supersedes_handbook_publisher": "Boston.com"
+      "news_supersedes_handbook_publisher": "Boston.com",
+      "exceptionsFound": [
+        "Lunch periods exempt",
+        "Passing time exempt",
+        "Pending policy excludes K-5"
+      ],
+      "edtechNotes": "Pending Yondr policy would deploy magnetic locking pouches for 6-12 (modeled on Taunton). Currently no hardware enforcement.",
+      "redTeamFindings": "Operative May 2026 is still Tier 2. Pending Yondr policy was at full SC vote April 8 2026 — passage unconfirmed from public sources. Even on passage, Fall 2026 rollout. Re-verify August 2026.",
+      "chIdxStrengths": [
+        "District leadership publicly pushing stricter policy",
+        "Subcommittee unanimously advanced Yondr bell-to-bell measure April 1 2026",
+        "Pending policy includes inaccessible hardware storage"
+      ],
+      "chIdxConcerns": [
+        "lunch_passing_access (current operative policy)",
+        "class_only_enforcement_admin_says_not_working",
+        "pending_policy_excludes_K_5",
+        "April_8_vote_passage_unconfirmed",
+        "implementation_Fall_2026_at_earliest"
+      ],
+      "redTeamVerified": "2026-05-23"
     },
     "2511520": {
       "districtId": "2511520",
@@ -699,24 +1141,65 @@
       "districtId": "2504980",
       "districtName": "Framingham School District",
       "tier": 2,
-      "policySummary": "Framingham HS adopted no-cell-phones-in-classroom restriction; allowed in hallways and at lunch. District-wide K-12 scope not yet verified. (Christa McAuliffe Charter School in Framingham uses Yondr but is a charter, not district.)",
-      "scope": "9-12",
+      "policySummary": "FHS adopted classroom-only no-phones policy starting 2024-25: phones off-and-away in backpacks or wall-mounted classroom holders during instructional time. Students retain phone access in hallways and at lunch. Principal Mark Albright + FTA President Christine Mulroney report consistent enforcement and positive effects. K-8 / 9-elementary policy not publicly documented.",
+      "scope": "FHS-9-12-classroom-only",
       "enforcement": "off-and-away",
       "effectiveDate": "2024-09",
       "enrollment": 9500,
       "sources": [
         {
-          "title": "Educators Seek Restrictions on Phones, Electronic Devices",
+          "type": "news",
+          "title": "Framingham HS cellphone policy enforcement off to good start",
+          "url": "https://wbznewsradio.iheart.com/content/framingham-high-schools-cell-phone-policy-enforcement-off-to-good-start/",
+          "publisher": "WBZ NewsRadio",
+          "date": "2024-10-01"
+        },
+        {
+          "type": "news",
+          "title": "Educators seek restrictions phones electronic devices",
           "url": "https://www.massteacher.org/MTAtoday/all-news-articles/educators-seek-restrictions-phones-electronic-devices",
-          "publisher": "Massachusetts Teachers Association",
+          "publisher": "MTA Today",
           "date": "2024-12-01"
+        },
+        {
+          "type": "news",
+          "title": "Mass. Senate votes to ban cellphones in public schools",
+          "url": "https://www.wgbh.org/news/politics/2025-07-31/massachusetts-senate-votes-to-ban-cellphones-in-public-schools",
+          "publisher": "GBH",
+          "date": "2025-07-31"
+        },
+        {
+          "type": "district",
+          "title": "FHS site",
+          "url": "https://fhs.framingham.k12.ma.us/56447_3",
+          "publisher": "Framingham High School",
+          "date": "2025-09-01"
         }
       ],
-      "lastVerified": "2026-04-30",
-      "confidence": "medium",
+      "lastVerified": "2026-05-23",
+      "confidence": "high",
       "news_supersedes_handbook": true,
       "news_supersedes_handbook_date": "2024-12-01",
-      "news_supersedes_handbook_publisher": "Massachusetts Teachers Association"
+      "news_supersedes_handbook_publisher": "Massachusetts Teachers Association",
+      "exceptionsFound": [
+        "Lunch periods exempt",
+        "Hallway/passing time exempt",
+        "Storage is teacher-accessible (backpack/wall caddy) — not locked"
+      ],
+      "edtechNotes": "No hardware storage. Wall-mounted classroom phone holders are visible/accessible. Backpack storage is honor-system. Rep. Jack Lewis (D-Framingham, House Education Chair) sponsors statewide ban.",
+      "redTeamFindings": "Tier 2 holds. FTA president's own quote that 'students still could use their phones and connect to social media in the hallways and during lunch' effectively confirms tier 2. K-8 district-wide policy not publicly documented (handbook portal returns 403).",
+      "chIdxStrengths": [
+        "FTA leadership publicly advocates statewide bell-to-bell legislation",
+        "House Education Chair represents this district",
+        "FHS reports consistent enforcement at HS level"
+      ],
+      "chIdxConcerns": [
+        "accessible_storage (backpack or wall caddy — NOT locked)",
+        "lunch_passing_access (FTA president explicitly confirms loophole)",
+        "scope_only_FHS_9_12 (K-8 + 9 elementaries not documented)",
+        "no_hardware_storage_anywhere"
+      ],
+      "redTeamVerified": "2026-05-23"
     },
     "2503870": {
       "districtId": "2503870",
@@ -1677,27 +2160,54 @@
       "districtId": "2507110",
       "districtName": "Lynn School District",
       "tier": 2,
-      "policySummary": "Updated district-wide policy effective Sept 1, 2025: cell phones must be off and not visible during the school day, including during lunch and in hallways. Progressive discipline for repeat violations (parent contact → confiscation → detention → suspension). IEP/504/health-plan accommodations.",
-      "scope": "K-12",
+      "policySummary": "Effective Sept 1, 2025: cellphones must be powered off and out of sight throughout the school day, INCLUDING lunch and hallways. Students needing to reach parents must use school telephones. K-12 all grades. Adopted by SC in proactive anticipation of state bell-to-bell legislation. Supt. Alvarez (who designed it) resigned Oct 2025; Cohen interim — policy remains in force but enforcement softness is a live risk.",
+      "scope": "K-12-incl-lunch-hallways",
       "enforcement": "off-and-away",
       "effectiveDate": "2025-09",
       "enrollment": 16000,
       "sources": [
         {
-          "title": "Lynn Public Schools ring out new cell-phone rules",
+          "type": "news",
+          "title": "Lynn Public Schools ring out new cellphone rules",
           "url": "https://itemlive.com/2025/08/05/lynn-public-schools-ring-out-new-cellphone-rules/",
-          "publisher": "Item Live",
+          "publisher": "The Daily Item",
           "date": "2025-08-05"
         },
         {
-          "title": "Student Device Policy",
+          "type": "district",
+          "title": "Student device policy",
           "url": "https://www.lynnschools.org/resources/student_resources/policies_and_codes/student_device_policy",
           "publisher": "Lynn Public Schools",
           "date": "2025-09-01"
+        },
+        {
+          "type": "news",
+          "title": "Lynn Superintendent Alvarez resigns",
+          "url": "https://itemlive.com/2025/10/09/lynn-superintendent-resignation-alvarez/",
+          "publisher": "The Daily Item",
+          "date": "2025-10-09"
         }
       ],
-      "lastVerified": "2026-04-30",
-      "confidence": "high"
+      "lastVerified": "2026-05-23",
+      "confidence": "high",
+      "exceptionsFound": [
+        "IEP / 504 / Health Plan accommodations",
+        "AFT-MA Sec/Treasurer publicly objected to cafeteria scope (potential enforcement softening)"
+      ],
+      "edtechNotes": "Off-and-away in a 15.9k-student gateway district. No pouches purchased. Compliance depends entirely on staff enforcement. Supt. who designed it departed ~5 weeks after rollout.",
+      "redTeamFindings": "Phase-3 sweep label 'Lynn HS' was incomplete — this is K-12 not HS-only. Strong within tier 2 (covers lunch + hallways). Material risk that Cohen administration weakens cafeteria provision given documented union/parent friction.",
+      "chIdxStrengths": [
+        "Whole-day scope including lunch + hallways (stronger than typical tier 2)",
+        "K-12 not HS-only",
+        "Explicit progressive-discipline ladder with alternatives to suspension"
+      ],
+      "chIdxConcerns": [
+        "NO_hardware_storage_anywhere",
+        "leadership_turnover_during_rollout (Alvarez resigned Oct 2025)",
+        "staff_discretion_dependent_off_and_out_of_sight",
+        "union_pushback_on_cafeteria_scope (potential weakening risk)"
+      ],
+      "redTeamVerified": "2026-05-23"
     },
     "2503990": {
       "districtId": "2503990",
@@ -3270,14 +3780,50 @@
       "districtId": "2506660",
       "districtName": "Lawrence School District",
       "tier": 1,
-      "policySummary": "Handbook reviewed: ministrator Signature Chaperone Signature Please sign below giving your permission for your child to attend. Por favor firme abajo dando su permiso para que su hijo\\a asista. Parent Emergency Contact ",
-      "scope": "unknown",
+      "policySummary": "No structured district-wide cell-phone policy. Only a generic 'C9' disciplinary code line in the Code of Conduct Handbook SY23-24 (lawrence.k12.ma.us) prohibiting electronic devices during regular school hours as a minor Code C offense. Lawrence MA remains under state receivership; new receiver Lauren Woo Jan 2026. No news coverage of any phone-policy action in 2024-2026. Statewide mandate (S.2561) will force adoption by Fall 2026.",
+      "scope": "no-structured-policy",
       "enforcement": "none",
       "effectiveDate": "",
       "enrollment": null,
-      "sources": [],
-      "lastVerified": "2026-05-20",
-      "confidence": "low"
+      "sources": [
+        {
+          "type": "district",
+          "title": "Lawrence MA Code of Conduct Handbook SY23-24 (Code C9, p.10)",
+          "url": "https://www.lawrence.k12.ma.us/files/lps/LPSdistrictpolicies/LPSCodeofConductbookSY23-24FINAL72023_English.pdf",
+          "publisher": "Lawrence Public Schools",
+          "date": "2023-07-01"
+        },
+        {
+          "type": "district",
+          "title": "LPS Students' Rights and Code of Conduct page",
+          "url": "https://www.lawrence.k12.ma.us/about/district/policies/students-rights-and-the-code-of-conduct",
+          "publisher": "Lawrence Public Schools",
+          "date": "2026-05-23"
+        },
+        {
+          "type": "district",
+          "title": "LPS Receiver page (Lauren Woo)",
+          "url": "https://www.lawrence.k12.ma.us/about/district/receiver",
+          "publisher": "Lawrence Public Schools",
+          "date": "2026-01-01"
+        }
+      ],
+      "lastVerified": "2026-05-23",
+      "confidence": "medium",
+      "exceptionsFound": [
+        "None defined in policy text — only general disciplinary discretion"
+      ],
+      "edtechNotes": "District under DESE receivership since 2011. Handbook references 'Student Technology and Online Acceptable Use Policy and Guidelines' (IJNDB) but no standalone phone storage protocol.",
+      "redTeamFindings": "WARNING: Google searches for 'Lawrence Public Schools cell phone policy' overwhelmingly return Lawrence, KS (USD 497) results — Lawrence KS has dominant SEO + structured policy effective Jan 6 2025. Lawrence Township NJ + Lawrence Union Free SD NY also have published policies. Lawrence MA does NOT. Multiple LLM/search summaries conflate these districts. Tracker note: 'NO POLICY (NOT KS/NJ/NY).' Direct curl + pdftotext on the SY23-24 handbook confirms C9 is the only phone provision.",
+      "chIdxStrengths": [],
+      "chIdxConcerns": [
+        "NO_district_policy_beyond_minor_disciplinary_code_C9",
+        "no_storage_requirement",
+        "no_grade_band_scope",
+        "no_consequences_ladder_beyond_generic_Code_C",
+        "Google_conflation_with_Lawrence_KS_NJ_NY_creates_research_hazard"
+      ],
+      "redTeamVerified": "2026-05-23"
     },
     "2506690": {
       "districtId": "2506690",
