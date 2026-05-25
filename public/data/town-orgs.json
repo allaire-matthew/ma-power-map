@@ -315,10 +315,10 @@
         "org": "Wait Until 8th",
         "chapterName": "Wait Until 8th \u2013 Marblehead",
         "town": "Marblehead",
-        "leadName": null,
+        "leadName": "Leah Quested / Jessica Murphy / Katie Melanson",
         "leadEmail": null,
-        "type": "chapter",
-        "notes": "FB group 647342045125213; SFC US locator"
+        "type": "co-organizers (Village School)",
+        "notes": "Named in Marblehead Current 6/4/25; Village School parent organizers; no direct emails surfaced; FB group 647342045125213; SFC US locator"
       }
     ],
     "canton": [
@@ -338,7 +338,7 @@
         "chapterName": "Wait Until 8th \u2013 Cohasset",
         "town": "Cohasset",
         "leadName": "Abigail Sullivan, Ed.D.",
-        "leadEmail": null,
+        "leadEmail": "abigail@cohassetlearningstudio.com",
         "type": "founder / account owner",
         "notes": "Also founder of Cohasset Learning Studio (cohassetlearningstudio.com); IG @waituntil8th_cohasset; SFC US locator"
       }
@@ -494,10 +494,10 @@
         "org": "Independent",
         "chapterName": "Heads Up Phones Down Newburyport",
         "town": "Newburyport",
-        "leadName": null,
+        "leadName": "Olivia Boger / Kate Suchecki",
         "leadEmail": null,
-        "type": "chapter",
-        "notes": "FB group 3743433005924772; SFC US locator"
+        "type": "co-founders",
+        "notes": "Named in Newburyport News (article_6ad62ddc); Olivia Boger also ED of Runway for Recovery (LinkedIn: /in/oboger/); FB group 3743433005924772; no direct email surfaced"
       }
     ],
     "watertown": [
@@ -506,9 +506,9 @@
         "chapterName": "BSF / DFSPP (co-author)",
         "town": "Watertown",
         "leadName": "Kara Lopez Salvi",
-        "leadEmail": null,
-        "type": "advocate; school counselor; Watertown HS parent",
-        "notes": "Bridge between BSF and Watertown's Doorman pilot; co-author w/ Deb Mann Schmill (Itemlive 5/11/26)"
+        "leadEmail": "kara_lopez@psbma.org",
+        "type": "advocate; school counselor",
+        "notes": "School counselor at Brookline HS (Alt Choice Ed) \u2014 work email kara_lopez@psbma.org; co-author w/ Deb Mann Schmill on Itemlive 5/11/26 'Tech Is Not The Answer'; Watertown HS parent per Itemlive op-ed"
       }
     ],
     "ma statewide": [
@@ -530,7 +530,7 @@
         "leadName": "Allison Baker, MD",
         "leadEmail": null,
         "type": "chapter lead / spokesperson",
-        "notes": "Psychiatrist; profiled Boston Globe 5/17/24; site wellesleymspto.org/wait-until-8th; allisonbakermd.com"
+        "notes": "Child psychiatrist MGH/Harvard; no direct email \u2014 office (646) 580-8673 or allisonbakermd.com contact form; Wellesley MS PTO at wmsptoinfo@gmail.com; profiled Boston Globe 5/17/24"
       }
     ]
   }
