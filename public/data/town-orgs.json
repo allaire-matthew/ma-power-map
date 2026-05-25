@@ -1,6 +1,6 @@
 {
   "_schemaVersion": 1,
-  "_lastUpdated": "2026-05-22",
+  "_lastUpdated": "2026-05-25",
   "_source": "Google Sheet 16q_wrfljGEbMuUyeAeovZKk_TVTuoGgUf7mqb1uLqtw / IRL Councils tab.",
   "byTown": {
     "needham": [
@@ -12,6 +12,15 @@
         "leadEmail": "speechmelissa@gmail.com",
         "type": "community lead",
         "notes": null
+      },
+      {
+        "org": "Becca Schmill Foundation",
+        "chapterName": "Becca Schmill Foundation",
+        "town": "Needham",
+        "leadName": "Deb Mann Schmill",
+        "leadEmail": "phonefreeschools@bsfyouth.org",
+        "type": "founder & president; co-founder Distraction-Free Schools Policy Project",
+        "notes": "BSF is joint partner with SFC US on state coalitions; drafted the MA model bill; co-authored 5/11/26 Itemlive op-ed with Kara Lopez Salvi"
       }
     ],
     "brookline": [
@@ -58,13 +67,13 @@
     ],
     "lexington": [
       {
-        "org": "Turning Life On",
+        "org": "Turning Life On / Lex Kids Be Kids",
         "chapterName": "Lex Kids Be Kids",
         "town": "Lexington",
         "leadName": "Wendi Hoffer",
         "leadEmail": "wendilr@gmail.com",
-        "type": "community lead",
-        "notes": null
+        "type": "community lead / steering committee",
+        "notes": "Founded Spring 2024; ~170 members; partnered with Stow on Good Neighbor Day; site lexkidsbekids.org; steering also: Katie McCafferty; chapter list: schools-and-devices@gaggle.email"
       }
     ],
     "lincoln": [
@@ -140,6 +149,17 @@
         "notes": null
       }
     ],
+    "grafton": [
+      {
+        "org": "The Balance Project",
+        "chapterName": "Grafton MA",
+        "town": "Grafton",
+        "leadName": "Katherine Giacometti",
+        "leadEmail": "katiegiacometti@gmail.com",
+        "type": "community lead",
+        "notes": null
+      }
+    ],
     "marion": [
       {
         "org": "The Balance Project",
@@ -147,17 +167,8 @@
         "town": "Marion",
         "leadName": "Jessica Barrett",
         "leadEmail": "jbarrett525@gmail.com",
-        "type": "de-facto lead (Member status in FN, no formal Community Lead assigned)",
-        "notes": "Verified in Four Norms chapter; sole local member"
-      },
-      {
-        "org": "The Balance Project",
-        "chapterName": "Marion, MA",
-        "town": "Marion",
-        "leadName": "Jessica Barrett",
-        "leadEmail": "jbarrett525@gmail.com",
-        "type": "community lead",
-        "notes": null
+        "type": "de-facto lead (Member status in FN, no formal Community Lead)",
+        "notes": "Verified in Four Norms chapter 2026-05-21; sole local member"
       }
     ],
     "norwell": [
@@ -215,22 +226,22 @@
     ],
     "arlington": [
       {
-        "org": "Independent",
+        "org": "Independent / SFC US Leadership Council",
         "chapterName": "Tech-Wise Arlington",
         "town": "Arlington",
         "leadName": "Jeffrey Miller",
         "leadEmail": "jeff.b.miller@gmail.com",
         "type": "community lead",
-        "notes": null
+        "notes": "Also founder of Arlington Parents \u2013 Smartphone Sense (see row 23); SFC US Leadership Council (Finance); Arlington Libraries Foundation"
       },
       {
-        "org": "Independent",
+        "org": "Independent (SFC US locator)",
         "chapterName": "Arlington MA Smartphone Sense",
         "town": "Arlington",
-        "leadName": null,
-        "leadEmail": null,
-        "type": "chapter",
-        "notes": "FB group 1379161002719463; SFC US locator"
+        "leadName": "Jeffrey Miller",
+        "leadEmail": "jeff.b.miller@gmail.com",
+        "type": "founder",
+        "notes": "Same Jeff Miller as Tech-Wise Arlington (row 21); FB group 1379161002719463; possibly alias / parallel chapter"
       }
     ],
     "malden": [
@@ -282,10 +293,10 @@
         "org": "Wait Until 8th",
         "chapterName": "Wait Until 8th \u2013 Hingham",
         "town": "Hingham",
-        "leadName": null,
-        "leadEmail": null,
-        "type": "chapter",
-        "notes": "IG @waituntil8th_hingham; SFC US locator"
+        "leadName": "Christina Earle / Margaret Estoff / Johanna Goulding / Lizzie Inglis / Sarah Sigovitch",
+        "leadEmail": "waituntil8thhingham@gmail.com",
+        "type": "co-founders (5)",
+        "notes": "Hingham Anchor profile; IG @waituntil8th_hingham; SFC US locator"
       }
     ],
     "westwood": [
@@ -326,10 +337,10 @@
         "org": "Wait Until 8th",
         "chapterName": "Wait Until 8th \u2013 Cohasset",
         "town": "Cohasset",
-        "leadName": null,
+        "leadName": "Abigail Sullivan, Ed.D.",
         "leadEmail": null,
-        "type": "chapter",
-        "notes": "IG @waituntil8th_cohasset; SFC US locator"
+        "type": "founder / account owner",
+        "notes": "Also founder of Cohasset Learning Studio (cohassetlearningstudio.com); IG @waituntil8th_cohasset; SFC US locator"
       }
     ],
     "scituate": [
@@ -465,6 +476,123 @@
         "leadEmail": "isabelstomberg@gmail.com",
         "type": "community lead",
         "notes": "Four Norms hub chapter; NOT on SFC US locator; Anne Roecklein (North Adams) also FN member"
+      }
+    ],
+    "ashland": [
+      {
+        "org": "Independent (EMF/wireless safety focus)",
+        "chapterName": "Massachusetts for Safe Technology",
+        "town": "Ashland",
+        "leadName": null,
+        "leadEmail": "MA4SafeTech@gmail.com",
+        "type": "advocacy org",
+        "notes": "ma4safetech.org; SFC US locator; scope is wireless-radiation safety, broader than phone-free schools"
+      }
+    ],
+    "newburyport": [
+      {
+        "org": "Independent",
+        "chapterName": "Heads Up Phones Down Newburyport",
+        "town": "Newburyport",
+        "leadName": null,
+        "leadEmail": null,
+        "type": "chapter",
+        "notes": "FB group 3743433005924772; SFC US locator"
+      }
+    ],
+    "watertown": [
+      {
+        "org": "Becca Schmill Foundation / Distraction-Free Schools Policy Project",
+        "chapterName": "BSF / DFSPP (co-author)",
+        "town": "Watertown",
+        "leadName": "Kara Lopez Salvi",
+        "leadEmail": null,
+        "type": "advocate; school counselor; Watertown HS parent",
+        "notes": "Bridge between BSF and Watertown's Doorman pilot; co-author w/ Deb Mann Schmill (Itemlive 5/11/26)"
+      },
+      {
+        "org": "Watertown High School",
+        "chapterName": "Watertown HS / Doorman pilot",
+        "town": "Watertown",
+        "leadName": "Joel Giacobozzi",
+        "leadEmail": null,
+        "type": "principal",
+        "notes": "First-in-nation Doorman pilot (magnetic-pouch alternative); WBUR 8/25/25"
+      }
+    ],
+    "ma statewide": [
+      {
+        "org": "Distraction-Free Schools Policy Project (DFSPP)",
+        "chapterName": "Distraction-Free Schools Policy Project",
+        "town": "MA statewide",
+        "leadName": null,
+        "leadEmail": "phonefreeschools@bsfyouth.org",
+        "type": "policy initiative (BSF + SFC US joint)",
+        "notes": "Drafted the MA model bill; site distractionfreeschools.com; no public MA roster"
+      }
+    ],
+    "wellesley": [
+      {
+        "org": "Wait Until 8th",
+        "chapterName": "Wait Until 8th \u2013 Wellesley (via Wellesley MS PTO)",
+        "town": "Wellesley",
+        "leadName": "Allison Baker, MD",
+        "leadEmail": null,
+        "type": "chapter lead / spokesperson",
+        "notes": "Psychiatrist; profiled Boston Globe 5/17/24; site wellesleymspto.org/wait-until-8th; allisonbakermd.com"
+      }
+    ],
+    "ipswich": [
+      {
+        "org": "Ipswich Public Schools",
+        "chapterName": "Ipswich Public Schools",
+        "town": "Ipswich",
+        "leadName": "Brian Blake",
+        "leadEmail": null,
+        "type": "superintendent",
+        "notes": "AG Campbell's flagship district; AG visited 5/8/26 to announce $500K Phone-Free Schools Support Grant"
+      },
+      {
+        "org": "Ipswich High School",
+        "chapterName": "Ipswich HS",
+        "town": "Ipswich",
+        "leadName": "Jonathan Mitchell",
+        "leadEmail": null,
+        "type": "principal",
+        "notes": "AG flagship case study; via ipsk12.net/Page/553"
+      }
+    ],
+    "holyoke": [
+      {
+        "org": "Holyoke Public Schools",
+        "chapterName": "Holyoke Public Schools",
+        "town": "Holyoke",
+        "leadName": "Anthony Soto",
+        "leadEmail": null,
+        "type": "interim superintendent",
+        "notes": "Adopted phone restrictions; WBUR 8/25/25"
+      }
+    ],
+    "mashpee": [
+      {
+        "org": "Coalition for Student Mental Health",
+        "chapterName": "Coalition for Student Mental Health",
+        "town": "Mashpee",
+        "leadName": "Max Nash",
+        "leadEmail": null,
+        "type": "founder (student-led)",
+        "notes": "HS junior; named in Boston Globe 4/19/26 'Beacon Hill social media legislation' coverage"
+      }
+    ],
+    "cambridge": [
+      {
+        "org": "Appstinence",
+        "chapterName": "Appstinence",
+        "town": "Cambridge",
+        "leadName": "Gabriela Nguyen",
+        "leadEmail": null,
+        "type": "founder",
+        "notes": "Harvard HGSE student org; digital-lifestyle planning; appstinence.org; HGSE 4/25 profile"
       }
     ]
   }
