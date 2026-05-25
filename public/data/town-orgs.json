@@ -509,15 +509,6 @@
         "leadEmail": null,
         "type": "advocate; school counselor; Watertown HS parent",
         "notes": "Bridge between BSF and Watertown's Doorman pilot; co-author w/ Deb Mann Schmill (Itemlive 5/11/26)"
-      },
-      {
-        "org": "Watertown High School",
-        "chapterName": "Watertown HS / Doorman pilot",
-        "town": "Watertown",
-        "leadName": "Joel Giacobozzi",
-        "leadEmail": null,
-        "type": "principal",
-        "notes": "First-in-nation Doorman pilot (magnetic-pouch alternative); WBUR 8/25/25"
       }
     ],
     "ma statewide": [
@@ -540,59 +531,6 @@
         "leadEmail": null,
         "type": "chapter lead / spokesperson",
         "notes": "Psychiatrist; profiled Boston Globe 5/17/24; site wellesleymspto.org/wait-until-8th; allisonbakermd.com"
-      }
-    ],
-    "ipswich": [
-      {
-        "org": "Ipswich Public Schools",
-        "chapterName": "Ipswich Public Schools",
-        "town": "Ipswich",
-        "leadName": "Brian Blake",
-        "leadEmail": null,
-        "type": "superintendent",
-        "notes": "AG Campbell's flagship district; AG visited 5/8/26 to announce $500K Phone-Free Schools Support Grant"
-      },
-      {
-        "org": "Ipswich High School",
-        "chapterName": "Ipswich HS",
-        "town": "Ipswich",
-        "leadName": "Jonathan Mitchell",
-        "leadEmail": null,
-        "type": "principal",
-        "notes": "AG flagship case study; via ipsk12.net/Page/553"
-      }
-    ],
-    "holyoke": [
-      {
-        "org": "Holyoke Public Schools",
-        "chapterName": "Holyoke Public Schools",
-        "town": "Holyoke",
-        "leadName": "Anthony Soto",
-        "leadEmail": null,
-        "type": "interim superintendent",
-        "notes": "Adopted phone restrictions; WBUR 8/25/25"
-      }
-    ],
-    "mashpee": [
-      {
-        "org": "Coalition for Student Mental Health",
-        "chapterName": "Coalition for Student Mental Health",
-        "town": "Mashpee",
-        "leadName": "Max Nash",
-        "leadEmail": null,
-        "type": "founder (student-led)",
-        "notes": "HS junior; named in Boston Globe 4/19/26 'Beacon Hill social media legislation' coverage"
-      }
-    ],
-    "cambridge": [
-      {
-        "org": "Appstinence",
-        "chapterName": "Appstinence",
-        "town": "Cambridge",
-        "leadName": "Gabriela Nguyen",
-        "leadEmail": null,
-        "type": "founder",
-        "notes": "Harvard HGSE student org; digital-lifestyle planning; appstinence.org; HGSE 4/25 profile"
       }
     ]
   }
