@@ -1,6 +1,6 @@
 {
   "_schemaVersion": 1,
-  "_lastUpdated": "2026-05-25",
+  "_lastUpdated": "2026-05-27",
   "_source": "Google Sheet 16q_wrfljGEbMuUyeAeovZKk_TVTuoGgUf7mqb1uLqtw / IRL Councils tab.",
   "byTown": {
     "needham": [
@@ -233,15 +233,6 @@
         "leadEmail": "jeff.b.miller@gmail.com",
         "type": "community lead",
         "notes": "Also founder of Arlington Parents \u2013 Smartphone Sense (see row 23); SFC US Leadership Council (Finance); Arlington Libraries Foundation"
-      },
-      {
-        "org": "Independent (SFC US locator)",
-        "chapterName": "Arlington MA Smartphone Sense",
-        "town": "Arlington",
-        "leadName": "Jeffrey Miller",
-        "leadEmail": "jeff.b.miller@gmail.com",
-        "type": "founder",
-        "notes": "Same Jeff Miller as Tech-Wise Arlington (row 21); FB group 1379161002719463; possibly alias / parallel chapter"
       }
     ],
     "malden": [
@@ -509,17 +500,6 @@
         "leadEmail": "kara_lopez@psbma.org",
         "type": "advocate; school counselor",
         "notes": "School counselor at Brookline HS (Alt Choice Ed) \u2014 work email kara_lopez@psbma.org; co-author w/ Deb Mann Schmill on Itemlive 5/11/26 'Tech Is Not The Answer'; Watertown HS parent per Itemlive op-ed"
-      }
-    ],
-    "ma statewide": [
-      {
-        "org": "Distraction-Free Schools Policy Project (DFSPP)",
-        "chapterName": "Distraction-Free Schools Policy Project",
-        "town": "MA statewide",
-        "leadName": null,
-        "leadEmail": "phonefreeschools@bsfyouth.org",
-        "type": "policy initiative (BSF + SFC US joint)",
-        "notes": "Drafted the MA model bill; site distractionfreeschools.com; no public MA roster"
       }
     ],
     "wellesley": [
