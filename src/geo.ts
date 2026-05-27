@@ -310,6 +310,34 @@ export async function loadPhonePolicies(): Promise<Record<string, PhonePolicy>> 
   return phonePoliciesPromise
 }
 
+export type AiPilotData = {
+  program: {
+    name: string
+    sponsor: string
+    partner: string
+    announced: string
+    schoolYear: string
+    scope: string
+  }
+  districts: { districtId: string; districtName: string }[]
+}
+
+let aiPilotPromise: Promise<AiPilotData | null> | null = null
+
+export async function loadAiPilotDistricts(): Promise<AiPilotData | null> {
+  if (!aiPilotPromise) {
+    aiPilotPromise = (async () => {
+      try {
+        const url = `${import.meta.env.BASE_URL}data/ai-pilot-districts.json`
+        return await fetchJson<AiPilotData>(url)
+      } catch {
+        return null
+      }
+    })()
+  }
+  return aiPilotPromise
+}
+
 export type SchoolCommitteeLink = {
   name: string
   town: string

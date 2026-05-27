@@ -2,6 +2,7 @@ export type LayerKey =
   | 'phoneFree'
   | 'sizeGradient'
   | 'parentPresence'
+  | 'aiPilot'
   | 'counties'
   | 'congressional'
   | 'stateSenate'
@@ -14,6 +15,7 @@ export const defaultLayers: LayerState = {
   phoneFree: true,
   sizeGradient: false,
   parentPresence: true,
+  aiPilot: false,
   counties: false,
   congressional: false,
   stateSenate: false,
@@ -29,6 +31,7 @@ const LABELS: { key: LayerKey; label: string; group: 'attribute' | 'geo' }[] = [
   { key: 'phoneFree', label: 'Phone-free status', group: 'attribute' },
   { key: 'sizeGradient', label: 'Size gradient', group: 'attribute' },
   { key: 'parentPresence', label: 'Parent presence', group: 'attribute' },
+  { key: 'aiPilot', label: 'AI pilot', group: 'attribute' },
   { key: 'counties', label: 'Counties', group: 'geo' },
   { key: 'congressional', label: 'US House', group: 'geo' },
   { key: 'stateSenate', label: 'MA Senate', group: 'geo' },

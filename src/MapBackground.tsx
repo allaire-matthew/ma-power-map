@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   getTownToDistrict,
+  loadAiPilotDistricts,
   loadDemographics,
   loadLayer,
   loadPhonePolicies,
@@ -88,6 +89,7 @@ export function MapBackground({
   const [policies, setPolicies] = useState<Record<string, PhonePolicy>>({})
   const [townToDistrict, setTownToDistrict] = useState<Record<string, string>>({})
   const [townOrgs, setTownOrgs] = useState<Record<string, TownOrgChapter[]>>({})
+  const [aiPilotIds, setAiPilotIds] = useState<Set<string>>(new Set())
   const [demographics, setDemographics] = useState<Record<string, DistrictDemographics>>({})
   const svgRef = useRef<SVGSVGElement | null>(null)
   const groupRefs = useRef<Partial<Record<LayerName, SVGGElement | null>>>({})
@@ -144,6 +146,9 @@ export function MapBackground({
     })
     void loadTownOrgs().then((d) => {
       if (!cancelled && d) setTownOrgs(d.byTown ?? {})
+    })
+    void loadAiPilotDistricts().then((d) => {
+      if (!cancelled && d) setAiPilotIds(new Set(d.districts.map((x) => x.districtId)))
     })
     return () => {
       cancelled = true
@@ -413,6 +418,55 @@ export function MapBackground({
                   .join(' ')}
               />
             ))}
+
+          {/* AI-pilot districts: solid teal outline + centered "AI" badge.
+              Visually distinct channel from phone-free fill (color),
+              size gradient (alpha), and parent-presence dots (purple). */}
+          {layers.aiPilot &&
+            districts
+              .filter((f) => aiPilotIds.has(f.id))
+              .map((f) => (
+                <path
+                  key={`ai-out-${f.id}`}
+                  d={f.d}
+                  fill="rgba(13,148,136,0.10)"
+                  stroke="#0d9488"
+                  strokeWidth={1.8 / camera.z}
+                  pointerEvents="none"
+                />
+              ))}
+          {layers.aiPilot &&
+            districts
+              .filter((f) => aiPilotIds.has(f.id))
+              .map((f) => {
+                const [cx, cy] = f.centroid
+                return (
+                  <g key={`ai-badge-${f.id}`} pointerEvents="none">
+                    <rect
+                      x={cx - 9 / camera.z}
+                      y={cy - 6 / camera.z}
+                      width={18 / camera.z}
+                      height={12 / camera.z}
+                      rx={2 / camera.z}
+                      fill="#0d9488"
+                      stroke="white"
+                      strokeWidth={1.2 / camera.z}
+                    />
+                    <text
+                      x={cx}
+                      y={cy + 0.5 / camera.z}
+                      textAnchor="middle"
+                      dominantBaseline="central"
+                      fontSize={8 / camera.z}
+                      fontWeight={700}
+                      fill="white"
+                      style={{ fontFamily: 'system-ui, sans-serif' }}
+                    >
+                      AI
+                    </text>
+                  </g>
+                )
+              })}
 
           {/* Parent-presence dots. Each town with a chapter in
               town-orgs.json gets a small purple dot at its centroid. */}

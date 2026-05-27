@@ -89,6 +89,7 @@ export function Legend({
   const showPhone = layers.phoneFree
   const showSize = layers.sizeGradient
   const showParents = layers.parentPresence
+  const showAiPilot = layers.aiPilot
   const showCounties = layers.counties
   const showCong = layers.congressional
   const showSenate = layers.stateSenate
@@ -103,6 +104,7 @@ export function Legend({
     !showPhone &&
     !showSize &&
     !showParents &&
+    !showAiPilot &&
     !showCounties &&
     !showCong &&
     !showSenate &&
@@ -230,6 +232,28 @@ export function Legend({
             </div>
             <div className="text-[10px] text-slate-400 mt-1 leading-snug">
               From CIRL IRL-Councils sheet (Turning Life On, Balance Project, Schools Beyond Screens, Independent). Multi-chapter towns show a count inside the dot.
+            </div>
+          </div>
+        )}
+
+        {showAiPilot && (
+          <div>
+            <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider mb-1.5">
+              AI pilot
+            </div>
+            <div className="flex items-center gap-2">
+              <span
+                className="inline-flex items-center justify-center rounded-sm text-white text-[9px] font-bold shrink-0"
+                style={{ background: '#0d9488', width: 18, height: 12 }}
+              >
+                AI
+              </span>
+              <span>District in DESE/PLTW pilot</span>
+            </div>
+            <div className="text-[10px] text-slate-400 mt-1 leading-snug">
+              Healey-Driscoll + Project Lead The Way AI curriculum pilot,
+              announced Nov 2025. 30 districts, ~45 educators, ~1,600 students
+              in SY2025-26.
             </div>
           </div>
         )}
