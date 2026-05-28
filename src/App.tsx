@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Editor } from 'tldraw'
 import { Board, recenterCamera } from './Board'
 import { LayerToggles, type LayerState, defaultLayers } from './LayerToggles'
@@ -30,6 +30,8 @@ export default function App() {
   const [tierFilter, setTierFilter] = useState<TierFilter>('all')
   const [townOptions, setTownOptions] = useState<ProjectedFeature[]>([])
   const [searchQuery, setSearchQuery] = useState('')
+  const [activeIndex, setActiveIndex] = useState(0)
+  const activeOptionRef = useRef<HTMLLIElement>(null)
   const [selectMode, setSelectMode] = useState(false)
   const [selectedTowns, setSelectedTowns] = useState<Set<string>>(new Set())
   const [legendHidden, setLegendHidden] = useState(false)
@@ -59,10 +61,28 @@ export default function App() {
   const searchMatches = useMemo(() => {
     const q = searchQuery.trim().toLowerCase()
     if (!q) return []
-    return townOptions
-      .filter((t) => t.name.toLowerCase().includes(q))
-      .slice(0, 8)
+    // Prefix matches rank above mid-string matches; alphabetical within each.
+    const prefix: ProjectedFeature[] = []
+    const substr: ProjectedFeature[] = []
+    for (const t of townOptions) {
+      const n = t.name.toLowerCase()
+      if (n.startsWith(q)) prefix.push(t)
+      else if (n.includes(q)) substr.push(t)
+    }
+    const byName = (a: ProjectedFeature, b: ProjectedFeature) =>
+      a.name.localeCompare(b.name)
+    return [...prefix.sort(byName), ...substr.sort(byName)].slice(0, 8)
   }, [searchQuery, townOptions])
+
+  // Reset highlight to the top match whenever the result set changes.
+  useEffect(() => {
+    setActiveIndex(0)
+  }, [searchQuery])
+
+  // Keep the highlighted option scrolled into view during arrow-key nav.
+  useEffect(() => {
+    activeOptionRef.current?.scrollIntoView({ block: 'nearest' })
+  }, [activeIndex])
 
   const pickTown = (id: string) => {
     setPopupTownId(id)
@@ -157,33 +177,76 @@ export default function App() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search town…"
+              role="combobox"
+              aria-expanded={searchMatches.length > 0}
+              aria-controls="town-search-listbox"
+              aria-activedescendant={
+                searchMatches.length > 0
+                  ? `town-opt-${searchMatches[activeIndex]?.id}`
+                  : undefined
+              }
+              autoComplete="off"
               className="h-8 w-44 px-2 text-xs border border-slate-300 rounded focus:outline-none focus:ring-1 focus:ring-indigo-500"
               onKeyDown={(e) => {
-                if (e.key === 'Enter' && searchMatches.length > 0) {
-                  pickTown(searchMatches[0].id)
+                if (searchMatches.length === 0) {
+                  if (e.key === 'Escape') setSearchQuery('')
+                  return
+                }
+                if (e.key === 'ArrowDown') {
+                  e.preventDefault()
+                  setActiveIndex((i) => (i + 1) % searchMatches.length)
+                } else if (e.key === 'ArrowUp') {
+                  e.preventDefault()
+                  setActiveIndex(
+                    (i) => (i - 1 + searchMatches.length) % searchMatches.length,
+                  )
+                } else if (e.key === 'Enter') {
+                  e.preventDefault()
+                  const m = searchMatches[activeIndex] ?? searchMatches[0]
+                  if (m) pickTown(m.id)
                 } else if (e.key === 'Escape') {
                   setSearchQuery('')
                 }
               }}
             />
             {searchMatches.length > 0 && (
-              <ul className="absolute right-0 top-9 w-56 max-h-64 overflow-auto bg-white border border-slate-200 rounded shadow-lg z-30">
-                {searchMatches.map((t) => (
-                  <li key={t.id}>
-                    <button
-                      type="button"
-                      onClick={() => pickTown(t.id)}
-                      className="block w-full text-left px-2 py-1 text-xs hover:bg-slate-100"
+              <ul
+                id="town-search-listbox"
+                role="listbox"
+                className="absolute right-0 top-9 w-56 max-h-64 overflow-auto bg-white border border-slate-200 rounded shadow-lg z-30 py-1"
+              >
+                {searchMatches.map((t, i) => {
+                  const active = i === activeIndex
+                  return (
+                    <li
+                      key={t.id}
+                      id={`town-opt-${t.id}`}
+                      role="option"
+                      aria-selected={active}
+                      ref={active ? activeOptionRef : null}
                     >
-                      <span className="text-slate-900">{t.name}</span>
-                      {t.population != null && (
-                        <span className="text-slate-400 ml-1.5 tabular-nums">
-                          {t.population.toLocaleString()}
-                        </span>
-                      )}
-                    </button>
-                  </li>
-                ))}
+                      <button
+                        type="button"
+                        onClick={() => pickTown(t.id)}
+                        onMouseEnter={() => setActiveIndex(i)}
+                        className={`flex items-baseline justify-between w-full text-left px-2 py-1 text-xs ${
+                          active ? 'bg-indigo-50 text-indigo-900' : 'text-slate-900'
+                        }`}
+                      >
+                        <span className="truncate">{t.name}</span>
+                        {t.population != null && (
+                          <span
+                            className={`ml-2 shrink-0 tabular-nums ${
+                              active ? 'text-indigo-400' : 'text-slate-400'
+                            }`}
+                          >
+                            {t.population.toLocaleString()}
+                          </span>
+                        )}
+                      </button>
+                    </li>
+                  )
+                })}
               </ul>
             )}
           </div>
