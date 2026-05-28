@@ -1,6 +1,6 @@
 {
   "_schemaVersion": 1,
-  "_lastUpdated": "2026-05-27",
+  "_lastUpdated": "2026-05-28",
   "_source": "Google Sheet 16q_wrfljGEbMuUyeAeovZKk_TVTuoGgUf7mqb1uLqtw / IRL Councils tab.",
   "byTown": {
     "needham": [
@@ -62,7 +62,7 @@
         "leadName": "Jill Marquis",
         "leadEmail": "obiejill@yahoo.com",
         "type": "member (no formal lead)",
-        "notes": "No Community Lead designated; only other member"
+        "notes": null
       }
     ],
     "lexington": [
@@ -95,7 +95,7 @@
         "leadName": "Mckenzie Love",
         "leadEmail": "mckenzie@anxiousgeneration.com",
         "type": "member (no formal lead)",
-        "notes": "No Community Lead designated; Mckenzie is Anxious Generation staff"
+        "notes": "Mckenzie is Anxious Generation staff"
       }
     ],
     "winchester": [
@@ -232,7 +232,7 @@
         "leadName": "Jeffrey Miller",
         "leadEmail": "jeff.b.miller@gmail.com",
         "type": "community lead",
-        "notes": "Also founder of Arlington Parents \u2013 Smartphone Sense (see row 23); SFC US Leadership Council (Finance); Arlington Libraries Foundation"
+        "notes": "SFC US Leadership Council (Finance); Arlington Libraries Foundation"
       }
     ],
     "malden": [
@@ -254,7 +254,7 @@
         "leadName": null,
         "leadEmail": null,
         "type": "chapter",
-        "notes": "FB group 295124101384483; SFC US locator"
+        "notes": null
       }
     ],
     "braintree": [
@@ -397,15 +397,6 @@
       }
     ],
     "kingston": [
-      {
-        "org": "Wait Until 8th",
-        "chapterName": "Wait Until 8th \u2013 Kingston",
-        "town": "Kingston",
-        "leadName": null,
-        "leadEmail": null,
-        "type": "chapter",
-        "notes": "FB share/g/17P6j5uMVx; SFC US locator"
-      },
       {
         "org": "Turning Life On / Wait Until 8th",
         "chapterName": "Kingston, MA WU8",
