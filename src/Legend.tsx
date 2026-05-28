@@ -4,9 +4,7 @@ import { TIER_COLOR, TIER_LABEL } from './MapBackground'
 import {
   getTownToDistrict,
   loadLayer,
-  loadLegislators,
   loadPhonePolicies,
-  loadTownOrgs,
   type PhoneTier,
 } from './geo'
 import type { TierFilter } from './App'
@@ -81,10 +79,12 @@ export function Legend({
   layers,
   tierFilter,
   onTierFilter,
+  onHide,
 }: {
   layers: LayerState
   tierFilter: TierFilter
   onTierFilter: (t: TierFilter) => void
+  onHide?: () => void
 }) {
   const showPhone = layers.phoneFree
   const showSize = layers.sizeGradient
@@ -98,7 +98,6 @@ export function Legend({
 
   const coverage = useCoverage(showPhone)
   const mandate = formatDaysUntil(MANDATE_DATE)
-  const dataAges = useDataAges()
 
   if (
     !showPhone &&
@@ -120,15 +119,17 @@ export function Legend({
       onMouseDown={(e) => e.stopPropagation()}
       onClick={(e) => e.stopPropagation()}
     >
-      <div className="px-3 py-2 border-b border-slate-200 flex items-center justify-between">
-        <span className="font-semibold text-slate-900 text-[13px] tracking-tight">
-          Legend
-        </span>
-        <span className="text-[10px] uppercase tracking-wider text-slate-400">
-          live
-        </span>
-      </div>
-
+      {onHide && (
+        <button
+          type="button"
+          onClick={onHide}
+          title="Hide legend"
+          aria-label="Hide legend"
+          className="absolute top-1 right-1 z-10 w-5 h-5 flex items-center justify-center rounded text-slate-400 hover:text-slate-700 hover:bg-slate-100 text-[13px] leading-none"
+        >
+          ×
+        </button>
+      )}
       <div className="p-3 space-y-3">
         {showPhone && (
           <div>
@@ -229,9 +230,6 @@ export function Legend({
                 style={{ background: '#7c3aed' }}
               />
               <span>Town has a chapter on file</span>
-            </div>
-            <div className="text-[10px] text-slate-400 mt-1 leading-snug">
-              From CIRL IRL-Councils sheet (Turning Life On, Balance Project, Schools Beyond Screens, Independent). Multi-chapter towns show a count inside the dot.
             </div>
           </div>
         )}
@@ -409,57 +407,8 @@ export function Legend({
               Download phone-policies.json
             </a>
           </div>
-          {dataAges && (
-            <div className="mt-2 pt-1 border-t border-slate-100 text-slate-400">
-              <div className="font-medium text-slate-500">Data freshness</div>
-              <div>Legislators: {dataAges.legislators ?? '—'}</div>
-              <div>Org chapters: {dataAges.orgs ?? '—'}</div>
-              <div>Phone policies: {dataAges.policies ?? '—'}</div>
-              <div className="mt-0.5 text-[9.5px] text-slate-400">
-                Refreshed daily at 07:17 UTC by GitHub Action.
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </aside>
   )
-}
-
-function useDataAges(): {
-  legislators: string | null
-  orgs: string | null
-  policies: string | null
-} | null {
-  const [ages, setAges] = useState<{
-    legislators: string | null
-    orgs: string | null
-    policies: string | null
-  } | null>(null)
-  useEffect(() => {
-    let cancelled = false
-    void Promise.all([
-      loadLegislators(),
-      loadTownOrgs(),
-      // Phone policies file has _lastUpdated but the loader returns just the
-      // policies dict; fetch the wrapper directly for the date.
-      fetch(`${import.meta.env.BASE_URL}data/phone-policies.json`)
-        .then((r) => r.json())
-        .catch(() => null),
-    ]).then(([leg, orgs, pol]) => {
-      if (cancelled) return
-      setAges({
-        legislators: leg?._lastUpdated ?? null,
-        orgs: orgs?._lastUpdated ?? null,
-        policies:
-          (pol && typeof pol === 'object' && '_lastUpdated' in pol
-            ? (pol as { _lastUpdated?: string })._lastUpdated
-            : null) ?? null,
-      })
-    })
-    return () => {
-      cancelled = true
-    }
-  }, [])
-  return ages
 }

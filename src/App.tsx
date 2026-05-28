@@ -32,6 +32,9 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectMode, setSelectMode] = useState(false)
   const [selectedTowns, setSelectedTowns] = useState<Set<string>>(new Set())
+  const [legendHidden, setLegendHidden] = useState(false)
+
+  const anyLayerOn = Object.values(layers).some(Boolean)
 
   const toggleSelected = (id: string) => {
     setSelectedTowns((prev) => {
@@ -69,6 +72,24 @@ export default function App() {
   useEffect(() => {
     localStorage.setItem(LS_KEY, JSON.stringify(layers))
   }, [layers])
+
+  // Keep the tldraw canvas focused so wheel / trackpad pan + zoom keep working
+  // after the user clicks our overlay UI (legend, popup, header controls).
+  // tldraw gates all wheel/keyboard handling on instanceState.isFocused; since
+  // our overlays live outside the tldraw container, clicking them can leave the
+  // canvas unfocused and silently kill scroll-to-pan. Re-assert focus on every
+  // pointer-down that isn't aimed at a text field (so typing in Search still
+  // works).
+  useEffect(() => {
+    if (!editor) return
+    const refocus = (e: PointerEvent) => {
+      const t = e.target as HTMLElement | null
+      if (t?.closest('input, textarea, [contenteditable="true"]')) return
+      if (!editor.getInstanceState().isFocused) editor.focus()
+    }
+    window.addEventListener('pointerdown', refocus, true)
+    return () => window.removeEventListener('pointerdown', refocus, true)
+  }, [editor])
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -195,11 +216,27 @@ export default function App() {
           tierFilter={tierFilter}
           selectedTowns={selectedTowns}
         />
-        <Legend
-          layers={layers}
-          tierFilter={tierFilter}
-          onTierFilter={setTierFilter}
-        />
+        {legendHidden
+          ? anyLayerOn && (
+              <button
+                type="button"
+                data-map-ui
+                onClick={() => setLegendHidden(false)}
+                onMouseDown={(e) => e.stopPropagation()}
+                title="Show legend"
+                className="absolute right-3 top-3 z-20 h-8 px-3 flex items-center gap-1.5 bg-white/95 backdrop-blur border border-slate-200 rounded-md shadow-lg text-[12px] font-medium text-slate-700 hover:bg-white"
+              >
+                <span className="text-slate-400">▦</span> Legend
+              </button>
+            )
+          : (
+              <Legend
+                layers={layers}
+                tierFilter={tierFilter}
+                onTierFilter={setTierFilter}
+                onHide={() => setLegendHidden(true)}
+              />
+            )}
         {selectedTowns.size > 0 && (
           <SelectionPanel
             selectedIds={selectedTowns}
