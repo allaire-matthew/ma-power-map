@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import {
   getTownToDistrict,
   getTownToLayer,
+  loadChapterPipeline,
   loadLayer,
   loadLegislators,
   loadNextMeetings,
@@ -9,6 +10,7 @@ import {
   loadSchoolCommitteeLinks,
   loadTownOrgs,
   normalizeDistrictKey,
+  type ChapterPipelineEntry,
   type LegislatorsData,
   type NextMeetingEntry,
   type PhonePolicy,
@@ -17,7 +19,7 @@ import {
   type SchoolCommitteeLink,
   type TownOrgChapter,
 } from './geo'
-import { TIER_COLOR, TIER_LABEL } from './MapBackground'
+import { STAGE_COLOR, TIER_COLOR, TIER_LABEL } from './MapBackground'
 
 // Short tier labels for the header pill — the full TIER_LABEL is the tooltip.
 const TIER_SHORT: Record<PhoneTier, string> = {
@@ -46,6 +48,7 @@ export function TownPopup({
   const [countyName, setCountyName] = useState<string | null>(null)
   const [legislators, setLegislators] = useState<LegislatorsData | null>(null)
   const [orgs, setOrgs] = useState<TownOrgChapter[]>([])
+  const [chapters, setChapters] = useState<ChapterPipelineEntry[]>([])
   const [nextMeeting, setNextMeeting] = useState<NextMeetingEntry | null>(null)
   const [loading, setLoading] = useState(true)
 
@@ -63,6 +66,7 @@ export function TownPopup({
     setStateHouseName(null)
     setCountyName(null)
     setOrgs([])
+    setChapters([])
     setNextMeeting(null)
     ;(async () => {
       const [
@@ -81,6 +85,7 @@ export function TownPopup({
         scLinks,
         legData,
         townOrgs,
+        chapterPipeline,
         nextMtgs,
       ] = await Promise.all([
         loadLayer('towns'),
@@ -98,6 +103,7 @@ export function TownPopup({
         loadSchoolCommitteeLinks(),
         loadLegislators(),
         loadTownOrgs(),
+        loadChapterPipeline(),
         loadNextMeetings(),
       ])
       if (cancelled) return
@@ -136,6 +142,8 @@ export function TownPopup({
       const orgKey = tName.trim().toLowerCase()
       const townOrgList =
         townOrgs && orgKey ? townOrgs.byTown[orgKey] ?? [] : []
+      const chapterList =
+        chapterPipeline && orgKey ? chapterPipeline.byTown[orgKey] ?? [] : []
 
       // Next school committee meeting — same district/town key strategy
       const nm =
@@ -173,6 +181,7 @@ export function TownPopup({
       setCountyName(ctyF?.name ?? null)
       setLegislators(legData)
       setOrgs(townOrgList)
+      setChapters(chapterList)
       setNextMeeting(nm)
       setLoading(false)
     })()
@@ -273,6 +282,12 @@ export function TownPopup({
             <OrgsBlock loading={loading} orgs={orgs} townName={town?.name ?? null} />
           </Section>
 
+          {chapters.length > 0 && (
+            <Section title="Chapter pipeline" badge={chapters[0].stageName}>
+              <ChapterPipelineBlock chapters={chapters} />
+            </Section>
+          )}
+
           <Section title="Events & links">
             <EventsBlock townName={town?.name ?? null} />
           </Section>
@@ -291,7 +306,7 @@ function Section({
   children,
 }: {
   title: string
-  badge?: number
+  badge?: number | string
   defaultOpen?: boolean
   children: React.ReactNode
 }) {
@@ -644,6 +659,42 @@ function OrgsBlock({
                 </>
               )}
             </div>
+          )}
+          {c.notes && (
+            <div className="text-[10.5px] text-slate-500 italic">{c.notes}</div>
+          )}
+        </li>
+      ))}
+    </ul>
+  )
+}
+
+function ChapterPipelineBlock({ chapters }: { chapters: ChapterPipelineEntry[] }) {
+  return (
+    <ul className="text-[12px] space-y-1.5">
+      {chapters.map((c, i) => (
+        <li key={i}>
+          <div className="flex items-center gap-1.5 text-slate-900 font-medium">
+            <span
+              className="w-2.5 h-2.5 shrink-0 border border-white shadow-sm"
+              style={{
+                background: STAGE_COLOR[c.stage] ?? STAGE_COLOR[0],
+                transform: 'rotate(45deg)',
+              }}
+            />
+            {c.chapter}{' '}
+            <span className="text-slate-500 font-normal">
+              · Stage {c.stage}: {c.stageName} · {c.status}
+            </span>
+          </div>
+          {c.chapterLead && (
+            <div className="text-[11px] text-slate-600">
+              Lead: {c.chapterLead}
+              {c.leadConfirmed ? '' : ' (unconfirmed)'}
+            </div>
+          )}
+          {c.nextAction && (
+            <div className="text-[11px] text-slate-600">Next: {c.nextAction}</div>
           )}
           {c.notes && (
             <div className="text-[10.5px] text-slate-500 italic">{c.notes}</div>

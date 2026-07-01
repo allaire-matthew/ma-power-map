@@ -1,0 +1,55 @@
+{
+  "_schemaVersion": 1,
+  "_lastUpdated": "2026-07-01",
+  "_source": "Google Sheet 1P9EQc7thJhRSO3MiHTPQlZ_39UsGJ4YVHhYCLfFHVMo / Chapter Pipeline + Evaluation Scorecard tabs (CIRL Chapter Operations Drive folder). Sheet is not shared 'anyone with link' as of 2026-07-01 — scripts/refresh_chapter_pipeline.py's CSV pull will fail until it is; regenerate manually via the google-sheets MCP until then.",
+  "stageNames": {
+    "0": "Identified",
+    "1": "Prospecting",
+    "2": "Activated",
+    "3": "Programming",
+    "4": "Sustained",
+    "5": "Network Hub"
+  },
+  "byTown": {
+    "needham": [
+      {
+        "chapter": "Needham",
+        "primaryGeography": "Needham",
+        "stage": 1,
+        "stageName": "Prospecting",
+        "status": "On Track",
+        "dateEnteredStage": "2026-05-21",
+        "chapterLead": "Gabe Swanger",
+        "leadConfirmed": true,
+        "partnersCount": 2,
+        "anchorActivation": null,
+        "lastPublicActivity": null,
+        "activityType": null,
+        "lastReport": null,
+        "nextAction": null,
+        "notes": null,
+        "engagedSupporters": 4
+      }
+    ],
+    "brookline": [
+      {
+        "chapter": "Brookline",
+        "primaryGeography": "Brookline",
+        "stage": 1,
+        "stageName": "Prospecting",
+        "status": "On Track",
+        "dateEnteredStage": "2026-05-20",
+        "chapterLead": "Michelle Lai",
+        "leadConfirmed": true,
+        "partnersCount": 1,
+        "anchorActivation": null,
+        "lastPublicActivity": null,
+        "activityType": null,
+        "lastReport": null,
+        "nextAction": null,
+        "notes": null,
+        "engagedSupporters": 0
+      }
+    ]
+  }
+}

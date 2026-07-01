@@ -2,12 +2,14 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   getTownToDistrict,
   loadAiPilotDistricts,
+  loadChapterPipeline,
   loadDemographics,
   loadLayer,
   loadPhonePolicies,
   loadTownOrgs,
   MAP_H,
   MAP_W,
+  type ChapterPipelineEntry,
   type DistrictDemographics,
   type LayerName,
   type PhonePolicy,
@@ -68,6 +70,18 @@ export const TIER_LABEL: Record<PhoneTier, string> = {
   4: 'Tier 4 — Bell-to-bell, inaccessible storage, K-12',
 }
 
+// Chapter pipeline stage colors (0-5). Progresses blue → CIRL gold at
+// Network Hub, the top of the ladder — a deliberately different channel
+// from parent-presence purple and phone-tier red/orange/yellow/green.
+export const STAGE_COLOR: Record<number, string> = {
+  0: '#94a3b8',
+  1: '#60a5fa',
+  2: '#3b82f6',
+  3: '#2563eb',
+  4: '#1d4ed8',
+  5: '#d4a843',
+}
+
 export function MapBackground({
   camera,
   layers,
@@ -89,6 +103,7 @@ export function MapBackground({
   const [policies, setPolicies] = useState<Record<string, PhonePolicy>>({})
   const [townToDistrict, setTownToDistrict] = useState<Record<string, string>>({})
   const [townOrgs, setTownOrgs] = useState<Record<string, TownOrgChapter[]>>({})
+  const [chapterPipeline, setChapterPipeline] = useState<Record<string, ChapterPipelineEntry[]>>({})
   const [aiPilotIds, setAiPilotIds] = useState<Set<string>>(new Set())
   const [demographics, setDemographics] = useState<Record<string, DistrictDemographics>>({})
   const svgRef = useRef<SVGSVGElement | null>(null)
@@ -146,6 +161,9 @@ export function MapBackground({
     })
     void loadTownOrgs().then((d) => {
       if (!cancelled && d) setTownOrgs(d.byTown ?? {})
+    })
+    void loadChapterPipeline().then((d) => {
+      if (!cancelled && d) setChapterPipeline(d.byTown ?? {})
     })
     void loadAiPilotDistricts().then((d) => {
       if (!cancelled && d) setAiPilotIds(new Set(d.districts.map((x) => x.districtId)))
@@ -501,6 +519,51 @@ export function MapBackground({
                       {count}
                     </text>
                   )}
+                </g>
+              )
+            })}
+
+          {/* Chapter-pipeline stage badges. Each town with a row in the CIRL
+              Chapter Pipeline Tracker gets a small diamond badge, offset
+              up-right from the parent-presence dot so the two never fully
+              overlap. Color = stage (blue ramp, gold at Network Hub). */}
+          {layers.chapterPipeline &&
+            towns.map((f) => {
+              const key = (f.name || '').trim().toLowerCase()
+              const chapters = chapterPipeline[key]
+              if (!chapters || chapters.length === 0) return null
+              const [cx0, cy0] = f.centroid
+              const cx = cx0 + 7 / camera.z
+              const cy = cy0 - 7 / camera.z
+              const stage = chapters[0].stage
+              const color = STAGE_COLOR[stage] ?? STAGE_COLOR[0]
+              const size = 6.5 / camera.z
+              return (
+                <g
+                  key={`chapter-${f.id}`}
+                  pointerEvents="none"
+                  transform={`translate(${cx} ${cy}) rotate(45)`}
+                >
+                  <rect
+                    x={-size / 2}
+                    y={-size / 2}
+                    width={size}
+                    height={size}
+                    fill={color}
+                    stroke="white"
+                    strokeWidth={1.0 / camera.z}
+                  />
+                  <text
+                    transform="rotate(-45)"
+                    textAnchor="middle"
+                    dominantBaseline="central"
+                    fontSize={6 / camera.z}
+                    fontWeight={700}
+                    fill="white"
+                    style={{ fontFamily: 'system-ui, sans-serif' }}
+                  >
+                    {stage}
+                  </text>
                 </g>
               )
             })}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { LayerState } from './LayerToggles'
-import { TIER_COLOR, TIER_LABEL } from './MapBackground'
+import { STAGE_COLOR, TIER_COLOR, TIER_LABEL } from './MapBackground'
 import {
   getTownToDistrict,
   loadLayer,
@@ -89,6 +89,7 @@ export function Legend({
   const showPhone = layers.phoneFree
   const showSize = layers.sizeGradient
   const showParents = layers.parentPresence
+  const showChapterPipeline = layers.chapterPipeline
   const showAiPilot = layers.aiPilot
   const showCounties = layers.counties
   const showCong = layers.congressional
@@ -103,6 +104,7 @@ export function Legend({
     !showPhone &&
     !showSize &&
     !showParents &&
+    !showChapterPipeline &&
     !showAiPilot &&
     !showCounties &&
     !showCong &&
@@ -230,6 +232,40 @@ export function Legend({
                 style={{ background: '#7c3aed' }}
               />
               <span>Town has a chapter on file</span>
+            </div>
+          </div>
+        )}
+
+        {showChapterPipeline && (
+          <div>
+            <div className="text-[11px] font-medium text-slate-500 uppercase tracking-wider mb-1.5">
+              Chapter pipeline
+            </div>
+            <ul className="space-y-0.5">
+              {[0, 1, 2, 3, 4, 5].map((stage) => (
+                <li key={stage} className="flex items-center gap-2">
+                  <span
+                    className="w-2.5 h-2.5 shrink-0 border border-white shadow-sm"
+                    style={{
+                      background: STAGE_COLOR[stage],
+                      transform: 'rotate(45deg)',
+                    }}
+                  />
+                  <span>
+                    {stage} ·{' '}
+                    {
+                      ['Identified', 'Prospecting', 'Activated', 'Programming', 'Sustained', 'Network Hub'][
+                        stage
+                      ]
+                    }
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div className="text-[10px] text-slate-400 mt-1.5 leading-snug">
+              CIRL Chapter Pipeline Tracker. A chapter advances by meeting a
+              gate, not by time passing. Diamond offset up-right of the
+              parent-presence dot.
             </div>
           </div>
         )}

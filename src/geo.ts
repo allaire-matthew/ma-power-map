@@ -430,6 +430,47 @@ export async function loadTownOrgs(): Promise<TownOrgsData | null> {
   return townOrgsPromise
 }
 
+export type ChapterPipelineEntry = {
+  chapter: string
+  primaryGeography: string
+  stage: number
+  stageName: string
+  status: string
+  dateEnteredStage: string | null
+  chapterLead: string | null
+  leadConfirmed: boolean
+  partnersCount: number
+  anchorActivation: string | null
+  lastPublicActivity: string | null
+  activityType: string | null
+  lastReport: string | null
+  nextAction: string | null
+  notes: string | null
+  engagedSupporters?: number
+}
+
+export type ChapterPipelineData = {
+  _lastUpdated: string
+  stageNames: Record<string, string>
+  byTown: Record<string, ChapterPipelineEntry[]>
+}
+
+let chapterPipelinePromise: Promise<ChapterPipelineData | null> | null = null
+
+export async function loadChapterPipeline(): Promise<ChapterPipelineData | null> {
+  if (!chapterPipelinePromise) {
+    chapterPipelinePromise = (async () => {
+      try {
+        const url = `${import.meta.env.BASE_URL}data/chapter-pipeline.json`
+        return await fetchJson<ChapterPipelineData>(url)
+      } catch {
+        return null
+      }
+    })()
+  }
+  return chapterPipelinePromise
+}
+
 export type NextMeetingEntry = {
   next_meeting: string | null
   additional_upcoming?: string[]
