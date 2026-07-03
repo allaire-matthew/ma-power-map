@@ -1,9 +1,43 @@
 # MA Power Map
 
-Sandbox-style digital whiteboard for Massachusetts power mapping. tldraw canvas
-on top of an SVG basemap with toggleable layers (counties, towns w/ population,
-US House, MA House, MA Senate). Built for async-shared editing — anyone with
-the URL can drop pins, draw, and annotate.
+Commonwealth IRL's internal tracking dashboard for Massachusetts — the
+centralized, self-updating synthesis of the chapter pipeline, parent
+organizing, district phone policies, legislators, school-committee meetings,
+and local news. Live at <https://allaire-matthew.github.io/ma-power-map/>.
+
+Three views:
+
+- **Map** — pannable/zoomable SVG map of all 351 towns with three lenses
+  (Chapters / Phone policy / Organizing) plus boundary overlays
+  (counties, school districts, US House, MA Senate, MA House).
+- **Chapters** — the spreadsheet view: every chapter and prospect town with
+  affiliation logos, leads, 6-stage progress, status, days-in-stage, engaged
+  supporters, and advisory health flags computed from the Evaluation
+  Scorecard's rules of thumb.
+- **News** — MA news relevant to tracked towns (Google News RSS per town +
+  CommonWealth Beacon / WBUR / Itemlive), refreshed daily.
+
+The **Guide** button explains the six stages, four statuses, and the tier
+system — the humane layer for anyone new to the tool. Design rules and their
+sources live in `DESIGN.md`.
+
+## Data & self-updating
+
+`public/data/*.json` is refreshed daily by `.github/workflows/refresh.yml`
+(7:17 UTC): legislators, town orgs, chapter pipeline, school-committee
+meetings, news, and handbook-extracted phone policies. Pushing to `main`
+triggers `deploy.yml` → GitHub Pages.
+
+Known gap: `refresh_chapter_pipeline.py` needs the CIRL Chapter Pipeline
+Tracker sheet shared "anyone with link (view)"; until then chapter rows are
+regenerated manually via the Sheets MCP.
+
+Heuristics (unchanged, single source `src/colors.ts` + `src/model.ts`):
+
+- **Phone-policy tiers 1–4** — Childhood Index / DFSPP spec (see
+  `phone-policies.json` `_notes`).
+- **Chapter stages 0–5** and **statuses** — the Pipeline Tracker's Start
+  Here tab; advisory flags per its Evaluation Scorecard rules.
 
 ## Local development
 
@@ -12,52 +46,5 @@ npm install
 npm run dev
 ```
 
-Open the printed URL (path: `/ma-power-map/`).
-
-## Geo data
-
-The five GeoJSON files in `public/geo/` are committed. To regenerate them:
-
-```bash
-npm run build:geo
-```
-
-Downloads Census TIGER 2024 + 2020 DHC population by MA county subdivision,
-simplifies with `mapshaper`, writes to `public/geo/`.
-
-## Shared editing
-
-By default the app persists to `localStorage` (single-user). To turn on
-async-shared editing across browsers:
-
-1. Create a Firebase project at <https://console.firebase.google.com>.
-2. Build → **Realtime Database** → create (any region; test rules are fine
-   for a sandbox).
-3. Build → **Authentication** → enable **Anonymous** provider.
-4. Project settings → Your apps → Web app → register → copy the config object.
-5. Paste it into `src/firebaseConfig.ts`, replacing `null`.
-6. Commit and push — GitHub Pages redeploys with shared editing live.
-
-Suggested Realtime DB rules (lock writes to authenticated clients on the one
-board path):
-
-```json
-{
-  "rules": {
-    "boards": {
-      "ma-power-map": {
-        ".read": "auth != null",
-        ".write": "auth != null"
-      }
-    }
-  }
-}
-```
-
-## Deploy
-
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds and
-publishes to GitHub Pages.
-
-First-time setup on the repo:
-- Settings → Pages → Source: **GitHub Actions**
+Open the printed URL (path: `/ma-power-map/`). `npm run build:geo`
+regenerates the GeoJSON from Census TIGER (see `scripts/build-geo.sh`).

@@ -11,11 +11,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/lora": "^5.2.8",
+    "@fontsource/public-sans": "^5.2.7",
     "d3-geo": "^3.1.1",
-    "firebase": "^12.12.1",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5",
-    "tldraw": "^4.5.10"
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

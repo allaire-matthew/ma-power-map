@@ -1,5 +1,22 @@
 @import "tailwindcss";
-@import "tldraw/tldraw.css";
+@import "@fontsource/public-sans/400.css";
+@import "@fontsource/public-sans/600.css";
+@import "@fontsource/lora/600.css";
+
+/* Design tokens — DESIGN.md §D/§E. Three inks, two weights; validated
+   data encodings live in colors.ts (single source, mirrored here only
+   where CSS needs them). */
+:root {
+  --ink: #1c1b18;
+  --ink-2: #57544e;
+  --ink-3: #8a877f;
+  --paper: #f3f1ec;      /* page plane */
+  --card: #ffffff;       /* cards / panels */
+  --map-surface: #f7f6f3;
+  --hairline: #e3e1da;
+  --navy: #0f2137;       /* chrome anchor (CIRL navy) */
+  --focus: #1839a6;
+}
 
 html, body, #root {
   height: 100%;
@@ -7,20 +24,35 @@ html, body, #root {
 }
 
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: #f8fafc;
-  color: #0f172a;
+  font-family: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 14px;
 }
 
-/* Let the SVG basemap show through tldraw's canvas. */
-.tldraw-transparent .tl-container,
-.tldraw-transparent .tl-background,
-.tldraw-transparent .tl-canvas {
-  background: transparent !important;
+.font-wordmark {
+  font-family: "Lora", Georgia, serif;
 }
 
-/* Inspect mode: mute tldraw input so SVG town paths can capture clicks. */
-.tldraw-inert,
-.tldraw-inert .tl-container {
-  pointer-events: none !important;
+/* DESIGN.md G2 — visible ring focus, distinct from hover. */
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.tnum {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* Thin scrollbars inside panels/tables. */
+.thin-scroll {
+  scrollbar-width: thin;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

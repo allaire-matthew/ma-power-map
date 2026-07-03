@@ -24,6 +24,9 @@ jobs:
       - name: Refresh next school committee meetings
         run: python3 scripts/refresh_school_meetings.py
         continue-on-error: true
+      - name: Refresh town + statewide news
+        run: python3 scripts/refresh_news.py
+        continue-on-error: true
       - name: Install PDF tools (poppler + tesseract)
         run: |
           sudo apt-get update -qq
