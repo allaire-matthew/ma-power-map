@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
 import { loadLayer, type LayerName, type PhoneTier, type ProjectedLayer } from './geo'
 import type { World } from './model'
-import type { Camera } from './MapCanvas'
 import { BOUNDARY, PRESENCE, STAGE_COLOR, TIER_COLOR } from './colors'
 
 export type Lens = 'chapters' | 'policy' | 'organizing'
@@ -16,9 +15,11 @@ const BOUNDARY_LAYER: Record<BoundaryKey, LayerName> = {
   stateHouse: 'stateHouse',
 }
 
-export function MapLayers({
+// memo'd on k (zoom) rather than the full camera: panning only moves the
+// parent <g> transform, so the 351 town paths never re-render per frame.
+export const MapLayers = memo(function MapLayers({
   world,
-  camera,
+  k,
   lens,
   tierFilter,
   boundaries,
@@ -27,7 +28,7 @@ export function MapLayers({
   onHover,
 }: {
   world: World
-  camera: Camera
+  k: number
   lens: Lens
   tierFilter: TierFilter
   boundaries: Set<BoundaryKey>
@@ -49,8 +50,6 @@ export function MapLayers({
       cancelled = true
     }
   }, [boundaries, outlines])
-
-  const k = camera.k
 
   const fillFor = (townId: string): { fill: string; alpha: number } => {
     const rec = world.records.get(townId)
@@ -213,4 +212,4 @@ export function MapLayers({
           })}
     </>
   )
-}
+})

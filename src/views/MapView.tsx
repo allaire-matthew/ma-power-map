@@ -68,12 +68,12 @@ export function MapView({
         {(camera) => (
           <MapLayers
             world={world}
-            camera={camera}
+            k={camera.k}
             lens={lens}
             tierFilter={tierFilter}
             boundaries={boundaries}
             selectedId={selectedId}
-            onSelect={(id) => onSelect(id)}
+            onSelect={onSelect}
             onHover={setHover}
           />
         )}

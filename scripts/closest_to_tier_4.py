@@ -17,6 +17,7 @@ import datetime
 import pathlib
 import subprocess
 import sys
+from collections import Counter, defaultdict
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 POLICIES = ROOT / "public" / "data" / "phone-policies.json"
@@ -24,6 +25,61 @@ DEMOS = ROOT / "public" / "data" / "district-demographics.json"
 OUT_MD = ROOT / "CLOSEST_TO_TIER_4.md"
 OUT_PDF = ROOT / "CLOSEST_TO_TIER_4.pdf"
 TODAY = datetime.date.today().isoformat()
+
+
+CONCERN_KEYWORDS = [
+    "scope_lt_k12", "scope_lt_K12", "off_and_away", "accessible_storage", "lockers",
+    "backpacks", "pockets", "educational_use_exception", "emergency_use_exception",
+    "admin_discretion", "principal_discretion", "senior_exemption", "no_district_policy",
+    "school_by_school", "class_only", "class_time_only", "lunch_passing_access",
+    "pilot_only", "not_yet_in_operation", "no_hardware", "no_yondr",
+    "storage_method_not_mandated", "504_not_enumerated", "written_agreement_carve_out",
+    "no_data_collection", "teacher_discretion", "no_post_rollout_confirmation",
+    "hs_only", "ms_hs_only", "k_5_off_and_away", "unverified_K_12",
+    "cross_state_hallucination", "colorado_not_ma", "partial_rollout",
+    "student_workaround", "principal_set_not_formal", "no_unified_K12",
+]
+
+
+def concern_tokens(text: str) -> list[str]:
+    """Extract canonical concern keywords from a chIdxConcerns string."""
+    t = text.lower().replace("_", " ")
+    out = [k for k in CONCERN_KEYWORDS if k.lower().replace("_", " ") in t]
+    return out or ["other"]
+
+
+def render_advocacy_intel(policies: dict) -> str:
+    """Aggregate the most common concerns across red-team-verified districts."""
+    counter: Counter = Counter()
+    by_token: defaultdict = defaultdict(list)
+    verified = 0
+    for p in policies.values():
+        if not p.get("redTeamVerified"):
+            continue
+        verified += 1
+        for c in p.get("chIdxConcerns") or []:
+            for tok in concern_tokens(c):
+                counter[tok] += 1
+                by_token[tok].append(p["districtName"])
+
+    lines = []
+    add = lines.append
+    add("## Statewide advocacy intel — where the leverage is\n")
+    add(
+        f"Across the {verified} red-team-verified districts in this tracker, the most common "
+        "barriers to tier 4 cluster as follows. Each row tells the ED which lever moves the most "
+        "districts forward.\n"
+    )
+    for tok, n in counter.most_common(10):
+        if tok == "other":
+            continue
+        examples = sorted(set(by_token[tok]))[:5]
+        ex = ", ".join(examples)
+        if len(by_token[tok]) > len(examples):
+            ex += f", +{len(by_token[tok]) - len(examples)} more"
+        add(f"- **{n}×** `{tok}` — {ex}")
+    add("")
+    return "\n".join(lines)
 
 
 def distance_score(p: dict) -> int:
@@ -148,6 +204,8 @@ def render_markdown(policies: dict, demos: dict) -> str:
             for s in p["chIdxStrengths"][:4]:
                 add(f"- {s}")
 
+    add("\n---\n")
+    add(render_advocacy_intel(policies))
     add("\n---\n")
     add("## Methodology\n")
     add(
