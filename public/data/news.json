@@ -1,6 +1,6 @@
 {
  "_schemaVersion": 1,
- "_lastUpdated": "2026-07-03T20:09:24+00:00",
+ "_lastUpdated": "2026-07-04T09:37:10+00:00",
  "_source": "Google News RSS per tracked town + CommonWealth Beacon / WBUR / Itemlive feeds",
  "items": [
   {
@@ -33,6 +33,14 @@
    "source": "watertownmanews.com",
    "date": "2026-07-03",
    "town": "watertown",
+   "topic": "civic"
+  },
+  {
+   "title": "Ron’s Gourmet Ice Cream Scooping Up Third Location in Westwood",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSEhSWkxjNXdBdW12WFkyOWRNX281SmRYbExFTUR6NHp4cXpKLUdpLS1YbkxSSVBZUWVLbVFudUJjUG1QUFpjR3ZITTM2am5KdzYyNFlrYWt4aVB6RTF4Y24zZ1JBVEswNHAzN3BrRnFaX1diR3RGYVBoM2tkcUJqeFNTU20tVVVSUTRualZyNm9OTnNxQ0JudExHVWxlQ08xLVZv?oc=5",
+   "source": "WhatNow",
+   "date": "2026-07-03",
+   "town": "westwood",
    "topic": "civic"
   },
   {
@@ -220,15 +228,15 @@
    "topic": "civic"
   },
   {
-   "title": "Wellesley man accused of killing father held without bail",
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPLWwxZV9wdGdHLXN2WUlZc0l3azBVSUk4ZEExZTdwZFVjazF0dXp5YjVpYmg2elBfYXo5dmotQ3RkT3FNc2hOUjhrTzVaU0tVczhUaXJwZm1GVFM3NXM5SURRRGZ4M0dva1FoRjh6b2Z2dnJpb2pFRXJKUkdoRHB2UDJ3VEpxcmd1NUJTS0ZISk4wbDY5VnhNbFlIVQ?oc=5",
+   "title": "Wellesley man stabbed father 20 times in daytime murder at park, police say",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNN2pNUVhiWVJYVGp4SVZBeWJrZjlJdXFaTzg4WlhycTNhLVlVS0h2NUM5dTNhRmt6bFdQOU8wVFJWc3pMWHo2UnY5ZGkwU0NOcGJFTGs3T0daMkxGLTlDU2RrVGVfemE1TWFKT1ZLdGl2VlR2REpmQ2tjVHZFNF9nOVJqR3JGeURzSDQ5SGZaa0tNWW9jZGhGR1JCUTVkVDE3akNtOFRLYXlhc3owM1FXdjVn?oc=5",
    "source": "CBS News",
    "date": "2026-06-26",
    "town": "wellesley",
    "topic": "civic"
   },
   {
-   "title": "The Top 10 Andover Stories Of 2026 — So Far",
+   "title": "The Top 10 Most Read Andover Stories Of 2026 — So Far",
    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBRMUhwVFRHQnhFYlBVRWxEWTFqdlVGRmVNNUVoemJpbVFFZXJNY0kwcVZZalpVNjBoY2ZMbWJuZTFTNERSN3RLLVZXbGx0V1R4andicDF1a2xuQktySXJyWHhwMElqeWZZSHNUdzYtTmJybWZPQU13?oc=5",
    "source": "andovermanews.com",
    "date": "2026-06-25",
@@ -242,6 +250,14 @@
    "date": "2026-06-25",
    "town": "beverly",
    "topic": "civic"
+  },
+  {
+   "title": "Using Social Media Reels to Help the Lexington Minute Men achieve Long-term Goals",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPTVplbmxtWkd4QUpqMHNsM3N1VmhLelpiREZtT3UwRlJzQ0ZIMnA1U19TT25VTlAxaFQ5UWRvNjBRV3VuMk4zb2hMX1FIN0VtdlVKTTJmSEEzUlpzR24tYkFRTTZZNWZvb1NHcG4zZV9zQjlQZWwzVU1jSEZOcEZiVGhkRTYxOTFiSTZNTEVXR0ZvQ0ctMFlvVUFfZWFhZFhD?oc=5",
+   "source": "John Guilfoil Public Relations",
+   "date": "2026-06-25",
+   "town": "lexington",
+   "topic": "lane"
   },
   {
    "title": "3 hurt when car crashes into busy Newburyport restaurant",
@@ -276,6 +292,14 @@
    "topic": "civic"
   },
   {
+   "title": "Beverly City Council Slashes DEI Position, Passes Budget On Split Vote Amid Looming Budget Crisis",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNSDFIbEd0REF0UTRxenVnN0VEaVNDRGRVRE00aFdrLWhXS2t5TE02UW1Cd1RLMFh0Z2tqWHJqZ2dDMVU1NGVQUmZaMFUwaW91dXpQbXVGRENTb3dkaGxfZlB4bDVfUURlbWtway1aNlA1SGVDQnQ0RkN5ejdmSTE1NHRPQWdlVEp3ZF9YX21DZ2dJTkJ2RDFlVERsQkhTVTJVLUpjU0o0NlJHd3hsOFBobQ?oc=5",
+   "source": "Patch",
+   "date": "2026-06-24",
+   "town": "beverly",
+   "topic": "civic"
+  },
+  {
    "title": "Class of 2026: Concord High School graduates 68 students (59 photos)",
    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNnBsT1gtYklLZnlSblg2OHVIMTN3aXpBOC03a0traGtpWkl6SVFiUGluMlFUT3UzNjZDcWZ1bnkzbU90TG9LUmMyNW16eW9RTnZhenJTUWY5aTNGRjZWLTE3Ukh4T1B3VmJfWTdBZFRnalcyNU91VWxSZzVYSmJXcy1vTC1tMEhmTHRlaExBLVYwUEd3OExhRHZYaHpOS3lZajNfTFBNeDVJT2fSAb8BQVVfeXFMT2JRa3NtaEMzQjNYUGRubExBaUpCVm5rTVNZY1BKczN3LWw5elZzbWpfVVJIclNxNDQ5d2JtZkVKaGtOdVFob3NCSmtKektjOC1Ld2JFNmk5UUhhZE5xejNKbUJYU0RQYnhvQVRZZl90NlpUR3RTejVtblB5eWlFVHAwbktGZzVMbFBuc0tuS09yRmNzMTVmMzEyWWs5b0Q5Y193QnZhTFZhcXdTcG9xRGhVb0N1SURrbmw1UmVibjQ?oc=5",
    "source": "SILive.com",
@@ -305,6 +329,14 @@
    "source": "AOL.com",
    "date": "2026-06-24",
    "town": "natick",
+   "topic": "civic"
+  },
+  {
+   "title": "Winchester Historical Society awarded $300,000 Cummings grant",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNlY1ckpDUXAxRy02UTBxUVYzU2ZlSGlLZVd0b2hSd3NvWFBmNk1JZ3IwRHI1d3VudmlQRGY1TzdCbDRTWGZhYXJPRW5KVlVpbTVQcHFsX0RrN0xaVXlWMmVEOGZoNFpOb2ZPQ2dEb1kwc2ZlWTBTaUpKRkpGOU0tazlHV2U0Mm1OQ3BueVZCeVlPV015Rlh1MWxRN29YM1VaS0dJeFVacDJ2QktRQkRWai13?oc=5",
+   "source": "Homenewshere.com",
+   "date": "2026-06-24",
+   "town": "winchester",
    "topic": "civic"
   },
   {
