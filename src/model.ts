@@ -25,38 +25,6 @@ import {
 // Scorecard rules of thumb. The Sheet's own Status column stays the
 // ground truth; these produce advisory flags shown alongside it.
 
-export type HealthFlag = { kind: 'stuck' | 'at-risk' | 'wind-down' | 'info'; text: string }
-
-export function daysSince(iso: string | null | undefined): number | null {
-  if (!iso) return null
-  const t = Date.parse(iso)
-  if (Number.isNaN(t)) return null
-  return Math.floor((Date.now() - t) / 86_400_000)
-}
-
-export function healthFlags(e: ChapterPipelineEntry): HealthFlag[] {
-  const flags: HealthFlag[] = []
-  const inStage = daysSince(e.dateEnteredStage)
-  const sinceReport = daysSince(e.lastReport)
-  const sinceActivity = daysSince(e.lastPublicActivity)
-
-  if (e.stage === 1 && inStage != null && inStage > 45)
-    flags.push({ kind: 'stuck', text: `${inStage}d in Prospecting — past the 45-day window` })
-  if (e.stage === 2 && inStage != null && inStage > 60 && !e.lastPublicActivity)
-    flags.push({ kind: 'stuck', text: `${inStage}d Activated with no first public activity (60-day window)` })
-  if (e.lastReport && sinceReport != null && sinceReport > 30)
-    flags.push({ kind: 'at-risk', text: `No report in ${sinceReport} days` })
-  if (e.lastReport && sinceReport != null && sinceReport > 60)
-    flags.push({ kind: 'wind-down', text: 'No report 60+ days — wind-down review if unresponsive' })
-  if (e.stage === 2 && inStage != null && inStage > 120 && !e.lastPublicActivity)
-    flags.push({ kind: 'wind-down', text: `Stage 2 for ${inStage}d with no public activity` })
-  if (!e.lastReport && e.stage >= 3)
-    flags.push({ kind: 'at-risk', text: 'Reporting expected from Stage 3 — none yet' })
-  if (sinceActivity != null && sinceActivity > 90 && e.stage >= 3)
-    flags.push({ kind: 'at-risk', text: `Last public activity ${sinceActivity}d ago` })
-  return flags
-}
-
 // ---------------------------------------------------------------------------
 // World model — every feed joined once, consumed everywhere.
 
@@ -88,10 +56,11 @@ export type World = {
     chapters: number
     prospectTowns: number
     localGroups: number
-    advocates: number
+    towns2plus: number
     tier4: number
     tier3: number
-    studentsTier34: number
+    tier2: number
+    tier1: number
     districtsTotal: number
     meetingsNext14d: number
     engagedSupporters: number
@@ -225,12 +194,11 @@ async function buildWorld(): Promise<World> {
     chapters: tracked.filter((r) => r.pipeline).length,
     prospectTowns: tracked.filter((r) => !r.pipeline && r.orgs.length > 0).length,
     localGroups: allOrgEntries.filter((o) => (o.chapterName ?? '').trim() && !isAdvocate(o.type)).length,
-    advocates: allOrgEntries.filter((o) => isAdvocate(o.type)).length,
+    towns2plus: tracked.filter((r) => r.orgs.length >= 2).length,
     tier4: allPolicies.filter((p) => p.tier === 4).length,
     tier3: allPolicies.filter((p) => p.tier === 3).length,
-    studentsTier34: allPolicies
-      .filter((p) => p.tier >= 3)
-      .reduce((sum, p) => sum + (p.enrollment ?? 0), 0),
+    tier2: allPolicies.filter((p) => p.tier === 2).length,
+    tier1: allPolicies.filter((p) => p.tier === 1).length,
     districtsTotal: allPolicies.length,
     meetingsNext14d,
     engagedSupporters: engaged,
@@ -256,6 +224,13 @@ async function buildWorld(): Promise<World> {
 
 // ---------------------------------------------------------------------------
 // Formatting helpers (DESIGN.md E3 — one precision per metric).
+
+export function daysSince(iso: string | null | undefined): number | null {
+  if (!iso) return null
+  const t = Date.parse(iso)
+  if (Number.isNaN(t)) return null
+  return Math.floor((Date.now() - t) / 86_400_000)
+}
 
 export function fmtDate(iso: string | null | undefined): string {
   if (!iso) return '—'

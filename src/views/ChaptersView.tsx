@@ -1,11 +1,10 @@
 import { useMemo, useState } from 'react'
 import type { World, TownRecord } from '../model'
-import { daysSince, healthFlags } from '../model'
 import { STAGE_COLOR, STAGE_NAME } from '../colors'
 import { FilterChip, OrgChip, StageTrack, StatusChip } from '../ui'
 import { resolveOrgs } from '../orgs'
 
-type SortKey = 'name' | 'stage' | 'daysInStage'
+type SortKey = 'name' | 'stage'
 type Kind = 'all' | 'chapters' | 'groups'
 
 export function ChaptersView({
@@ -32,8 +31,6 @@ export function ChaptersView({
           return r.name
         case 'stage':
           return r.pipeline ? r.pipeline.stage : -1
-        case 'daysInStage':
-          return r.pipeline ? daysSince(r.pipeline.dateEnteredStage) ?? -1 : -1
       }
     }
     return [...out].sort((a, b) => {
@@ -159,9 +156,6 @@ export function ChaptersView({
                     Progress
                   </Th>
                   <Th align="left" w="13%">Status</Th>
-                  <Th onClick={() => toggleSort('daysInStage')} active={sort.key === 'daysInStage'} dir={sort.dir} align="right" w="8%">
-                    In stage
-                  </Th>
                 </tr>
               </thead>
               <tbody>
@@ -243,8 +237,6 @@ function Row({
   onSelect: () => void
 }) {
   const p = rec.pipeline
-  const flags = p ? healthFlags(p) : []
-  const inStage = p ? daysSince(p.dateEnteredStage) : null
   const rawLead = p?.chapterLead ?? rec.orgs.find((o) => o.leadName)?.leadName ?? null
   const leadParts = rawLead?.split('/').map((x) => x.trim()).filter(Boolean) ?? []
   const lead = leadParts.length > 1 ? `${leadParts[0]} +${leadParts.length - 1}` : rawLead
@@ -311,26 +303,7 @@ function Row({
         )}
       </td>
       <td className="px-3 py-2.5">
-        {p ? (
-          <span className="inline-flex items-center gap-1.5">
-            <StatusChip status={p.status} />
-            {flags.length > 0 && (
-              <span
-                title={flags.map((f) => f.text).join('\n')}
-                aria-label={`${flags.length} advisory flag${flags.length > 1 ? 's' : ''}`}
-                className="text-[11px] cursor-help"
-                style={{ color: '#8f2b1c' }}
-              >
-                ⚑{flags.length}
-              </span>
-            )}
-          </span>
-        ) : (
-          <span style={{ color: 'var(--ink-3)' }}>—</span>
-        )}
-      </td>
-      <td className="px-3 py-2.5 text-right tnum" style={{ color: 'var(--ink)' }}>
-        {inStage != null ? `${inStage}d` : '—'}
+        {p ? <StatusChip status={p.status} /> : <span style={{ color: 'var(--ink-3)' }}>—</span>}
       </td>
     </tr>
   )

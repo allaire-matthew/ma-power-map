@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import type { TownRecord } from './model'
-import { daysSince, fmtAgo, fmtDate, healthFlags } from './model'
+import { fmtDate } from './model'
 import { Fact, OrgChip, StageTrack, StatusChip, TierChip } from './ui'
 import { resolveOrgs } from './orgs'
 
@@ -10,8 +10,6 @@ import { resolveOrgs } from './orgs'
  */
 export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => void }) {
   const p = rec.pipeline
-  const flags = p ? healthFlags(p) : []
-  const inStage = p ? daysSince(p.dateEnteredStage) : null
 
   return (
     <aside
@@ -59,16 +57,6 @@ export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => 
           <section className="flex flex-col gap-2.5">
             <SectionTitle>Council · {p.chapter}</SectionTitle>
             <StageTrack stage={p.stage} />
-            {flags.length > 0 && (
-              <ul className="m-0 p-0 list-none flex flex-col gap-1">
-                {flags.map((f) => (
-                  <li key={f.text} className="text-[12px] leading-snug flex gap-1.5" style={{ color: '#8f2b1c' }}>
-                    <span aria-hidden>⚑</span>
-                    {f.text}
-                  </li>
-                ))}
-              </ul>
-            )}
             <div className="flex flex-col gap-1.5">
               <Fact label="Lead">
                 {p.chapterLead ?? '—'}
@@ -78,15 +66,6 @@ export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => 
                   </span>
                 )}
               </Fact>
-              <Fact label="Partners">
-                <span className="tnum">{p.partnersCount}</span>
-              </Fact>
-              <Fact label="Supporters">
-                <span className="tnum">{p.engagedSupporters ?? 0}</span>
-              </Fact>
-              <Fact label="In stage">{inStage != null ? `${inStage} days` : '—'}</Fact>
-              <Fact label="Last activity">{p.lastPublicActivity ? fmtAgo(p.lastPublicActivity) : 'none yet'}</Fact>
-              <Fact label="Last report">{p.lastReport ? fmtAgo(p.lastReport) : 'none yet'}</Fact>
               {p.anchorActivation && <Fact label="Anchor">{p.anchorActivation}</Fact>}
               {p.nextAction && <Fact label="Next action">{p.nextAction}</Fact>}
             </div>

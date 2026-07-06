@@ -225,8 +225,8 @@ export default function App() {
   )
 }
 
-// Per-mode KPI sets. Accent hue = the mode's map encoding: chapter blue,
-// tier green, organizing violet — values stay in ink (DESIGN.md D4).
+// Per-mode KPI tiles — each is a direct count of what the active view
+// draws (tier fills, group towns, chapter badges). Nothing derived.
 const KPI_MODES = {
   chapters: {
     label: 'Council pipeline',
@@ -234,18 +234,16 @@ const KPI_MODES = {
     tiles: (k: World['kpis']) => [
       { label: 'Councils', value: String(k.chapters) },
       { label: 'Towns with local groups', value: String(k.prospectTowns) },
-      { label: 'Engaged supporters', value: String(k.engagedSupporters) },
-      { label: 'Meetings next 14 days', value: String(k.meetingsNext14d) },
     ],
   },
   policy: {
     label: 'Phone policy',
     color: '#2f9e4f',
     tiles: (k: World['kpis']) => [
-      { label: 'Districts at Tier 4', value: String(k.tier4), sub: `of ${k.districtsTotal}` },
-      { label: 'Districts at Tier 3', value: String(k.tier3) },
-      { label: 'Students in Tier 3–4 districts', value: k.studentsTier34.toLocaleString() },
-      { label: 'Meetings next 14 days', value: String(k.meetingsNext14d) },
+      { label: 'Tier 4 districts', value: String(k.tier4), sub: `of ${k.districtsTotal}` },
+      { label: 'Tier 3 districts', value: String(k.tier3) },
+      { label: 'Tier 2 districts', value: String(k.tier2) },
+      { label: 'Tier 1 · no policy', value: String(k.tier1) },
     ],
   },
   organizing: {
@@ -254,8 +252,7 @@ const KPI_MODES = {
     tiles: (k: World['kpis']) => [
       { label: 'Local groups', value: String(k.localGroups) },
       { label: 'Towns with local groups', value: String(k.prospectTowns) },
-      { label: 'Independent advocates', value: String(k.advocates) },
-      { label: 'Councils', value: String(k.chapters) },
+      { label: 'Towns with 2+ groups', value: String(k.towns2plus) },
     ],
   },
 }

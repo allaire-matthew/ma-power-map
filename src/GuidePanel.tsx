@@ -108,11 +108,6 @@ export function GuidePanel({ world, onClose }: { world: World | null; onClose: (
               )
             })}
           </ul>
-          <p className="mt-2 mb-0 text-[11.5px] leading-snug" style={{ color: 'var(--ink-3)' }}>
-            ⚑ flags are advisory — computed from the tracker's rules of thumb (e.g.
-            Stage 1 &gt; 45 days, no report in 30+ days). The Sheet's status stays the
-            call of record.
-          </p>
         </section>
 
         <section>
