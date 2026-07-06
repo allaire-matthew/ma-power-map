@@ -43,6 +43,22 @@ LANE_WORDS = re.compile(
 
 # Keep per-town queries lane-tight; civic catch-all terms stay narrow so
 # the feed doesn't fill with zoning stories.
+# Non-MA / tabloid noise that slips through Google News town queries.
+JUNK = re.compile(r"australia|sky news|daily mail|\buk\b|triggered with|lawsuit payout|law firm|sokolove", re.I)
+
+# A statewide item must actually read as Massachusetts — title or a known-MA outlet.
+MA_MARK = re.compile(
+    r"massachusetts|mass\.|\bMA\b|beacon hill|state house|state senate|boston|"
+    r"wbur|wgbh|masslive|commonwealth beacon|itemlive|globe|herald",
+    re.I,
+)
+
+CIVIC_WORDS = re.compile(
+    r"school committee|school board|superintendent|select board|town meeting|"
+    r"schools?\b|students?\b|parents?\b|youth\b",
+    re.I,
+)
+
 TOWN_QUERY = (
     '"{town}" Massachusetts '
     '("school committee" OR "cell phone" OR smartphone OR "screen time" '
@@ -55,8 +71,8 @@ STATEWIDE_FEEDS = [
     ("Itemlive", "https://itemlive.com/feed/"),
 ]
 
-MAX_PER_TOWN = 5
-MAX_STATEWIDE = 15
+MAX_PER_TOWN = 3
+MAX_STATEWIDE = 10
 MAX_TOTAL = 220
 
 
@@ -160,12 +176,47 @@ def main() -> int:
             # Case-sensitive, word-bounded: several MA town names are
             # common words ("Reading", "Marion") — a lowercase hit like
             # "reading renaissance" must not be credited to the town.
-            in_title = re.search(rf"\b{re.escape(town.title())}\b", title) is not None
-            if not in_title and not LANE_WORDS.search(title):
+            # Only credit stories that name the town (capitalized,
+            # word-bounded) AND are lane- or governance-relevant. No
+            # statewide promotion from town queries — the curated MA
+            # feeds own the statewide section, keeping provenance clean.
+            if re.search(rf"\b{re.escape(town.title())}\b", title) is None:
                 continue
-            add(title, it["link"], source, iso_date(it["pubDate"]), town if in_title else None)
+            if not (LANE_WORDS.search(title) or CIVIC_WORDS.search(title)):
+                continue
+            if JUNK.search(title) or JUNK.search(source):
+                continue
+            add(title, it["link"], source, iso_date(it["pubDate"]), town)
             kept += 1
         time.sleep(0.6)  # politeness between Google News queries
+
+    # Statewide sweep via Google News — Massachusetts + lane terms.
+    try:
+        sw = google_news_items(
+            'Massachusetts ("cell phone" OR smartphone OR "phone-free" OR '
+            '"social media" OR "screen time" OR "online safety") (school OR kids OR teens OR legislature)',
+            when="7d",
+        )
+        fetched_anything = True
+        kept = 0
+        for it in sw:
+            if kept >= MAX_STATEWIDE:
+                break
+            title, source = clean_gnews_title(it["title"], it["source"])
+            if not LANE_WORDS.search(title):
+                continue
+            if JUNK.search(title) or JUNK.search(source):
+                continue
+            if not (MA_MARK.search(title) or MA_MARK.search(source)):
+                continue
+            town_hit = next(
+                (t for t in towns if re.search(rf"\b{re.escape(t.title())}\b", title)),
+                None,
+            )
+            add(title, it["link"], source, iso_date(it["pubDate"]), town_hit)
+            kept += 1
+    except Exception as e:
+        print(f"WARN: statewide Google News failed: {e}", file=sys.stderr)
 
     for source_name, feed_url in STATEWIDE_FEEDS:
         try:

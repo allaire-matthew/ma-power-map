@@ -1,70 +1,14 @@
 {
  "_schemaVersion": 1,
- "_lastUpdated": "2026-07-06T11:50:50+00:00",
+ "_lastUpdated": "2026-07-06T12:38:19+00:00",
  "_source": "Google News RSS per tracked town + CommonWealth Beacon / WBUR / Itemlive feeds",
  "items": [
-  {
-   "title": "Astronaut Suni Williams is back home in Needham and couldn’t be happier with the warm welcome she received from former classmates.",
-   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPSWVXSmNKNW92aXphRktySU44RHZwNWV4eXRvdjFicmFzakFoNE9BZzBtV2dncGsxdWwtTzhUNmZqaEx1TWtLaGozXzMyTm12bmFJcENFWjU2clMtOW1BcXAwNUprcUplcHU4RjFubjhFMlNweDFkV0VJNFZ2YV9mOWFJbjFHVVE1Wlc5a2VzemhPWXk5aWJEcnJKOW93OWI1cTROUWxHRFQyRjJxZkI5czlEd1JUOEtPVkVHTWVhMjJTQzNCNkdFb2xGSlFWcnJWeVIzemVHMG9uQQ?oc=5",
-   "source": "facebook.com",
-   "date": "2026-07-05",
-   "town": "needham",
-   "topic": "civic"
-  },
   {
    "title": "Former Wayland Administrator Urges Andover Not To Hire Superintendent Finalist",
    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQmJaZmFLYVdDczFLQURpdWVsajg5NTExYkd2VmkzQWJRQUpqY0JEN24wOVhyb3pIcy1pOEFCMEtqLUZWMTgzY3dwaGJiV1RIRTlDV1h4ZmJOTlEwT0VlVGlrcWx0YWVZM01qM3pRSlBrUWN2el9IMXVjQ0x3X0lyWEdlam9ZeWo1TGotZXJwOVlCQzBoX3AwVG10Yklzam9DamUwQlpGM0c?oc=5",
    "source": "andovermanews.com",
    "date": "2026-07-03",
    "town": "andover",
-   "topic": "civic"
-  },
-  {
-   "title": "Data privacy advocate Evan Greer on Mass. Senate's social media bill, how to protect kids online",
-   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNY1B4SFVkU1o1amt0enM1R3otZkczVWhpTk9WSEpTOVZMU3hWYTVqTXNLRnlrYk1WNTFIV2dhbF8waV9aSzBjeF9Cd1U1dTQ3eGY5REJqb3E0S1dUNnVXblVWaEpkX0JvcG1Ha2RpY3lhNTZrNVN1TS1hTkpXTjRYR2RpNUpWbXlLVklNVFJLRFFOQU40dmZ6LWpYZlJxa0xwZ0hXalFPYmhYMWFPdVFySHNUcGpKMy03RF9LSDhxcndLQTRINnNKb3NkVUFtNHEybEE?oc=5",
-   "source": "WGBH",
-   "date": "2026-07-03",
-   "town": null,
-   "topic": "lane"
-  },
-  {
-   "title": "Power restored across Marblehead at approximately 3 a.m. after heatwave outage",
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNNkN2VTlGdUlxNC1NWGEtaFdpdjNfdlM5ZXZ1enJwTkFyZXh3VWZucHRhME44TUlCbUVvdld3M1M3ZUItLVlZVVJXcXZUVzNpdWVwRFpvaERfU1VzV0VyeTVOQjlMcDhOVWdoZkZJTFVYRmRYZ3JqWjRFTkIwcUZmMlFoTmU?oc=5",
-   "source": "Marblehead Current",
-   "date": "2026-07-03",
-   "town": "marblehead",
-   "topic": "civic"
-  },
-  {
-   "title": "Will the social media ban for teenagers prompt a reading renaissance?",
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQaVI0TjhvNVZSVTNGQlFpZTEtZDZKOGQ5aVJOQV82UWpyM3hXa05xLXZURlUwM3ItVWxKMThheUQ5ZXhvSHhmRTlxYUYxOGJ0bndqU0Zobk1EZjkxSlBreU43UXdlOVE3WlJVamxwYzJyNDZOVXNmTUw5MFVoY0VDTDIxODhSZjdhRWVN?oc=5",
-   "source": "EDP24",
-   "date": "2026-07-03",
-   "town": null,
-   "topic": "lane"
-  },
-  {
-   "title": "School Committee Avoids Questions About Sudbury, Wayland Controversies During Superintendent Finalist Interviews",
-   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQZEZkTmJqa0U1Ml9fWm9mR1VhM2tDZVlsSUtWU3RwX3dlOW9KdmE3NjVBMkl0QnlxemdDWmRHWlpVMTRfNzdibFpHWThMSVI0QjRkeTBnQTJLVzRGWC1oNzFfYjRUSlZROHJJWW9uVVVQdVJfYkdHTzRlQ1F5Y1VZcXg5UTFkU2J5MnFMajV2bzZ4cDZXeWVUNFVaTGd2NHhVLWpkVkdxUEhMbzdlRzlQc3A3Yzd3OW9rb015Si0tblB0T29OcnQtNWNjSlFrdWZ4Q05hWQ?oc=5",
-   "source": "andovermanews.com",
-   "date": "2026-07-03",
-   "town": "sudbury",
-   "topic": "civic"
-  },
-  {
-   "title": "Speak with State Rep. Owens at 2 Watertown Office Hours in July",
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOQUdFWW41S25aVENZa0MteXYxbGtiZUpCczZNR18wWmhObDNVNlBLVXU1Q2lHQjZya3JkTXpkZzgyUVRBR05ra3dNVjdKLU1LRGhZNVdpanhGc3g1cG5UbWVJUXVYSTFYd2dycTZORTE1OGNWY19vNUZCSENMdEVFZEMtZ1lBbm5IdmhfX1puVkdSR01oNWNIclVoa202OWF3QUVyUm1adHJYdw?oc=5",
-   "source": "watertownmanews.com",
-   "date": "2026-07-03",
-   "town": "watertown",
-   "topic": "civic"
-  },
-  {
-   "title": "Ron’s Gourmet Ice Cream Scooping Up Third Location in Westwood",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSEhSWkxjNXdBdW12WFkyOWRNX281SmRYbExFTUR6NHp4cXpKLUdpLS1YbkxSSVBZUWVLbVFudUJjUG1QUFpjR3ZITTM2am5KdzYyNFlrYWt4aVB6RTF4Y24zZ1JBVEswNHAzN3BrRnFaX1diR3RGYVBoM2tkcUJqeFNTU20tVVVSUTRualZyNm9OTnNxQ0JudExHVWxlQ08xLVZv?oc=5",
-   "source": "WhatNow",
-   "date": "2026-07-03",
-   "town": "westwood",
    "topic": "civic"
   },
   {
@@ -76,52 +20,20 @@
    "topic": "civic"
   },
   {
-   "title": "Repeat Champions Find Hidden Treasure In Annual Andover Trails Hunt",
-   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPalhIZllYdHp4NHVMd3piZkZKRVpveklwaEx5ajNFZkhianN3MThjaThheGY2UmtHMV9rQ1lvcjA5eDBDYXIxS0laaUJsaWlJV0NmV0lrbFVNcVJEZDlaeGF3RVhIamV5ejQwTXl5QlpKRmpFd3k4ZzJzME1LMFBvQ3Nwb01vZTJIbHRPWEpWeC1pY1BHZGF1NGR3?oc=5",
-   "source": "andovermanews.com",
-   "date": "2026-07-02",
-   "town": "andover",
-   "topic": "civic"
-  },
-  {
-   "title": "Want a home older than the United States? This historic Lanesborough farm is for sale",
-   "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNSW4zdkZZaDlNcVdlSjZwX1NJaEVlcUVSanB6aFBiVW9nZVp1Xy1DUG5iNWw4ZnNwd2dzN080YnY0RDZrQmJGWUoyb00tOXF0bzkyZU82T1hyVDl3WXVOZVlGY3pTQ0paR2FyMmFRYzNieEV6VFVWLTZHVnhkczA4eG9GRjMxdUpMVWxQTkhXeGhMNjlfMGdEYVpreGJ4Tm05R18tWTNUTXhfNlJuRjRpYnJTSHdKdXRycDhZNUpZeXR1LXJWQzRPRjlabzAzNWFMXzB5dkVtREJEako5UTIwcGtSdEVETERjOXhiNFRUUQ?oc=5",
-   "source": "The Berkshire Eagle",
-   "date": "2026-07-02",
-   "town": "lanesborough",
-   "topic": "civic"
-  },
-  {
-   "title": "Lexington’s Urban Forest Master Plan: Investing in Our Community Trees",
-   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1LakZJRmJoNlVUaGVrWnhRY2hGMXltMHJPTEUyQmd2YkVadE1yQWpCT18yb2M0NGxMeGtieGc1Nmd5a2pSdWx2ZVNyaUxrbVVpTkZHbzgxR1ZjbkxNWmNPN1F3?oc=5",
-   "source": "Lexington, MA (.gov)",
-   "date": "2026-07-02",
-   "town": "lexington",
-   "topic": "civic"
-  },
-  {
-   "title": "Maria’s Gourmet Pasta to Open First Retail Store in Malden This September",
-   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdXdoYllGMUlmNVhDRTVGQjlWSGJLOWpybnJJYlpjQWY1VVJqaTdHSWtuTFRGN1laeENxZ3R4c0hBMHFDZ3NGLXZPbzVNaVJyOHBYbUxfU19fQXBKSTdFZ0pqNWtadktWQktHdzFsZ3ZiVHA4Y0RFeXFXNnFGdUhFNVFTYkRwNTF4UFN1WUxpcFNhQTRtWnl4OVFfS2JvUXB5ZGFvd3B2N3FsMTg?oc=5",
-   "source": "WhatNow",
-   "date": "2026-07-02",
-   "town": "malden",
-   "topic": "civic"
-  },
-  {
-   "title": "Mass. Senate skips social media ban, targets addictive design instead",
-   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNT1hudVVMWndVSUFBNG03NkI2cS1IV1FKTzFGNS1hQVRjVzlGQkdUc1JhWFJ6dnRjYkt6b3Jrd3owcy14Z3JueEZINGxNaU9LSGl6WF9lazdPdm9EQXM3SWNNRzdpMFR5d0E0c0dnVTlmN0dTZm5zZThRNHlJX1dzejF4ekJNVnRxczJUc3VqQ2thRi1aMFNmYUFjNWJGQ0pWNVB2MEtLX1RyaXZZdWxYd3NJQVA?oc=5",
-   "source": "MassLive",
-   "date": "2026-07-02",
+   "title": "Data privacy advocate Evan Greer on Mass. Senate's social media bill, how to protect kids online",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNY1B4SFVkU1o1amt0enM1R3otZkczVWhpTk9WSEpTOVZMU3hWYTVqTXNLRnlrYk1WNTFIV2dhbF8waV9aSzBjeF9Cd1U1dTQ3eGY5REJqb3E0S1dUNnVXblVWaEpkX0JvcG1Ha2RpY3lhNTZrNVN1TS1hTkpXTjRYR2RpNUpWbXlLVklNVFJLRFFOQU40dmZ6LWpYZlJxa0xwZ0hXalFPYmhYMWFPdVFySHNUcGpKMy03RF9LSDhxcndLQTRINnNKb3NkVUFtNHEybEE?oc=5",
+   "source": "WGBH",
+   "date": "2026-07-03",
    "town": null,
    "topic": "lane"
   },
   {
-   "title": "Republican majority seeking Scituate government roles, Long will not seek re-election after 13 terms",
-   "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNNUJZaDQ0clNLRV9ucjZrZk1kNE52YllLYzM2TnNGamhGQmlwVDBDdk5RRXRyeWtpWWZGTmNMSENTNW9CdC1zVl9kMEZnTU9qLTNSaU03bmQ0eVE4WXJsN1lnRElWRWNiWUJubURJUHh6MGhPYTJZTGdrdG12UW1mTzBjUGc0QUtfeTRaajg5NERtYkNDRjNQbE5QeHN3bVAzTTlVTDRhUUVYMlZSQXlIa2xvby1KX2NiQU9tWmVGeHlHMEZfeW9ZZ2RJYTRFdVo2cXdoM2xVMXhZVDJ0TkZUV3M3ZTRZVDNMNXptU0hjTGctRzlwOF9INWRZUHFTaHV2dl9CZTlZQXp6TTJHQ2E0dw?oc=5",
-   "source": "The Valley Breeze",
+   "title": "Mass. Senate skips social media ban, targets addictive design instead",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNT1hudVVMWndVSUFBNG03NkI2cS1IV1FKTzFGNS1hQVRjVzlGQkdUc1JhWFJ6dnRjYkt6b3Jrd3owcy14Z3JueEZINGxNaU9LSGl6WF9lazdPdm9EQXM3SWNNRzdpMFR5d0E0c0dnVTlmN0dTZm5zZThRNHlJX1dzejF4ekJNVnRxczJUc3VqQ2thRi1aMFNmYUFjNWJGQ0pWNVB2MEtLX1RyaXZZdWxYd3NJQVA?oc=5",
+   "source": "MassLive.com",
    "date": "2026-07-02",
-   "town": "scituate",
-   "topic": "civic"
+   "town": null,
+   "topic": "lane"
   },
   {
    "title": "State Senate skips social media ban, targets addictive design instead",
@@ -132,163 +44,11 @@
    "topic": "lane"
   },
   {
-   "title": "Mitch Barnhart shares goodbye message as his tenure in Lexington is officially over",
-   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNWZsLVV4eE1DNVN0SjVqb0VfVVdvbmxSN2xDX0xRNUFwenVISjdnVGZVOXBVUmNjdlhYV2JTYXYxZ1hnVl8waUtKV2drQmJSSnpTeW1zU0t5aTBCRWVmLVZXczJoUFp2aU13d3BOZzNhMUN4MmlvSFJDeWkwQXAxcmdTTjJGdFJjeTVuSmNPdXdOeDRPWUJRM0hlRTBia2wxelVQUzUySHNJLWtRSElpWUR2aw?oc=5",
-   "source": "A Sea Of Blue",
-   "date": "2026-07-01",
-   "town": "lexington",
-   "topic": "civic"
-  },
-  {
-   "title": "State aid reaches Winchester as officials press for broader fiscal tools",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQLXNfTVR6Wkh2RzN6X1ZUVDZ4Y21LZHFjNTRzYzZEeDg0VUdObWFrSFBUR0NNQVR4Y05ZN2Zzc0lUNWJ5QzdEMWYtYkVpeWd0UTc4Y1VHRDJFaUx5Y2Q0R01LUVVabHB5Q2k2enhqWDBLSEUyS2NKNXNlOVFwdkoyRTJqTDZWVFVWb2VGSjNadnM3WWhwblF6SEpCNUJOU3NPaUlieWhSM2tNazBxTkE?oc=5",
-   "source": "winchesternews.org",
-   "date": "2026-07-01",
-   "town": "winchester",
-   "topic": "civic"
-  },
-  {
-   "title": "For America’s 250th, Winchester residents can find fireworks just next door",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUTY4d3dYNTFrQlBEX0E2RkhzcWNfZF9RQzVXVDlKdWUwX21RZmdkZ1FROGFRSWFrV3E4TXlZSWtuc19RcE9hTHV0U0N6RDZUR3hETU5DQXBLR0ZBREcwdVRwVzRqTFBNZVg4MzVIelo0SGtRamE4c2RIem03b0tlVWtteUFNSDZ2QVdwWkJUNDRTSVNKcXFMdk5yVGV2dEl2TVJr?oc=5",
-   "source": "winchesternews.org",
-   "date": "2026-07-01",
-   "town": "winchester",
-   "topic": "civic"
-  },
-  {
-   "title": "Popular Chinese Restaurant Celebrates Grand Reopening In Grafton",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNVU5yT1dIQ1ljYkIwbTA4UnNUMkVucG9zcTQ0NjFmbG1NdVJyd1I4U3plU1FKblJlejRYUUlmRTl6OVQ0TUZXa0ZNSzZLVWd2cTRqd25SZjRBSTN5RHZHb3dMeFJBaDdVTmlyTEhOdjNBVUhQR1o3cEg3VU5CV3RBT1lLSnllc0lucmVrV2RuWkFaaHpQOURKOEw2VzhCNDhoQUlRM3d30gG4AUFVX3lxTE9MR1o1ZjdDdHVvaXU3Smx6TWRvRjlrRFBGa0g3VldKa2g4Z1A3VUNRX0dGdGNhYmFJRkNqdlhZX3VfUVNWQW9hRi03ODBpcENmT2JOc0Iwd0Nsemx1RVZNZW1odWVTZGlaRkg5c1U3MUg1WUFlbTNuZEt3akJjWFdEX0lUcjEwUEVLcnVERHdKV2lKUjltdFBwV0J1OFFfXzczNWhCd0JCTy1odThfaUtCVGE4Uk5FZk8?oc=5",
-   "source": "Patch",
-   "date": "2026-06-30",
-   "town": "grafton",
-   "topic": "civic"
-  },
-  {
-   "title": "Driver seriously injured in Westwood hotel crash",
-   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOODEzb3p4LW5SbzVEQ2J3ajBSZTZvNExfSjY0WnpvMHpVVHpnQ0cwcVBEdG5qeDJDZUJoelJKOTF5Q1l0eE5zdXNoYmNPdGJ6WTBJT0NyTDA0WXBaemhIdWVLbmxMU1ppUHBESUFfYXd4NV9OWU9sVlAxcjNwaDFuMEhJWWwwVFFrMk9FRmtwZw?oc=5",
-   "source": "CBS News",
-   "date": "2026-06-30",
-   "town": "westwood",
-   "topic": "civic"
-  },
-  {
-   "title": "Arlington Police Warn Residents Of Imitation Phone Scam",
-   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSDFuNTRZX000cjdPZnpMMExHVDBRcDJWdXFsZ1M4a3RqNk1XcVhVMVFLS0JHSHVicUxKLTF1d2NwMlZCa0hIVVg5YmdKVmtMbXhBekYzREQ2LVI3YTVCcHFaWmM4NXpKODlzQ2l2MHRJOXNsZExUcWlJN3YzVHpxMU5TU1ZSbFlSeDhkSzdIU1cwOG1QdGVRTDdB0gGvAUFVX3lxTFB6UTVyLVp2YlhaT1FES2d0bmFtNnYybDJkbDNZQ2gxSWlsa09Ga3kwZkJTWFdWRFNWaVNkbHpuU1o4cThMODJkN2d2QVlKZ1RfR1NGZEFmX0x4NnVPa3hrRkF3MDFHU21GWEpuWHZTR2JOSnduUk9nRGpGcldlV3B5MmtYZHJqV3ZIV2kwVmp3VVp3WlFQb1U5UUMwRnBHWHVkbzc5emJoLUQ2ZFNTcVk?oc=5",
-   "source": "Patch",
-   "date": "2026-06-29",
-   "town": "arlington",
-   "topic": "civic"
-  },
-  {
-   "title": "Popular Brookline restaurant, party store make closing announcements on same day",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOUzhObEkxLXhZR3dpcmh3RGQ1c2sySWZlaV9ZNXY4d1pwTkxuYy04QmhsTmFZT1ZyYnVtMGJPSlNrUEhHWTdBaGpOS3YtVU5Lb1ZMSF80WnVTLXNuZlgtSll0czBkeTIySGY1aDZQUUtmdEVUNWlJRUlKa3NobXBhTV9OeHZQbXR1?oc=5",
-   "source": "CBS News",
-   "date": "2026-06-29",
-   "town": "brookline",
-   "topic": "civic"
-  },
-  {
-   "title": "Beloved Brookline Chinese Restaurant Bids Farewell After 66 Years",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQV3pERnNHU2pycVFacEtXREItQ1I5ek1BaWVDZXhDel9EWlgzSVUzaWthTXNQUS1ZbjdQN0N1ZU1xVXZ2aGpZUTk4QWQwamtyN2J0bGduWkJCUnM1MnVMN1lHLS1UbFlFRHNTTjVxZ2tUcDhPSGhZeEV6MjF4WnR2M0VaM1RUbUYzVmROdFJ4bVJsSUMzZzhuS2hSQlloWjhaMVYyUzlKSTk?oc=5",
-   "source": "WhatNow",
-   "date": "2026-06-29",
-   "town": "brookline",
-   "topic": "civic"
-  },
-  {
-   "title": "Massachusetts State Police Trooper Jacob Mick killed in off-duty motorcycle crash in Grafton",
-   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOMjJxNC1nMk9CZEo2WkpWYWlITkk5NVNkcDBIc3JoSXlpcEZhQnlhM0tZZTE2R19LcllLWFpOdXhlRXlPMmI1WUV2WG1yRC01clVxLUdyVWloMlpSSUJ2MVlnQmJpaG9hQTF0SUo2enNqc294b1FxOEJ2cldWWWhLMm93RG1ZMDZrVHZEZ1FBbGhjUQ?oc=5",
-   "source": "CBS News",
-   "date": "2026-06-29",
-   "town": "grafton",
-   "topic": "civic"
-  },
-  {
-   "title": "Sky News Australia. . ‘Triggered with Samara Gill’ host Samara Gill believes the Manchester Airport controversy became a case of social media outrage racing ahead of the facts, with public opinion dividing before the evidence emerged.",
-   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPbE9rbHdmYzNZRDdHdDFUdXNfMFE5MGZ2WU1ld19iVGNrS09CTjNlcHBJSDNnWkVvcldNUW8yNUhqaTl4dVhzc3Nhaml2LWpMcUdGTHRKUmlFTGVZcU5LV1NCNk05VmZhVHRrRDRYUmFqLS15aTN2LVZtY3JKN0lYUVYzU2Q1N0s2Mk1hNXhvandjNlZFYWExV3NPd3hkM2JXM0RhWGlzRHBlRlM4OExZR1dFOUQ2dGxXeDI3cWVEdDhjS0VtdzYw?oc=5",
-   "source": "facebook.com",
-   "date": "2026-06-29",
-   "town": "manchester",
-   "topic": "lane"
-  },
-  {
-   "title": "Golden Temple, a Brookline institution, closes after 66 years in business",
-   "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPUndYMnAwYTVrV3c2Z01pOVoxZE85UmxvaWtacGxUWXU2VE00bDZjZG90UzM4VzZqOThHZmxlV29nQUlTQmJ4Z05UUS1KUG1jbld0YVQ3MEVXa05mUEpiVkhaUFlldDBheTdydWpJa3R1VnQ2SXZ5dDZlbHZ5bmxIY0xhS0JoMFFqOVJ5ZXVGTVd1Y3U0LVJ0ekNJSnhldXNwM0x1RkcwYW9FbmMtbUFyVlR1R1pPQ2RFbnhvUHY2UWZNbXdJNTFULU9vR2pUWURIdmtBc1hvUFDSAeABQVVfeXFMT2dQT0lIMlJtLVBfaHAtblFQd2N2cmd2NHZhbVpwRmZzT3lKQ3kwXzlXMHhnZmFsZ0dFOEYwQzByTkRMQ3gtZUh2aFNiNXZ5SFE5S05WdXd0ZmhJR2VVS2xXN1RqNWt4czhTT0FscTN0MWpibWM5MjJhb1VUVU5ZVnNiT1hwR0NDUG5aSDhBMENDMHYza0psb3lYTzVvSERKdVRaX0c0eUsyWDJ5WWVBTGM3bzYxRzhObTJfeXQtOW5MMXkzVG02MDVHQ243bXMzVHEtSEdtdlNueG14NVlrQzA?oc=5",
-   "source": "NBC Boston",
-   "date": "2026-06-28",
-   "town": "brookline",
-   "topic": "civic"
-  },
-  {
-   "title": "Beloved Brookline restaurant closes after over 60 years in business",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9wQnYzcVNCMU1YemZaSWFORmJXanNTZjdTaTk3LURqWVJuaVdOWDlPNXJYSUc4S1RGa2R0OEJHenVNTWN5M1M4RG03a2UtcWhEZ0ZZZUNQWDBxa05CaWpyV1lqT05Ya1MyYTNmME91aWJadDFqMWEw?oc=5",
-   "source": "WCVB",
-   "date": "2026-06-27",
-   "town": "brookline",
-   "topic": "civic"
-  },
-  {
-   "title": "New Upscale Restaurant Planned for Former Furniture Store in Downtown Hingham",
-   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQ2RfXzd0dm9rQUpvUGtIWTRuUVdCZlNJMjNzcThNZU1GUl9xT09nN19EYjlZVU4tRGFSM09lZDRyMU5PYlBReGNDT05OOHgzZWFKVnFJMDRoOVl0MzlRMjAySjhBeUl4QjA2bTF5V19xZkRZTFBDczdwc0I0b282bUNnR2JUT25weTNqQXVxTmZlMzItRTItWFdYMDJpYUxtZm9aOW51WDllbGhyVU5BaUotQVdrRkFU?oc=5",
-   "source": "WhatNow",
-   "date": "2026-06-26",
-   "town": "hingham",
-   "topic": "civic"
-  },
-  {
-   "title": "The US President's comments raised eyebrows and triggered a social media storm 👀",
-   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNTlI1aDk2alAtUkZFTHNfT1hpV2xZbE14SlFUVVZzX2hFdEdXZnhwaFNaZ0dtQnRlekxGZ1QtUjNlbm95R1V2eTltM2FtN0N4UEJOQ0NLODRHdW5HWDR2WGRuWDYtWnE2NXl5eHJLWTU3b09WajVaR1p4elNNMkYzYUxiQlRtaWdFandfUktSdjQ5ZnlaZFhiZGZwb3p4aGJQcHJGSktFWU1JWm9hdTRONFNzb01CbnpfUXIwWTBWZW55SUk0c2dRUGpWb3lfNEwyVEJkRDdHQUlRQ2NCdk1UOTZlRnQ?oc=5",
-   "source": "facebook.com",
-   "date": "2026-06-26",
-   "town": null,
-   "topic": "lane"
-  },
-  {
-   "title": "Son accused of stabbing father to death at Wellesley playground",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTEVJV1JQbnR3clAxUVJSMVlKUjdCdTdRYzhsTDNYWEVvcVM1dU5TRXZrbWtBR1RuQ2tFSFgwY1ViX3JGYmxVQnZEZ056dkkxeWczTjljZDdZOWlaNWl4NlNNV2lZekV3aUtzdGtwd1hfbWV0UGpTRXQxazBocDdUNDF0WEM0czFIeW1zemM4NlBnTGlUaTlaczRDMmRlTzB1RnU0?oc=5",
-   "source": "CBS News",
-   "date": "2026-06-26",
-   "town": "wellesley",
-   "topic": "civic"
-  },
-  {
-   "title": "Wellesley man stabbed father 20 times in daytime murder at park, police say",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNN2pNUVhiWVJYVGp4SVZBeWJrZjlJdXFaTzg4WlhycTNhLVlVS0h2NUM5dTNhRmt6bFdQOU8wVFJWc3pMWHo2UnY5ZGkwU0NOcGJFTGs3T0daMkxGLTlDU2RrVGVfemE1TWFKT1ZLdGl2VlR2REpmQ2tjVHZFNF9nOVJqR3JGeURzSDQ5SGZaa0tNWW9jZGhGR1JCUTVkVDE3akNtOFRLYXlhc3owM1FXdjVn?oc=5",
-   "source": "CBS News",
-   "date": "2026-06-26",
-   "town": "wellesley",
-   "topic": "civic"
-  },
-  {
-   "title": "The Top 10 Most Read Andover Stories Of 2026 — So Far",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBRMUhwVFRHQnhFYlBVRWxEWTFqdlVGRmVNNUVoemJpbVFFZXJNY0kwcVZZalpVNjBoY2ZMbWJuZTFTNERSN3RLLVZXbGx0V1R4andicDF1a2xuQktySXJyWHhwMElqeWZZSHNUdzYtTmJybWZPQU13?oc=5",
-   "source": "andovermanews.com",
-   "date": "2026-06-25",
-   "town": "andover",
-   "topic": "civic"
-  },
-  {
-   "title": "Beverly, Peabody, Danvers grapple with antisemitism",
-   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNNm9zbk1TV2FCMmxhN1dHWUFCYzl1YjJGNlpxMmJDeE9Ld0ptMDUwckZnZlJpclJkR19JekVKSDJjWTVBYk42cWZFM0M4T083Yk1pTVU2SGt0UmptZnlUbVl2S19zMmNkUWdJTnBXSmtIeWgyYzBzWTFpS2owTjNfTHJiN1ZzRmJXdEFPZkNud04?oc=5",
-   "source": "jewishjournal.org",
-   "date": "2026-06-25",
-   "town": "beverly",
-   "topic": "civic"
-  },
-  {
    "title": "Andover Schools Hire New Superintendent",
    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOWUMySWNScUM1Wl9tYVNIeW5IRkhzUXptR0hERk5rZGdZZ01YT3d1QnZJN043NmdNVTdCa2VRdDdvaTNFNHVNeTFsNGxTWUppakUwaGFiekxWQnNBNkxOcUtrZ0xZM0N6MEUtRmVHT0lVTFU4Z1k5ek1BYmFkOWdyRDVPVVcxQQ?oc=5",
    "source": "Patch",
    "date": "2026-06-24",
    "town": "andover",
-   "topic": "civic"
-  },
-  {
-   "title": "2026 July 4 Events Guide For Arlington",
-   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNeWQtSGRoekhJOVNLc3haSEJRdnNBOFYtQ19GcUFDS0tZaVVJRGxyZXphSHlVaTYtWFpRY0lEclFZbnlvMUVlSHNGZ1NfRWZ2SzhYZVBlZ0dOUWtKaFhuMUw0UzJDMXcyZ2h3Q1FPaVkwTGpwdFlrdjFUT3A4bmhaWURn?oc=5",
-   "source": "Patch",
-   "date": "2026-06-24",
-   "town": "arlington",
    "topic": "civic"
   },
   {
@@ -300,35 +60,11 @@
    "topic": "civic"
   },
   {
-   "title": "Beverly City Council Slashes DEI Position, Passes Budget On Split Vote Amid Looming Budget Crisis",
-   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNSDFIbEd0REF0UTRxenVnN0VEaVNDRGRVRE00aFdrLWhXS2t5TE02UW1Cd1RLMFh0Z2tqWHJqZ2dDMVU1NGVQUmZaMFUwaW91dXpQbXVGRENTb3dkaGxfZlB4bDVfUURlbWtway1aNlA1SGVDQnQ0RkN5ejdmSTE1NHRPQWdlVEp3ZF9YX21DZ2dJTkJ2RDFlVERsQkhTVTJVLUpjU0o0NlJHd3hsOFBobQ?oc=5",
-   "source": "Patch",
+   "title": "Class of 2026: Concord High School graduates 68 students (59 photos)",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNnBsT1gtYklLZnlSblg2OHVIMTN3aXpBOC03a0traGtpWkl6SVFiUGluMlFUT3UzNjZDcWZ1bnkzbU90TG9LUmMyNW16eW9RTnZhenJTUWY5aTNGRjZWLTE3Ukh4T1B3VmJfWTdBZFRnalcyNU91VWxSZzVYSmJXcy1vTC1tMEhmTHRlaExBLVYwUEd3OExhRHZYaHpOS3lZajNfTFBNeDVJT2fSAb8BQVVfeXFMT2JRa3NtaEMzQjNYUGRubExBaUpCVm5rTVNZY1BKczN3LWw5elZzbWpfVVJIclNxNDQ5d2JtZkVKaGtOdVFob3NCSmtKektjOC1Ld2JFNmk5UUhhZE5xejNKbUJYU0RQYnhvQVRZZl90NlpUR3RTejVtblB5eWlFVHAwbktGZzVMbFBuc0tuS09yRmNzMTVmMzEyWWs5b0Q5Y193QnZhTFZhcXdTcG9xRGhVb0N1SURrbmw1UmVibjQ?oc=5",
+   "source": "SILive.com",
    "date": "2026-06-24",
-   "town": "beverly",
-   "topic": "civic"
-  },
-  {
-   "title": "Central MA district's answer to cell phones in school: There's an app for that",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeWRhNHJtVEVFOGxMak1tbUdxYTFrQ1JDQ0RPN1ZSa0pJd3F1UC1fWGJvMWZsTC1udHF5UVlGV3pEcWU2SEpyTS1wbEFyaVgxUHRGT0t2NGNDenBObmo3Q3NDYjRDMUQ5NVZoU1BLclJvU0w4Yjh2U1VVb1Y0dHBPYUdTYzkzeFcyRFFpajYyaXg0RGtrYUo1Q0ZaVkRNSUVKTURTS3RTeDg?oc=5",
-   "source": "Worcester Telegram",
-   "date": "2026-06-24",
-   "town": null,
-   "topic": "lane"
-  },
-  {
-   "title": "Winchester Historical Society awarded $300,000 Cummings grant",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNlY1ckpDUXAxRy02UTBxUVYzU2ZlSGlLZVd0b2hSd3NvWFBmNk1JZ3IwRHI1d3VudmlQRGY1TzdCbDRTWGZhYXJPRW5KVlVpbTVQcHFsX0RrN0xaVXlWMmVEOGZoNFpOb2ZPQ2dEb1kwc2ZlWTBTaUpKRkpGOU0tazlHV2U0Mm1OQ3BueVZCeVlPV015Rlh1MWxRN29YM1VaS0dJeFVacDJ2QktRQkRWai13?oc=5",
-   "source": "Homenewshere.com",
-   "date": "2026-06-24",
-   "town": "winchester",
-   "topic": "civic"
-  },
-  {
-   "title": "2026 Andover Resident Survey",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9IRTZ5QVVxSmJDejZhYm9DNGRzbk0xb1hVdFFVVFRxam1MSlp1UUU5dFJEZ1RIVllBaEVMVzhINDNWdFlhNUtWZm5uS2dPTkxnUUd1ejkzdkFxSDcwTk5qZEZKbUJndw?oc=5",
-   "source": "Andover, MA (.gov)",
-   "date": "2026-06-23",
-   "town": "andover",
+   "town": "concord",
    "topic": "civic"
   }
  ]

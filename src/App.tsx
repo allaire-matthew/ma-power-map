@@ -6,7 +6,6 @@ import { NewsView } from './views/NewsView'
 import { DetailPanel } from './DetailPanel'
 import { GuidePanel } from './GuidePanel'
 import { StatTile } from './ui'
-import { fmtDate } from './model'
 
 type View = 'map' | 'chapters' | 'news'
 
@@ -68,7 +67,6 @@ export default function App() {
   }
 
   const selected = selectedId && world ? world.records.get(selectedId) ?? null : null
-  const pipelineUpdated = world?.freshness.find((f) => f.label === 'Chapter pipeline')?.date
 
   return (
     <div className="flex flex-col h-screen w-screen overflow-hidden">
@@ -192,25 +190,16 @@ export default function App() {
           className="shrink-0 px-4 py-2.5 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-2 items-center"
           style={{ background: 'var(--card)', boxShadow: 'inset 0 -1px var(--hairline)' }}
         >
-          <StatTile
-            label="Chapters in pipeline"
-            value={String(world.kpis.chapters)}
-            sub={pipelineUpdated ? `tracker synced ${fmtDate(pipelineUpdated)}` : undefined}
-          />
-          <StatTile
-            label="Prospect towns"
-            value={String(world.kpis.prospectTowns)}
-            sub="parent groups on the ground"
-          />
+          <StatTile label="Chapters" value={String(world.kpis.chapters)} />
+          <StatTile label="Towns with local groups" value={String(world.kpis.prospectTowns)} />
           <StatTile
             label="Districts at Tier 4"
             value={String(world.kpis.tier4)}
-            sub={`of ${world.kpis.districtsTotal} tracked districts`}
+            sub={`of ${world.kpis.districtsTotal}`}
           />
           <StatTile
-            label="School-committee meetings"
+            label="Meetings next 14 days"
             value={String(world.kpis.meetingsNext14d)}
-            sub="in the next 14 days, statewide"
           />
         </div>
       )}

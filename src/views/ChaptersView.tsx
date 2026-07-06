@@ -1,12 +1,12 @@
 import { useMemo, useState } from 'react'
 import type { World, TownRecord } from '../model'
-import { daysSince, fmtAgo, healthFlags } from '../model'
+import { daysSince, healthFlags } from '../model'
 import { STAGE_COLOR, STAGE_NAME } from '../colors'
 import { FilterChip, OrgChip, StageTrack, StatusChip } from '../ui'
 import { resolveOrgs } from '../orgs'
 
-type SortKey = 'name' | 'stage' | 'daysInStage' | 'supporters' | 'lastActivity'
-type Kind = 'all' | 'chapters' | 'prospects'
+type SortKey = 'name' | 'stage' | 'daysInStage'
+type Kind = 'all' | 'chapters' | 'groups'
 
 export function ChaptersView({
   world,
@@ -24,7 +24,7 @@ export function ChaptersView({
   const rows = useMemo(() => {
     let out = world.tracked
     if (kind === 'chapters') out = out.filter((r) => r.pipeline)
-    if (kind === 'prospects') out = out.filter((r) => !r.pipeline)
+    if (kind === 'groups') out = out.filter((r) => !r.pipeline)
     if (stageFilter != null) out = out.filter((r) => r.pipeline?.stage === stageFilter)
     const val = (r: TownRecord): string | number => {
       switch (sort.key) {
@@ -34,12 +34,6 @@ export function ChaptersView({
           return r.pipeline ? r.pipeline.stage : -1
         case 'daysInStage':
           return r.pipeline ? daysSince(r.pipeline.dateEnteredStage) ?? -1 : -1
-        case 'supporters':
-          return r.pipeline?.engagedSupporters ?? -1
-        case 'lastActivity':
-          return r.pipeline
-            ? -(daysSince(r.pipeline.lastPublicActivity ?? r.pipeline.dateEnteredStage) ?? 9999)
-            : -9999
       }
     }
     return [...out].sort((a, b) => {
@@ -60,19 +54,12 @@ export function ChaptersView({
 
   return (
     <div className="absolute inset-0 overflow-y-auto thin-scroll">
-      <div className="max-w-[1200px] mx-auto px-4 py-4 flex flex-col gap-4">
-        {/* Stage funnel — labeled bars on a common baseline; click to
-            filter the table (DESIGN.md C1/G1). */}
+      <div className="max-w-[1100px] mx-auto px-4 py-4 flex flex-col gap-4">
+        {/* Stage funnel — labeled bars, click to filter (DESIGN.md C1/G1). */}
         <section
           className="rounded-xl border p-4"
           style={{ borderColor: 'var(--hairline)', background: 'var(--card)' }}
         >
-          <h2 className="text-[13px] font-semibold mb-3" style={{ color: 'var(--ink)' }}>
-            Pipeline by stage
-            <span className="font-normal ml-2" style={{ color: 'var(--ink-3)' }}>
-              a chapter advances by meeting a gate, not by time passing
-            </span>
-          </h2>
           <div className="flex flex-col gap-1.5">
             {[0, 1, 2, 3, 4, 5].map((s) => {
               const n = world.stageCounts[s] ?? 0
@@ -86,7 +73,7 @@ export function ChaptersView({
                   className="group flex items-center gap-2 text-left rounded-md px-1.5 py-0.5 hover:bg-black/[.04]"
                 >
                   <span
-                    className="w-36 shrink-0 text-[12px]"
+                    className="w-32 shrink-0 text-[12px]"
                     style={{ color: active ? 'var(--ink)' : 'var(--ink-2)', fontWeight: active ? 600 : 400 }}
                   >
                     {s} · {STAGE_NAME[s]}
@@ -110,7 +97,7 @@ export function ChaptersView({
           </div>
         </section>
 
-        {/* Filters row — one row, above what it scopes (DESIGN.md G1). */}
+        {/* Filters row (DESIGN.md G1). */}
         <div className="flex items-center gap-2 flex-wrap">
           <div
             className="inline-flex rounded-lg border overflow-hidden"
@@ -122,7 +109,7 @@ export function ChaptersView({
               [
                 ['all', `All (${world.tracked.length})`],
                 ['chapters', `Chapters (${world.kpis.chapters})`],
-                ['prospects', `Prospect towns (${world.kpis.prospectTowns})`],
+                ['groups', `Local groups (${world.kpis.prospectTowns})`],
               ] as [Kind, string][]
             ).map(([k, label]) => {
               const active = kind === k
@@ -157,28 +144,24 @@ export function ChaptersView({
           style={{ borderColor: 'var(--hairline)', background: 'var(--card)' }}
         >
           <div className="overflow-x-auto thin-scroll">
-            <table className="w-full border-collapse text-[13px]" style={{ minWidth: 860 }}>
+            <table className="w-full border-collapse text-[13px]" style={{ minWidth: 720 }}>
               <thead>
                 <tr
                   className="sticky top-0 z-10"
                   style={{ background: 'var(--card)', boxShadow: 'inset 0 -1px var(--hairline)' }}
                 >
                   <Th onClick={() => toggleSort('name')} active={sort.key === 'name'} dir={sort.dir} align="left" w="16%">
-                    Community
+                    Town
                   </Th>
-                  <Th align="left" w="17%">Affiliations</Th>
-                  <Th align="left" w="13%">Lead</Th>
-                  <Th onClick={() => toggleSort('stage')} active={sort.key === 'stage'} dir={sort.dir} align="left" w="15%">
+                  <Th align="left" w="30%">Group</Th>
+                  <Th align="left" w="16%">Lead</Th>
+                  <Th onClick={() => toggleSort('stage')} active={sort.key === 'stage'} dir={sort.dir} align="left" w="17%">
                     Progress
                   </Th>
-                  <Th align="left" w="10%">Status</Th>
-                  <Th onClick={() => toggleSort('daysInStage')} active={sort.key === 'daysInStage'} dir={sort.dir} align="right" w="7%">
+                  <Th align="left" w="13%">Status</Th>
+                  <Th onClick={() => toggleSort('daysInStage')} active={sort.key === 'daysInStage'} dir={sort.dir} align="right" w="8%">
                     In stage
                   </Th>
-                  <Th onClick={() => toggleSort('supporters')} active={sort.key === 'supporters'} dir={sort.dir} align="right" w="8%">
-                    Supporters
-                  </Th>
-                  <Th align="left" w="14%">Next action</Th>
                 </tr>
               </thead>
               <tbody>
@@ -190,7 +173,7 @@ export function ChaptersView({
           </div>
           {rows.length === 0 && (
             <div className="px-4 py-10 text-center text-[13px]" style={{ color: 'var(--ink-2)' }}>
-              No communities match.{' '}
+              No matches.{' '}
               <button
                 type="button"
                 className="font-semibold underline underline-offset-2"
@@ -261,10 +244,10 @@ function Row({
 }) {
   const p = rec.pipeline
   const flags = p ? healthFlags(p) : []
-  const orgs = rec.orgs.flatMap((o) => resolveOrgs(o.org, o.chapterName))
-  const uniqueOrgs = orgs.filter((o, i) => orgs.findIndex((x) => x.name === o.name) === i)
-  const lead = p?.chapterLead ?? rec.orgs.find((o) => o.leadName)?.leadName ?? null
   const inStage = p ? daysSince(p.dateEnteredStage) : null
+  const rawLead = p?.chapterLead ?? rec.orgs.find((o) => o.leadName)?.leadName ?? null
+  const leadParts = rawLead?.split('/').map((x) => x.trim()).filter(Boolean) ?? []
+  const lead = leadParts.length > 1 ? `${leadParts[0]} +${leadParts.length - 1}` : rawLead
   return (
     <tr
       onClick={onSelect}
@@ -282,25 +265,29 @@ function Row({
     >
       <td className="px-3 py-2.5">
         <div className="font-semibold leading-tight" style={{ color: 'var(--ink)' }}>
-          {p?.chapter ?? rec.name}
+          {rec.name}
         </div>
         <div className="text-[11.5px] leading-tight" style={{ color: 'var(--ink-3)' }}>
-          {rec.countyName ? `${rec.countyName} County` : rec.name}
+          {rec.countyName ?? ''}
         </div>
       </td>
       <td className="px-3 py-2.5">
-        <div className="flex items-center gap-1 flex-wrap max-w-[220px]">
-          {uniqueOrgs.length > 0 ? (
-            uniqueOrgs.slice(0, 3).map((o) => <OrgChip key={o.name} org={o} />)
-          ) : (
-            <span style={{ color: 'var(--ink-3)' }}>—</span>
-          )}
-          {uniqueOrgs.length > 3 && (
-            <span className="text-[11.5px]" style={{ color: 'var(--ink-3)' }}>
-              +{uniqueOrgs.length - 3}
-            </span>
-          )}
-        </div>
+        {p ? (
+          <GroupCell name={p.chapter === rec.name ? `CIRL ${p.chapter}` : p.chapter} orgField="Commonwealth IRL" />
+        ) : rec.orgs.length > 0 ? (
+          <div className="flex flex-col gap-1">
+            {rec.orgs.slice(0, 2).map((o, i) => (
+              <GroupCell key={i} name={groupDisplayName(o, rec.name)} orgField={o.org} chapterName={o.chapterName} />
+            ))}
+            {rec.orgs.length > 2 && (
+              <span className="text-[11.5px]" style={{ color: 'var(--ink-3)' }}>
+                +{rec.orgs.length - 2} more
+              </span>
+            )}
+          </div>
+        ) : (
+          <span style={{ color: 'var(--ink-3)' }}>—</span>
+        )}
       </td>
       <td className="px-3 py-2.5" style={{ color: 'var(--ink)' }}>
         {lead ? (
@@ -320,9 +307,7 @@ function Row({
         {p ? (
           <StageTrack stage={p.stage} compact />
         ) : (
-          <span className="text-[12px]" style={{ color: 'var(--ink-3)' }}>
-            Prospect
-          </span>
+          <span style={{ color: 'var(--ink-3)' }}>—</span>
         )}
       </td>
       <td className="px-3 py-2.5">
@@ -347,14 +332,39 @@ function Row({
       <td className="px-3 py-2.5 text-right tnum" style={{ color: 'var(--ink)' }}>
         {inStage != null ? `${inStage}d` : '—'}
       </td>
-      <td className="px-3 py-2.5 text-right tnum" style={{ color: 'var(--ink)' }}>
-        {p?.engagedSupporters ?? '—'}
-      </td>
-      <td className="px-3 py-2.5">
-        <span className="block truncate max-w-[180px]" style={{ color: p?.nextAction ? 'var(--ink)' : 'var(--ink-3)' }}>
-          {p?.nextAction ?? (p ? fmtAgo(p.lastPublicActivity) : '—')}
-        </span>
-      </td>
     </tr>
   )
+}
+
+/** Local group identity: its own name, with the parent-org logo beside it. */
+function GroupCell({
+  name,
+  orgField,
+  chapterName,
+}: {
+  name: string
+  orgField: string
+  chapterName?: string | null
+}) {
+  const orgs = resolveOrgs(orgField, chapterName)
+  // Don't repeat a chip whose name IS the group name shown.
+  const chips = orgs.filter((o) => o.name !== name).slice(0, 2)
+  return (
+    <div className="flex items-center gap-1.5 min-w-0">
+      <span className="truncate leading-tight" style={{ color: 'var(--ink)' }}>
+        {name}
+      </span>
+      {chips.map((o) => (
+        <OrgChip key={o.name} org={o} />
+      ))}
+    </div>
+  )
+}
+
+/** chapterName is sometimes just the town ("Beverly, MA") — use the org then. */
+function groupDisplayName(o: { org: string; chapterName: string | null }, townName: string): string {
+  const cn = (o.chapterName ?? '').trim()
+  const norm = cn.toLowerCase().replace(/,?\s*ma\.?$/, '').trim()
+  if (!cn || norm === townName.toLowerCase()) return o.org.split('/')[0].trim()
+  return cn
 }

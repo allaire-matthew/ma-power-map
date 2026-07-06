@@ -22,6 +22,8 @@ const REGISTRY: OrgInfo[] = [
   { name: 'Lex Kids Be Kids', short: 'LKK', domain: 'lexkidsbekids.org', url: 'https://lexkidsbekids.org' },
   { name: 'South Shore Digital Wellness', short: 'SSD', domain: 'southshoredigitalwellness.org', url: 'https://southshoredigitalwellness.org' },
   { name: 'ReConnect Western MA', short: 'RC', domain: 'reconnectwma.org', url: 'https://reconnectwma.org' },
+  { name: 'Reconnect Malden', short: 'RM', domain: 'reconnectmalden.com', url: 'https://reconnectmalden.com' },
+  { name: 'Sudbury for Digital Balance', short: 'SDB', domain: 'sudburyfordigitalbalance.org', url: 'https://sudburyfordigitalbalance.org' },
   { name: 'Commonwealth IRL', short: 'CIRL', domain: 'commonwealthirl.org', url: 'https://commonwealthirl.org' },
   // No verified domain — monogram only. (Two unrelated MA "Reconnect"
   // groups exist; Malden's isn't confidently either.)

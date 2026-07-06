@@ -13,7 +13,7 @@ import { PRESENCE, STAGE_COLOR, STAGE_NAME, TIER_COLOR, TIER_SHORT } from '../co
 const LENSES: { key: Lens; label: string; hint: string }[] = [
   { key: 'chapters', label: 'Chapters', hint: 'CIRL chapter pipeline, with parent organizing as context' },
   { key: 'policy', label: 'Phone policy', hint: 'District phone-policy strength, Tier 1–4' },
-  { key: 'organizing', label: 'Organizing', hint: 'Where parent groups are active' },
+  { key: 'organizing', label: 'Organizing', hint: 'Where local groups are active' },
 ]
 
 const BOUNDARY_OPTIONS: { key: BoundaryKey; label: string }[] = [
@@ -58,7 +58,7 @@ export function MapView({
       bits.push(`Stage ${hoverRec.pipeline.stage} · ${STAGE_NAME[hoverRec.pipeline.stage]}`)
     if (lens === 'policy') bits.push(TIER_SHORT[hoverRec.policy?.tier ?? 1])
     else if (hoverRec.orgs.length > 0)
-      bits.push(`${hoverRec.orgs.length} parent group${hoverRec.orgs.length > 1 ? 's' : ''}`)
+      bits.push(`${hoverRec.orgs.length} local group${hoverRec.orgs.length > 1 ? 's' : ''}`)
     return bits.join(' · ')
   }, [hoverRec, lens])
 
@@ -184,7 +184,7 @@ export function MapView({
               label: `${s} · ${STAGE_NAME[s]}`,
             }))}
             extra={[
-              { swatch: PRESENCE, label: 'Parent group present', alpha: 0.35 },
+              { swatch: PRESENCE, label: 'Local group active', alpha: 0.35 },
             ]}
           />
         )}
@@ -200,7 +200,7 @@ export function MapView({
         )}
         {lens === 'organizing' && (
           <LegendRows
-            title="Parent organizing"
+            title="Local groups"
             rows={[
               { swatch: PRESENCE, label: '2+ groups', alpha: 0.55 },
               { swatch: PRESENCE, label: '1 group', alpha: 0.3 },

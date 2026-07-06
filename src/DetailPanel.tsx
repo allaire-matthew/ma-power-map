@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react'
 import type { TownRecord } from './model'
 import { daysSince, fmtAgo, fmtDate, healthFlags } from './model'
-import { STAGE_GATE, STAGE_NAME } from './colors'
 import { Fact, OrgChip, StageTrack, StatusChip, TierChip } from './ui'
 import { resolveOrgs } from './orgs'
 
@@ -60,11 +59,6 @@ export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => 
           <section className="flex flex-col gap-2.5">
             <SectionTitle>Chapter · {p.chapter}</SectionTitle>
             <StageTrack stage={p.stage} />
-            {p.stage < 5 && (
-              <p className="text-[12px] leading-snug m-0" style={{ color: 'var(--ink-2)' }}>
-                Next gate — {STAGE_NAME[p.stage + 1]}: {STAGE_GATE[p.stage + 1]}
-              </p>
-            )}
             {flags.length > 0 && (
               <ul className="m-0 p-0 list-none flex flex-col gap-1">
                 {flags.map((f) => (
@@ -85,15 +79,12 @@ export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => 
                 )}
               </Fact>
               <Fact label="Partners">
-                <span className="tnum">{p.partnersCount}</span> of 2 needed to activate
+                <span className="tnum">{p.partnersCount}</span>
               </Fact>
               <Fact label="Supporters">
-                <span className="tnum">{p.engagedSupporters ?? 0}</span> engaged
+                <span className="tnum">{p.engagedSupporters ?? 0}</span>
               </Fact>
-              <Fact label="In stage">
-                {inStage != null ? `${inStage} days` : '—'}
-                {p.dateEnteredStage ? ` (since ${fmtDate(p.dateEnteredStage)})` : ''}
-              </Fact>
+              <Fact label="In stage">{inStage != null ? `${inStage} days` : '—'}</Fact>
               <Fact label="Last activity">{p.lastPublicActivity ? fmtAgo(p.lastPublicActivity) : 'none yet'}</Fact>
               <Fact label="Last report">{p.lastReport ? fmtAgo(p.lastReport) : 'none yet'}</Fact>
               {p.anchorActivation && <Fact label="Anchor">{p.anchorActivation}</Fact>}
@@ -111,7 +102,7 @@ export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => 
         {rec.orgs.length > 0 && (
           <section className="flex flex-col gap-2">
             <SectionTitle>
-              Parent organizing <Count n={rec.orgs.length} />
+              Local groups <Count n={rec.orgs.length} />
             </SectionTitle>
             <ul className="m-0 p-0 list-none flex flex-col gap-2.5">
               {rec.orgs.map((o, i) => {
@@ -135,11 +126,6 @@ export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => 
                         </>
                       )}
                     </div>
-                    {o.notes && (
-                      <div className="text-[11.5px] leading-snug" style={{ color: 'var(--ink-3)' }}>
-                        {o.notes}
-                      </div>
-                    )}
                   </li>
                 )
               })}
@@ -152,7 +138,17 @@ export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => 
           <section className="flex flex-col gap-2">
             <SectionTitle>Phone policy · {rec.policy.districtName}</SectionTitle>
             <TierChip tier={rec.policy.tier} full />
-            <p className="text-[12px] leading-snug m-0" style={{ color: 'var(--ink-2)' }}>
+            <p
+              className="text-[12px] leading-snug m-0"
+              style={{
+                color: 'var(--ink-2)',
+                display: '-webkit-box',
+                WebkitLineClamp: 3,
+                WebkitBoxOrient: 'vertical',
+                overflow: 'hidden',
+              }}
+              title={rec.policy.policySummary}
+            >
               {rec.policy.policySummary}
             </p>
             <div className="flex flex-col gap-1.5">
@@ -254,7 +250,7 @@ export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => 
               In the news <Count n={rec.news.length} />
             </SectionTitle>
             <ul className="m-0 p-0 list-none flex flex-col gap-2">
-              {rec.news.slice(0, 5).map((n, i) => (
+              {rec.news.slice(0, 3).map((n, i) => (
                 <li key={i} className="flex flex-col">
                   <a
                     href={n.url}
