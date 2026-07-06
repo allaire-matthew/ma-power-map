@@ -79,9 +79,6 @@ export default function App() {
           <span className="font-wordmark text-[17px] font-semibold" style={{ color: 'var(--navy)' }}>
             MA Power Map
           </span>
-          <span className="hidden sm:inline text-[11px] uppercase tracking-wider" style={{ color: 'var(--ink-3)' }}>
-            Commonwealth IRL
-          </span>
         </h1>
 
         <nav className="flex items-center gap-1" aria-label="Views">
