@@ -11,7 +11,7 @@ import {
 import { PRESENCE, STAGE_COLOR, STAGE_NAME, TIER_COLOR, TIER_SHORT } from '../colors'
 
 const LENSES: { key: Lens; label: string; hint: string }[] = [
-  { key: 'chapters', label: 'Chapters', hint: 'CIRL chapter pipeline, with parent organizing as context' },
+  { key: 'chapters', label: 'Councils', hint: 'CIRL Council pipeline, with parent organizing as context' },
   { key: 'policy', label: 'Phone policy', hint: 'District phone-policy strength, Tier 1–4' },
   { key: 'organizing', label: 'Organizing', hint: 'Where local groups are active' },
 ]
@@ -181,7 +181,7 @@ export function MapView({
       >
         {lens === 'chapters' && (
           <LegendRows
-            title="Chapter stage"
+            title="Council stage"
             rows={[1, 2, 3, 4, 5].map((s) => ({
               swatch: STAGE_COLOR[s],
               label: `${s} · ${STAGE_NAME[s]}`,

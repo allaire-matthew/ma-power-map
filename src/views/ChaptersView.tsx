@@ -108,7 +108,7 @@ export function ChaptersView({
             {(
               [
                 ['all', `All (${world.tracked.length})`],
-                ['chapters', `Chapters (${world.kpis.chapters})`],
+                ['chapters', `Councils (${world.kpis.chapters})`],
                 ['groups', `Local groups (${world.kpis.prospectTowns})`],
               ] as [Kind, string][]
             ).map(([k, label]) => {

@@ -11,7 +11,7 @@ type View = 'map' | 'chapters'
 
 const VIEWS: { key: View; label: string }[] = [
   { key: 'map', label: 'Map' },
-  { key: 'chapters', label: 'Chapters' },
+  { key: 'chapters', label: 'Councils' },
 ]
 
 export default function App() {
@@ -229,10 +229,10 @@ export default function App() {
 // tier green, organizing violet — values stay in ink (DESIGN.md D4).
 const KPI_MODES = {
   chapters: {
-    label: 'Chapter pipeline',
+    label: 'Council pipeline',
     color: '#2563eb',
     tiles: (k: World['kpis']) => [
-      { label: 'Chapters', value: String(k.chapters) },
+      { label: 'Councils', value: String(k.chapters) },
       { label: 'Towns with local groups', value: String(k.prospectTowns) },
       { label: 'Engaged supporters', value: String(k.engagedSupporters) },
       { label: 'Meetings next 14 days', value: String(k.meetingsNext14d) },
@@ -255,7 +255,7 @@ const KPI_MODES = {
       { label: 'Local groups', value: String(k.localGroups) },
       { label: 'Towns with local groups', value: String(k.prospectTowns) },
       { label: 'Independent advocates', value: String(k.advocates) },
-      { label: 'Chapters', value: String(k.chapters) },
+      { label: 'Councils', value: String(k.chapters) },
     ],
   },
 }

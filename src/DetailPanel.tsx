@@ -57,7 +57,7 @@ export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => 
         {/* Chapter — the headline block when present. */}
         {p && (
           <section className="flex flex-col gap-2.5">
-            <SectionTitle>Chapter · {p.chapter}</SectionTitle>
+            <SectionTitle>Council · {p.chapter}</SectionTitle>
             <StageTrack stage={p.stage} />
             {flags.length > 0 && (
               <ul className="m-0 p-0 list-none flex flex-col gap-1">

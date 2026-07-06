@@ -45,17 +45,17 @@ export function GuidePanel({ world, onClose }: { world: World | null; onClose: (
         </div>
 
         <p className="m-0 text-[13px] leading-relaxed" style={{ color: 'var(--ink-2)' }}>
-          This is the live scoreboard for Commonwealth IRL's chapter network: where
-          chapters are and how they're progressing, where parent groups are already
+          This is the live scoreboard for Commonwealth IRL's Council network: where
+          Councils are and how they're progressing, where parent groups are already
           organizing, and how strong each school district's phone policy is. It updates
-          itself daily from public sources; chapter rows come from the Chapter Pipeline
+          itself daily from public sources; Council rows come from the Council Pipeline
           Tracker sheet.
         </p>
 
         <section>
           <GuideHeading>The six stages</GuideHeading>
           <p className="mt-0 mb-2 text-[12px]" style={{ color: 'var(--ink-3)' }}>
-            A chapter advances by meeting a gate, not by time passing.
+            A Council advances by meeting a gate, not by time passing.
           </p>
           <ol className="m-0 p-0 list-none flex flex-col gap-2">
             {[0, 1, 2, 3, 4, 5].map((s) => (
@@ -152,7 +152,7 @@ export function GuidePanel({ world, onClose }: { world: World | null; onClose: (
           </ul>
           <p className="mt-2 mb-0 text-[11.5px] leading-snug" style={{ color: 'var(--ink-3)' }}>
             Policies, legislators, meeting dates, and news refresh daily via GitHub
-            Actions. Edits to chapters happen in the Chapter Pipeline Tracker sheet, not
+            Actions. Edits to Councils happen in the Council Pipeline Tracker sheet, not
             here.
           </p>
         </section>
