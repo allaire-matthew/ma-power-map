@@ -2,17 +2,15 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadWorld, type World } from './model'
 import { MapView } from './views/MapView'
 import { ChaptersView } from './views/ChaptersView'
-import { NewsView } from './views/NewsView'
 import { DetailPanel } from './DetailPanel'
 import { GuidePanel } from './GuidePanel'
 import { StatTile } from './ui'
 
-type View = 'map' | 'chapters' | 'news'
+type View = 'map' | 'chapters'
 
 const VIEWS: { key: View; label: string }[] = [
   { key: 'map', label: 'Map' },
   { key: 'chapters', label: 'Chapters' },
-  { key: 'news', label: 'News' },
 ]
 
 export default function App() {
@@ -215,15 +213,8 @@ export default function App() {
             </div>
           ) : view === 'map' ? (
             <MapView world={world} selectedId={selectedId} onSelect={setSelectedId} focusRef={flyTo} />
-          ) : view === 'chapters' ? (
-            <ChaptersView world={world} selectedId={selectedId} onSelect={setSelectedId} />
           ) : (
-            <NewsView
-              world={world}
-              onSelectTown={(id) => {
-                setSelectedId(id)
-              }}
-            />
+            <ChaptersView world={world} selectedId={selectedId} onSelect={setSelectedId} />
           )}
         </div>
         {selected && (

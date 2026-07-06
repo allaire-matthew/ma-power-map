@@ -243,32 +243,6 @@ export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => 
           </section>
         )}
 
-        {/* Town news. */}
-        {rec.news.length > 0 && (
-          <section className="flex flex-col gap-1.5">
-            <SectionTitle>
-              In the news <Count n={rec.news.length} />
-            </SectionTitle>
-            <ul className="m-0 p-0 list-none flex flex-col gap-2">
-              {rec.news.slice(0, 3).map((n, i) => (
-                <li key={i} className="flex flex-col">
-                  <a
-                    href={n.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[12.5px] leading-snug font-semibold hover:underline underline-offset-2"
-                    style={{ color: 'var(--ink)' }}
-                  >
-                    {n.title}
-                  </a>
-                  <span className="text-[11px]" style={{ color: 'var(--ink-3)' }}>
-                    {n.source} · {fmtDate(n.date)}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
       </div>
     </aside>
   )

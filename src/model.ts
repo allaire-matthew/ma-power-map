@@ -21,40 +21,6 @@ import {
 } from './geo'
 
 // ---------------------------------------------------------------------------
-// News (self-updating via scripts/refresh_news.py → public/data/news.json)
-
-export type NewsItem = {
-  title: string
-  url: string
-  source: string
-  date: string | null // ISO
-  town: string | null // normalized town key, null = statewide
-  topic: 'lane' | 'civic' // lane = phones/kids/schools; civic = general town government
-}
-
-export type NewsData = {
-  _lastUpdated: string
-  items: NewsItem[]
-}
-
-let newsPromise: Promise<NewsData | null> | null = null
-
-export async function loadNews(): Promise<NewsData | null> {
-  if (!newsPromise) {
-    newsPromise = (async () => {
-      try {
-        const res = await fetch(`${import.meta.env.BASE_URL}data/news.json`)
-        if (!res.ok) return null
-        return (await res.json()) as NewsData
-      } catch {
-        return null
-      }
-    })()
-  }
-  return newsPromise
-}
-
-// ---------------------------------------------------------------------------
 // Health heuristics — verbatim from the Pipeline Tracker's Evaluation
 // Scorecard rules of thumb. The Sheet's own Status column stays the
 // ground truth; these produce advisory flags shown alongside it.
@@ -110,7 +76,6 @@ export type TownRecord = {
   usHouse: USHouseRep | null
   maSenate: StateLegislator | null
   maHouse: StateLegislator | null
-  news: NewsItem[]
 }
 
 export type World = {
@@ -119,7 +84,6 @@ export type World = {
   byKey: Map<string, TownRecord> // by normalized name
   tracked: TownRecord[] // towns with orgs or pipeline, sorted
   legislators: LegislatorsData | null
-  news: NewsData | null
   kpis: {
     chapters: number
     prospectTowns: number
@@ -156,7 +120,6 @@ async function buildWorld(): Promise<World> {
     townOrgs,
     pipeline,
     meetings,
-    news,
   ] = await Promise.all([
     loadLayer('towns'),
     loadLayer('schoolDistricts'),
@@ -172,7 +135,6 @@ async function buildWorld(): Promise<World> {
     loadTownOrgs(),
     loadChapterPipeline(),
     loadNextMeetings(),
-    loadNews(),
   ])
 
   // Data keys that don't match a map-town name (verified 2026-07-03).
@@ -192,15 +154,6 @@ async function buildWorld(): Promise<World> {
   const pipelineByTown: Record<string, ChapterPipelineEntry[]> = {}
   for (const [k, v] of Object.entries(pipeline?.byTown ?? {})) {
     pipelineByTown[canon(k)] = v
-  }
-
-  const newsByTown = new Map<string, NewsItem[]>()
-  for (const item of news?.items ?? []) {
-    if (!item.town) continue
-    const key = canon(item.town)
-    const list = newsByTown.get(key) ?? []
-    list.push(item)
-    newsByTown.set(key, list)
   }
 
   const records = new Map<string, TownRecord>()
@@ -231,7 +184,6 @@ async function buildWorld(): Promise<World> {
       usHouse: legislators?.us_house[tToCong[f.id] ?? ''] ?? null,
       maSenate: legislators?.ma_senate[tToSen[f.id] ?? ''] ?? null,
       maHouse: legislators?.ma_house[tToHouse[f.id] ?? ''] ?? null,
-      news: newsByTown.get(key) ?? [],
     }
     records.set(f.id, rec)
     byKey.set(key, rec)
@@ -275,7 +227,6 @@ async function buildWorld(): Promise<World> {
   const freshness: World['freshness'] = [
     { label: 'Chapter pipeline', date: pipeline?._lastUpdated ?? null },
     { label: 'Parent orgs', date: townOrgs?._lastUpdated ?? null },
-    { label: 'News', date: news?._lastUpdated ?? null },
     { label: 'Meetings', date: meetings?._lastUpdated ?? null },
   ]
 
@@ -285,7 +236,6 @@ async function buildWorld(): Promise<World> {
     byKey,
     tracked,
     legislators,
-    news,
     kpis,
     stageCounts,
     freshness,
