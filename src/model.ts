@@ -87,7 +87,11 @@ export type World = {
   kpis: {
     chapters: number
     prospectTowns: number
+    localGroups: number
+    advocates: number
     tier4: number
+    tier3: number
+    studentsTier34: number
     districtsTotal: number
     meetingsNext14d: number
     engagedSupporters: number
@@ -215,10 +219,18 @@ async function buildWorld(): Promise<World> {
     return d != null && d <= 0 && d >= -14
   }).length
 
+  const isAdvocate = (t: string) => t.toLowerCase().includes('advocate')
+  const allOrgEntries = tracked.flatMap((r) => r.orgs)
   const kpis = {
     chapters: tracked.filter((r) => r.pipeline).length,
     prospectTowns: tracked.filter((r) => !r.pipeline && r.orgs.length > 0).length,
+    localGroups: allOrgEntries.filter((o) => (o.chapterName ?? '').trim() && !isAdvocate(o.type)).length,
+    advocates: allOrgEntries.filter((o) => isAdvocate(o.type)).length,
     tier4: allPolicies.filter((p) => p.tier === 4).length,
+    tier3: allPolicies.filter((p) => p.tier === 3).length,
+    studentsTier34: allPolicies
+      .filter((p) => p.tier >= 3)
+      .reduce((sum, p) => sum + (p.enrollment ?? 0), 0),
     districtsTotal: allPolicies.length,
     meetingsNext14d,
     engagedSupporters: engaged,

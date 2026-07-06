@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadWorld, type World } from './model'
+import type { Lens } from './MapLayers'
 import { MapView } from './views/MapView'
 import { ChaptersView } from './views/ChaptersView'
 import { DetailPanel } from './DetailPanel'
@@ -17,6 +18,7 @@ export default function App() {
   const [world, setWorld] = useState<World | null>(null)
   const [view, setView] = useState<View>('map')
   const [selectedId, setSelectedId] = useState<string | null>(null)
+  const [lens, setLens] = useState<Lens>('chapters')
   const [guideOpen, setGuideOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [activeIndex, setActiveIndex] = useState(0)
@@ -182,25 +184,9 @@ export default function App() {
         </div>
       </header>
 
-      {/* KPI strip — the glance layer (DESIGN.md C1, F2). */}
-      {world && (
-        <div
-          className="shrink-0 px-4 py-2.5 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-2 items-center"
-          style={{ background: 'var(--card)', boxShadow: 'inset 0 -1px var(--hairline)' }}
-        >
-          <StatTile label="Chapters" value={String(world.kpis.chapters)} />
-          <StatTile label="Towns with local groups" value={String(world.kpis.prospectTowns)} />
-          <StatTile
-            label="Districts at Tier 4"
-            value={String(world.kpis.tier4)}
-            sub={`of ${world.kpis.districtsTotal}`}
-          />
-          <StatTile
-            label="Meetings next 14 days"
-            value={String(world.kpis.meetingsNext14d)}
-          />
-        </div>
-      )}
+      {/* KPI strip — contextual to what's being examined; the accent color
+          matches the active lens's encoding (DESIGN.md C1, D1, F2). */}
+      {world && <KpiStrip world={world} mode={view === 'map' ? lens : 'chapters'} />}
 
       {/* Content + detail panel (list-detail, DESIGN.md F1). */}
       <main className="flex-1 min-h-0 flex">
@@ -212,7 +198,7 @@ export default function App() {
               </div>
             </div>
           ) : view === 'map' ? (
-            <MapView world={world} selectedId={selectedId} onSelect={setSelectedId} focusRef={flyTo} />
+            <MapView world={world} selectedId={selectedId} onSelect={setSelectedId} focusRef={flyTo} lens={lens} onLensChange={setLens} />
           ) : (
             <ChaptersView world={world} selectedId={selectedId} onSelect={setSelectedId} />
           )}
@@ -235,6 +221,66 @@ export default function App() {
       )}
 
       {guideOpen && <GuidePanel world={world} onClose={() => setGuideOpen(false)} />}
+    </div>
+  )
+}
+
+// Per-mode KPI sets. Accent hue = the mode's map encoding: chapter blue,
+// tier green, organizing violet — values stay in ink (DESIGN.md D4).
+const KPI_MODES = {
+  chapters: {
+    label: 'Chapter pipeline',
+    color: '#2563eb',
+    tiles: (k: World['kpis']) => [
+      { label: 'Chapters', value: String(k.chapters) },
+      { label: 'Towns with local groups', value: String(k.prospectTowns) },
+      { label: 'Engaged supporters', value: String(k.engagedSupporters) },
+      { label: 'Meetings next 14 days', value: String(k.meetingsNext14d) },
+    ],
+  },
+  policy: {
+    label: 'Phone policy',
+    color: '#2f9e4f',
+    tiles: (k: World['kpis']) => [
+      { label: 'Districts at Tier 4', value: String(k.tier4), sub: `of ${k.districtsTotal}` },
+      { label: 'Districts at Tier 3', value: String(k.tier3) },
+      { label: 'Students in Tier 3–4 districts', value: k.studentsTier34.toLocaleString() },
+      { label: 'Meetings next 14 days', value: String(k.meetingsNext14d) },
+    ],
+  },
+  organizing: {
+    label: 'Organizing',
+    color: '#7c3aed',
+    tiles: (k: World['kpis']) => [
+      { label: 'Local groups', value: String(k.localGroups) },
+      { label: 'Towns with local groups', value: String(k.prospectTowns) },
+      { label: 'Independent advocates', value: String(k.advocates) },
+      { label: 'Chapters', value: String(k.chapters) },
+    ],
+  },
+}
+
+function KpiStrip({ world, mode }: { world: World; mode: Lens }) {
+  const m = KPI_MODES[mode]
+  return (
+    <div
+      className="shrink-0 px-4 py-2.5 flex items-center gap-x-6 gap-y-2 flex-wrap"
+      style={{
+        background: `${m.color}0c`,
+        boxShadow: `inset 0 3px 0 ${m.color}, inset 0 -1px var(--hairline)`,
+      }}
+    >
+      <span
+        className="px-2 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wide text-white shrink-0"
+        style={{ background: m.color }}
+      >
+        {m.label}
+      </span>
+      <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-2">
+        {m.tiles(world.kpis).map((t: { label: string; value: string; sub?: string }) => (
+          <StatTile key={t.label} label={t.label} value={t.value} sub={t.sub} />
+        ))}
+      </div>
     </div>
   )
 }

@@ -29,13 +29,16 @@ export function MapView({
   selectedId,
   onSelect,
   focusRef,
+  lens,
+  onLensChange,
 }: {
   world: World
   selectedId: string | null
   onSelect: (id: string | null) => void
   focusRef: React.MutableRefObject<((c: [number, number], k?: number) => void) | null>
+  lens: Lens
+  onLensChange: (l: Lens) => void
 }) {
-  const [lens, setLens] = useState<Lens>('chapters')
   const [tierFilter, setTierFilter] = useState<TierFilter>('all')
   const [boundaries, setBoundaries] = useState<Set<BoundaryKey>>(new Set())
   const [showBoundaries, setShowBoundaries] = useState(false)
@@ -96,7 +99,7 @@ export function MapView({
                 role="tab"
                 aria-selected={active}
                 title={l.hint}
-                onClick={() => setLens(l.key)}
+                onClick={() => onLensChange(l.key)}
                 className="px-3 h-9 text-[12.5px] font-semibold border-r last:border-r-0 hover:bg-black/[.05] active:bg-black/[.1]"
                 style={{
                   borderColor: 'var(--hairline)',
