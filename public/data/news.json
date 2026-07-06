@@ -1,8 +1,24 @@
 {
  "_schemaVersion": 1,
- "_lastUpdated": "2026-07-04T09:37:10+00:00",
+ "_lastUpdated": "2026-07-06T11:50:50+00:00",
  "_source": "Google News RSS per tracked town + CommonWealth Beacon / WBUR / Itemlive feeds",
  "items": [
+  {
+   "title": "Astronaut Suni Williams is back home in Needham and couldn’t be happier with the warm welcome she received from former classmates.",
+   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPSWVXSmNKNW92aXphRktySU44RHZwNWV4eXRvdjFicmFzakFoNE9BZzBtV2dncGsxdWwtTzhUNmZqaEx1TWtLaGozXzMyTm12bmFJcENFWjU2clMtOW1BcXAwNUprcUplcHU4RjFubjhFMlNweDFkV0VJNFZ2YV9mOWFJbjFHVVE1Wlc5a2VzemhPWXk5aWJEcnJKOW93OWI1cTROUWxHRFQyRjJxZkI5czlEd1JUOEtPVkVHTWVhMjJTQzNCNkdFb2xGSlFWcnJWeVIzemVHMG9uQQ?oc=5",
+   "source": "facebook.com",
+   "date": "2026-07-05",
+   "town": "needham",
+   "topic": "civic"
+  },
+  {
+   "title": "Former Wayland Administrator Urges Andover Not To Hire Superintendent Finalist",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQmJaZmFLYVdDczFLQURpdWVsajg5NTExYkd2VmkzQWJRQUpqY0JEN24wOVhyb3pIcy1pOEFCMEtqLUZWMTgzY3dwaGJiV1RIRTlDV1h4ZmJOTlEwT0VlVGlrcWx0YWVZM01qM3pRSlBrUWN2el9IMXVjQ0x3X0lyWEdlam9ZeWo1TGotZXJwOVlCQzBoX3AwVG10Yklzam9DamUwQlpGM0c?oc=5",
+   "source": "andovermanews.com",
+   "date": "2026-07-03",
+   "town": "andover",
+   "topic": "civic"
+  },
   {
    "title": "Data privacy advocate Evan Greer on Mass. Senate's social media bill, how to protect kids online",
    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNY1B4SFVkU1o1amt0enM1R3otZkczVWhpTk9WSEpTOVZMU3hWYTVqTXNLRnlrYk1WNTFIV2dhbF8waV9aSzBjeF9Cd1U1dTQ3eGY5REJqb3E0S1dUNnVXblVWaEpkX0JvcG1Ha2RpY3lhNTZrNVN1TS1hTkpXTjRYR2RpNUpWbXlLVklNVFJLRFFOQU40dmZ6LWpYZlJxa0xwZ0hXalFPYmhYMWFPdVFySHNUcGpKMy03RF9LSDhxcndLQTRINnNKb3NkVUFtNHEybEE?oc=5",
@@ -26,6 +42,14 @@
    "date": "2026-07-03",
    "town": null,
    "topic": "lane"
+  },
+  {
+   "title": "School Committee Avoids Questions About Sudbury, Wayland Controversies During Superintendent Finalist Interviews",
+   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQZEZkTmJqa0U1Ml9fWm9mR1VhM2tDZVlsSUtWU3RwX3dlOW9KdmE3NjVBMkl0QnlxemdDWmRHWlpVMTRfNzdibFpHWThMSVI0QjRkeTBnQTJLVzRGWC1oNzFfYjRUSlZROHJJWW9uVVVQdVJfYkdHTzRlQ1F5Y1VZcXg5UTFkU2J5MnFMajV2bzZ4cDZXeWVUNFVaTGd2NHhVLWpkVkdxUEhMbzdlRzlQc3A3Yzd3OW9rb015Si0tblB0T29OcnQtNWNjSlFrdWZ4Q05hWQ?oc=5",
+   "source": "andovermanews.com",
+   "date": "2026-07-03",
+   "town": "sudbury",
+   "topic": "civic"
   },
   {
    "title": "Speak with State Rep. Owens at 2 Watertown Office Hours in July",
@@ -68,11 +92,19 @@
    "topic": "civic"
   },
   {
-   "title": "Newburyport, Salisbury beaches reopen after sewage spill forces closure",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNWFVsS3ZudHduLXNqZzV2VkduUVl4M2lRRnRuUFBxVE50ZHpoWVBRYnM4SmhoTkxEbEZSZUcxSEctUmxScDRRYlVFMTZSLWp1TGJqS2lxcHh3OVFWQTM5UmVmdWR6NmFNVm9Pa1hJNTJNYW5HQXlvOXJYNmVPU2dmcDdMaWNjbkZaZGdIelRnTDRWejR5UnpNMQ?oc=5",
-   "source": "WHDH",
+   "title": "Lexington’s Urban Forest Master Plan: Investing in Our Community Trees",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1LakZJRmJoNlVUaGVrWnhRY2hGMXltMHJPTEUyQmd2YkVadE1yQWpCT18yb2M0NGxMeGtieGc1Nmd5a2pSdWx2ZVNyaUxrbVVpTkZHbzgxR1ZjbkxNWmNPN1F3?oc=5",
+   "source": "Lexington, MA (.gov)",
    "date": "2026-07-02",
-   "town": "newburyport",
+   "town": "lexington",
+   "topic": "civic"
+  },
+  {
+   "title": "Maria’s Gourmet Pasta to Open First Retail Store in Malden This September",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdXdoYllGMUlmNVhDRTVGQjlWSGJLOWpybnJJYlpjQWY1VVJqaTdHSWtuTFRGN1laeENxZ3R4c0hBMHFDZ3NGLXZPbzVNaVJyOHBYbUxfU19fQXBKSTdFZ0pqNWtadktWQktHdzFsZ3ZiVHA4Y0RFeXFXNnFGdUhFNVFTYkRwNTF4UFN1WUxpcFNhQTRtWnl4OVFfS2JvUXB5ZGFvd3B2N3FsMTg?oc=5",
+   "source": "WhatNow",
+   "date": "2026-07-02",
+   "town": "malden",
    "topic": "civic"
   },
   {
@@ -110,6 +142,14 @@
   {
    "title": "State aid reaches Winchester as officials press for broader fiscal tools",
    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQLXNfTVR6Wkh2RzN6X1ZUVDZ4Y21LZHFjNTRzYzZEeDg0VUdObWFrSFBUR0NNQVR4Y05ZN2Zzc0lUNWJ5QzdEMWYtYkVpeWd0UTc4Y1VHRDJFaUx5Y2Q0R01LUVVabHB5Q2k2enhqWDBLSEUyS2NKNXNlOVFwdkoyRTJqTDZWVFVWb2VGSjNadnM3WWhwblF6SEpCNUJOU3NPaUlieWhSM2tNazBxTkE?oc=5",
+   "source": "winchesternews.org",
+   "date": "2026-07-01",
+   "town": "winchester",
+   "topic": "civic"
+  },
+  {
+   "title": "For America’s 250th, Winchester residents can find fireworks just next door",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNUTY4d3dYNTFrQlBEX0E2RkhzcWNfZF9RQzVXVDlKdWUwX21RZmdkZ1FROGFRSWFrV3E4TXlZSWtuc19RcE9hTHV0U0N6RDZUR3hETU5DQXBLR0ZBREcwdVRwVzRqTFBNZVg4MzVIelo0SGtRamE4c2RIem03b0tlVWtteUFNSDZ2QVdwWkJUNDRTSVNKcXFMdk5yVGV2dEl2TVJr?oc=5",
    "source": "winchesternews.org",
    "date": "2026-07-01",
    "town": "winchester",
@@ -164,12 +204,12 @@
    "topic": "civic"
   },
   {
-   "title": "Newburyport mayor calls Merrimack River sewage crisis ‘completely unacceptable’",
-   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQQlpSSWNvTUxZNFZDR01wcG1tZDJWMmhsaDA2VHNVTXBZaWY1LWtYakJkcDlmaERPekxJazlNUC0zUldZLVFVREVQZkJVNzhfSlNYMWdzblNMUzZtVXJCOE8wajJTelRGT1ZjdXdEcE1seFBGb2RsYTlPSWY2bTVQT200OHNfWmIyX3VfTTItOWFFOUswUFVZeEhqWEgwTTRQamVyQi16cWl2S3VCTnpNVUU4STBBa245a1pwNNIB0AFBVV95cUxPU0hQNWd5d1FLZHdQY0xVdmNCV2lrQ3FOUFdNZDRHRktOdEtzQkYwa0hWQmxIc19mNHRBck5rVHdQS3NHaDY1WlVZd09uczlFWGprcm5GeFdqTFhPWGxJd1E1WkRiVjl3SHRsek5jVG9GdXZTUnV1YmhGM2Q5WDYyd0NGSWtvWUtqQ0ExdHdsZXQwaEFPRTkwanJKUkd2TEozanluRVI2NTZLU0Ytc2xsYUZVTnNuazl5eXZVRERkSVM0Mm0zaTBPdkJYUXhvSlF4?oc=5",
-   "source": "MassLive",
+   "title": "Sky News Australia. . ‘Triggered with Samara Gill’ host Samara Gill believes the Manchester Airport controversy became a case of social media outrage racing ahead of the facts, with public opinion dividing before the evidence emerged.",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPbE9rbHdmYzNZRDdHdDFUdXNfMFE5MGZ2WU1ld19iVGNrS09CTjNlcHBJSDNnWkVvcldNUW8yNUhqaTl4dVhzc3Nhaml2LWpMcUdGTHRKUmlFTGVZcU5LV1NCNk05VmZhVHRrRDRYUmFqLS15aTN2LVZtY3JKN0lYUVYzU2Q1N0s2Mk1hNXhvandjNlZFYWExV3NPd3hkM2JXM0RhWGlzRHBlRlM4OExZR1dFOUQ2dGxXeDI3cWVEdDhjS0VtdzYw?oc=5",
+   "source": "facebook.com",
    "date": "2026-06-29",
-   "town": "newburyport",
-   "topic": "civic"
+   "town": "manchester",
+   "topic": "lane"
   },
   {
    "title": "Golden Temple, a Brookline institution, closes after 66 years in business",
@@ -188,22 +228,6 @@
    "topic": "civic"
   },
   {
-   "title": "Son accused of stabbing father to death at Wellesley playground",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTEVJV1JQbnR3clAxUVJSMVlKUjdCdTdRYzhsTDNYWEVvcVM1dU5TRXZrbWtBR1RuQ2tFSFgwY1ViX3JGYmxVQnZEZ056dkkxeWczTjljZDdZOWlaNWl4NlNNV2lZekV3aUtzdGtwd1hfbWV0UGpTRXQxazBocDdUNDF0WEM0czFIeW1zemM4NlBnTGlUaTlaczRDMmRlTzB1RnU0?oc=5",
-   "source": "CBS News",
-   "date": "2026-06-27",
-   "town": "wellesley",
-   "topic": "civic"
-  },
-  {
-   "title": "Australia plans to strengthen laws banning children from social media",
-   "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQUjl0VHZJYXg0Nm9MSU84Ry1nb0tJX283RnZZSFdFQ2hlVXBubG9kM2p4Z0xHXzlMNHNQVVdHOHcxZjZjU3A2eG5hdF8ybC1OYi1HbnRLTjg2bmZSSkRFU2ZwUTVTVDZtTWtNS1EyZ1g3UXRZUFJ5OFQ4SlFsQzdXaThkN2VENC0wU254RDJvV1k4eEhRakVCZDNpc0lyYjBuMWtud2RmWi12MC1wQ29NUjVsQUtMSnJ6ei1KaFl1ZzJxdHNVWnBvN09VSG0wWGlKTy1ZU3Uxd2lnS1BUS3dGYURDWHk4bFc2djFV?oc=5",
-   "source": "Eagle-Tribune",
-   "date": "2026-06-26",
-   "town": null,
-   "topic": "lane"
-  },
-  {
    "title": "New Upscale Restaurant Planned for Former Furniture Store in Downtown Hingham",
    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQQ2RfXzd0dm9rQUpvUGtIWTRuUVdCZlNJMjNzcThNZU1GUl9xT09nN19EYjlZVU4tRGFSM09lZDRyMU5PYlBReGNDT05OOHgzZWFKVnFJMDRoOVl0MzlRMjAySjhBeUl4QjA2bTF5V19xZkRZTFBDczdwc0I0b282bUNnR2JUT25weTNqQXVxTmZlMzItRTItWFdYMDJpYUxtZm9aOW51WDllbGhyVU5BaUotQVdrRkFU?oc=5",
    "source": "WhatNow",
@@ -220,11 +244,11 @@
    "topic": "lane"
   },
   {
-   "title": "Home Décor Shop Curated Studio Relocating to Permanent Storefront at Natick Mall",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxON1lHMkFUWWZhdDdMdHFJSU9RcHYwRHhHM2JkTUxEazZhaWNENlJIcjVyc2l3TldEVVN4eUx1RlZZai1Ha0t5MXIxcVpWNXdrS1RuMXppSkU4ZjlseGs1QjlLSjdFUmFaX1R0SFlZRzZjZVVQZ1JrZEhDNFRZY1k2ekJfSG84Rk5rREtudzZPX1Mzc1VBaG5WS3lsc1hpa2ttc1lxSHFWc0ItcFZYZDVLcDNIN09Mdw?oc=5",
-   "source": "WhatNow",
+   "title": "Son accused of stabbing father to death at Wellesley playground",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOTEVJV1JQbnR3clAxUVJSMVlKUjdCdTdRYzhsTDNYWEVvcVM1dU5TRXZrbWtBR1RuQ2tFSFgwY1ViX3JGYmxVQnZEZ056dkkxeWczTjljZDdZOWlaNWl4NlNNV2lZekV3aUtzdGtwd1hfbWV0UGpTRXQxazBocDdUNDF0WEM0czFIeW1zemM4NlBnTGlUaTlaczRDMmRlTzB1RnU0?oc=5",
+   "source": "CBS News",
    "date": "2026-06-26",
-   "town": "natick",
+   "town": "wellesley",
    "topic": "civic"
   },
   {
@@ -252,24 +276,8 @@
    "topic": "civic"
   },
   {
-   "title": "Using Social Media Reels to Help the Lexington Minute Men achieve Long-term Goals",
-   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPTVplbmxtWkd4QUpqMHNsM3N1VmhLelpiREZtT3UwRlJzQ0ZIMnA1U19TT25VTlAxaFQ5UWRvNjBRV3VuMk4zb2hMX1FIN0VtdlVKTTJmSEEzUlpzR24tYkFRTTZZNWZvb1NHcG4zZV9zQjlQZWwzVU1jSEZOcEZiVGhkRTYxOTFiSTZNTEVXR0ZvQ0ctMFlvVUFfZWFhZFhD?oc=5",
-   "source": "John Guilfoil Public Relations",
-   "date": "2026-06-25",
-   "town": "lexington",
-   "topic": "lane"
-  },
-  {
-   "title": "3 hurt when car crashes into busy Newburyport restaurant",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPeUNYN3ZSVlVZcnJmRGFERVNHWXlzeEU3Ui1md1RIUndVcUtmaHdFbDB4Zl85c1BLSWFiaENMcVhEcUxOb0FRSjF3bzFrdi1tT0hfYWVycWVkbGQwdy0xX1pjdjdhdF9XdzhwaVVwWkFBRDhzY3pxQzVlRlJEOFN1Rm9VelhMdw?oc=5",
-   "source": "WHDH",
-   "date": "2026-06-25",
-   "town": "newburyport",
-   "topic": "civic"
-  },
-  {
    "title": "Andover Schools Hire New Superintendent",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOWUMySWNScUM1Wl9tYVNIeW5IRkhzUXptR0hERk5rZGdZZ01YT3d1QnZJN043NmdNVTdCa2VRdDdvaTNFNHVNeTFsNGxTWUppakUwaGFiekxWQnNBNkxOcUtrZ0xZM0N6MEUtRmVHT0lVTFU4Z1k5ek1BYmFkOWdyRDVPVVcxQdIBlwFBVV95cUxPWUcwNEJyWVNOWmlzWHlHaUNsYlN1Z09pZEFjWXV6SEdKR0dZWVFDbDhNb3VHR2R5aFNQeTh0VlZNTWRvakRGMWRTZlVqTkNwOW1qcEl4NW56VlZOQ3hvQW1QM2U4WE9EQTlxd1d1LU81NFVkdk1IWVY3YlNBUHNvd015UmtpTHlxNlRqVDNjZ29UVnhOcWtz?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOWUMySWNScUM1Wl9tYVNIeW5IRkhzUXptR0hERk5rZGdZZ01YT3d1QnZJN043NmdNVTdCa2VRdDdvaTNFNHVNeTFsNGxTWUppakUwaGFiekxWQnNBNkxOcUtrZ0xZM0N6MEUtRmVHT0lVTFU4Z1k5ek1BYmFkOWdyRDVPVVcxQQ?oc=5",
    "source": "Patch",
    "date": "2026-06-24",
    "town": "andover",
@@ -300,36 +308,12 @@
    "topic": "civic"
   },
   {
-   "title": "Class of 2026: Concord High School graduates 68 students (59 photos)",
-   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNnBsT1gtYklLZnlSblg2OHVIMTN3aXpBOC03a0traGtpWkl6SVFiUGluMlFUT3UzNjZDcWZ1bnkzbU90TG9LUmMyNW16eW9RTnZhenJTUWY5aTNGRjZWLTE3Ukh4T1B3VmJfWTdBZFRnalcyNU91VWxSZzVYSmJXcy1vTC1tMEhmTHRlaExBLVYwUEd3OExhRHZYaHpOS3lZajNfTFBNeDVJT2fSAb8BQVVfeXFMT2JRa3NtaEMzQjNYUGRubExBaUpCVm5rTVNZY1BKczN3LWw5elZzbWpfVVJIclNxNDQ5d2JtZkVKaGtOdVFob3NCSmtKektjOC1Ld2JFNmk5UUhhZE5xejNKbUJYU0RQYnhvQVRZZl90NlpUR3RTejVtblB5eWlFVHAwbktGZzVMbFBuc0tuS09yRmNzMTVmMzEyWWs5b0Q5Y193QnZhTFZhcXdTcG9xRGhVb0N1SURrbmw1UmVibjQ?oc=5",
-   "source": "SILive.com",
-   "date": "2026-06-24",
-   "town": "concord",
-   "topic": "civic"
-  },
-  {
-   "title": "LOUISE HALDEMAN Obituary (1937 - 2026) - Concord, MA - Boston Globe",
-   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNektHc2pGY1JPTlhiZXdkbnBTemRhTlltWkFHR2Voa3BpQmdjem9OekgyNnN5OWJBdTEwak5vZ2NtbUV3X1pGM04zV3ExRE13RVMtYXd4dW5DS0oxQTFBNm1XRktGdkkwY1FLRXlvSk40aElXNV8tYXF3Q29YZ3lBNDJBbUhqR0tPNHdqV3RHdURianAt?oc=5",
-   "source": "Legacy obituary",
-   "date": "2026-06-24",
-   "town": "concord",
-   "topic": "civic"
-  },
-  {
    "title": "Central MA district's answer to cell phones in school: There's an app for that",
    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeWRhNHJtVEVFOGxMak1tbUdxYTFrQ1JDQ0RPN1ZSa0pJd3F1UC1fWGJvMWZsTC1udHF5UVlGV3pEcWU2SEpyTS1wbEFyaVgxUHRGT0t2NGNDenBObmo3Q3NDYjRDMUQ5NVZoU1BLclJvU0w4Yjh2U1VVb1Y0dHBPYUdTYzkzeFcyRFFpajYyaXg0RGtrYUo1Q0ZaVkRNSUVKTURTS3RTeDg?oc=5",
    "source": "Worcester Telegram",
    "date": "2026-06-24",
    "town": null,
    "topic": "lane"
-  },
-  {
-   "title": "Bed Bath & Beyond returns with new stores, including one in Natick, MA",
-   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5xVHdFSnQzWGZEVld1bGI4TjFjeWlZUzJVWjZxY2MxaFlBTHZRV1V5TGY2RjQ1SU9oMmZSVVRVZ2V1NGF0UEFNWjZ3dXBfdFRXS2VPQms0aS1BNFUwM1Mza0U1bHN5RHdtc3NTUGthMWI1RjRsOUt3UDlB?oc=5",
-   "source": "AOL.com",
-   "date": "2026-06-24",
-   "town": "natick",
-   "topic": "civic"
   },
   {
    "title": "Winchester Historical Society awarded $300,000 Cummings grant",
@@ -345,78 +329,6 @@
    "source": "Andover, MA (.gov)",
    "date": "2026-06-23",
    "town": "andover",
-   "topic": "civic"
-  },
-  {
-   "title": "Arlington Resident Receives Inaugural Commonwealth Pride Award",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPelhka1RSLXBtTWk1N0RzMWw2SGJ2anlCQXRXZmhIbWxaVF81bW1NQk1Dc2Rtd0pPTTh6bGlzdzloNEtINTI2Z3FIUjF0VURkOV94XzZ6TFpFR3B4R2tVdkNMUk0wUC1UT3V3WmZxaWxVTmJTNlptSF9oVWRZZTU0ZU5EZW41eC10YmdwZFF2Mk1rTDd3U1BzWnJXd1Bab1NIUWlJVk5JVdIBuAFBVV95cUxNSTA2M3hBRzF1RGV1OGkzVVpIbnJZWnlDTDJsTmRzSEJPcFIyam4wWjRhcERqaS13TVozUUUtcWVSd2d3OUNmR3JzU1BtWkxFWkduQ1ZzY25lWV92NmRzOURMV3ZMcm50NXRrN1pTcElURWM4QlVTOXRDWTFCUGFTT3lDNG11aW1wWlNpd0FMSlZmYk5rYmRNTU1GSC1ObjlVcjhfS0NkOFhXUDFIRFlOZ2FEY1Q1eHZw?oc=5",
-   "source": "Patch",
-   "date": "2026-06-22",
-   "town": "arlington",
-   "topic": "civic"
-  },
-  {
-   "title": "Hingham School Committee Overhauls Student Wellness Policies and Addresses Transparency Complaint",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFA2cmVvbXhCMURLeTlBZnIzeUpUNGIwaXlhcl9oWk94SndybFNtYk11NnZVV1BndWR1S3FNUFRGN1AxSHU0TVdXU1FZT29Pbk1IeGxLaDViREtQanctell2djhHLWJyY01oSy0wQmZUa3VaS0ZXVHBN?oc=5",
-   "source": "South Shore News",
-   "date": "2026-06-22",
-   "town": "hingham",
-   "topic": "civic"
-  },
-  {
-   "title": "Bear spotted in North Attleboro, Attleboro and Norfolk area",
-   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPZlUzZlFoVzBVdDduX1p5aURqZEd1U0NWUFRjWkltcmswbEhOenJrSk1oWS1vNE44eVpia0JOVnkxYUl1Mmg5TEJzcklwcmpTODRpcTBmT2VfWTk1V1ByY01pdm1CejRQUl9SVVNVclJnVjd4U2tQWkhaakFOZk01NS1NR29kZmgwcXhsSEhENTlXVnNwQTZKVy1YSlJ0UzRzN3lLR1lCTElFUzVWZzhRRjFZU0RZQTJycUtiZ0x6RmkyNjR3eGNrQXBYc29qUjFLRGZIMUxuUnV3SkFfQkxOaXJ1RXNWVVRJTDEzdw?oc=5",
-   "source": "The Sun Chronicle",
-   "date": "2026-06-22",
-   "town": "norfolk",
-   "topic": "civic"
-  },
-  {
-   "title": "Northampton approves bell-to-bell cell phone ban for students",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWG5oR21vWHM3VXo5dnh4WWdtTFFtUk5paVN0R3N5eDBqM0gyZEc5clZodGJGakJPSGo5c1BRdjR5SnZkcW1UbHJub09PYjQ1RndVc0IzVWhpcGx5SWc2aDZnb3ZyTDJ4dmlpSEpLdGNNMkdEMTdGSVY3NTVlNFRfOC1nV3ViSzg3VUZYelVtQXVSYXBCZWVHbi1fUUtabk13MGFV0gG3AUFVX3lxTFByOWNBazZFTmR1T1dDWVVzTlFVUDhMU0RJUmYzRzg1bVZqUE93MFBOSVFVc1NWcDZVWDhJeGthUk5KRnJSaTdhZkIyV2ctWU1Da01aREpjSG44OF94dFpJVXJCVnRMMHE4TGdBZU9jSkN2R2VkRm5wY2F3LWpjejZhOVQxTVBRYlFlYkRHSlEzUUtRZ0J5a09IdGRtVkk2NWpOUFV6ZTNabW56UWV5SGtzNFhlOUV4dw?oc=5",
-   "source": "Western Mass News",
-   "date": "2026-06-22",
-   "town": "northampton",
-   "topic": "lane"
-  },
-  {
-   "title": "Winchester School Committee chair Tim Matthews honored with inaugural Commonwealth Pride Award",
-   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPb2dleGZJdWs2ZUNXRkN2VkQ1ZWw3dzNGN013Z0lVRzlrV3ppcFdNQkpKWFdpOVdJZDhoQVlyNFJkR20zUU5JSE5CbTVURElvc1BjbEJMM09PYXh6eENPU1hUbE5wT1VMMmR6NjJpMU5jdHc3aDhWdy1UUzZ1RnU3MFRjZDJhaFJvNEp1MDg0NVI3eldoTnpZVTF3UFJYNmROVnR2ZkFka1hYMmVCc2lTSkNkYk9uU0trRlV2UEdET2RwSXQwSkRxamRPYw?oc=5",
-   "source": "winchesternews.org",
-   "date": "2026-06-22",
-   "town": "winchester",
-   "topic": "civic"
-  },
-  {
-   "title": "Central Mass. school district tries new approach to limiting cellphone use in class",
-   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNQWg5Z2RoN3lZZXRaMDZmRVJOQ0gwNU1INGEtSV8zWVM3T3FQd21DWmR6X3ByRGNNQ0luVV9NQk84YV9XZFM4blBjN3dfSzRFRFVFS3hldlFxandYT0JUNmdaZVJvWWJGV1l4ZVY3dU4tVERPY3FRZU5KMndmWG1ZbTdKTGJYZ3Ewd2IxMnVZUHdyM0owRHhVcWxsRnFic1ptM1pxN0ZURUJNVlBRd2Uxenp5dzJKYnBPb2Rib1haOWhfaUt4dHJRNW85RmI?oc=5",
-   "source": "MassLive",
-   "date": "2026-06-21",
-   "town": null,
-   "topic": "lane"
-  },
-  {
-   "title": "Maureen F. \"Sullivan\" Carey Obituary (2026) - Needham, MA - George F. Doherty & Sons Funeral Home - Needham",
-   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNUWRaZURjb3YySENHcWpNY2drb011c1NhUlFucnNlbmpnc1pfVTdoZHVjSDlnNl9keVBBdEIwNlR5SWFUY25id25VLWhkUUNNeGU0bG1iLWJBWE02bU1oZHU2dk1sYnl3VG1fNWsxc0NLV2ZHYUQ3UlJoaks1X1hmSTB3?oc=5",
-   "source": "Legacy obituary",
-   "date": "2026-06-21",
-   "town": "needham",
-   "topic": "civic"
-  },
-  {
-   "title": "Northampton approves bell-to-bell cell phone ban for students",
-   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPY2pYeHVzeWgtWDNjLVNEbGtPMEFKOW52Smd4UkhyVHk2RlNORmR0SUVJN2l0TVFNOEZKc1JOdjg2TjFQc2EwMWRNRDc4enB4UV9HYjRfVjJuaEV0RzlaWHp0djQtTFN3TngxclE1aWZJb2l4Ul94dXBjM2tGZVhnbTNGU3dJT3FyY3R3M2x1dGExMFBkbG9KZUJid3ZVM0ljUFRJMkUzQkY4Ukk?oc=5",
-   "source": "Western Mass News",
-   "date": "2026-06-21",
-   "town": "northampton",
-   "topic": "lane"
-  },
-  {
-   "title": "Under-the-Lights Equity Audit Exposes Scituate Girls’ Sports Inequities",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE55bTFYS3NJWmwtMXFzUnIwR0IxZmZ3dEpHMmhsclZCdERzM1FqT0RDaS1fUmdXc3BZZG5UUVBkSFBHaURXcWNUU1YtVmlhM0NQRm9qT00yMDJERmp1eTc2UVFRQVJDZlhFU3p4STMwbEFZanU3MHc?oc=5",
-   "source": "South Shore News",
-   "date": "2026-06-21",
-   "town": "scituate",
    "topic": "civic"
   }
  ]
