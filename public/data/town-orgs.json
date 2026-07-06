@@ -31,7 +31,7 @@
     "leadName": "Michelle Lai",
     "leadEmail": "ml435@yahoo.com",
     "type": "community lead",
-    "notes": null
+    "notes": "Co-founder: Hazhir Rahmandad (Ridley parent, MIT professor); 68 K-7 students; Brookline.News 6/20/25"
    },
    {
     "org": "The Balance Project",
@@ -63,6 +63,33 @@
     "leadEmail": "obiejill@yahoo.com",
     "type": "member (no formal lead)",
     "notes": null
+   },
+   {
+    "org": "Independent",
+    "chapterName": "Bedford Promise",
+    "town": "Bedford",
+    "leadName": null,
+    "leadEmail": null,
+    "type": "chapter",
+    "notes": "Delay-the-smartphone group, offshoot of Concord Promise; Bedford Citizen 5/21/26"
+   },
+   {
+    "org": "Independent",
+    "chapterName": "",
+    "town": "Bedford",
+    "leadName": "Lena Flannery",
+    "leadEmail": null,
+    "type": "independent advocate (press)",
+    "notes": "Bedford SC comment on classroom tech; Bedford Citizen 5/21/26"
+   },
+   {
+    "org": "Independent",
+    "chapterName": "",
+    "town": "Bedford",
+    "leadName": "Christina Carvey",
+    "leadEmail": null,
+    "type": "independent advocate (press)",
+    "notes": "BPS parent of three; Bedford Citizen 5/21/26"
    }
   ],
   "lexington": [
@@ -106,7 +133,7 @@
     "leadName": "Erica Walsh",
     "leadEmail": "erica.mercke@gmail.com",
     "type": "community lead",
-    "notes": null
+    "notes": "Co-founder Katie O'Connor; 497-household survey (95.2%); won bell-to-bell elementary policy; Winchester News 4/30/25"
    },
    {
     "org": "Independent",
@@ -156,6 +183,24 @@
     "leadEmail": "lindseydax@gmail.com",
     "type": "community lead",
     "notes": null
+   },
+   {
+    "org": "Independent",
+    "chapterName": "Intentional Tech Coalition",
+    "town": "Concord",
+    "leadName": "Emily Lines",
+    "leadEmail": null,
+    "type": "member (100+ parent coalition, no named lead)",
+    "notes": "Asked district for screen-time data + edtech/AI audit; Concord Bridge 6/2/26"
+   },
+   {
+    "org": "Independent",
+    "chapterName": "",
+    "town": "Concord",
+    "leadName": "Amy Amick",
+    "leadEmail": null,
+    "type": "independent advocate (press)",
+    "notes": "Parent + neurologist; Concord Bridge 6/2/26"
    }
   ],
   "grafton": [
@@ -364,6 +409,15 @@
     "leadEmail": null,
     "type": "co-organizers (Village School)",
     "notes": "Named in Marblehead Current 6/4/25; FB group 647342045125213; SFC US locator"
+   },
+   {
+    "org": "Wait Until 8th (supporter)",
+    "chapterName": "",
+    "town": "Marblehead",
+    "leadName": "Amanda Ritvo, MD",
+    "leadEmail": null,
+    "type": "independent advocate (press)",
+    "notes": "Family physician championing W8; Marblehead Current 6/4/25"
    }
   ],
   "canton": [
@@ -587,6 +641,48 @@
     "leadEmail": null,
     "type": "chapter",
     "notes": "SBS find-chapter directory"
+   },
+   {
+    "org": "Independent",
+    "chapterName": "",
+    "town": "Medford",
+    "leadName": "Jesse Walsh",
+    "leadEmail": null,
+    "type": "independent advocate (press)",
+    "notes": "Parent + teacher; WBUR 5/6/25"
+   }
+  ],
+  "east longmeadow": [
+   {
+    "org": "Wait Until 8th",
+    "chapterName": "Wait Until 8th – East Longmeadow",
+    "town": "East Longmeadow",
+    "leadName": "Natalee Georgantas",
+    "leadEmail": null,
+    "type": "community lead",
+    "notes": "Emergency-medicine PA + parent; flyers K-8, tabling at Birchland Park MS; The Reminder 4/7/26"
+   }
+  ],
+  "framingham": [
+   {
+    "org": "Independent",
+    "chapterName": "",
+    "town": "Framingham",
+    "leadName": "Caroline Krehbiel",
+    "leadEmail": null,
+    "type": "independent advocate (press)",
+    "notes": "Parent + child psychologist; WBUR 5/6/25"
+   }
+  ],
+  "newton": [
+   {
+    "org": "Independent",
+    "chapterName": "",
+    "town": "Newton",
+    "leadName": "Alex Pascal / Jessica Shinn",
+    "leadEmail": null,
+    "type": "independent advocates (press)",
+    "notes": "Preceded Newton K-12 Yondr ban; Fig City News 5/12/24"
    }
   ]
  }
