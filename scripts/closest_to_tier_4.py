@@ -28,7 +28,7 @@ TODAY = datetime.date.today().isoformat()
 
 
 CONCERN_KEYWORDS = [
-    "scope_lt_k12", "scope_lt_K12", "off_and_away", "accessible_storage", "lockers",
+    "scope_lt_k12", "off_and_away", "accessible_storage", "lockers",
     "backpacks", "pockets", "educational_use_exception", "emergency_use_exception",
     "admin_discretion", "principal_discretion", "senior_exemption", "no_district_policy",
     "school_by_school", "class_only", "class_time_only", "lunch_passing_access",

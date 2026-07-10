@@ -1,6 +1,6 @@
 # Closest to Tier 4 — MA Phone Policy Progress Report
 
-*Snapshot of the no-mistakes MA Power Map tracker. Generated 2026-05-23.*
+*Snapshot of the no-mistakes MA Power Map tracker. Generated 2026-07-10.*
 
 
 This report ranks Massachusetts public school districts by their distance to the Childhood Index gold standard for phone-free schools — **bell-to-bell + inaccessible storage + K-12 + all PEDs + narrow exceptions (IEP/504 + documented medical only).** Each district below has been verified through district records + news + social media triangulation.
@@ -400,7 +400,6 @@ These districts have policies on the books but lack inaccessible-storage hardwar
 Across the 37 red-team-verified districts in this tracker, the most common barriers to tier 4 cluster as follows. Each row tells the ED which lever moves the most districts forward.
 
 - **11×** `scope_lt_k12` — Athol-Royalston School District, Cambridge School District, Central Berkshire School District, Chelsea School District, Chicopee School District, +6 more
-- **11×** `scope_lt_K12` — Athol-Royalston School District, Cambridge School District, Central Berkshire School District, Chelsea School District, Chicopee School District, +6 more
 - **6×** `accessible_storage` — Boston School District, Brookline School District, Framingham School District, Mount Greylock School District, Watertown School District, +1 more
 - **6×** `no_hardware` — Brockton School District, Brookline School District, Framingham School District, Hudson School District, Littleton School District, +1 more
 - **4×** `lockers` — Littleton School District, Lowell School District, Mount Greylock School District, Worcester School District
@@ -408,6 +407,7 @@ Across the 37 red-team-verified districts in this tracker, the most common barri
 - **4×** `lunch_passing_access` — Abington School District, Framingham School District, Quincy School District, Wareham School District
 - **3×** `hs_only` — Ipswich School District, Martha's Vineyard School District, Wareham School District
 - **3×** `student_workaround` — Brockton School District, Cambridge School District, Ludlow School District
+- **3×** `class_only` — Abington School District, Quincy School District, Wareham School District
 
 
 ---
