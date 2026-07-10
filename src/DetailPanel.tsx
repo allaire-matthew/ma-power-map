@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import type { TownRecord } from './model'
 import { fmtDate } from './model'
-import { Fact, OrgChip, StageTrack, StatusChip, TierChip } from './ui'
+import { Fact, OrgChip, TierChip } from './ui'
 import { resolveOrgs } from './orgs'
 
 /**
@@ -9,8 +9,6 @@ import { resolveOrgs } from './orgs'
  * F1/G1). Non-modal: map/table stay visible and interactive.
  */
 export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => void }) {
-  const p = rec.pipeline
-
   return (
     <aside
       data-map-ui
@@ -47,36 +45,10 @@ export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => 
         </div>
         <div className="mt-2 flex items-center gap-1.5 flex-wrap">
           {rec.policy && <TierChip tier={rec.policy.tier} />}
-          {p && <StatusChip status={p.status} />}
         </div>
       </div>
 
       <div className="flex-1 overflow-y-auto thin-scroll px-4 py-3 flex flex-col gap-4">
-        {/* Chapter — the headline block when present. */}
-        {p && (
-          <section className="flex flex-col gap-2.5">
-            <SectionTitle>Council · {p.chapter}</SectionTitle>
-            <StageTrack stage={p.stage} />
-            <div className="flex flex-col gap-1.5">
-              <Fact label="Lead">
-                {p.chapterLead ?? '—'}
-                {p.leadConfirmed && (
-                  <span className="ml-1" title="Confirmed" style={{ color: '#0ca30c' }}>
-                    ✓ confirmed
-                  </span>
-                )}
-              </Fact>
-              {p.anchorActivation && <Fact label="Anchor">{p.anchorActivation}</Fact>}
-              {p.nextAction && <Fact label="Next action">{p.nextAction}</Fact>}
-            </div>
-            {p.notes && (
-              <p className="text-[12px] leading-snug m-0" style={{ color: 'var(--ink-2)' }}>
-                {p.notes}
-              </p>
-            )}
-          </section>
-        )}
-
         {/* Parent organizing. */}
         {rec.orgs.length > 0 && (
           <section className="flex flex-col gap-2">

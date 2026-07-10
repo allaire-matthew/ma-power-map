@@ -38,61 +38,6 @@ export const TIER_SHORT: Record<PhoneTier, string> = {
   4: 'Tier 4 · bell-to-bell',
 }
 
-// Chapter pipeline stage — ordinal blue ramp (stages 1–4) with two
-// categorical bookends: stage 0 "Identified" is neutral (not yet a
-// chapter), stage 5 "Network Hub" is CIRL gold (the summit — always
-// carries its diamond badge + name, never color alone).
-export const STAGE_COLOR: Record<number, string> = {
-  0: '#9aa2ad',
-  1: '#60a5fa',
-  2: '#3b82f6',
-  3: '#2563eb',
-  4: '#1839a6',
-  5: '#d4a843',
-}
-
-export const STAGE_NAME: Record<number, string> = {
-  0: 'Identified',
-  1: 'Prospecting',
-  2: 'Activated',
-  3: 'Programming',
-  4: 'Sustained',
-  5: 'Network Hub',
-}
-
-// The gate a chapter must meet to BE at each stage (Pipeline Tracker
-// "Start Here" tab — surfaced in the Guide and stage tooltips).
-export const STAGE_GATE: Record<number, string> = {
-  0: 'A community is named as a candidate with a possible lead. No outreach yet.',
-  1: 'Real conversations underway with the candidate lead; Community Assessment started.',
-  2: 'Named lead + 2 partner orgs + one scheduled anchor activation.',
-  3: 'Has run at least one public-facing activity; reporting to statewide has begun.',
-  4: '90+ days of consistent activity, 2+ public deliverables, regular monthly reports.',
-  5: 'Recruiting sub-leaders, hosting partners, helping spawn adjacent chapters.',
-}
-
-// Status (momentum) — reserved status palette, never reused for series.
-// Chips always render icon + word; the color is supplementary (D2).
-export type StatusKey = 'on-track' | 'stuck' | 'at-risk' | 'wound-down'
-
-export const STATUS: Record<
-  StatusKey,
-  { label: string; dot: string; bg: string; ink: string; icon: string }
-> = {
-  'on-track': { label: 'On Track', dot: '#0ca30c', bg: '#0ca30c14', ink: '#08610a', icon: '●' },
-  stuck: { label: 'Stuck', dot: '#c88a00', bg: '#fab21918', ink: '#7a5600', icon: '◆' },
-  'at-risk': { label: 'At Risk', dot: '#d03b3b', bg: '#ec835a1a', ink: '#8f2b1c', icon: '▲' },
-  'wound-down': { label: 'Wound Down', dot: '#898781', bg: '#8987811a', ink: '#57544e', icon: '■' },
-}
-
-export function statusKeyOf(raw: string | null | undefined): StatusKey {
-  const s = (raw ?? '').trim().toLowerCase()
-  if (s.startsWith('stuck')) return 'stuck'
-  if (s.startsWith('at risk') || s.startsWith('at-risk')) return 'at-risk'
-  if (s.startsWith('wound')) return 'wound-down'
-  return 'on-track'
-}
-
 // Parent-organizing presence — violet, one channel, everywhere.
 export const PRESENCE = '#7c3aed'
 

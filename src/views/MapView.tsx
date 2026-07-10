@@ -8,10 +8,9 @@ import {
   type Lens,
   type TierFilter,
 } from '../MapLayers'
-import { PRESENCE, STAGE_COLOR, STAGE_NAME, TIER_COLOR, TIER_SHORT } from '../colors'
+import { PRESENCE, TIER_COLOR, TIER_SHORT } from '../colors'
 
 const LENSES: { key: Lens; label: string; hint: string }[] = [
-  { key: 'chapters', label: 'Councils', hint: 'CIRL Council pipeline, with parent organizing as context' },
   { key: 'policy', label: 'Phone policy', hint: 'District phone-policy strength, Tier 1–4' },
   { key: 'organizing', label: 'Organizing', hint: 'Where local groups are active' },
 ]
@@ -57,8 +56,6 @@ export function MapView({
   const hoverLine = useMemo(() => {
     if (!hoverRec) return null
     const bits: string[] = []
-    if (hoverRec.pipeline)
-      bits.push(`Stage ${hoverRec.pipeline.stage} · ${STAGE_NAME[hoverRec.pipeline.stage]}`)
     if (lens === 'policy') bits.push(TIER_SHORT[hoverRec.policy?.tier ?? 1])
     else if (hoverRec.orgs.length > 0)
       bits.push(`${hoverRec.orgs.length} local group${hoverRec.orgs.length > 1 ? 's' : ''}`)
@@ -179,18 +176,6 @@ export function MapView({
         className="absolute left-3 bottom-3 rounded-lg border shadow-sm px-3 py-2.5"
         style={{ borderColor: 'var(--hairline)', background: 'rgba(255,255,255,0.94)', backdropFilter: 'blur(6px)', maxWidth: 240 }}
       >
-        {lens === 'chapters' && (
-          <LegendRows
-            title="Council stage"
-            rows={[1, 2, 3, 4, 5].map((s) => ({
-              swatch: STAGE_COLOR[s],
-              label: `${s} · ${STAGE_NAME[s]}`,
-            }))}
-            extra={[
-              { swatch: PRESENCE, label: 'Local group active', alpha: 0.35 },
-            ]}
-          />
-        )}
         {lens === 'policy' && (
           <LegendRows
             title="Phone-policy tier (district)"

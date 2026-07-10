@@ -2,23 +2,23 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadWorld, type World } from './model'
 import type { Lens } from './MapLayers'
 import { MapView } from './views/MapView'
-import { ChaptersView } from './views/ChaptersView'
+import { GroupsView } from './views/GroupsView'
 import { DetailPanel } from './DetailPanel'
 import { GuidePanel } from './GuidePanel'
 import { StatTile } from './ui'
 
-type View = 'map' | 'chapters'
+type View = 'map' | 'groups'
 
 const VIEWS: { key: View; label: string }[] = [
   { key: 'map', label: 'Map' },
-  { key: 'chapters', label: 'Councils' },
+  { key: 'groups', label: 'Local groups' },
 ]
 
 export default function App() {
   const [world, setWorld] = useState<World | null>(null)
   const [view, setView] = useState<View>('map')
   const [selectedId, setSelectedId] = useState<string | null>(null)
-  const [lens, setLens] = useState<Lens>('chapters')
+  const [lens, setLens] = useState<Lens>('organizing')
   const [guideOpen, setGuideOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [activeIndex, setActiveIndex] = useState(0)
@@ -183,7 +183,7 @@ export default function App() {
 
       {/* KPI strip — contextual to what's being examined; the accent color
           matches the active lens's encoding (DESIGN.md C1, D1, F2). */}
-      {world && <KpiStrip world={world} mode={view === 'map' ? lens : 'chapters'} />}
+      {world && <KpiStrip world={world} mode={view === 'map' ? lens : 'groups'} />}
 
       {/* Content + detail panel (list-detail, DESIGN.md F1). */}
       <main className="flex-1 min-h-0 flex">
@@ -191,13 +191,13 @@ export default function App() {
           {!world ? (
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-[13px]" style={{ color: 'var(--ink-3)' }}>
-                Loading the Commonwealth…
+                Loading Massachusetts…
               </div>
             </div>
           ) : view === 'map' ? (
             <MapView world={world} selectedId={selectedId} onSelect={setSelectedId} focusRef={flyTo} lens={lens} onLensChange={setLens} />
           ) : (
-            <ChaptersView world={world} selectedId={selectedId} onSelect={setSelectedId} />
+            <GroupsView world={world} selectedId={selectedId} onSelect={setSelectedId} />
           )}
         </div>
         {selected && (
@@ -223,16 +223,8 @@ export default function App() {
 }
 
 // Per-mode KPI tiles — each is a direct count of what the active view
-// draws (tier fills, group towns, chapter badges). Nothing derived.
+// draws (tier fills, group towns). Nothing derived.
 const KPI_MODES = {
-  chapters: {
-    label: 'Council pipeline',
-    color: '#2563eb',
-    tiles: (k: World['kpis']) => [
-      { label: 'Councils', value: String(k.chapters) },
-      { label: 'Towns with local groups', value: String(k.prospectTowns) },
-    ],
-  },
   policy: {
     label: 'Phone policy',
     color: '#2f9e4f',
@@ -248,13 +240,22 @@ const KPI_MODES = {
     color: '#7c3aed',
     tiles: (k: World['kpis']) => [
       { label: 'Local groups', value: String(k.localGroups) },
-      { label: 'Towns with local groups', value: String(k.prospectTowns) },
+      { label: 'Towns with local groups', value: String(k.localGroupTowns) },
+      { label: 'Towns with 2+ groups', value: String(k.towns2plus) },
+    ],
+  },
+  groups: {
+    label: 'Local groups',
+    color: '#7c3aed',
+    tiles: (k: World['kpis']) => [
+      { label: 'Local groups', value: String(k.localGroups) },
+      { label: 'Towns with local groups', value: String(k.localGroupTowns) },
       { label: 'Towns with 2+ groups', value: String(k.towns2plus) },
     ],
   },
 }
 
-function KpiStrip({ world, mode }: { world: World; mode: Lens }) {
+function KpiStrip({ world, mode }: { world: World; mode: Lens | 'groups' }) {
   const m = KPI_MODES[mode]
   return (
     <div

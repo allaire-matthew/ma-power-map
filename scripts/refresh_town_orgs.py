@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Refresh public/data/town-orgs.json from the CIRL IRL-Councils Google Sheet.
+"""Refresh public/data/town-orgs.json from the parent-organizing tracking sheet.
 
-The Sheet ID is hardcoded (Matthew's CIRL workbench sheet). Fetches via the
+The Sheet ID is hardcoded (Matthew's own tracking workbench). Fetches via the
 Sheets CSV-export endpoint, which works without auth for sheets shared
 'Anyone with the link' OR via stored OAuth (handled by the workflow secret).
 
-Workflow option: if CIRL_SHEET_CSV_URL env var is set, use that direct CSV
+Workflow option: if TOWN_ORGS_SHEET_CSV_URL env var is set, use that direct CSV
 URL instead — useful for swapping data sources without code changes.
 """
 from __future__ import annotations
@@ -21,11 +21,11 @@ from datetime import date
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA_DIR = REPO_ROOT / "public" / "data"
 
-# Sheet ID for the CIRL workbench; tab = 'IRL Councils' (gid=1097363314 → confirmed).
+# Sheet ID for Matthew's tracking workbench; tab = 'Local Groups' (gid=1097363314 → confirmed).
 SHEET_ID = "16q_wrfljGEbMuUyeAeovZKk_TVTuoGgUf7mqb1uLqtw"
 GID = "1097363314"
 CSV_URL = (
-    os.environ.get("CIRL_SHEET_CSV_URL")
+    os.environ.get("TOWN_ORGS_SHEET_CSV_URL")
     or f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=csv&gid={GID}"
 )
 

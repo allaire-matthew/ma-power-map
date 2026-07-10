@@ -1,6 +1,6 @@
 # MA School District Phone Policy Research Spec — V2
 
-**Owner:** Matthew Allaire (Commonwealth IRL)
+**Owner:** Matthew Allaire
 **Output file:** `public/data/phone-policies.json`
 **Audience:** Claude Teams agent running this as a long-form research project
 **Replaces:** `RESEARCH_SPEC_PHONE_POLICIES.md` (v1). V1 produced too many low-confidence, aggregator-sourced entries. V2 raises the evidence bar.

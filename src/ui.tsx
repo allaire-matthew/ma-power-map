@@ -1,15 +1,6 @@
 import { useState, type ReactNode } from 'react'
 import type { PhoneTier } from './geo'
-import {
-  STAGE_COLOR,
-  STAGE_NAME,
-  STATUS,
-  statusKeyOf,
-  TIER_COLOR,
-  TIER_INK,
-  TIER_LABEL,
-  TIER_SHORT,
-} from './colors'
+import { TIER_COLOR, TIER_INK, TIER_LABEL, TIER_SHORT } from './colors'
 import { faviconUrl, type OrgInfo } from './orgs'
 
 /** KPI stat tile — value in proportional figures (DESIGN.md C1/E2). */
@@ -36,49 +27,6 @@ export function StatTile({
         </div>
       )}
     </div>
-  )
-}
-
-/** Status chip — icon + word, color supplementary (DESIGN.md D2). */
-export function StatusChip({ status }: { status: string | null | undefined }) {
-  const s = STATUS[statusKeyOf(status)]
-  return (
-    <span
-      className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11.5px] font-semibold whitespace-nowrap"
-      style={{ background: s.bg, color: s.ink }}
-    >
-      <span aria-hidden style={{ color: s.dot, fontSize: 9 }}>
-        {s.icon}
-      </span>
-      {s.label}
-    </span>
-  )
-}
-
-/** 6-segment stage track with the current stage named (DESIGN.md C4). */
-export function StageTrack({ stage, compact }: { stage: number; compact?: boolean }) {
-  return (
-    <span className="inline-flex flex-col gap-1 align-middle">
-      <span className="inline-flex items-center gap-[3px]" aria-hidden>
-        {[0, 1, 2, 3, 4, 5].map((i) => (
-          <span
-            key={i}
-            className="rounded-[2px]"
-            style={{
-              width: compact ? 11 : 14,
-              height: 5,
-              background: i <= stage ? STAGE_COLOR[stage] : 'var(--hairline)',
-            }}
-          />
-        ))}
-      </span>
-      <span
-        className="text-[11.5px] leading-none font-semibold"
-        style={{ color: 'var(--ink)' }}
-      >
-        Stage {stage} · {STAGE_NAME[stage]}
-      </span>
-    </span>
   )
 }
 

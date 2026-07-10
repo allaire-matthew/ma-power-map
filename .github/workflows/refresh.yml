@@ -18,9 +18,6 @@ jobs:
       - name: Refresh town orgs
         run: python3 scripts/refresh_town_orgs.py
         continue-on-error: true
-      - name: Refresh chapter pipeline
-        run: python3 scripts/refresh_chapter_pipeline.py
-        continue-on-error: true
       - name: Refresh next school committee meetings
         run: python3 scripts/refresh_school_meetings.py
         continue-on-error: true

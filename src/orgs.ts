@@ -1,7 +1,7 @@
-// Registry of parent-organizing orgs that appear in town-orgs.json /
-// the chapter pipeline. Domains verified by live fetch 2026-07-03 —
-// logo chips render the org favicon with a monogram fallback, so a
-// wrong/missing domain degrades to initials, never a wrong logo.
+// Registry of parent-organizing orgs that appear in town-orgs.json.
+// Domains verified by live fetch 2026-07-03 — logo chips render the org
+// favicon with a monogram fallback, so a wrong/missing domain degrades
+// to initials, never a wrong logo.
 
 export type OrgInfo = {
   name: string
@@ -24,7 +24,6 @@ const REGISTRY: OrgInfo[] = [
   { name: 'ReConnect Western MA', short: 'RC', domain: 'reconnectwma.org', url: 'https://reconnectwma.org' },
   { name: 'Reconnect Malden', short: 'RM', domain: 'reconnectmalden.com', url: 'https://reconnectmalden.com' },
   { name: 'Sudbury for Digital Balance', short: 'SDB', domain: 'sudburyfordigitalbalance.org', url: 'https://sudburyfordigitalbalance.org' },
-  { name: 'Commonwealth IRL', short: 'CIRL', domain: 'commonwealthirl.org', url: 'https://commonwealthirl.org' },
   // No verified domain — monogram only. (Two unrelated MA "Reconnect"
   // groups exist; Malden's isn't confidently either.)
   { name: 'Reconnect', short: 'RC', domain: null, url: null },

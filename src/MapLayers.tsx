@@ -1,9 +1,9 @@
 import { memo, useEffect, useState } from 'react'
 import { loadLayer, type LayerName, type PhoneTier, type ProjectedLayer } from './geo'
 import type { World } from './model'
-import { BOUNDARY, PRESENCE, STAGE_COLOR, TIER_COLOR } from './colors'
+import { BOUNDARY, PRESENCE, TIER_COLOR } from './colors'
 
-export type Lens = 'chapters' | 'policy' | 'organizing'
+export type Lens = 'policy' | 'organizing'
 export type BoundaryKey = 'counties' | 'school' | 'congressional' | 'stateSenate' | 'stateHouse'
 export type TierFilter = 'all' | PhoneTier
 
@@ -59,14 +59,9 @@ export const MapLayers = memo(function MapLayers({
       if (tierFilter !== 'all' && tier !== tierFilter) return { fill: '#d6d3ca', alpha: 0.35 }
       return { fill: TIER_COLOR[tier], alpha: tier === 1 ? 1 : 0.82 }
     }
-    if (lens === 'organizing') {
-      if (rec.orgs.length >= 2) return { fill: PRESENCE, alpha: 0.55 }
-      if (rec.orgs.length === 1) return { fill: PRESENCE, alpha: 0.3 }
-      return { fill: '#ffffff', alpha: 0.55 }
-    }
-    // chapters lens — the story is the pipeline; presence is context.
-    if (rec.pipeline) return { fill: STAGE_COLOR[rec.pipeline.stage] ?? STAGE_COLOR[0], alpha: 0.85 }
-    if (rec.orgs.length > 0) return { fill: PRESENCE, alpha: 0.22 }
+    // organizing lens
+    if (rec.orgs.length >= 2) return { fill: PRESENCE, alpha: 0.55 }
+    if (rec.orgs.length === 1) return { fill: PRESENCE, alpha: 0.3 }
     return { fill: '#ffffff', alpha: 0.55 }
   }
 
@@ -140,7 +135,7 @@ export const MapLayers = memo(function MapLayers({
         )
       })}
 
-      {/* Presence dots (chapters + organizing lenses). */}
+      {/* Presence dots (organizing lens). */}
       {lens !== 'policy' &&
         world.tracked
           .filter((r) => r.orgs.length > 0)
@@ -172,41 +167,6 @@ export const MapLayers = memo(function MapLayers({
                     {n}
                   </text>
                 )}
-              </g>
-            )
-          })}
-
-      {/* Chapter stage diamonds — pipeline towns, chapters lens. */}
-      {lens === 'chapters' &&
-        world.tracked
-          .filter((r) => r.pipeline)
-          .map((r) => {
-            const f = world.towns.find((t) => t.id === r.id)
-            if (!f) return null
-            const [cx0, cy0] = f.centroid
-            const cx = cx0 + 10 / k
-            const cy = cy0 - 10 / k
-            const s = 9 / k
-            const color = STAGE_COLOR[r.pipeline!.stage] ?? STAGE_COLOR[0]
-            return (
-              <g key={`badge-${r.id}`} pointerEvents="none">
-                <path
-                  d={`M ${cx} ${cy - s} L ${cx + s} ${cy} L ${cx} ${cy + s} L ${cx - s} ${cy} Z`}
-                  fill={color}
-                  stroke="#fff"
-                  strokeWidth={1.4 / k}
-                />
-                <text
-                  x={cx}
-                  y={cy + 0.4 / k}
-                  textAnchor="middle"
-                  dominantBaseline="central"
-                  fontSize={8.5 / k}
-                  fontWeight={600}
-                  fill="#fff"
-                >
-                  {r.pipeline!.stage}
-                </text>
               </g>
             )
           })}
