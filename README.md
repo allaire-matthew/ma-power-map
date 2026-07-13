@@ -5,13 +5,19 @@ centralized, self-updating synthesis of parent organizing, district phone
 policies, legislators, and school-committee meetings. Live at
 <https://allaire-matthew.github.io/ma-power-map/>.
 
-Two views:
+Three views:
 
 - **Map** — pannable/zoomable SVG map of all 351 towns with two lenses
   (Phone policy / Organizing) plus boundary overlays (counties, school
   districts, US House, MA Senate, MA House).
 - **Local groups** — the spreadsheet view: every town with an identified
   parent-organizing group, with affiliation logos and leads.
+- **EdTech** — per-district listing of what runs in the classroom: 1:1
+  device programs, platforms, AI tools/policies, notable services,
+  contracts, and signed student-data-privacy agreements (SDPC/MSPA
+  registry). A listing, not a rating. Data in
+  `public/data/edtech-services.json`, merged from research runs via
+  `scripts/merge_edtech.py`.
 
 The **Guide** button explains the tier system and local-groups data — the
 humane layer for anyone new to the tool. Design rules and their sources live
