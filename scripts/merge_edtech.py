@@ -8,7 +8,9 @@ Each part is an array of district objects with the research schema
 (districtName, oneToOne, lms, aiPolicy, aiPilot, aiPilotNote, aiTools,
 notableServices, dpaRegistry, contracts, publicCommentary, sources).
 Normalization: takeHome coerced to string|null; dpaRegistry gains an
-approxApproved integer parsed from its free-text note when present.
+approxApproved integer parsed from its free-text note when present;
+every district gains an NCES districtId resolved against
+phone-policies.json district names (the map joins on it).
 """
 import json
 import re
@@ -16,7 +18,39 @@ import sys
 from datetime import date
 from pathlib import Path
 
-OUT = Path(__file__).resolve().parent.parent / "public" / "data" / "edtech-services.json"
+DATA = Path(__file__).resolve().parent.parent / "public" / "data"
+OUT = DATA / "edtech-services.json"
+PHONE_POLICIES = DATA / "phone-policies.json"
+
+# Names whose suffix-stripped form doesn't match a phone-policies district
+# (e.g. hyphenation differs: "Somerset Berkley" vs "Somerset-Berkley").
+DISTRICT_ID_OVERRIDES = {
+    "Somerset Berkley Regional School District": "2500541",
+}
+
+
+def norm_district(name):
+    """Lowercase; 'Public Schools of X' -> 'x'; strip org-type suffixes."""
+    s = name.strip().lower()
+    m = re.match(r"^(?:the\s+)?public schools of (.+)$", s)
+    if m:
+        s = m.group(1)
+    s = re.sub(r"\s+(regional school district|school district|public schools)$", "", s)
+    return s.strip()
+
+
+def build_district_ids():
+    """normalized name -> NCES id, from phone-policies.json."""
+    policies = json.loads(PHONE_POLICIES.read_text())["policies"]
+    ids = {}
+    for did, pol in policies.items():
+        key = norm_district(pol["districtName"])
+        if key in ids and ids[key] != did:
+            # Ambiguous key: force an explicit override rather than guess.
+            ids[key] = None
+        else:
+            ids[key] = did
+    return ids
 
 
 def norm_take_home(v):
@@ -41,6 +75,7 @@ def parse_approved(note):
 
 
 def main(paths):
+    district_ids = build_district_ids()
     districts = {}
     for p in paths:
         for d in json.loads(Path(p).read_text()):
@@ -49,6 +84,9 @@ def main(paths):
             d["districtName"] = re.sub(r"\s*\(.*\)\s*$", "", d["districtName"]).strip()
             if paren and not d.get("districtNote"):
                 d["districtNote"] = paren.group(1)
+            d["districtId"] = DISTRICT_ID_OVERRIDES.get(
+                d["districtName"]
+            ) or district_ids.get(norm_district(d["districtName"]))
             # Some research runs return lms entries as {name, source} objects.
             d["lms"] = [x["name"] if isinstance(x, dict) else x for x in (d.get("lms") or [])]
             one = d.get("oneToOne") or {}
@@ -59,6 +97,12 @@ def main(paths):
                 reg["approxApproved"] = parse_approved(reg.get("note"))
             d["dpaRegistry"] = reg
             districts[d["districtName"]] = d
+
+    unresolved = [n for n, d in districts.items() if not d.get("districtId")]
+    for name, d in sorted(districts.items()):
+        print(f"  {d.get('districtId') or 'UNRESOLVED':>8}  {name}")
+    if unresolved:
+        sys.exit(f"no districtId for: {', '.join(unresolved)} — add to DISTRICT_ID_OVERRIDES")
 
     out = {
         "_schemaVersion": 1,

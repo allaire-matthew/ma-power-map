@@ -8,11 +8,13 @@ import {
   type Lens,
   type TierFilter,
 } from '../MapLayers'
-import { PRESENCE, TIER_COLOR, TIER_SHORT } from '../colors'
+import { AI_PILOT, POSTURE_COLOR, POSTURE_LABEL, PRESENCE, TIER_COLOR, TIER_SHORT } from '../colors'
+import type { DevicePosture } from '../geo'
 
 const LENSES: { key: Lens; label: string; hint: string }[] = [
   { key: 'policy', label: 'Phone policy', hint: 'District phone-policy strength, Tier 1–4' },
   { key: 'organizing', label: 'Organizing', hint: 'Where local groups are active' },
+  { key: 'edtech', label: 'EdTech', hint: 'District 1:1 device programs and AI pilots' },
 ]
 
 const BOUNDARY_OPTIONS: { key: BoundaryKey; label: string }[] = [
@@ -57,7 +59,10 @@ export function MapView({
     if (!hoverRec) return null
     const bits: string[] = []
     if (lens === 'policy') bits.push(TIER_SHORT[hoverRec.policy?.tier ?? 1])
-    else if (hoverRec.orgs.length > 0)
+    else if (lens === 'edtech') {
+      if (hoverRec.edtechPosture != null) bits.push(POSTURE_LABEL[hoverRec.edtechPosture])
+      if (hoverRec.aiPilot) bits.push('AI pilot')
+    } else if (hoverRec.orgs.length > 0)
       bits.push(`${hoverRec.orgs.length} local group${hoverRec.orgs.length > 1 ? 's' : ''}`)
     return bits.join(' · ')
   }, [hoverRec, lens])
@@ -195,6 +200,19 @@ export function MapView({
             ]}
           />
         )}
+        {lens === 'edtech' && (
+          <LegendRows
+            title="1:1 devices (district)"
+            rows={[
+              ...(['takeHome', 'inSchool', 'none'] as DevicePosture[]).map((p) => ({
+                swatch: POSTURE_COLOR[p],
+                label: POSTURE_LABEL[p],
+              })),
+              { swatch: '#ffffff', label: 'Not yet researched', outline: true },
+            ]}
+            extra={[{ swatch: AI_PILOT, label: 'AI-curriculum pilot', diamond: true }]}
+          />
+        )}
       </div>
 
       {/* Hover tooltip — enhances, never gates (DESIGN.md G3). */}
@@ -229,7 +247,7 @@ function LegendRows({
 }: {
   title: string
   rows: { swatch: string; label: string; alpha?: number; outline?: boolean }[]
-  extra?: { swatch: string; label: string; alpha?: number }[]
+  extra?: { swatch: string; label: string; alpha?: number; diamond?: boolean }[]
 }) {
   return (
     <div>
@@ -254,21 +272,24 @@ function LegendRow({
   label,
   alpha,
   outline,
+  diamond,
 }: {
   swatch: string
   label: string
   alpha?: number
   outline?: boolean
+  diamond?: boolean
 }) {
   return (
     <div className="flex items-center gap-2 text-[12px]" style={{ color: 'var(--ink-2)' }}>
       <span
         aria-hidden
-        className="w-3.5 h-3.5 rounded-[3px] shrink-0"
+        className={`shrink-0 ${diamond ? 'w-3 h-3 rounded-[2px]' : 'w-3.5 h-3.5 rounded-[3px]'}`}
         style={{
           background: swatch,
           opacity: alpha ?? 1,
           border: outline ? '1px solid #c9c6bd' : undefined,
+          transform: diamond ? 'rotate(45deg) scale(0.85)' : undefined,
         }}
       />
       {label}

@@ -1,6 +1,8 @@
 import {
   getTownToDistrict,
   getTownToLayer,
+  loadAiPilotDistricts,
+  loadEdTechServices,
   loadLayer,
   loadLegislators,
   loadNextMeetings,
@@ -8,6 +10,8 @@ import {
   loadSchoolCommitteeLinks,
   loadTownOrgs,
   normalizeDistrictKey,
+  type DevicePosture,
+  type EdTechProfile,
   type LegislatorsData,
   type NextMeetingEntry,
   type PhonePolicy,
@@ -30,6 +34,9 @@ export type TownRecord = {
   districtId: string | null
   districtName: string | null
   policy: PhonePolicy | null
+  edtech: EdTechProfile | null
+  edtechPosture: DevicePosture | null // null = district not yet researched
+  aiPilot: boolean // district is in the statewide AI-curriculum pilot
   schoolLink: SchoolCommitteeLink | null
   nextMeeting: NextMeetingEntry | null
   orgs: TownOrgChapter[]
@@ -54,6 +61,9 @@ export type World = {
     tier1: number
     districtsTotal: number
     meetingsNext14d: number
+    edtechProfiled: number
+    edtechTakeHome: number
+    aiPilotDistricts: number
   }
   freshness: { label: string; date: string | null }[]
 }
@@ -64,6 +74,30 @@ export function loadWorld(): Promise<World> {
   if (worldPromise) return worldPromise
   worldPromise = buildWorld()
   return worldPromise
+}
+
+// Classify a district's 1:1 posture from its free-text takeHome field
+// (research prose, not an enum). Take-home when the text opens with
+// "yes"/"grades …" or affirmatively mentions devices going home once
+// negated clauses ("no longer go home", "no public evidence of
+// take-home", "not found/confirmed") are scrubbed; explicit
+// "no"/"in-classroom"/"in-school" openers mean in-school; a documented
+// 1:1 with no affirmative take-home signal defaults to in-school.
+// Total: any oneToOne shape (missing, exists false/null) → 'none'.
+export function classifyDevicePosture(one: EdTechProfile['oneToOne'] | null | undefined): DevicePosture {
+  if (!one || one.exists !== true) return 'none'
+  const t = (one.takeHome ?? '').trim().toLowerCase()
+  if (!t) return 'none'
+  if (/^(yes|grades?\b)/.test(t)) return 'takeHome'
+  if (/^(no\b|in[- ]?(classroom|school))/.test(t)) return 'inSchool'
+  const scrubbed = t
+    .replace(/no longer[^;.,)]*/g, '')
+    .replace(/no (public )?evidence[^;.,)]*/g, '')
+    .replace(/[^;.,()]*not (found|confirmed)[^;.,)]*/g, '')
+  if (/\b(yes|take[- ]home|take[^;.,]{0,24}home|go(es)? home|at home|travel)\b/.test(scrubbed)) {
+    return 'takeHome'
+  }
+  return 'inSchool'
 }
 
 async function buildWorld(): Promise<World> {
@@ -81,6 +115,8 @@ async function buildWorld(): Promise<World> {
     legislators,
     townOrgs,
     meetings,
+    edtechByDistrict,
+    aiPilot,
   ] = await Promise.all([
     loadLayer('towns'),
     loadLayer('schoolDistricts'),
@@ -95,7 +131,11 @@ async function buildWorld(): Promise<World> {
     loadLegislators(),
     loadTownOrgs(),
     loadNextMeetings(),
+    loadEdTechServices(),
+    loadAiPilotDistricts(),
   ])
+
+  const aiPilotIds = new Set((aiPilot?.districts ?? []).map((d) => d.districtId))
 
   // Data keys that don't match a map-town name (verified 2026-07-03).
   // "Martha's Vineyard" is an island-wide group — anchored to Tisbury
@@ -124,6 +164,7 @@ async function buildWorld(): Promise<World> {
     const tKey = normalizeDistrictKey(f.name)
     const ctyId = tToCounty[f.id]
     const county = ctyId ? countiesLayer.features.find((c) => c.id === ctyId) ?? null : null
+    const edtech = dId ? edtechByDistrict[dId] ?? null : null
     const rec: TownRecord = {
       id: f.id,
       key,
@@ -133,6 +174,9 @@ async function buildWorld(): Promise<World> {
       districtId: dId,
       districtName: district?.name ?? null,
       policy,
+      edtech,
+      edtechPosture: edtech ? classifyDevicePosture(edtech.oneToOne) : null,
+      aiPilot: dId ? aiPilotIds.has(dId) : false,
       schoolLink: (dKey && scLinks[dKey]) || scLinks[tKey] || null,
       nextMeeting: (dKey && meetings?.byKey[dKey]) || meetings?.byKey[tKey] || null,
       orgs: orgsByTown[key] ?? [],
@@ -157,6 +201,7 @@ async function buildWorld(): Promise<World> {
 
   const isAdvocate = (t: string) => t.toLowerCase().includes('advocate')
   const allOrgEntries = tracked.flatMap((r) => r.orgs)
+  const edtechProfiles = Object.values(edtechByDistrict)
   const kpis = {
     localGroupTowns: tracked.length,
     localGroups: allOrgEntries.filter((o) => (o.chapterName ?? '').trim() && !isAdvocate(o.type)).length,
@@ -167,6 +212,11 @@ async function buildWorld(): Promise<World> {
     tier1: allPolicies.filter((p) => p.tier === 1).length,
     districtsTotal: allPolicies.length,
     meetingsNext14d,
+    edtechProfiled: edtechProfiles.length,
+    edtechTakeHome: edtechProfiles.filter(
+      (p) => classifyDevicePosture(p.oneToOne) === 'takeHome',
+    ).length,
+    aiPilotDistricts: aiPilot?.districts.length ?? 0,
   }
 
   const freshness: World['freshness'] = [

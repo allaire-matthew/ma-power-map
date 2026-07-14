@@ -1,9 +1,9 @@
 import { memo, useEffect, useState } from 'react'
 import { loadLayer, type LayerName, type PhoneTier, type ProjectedLayer } from './geo'
 import type { World } from './model'
-import { BOUNDARY, PRESENCE, TIER_COLOR } from './colors'
+import { AI_PILOT, BOUNDARY, POSTURE_COLOR, PRESENCE, TIER_COLOR } from './colors'
 
-export type Lens = 'policy' | 'organizing'
+export type Lens = 'policy' | 'organizing' | 'edtech'
 export type BoundaryKey = 'counties' | 'school' | 'congressional' | 'stateSenate' | 'stateHouse'
 export type TierFilter = 'all' | PhoneTier
 
@@ -58,6 +58,11 @@ export const MapLayers = memo(function MapLayers({
       const tier: PhoneTier = rec.policy?.tier ?? 1
       if (tierFilter !== 'all' && tier !== tierFilter) return { fill: '#d6d3ca', alpha: 0.35 }
       return { fill: TIER_COLOR[tier], alpha: tier === 1 ? 1 : 0.82 }
+    }
+    if (lens === 'edtech') {
+      // Posture is classified once at world build; unresearched = base fill.
+      if (rec.edtechPosture == null) return { fill: '#ffffff', alpha: 0.55 }
+      return { fill: POSTURE_COLOR[rec.edtechPosture], alpha: 0.82 }
     }
     // organizing lens
     if (rec.orgs.length >= 2) return { fill: PRESENCE, alpha: 0.55 }
@@ -136,7 +141,7 @@ export const MapLayers = memo(function MapLayers({
       })}
 
       {/* Presence dots (organizing lens). */}
-      {lens !== 'policy' &&
+      {lens === 'organizing' &&
         world.tracked
           .filter((r) => r.orgs.length > 0)
           .map((r) => {
@@ -168,6 +173,26 @@ export const MapLayers = memo(function MapLayers({
                   </text>
                 )}
               </g>
+            )
+          })}
+
+      {/* AI-curriculum-pilot diamonds (edtech lens) — one per town in a
+          pilot district, joined via NCES id like the phone-policy fills. */}
+      {lens === 'edtech' &&
+        world.towns
+          .filter((f) => world.records.get(f.id)?.aiPilot)
+          .map((f) => {
+            const [cx, cy] = f.centroid
+            const r = 4 / k
+            return (
+              <path
+                key={`ai-${f.id}`}
+                d={`M ${cx} ${cy - r} L ${cx + r} ${cy} L ${cx} ${cy + r} L ${cx - r} ${cy} Z`}
+                fill={AI_PILOT}
+                stroke="#fff"
+                strokeWidth={1.2 / k}
+                pointerEvents="none"
+              />
             )
           })}
     </>

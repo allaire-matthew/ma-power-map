@@ -338,6 +338,54 @@ export async function loadAiPilotDistricts(): Promise<AiPilotData | null> {
   return aiPilotPromise
 }
 
+// EdTech district profile — the subset of public/data/edtech-services.json
+// the map and detail panel consume; the EdTech tab reads the full records.
+export type EdTechProfile = {
+  districtId?: string | null
+  districtName: string
+  oneToOne: {
+    exists: boolean | null
+    grades?: string | null
+    device?: string | null
+    takeHome?: string | null
+    source?: string | null
+  }
+  aiPilot: boolean
+  dpaRegistry: {
+    found: boolean
+    url?: string | null
+    note?: string | null
+    approxApproved?: number | null
+  }
+}
+
+// 1:1 device posture, ordered strongest → none. 'none' = researched but
+// no/undocumented 1:1; towns with no profile at all get the map's base fill.
+export type DevicePosture = 'takeHome' | 'inSchool' | 'none'
+
+let edTechPromise: Promise<Record<string, EdTechProfile>> | null = null
+
+// Keyed by NCES district id, same join key as phone policies (entries
+// without an id — none as of 2026-07 — can't join to the map and are dropped).
+export async function loadEdTechServices(): Promise<Record<string, EdTechProfile>> {
+  if (!edTechPromise) {
+    edTechPromise = (async () => {
+      try {
+        const url = `${import.meta.env.BASE_URL}data/edtech-services.json`
+        const json = await fetchJson<{ districts: EdTechProfile[] }>(url)
+        return Object.fromEntries(
+          (json.districts ?? [])
+            .filter((d) => d.districtId)
+            .map((d) => [d.districtId as string, d]),
+        )
+      } catch {
+        return {}
+      }
+    })()
+  }
+  return edTechPromise
+}
+
 export type SchoolCommitteeLink = {
   name: string
   town: string

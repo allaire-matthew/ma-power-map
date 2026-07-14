@@ -1,6 +1,6 @@
 {
   "_schemaVersion": 1,
-  "_lastUpdated": "2026-07-13",
+  "_lastUpdated": "2026-07-14",
   "_notes": "District EdTech usage listing \u2014 1:1 device programs, platforms, AI tools/policies, notable services, contracts, and student-data-privacy agreements. Compiled from district technology pages, handbooks, school-committee minutes, budget documents, local press, and the SDPC/Massachusetts Student Privacy Alliance registry (sdpc.a4l.org). A signed privacy agreement means a tool was vetted for use, not proof of active classroom deployment. Listing only \u2014 no rating or tiering.",
   "districts": [
     {
@@ -124,7 +124,8 @@
         "https://www.pltw.org/about/news/new-ai-curriculum-pilot-to-reach-1600-massachusetts-students-across-30-school-districts",
         "https://sdpc.a4l.org/state_participants.php?state=MA",
         "https://sdpc.a4l.org/district_listing.php?districtID=415"
-      ]
+      ],
+      "districtId": "2502190"
     },
     {
       "districtName": "Bellingham Public Schools",
@@ -311,7 +312,8 @@
         "https://drive.google.com/file/d/1FnAf2MDNCIzFygh6lkSfup9ksinlkxUQ/view",
         "https://bellingham.schoolbrains.com/comm/",
         "https://checkout.education.getakko.com/education/bellingham-public-schools"
-      ]
+      ],
+      "districtId": "2502460"
     },
     {
       "districtName": "Dighton-Rehoboth Regional School District",
@@ -515,7 +517,8 @@
         "https://opendata.usac.org/resource/qdmp-ygft.json?$where=upper(organization_name)%20like%20%27%25DIGHTON-REHOBOTH%25%27",
         "https://www.drregional.org/page/district-policy-manual",
         "https://www.drregional.org/article/849280"
-      ]
+      ],
+      "districtId": "2504200"
     },
     {
       "districtName": "Fall River Public Schools",
@@ -668,7 +671,8 @@
         "https://www.bostonglobe.com/2026/04/24/metro/chromebook-cellphone-ban-schools/",
         "https://sdpc.a4l.org/state_participants.php?state=MA",
         "https://sdpc.a4l.org/district_listing.php?districtID=507"
-      ]
+      ],
+      "districtId": "2504830"
     },
     {
       "districtName": "Foxborough Public Schools",
@@ -764,7 +768,8 @@
         "https://www.foxborough.k12.ma.us/school_committee/goals_for_2024_2025",
         "https://sdpc.a4l.org/state_participants.php?state=MA",
         "https://sdpc.a4l.org/district_listing.php?districtID=514"
-      ]
+      ],
+      "districtId": "2504950"
     },
     {
       "districtName": "Franklin Public Schools",
@@ -942,7 +947,8 @@
         "https://www.franklinmatters.org/2025/01/boston-globe-ag-campbell-co-sponsors.html",
         "https://franklinobserver.town.news/g/franklin-town-ma/n/332382/educators-get-guidance-age-ai",
         "https://franklinobserver.town.news/g/franklin-town-ma/n/373575/no-phones-no-socials"
-      ]
+      ],
+      "districtId": "2505010"
     },
     {
       "districtName": "King Philip Regional School District",
@@ -1126,7 +1132,8 @@
         "https://kingphilipchronicle.wordpress.com/2024/09/24/turnitin-gone-google-classroom-as-its-replacement/",
         "https://kingphilipchronicle.wordpress.com/2026/01/07/ai-in-schools-artifical-intelligence-in-king-philip-students-and-teachers-weigh-in/"
       ],
-      "feederNotes": "Wrentham PS (K-6): no 1:1 \u2014 kindergarten classroom iPads, Chromebook carts grades 1-6 in-classroom only; Aspen SIS; 'WPS monitors all device use and no user has an expectation of privacy'; wearable technology (smartwatches, Gizmo watches) banned during the school day; largest feeder MSPA registry (~143 approved DPAs) incl. MagicSchool/MagicStudent AI (08/2025), Brisk, Seesaw, Lexia; Zearn free version and Khan Academy declined the MSPA DPA. Norfolk PS (PK-6): device model not publicly documented (JAMF Pro Apple-MDM DPA 10/11/2023 implies Apple devices); iPass SIS (vendor declined to sign the DPA per registry note); student tools: Google Classroom gr. 2-6, Lexia Core5, Raz-Kids, Reflex Math, GoMath, BrainPOP, Code.org, Typing Pal; smallest registry (~38 approved DPAs); tech page links DESE 'Artificial Intelligence (AI) in K12 Schools' resource but names no local AI policy. Plainville PS (PK-6): no device program documented in the 2025-26 Family/Student Handbook (which bans student cell phone/personal electronics use during the school day); SchoolBrains SIS, Clever portal, Follett Destiny; registry (~59 approved DPAs) incl. SchoolAI (01/2024), Brisk Teaching (09/2023), MagicSchool (03/2026), Seesaw PK-2, STAR Reading, PLTW gr. 3-6 science (07/2025). PLTW AI pilot: neither KP nor any feeder town is on the 30-district list (verified against the full 09/26/2025 participant list); KP runs non-AI PLTW middle-school courses."
+      "feederNotes": "Wrentham PS (K-6): no 1:1 \u2014 kindergarten classroom iPads, Chromebook carts grades 1-6 in-classroom only; Aspen SIS; 'WPS monitors all device use and no user has an expectation of privacy'; wearable technology (smartwatches, Gizmo watches) banned during the school day; largest feeder MSPA registry (~143 approved DPAs) incl. MagicSchool/MagicStudent AI (08/2025), Brisk, Seesaw, Lexia; Zearn free version and Khan Academy declined the MSPA DPA. Norfolk PS (PK-6): device model not publicly documented (JAMF Pro Apple-MDM DPA 10/11/2023 implies Apple devices); iPass SIS (vendor declined to sign the DPA per registry note); student tools: Google Classroom gr. 2-6, Lexia Core5, Raz-Kids, Reflex Math, GoMath, BrainPOP, Code.org, Typing Pal; smallest registry (~38 approved DPAs); tech page links DESE 'Artificial Intelligence (AI) in K12 Schools' resource but names no local AI policy. Plainville PS (PK-6): no device program documented in the 2025-26 Family/Student Handbook (which bans student cell phone/personal electronics use during the school day); SchoolBrains SIS, Clever portal, Follett Destiny; registry (~59 approved DPAs) incl. SchoolAI (01/2024), Brisk Teaching (09/2023), MagicSchool (03/2026), Seesaw PK-2, STAR Reading, PLTW gr. 3-6 science (07/2025). PLTW AI pilot: neither KP nor any feeder town is on the 30-district list (verified against the full 09/26/2025 participant list); KP runs non-AI PLTW middle-school courses.",
+      "districtId": "2506510"
     },
     {
       "districtName": "Mansfield Public Schools",
@@ -1257,7 +1264,8 @@
         "https://www.pltw.org/about/news/new-ai-curriculum-pilot-to-reach-1600-massachusetts-students-across-30-school-districts",
         "https://sdpc.a4l.org/state_participants.php?state=MA",
         "https://sdpc.a4l.org/district_listing.php?districtID=591"
-      ]
+      ],
+      "districtId": "2507230"
     },
     {
       "districtName": "Medfield Public Schools",
@@ -1465,7 +1473,8 @@
         "https://www.medfield.net/article/2266102",
         "https://techjobsforgood.com/events/medfields-ai-driven-learning-day-dld",
         "https://www.pltw.org/about/news/new-ai-curriculum-pilot-to-reach-1600-massachusetts-students-across-30-school-districts"
-      ]
+      ],
+      "districtId": "2507530"
     },
     {
       "districtName": "Milford Public Schools",
@@ -1682,7 +1691,8 @@
         "https://drive.google.com/file/d/1mkILczxXxKQNdxMnAhdb9jURxczTqXhP/view",
         "https://drive.google.com/file/d/1jjFzrFwKW4HsByvGfQKkuPl52oxutVsL/view",
         "https://drive.google.com/file/d/1pr_KN2cTRbHw-rf3j_UrzE00JzvoQquh/view"
-      ]
+      ],
+      "districtId": "2507860"
     },
     {
       "districtName": "Natick Public Schools",
@@ -1886,7 +1896,8 @@
         "https://www.natickreport.com/2026/06/natick-public-schools-strategic-plan-nearly-ready/",
         "https://www.natickreport.com/2025/05/natick-government-meetings-for-week-of-may-26-johnson-school-building-updates-cell-phone-policy/",
         "https://www.pltw.org/about/news/new-ai-curriculum-pilot-to-reach-1600-massachusetts-students-across-30-school-districts"
-      ]
+      ],
+      "districtId": "2508340"
     },
     {
       "districtName": "Needham Public Schools",
@@ -2097,7 +2108,8 @@
         "https://needhamlocal.org/2024/07/community-weighs-value-of-phones-in-schools/",
         "https://citizensforneedhamschools.com/sc-meeting-march-18-2025/",
         "https://www.pltw.org/about/news/new-ai-curriculum-pilot-to-reach-1600-massachusetts-students-across-30-school-districts"
-      ]
+      ],
+      "districtId": "2508370"
     },
     {
       "districtName": "Newton Public Schools",
@@ -2299,7 +2311,8 @@
         "https://www.figcitynews.com/2026/05/finance-and-programs-services-committees-report-fy27-budget-review-schools-4-30-26/",
         "https://www.newton.k12.ma.us/departments-programs/information-technology-library-services/11-technology-program-overview/grade-11-12-byod-information",
         "https://www.pltw.org/about/news/new-ai-curriculum-pilot-to-reach-1600-massachusetts-students-across-30-school-districts"
-      ]
+      ],
+      "districtId": "2508610"
     },
     {
       "districtName": "North Attleborough Public Schools",
@@ -2416,7 +2429,8 @@
         "https://www.pltw.org/about/news/new-ai-curriculum-pilot-to-reach-1600-massachusetts-students-across-30-school-districts",
         "https://sdpc.a4l.org/state_participants.php?state=MA",
         "https://sdpc.a4l.org/district_listing.php?districtID=641"
-      ]
+      ],
+      "districtId": "2508730"
     },
     {
       "districtName": "Norton Public Schools",
@@ -2590,7 +2604,8 @@
         "https://www.thesunchronicle.com/news/local_news/nortons-new-student-cellphone-policy-getting-high-marks-so-far/article_a1bcd679-266d-42fd-8a9e-223a7d668bff.html",
         "https://www.pltw.org/about/news/new-ai-curriculum-pilot-to-reach-1600-massachusetts-students-across-30-school-districts",
         "https://virtualschooling.wordpress.com/2026/05/02/is-your-district-ready-to-lead-on-ai-applications-now-open/"
-      ]
+      ],
+      "districtId": "2509000"
     },
     {
       "districtName": "Public Schools of Brookline",
@@ -2812,7 +2827,8 @@
         "https://brookline.news/new-parent-group-aims-to-reduce-kids-screen-time-hold-off-on-smartphones/",
         "https://thelocallens.org/brookline-school-committee-considers-new-mobile-device-policy-amid-broader-policy-manual-overhaul/",
         "https://www.pltw.org/about/news/new-ai-curriculum-pilot-to-reach-1600-massachusetts-students-across-30-school-districts"
-      ]
+      ],
+      "districtId": "2503150"
     },
     {
       "districtName": "Sharon Public Schools",
@@ -3006,7 +3022,8 @@
         "https://docs.google.com/document/d/1TvmjQP9FG1SRPWIUormgZRjdGAYN9sNbNVqRmPRwfUE/",
         "https://sites.google.com/sharonschools.net/student-family-tech-resources/help-desk/about-us",
         "https://www.pltw.org/about/news/new-ai-curriculum-pilot-to-reach-1600-massachusetts-students-across-30-school-districts"
-      ]
+      ],
+      "districtId": "2510620"
     },
     {
       "districtName": "Somerset Berkley Regional School District",
@@ -3119,7 +3136,8 @@
         "https://sdpc.a4l.org/state_participants.php?state=MA",
         "https://sdpc.a4l.org/district_listing.php?districtID=714"
       ],
-      "districtNote": "SBRHS, grades 9-12"
+      "districtNote": "SBRHS, grades 9-12",
+      "districtId": "2500541"
     },
     {
       "districtName": "Somerset Public Schools",
@@ -3203,7 +3221,8 @@
         "https://sdpc.a4l.org/state_participants.php?state=MA",
         "https://sdpc.a4l.org/district_listing.php?districtID=714"
       ],
-      "districtNote": "K-8; legally separate from Somerset Berkley Regional but shares central administration, website infrastructure, IT helpdesk, and a combined SDPC registry entry"
+      "districtNote": "K-8; legally separate from Somerset Berkley Regional but shares central administration, website infrastructure, IT helpdesk, and a combined SDPC registry entry",
+      "districtId": "2510860"
     },
     {
       "districtName": "Taunton Public Schools",
@@ -3360,7 +3379,8 @@
         "https://www.pltw.org/about/news/new-ai-curriculum-pilot-to-reach-1600-massachusetts-students-across-30-school-districts",
         "https://sdpc.a4l.org/state_participants.php?state=MA",
         "https://sdpc.a4l.org/district_listing.php?districtID=739"
-      ]
+      ],
+      "districtId": "2511520"
     },
     {
       "districtName": "Wellesley Public Schools",
@@ -3574,7 +3594,8 @@
         "https://theswellesleyreport.com/2024/09/cell-phones-in-the-wellesley-schools-an-issue-that-cries-out-for-stronger-policies/",
         "https://wellesleyma.gov/DocumentCenter/View/49804/DLFY27-SC-Voted-Budget-Advisory_Feb-11",
         "https://www.pltw.org/about/news/new-ai-curriculum-pilot-to-reach-1600-massachusetts-students-across-30-school-districts"
-      ]
+      ],
+      "districtId": "2512270"
     }
   ]
 }

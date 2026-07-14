@@ -7,6 +7,7 @@ import { EdTechView } from './views/EdTechView'
 import { DetailPanel } from './DetailPanel'
 import { GuidePanel } from './GuidePanel'
 import { StatTile } from './ui'
+import { EDTECH } from './colors'
 
 type View = 'map' | 'groups' | 'edtech'
 
@@ -246,6 +247,19 @@ const KPI_MODES = {
       { label: 'Local groups', value: String(k.localGroups) },
       { label: 'Towns with local groups', value: String(k.localGroupTowns) },
       { label: 'Towns with 2+ groups', value: String(k.towns2plus) },
+    ],
+  },
+  edtech: {
+    label: 'EdTech',
+    color: EDTECH,
+    tiles: (k: World['kpis']) => [
+      { label: 'Districts profiled', value: String(k.edtechProfiled) },
+      {
+        label: 'Take-home 1:1 districts',
+        value: String(k.edtechTakeHome),
+        sub: `of ${k.edtechProfiled} profiled`,
+      },
+      { label: 'AI-pilot districts statewide', value: String(k.aiPilotDistricts) },
     ],
   },
   groups: {

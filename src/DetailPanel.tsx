@@ -3,6 +3,7 @@ import type { TownRecord } from './model'
 import { fmtDate } from './model'
 import { Fact, OrgChip, TierChip } from './ui'
 import { resolveOrgs } from './orgs'
+import { POSTURE_LABEL } from './colors'
 
 /**
  * Right-hand detail panel — the "details on demand" layer (DESIGN.md
@@ -142,6 +143,26 @@ export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => 
                 Source: {rec.policy.sources[0].publisher} ↗
               </a>
             )}
+          </section>
+        )}
+
+        {/* EdTech — a pointer; the full profile lives in the EdTech tab. */}
+        {rec.edtech && (
+          <section className="flex flex-col gap-1.5">
+            <SectionTitle>EdTech · {rec.edtech.districtName}</SectionTitle>
+            <Fact label="1:1 devices">{POSTURE_LABEL[rec.edtechPosture ?? 'none']}</Fact>
+            <Fact label="AI pilot">
+              {rec.aiPilot || rec.edtech.aiPilot ? 'Yes — statewide curriculum pilot' : 'No'}
+            </Fact>
+            {rec.edtech.dpaRegistry.approxApproved != null && (
+              <Fact label="Privacy DPAs">
+                <span className="tnum">~{rec.edtech.dpaRegistry.approxApproved}</span> approved
+                tools
+              </Fact>
+            )}
+            <div className="text-[11.5px]" style={{ color: 'var(--ink-3)' }}>
+              Full profile in the EdTech tab.
+            </div>
           </section>
         )}
 

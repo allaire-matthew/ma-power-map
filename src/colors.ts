@@ -1,4 +1,4 @@
-import type { PhoneTier } from './geo'
+import type { DevicePosture, PhoneTier } from './geo'
 
 // Single source of truth for every data encoding (DESIGN.md D1).
 // All ramps validated with the dataviz palette validator on 2026-07-03
@@ -40,6 +40,32 @@ export const TIER_SHORT: Record<PhoneTier, string> = {
 
 // Parent-organizing presence — violet, one channel, everywhere.
 export const PRESENCE = '#7c3aed'
+
+// EdTech 1:1 device posture — ordinal single-hue blue ramp, darker =
+// devices travel further (take-home > in-school > none documented).
+// Towns in not-yet-researched districts get the map's base fill, not a
+// ramp step. Validated with the dataviz validator on 2026-07-14 against
+// the map surface #f7f6f3 (ordinal mode); blue keeps CVD separation
+// from the green tier ramp and the violet presence channel (all-pairs
+// ΔE well above target).
+export const POSTURE_COLOR: Record<DevicePosture, string> = {
+  none: '#6aaed6',
+  inSchool: '#2f7fb8',
+  takeHome: '#0b4f7e',
+}
+
+export const POSTURE_LABEL: Record<DevicePosture, string> = {
+  none: 'No 1:1 documented',
+  inSchool: '1:1 · in school only',
+  takeHome: '1:1 · take-home',
+}
+
+// EdTech lens accent (KPI strip chip) — the ramp's middle step.
+export const EDTECH = '#2f7fb8'
+
+// Statewide AI-curriculum-pilot marker — amber diamond, warm against the
+// blue posture fills and CVD-distinct from the violet presence dots.
+export const AI_PILOT = '#b45309'
 
 // Boundary strokes (recessive; DESIGN.md B2).
 export const BOUNDARY = {
