@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
+import { normalizeDistrictKey, type EdTechAction } from '../geo'
+import { fmtDate } from '../model'
 
 /** District EdTech usage listing — deliberately a listing, not a rating.
  *  Data: public/data/edtech-services.json (see scripts/merge_edtech.py). */
@@ -9,6 +11,7 @@ type Contract = { vendor: string; detail: string; source?: string }
 
 type EdTechDistrict = {
   districtName: string
+  districtId?: string | null
   oneToOne: {
     exists: boolean | null
     grades?: string | null
@@ -29,11 +32,22 @@ type EdTechDistrict = {
 }
 
 type EdTechData = { _lastUpdated: string; _notes: string; districts: EdTechDistrict[] }
+type EdTechActionsData = { _lastUpdated: string; byTown: Record<string, EdTechAction[]> }
+type NextMeetingEntry = {
+  next_meeting: string | null
+  additional_upcoming?: string[]
+  checked: string
+  source_url: string
+  status: 'ok' | 'no_future_date' | 'fetch_failed'
+}
+type NextMeetingsData = { _lastUpdated: string; byKey: Record<string, NextMeetingEntry> }
 
-type SortKey = 'name' | 'services' | 'agreements'
+type SortKey = 'name' | 'services' | 'agreements' | 'actions'
 
 export function EdTechView({ onBackToMap }: { onBackToMap?: () => void }) {
   const [data, setData] = useState<EdTechData | null>(null)
+  const [actionsData, setActionsData] = useState<EdTechActionsData | null>(null)
+  const [meetingsData, setMeetingsData] = useState<NextMeetingsData | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [open, setOpen] = useState<string | null>(null)
   const [sort, setSort] = useState<{ key: SortKey; dir: 1 | -1 }>({ key: 'name', dir: 1 })
@@ -46,7 +60,40 @@ export function EdTechView({ onBackToMap }: { onBackToMap?: () => void }) {
       })
       .then(setData)
       .catch((e) => setError(String(e)))
+    fetch(`${import.meta.env.BASE_URL}data/edtech-actions.json`)
+      .then((r) => (r.ok ? (r.json() as Promise<EdTechActionsData>) : null))
+      .then(setActionsData)
+      .catch(() => setActionsData(null))
+    fetch(`${import.meta.env.BASE_URL}data/next-school-committee-meetings.json`)
+      .then((r) => (r.ok ? (r.json() as Promise<NextMeetingsData>) : null))
+      .then(setMeetingsData)
+      .catch(() => setMeetingsData(null))
   }, [])
+
+  // districtName (normalized) -> next meeting, same join key model.ts uses.
+  const meetingByDistrict = useMemo(() => {
+    const m = new Map<string, NextMeetingEntry>()
+    if (!meetingsData) return m
+    for (const d of data?.districts ?? []) {
+      const entry = meetingsData.byKey[normalizeDistrictKey(d.districtName)]
+      if (entry) m.set(d.districtName, entry)
+    }
+    return m
+  }, [data, meetingsData])
+
+  // districtId -> actions, flattened across the town-keyed source file.
+  const actionsByDistrict = useMemo(() => {
+    const m = new Map<string, EdTechAction[]>()
+    for (const list of Object.values(actionsData?.byTown ?? {})) {
+      for (const a of list) {
+        if (!a.districtId) continue
+        const arr = m.get(a.districtId) ?? []
+        arr.push(a)
+        m.set(a.districtId, arr)
+      }
+    }
+    return m
+  }, [actionsData])
 
   const rows = useMemo(() => {
     if (!data) return []
@@ -58,6 +105,8 @@ export function EdTechView({ onBackToMap }: { onBackToMap?: () => void }) {
           return d.notableServices.length
         case 'agreements':
           return d.dpaRegistry.approxApproved ?? -1
+        case 'actions':
+          return (d.districtId && actionsByDistrict.get(d.districtId)?.length) || 0
       }
     }
     return [...data.districts].sort((a, b) => {
@@ -67,7 +116,7 @@ export function EdTechView({ onBackToMap }: { onBackToMap?: () => void }) {
         typeof va === 'string' ? va.localeCompare(vb as string) : (va as number) - (vb as number)
       return cmp !== 0 ? cmp * sort.dir : a.districtName.localeCompare(b.districtName)
     })
-  }, [data, sort])
+  }, [data, sort, actionsByDistrict])
 
   const toggleSort = (key: SortKey) =>
     setSort((s) => (s.key === key ? { key, dir: s.dir === 1 ? -1 : 1 } : { key, dir: key === 'name' ? 1 : -1 }))
@@ -130,12 +179,12 @@ export function EdTechView({ onBackToMap }: { onBackToMap?: () => void }) {
                   className="sticky top-0 z-10"
                   style={{ background: 'var(--card)', boxShadow: 'inset 0 -1px var(--hairline)' }}
                 >
-                  <Th onClick={() => toggleSort('name')} active={sort.key === 'name'} dir={sort.dir} w="24%">
+                  <Th onClick={() => toggleSort('name')} active={sort.key === 'name'} dir={sort.dir} w="21%">
                     District
                   </Th>
-                  <Th w="26%">1:1 devices</Th>
-                  <Th w="20%">AI</Th>
-                  <Th onClick={() => toggleSort('services')} active={sort.key === 'services'} dir={sort.dir} w="18%">
+                  <Th w="22%">1:1 devices</Th>
+                  <Th w="17%">AI</Th>
+                  <Th onClick={() => toggleSort('services')} active={sort.key === 'services'} dir={sort.dir} w="15%">
                     Services
                   </Th>
                   <Th
@@ -146,6 +195,9 @@ export function EdTechView({ onBackToMap }: { onBackToMap?: () => void }) {
                   >
                     Privacy&nbsp;DPAs
                   </Th>
+                  <Th onClick={() => toggleSort('actions')} active={sort.key === 'actions'} dir={sort.dir} w="13%">
+                    Actions
+                  </Th>
                 </tr>
               </thead>
               <tbody>
@@ -153,6 +205,8 @@ export function EdTechView({ onBackToMap }: { onBackToMap?: () => void }) {
                   <DistrictRows
                     key={d.districtName}
                     d={d}
+                    actions={(d.districtId && actionsByDistrict.get(d.districtId)) || []}
+                    meeting={meetingByDistrict.get(d.districtName) ?? null}
                     open={open === d.districtName}
                     onToggle={() => setOpen(open === d.districtName ? null : d.districtName)}
                   />
@@ -220,7 +274,19 @@ function Th({
   )
 }
 
-function DistrictRows({ d, open, onToggle }: { d: EdTechDistrict; open: boolean; onToggle: () => void }) {
+function DistrictRows({
+  d,
+  actions,
+  meeting,
+  open,
+  onToggle,
+}: {
+  d: EdTechDistrict
+  actions: EdTechAction[]
+  meeting: NextMeetingEntry | null
+  open: boolean
+  onToggle: () => void
+}) {
   const aiBits: string[] = []
   if (d.aiPilot) aiBits.push('State AI pilot')
   if (d.aiPolicy.exists) aiBits.push('District guidelines')
@@ -268,11 +334,14 @@ function DistrictRows({ d, open, onToggle }: { d: EdTechDistrict; open: boolean;
         <td className="px-3 py-2.5 tnum" style={{ color: 'var(--ink-2)' }}>
           {d.dpaRegistry.approxApproved != null ? `~${d.dpaRegistry.approxApproved}` : d.dpaRegistry.found ? 'listed' : '—'}
         </td>
+        <td className="px-3 py-2.5 tnum" style={{ color: actions.length > 0 ? 'var(--ink-2)' : 'var(--ink-3)' }}>
+          {actions.length > 0 ? actions.length : '—'}
+        </td>
       </tr>
       {open && (
         <tr style={{ boxShadow: 'inset 0 -1px var(--hairline)' }}>
-          <td colSpan={5} className="px-4 pb-4 pt-1" style={{ background: 'rgba(0,0,0,0.015)' }}>
-            <Detail d={d} />
+          <td colSpan={6} className="px-4 pb-4 pt-1" style={{ background: 'rgba(0,0,0,0.015)' }}>
+            <Detail d={d} actions={actions} meeting={meeting} />
           </td>
         </tr>
       )}
@@ -280,7 +349,15 @@ function DistrictRows({ d, open, onToggle }: { d: EdTechDistrict; open: boolean;
   )
 }
 
-function Detail({ d }: { d: EdTechDistrict }) {
+function Detail({
+  d,
+  actions,
+  meeting,
+}: {
+  d: EdTechDistrict
+  actions: EdTechAction[]
+  meeting: NextMeetingEntry | null
+}) {
   const byCat = useMemo(() => {
     const m = new Map<string, SourcedItem[]>()
     for (const s of d.notableServices) {
@@ -303,6 +380,29 @@ function Detail({ d }: { d: EdTechDistrict }) {
 
   return (
     <div className="flex flex-col gap-3 text-[12.5px]" style={{ color: 'var(--ink-2)' }}>
+      {meeting && (
+        <Block label="Next school committee meeting">
+          {meeting.next_meeting ? (
+            <span className="tnum">{fmtDate(meeting.next_meeting)}</span>
+          ) : (
+            <span style={{ color: 'var(--ink-3)' }}>No upcoming date found</span>
+          )}
+          {meeting.source_url && (
+            <>
+              {' '}
+              <a
+                href={meeting.source_url}
+                target="_blank"
+                rel="noreferrer"
+                className="text-[11px]"
+                style={{ color: 'var(--ink-3)' }}
+              >
+                [meeting calendar]
+              </a>
+            </>
+          )}
+        </Block>
+      )}
       {d.oneToOne.exists && (
         <Block label="1:1 program">
           {[d.oneToOne.device, d.oneToOne.grades, d.oneToOne.takeHome ? `take-home: ${clip(d.oneToOne.takeHome, 120)}` : null]
@@ -364,6 +464,21 @@ function Detail({ d }: { d: EdTechDistrict }) {
                 <strong style={{ color: 'var(--ink)' }}>{c.who}</strong>
                 {c.date ? ` (${c.date})` : ''}: {clip(c.what, 260)}
                 <SourceLink url={c.source} />
+              </li>
+            ))}
+          </ul>
+        </Block>
+      )}
+      {actions.length > 0 && (
+        <Block label="Actions against EdTech">
+          <ul className="m-0 pl-4 flex flex-col gap-1">
+            {actions.map((a, i) => (
+              <li key={i}>
+                <strong style={{ color: 'var(--ink)' }}>
+                  {[a.actor.name, a.actor.body].filter(Boolean).join(', ') || a.kind}
+                </strong>
+                {a.date ? ` (${a.date})` : ''}: {clip(a.what, 260)}
+                <SourceLink url={a.sources[0]?.url} />
               </li>
             ))}
           </ul>

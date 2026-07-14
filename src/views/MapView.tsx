@@ -6,15 +6,30 @@ import {
   MapLayers,
   type BoundaryKey,
   type Lens,
+  type PushbackFilter,
   type TierFilter,
 } from '../MapLayers'
-import { AI_PILOT, POSTURE_COLOR, POSTURE_LABEL, PRESENCE, TIER_COLOR, TIER_SHORT } from '../colors'
+import {
+  AI_PILOT,
+  POSTURE_COLOR,
+  POSTURE_LABEL,
+  PRESENCE,
+  PUSHBACK_COLOR,
+  PUSHBACK_LABEL,
+  PUSHBACK_MARKER,
+  TIER_COLOR,
+  TIER_SHORT,
+} from '../colors'
 import type { DevicePosture } from '../geo'
 
+// Pushback is deliberately structured just like Phone policy: its own
+// top-level lens, an ordinal fill ramp, and filter chips — not a mode
+// switch nested inside another lens.
 const LENSES: { key: Lens; label: string; hint: string }[] = [
   { key: 'policy', label: 'Phone policy', hint: 'District phone-policy strength, Tier 1–4' },
   { key: 'organizing', label: 'Organizing', hint: 'Where local groups are active' },
   { key: 'edtech', label: 'EdTech', hint: 'District 1:1 device programs and AI pilots' },
+  { key: 'pushback', label: 'Pushback', hint: 'Actions, bodies, and officials against classroom technology' },
 ]
 
 const BOUNDARY_OPTIONS: { key: BoundaryKey; label: string }[] = [
@@ -43,6 +58,7 @@ export function MapView({
   onOpenEdTechTable: () => void
 }) {
   const [tierFilter, setTierFilter] = useState<TierFilter>('all')
+  const [pushbackFilter, setPushbackFilter] = useState<PushbackFilter>('all')
   const [boundaries, setBoundaries] = useState<Set<BoundaryKey>>(new Set())
   const [showBoundaries, setShowBoundaries] = useState(false)
   const [hover, setHover] = useState<{ id: string; x: number; y: number } | null>(null)
@@ -61,7 +77,14 @@ export function MapView({
     if (!hoverRec) return null
     const bits: string[] = []
     if (lens === 'policy') bits.push(TIER_SHORT[hoverRec.policy?.tier ?? 1])
-    else if (lens === 'edtech') {
+    else if (lens === 'pushback') {
+      const actions = hoverRec.edtechActions.filter((a) => a.kind === 'action').length
+      const bodies = hoverRec.edtechActions.filter((a) => a.kind === 'body').length
+      const officials = hoverRec.edtechActions.filter((a) => a.kind === 'official').length
+      if (actions > 0) bits.push(`${actions} action${actions > 1 ? 's' : ''}`)
+      if (bodies > 0) bits.push(`${bodies} bod${bodies > 1 ? 'ies' : 'y'}`)
+      if (officials > 0) bits.push(`${officials} official${officials > 1 ? 's' : ''}`)
+    } else if (lens === 'edtech') {
       if (hoverRec.edtechPosture != null) bits.push(POSTURE_LABEL[hoverRec.edtechPosture])
       if (hoverRec.aiPilot) bits.push('AI pilot')
     } else if (hoverRec.orgs.length > 0)
@@ -78,6 +101,7 @@ export function MapView({
             k={camera.k}
             lens={lens}
             tierFilter={tierFilter}
+            pushbackFilter={pushbackFilter}
             boundaries={boundaries}
             selectedId={selectedId}
             onSelect={onSelect}
@@ -146,8 +170,9 @@ export function MapView({
           </div>
         )}
 
-        {/* EdTech format toggle — the lens is map-first; the table is one click away. */}
-        {lens === 'edtech' && (
+        {/* EdTech format toggle — both edtech-family lenses are map-first;
+            the table (with its Actions column) is one click away. */}
+        {(lens === 'edtech' || lens === 'pushback') && (
           <div
             className="inline-flex rounded-lg border shadow-sm overflow-hidden"
             style={{ borderColor: 'var(--hairline)', background: 'rgba(255,255,255,0.94)', backdropFilter: 'blur(6px)' }}
@@ -205,6 +230,37 @@ export function MapView({
             })}
           </div>
         )}
+
+        {/* Action-count filter chips — pushback lens only, same pattern as
+            the tier filter above. */}
+        {lens === 'pushback' && (
+          <div
+            className="inline-flex rounded-lg border shadow-sm overflow-hidden"
+            style={{ borderColor: 'var(--hairline)', background: 'rgba(255,255,255,0.94)' }}
+            role="group"
+            aria-label="Filter by action count"
+          >
+            {(['all', 0, 1, 2, 3] as const).map((n) => {
+              const active = pushbackFilter === n
+              return (
+                <button
+                  key={n}
+                  type="button"
+                  aria-pressed={active}
+                  onClick={() => setPushbackFilter(n as PushbackFilter)}
+                  className="px-2.5 h-8 text-[12px] font-semibold border-r last:border-r-0 hover:bg-black/[.05]"
+                  style={{
+                    borderColor: 'var(--hairline)',
+                    color: active ? '#fff' : 'var(--ink-2)',
+                    background: active ? 'var(--navy)' : 'transparent',
+                  }}
+                >
+                  {n === 'all' ? 'All' : n === 3 ? '3+' : String(n)}
+                </button>
+              )
+            })}
+          </div>
+        )}
       </div>
 
       {/* Legend — always visible on the map (DESIGN.md H1). */}
@@ -245,6 +301,19 @@ export function MapView({
             extra={[{ swatch: AI_PILOT, label: 'AI-curriculum pilot', diamond: true }]}
           />
         )}
+        {lens === 'pushback' && (
+          <LegendRows
+            title="Actions against EdTech (town)"
+            rows={[
+              ...([3, 2, 1] as const).map((n) => ({
+                swatch: PUSHBACK_COLOR[n],
+                label: PUSHBACK_LABEL[n],
+              })),
+              { swatch: '#ffffff', label: 'No verified action', outline: true },
+            ]}
+            extra={[{ swatch: PUSHBACK_MARKER, label: 'Advisory body or named official', ring: true }]}
+          />
+        )}
       </div>
 
       {/* Hover tooltip — enhances, never gates (DESIGN.md G3). */}
@@ -279,7 +348,7 @@ function LegendRows({
 }: {
   title: string
   rows: { swatch: string; label: string; alpha?: number; outline?: boolean }[]
-  extra?: { swatch: string; label: string; alpha?: number; diamond?: boolean }[]
+  extra?: { swatch: string; label: string; alpha?: number; diamond?: boolean; ring?: boolean }[]
 }) {
   return (
     <div>
@@ -305,22 +374,24 @@ function LegendRow({
   alpha,
   outline,
   diamond,
+  ring,
 }: {
   swatch: string
   label: string
   alpha?: number
   outline?: boolean
   diamond?: boolean
+  ring?: boolean
 }) {
   return (
     <div className="flex items-center gap-2 text-[12px]" style={{ color: 'var(--ink-2)' }}>
       <span
         aria-hidden
-        className={`shrink-0 ${diamond ? 'w-3 h-3 rounded-[2px]' : 'w-3.5 h-3.5 rounded-[3px]'}`}
+        className={`shrink-0 ${diamond ? 'w-3 h-3 rounded-[2px]' : ring ? 'w-3.5 h-3.5 rounded-full' : 'w-3.5 h-3.5 rounded-[3px]'}`}
         style={{
-          background: swatch,
+          background: ring ? 'transparent' : swatch,
           opacity: alpha ?? 1,
-          border: outline ? '1px solid #c9c6bd' : undefined,
+          border: outline ? '1px solid #c9c6bd' : ring ? `1.6px solid ${swatch}` : undefined,
           transform: diamond ? 'rotate(45deg) scale(0.85)' : undefined,
         }}
       />

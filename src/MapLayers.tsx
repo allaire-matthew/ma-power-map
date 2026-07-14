@@ -1,11 +1,20 @@
 import { memo, useEffect, useState } from 'react'
 import { loadLayer, type LayerName, type PhoneTier, type ProjectedLayer } from './geo'
 import type { World } from './model'
-import { AI_PILOT, BOUNDARY, POSTURE_COLOR, PRESENCE, TIER_COLOR } from './colors'
+import {
+  AI_PILOT,
+  BOUNDARY,
+  POSTURE_COLOR,
+  PRESENCE,
+  PUSHBACK_COLOR,
+  PUSHBACK_MARKER,
+  TIER_COLOR,
+} from './colors'
 
-export type Lens = 'policy' | 'organizing' | 'edtech'
+export type Lens = 'policy' | 'organizing' | 'edtech' | 'pushback'
 export type BoundaryKey = 'counties' | 'school' | 'congressional' | 'stateSenate' | 'stateHouse'
 export type TierFilter = 'all' | PhoneTier
+export type PushbackFilter = 'all' | 0 | 1 | 2 | 3
 
 const BOUNDARY_LAYER: Record<BoundaryKey, LayerName> = {
   counties: 'counties',
@@ -22,6 +31,7 @@ export const MapLayers = memo(function MapLayers({
   k,
   lens,
   tierFilter,
+  pushbackFilter,
   boundaries,
   selectedId,
   onSelect,
@@ -31,6 +41,7 @@ export const MapLayers = memo(function MapLayers({
   k: number
   lens: Lens
   tierFilter: TierFilter
+  pushbackFilter: PushbackFilter
   boundaries: Set<BoundaryKey>
   selectedId: string | null
   onSelect: (id: string) => void
@@ -58,6 +69,12 @@ export const MapLayers = memo(function MapLayers({
       const tier: PhoneTier = rec.policy?.tier ?? 1
       if (tierFilter !== 'all' && tier !== tierFilter) return { fill: '#d6d3ca', alpha: 0.35 }
       return { fill: TIER_COLOR[tier], alpha: tier === 1 ? 1 : 0.82 }
+    }
+    if (lens === 'pushback') {
+      const n = Math.min(3, rec.edtechActions.filter((a) => a.kind === 'action').length) as 0 | 1 | 2 | 3
+      if (pushbackFilter !== 'all' && n !== pushbackFilter) return { fill: '#d6d3ca', alpha: 0.35 }
+      if (n === 0) return { fill: '#ffffff', alpha: 0.55 }
+      return { fill: PUSHBACK_COLOR[n], alpha: 0.82 }
     }
     if (lens === 'edtech') {
       // Posture is classified once at world build; unresearched = base fill.
@@ -191,6 +208,31 @@ export const MapLayers = memo(function MapLayers({
                 fill={AI_PILOT}
                 stroke="#fff"
                 strokeWidth={1.2 / k}
+                pointerEvents="none"
+              />
+            )
+          })}
+
+      {/* Governance-body / official rings (pushback lens) — one per town
+          with a standing body or a named official on record, distinct from
+          the red action-intensity fill underneath it. */}
+      {lens === 'pushback' &&
+        world.towns
+          .filter((f) => {
+            const rec = world.records.get(f.id)
+            return rec?.edtechActions.some((a) => a.kind === 'body' || a.kind === 'official')
+          })
+          .map((f) => {
+            const [cx, cy] = f.centroid
+            return (
+              <circle
+                key={`pushback-${f.id}`}
+                cx={cx}
+                cy={cy}
+                r={4.5 / k}
+                fill="none"
+                stroke={PUSHBACK_MARKER}
+                strokeWidth={1.6 / k}
                 pointerEvents="none"
               />
             )

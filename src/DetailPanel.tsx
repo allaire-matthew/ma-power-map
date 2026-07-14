@@ -4,6 +4,16 @@ import { fmtDate } from './model'
 import { Fact, OrgChip, TierChip } from './ui'
 import { resolveOrgs } from './orgs'
 import { POSTURE_LABEL } from './colors'
+import type { EdTechAction } from './geo'
+
+const LANE_LABEL: Record<EdTechAction['lane'], string> = {
+  '1:1': '1:1 devices',
+  monitoring: 'Monitoring',
+  'screen-time': 'Screen time',
+  AI: 'AI',
+  'data-privacy': 'Data privacy',
+  spending: 'Spending',
+}
 
 /**
  * Right-hand detail panel — the "details on demand" layer (DESIGN.md
@@ -163,6 +173,54 @@ export function DetailPanel({ rec, onClose }: { rec: TownRecord; onClose: () => 
             <div className="text-[11.5px]" style={{ color: 'var(--ink-3)' }}>
               Full profile in the EdTech tab.
             </div>
+          </section>
+        )}
+
+        {/* EdTech pushback — actions, governance bodies, named officials. */}
+        {rec.edtechActions.length > 0 && (
+          <section className="flex flex-col gap-2">
+            <SectionTitle>
+              Pushback <Count n={rec.edtechActions.length} />
+            </SectionTitle>
+            <ul className="m-0 p-0 list-none flex flex-col gap-2.5">
+              {rec.edtechActions.map((a, i) => (
+                <li key={i} className="flex flex-col gap-0.5">
+                  <div className="flex items-center gap-1.5 flex-wrap text-[10.5px] font-semibold uppercase tracking-wide" style={{ color: 'var(--ink-3)' }}>
+                    <span>{a.kind}</span>
+                    <span>·</span>
+                    <span>{LANE_LABEL[a.lane]}</span>
+                    {a.status && (
+                      <>
+                        <span>·</span>
+                        <span>{a.status}</span>
+                      </>
+                    )}
+                  </div>
+                  <div className="text-[12px] leading-snug" style={{ color: 'var(--ink-2)' }}>
+                    {(a.actor.name || a.actor.body) && (
+                      <strong style={{ color: 'var(--ink)' }}>
+                        {[a.actor.name, a.actor.body].filter(Boolean).join(', ')}
+                        {a.actor.role ? ` (${a.actor.role})` : ''}
+                        {': '}
+                      </strong>
+                    )}
+                    {a.what}
+                    {a.date ? ` (${a.date})` : ''}
+                  </div>
+                  {a.sources[0] && (
+                    <a
+                      href={a.sources[0].url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[11px]"
+                      style={{ color: 'var(--ink-3)' }}
+                    >
+                      [source]
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
           </section>
         )}
 

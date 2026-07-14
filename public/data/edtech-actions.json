@@ -1,0 +1,408 @@
+{
+  "_schemaVersion": 1,
+  "_lastUpdated": "2026-07-14",
+  "_notes": "The resistance side of the EdTech ledger \u2014 on-the-record actions limiting or challenging classroom technology, district/town governance bodies reviewing it, and officials on record with concerns about screens, 1:1 programs, edtech spending, student data privacy, or AI in schools. Complements edtech-services.json (what districts run). Every entry needs a primary or press source; no vibes.",
+  "byTown": {
+    "bellingham": [
+      {
+        "districtId": "2502460",
+        "town": "Bellingham",
+        "kind": "action",
+        "what": "Superintendent presented AG-conference findings and Bellingham-specific survey data on phone/social-media use to the School Committee, said he wants to pilot a bell-to-bell ban ('Option 1') at the high school, and asked administration to convene parents, students, and staff; the technology director began researching phone lock boxes.",
+        "actor": {
+          "name": "Dr. Peter Marano",
+          "role": "Superintendent",
+          "body": "Bellingham School Committee"
+        },
+        "date": "2025-02-25",
+        "status": "pending",
+        "lane": "screen-time",
+        "sources": [
+          {
+            "url": "https://drive.google.com/file/d/1sqQZnyUt0tw_i5d0XzJvFNOEuc2dueeB/view",
+            "publisher": "Bellingham School Committee meeting materials",
+            "date": "2025-02-25"
+          }
+        ]
+      }
+    ],
+    "boston": [
+      {
+        "districtId": "2502790",
+        "town": "Boston",
+        "kind": "action",
+        "what": "City Council passed a resolution urging Boston Public Schools to adopt a district-wide bell-to-bell mobile-phone policy.",
+        "actor": {
+          "name": null,
+          "role": null,
+          "body": "Boston City Council"
+        },
+        "date": "2025-09-01",
+        "status": "passed",
+        "lane": "screen-time",
+        "sources": [
+          {
+            "url": "https://www.boston.gov/news/council-backs-bell-bell-mobile-phone-policy-boston-public-schools",
+            "publisher": "City of Boston",
+            "date": "2025-09-01"
+          }
+        ]
+      },
+      {
+        "districtId": "2502790",
+        "town": "Boston",
+        "kind": "action",
+        "what": "Student advisory group petitioned against the district's Yondr locking-pouch phone policy.",
+        "actor": {
+          "name": null,
+          "role": null,
+          "body": "Boston Student Advisory Council"
+        },
+        "date": "2024-12-01",
+        "status": null,
+        "lane": "monitoring",
+        "sources": [
+          {
+            "url": "https://teensinprint.com/bsac-takes-a-stand-with-petition-against-yondr-phone-pouch-policy/",
+            "publisher": "Teens in Print / Boston Student Advisory Council",
+            "date": "2024-12-01"
+          }
+        ]
+      }
+    ],
+    "brookline": [
+      {
+        "districtId": "2503150",
+        "town": "Brookline",
+        "kind": "action",
+        "what": "Parents co-founded Brookline Kids Unplugged, a coalition pledging no smartphones until 14 and no social media until 16, organizing device-free real-world play across 68 K-7 students (28 at Ridley Elementary).",
+        "actor": {
+          "name": "Michelle Lai and Hazhir Rahmandad",
+          "role": "Ridley School parents, co-founders",
+          "body": "Brookline Kids Unplugged"
+        },
+        "date": "2025-06-20",
+        "status": "standing",
+        "lane": "screen-time",
+        "sources": [
+          {
+            "url": "https://brookline.news/new-parent-group-aims-to-reduce-kids-screen-time-hold-off-on-smartphones/",
+            "publisher": "Brookline.News",
+            "date": "2025-06-20"
+          }
+        ]
+      }
+    ],
+    "fall river": [
+      {
+        "districtId": "2504830",
+        "town": "Fall River",
+        "kind": "action",
+        "what": "District ended take-home Chromebooks at the middle-school level, citing online bantering/distraction concerns \u2014 a reversal of the prior 1:1 take-home posture.",
+        "actor": {
+          "name": "Aimee Bronhard",
+          "role": "Assistant Superintendent",
+          "body": "Fall River Public Schools"
+        },
+        "date": "2026-04-24",
+        "status": "passed",
+        "lane": "1:1",
+        "sources": [
+          {
+            "url": "https://www.bostonglobe.com/2026/04/24/metro/chromebook-cellphone-ban-schools/",
+            "publisher": "Boston Globe",
+            "date": "2026-04-24"
+          }
+        ]
+      },
+      {
+        "districtId": "2504830",
+        "town": "Fall River",
+        "kind": "action",
+        "what": "Parent petition (~1,584 signatures) called to revise the district's Yondr locking-pouch phone policy, citing loss of emergency parent-child communication.",
+        "actor": {
+          "name": "Carter Wallace",
+          "role": "parent, petition organizer",
+          "body": null
+        },
+        "date": "2024-08-17",
+        "status": null,
+        "lane": "monitoring",
+        "sources": [
+          {
+            "url": "https://www.change.org/p/revise-fall-river-school-s-yondr-pouch-phone-policy-for-student-safety",
+            "publisher": "Change.org",
+            "date": "2024-08-17"
+          }
+        ]
+      }
+    ],
+    "medfield": [
+      {
+        "districtId": "2507530",
+        "town": "Medfield",
+        "kind": "body",
+        "what": "Mobile Technology Task Force \u2014 students, parents, educators, and School Committee members examining mobile technology's impact on education and well-being; four active workgroups (parent support, community norms, handbook/policies, curricula) as of late 2025.",
+        "actor": {
+          "name": null,
+          "role": null,
+          "body": "Medfield Mobile Technology Task Force"
+        },
+        "date": "2024-11-05",
+        "status": "standing",
+        "lane": "screen-time",
+        "sources": [
+          {
+            "url": "https://www.medfield.net/article/1859156",
+            "publisher": "Town of Medfield",
+            "date": "2024-11-05"
+          },
+          {
+            "url": "https://www.town.medfield.net/AgendaCenter/ViewFile/Minutes/_11062025-4659",
+            "publisher": "Medfield School Committee minutes",
+            "date": "2025-11-06"
+          }
+        ]
+      },
+      {
+        "districtId": "2507530",
+        "town": "Medfield",
+        "kind": "official",
+        "what": "Reported ~5% of 6th-grade and >10% of 7th-grade families had pledged Wait Until 8th; Frascella praised stricter middle-school phone/smartwatch enforcement and high-school phone pouches.",
+        "actor": {
+          "name": "Will Horne and Diana Frascella",
+          "role": "School Committee member; Vice Chair",
+          "body": "Medfield School Committee"
+        },
+        "date": "2025-09-11",
+        "status": null,
+        "lane": "screen-time",
+        "sources": [
+          {
+            "url": "https://www.town.medfield.net/AgendaCenter/ViewFile/Minutes/_09112025-4580",
+            "publisher": "Medfield School Committee minutes",
+            "date": "2025-09-11"
+          }
+        ]
+      }
+    ],
+    "natick": [
+      {
+        "districtId": "2508340",
+        "town": "Natick",
+        "kind": "official",
+        "what": "School Committee candidate Q&A on AI in schools: warned AI over-reliance could stunt critical thinking and called for limits on screen time.",
+        "actor": {
+          "name": "Donna McKenzie",
+          "role": "School Committee candidate",
+          "body": "Natick School Committee"
+        },
+        "date": "2026-03-10",
+        "status": null,
+        "lane": "AI",
+        "sources": [
+          {
+            "url": "https://www.natickreport.com/2026/03/meet-the-2026-natick-school-committee-candidates/",
+            "publisher": "Natick Report",
+            "date": "2026-03-10"
+          }
+        ]
+      }
+    ],
+    "needham": [
+      {
+        "districtId": "2508370",
+        "town": "Needham",
+        "kind": "official",
+        "what": "Backed stricter social-media rules in the state cellphone/social-media bill but warned that age-verification enforcement is 'a big burden to put on our teachers.'",
+        "actor": {
+          "name": "Alisa Skatrud",
+          "role": "School Committee Chair",
+          "body": "Needham School Committee"
+        },
+        "date": "2026-05-20",
+        "status": null,
+        "lane": "monitoring",
+        "sources": [
+          {
+            "url": "https://needhamobserver.com/mixed-reactions-to-cellphone-social-media-legislation/",
+            "publisher": "Needham Observer",
+            "date": "2026-05-20"
+          }
+        ]
+      }
+    ],
+    "newton": [
+      {
+        "districtId": "2508610",
+        "town": "Newton",
+        "kind": "action",
+        "what": "Newton North HS English teacher published a column questioning the value of 1:1 Chromebooks and the district's planned AI integration, arguing devices become 'a handy substitute' for texting, gaming, and video, and citing the superintendent's own call for 'less digital' experiences after a spring internet outage disrupted PSAT/MCAS.",
+        "actor": {
+          "name": "Tom Fabian",
+          "role": "Newton North High School English teacher",
+          "body": null
+        },
+        "date": "2026-05-21",
+        "status": null,
+        "lane": "1:1",
+        "sources": [
+          {
+            "url": "https://www.newtonbeacon.org/column-some-tough-questions-on-the-value-of-screens-in-newton-schools/",
+            "publisher": "Newton Beacon",
+            "date": "2026-05-21"
+          }
+        ]
+      }
+    ],
+    "norton": [
+      {
+        "districtId": "2509000",
+        "town": "Norton",
+        "kind": "body",
+        "what": "District maintains an 'AI Hub' for family engagement (community forums) and a district AI Task Force; the Director of Instructional Technology credits outside coaching (Throughline Learning/MassCUE) with accelerating the Task Force's work.",
+        "actor": {
+          "name": null,
+          "role": null,
+          "body": "Norton AI Hub / AI Task Force"
+        },
+        "date": "2026-05-11",
+        "status": "standing",
+        "lane": "AI",
+        "sources": [
+          {
+            "url": "https://www.norton.k12.ma.us/aihub",
+            "publisher": "Norton Public Schools",
+            "date": "2026-05-11"
+          },
+          {
+            "url": "https://virtualschooling.wordpress.com/2026/05/02/is-your-district-ready-to-lead-on-ai-applications-now-open/",
+            "publisher": "Virtual Schooling (MassCUE)",
+            "date": "2026-05-02"
+          }
+        ]
+      }
+    ],
+    "sharon": [
+      {
+        "districtId": "2510620",
+        "town": "Sharon",
+        "kind": "action",
+        "what": "Three-meeting School Committee debate over keeping the 1:1 Chromebook program vs. moving to BYOD amid FY27 capital costs; members questioned cost savings, device quality, flagged-search monitoring, and teacher sentiment. Superintendent and technology director defended 1:1, citing peer districts that regret BYOD.",
+        "actor": {
+          "name": null,
+          "role": null,
+          "body": "Sharon School Committee"
+        },
+        "date": "2025-10-15 to 2025-11-12",
+        "status": "pending",
+        "lane": "1:1",
+        "sources": [
+          {
+            "url": "https://docs.google.com/document/d/1puEKkHpwCZtRmRIjKdvFMT5ODHGV4mTlZKB9du6zmZk/",
+            "publisher": "Sharon School Committee minutes",
+            "date": "2025-10-15"
+          },
+          {
+            "url": "https://docs.google.com/document/d/1LniE8EtmhdmqIFcSaQvFL4UJ-RJbM85pw_rgXyw-XWY/",
+            "publisher": "Sharon School Committee minutes",
+            "date": "2025-10-29"
+          },
+          {
+            "url": "https://docs.google.com/document/d/1c6PNTGC287H4ASL_IHxah9RskiEoSvUvT9c1lNG3oI8/",
+            "publisher": "Sharon School Committee minutes",
+            "date": "2025-11-12"
+          }
+        ]
+      }
+    ],
+    "taunton": [
+      {
+        "districtId": "2511520",
+        "town": "Taunton",
+        "kind": "action",
+        "what": "Parent petition (~1,122 signatures) to stop the Yondr locking-pouch phone policy at Taunton High School, citing medical-emergency access, parent communication, and teacher enforcement burden.",
+        "actor": {
+          "name": "Emily Carter",
+          "role": "parent, petition organizer",
+          "body": null
+        },
+        "date": "2025-05-22",
+        "status": null,
+        "lane": "monitoring",
+        "sources": [
+          {
+            "url": "https://www.change.org/p/stop-the-yondr-pouch-implementation-in-taunton-high-school",
+            "publisher": "Change.org",
+            "date": "2025-05-22"
+          }
+        ]
+      }
+    ],
+    "wellesley": [
+      {
+        "districtId": "2512270",
+        "town": "Wellesley",
+        "kind": "action",
+        "what": "District restored the Canvas learning-management system with third-party data sharing disabled after an Instructure hack exposed data during finals season.",
+        "actor": {
+          "name": null,
+          "role": null,
+          "body": "Wellesley Public Schools"
+        },
+        "date": "2026-05-13",
+        "status": "passed",
+        "lane": "data-privacy",
+        "sources": [
+          {
+            "url": "https://theswellesleyreport.com/2026/05/wellesley-public-schools-restoring-online-canvas-learning-management-system/",
+            "publisher": "The Swellesley Report",
+            "date": "2026-05-13"
+          }
+        ]
+      },
+      {
+        "districtId": "2512270",
+        "town": "Wellesley",
+        "kind": "official",
+        "what": "Raised concerns about consistent faculty implementation of the district's AI guidance during a School Committee AI discussion.",
+        "actor": {
+          "name": "Niki Ofenloch",
+          "role": "School Committee Chair",
+          "body": "Wellesley School Committee"
+        },
+        "date": "2026-03-18",
+        "status": null,
+        "lane": "AI",
+        "sources": [
+          {
+            "url": "https://theswellesleyreport.com/2026/03/wellesley-public-schools-in-learning-phase-with-ai/",
+            "publisher": "The Swellesley Report",
+            "date": "2026-03-18"
+          }
+        ]
+      },
+      {
+        "districtId": "2512270",
+        "town": "Wellesley",
+        "kind": "official",
+        "what": "Asked about school jurisdiction over AI-generated sexual deepfakes during a School Committee presentation on AI implementation guides.",
+        "actor": {
+          "name": "Costas Panagopoulos",
+          "role": "School Committee member",
+          "body": "Wellesley School Committee"
+        },
+        "date": "2026-05",
+        "status": null,
+        "lane": "AI",
+        "sources": [
+          {
+            "url": "https://theswellesleyreport.com/2026/05/wellesley-public-schools-prepares-to-implement-ai-in-learning-aims-to-start-in-the-fall/",
+            "publisher": "The Swellesley Report",
+            "date": "2026-05"
+          }
+        ]
+      }
+    ]
+  }
+}

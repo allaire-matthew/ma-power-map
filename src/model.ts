@@ -2,6 +2,7 @@ import {
   getTownToDistrict,
   getTownToLayer,
   loadAiPilotDistricts,
+  loadEdTechActions,
   loadEdTechServices,
   loadLayer,
   loadLegislators,
@@ -11,6 +12,7 @@ import {
   loadTownOrgs,
   normalizeDistrictKey,
   type DevicePosture,
+  type EdTechAction,
   type EdTechProfile,
   type LegislatorsData,
   type NextMeetingEntry,
@@ -37,6 +39,7 @@ export type TownRecord = {
   edtech: EdTechProfile | null
   edtechPosture: DevicePosture | null // null = district not yet researched
   aiPilot: boolean // district is in the statewide AI-curriculum pilot
+  edtechActions: EdTechAction[] // resistance ledger — actions/bodies/officials
   schoolLink: SchoolCommitteeLink | null
   nextMeeting: NextMeetingEntry | null
   orgs: TownOrgChapter[]
@@ -64,6 +67,9 @@ export type World = {
     edtechProfiled: number
     edtechTakeHome: number
     aiPilotDistricts: number
+    edtechActionTowns: number
+    edtechBodies: number
+    edtechOfficials: number
   }
   freshness: { label: string; date: string | null }[]
 }
@@ -117,6 +123,7 @@ async function buildWorld(): Promise<World> {
     meetings,
     edtechByDistrict,
     aiPilot,
+    edtechActions,
   ] = await Promise.all([
     loadLayer('towns'),
     loadLayer('schoolDistricts'),
@@ -133,6 +140,7 @@ async function buildWorld(): Promise<World> {
     loadNextMeetings(),
     loadEdTechServices(),
     loadAiPilotDistricts(),
+    loadEdTechActions(),
   ])
 
   const aiPilotIds = new Set((aiPilot?.districts ?? []).map((d) => d.districtId))
@@ -150,6 +158,11 @@ async function buildWorld(): Promise<World> {
   for (const [k, v] of Object.entries(townOrgs?.byTown ?? {})) {
     const key = canon(k)
     orgsByTown[key] = [...(orgsByTown[key] ?? []), ...v]
+  }
+  const edtechActionsByTown: Record<string, EdTechAction[]> = {}
+  for (const [k, v] of Object.entries(edtechActions?.byTown ?? {})) {
+    const key = canon(k)
+    edtechActionsByTown[key] = [...(edtechActionsByTown[key] ?? []), ...v]
   }
 
   const records = new Map<string, TownRecord>()
@@ -177,6 +190,7 @@ async function buildWorld(): Promise<World> {
       edtech,
       edtechPosture: edtech ? classifyDevicePosture(edtech.oneToOne) : null,
       aiPilot: dId ? aiPilotIds.has(dId) : false,
+      edtechActions: edtechActionsByTown[key] ?? [],
       schoolLink: (dKey && scLinks[dKey]) || scLinks[tKey] || null,
       nextMeeting: (dKey && meetings?.byKey[dKey]) || meetings?.byKey[tKey] || null,
       orgs: orgsByTown[key] ?? [],
@@ -202,6 +216,7 @@ async function buildWorld(): Promise<World> {
   const isAdvocate = (t: string) => t.toLowerCase().includes('advocate')
   const allOrgEntries = tracked.flatMap((r) => r.orgs)
   const edtechProfiles = Object.values(edtechByDistrict)
+  const allEdtechActionEntries = Object.values(edtechActionsByTown).flat()
   const kpis = {
     localGroupTowns: tracked.length,
     localGroups: allOrgEntries.filter((o) => (o.chapterName ?? '').trim() && !isAdvocate(o.type)).length,
@@ -217,11 +232,17 @@ async function buildWorld(): Promise<World> {
       (p) => classifyDevicePosture(p.oneToOne) === 'takeHome',
     ).length,
     aiPilotDistricts: aiPilot?.districts.length ?? 0,
+    edtechActionTowns: Object.keys(edtechActionsByTown).filter(
+      (k) => edtechActionsByTown[k].some((a) => a.kind === 'action'),
+    ).length,
+    edtechBodies: allEdtechActionEntries.filter((a) => a.kind === 'body').length,
+    edtechOfficials: allEdtechActionEntries.filter((a) => a.kind === 'official').length,
   }
 
   const freshness: World['freshness'] = [
     { label: 'Parent orgs', date: townOrgs?._lastUpdated ?? null },
     { label: 'Meetings', date: meetings?._lastUpdated ?? null },
+    { label: 'EdTech pushback', date: edtechActions?._lastUpdated ?? null },
   ]
 
   return {

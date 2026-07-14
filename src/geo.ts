@@ -386,6 +386,47 @@ export async function loadEdTechServices(): Promise<Record<string, EdTechProfile
   return edTechPromise
 }
 
+// EdTech opposition ledger — actions, governance bodies, and officials on
+// record pushing back on classroom technology. Complements EdTechProfile
+// (what districts run). Keyed by town name, same join key as TownOrgsData —
+// city-council/town-meeting acts don't always have a district to join to.
+export type EdTechActionKind = 'action' | 'body' | 'official'
+export type EdTechActionStatus = 'passed' | 'pending' | 'rejected' | 'standing' | 'proposed'
+export type EdTechActionLane = '1:1' | 'monitoring' | 'screen-time' | 'AI' | 'data-privacy' | 'spending'
+
+export type EdTechAction = {
+  districtId?: string | null
+  town: string
+  kind: EdTechActionKind
+  what: string
+  actor: { name?: string | null; role?: string | null; body?: string | null }
+  date: string
+  status?: EdTechActionStatus | null
+  lane: EdTechActionLane
+  sources: { url: string; publisher?: string; date?: string }[]
+}
+
+export type EdTechActionsData = {
+  _lastUpdated: string
+  byTown: Record<string, EdTechAction[]>
+}
+
+let edTechActionsPromise: Promise<EdTechActionsData | null> | null = null
+
+export async function loadEdTechActions(): Promise<EdTechActionsData | null> {
+  if (!edTechActionsPromise) {
+    edTechActionsPromise = (async () => {
+      try {
+        const url = `${import.meta.env.BASE_URL}data/edtech-actions.json`
+        return await fetchJson<EdTechActionsData>(url)
+      } catch {
+        return null
+      }
+    })()
+  }
+  return edTechActionsPromise
+}
+
 export type SchoolCommitteeLink = {
   name: string
   town: string

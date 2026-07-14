@@ -7,7 +7,7 @@ import { EdTechView } from './views/EdTechView'
 import { DetailPanel } from './DetailPanel'
 import { GuidePanel } from './GuidePanel'
 import { StatTile } from './ui'
-import { EDTECH } from './colors'
+import { EDTECH, PUSHBACK_MARKER } from './colors'
 
 type View = 'map' | 'groups' | 'edtech'
 
@@ -188,7 +188,7 @@ export default function App() {
 
       {/* KPI strip — contextual to what's being examined; the accent color
           matches the active lens's encoding (DESIGN.md C1, D1, F2). */}
-      {world && <KpiStrip world={world} mode={view === 'map' ? lens : view === 'edtech' ? 'edtech' : 'groups'} />}
+      {world && <KpiStrip world={world} mode={view === 'groups' ? 'groups' : lens} />}
 
       {/* Content + detail panel (list-detail, DESIGN.md F1). */}
       <main className="flex-1 min-h-0 flex">
@@ -210,12 +210,7 @@ export default function App() {
               onOpenEdTechTable={() => setView('edtech')}
             />
           ) : view === 'edtech' ? (
-            <EdTechView
-              onBackToMap={() => {
-                setView('map')
-                setLens('edtech')
-              }}
-            />
+            <EdTechView onBackToMap={() => setView('map')} />
           ) : (
             <GroupsView world={world} selectedId={selectedId} onSelect={setSelectedId} />
           )}
@@ -275,6 +270,15 @@ const KPI_MODES = {
         sub: `of ${k.edtechProfiled} profiled`,
       },
       { label: 'AI-pilot districts statewide', value: String(k.aiPilotDistricts) },
+    ],
+  },
+  pushback: {
+    label: 'Pushback',
+    color: PUSHBACK_MARKER,
+    tiles: (k: World['kpis']) => [
+      { label: 'Towns with verified pushback', value: String(k.edtechActionTowns) },
+      { label: 'Advisory bodies statewide', value: String(k.edtechBodies) },
+      { label: 'Officials on record', value: String(k.edtechOfficials) },
     ],
   },
   groups: {

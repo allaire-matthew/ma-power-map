@@ -67,6 +67,30 @@ export const EDTECH = '#2f7fb8'
 // blue posture fills and CVD-distinct from the violet presence dots.
 export const AI_PILOT = '#b45309'
 
+// EdTech opposition ("pushback") sub-toggle — action-intensity ramp,
+// ordinal red family, deliberately CVD-distinct from the blue posture
+// ramp, the green tier ramp, the violet organizing channel, and the amber
+// AI-pilot diamond. Reuses the "concerns" ink (#8f2b1c) already
+// established in DetailPanel's strengths/concerns list as the dark step.
+export const PUSHBACK_COLOR: Record<0 | 1 | 2 | 3, string> = {
+  0: '#ffffff',
+  1: '#e3a89c',
+  2: '#c1594a',
+  3: '#8f2b1c',
+}
+
+export const PUSHBACK_LABEL: Record<0 | 1 | 2 | 3, string> = {
+  0: 'No verified action',
+  1: '1 verified action',
+  2: '2 verified actions',
+  3: '3+ verified actions',
+}
+
+// Governance-body / sympathetic-official marker (pushback mode) — dark
+// warm-neutral ring, legible against both the red intensity fill and the
+// near-white unresearched fill.
+export const PUSHBACK_MARKER = '#3a2317'
+
 // Boundary strokes (recessive; DESIGN.md B2).
 export const BOUNDARY = {
   town: { stroke: '#c9c6bd', width: 0.55 },
