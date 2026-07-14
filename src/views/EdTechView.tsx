@@ -32,7 +32,7 @@ type EdTechData = { _lastUpdated: string; _notes: string; districts: EdTechDistr
 
 type SortKey = 'name' | 'services' | 'agreements'
 
-export function EdTechView() {
+export function EdTechView({ onBackToMap }: { onBackToMap?: () => void }) {
   const [data, setData] = useState<EdTechData | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [open, setOpen] = useState<string | null>(null)
@@ -82,6 +82,34 @@ export function EdTechView() {
   return (
     <div className="absolute inset-0 overflow-y-auto thin-scroll">
       <div className="max-w-[1100px] mx-auto px-4 py-4 flex flex-col gap-3">
+        {onBackToMap && (
+          <div
+            className="inline-flex self-start rounded-lg border shadow-sm overflow-hidden"
+            style={{ borderColor: 'var(--hairline)', background: 'var(--card)' }}
+            role="tablist"
+            aria-label="EdTech format"
+          >
+            <button
+              type="button"
+              role="tab"
+              aria-selected={false}
+              onClick={onBackToMap}
+              className="px-3 h-8 text-[12px] font-semibold border-r hover:bg-black/[.05]"
+              style={{ borderColor: 'var(--hairline)', color: 'var(--ink-2)' }}
+            >
+              Map
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected
+              className="px-3 h-8 text-[12px] font-semibold"
+              style={{ color: '#fff', background: 'var(--navy)' }}
+            >
+              Table
+            </button>
+          </div>
+        )}
         <p className="m-0 text-[12.5px] leading-snug" style={{ color: 'var(--ink-2)' }}>
           What each district runs in the classroom — 1:1 devices, platforms, AI tools, and signed
           student-data-privacy agreements. A listing, not a rating: a signed agreement means a tool was

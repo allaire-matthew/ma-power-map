@@ -32,6 +32,7 @@ export function MapView({
   focusRef,
   lens,
   onLensChange,
+  onOpenEdTechTable,
 }: {
   world: World
   selectedId: string | null
@@ -39,6 +40,7 @@ export function MapView({
   focusRef: React.MutableRefObject<((c: [number, number], k?: number) => void) | null>
   lens: Lens
   onLensChange: (l: Lens) => void
+  onOpenEdTechTable: () => void
 }) {
   const [tierFilter, setTierFilter] = useState<TierFilter>('all')
   const [boundaries, setBoundaries] = useState<Set<BoundaryKey>>(new Set())
@@ -141,6 +143,36 @@ export function MapView({
                 {b.label}
               </label>
             ))}
+          </div>
+        )}
+
+        {/* EdTech format toggle — the lens is map-first; the table is one click away. */}
+        {lens === 'edtech' && (
+          <div
+            className="inline-flex rounded-lg border shadow-sm overflow-hidden"
+            style={{ borderColor: 'var(--hairline)', background: 'rgba(255,255,255,0.94)', backdropFilter: 'blur(6px)' }}
+            role="tablist"
+            aria-label="EdTech format"
+          >
+            <button
+              type="button"
+              role="tab"
+              aria-selected
+              className="px-3 h-8 text-[12px] font-semibold border-r"
+              style={{ borderColor: 'var(--hairline)', color: '#fff', background: 'var(--navy)' }}
+            >
+              Map
+            </button>
+            <button
+              type="button"
+              role="tab"
+              aria-selected={false}
+              onClick={onOpenEdTechTable}
+              className="px-3 h-8 text-[12px] font-semibold hover:bg-black/[.05]"
+              style={{ color: 'var(--ink-2)' }}
+            >
+              Table
+            </button>
           </div>
         )}
 

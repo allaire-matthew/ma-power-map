@@ -11,10 +11,11 @@ import { EDTECH } from './colors'
 
 type View = 'map' | 'groups' | 'edtech'
 
+// EdTech is map-first: it lives as a map lens, with the table reachable
+// through a Map/Table toggle — so it gets no header tab of its own.
 const VIEWS: { key: View; label: string }[] = [
   { key: 'map', label: 'Map' },
   { key: 'groups', label: 'Local groups' },
-  { key: 'edtech', label: 'EdTech' },
 ]
 
 export default function App() {
@@ -86,7 +87,8 @@ export default function App() {
 
         <nav className="flex items-center gap-1" aria-label="Views">
           {VIEWS.map((v) => {
-            const active = view === v.key
+            // The EdTech table is a sub-view of the map, so Map stays lit.
+            const active = view === v.key || (v.key === 'map' && view === 'edtech')
             return (
               <button
                 key={v.key}
@@ -186,7 +188,7 @@ export default function App() {
 
       {/* KPI strip — contextual to what's being examined; the accent color
           matches the active lens's encoding (DESIGN.md C1, D1, F2). */}
-      {world && view !== 'edtech' && <KpiStrip world={world} mode={view === 'map' ? lens : 'groups'} />}
+      {world && <KpiStrip world={world} mode={view === 'map' ? lens : view === 'edtech' ? 'edtech' : 'groups'} />}
 
       {/* Content + detail panel (list-detail, DESIGN.md F1). */}
       <main className="flex-1 min-h-0 flex">
@@ -198,9 +200,22 @@ export default function App() {
               </div>
             </div>
           ) : view === 'map' ? (
-            <MapView world={world} selectedId={selectedId} onSelect={setSelectedId} focusRef={flyTo} lens={lens} onLensChange={setLens} />
+            <MapView
+              world={world}
+              selectedId={selectedId}
+              onSelect={setSelectedId}
+              focusRef={flyTo}
+              lens={lens}
+              onLensChange={setLens}
+              onOpenEdTechTable={() => setView('edtech')}
+            />
           ) : view === 'edtech' ? (
-            <EdTechView />
+            <EdTechView
+              onBackToMap={() => {
+                setView('map')
+                setLens('edtech')
+              }}
+            />
           ) : (
             <GroupsView world={world} selectedId={selectedId} onSelect={setSelectedId} />
           )}
