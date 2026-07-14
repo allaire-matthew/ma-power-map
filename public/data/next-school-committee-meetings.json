@@ -1,475 +1,477 @@
 {
   "_schemaVersion": 1,
-  "_lastUpdated": "2026-07-13",
+  "_lastUpdated": "2026-07-14",
   "_notes": "Heuristic regex-based scrape of school-committee calendar pages. Status: ok (date found), no_future_date (page parsed but no future date matched), fetch_failed (network/HTTP error). Re-run via scripts/refresh_school_meetings.py or the daily GH Action.",
   "byKey": {
     "quabbin regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.qrsd.org/calendars/school_committee_calendar",
       "status": "no_future_date"
     },
     "quabbin regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.qrsd.org/calendars/school_committee_calendar",
       "status": "no_future_date"
     },
     "spencer-east brookfield regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sebrsd.org/page/school-commitee",
       "status": "no_future_date"
     },
     "spencer-east brookfield regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sebrsd.org/page/school-commitee",
       "status": "no_future_date"
     },
     "southwick-tolland-granville regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.stgrsd.org/school_committee/meetings",
       "status": "no_future_date"
     },
     "southwick-tolland-granville regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.stgrsd.org/school_committee/meetings",
       "status": "no_future_date"
     },
     "manchester essex regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mersd.org/school-committee",
       "status": "no_future_date"
     },
     "manchester essex regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mersd.org/school-committee",
       "status": "no_future_date"
     },
     "ayer-shirley regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.asrsd.org/school-committee",
       "status": "no_future_date"
     },
     "ayer-shirley regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.asrsd.org/school-committee",
       "status": "no_future_date"
     },
     "monomoy regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.monomoy.edu/school-committee",
       "status": "no_future_date"
     },
     "monomoy regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.monomoy.edu/school-committee",
       "status": "no_future_date"
     },
     "abington school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.abingtonps.org/central_office/school_committee",
       "status": "fetch_failed"
     },
     "abington": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.abingtonps.org/central_office/school_committee",
       "status": "fetch_failed"
     },
     "acton-boxborough regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://abschools.community.diligentoneplatform.com/Portal/MeetingSchedule.aspx",
       "status": "no_future_date"
     },
     "acton-boxborough regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://abschools.community.diligentoneplatform.com/Portal/MeetingSchedule.aspx",
       "status": "no_future_date"
     },
     "hoosac valley regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hoosacvalley.org/about-us/school-committee",
       "status": "no_future_date"
     },
     "hoosac valley regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hoosacvalley.org/about-us/school-committee",
       "status": "no_future_date"
     },
     "agawam public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.agawamed.org/page/school-committee",
       "status": "no_future_date"
     },
     "agawam": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.agawamed.org/page/school-committee",
       "status": "no_future_date"
     },
     "amesbury public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://schools.amesburyma.gov/aps-district/school-committee/meetings",
       "status": "no_future_date"
     },
     "amesbury": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://schools.amesburyma.gov/aps-district/school-committee/meetings",
       "status": "no_future_date"
     },
     "andover public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.aps1.net/page/school-committee-community-participation",
       "status": "no_future_date"
     },
     "andover": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.aps1.net/page/school-committee-community-participation",
       "status": "no_future_date"
     },
     "arlington public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.arlington.k12.ma.us/apps/pages/index.jsp?uREC_ID=4412125&type=d&pREC_ID=2643936",
       "status": "no_future_date"
     },
     "arlington": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.arlington.k12.ma.us/apps/pages/index.jsp?uREC_ID=4412125&type=d&pREC_ID=2643936",
       "status": "no_future_date"
     },
     "ashburnham-westminster regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.awrsd.org/school-committee-2",
       "status": "no_future_date"
     },
     "ashburnham-westminster regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.awrsd.org/school-committee-2",
       "status": "no_future_date"
     },
     "ashland public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.ashland.k12.ma.us/school-committee",
       "status": "no_future_date"
     },
     "ashland": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.ashland.k12.ma.us/school-committee",
       "status": "no_future_date"
     },
     "athol-royalston regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.arrsd.org/page/school-committee",
       "status": "no_future_date"
     },
     "athol-royalston regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.arrsd.org/page/school-committee",
       "status": "no_future_date"
     },
     "attleboro public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "http://www.attleboroschools.com/school_committee/meeting_schedule",
       "status": "fetch_failed"
     },
     "attleboro": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "http://www.attleboroschools.com/school_committee/meeting_schedule",
       "status": "fetch_failed"
     },
     "auburn public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.auburn.k12.ma.us/district/administration/school-committee",
       "status": "fetch_failed"
     },
     "auburn": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.auburn.k12.ma.us/district/administration/school-committee",
       "status": "fetch_failed"
     },
     "avon public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.avon.k12.ma.us/district/school-committee",
       "status": "fetch_failed"
     },
     "avon": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.avon.k12.ma.us/district/school-committee",
       "status": "fetch_failed"
     },
     "barnstable public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://go.boarddocs.com/ma/barnstable/Board.nsf/public",
       "status": "no_future_date"
     },
     "barnstable": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://go.boarddocs.com/ma/barnstable/Board.nsf/public",
       "status": "no_future_date"
     },
     "bedford public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bedfordps.org/district/school-committee",
       "status": "fetch_failed"
     },
     "bedford": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bedfordps.org/district/school-committee",
       "status": "fetch_failed"
     },
     "belchertown public schools": {
-      "next_meeting": null,
-      "checked": "2026-07-13",
+      "next_meeting": "2026-07-14",
+      "additional_upcoming": [],
+      "checked": "2026-07-14",
       "source_url": "https://www.belchertownps.org/school-committee/",
-      "status": "no_future_date"
+      "status": "ok"
     },
     "belchertown": {
-      "next_meeting": null,
-      "checked": "2026-07-13",
+      "next_meeting": "2026-07-14",
+      "additional_upcoming": [],
+      "checked": "2026-07-14",
       "source_url": "https://www.belchertownps.org/school-committee/",
-      "status": "no_future_date"
+      "status": "ok"
     },
     "bellingham public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bellinghamk12.org/en-US/school-committe-c0c80e8c",
       "status": "fetch_failed"
     },
     "bellingham": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bellinghamk12.org/en-US/school-committe-c0c80e8c",
       "status": "fetch_failed"
     },
     "belmont public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.belmont.k12.ma.us/page/school-committee",
       "status": "no_future_date"
     },
     "belmont": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.belmont.k12.ma.us/page/school-committee",
       "status": "no_future_date"
     },
     "berkshire hills regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bhrsd.org/school-committee",
       "status": "no_future_date"
     },
     "berkshire hills regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bhrsd.org/school-committee",
       "status": "no_future_date"
     },
     "berlin-boylston regional school district": {
       "next_meeting": "2026-08-04",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bbrsd.org/school-committee/home",
       "status": "ok"
     },
     "berlin-boylston regional": {
       "next_meeting": "2026-08-04",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bbrsd.org/school-committee/home",
       "status": "ok"
     },
     "beverly public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.beverlyschools.org/apps/pages/index.jsp?uREC_ID=2083091&type=d&pREC_ID=2133534",
       "status": "no_future_date"
     },
     "beverly": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.beverlyschools.org/apps/pages/index.jsp?uREC_ID=2083091&type=d&pREC_ID=2133534",
       "status": "no_future_date"
     },
     "billerica public schools": {
-      "next_meeting": "2026-07-13",
+      "next_meeting": "2026-07-14",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://billericak12.com/school-committee/",
       "status": "ok"
     },
     "billerica": {
-      "next_meeting": "2026-07-13",
+      "next_meeting": "2026-07-14",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://billericak12.com/school-committee/",
       "status": "ok"
     },
     "blackstone-millville regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bmrsd.net/o/bmrsd/page/school-committee",
       "status": "no_future_date"
     },
     "blackstone-millville regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bmrsd.net/o/bmrsd/page/school-committee",
       "status": "no_future_date"
     },
     "boston public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bostonpublicschools.org/school-committee/meetings",
       "status": "no_future_date"
     },
     "boston": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bostonpublicschools.org/school-committee/meetings",
       "status": "no_future_date"
     },
     "bourne public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bourneps.org/our-school-committee/school-committee-meetings-agendas-and-documents",
       "status": "no_future_date"
     },
     "bourne": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bourneps.org/our-school-committee/school-committee-meetings-agendas-and-documents",
       "status": "no_future_date"
     },
     "braintree public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.braintreeschools.org/school-committee",
       "status": "no_future_date"
     },
     "braintree": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.braintreeschools.org/school-committee",
       "status": "no_future_date"
     },
     "bridgewater-raynham regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://bridge-rayn.org/en-US/school-committee-8c4f9a98",
       "status": "no_future_date"
     },
     "bridgewater-raynham regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://bridge-rayn.org/en-US/school-committee-8c4f9a98",
       "status": "no_future_date"
     },
     "brockton public schools": {
-      "next_meeting": "2026-07-13",
+      "next_meeting": "2026-08-04",
       "additional_upcoming": [
-        "2026-08-04",
         "2026-09-03",
-        "2026-09-15"
+        "2026-09-15",
+        "2026-10-06"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bpsma.org/apps/pages/index.jsp?uREC_ID=4408287&type=d&pREC_ID=2636982",
       "status": "ok"
     },
     "brockton": {
-      "next_meeting": "2026-07-13",
+      "next_meeting": "2026-08-04",
       "additional_upcoming": [
-        "2026-08-04",
         "2026-09-03",
-        "2026-09-15"
+        "2026-09-15",
+        "2026-10-06"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.bpsma.org/apps/pages/index.jsp?uREC_ID=4408287&type=d&pREC_ID=2636982",
       "status": "ok"
     },
     "brookline public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.brookline.k12.ma.us/schoolcommittee",
       "status": "fetch_failed"
     },
     "brookline": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.brookline.k12.ma.us/schoolcommittee",
       "status": "fetch_failed"
     },
     "burlington public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.burlingtonpublicschools.org/district/school_committee",
       "status": "no_future_date"
     },
     "burlington": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.burlingtonpublicschools.org/district/school_committee",
       "status": "no_future_date"
     },
     "cambridge public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.cpsd.us/school_committee",
       "status": "no_future_date"
     },
     "cambridge": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.cpsd.us/school_committee",
       "status": "no_future_date"
     },
     "canton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.cantonma.org/school-committee",
       "status": "fetch_failed"
     },
     "canton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.cantonma.org/school-committee",
       "status": "fetch_failed"
     },
@@ -478,7 +480,7 @@
       "additional_upcoming": [
         "2029-05-31"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://carver.org/carver-home/school-committee/",
       "status": "ok"
     },
@@ -487,443 +489,443 @@
       "additional_upcoming": [
         "2029-05-31"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://carver.org/carver-home/school-committee/",
       "status": "ok"
     },
     "central berkshire regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.cbrsd.org/school-committee",
       "status": "no_future_date"
     },
     "central berkshire regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.cbrsd.org/school-committee",
       "status": "no_future_date"
     },
     "florida public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.cbrsd.org/school-committee",
       "status": "no_future_date"
     },
     "florida": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.cbrsd.org/school-committee",
       "status": "no_future_date"
     },
     "chelmsford public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://chelmsfordschools.org/departments/school-committee/",
       "status": "no_future_date"
     },
     "chelmsford": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://chelmsfordschools.org/departments/school-committee/",
       "status": "no_future_date"
     },
     "chelsea public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.chelseaschools.com/district-leadership/school-committee/school-committee-home",
       "status": "no_future_date"
     },
     "chelsea": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.chelseaschools.com/district-leadership/school-committee/school-committee-home",
       "status": "no_future_date"
     },
     "chicopee public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.chicopeeps.org/en-US/school-committee-9aceadb1",
       "status": "no_future_date"
     },
     "chicopee": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.chicopeeps.org/en-US/school-committee-9aceadb1",
       "status": "no_future_date"
     },
     "clinton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.clinton.k12.ma.us/apps/pages/index.jsp?uREC_ID=71491&type=d&pREC_ID=119796",
       "status": "fetch_failed"
     },
     "clinton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.clinton.k12.ma.us/apps/pages/index.jsp?uREC_ID=71491&type=d&pREC_ID=119796",
       "status": "fetch_failed"
     },
     "cohasset public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.cohassetk12.org/school-committee/school-committee-information",
       "status": "no_future_date"
     },
     "cohasset": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.cohassetk12.org/school-committee/school-committee-information",
       "status": "no_future_date"
     },
     "danvers public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://danverspublicschools.org/school-committee/",
       "status": "fetch_failed"
     },
     "danvers": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://danverspublicschools.org/school-committee/",
       "status": "fetch_failed"
     },
     "dartmouth public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.dartmouth.school/our-district/school-committee",
       "status": "no_future_date"
     },
     "dartmouth": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.dartmouth.school/our-district/school-committee",
       "status": "no_future_date"
     },
     "dedham public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.dedham.k12.ma.us/about/school-committee",
       "status": "fetch_failed"
     },
     "dedham": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.dedham.k12.ma.us/about/school-committee",
       "status": "fetch_failed"
     },
     "dennis-yarmouth regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.dy-regional.k12.ma.us/district/school-committee",
       "status": "fetch_failed"
     },
     "dennis-yarmouth regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.dy-regional.k12.ma.us/district/school-committee",
       "status": "fetch_failed"
     },
     "dighton-rehoboth regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.drregional.org/",
       "status": "no_future_date"
     },
     "dighton-rehoboth regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.drregional.org/",
       "status": "no_future_date"
     },
     "douglas public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.douglasps.net/school_committee",
       "status": "fetch_failed"
     },
     "douglas": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.douglasps.net/school_committee",
       "status": "fetch_failed"
     },
     "dracut public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.dracutps.org/page/school-committee",
       "status": "no_future_date"
     },
     "dracut": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.dracutps.org/page/school-committee",
       "status": "no_future_date"
     },
     "dudley-charlton regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.dcrsd.org/about-dcrsd/school-committee",
       "status": "no_future_date"
     },
     "dudley-charlton regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.dcrsd.org/about-dcrsd/school-committee",
       "status": "no_future_date"
     },
     "duxbury public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.duxbury.k12.ma.us/page/2025-2026-school-committee-meetings/",
       "status": "no_future_date"
     },
     "duxbury": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.duxbury.k12.ma.us/page/2025-2026-school-committee-meetings/",
       "status": "no_future_date"
     },
     "east bridgewater public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.ebps.net/apps/pages/index.jsp?uREC_ID=1417231&type=d&pREC_ID=1603811",
       "status": "no_future_date"
     },
     "east bridgewater": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.ebps.net/apps/pages/index.jsp?uREC_ID=1417231&type=d&pREC_ID=1603811",
       "status": "no_future_date"
     },
     "east longmeadow public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.eastlongmeadowma.gov/314/School-Committee",
       "status": "no_future_date"
     },
     "east longmeadow": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.eastlongmeadowma.gov/314/School-Committee",
       "status": "no_future_date"
     },
     "easthampton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.epsd.us/about/school-committee",
       "status": "no_future_date"
     },
     "easthampton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.epsd.us/about/school-committee",
       "status": "no_future_date"
     },
     "easton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://eastonmaschools.org/school-committee/",
       "status": "no_future_date"
     },
     "easton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://eastonmaschools.org/school-committee/",
       "status": "no_future_date"
     },
     "everett public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.everettpublicschools.org/apps/pages/SCMembers",
       "status": "no_future_date"
     },
     "everett": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.everettpublicschools.org/apps/pages/SCMembers",
       "status": "no_future_date"
     },
     "fairhaven public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.fairhavenps.org/our_district/school_committee",
       "status": "no_future_date"
     },
     "fairhaven": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.fairhavenps.org/our_district/school_committee",
       "status": "no_future_date"
     },
     "fall river public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.fallriverschools.org/school-committee",
       "status": "no_future_date"
     },
     "fall river": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.fallriverschools.org/school-committee",
       "status": "no_future_date"
     },
     "falmouth public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.falmouth.k12.ma.us/school_committee",
       "status": "no_future_date"
     },
     "falmouth": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.falmouth.k12.ma.us/school_committee",
       "status": "no_future_date"
     },
     "fitchburg public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.fitchburg.k12.ma.us/school-committee",
       "status": "no_future_date"
     },
     "fitchburg": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.fitchburg.k12.ma.us/school-committee",
       "status": "no_future_date"
     },
     "foxborough public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.foxborough.k12.ma.us/school_committee",
       "status": "no_future_date"
     },
     "foxborough": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.foxborough.k12.ma.us/school_committee",
       "status": "no_future_date"
     },
     "framingham public schools": {
       "next_meeting": "2026-07-15",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.framingham.k12.ma.us/82106_2",
       "status": "ok"
     },
     "framingham": {
       "next_meeting": "2026-07-15",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.framingham.k12.ma.us/82106_2",
       "status": "ok"
     },
     "franklin public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.franklinps.net/page/school-committee",
       "status": "no_future_date"
     },
     "franklin": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.franklinps.net/page/school-committee",
       "status": "no_future_date"
     },
     "freetown-lakeville regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.freelake.org/",
       "status": "no_future_date"
     },
     "freetown-lakeville regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.freelake.org/",
       "status": "no_future_date"
     },
     "gardner public schools": {
       "next_meeting": "2026-08-31",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.gardnerk12.org/",
       "status": "ok"
     },
     "gardner": {
       "next_meeting": "2026-08-31",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.gardnerk12.org/",
       "status": "ok"
     },
     "gateway regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.grsd.org/school-committee",
       "status": "no_future_date"
     },
     "gateway regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.grsd.org/school-committee",
       "status": "no_future_date"
     },
     "georgetown public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://georgetown.k12.ma.us/school-committee/",
       "status": "no_future_date"
     },
     "georgetown": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://georgetown.k12.ma.us/school-committee/",
       "status": "no_future_date"
     },
     "gill-montague regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.gmrsd.org/school-committee-2",
       "status": "no_future_date"
     },
     "gill-montague regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.gmrsd.org/school-committee-2",
       "status": "no_future_date"
     },
     "gloucester public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://schoolcommittee.gloucesterschools.com/",
       "status": "no_future_date"
     },
     "gloucester": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://schoolcommittee.gloucesterschools.com/",
       "status": "no_future_date"
     },
     "grafton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.graftonps.org/schoolcommittee",
       "status": "fetch_failed"
     },
     "grafton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.graftonps.org/schoolcommittee",
       "status": "fetch_failed"
     },
     "granby public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.granbyschoolsma.org/page/school-committee",
       "status": "no_future_date"
     },
     "granby": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.granbyschoolsma.org/page/school-committee",
       "status": "no_future_date"
     },
@@ -932,7 +934,7 @@
       "additional_upcoming": [
         "2029-12-31"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://gpsk12.org/school-committee/",
       "status": "ok"
     },
@@ -941,31 +943,31 @@
       "additional_upcoming": [
         "2029-12-31"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://gpsk12.org/school-committee/",
       "status": "ok"
     },
     "groton-dunstable regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.gdrsd.org/page/school-committee",
       "status": "no_future_date"
     },
     "groton-dunstable regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.gdrsd.org/page/school-committee",
       "status": "no_future_date"
     },
     "hadley school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hadleyschools.org/school-committee",
       "status": "no_future_date"
     },
     "hadley": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hadleyschools.org/school-committee",
       "status": "no_future_date"
     },
@@ -976,7 +978,7 @@
         "2026-09-03",
         "2026-09-17"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hwschools.net/about/school-committee",
       "status": "ok"
     },
@@ -987,93 +989,93 @@
         "2026-09-03",
         "2026-09-17"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hwschools.net/about/school-committee",
       "status": "ok"
     },
     "hampden-wilbraham regional school district": {
       "next_meeting": "2026-07-30",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hwrsd.org/departments/school-committee",
       "status": "ok"
     },
     "hampden-wilbraham regional": {
       "next_meeting": "2026-07-30",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hwrsd.org/departments/school-committee",
       "status": "ok"
     },
     "hanover school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hanoverschools.org/district/school-committee/pages/committee-meetings",
       "status": "fetch_failed"
     },
     "hanover": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hanoverschools.org/district/school-committee/pages/committee-meetings",
       "status": "fetch_failed"
     },
     "harvard school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.psharvard.org/school_committee/meetings",
       "status": "fetch_failed"
     },
     "harvard": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.psharvard.org/school_committee/meetings",
       "status": "fetch_failed"
     },
     "hatfield school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hatfieldps.net/administration/school-committee",
       "status": "fetch_failed"
     },
     "hatfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hatfieldps.net/administration/school-committee",
       "status": "fetch_failed"
     },
     "haverhill public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.haverhill-ps.org/meeting-schedule/",
       "status": "fetch_failed"
     },
     "haverhill": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.haverhill-ps.org/meeting-schedule/",
       "status": "fetch_failed"
     },
     "hingham public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hinghamschools.org/about/school-committee/agendas-and-minutes/",
       "status": "fetch_failed"
     },
     "hingham": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hinghamschools.org/about/school-committee/agendas-and-minutes/",
       "status": "fetch_failed"
     },
     "holbrook public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.holbrook.k12.ma.us/school-committeebudget/school-committee-meeting-schedule",
       "status": "no_future_date"
     },
     "holbrook": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.holbrook.k12.ma.us/school-committeebudget/school-committee-meeting-schedule",
       "status": "no_future_date"
     },
@@ -1084,7 +1086,7 @@
         "2026-09-24",
         "2026-10-08"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.holliston.k12.ma.us/about/school-committee",
       "status": "ok"
     },
@@ -1095,333 +1097,333 @@
         "2026-09-24",
         "2026-10-08"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.holliston.k12.ma.us/about/school-committee",
       "status": "ok"
     },
     "holyoke public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hps.holyoke.ma.us/page/school-committee",
       "status": "no_future_date"
     },
     "holyoke": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hps.holyoke.ma.us/page/school-committee",
       "status": "no_future_date"
     },
     "hopedale public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hopedaleschools.org/page/school-committee/",
       "status": "no_future_date"
     },
     "hopedale": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hopedaleschools.org/page/school-committee/",
       "status": "no_future_date"
     },
     "hopkinton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hopkinton.k12.ma.us/about/school-committee",
       "status": "no_future_date"
     },
     "hopkinton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hopkinton.k12.ma.us/about/school-committee",
       "status": "no_future_date"
     },
     "hudson public schools": {
       "next_meeting": "2027-06-30",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hudson.k12.ma.us/school_committee/meeting_dates",
       "status": "ok"
     },
     "hudson": {
       "next_meeting": "2027-06-30",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hudson.k12.ma.us/school_committee/meeting_dates",
       "status": "ok"
     },
     "hull public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hullpublicschools.org/district/school-committee",
       "status": "fetch_failed"
     },
     "hull": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hullpublicschools.org/district/school-committee",
       "status": "fetch_failed"
     },
     "ipswich public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.ipsk12.net/school-committee/ipswich-school-committee/meeting-schedule",
       "status": "no_future_date"
     },
     "ipswich": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.ipsk12.net/school-committee/ipswich-school-committee/meeting-schedule",
       "status": "no_future_date"
     },
     "lawrence public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lawrence.k12.ma.us/about/district/school-committee",
       "status": "no_future_date"
     },
     "lawrence": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lawrence.k12.ma.us/about/district/school-committee",
       "status": "no_future_date"
     },
     "lee public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.leepublicschools.net/en-US/calendar",
       "status": "no_future_date"
     },
     "lee": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.leepublicschools.net/en-US/calendar",
       "status": "no_future_date"
     },
     "leicester public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://leicester.k12.ma.us/SC",
       "status": "no_future_date"
     },
     "leicester": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://leicester.k12.ma.us/SC",
       "status": "no_future_date"
     },
     "lenox public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lenoxps.org/page/school-committee",
       "status": "no_future_date"
     },
     "lenox": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lenoxps.org/page/school-committee",
       "status": "no_future_date"
     },
     "leominster public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.leominsterps.org/district/school-committee",
       "status": "fetch_failed"
     },
     "leominster": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.leominsterps.org/district/school-committee",
       "status": "fetch_failed"
     },
     "lexington public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lexingtonma.org/lps-school-committee",
       "status": "no_future_date"
     },
     "lexington": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lexingtonma.org/lps-school-committee",
       "status": "no_future_date"
     },
     "littleton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.littletonps.org/school-committee/school-committee-calendar",
       "status": "fetch_failed"
     },
     "littleton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.littletonps.org/school-committee/school-committee-calendar",
       "status": "fetch_failed"
     },
     "longmeadow public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.longmeadow.k12.ma.us/school-committee/s-c-calendar",
       "status": "no_future_date"
     },
     "longmeadow": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.longmeadow.k12.ma.us/school-committee/s-c-calendar",
       "status": "no_future_date"
     },
     "lowell public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lowell.k12.ma.us/calendar",
       "status": "no_future_date"
     },
     "lowell": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lowell.k12.ma.us/calendar",
       "status": "no_future_date"
     },
     "ludlow public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.ludlowps.org/school-committee/meeting-schedule",
       "status": "fetch_failed"
     },
     "ludlow": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.ludlowps.org/school-committee/meeting-schedule",
       "status": "fetch_failed"
     },
     "lunenburg public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lunenburgschools.net/school-committee-1/meetings",
       "status": "no_future_date"
     },
     "lunenburg": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lunenburgschools.net/school-committee-1/meetings",
       "status": "no_future_date"
     },
     "lynn public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lynnschools.org/district/school_committee",
       "status": "no_future_date"
     },
     "lynn": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lynnschools.org/district/school_committee",
       "status": "no_future_date"
     },
     "lynnfield public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://lynnfield.k12.ma.us/en-US/school-committee-a905c1e5",
       "status": "no_future_date"
     },
     "lynnfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://lynnfield.k12.ma.us/en-US/school-committee-a905c1e5",
       "status": "no_future_date"
     },
     "malden public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.maldenps.org/district-information/school-committee/school-committee-meetings",
       "status": "no_future_date"
     },
     "malden": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.maldenps.org/district-information/school-committee/school-committee-meetings",
       "status": "no_future_date"
     },
     "mansfield public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mansfieldschools.com/page/meeting-agendas-and-minutes",
       "status": "no_future_date"
     },
     "mansfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mansfieldschools.com/page/meeting-agendas-and-minutes",
       "status": "no_future_date"
     },
     "marblehead public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.marbleheadschools.org/school-committee/school-committee-calendar",
       "status": "no_future_date"
     },
     "marblehead": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.marbleheadschools.org/school-committee/school-committee-calendar",
       "status": "no_future_date"
     },
     "marlborough public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mps-edu.org/page/school-committee",
       "status": "no_future_date"
     },
     "marlborough": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mps-edu.org/page/school-committee",
       "status": "no_future_date"
     },
     "marshfield public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mpsd.org/page/school-committee",
       "status": "no_future_date"
     },
     "marshfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mpsd.org/page/school-committee",
       "status": "no_future_date"
     },
     "mashpee public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mpspk12.org/about-us/school-committee",
       "status": "fetch_failed"
     },
     "mashpee": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mpspk12.org/about-us/school-committee",
       "status": "fetch_failed"
     },
     "maynard public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.maynard.k12.ma.us/page/meeting-schedule",
       "status": "no_future_date"
     },
     "maynard": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.maynard.k12.ma.us/page/meeting-schedule",
       "status": "no_future_date"
     },
     "medfield public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "http://www.medfield.net/school-committee/meetings-agendas",
       "status": "fetch_failed"
     },
     "medfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "http://www.medfield.net/school-committee/meetings-agendas",
       "status": "fetch_failed"
     },
@@ -1432,7 +1434,7 @@
         "2026-09-14",
         "2026-09-28"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mps02155.org/about/school-committee/meetings",
       "status": "ok"
     },
@@ -1443,171 +1445,175 @@
         "2026-09-14",
         "2026-09-28"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mps02155.org/about/school-committee/meetings",
       "status": "ok"
     },
     "medway public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.medwayschools.org/page/school-committee-meeting-schedule",
       "status": "no_future_date"
     },
     "medway": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.medwayschools.org/page/school-committee-meeting-schedule",
       "status": "no_future_date"
     },
     "melrose public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.melroseschools.com/page/meet-the-committee",
       "status": "no_future_date"
     },
     "melrose": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.melroseschools.com/page/meet-the-committee",
       "status": "no_future_date"
     },
     "mendon-upton regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mursd.org/page/agendas-and-minutes",
       "status": "no_future_date"
     },
     "mendon-upton regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mursd.org/page/agendas-and-minutes",
       "status": "no_future_date"
     },
     "methuen public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.methuen.k12.ma.us/school-community/meeting-calendar",
       "status": "no_future_date"
     },
     "methuen": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.methuen.k12.ma.us/school-community/meeting-calendar",
       "status": "no_future_date"
     },
     "middleborough public schools": {
       "next_meeting": "2026-07-23",
-      "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "additional_upcoming": [
+        "2026-08-13"
+      ],
+      "checked": "2026-07-14",
       "source_url": "https://www.middleboro.k12.ma.us/our-district/school-committee/school-committee-calander",
       "status": "ok"
     },
     "middleborough": {
       "next_meeting": "2026-07-23",
-      "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "additional_upcoming": [
+        "2026-08-13"
+      ],
+      "checked": "2026-07-14",
       "source_url": "https://www.middleboro.k12.ma.us/our-district/school-committee/school-committee-calander",
       "status": "ok"
     },
     "milford public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.milfordpublicschools.com/about/school-committee",
       "status": "no_future_date"
     },
     "milford": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.milfordpublicschools.com/about/school-committee",
       "status": "no_future_date"
     },
     "millbury public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.millburyschools.org/school-committee1/meeting-schedule",
       "status": "fetch_failed"
     },
     "millbury": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.millburyschools.org/school-committee1/meeting-schedule",
       "status": "fetch_failed"
     },
     "millis public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.millisps.org/page/school-committee1",
       "status": "no_future_date"
     },
     "millis": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.millisps.org/page/school-committee1",
       "status": "no_future_date"
     },
     "milton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.miltonps.org/page/school-committee-24-25-school-year",
       "status": "fetch_failed"
     },
     "milton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.miltonps.org/page/school-committee-24-25-school-year",
       "status": "fetch_failed"
     },
     "mohawk trail regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mtrsd.org/school-committees",
       "status": "no_future_date"
     },
     "mohawk trail regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mtrsd.org/school-committees",
       "status": "no_future_date"
     },
     "hawlemont regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mtrsd.org/school-committees",
       "status": "no_future_date"
     },
     "hawlemont regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mtrsd.org/school-committees",
       "status": "no_future_date"
     },
     "monson public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.monsonschools.com/school-committee/",
       "status": "no_future_date"
     },
     "monson": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.monsonschools.com/school-committee/",
       "status": "no_future_date"
     },
     "mount greylock regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mgrsd.org/school-committee/district-meeting-calendar",
       "status": "no_future_date"
     },
     "mount greylock regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mgrsd.org/school-committee/district-meeting-calendar",
       "status": "no_future_date"
     },
     "mount greylock": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mgrsd.org/school-committee/district-meeting-calendar",
       "status": "no_future_date"
     },
@@ -1618,7 +1624,7 @@
         "2026-09-01",
         "2026-09-15"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.npsk.org/school-committee/agendas-minutes",
       "status": "ok"
     },
@@ -1629,219 +1635,219 @@
         "2026-09-01",
         "2026-09-15"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.npsk.org/school-committee/agendas-minutes",
       "status": "ok"
     },
     "narragansett regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nrsd.org/school-committee",
       "status": "fetch_failed"
     },
     "narragansett regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nrsd.org/school-committee",
       "status": "fetch_failed"
     },
     "narragansett": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nrsd.org/school-committee",
       "status": "fetch_failed"
     },
     "nashoba regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nrsd.net/school_committee/calendars",
       "status": "fetch_failed"
     },
     "nashoba regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nrsd.net/school_committee/calendars",
       "status": "fetch_failed"
     },
     "nashoba": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nrsd.net/school_committee/calendars",
       "status": "fetch_failed"
     },
     "natick public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.natickps.org/page/natick-school-committee",
       "status": "fetch_failed"
     },
     "natick": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.natickps.org/page/natick-school-committee",
       "status": "fetch_failed"
     },
     "needham public schools": {
       "next_meeting": "2027-12-15",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.needham.k12.ma.us/district_info/school_committee/meeting_dates",
       "status": "ok"
     },
     "needham": {
       "next_meeting": "2027-12-15",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.needham.k12.ma.us/district_info/school_committee/meeting_dates",
       "status": "ok"
     },
     "new bedford public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.newbedfordschools.org/school_committee/school_committee_calendar",
       "status": "fetch_failed"
     },
     "new bedford": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.newbedfordschools.org/school_committee/school_committee_calendar",
       "status": "fetch_failed"
     },
     "newburyport public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.newburyport.k12.ma.us/district/school-committee",
       "status": "no_future_date"
     },
     "newburyport": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.newburyport.k12.ma.us/district/school-committee",
       "status": "no_future_date"
     },
     "newton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.newton.k12.ma.us/school-committee/calendar",
       "status": "fetch_failed"
     },
     "newton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.newton.k12.ma.us/school-committee/calendar",
       "status": "fetch_failed"
     },
     "north adams public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.napsk12.org/page/school-committee1",
       "status": "no_future_date"
     },
     "north adams": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.napsk12.org/page/school-committee1",
       "status": "no_future_date"
     },
     "north andover public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.northandoverpublicschools.com/school-committee",
       "status": "no_future_date"
     },
     "north andover": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.northandoverpublicschools.com/school-committee",
       "status": "no_future_date"
     },
     "north attleborough public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.naschools.net/Page/31",
       "status": "fetch_failed"
     },
     "north attleborough": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.naschools.net/Page/31",
       "status": "fetch_failed"
     },
     "north brookfield public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nbschools.org/district/school-committee/pages/school-committee-meeting-schedule",
       "status": "fetch_failed"
     },
     "north brookfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nbschools.org/district/school-committee/pages/school-committee-meeting-schedule",
       "status": "fetch_failed"
     },
     "north middlesex regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nmrsd.org/calendar",
       "status": "no_future_date"
     },
     "north middlesex regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nmrsd.org/calendar",
       "status": "no_future_date"
     },
     "north middlesex": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nmrsd.org/calendar",
       "status": "no_future_date"
     },
     "north reading public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.north-reading.k12.ma.us/school-committee",
       "status": "no_future_date"
     },
     "north reading": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.north-reading.k12.ma.us/school-committee",
       "status": "no_future_date"
     },
     "northampton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://northamptonschools.org/140427_2",
       "status": "no_future_date"
     },
     "northampton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://northamptonschools.org/140427_2",
       "status": "no_future_date"
     },
     "northbridge public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nps.org/district/school-committee",
       "status": "fetch_failed"
     },
     "northbridge": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nps.org/district/school-committee",
       "status": "fetch_failed"
     },
     "norton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.norton.k12.ma.us/calendar",
       "status": "no_future_date"
     },
     "norton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.norton.k12.ma.us/calendar",
       "status": "no_future_date"
     },
@@ -1852,7 +1858,7 @@
         "2026-09-21",
         "2026-10-26"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.norwellschools.org/school-committee/schedule",
       "status": "ok"
     },
@@ -1863,211 +1869,211 @@
         "2026-09-21",
         "2026-10-26"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.norwellschools.org/school-committee/schedule",
       "status": "ok"
     },
     "norwood public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.norwood.k12.ma.us/sc",
       "status": "fetch_failed"
     },
     "norwood": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.norwood.k12.ma.us/sc",
       "status": "fetch_failed"
     },
     "oxford public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.oxps.org/school-committee-2",
       "status": "no_future_date"
     },
     "oxford": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.oxps.org/school-committee-2",
       "status": "no_future_date"
     },
     "palmer public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.palmerschools.org/apps/pages/index.jsp?uREC_ID=293359&type=d",
       "status": "no_future_date"
     },
     "palmer": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.palmerschools.org/apps/pages/index.jsp?uREC_ID=293359&type=d",
       "status": "no_future_date"
     },
     "peabody public schools": {
-      "next_meeting": "2026-07-13",
+      "next_meeting": "2026-07-14",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://peabody.k12.ma.us/calendar",
       "status": "ok"
     },
     "peabody": {
-      "next_meeting": "2026-07-13",
+      "next_meeting": "2026-07-14",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://peabody.k12.ma.us/calendar",
       "status": "ok"
     },
     "pembroke public schools": {
       "next_meeting": "2026-07-14",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.pembrokek12.org/district/school-committee/school-committee-meeting-agendas",
       "status": "ok"
     },
     "pembroke": {
       "next_meeting": "2026-07-14",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.pembrokek12.org/district/school-committee/school-committee-meeting-agendas",
       "status": "ok"
     },
     "pentucket regional school district": {
       "next_meeting": "2026-08-11",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.prsd.org/school-committee/school-committee-meetings",
       "status": "ok"
     },
     "pentucket regional": {
       "next_meeting": "2026-08-11",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.prsd.org/school-committee/school-committee-meetings",
       "status": "ok"
     },
     "pioneer valley regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.pvrsdk12.org/school-committee",
       "status": "no_future_date"
     },
     "pioneer valley regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.pvrsdk12.org/school-committee",
       "status": "no_future_date"
     },
     "pioneer valley": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.pvrsdk12.org/school-committee",
       "status": "no_future_date"
     },
     "pittsfield public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://pittsfield.net/en-US/school-committee-728bff7c",
       "status": "no_future_date"
     },
     "pittsfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://pittsfield.net/en-US/school-committee-728bff7c",
       "status": "no_future_date"
     },
     "plymouth public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.plymouth.k12.ma.us/page/school-committee",
       "status": "no_future_date"
     },
     "plymouth": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.plymouth.k12.ma.us/page/school-committee",
       "status": "no_future_date"
     },
     "provincetown school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.provincetown-ma.gov/203/School-Committee-Agendas-Minutes-Archive",
       "status": "no_future_date"
     },
     "provincetown": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.provincetown-ma.gov/203/School-Committee-Agendas-Minutes-Archive",
       "status": "no_future_date"
     },
     "quincy public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.quincypublicschools.com/school_committee/2024-2025_school_committee_meeting_calendar",
       "status": "no_future_date"
     },
     "quincy": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.quincypublicschools.com/school_committee/2024-2025_school_committee_meeting_calendar",
       "status": "no_future_date"
     },
     "randolph public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.randolph.k12.ma.us/our-district/school-committee/index",
       "status": "fetch_failed"
     },
     "randolph": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.randolph.k12.ma.us/our-district/school-committee/index",
       "status": "fetch_failed"
     },
     "reading public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.reading.k12.ma.us/en-US/our-school-committee-65707192/meeting-dates-10a86767",
       "status": "no_future_date"
     },
     "reading": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.reading.k12.ma.us/en-US/our-school-committee-65707192/meeting-dates-10a86767",
       "status": "no_future_date"
     },
     "revere public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.reverek12.org/apps/events/",
       "status": "fetch_failed"
     },
     "revere": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.reverek12.org/apps/events/",
       "status": "fetch_failed"
     },
     "rockland public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.rocklandschools.org/page/school-committee",
       "status": "no_future_date"
     },
     "rockland": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.rocklandschools.org/page/school-committee",
       "status": "no_future_date"
     },
     "rockport public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.rpk12.org/apps/events/",
       "status": "fetch_failed"
     },
     "rockport": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.rpk12.org/apps/events/",
       "status": "fetch_failed"
     },
@@ -2078,7 +2084,7 @@
         "2026-08-24",
         "2026-09-08"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://salemk12.org/about/school-committee/salem-school-committee-agendas-minutes/",
       "status": "ok"
     },
@@ -2089,255 +2095,255 @@
         "2026-08-24",
         "2026-09-08"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://salemk12.org/about/school-committee/salem-school-committee-agendas-minutes/",
       "status": "ok"
     },
     "sandwich public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sandwichk12.org/school_committee/meetings/meeting_calendar",
       "status": "fetch_failed"
     },
     "sandwich": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sandwichk12.org/school_committee/meetings/meeting_calendar",
       "status": "fetch_failed"
     },
     "saugus public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.saugus-ma.gov/school-committee",
       "status": "fetch_failed"
     },
     "saugus": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.saugus-ma.gov/school-committee",
       "status": "fetch_failed"
     },
     "scituate public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.scit.org/meetings",
       "status": "no_future_date"
     },
     "scituate": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.scit.org/meetings",
       "status": "no_future_date"
     },
     "seekonk public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.seekonkschools.org/school-committee",
       "status": "no_future_date"
     },
     "seekonk": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.seekonkschools.org/school-committee",
       "status": "no_future_date"
     },
     "sharon public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sharonschools.net/en-US/school-committee-3119a552",
       "status": "no_future_date"
     },
     "sharon": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sharonschools.net/en-US/school-committee-3119a552",
       "status": "no_future_date"
     },
     "shrewsbury public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://schools.shrewsburyma.gov/sc",
       "status": "fetch_failed"
     },
     "shrewsbury": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://schools.shrewsburyma.gov/sc",
       "status": "fetch_failed"
     },
     "somerville public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://somerville.k12.ma.us/district-leadership/somerville-school-committee/school-committee-meetings",
       "status": "no_future_date"
     },
     "somerville": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://somerville.k12.ma.us/district-leadership/somerville-school-committee/school-committee-meetings",
       "status": "no_future_date"
     },
     "south hadley public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.southhadleyschools.org/calendar",
       "status": "no_future_date"
     },
     "south hadley": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.southhadleyschools.org/calendar",
       "status": "no_future_date"
     },
     "southbridge public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.southbridgepublic.org/school-committee",
       "status": "fetch_failed"
     },
     "southbridge": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.southbridgepublic.org/school-committee",
       "status": "fetch_failed"
     },
     "southern berkshire regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sbrsd.org/documents/school-committee/",
       "status": "fetch_failed"
     },
     "southern berkshire regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sbrsd.org/documents/school-committee/",
       "status": "fetch_failed"
     },
     "sheffield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sbrsd.org/documents/school-committee/",
       "status": "fetch_failed"
     },
     "springfield public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.springfieldpublicschools.com/school_committee/school_committee_meeting_schedule",
       "status": "no_future_date"
     },
     "springfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.springfieldpublicschools.com/school_committee/school_committee_meeting_schedule",
       "status": "no_future_date"
     },
     "stoneham public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.stonehamschools.org/school-committee",
       "status": "fetch_failed"
     },
     "stoneham": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.stonehamschools.org/school-committee",
       "status": "fetch_failed"
     },
     "stoughton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.stoughtonschools.org/page/school-committee-meetings-agendas-minutes",
       "status": "no_future_date"
     },
     "stoughton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.stoughtonschools.org/page/school-committee-meetings-agendas-minutes",
       "status": "no_future_date"
     },
     "sutton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.suttonschools.net/page/sutton-school-committee-2024-2025",
       "status": "fetch_failed"
     },
     "sutton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.suttonschools.net/page/sutton-school-committee-2024-2025",
       "status": "fetch_failed"
     },
     "swampscott public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.swampscottps.org/about/school-committee/",
       "status": "no_future_date"
     },
     "swampscott": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.swampscottps.org/about/school-committee/",
       "status": "no_future_date"
     },
     "swansea public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.swanseaschools.org/page/school-committee-meetings",
       "status": "no_future_date"
     },
     "swansea": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.swanseaschools.org/page/school-committee-meetings",
       "status": "no_future_date"
     },
     "taunton public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.tauntonschools.org/apps/pages/index.jsp?uREC_ID=1722389&type=d&pREC_ID=1889855",
       "status": "fetch_failed"
     },
     "taunton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.tauntonschools.org/apps/pages/index.jsp?uREC_ID=1722389&type=d&pREC_ID=1889855",
       "status": "fetch_failed"
     },
     "tewksbury public schools": {
-      "next_meeting": "2026-07-13",
+      "next_meeting": "2026-07-14",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.tewksbury.k12.ma.us/departments-programs/school-committee/",
       "status": "ok"
     },
     "tewksbury": {
-      "next_meeting": "2026-07-13",
+      "next_meeting": "2026-07-14",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.tewksbury.k12.ma.us/departments-programs/school-committee/",
       "status": "ok"
     },
     "triton regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://tritonschools.org/en-US/overview-e89c4609/meeting-schedule-844a65df",
       "status": "no_future_date"
     },
     "triton regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://tritonschools.org/en-US/overview-e89c4609/meeting-schedule-844a65df",
       "status": "no_future_date"
     },
     "tyngsborough public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.tyngsboroughps.org/en-US/school-committee-e5157a08",
       "status": "no_future_date"
     },
     "tyngsborough": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.tyngsboroughps.org/en-US/school-committee-e5157a08",
       "status": "no_future_date"
     },
@@ -2348,7 +2354,7 @@
         "2026-09-22",
         "2026-10-06"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.uxbridgeschools.com/school-committee-meeting-dates",
       "status": "ok"
     },
@@ -2359,261 +2365,259 @@
         "2026-09-22",
         "2026-10-06"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.uxbridgeschools.com/school-committee-meeting-dates",
       "status": "ok"
     },
     "wachusett regional school district": {
-      "next_meeting": "2026-07-13",
+      "next_meeting": "2026-07-22",
       "additional_upcoming": [
-        "2026-07-22",
         "2026-08-04",
-        "2026-08-06"
+        "2026-08-06",
+        "2026-08-10"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wrsd.net/school-committee/meeting-schedule",
       "status": "ok"
     },
     "wachusett regional": {
-      "next_meeting": "2026-07-13",
+      "next_meeting": "2026-07-22",
       "additional_upcoming": [
-        "2026-07-22",
         "2026-08-04",
-        "2026-08-06"
+        "2026-08-06",
+        "2026-08-10"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wrsd.net/school-committee/meeting-schedule",
       "status": "ok"
     },
     "wakefield public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wpsk12.org/student-support-services/school-committee",
       "status": "no_future_date"
     },
     "wakefield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wpsk12.org/student-support-services/school-committee",
       "status": "no_future_date"
     },
     "walpole public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.walpole.k12.ma.us/o/wps/page/school-committee-meetings-agendas-and-minutes",
       "status": "no_future_date"
     },
     "walpole": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.walpole.k12.ma.us/o/wps/page/school-committee-meetings-agendas-and-minutes",
       "status": "no_future_date"
     },
     "waltham public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.walthampublicschools.org/page/school-committee",
       "status": "no_future_date"
     },
     "waltham": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.walthampublicschools.org/page/school-committee",
       "status": "no_future_date"
     },
     "ware public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wareps.org/school_committee",
       "status": "no_future_date"
     },
     "ware": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wareps.org/school_committee",
       "status": "no_future_date"
     },
     "wareham public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://warehamps.org/en-US/",
       "status": "no_future_date"
     },
     "wareham": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://warehamps.org/en-US/",
       "status": "no_future_date"
     },
     "quaboag regional school district": {
-      "next_meeting": "2026-07-13",
-      "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "next_meeting": null,
+      "checked": "2026-07-14",
       "source_url": "https://www.quaboagrsd.org/district-depts/school-committee",
-      "status": "ok"
+      "status": "no_future_date"
     },
     "quaboag regional": {
-      "next_meeting": "2026-07-13",
-      "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "next_meeting": null,
+      "checked": "2026-07-14",
       "source_url": "https://www.quaboagrsd.org/district-depts/school-committee",
-      "status": "ok"
+      "status": "no_future_date"
     },
     "watertown public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.watertown.k12.ma.us/79652_2",
       "status": "no_future_date"
     },
     "watertown": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.watertown.k12.ma.us/79652_2",
       "status": "no_future_date"
     },
     "wayland public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wayland.k12.ma.us/school_committee",
       "status": "fetch_failed"
     },
     "wayland": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wayland.k12.ma.us/school_committee",
       "status": "fetch_failed"
     },
     "webster public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.webster-schools.org/calendar1",
       "status": "no_future_date"
     },
     "webster": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.webster-schools.org/calendar1",
       "status": "no_future_date"
     },
     "wellesley public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://wellesleyps.org/schoolcommittee/",
       "status": "no_future_date"
     },
     "wellesley": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://wellesleyps.org/schoolcommittee/",
       "status": "no_future_date"
     },
     "west boylston public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wbschools.com/District/1147-School-Committee-Members-and-Calendar.html",
       "status": "no_future_date"
     },
     "west boylston": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wbschools.com/District/1147-School-Committee-Members-and-Calendar.html",
       "status": "no_future_date"
     },
     "west bridgewater public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wbridgewaterschools.org/page/school-committee",
       "status": "no_future_date"
     },
     "west bridgewater": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wbridgewaterschools.org/page/school-committee",
       "status": "no_future_date"
     },
     "west springfield public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wsps.org/District/School-Commitee",
       "status": "fetch_failed"
     },
     "west springfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wsps.org/District/School-Commitee",
       "status": "fetch_failed"
     },
     "westborough public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.westboroughk12.org/school-committee/meetings",
       "status": "no_future_date"
     },
     "westborough": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.westboroughk12.org/school-committee/meetings",
       "status": "no_future_date"
     },
     "westfield public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.schoolsofwestfield.org/page/school-committee",
       "status": "fetch_failed"
     },
     "westfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.schoolsofwestfield.org/page/school-committee",
       "status": "fetch_failed"
     },
     "westford public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.westfordk12.us/district/school-committee/pages/current-year-meeting-schedule",
       "status": "fetch_failed"
     },
     "westford": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.westfordk12.us/district/school-committee/pages/current-year-meeting-schedule",
       "status": "fetch_failed"
     },
     "weston public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.westonschools.org/school-committee/",
       "status": "fetch_failed"
     },
     "weston": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.westonschools.org/school-committee/",
       "status": "fetch_failed"
     },
     "westport public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.westportps.org/board-of-education/meeting-calendar",
       "status": "no_future_date"
     },
     "westport": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.westportps.org/board-of-education/meeting-calendar",
       "status": "no_future_date"
     },
     "westwood public schools": {
       "next_meeting": "2026-07-21",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.westwood.k12.ma.us/district/school-committee/",
       "status": "ok"
     },
     "westwood": {
       "next_meeting": "2026-07-21",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.westwood.k12.ma.us/district/school-committee/",
       "status": "ok"
     },
@@ -2624,7 +2628,7 @@
         "2026-10-01",
         "2026-10-15"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.weymouthschools.org/school-committee/schedule-of-meetings",
       "status": "ok"
     },
@@ -2635,801 +2639,801 @@
         "2026-10-01",
         "2026-10-15"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.weymouthschools.org/school-committee/schedule-of-meetings",
       "status": "ok"
     },
     "whitman-hanson regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.whrsd.org/school_committee_budget/public_meeting_notices/school_committee_meetings",
       "status": "no_future_date"
     },
     "whitman-hanson regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.whrsd.org/school_committee_budget/public_meeting_notices/school_committee_meetings",
       "status": "no_future_date"
     },
     "wilmington public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wpsk12.com/our_district/school_committee/meetings",
       "status": "no_future_date"
     },
     "wilmington": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wpsk12.com/our_district/school_committee/meetings",
       "status": "no_future_date"
     },
     "winchendon public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.winchendonk12.org/",
       "status": "no_future_date"
     },
     "winchendon": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.winchendonk12.org/",
       "status": "no_future_date"
     },
     "winchester public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.winchesterps.org/school-committee",
       "status": "no_future_date"
     },
     "winchester": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.winchesterps.org/school-committee",
       "status": "no_future_date"
     },
     "winthrop public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.winthrop.k12.ma.us/about/school-committee",
       "status": "no_future_date"
     },
     "winthrop": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.winthrop.k12.ma.us/about/school-committee",
       "status": "no_future_date"
     },
     "woburn public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.woburnpublicschools.com/school-committee/meeting-dates",
       "status": "fetch_failed"
     },
     "woburn": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.woburnpublicschools.com/school-committee/meeting-dates",
       "status": "fetch_failed"
     },
     "worcester public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.worcesterschools.org/page/school-committee",
       "status": "no_future_date"
     },
     "worcester": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.worcesterschools.org/page/school-committee",
       "status": "no_future_date"
     },
     "chesterfield-goshen regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townofchesterfieldma.com/new-hingham-regional-elementary-school-committee/events/14931",
       "status": "fetch_failed"
     },
     "chesterfield-goshen regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townofchesterfieldma.com/new-hingham-regional-elementary-school-committee/events/14931",
       "status": "fetch_failed"
     },
     "up-island regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://mvyps.org/school-committee/meetings/",
       "status": "no_future_date"
     },
     "up-island regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://mvyps.org/school-committee/meetings/",
       "status": "no_future_date"
     },
     "tisbury school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://mvyps.org/school-committee/meetings/",
       "status": "no_future_date"
     },
     "tisbury": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://mvyps.org/school-committee/meetings/",
       "status": "no_future_date"
     },
     "martha's vineyard public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://mvyps.org/school-committee/meetings/",
       "status": "no_future_date"
     },
     "martha's vineyard": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://mvyps.org/school-committee/meetings/",
       "status": "no_future_date"
     },
     "acushnet public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.acushnetschools.us/district/school-committee",
       "status": "fetch_failed"
     },
     "acushnet": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.acushnetschools.us/district/school-committee",
       "status": "fetch_failed"
     },
     "amherst public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://go.boarddocs.com/ma/arps/Board.nsf/Public",
       "status": "no_future_date"
     },
     "amherst": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://go.boarddocs.com/ma/arps/Board.nsf/Public",
       "status": "no_future_date"
     },
     "boxford public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://boxfordma.gov/Calendar.aspx?EID=1150",
       "status": "no_future_date"
     },
     "boxford": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://boxfordma.gov/Calendar.aspx?EID=1150",
       "status": "no_future_date"
     },
     "brewster public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.brewster-ma.gov/brewster-school-committee",
       "status": "fetch_failed"
     },
     "brewster": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.brewster-ma.gov/brewster-school-committee",
       "status": "fetch_failed"
     },
     "brimfield public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.tantasqua.org/apps/pages/index.jsp?uREC_ID=3615137&type=d&pREC_ID=2409146",
       "status": "no_future_date"
     },
     "brimfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.tantasqua.org/apps/pages/index.jsp?uREC_ID=3615137&type=d&pREC_ID=2409146",
       "status": "no_future_date"
     },
     "carlisle public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.carlisle.k12.ma.us/school-committee/school-committee",
       "status": "no_future_date"
     },
     "carlisle": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.carlisle.k12.ma.us/school-committee/school-committee",
       "status": "no_future_date"
     },
     "clarksburg public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.clarksburgschool.org/about/school-committee",
       "status": "fetch_failed"
     },
     "clarksburg": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.clarksburgschool.org/about/school-committee",
       "status": "fetch_failed"
     },
     "concord public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.concordps.org/school-committee",
       "status": "no_future_date"
     },
     "concord": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.concordps.org/school-committee",
       "status": "no_future_date"
     },
     "conway public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.conwayschools.org/page/school-calendar",
       "status": "no_future_date"
     },
     "conway": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.conwayschools.org/page/school-calendar",
       "status": "no_future_date"
     },
     "deerfield public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.frsu38.org/deerfield-school-committee-2/",
       "status": "no_future_date"
     },
     "deerfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.frsu38.org/deerfield-school-committee-2/",
       "status": "no_future_date"
     },
     "dover public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.doverma.gov/334/School-Committees",
       "status": "no_future_date"
     },
     "dover": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.doverma.gov/334/School-Committees",
       "status": "no_future_date"
     },
     "eastham public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.eastham-ma.gov/615/School-Committee",
       "status": "no_future_date"
     },
     "eastham": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.eastham-ma.gov/615/School-Committee",
       "status": "no_future_date"
     },
     "oak bluffs public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://oakbluffsma.gov/Calendar.aspx?EID=377",
       "status": "no_future_date"
     },
     "oak bluffs": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://oakbluffsma.gov/Calendar.aspx?EID=377",
       "status": "no_future_date"
     },
     "erving public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.erving-ma.gov/erving-school-committee",
       "status": "fetch_failed"
     },
     "erving": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.erving-ma.gov/erving-school-committee",
       "status": "fetch_failed"
     },
     "halifax school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.slrsd.org/school-committees/halifax-school-committee",
       "status": "fetch_failed"
     },
     "halifax": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.slrsd.org/school-committees/halifax-school-committee",
       "status": "fetch_failed"
     },
     "hancock school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://hancockschool.org/school-comittee/",
       "status": "no_future_date"
     },
     "hancock": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://hancockschool.org/school-comittee/",
       "status": "no_future_date"
     },
     "holland school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hollandpublicschools.org/the-district/school-board/",
       "status": "no_future_date"
     },
     "holland": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hollandpublicschools.org/the-district/school-board/",
       "status": "no_future_date"
     },
     "kingston school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.slrsd.org/school-committees/kingston-school-committee",
       "status": "fetch_failed"
     },
     "kingston": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.slrsd.org/school-committees/kingston-school-committee",
       "status": "fetch_failed"
     },
     "leverett school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.leverettschool.org/school_information/school_committee",
       "status": "no_future_date"
     },
     "leverett": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.leverettschool.org/school_information/school_committee",
       "status": "no_future_date"
     },
     "lincoln school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lincolnps.org/community/school-committee/school-committee",
       "status": "no_future_date"
     },
     "lincoln": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lincolnps.org/community/school-committee/school-committee",
       "status": "no_future_date"
     },
     "marion school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.marionma.gov/Calendar.aspx?EID=1483",
       "status": "no_future_date"
     },
     "marion": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.marionma.gov/Calendar.aspx?EID=1483",
       "status": "no_future_date"
     },
     "mattapoisett school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mattapoisett.gov/328/ORR-District-School-Committee",
       "status": "no_future_date"
     },
     "mattapoisett": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mattapoisett.gov/328/ORR-District-School-Committee",
       "status": "no_future_date"
     },
     "middleton school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.middletonma.gov/399/School-Committee",
       "status": "no_future_date"
     },
     "middleton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.middletonma.gov/399/School-Committee",
       "status": "no_future_date"
     },
     "nahant school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://nahant.org/calendar/school-committee-meeting-20/",
       "status": "no_future_date"
     },
     "nahant": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://nahant.org/calendar/school-committee-meeting-20/",
       "status": "no_future_date"
     },
     "new salem-wendell school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wendellmass.us/meeting-taxonomy/school-committee/",
       "status": "no_future_date"
     },
     "new salem-wendell": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wendellmass.us/meeting-taxonomy/school-committee/",
       "status": "no_future_date"
     },
     "norfolk school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.norfolk.k12.ma.us/school-committee",
       "status": "no_future_date"
     },
     "norfolk": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.norfolk.k12.ma.us/school-committee",
       "status": "no_future_date"
     },
     "northborough school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nsboro.k12.ma.us/240156_2",
       "status": "no_future_date"
     },
     "northborough": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nsboro.k12.ma.us/240156_2",
       "status": "no_future_date"
     },
     "northborough-southborough regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nsboro.k12.ma.us/240156_2",
       "status": "no_future_date"
     },
     "northborough-southborough regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nsboro.k12.ma.us/240156_2",
       "status": "no_future_date"
     },
     "edgartown school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.edgartownschool.org/committees/",
       "status": "no_future_date"
     },
     "edgartown": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.edgartownschool.org/committees/",
       "status": "no_future_date"
     },
     "orange school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townoforange.org/259/School-Committees",
       "status": "no_future_date"
     },
     "orange": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townoforange.org/259/School-Committees",
       "status": "no_future_date"
     },
     "orleans school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.town.orleans.ma.us/677/Orleans-School-Committee",
       "status": "no_future_date"
     },
     "orleans": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.town.orleans.ma.us/677/Orleans-School-Committee",
       "status": "no_future_date"
     },
     "pelham school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://arps.org/pelham-school-committee/",
       "status": "fetch_failed"
     },
     "pelham": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://arps.org/pelham-school-committee/",
       "status": "fetch_failed"
     },
     "petersham school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mytowngovernment.org/board/2967013",
       "status": "no_future_date"
     },
     "petersham": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.mytowngovernment.org/board/2967013",
       "status": "no_future_date"
     },
     "plainville school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.plainville.k12.ma.us/school-committee/school-committee-meeting-dates-agenda/",
       "status": "no_future_date"
     },
     "plainville": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.plainville.k12.ma.us/school-committee/school-committee-meeting-dates-agenda/",
       "status": "no_future_date"
     },
     "plympton school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.town.plympton.ma.us/plympton-school-committee",
       "status": "fetch_failed"
     },
     "plympton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.town.plympton.ma.us/plympton-school-committee",
       "status": "fetch_failed"
     },
     "richmond school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.richmondma.org/government/boards_and_commissions/school_committee.php",
       "status": "no_future_date"
     },
     "richmond": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.richmondma.org/government/boards_and_commissions/school_committee.php",
       "status": "no_future_date"
     },
     "rochester school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townofrochestermass.com/schools",
       "status": "fetch_failed"
     },
     "rochester": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townofrochestermass.com/schools",
       "status": "fetch_failed"
     },
     "rowe school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://rowe-ma.gov/g/48/School-Committee",
       "status": "no_future_date"
     },
     "rowe": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://rowe-ma.gov/g/48/School-Committee",
       "status": "no_future_date"
     },
     "savoy school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.savoyelementary.com/",
       "status": "no_future_date"
     },
     "savoy": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.savoyelementary.com/",
       "status": "no_future_date"
     },
     "sherborn school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sherbornma.org/meeting-minutes-available/events/50884",
       "status": "fetch_failed"
     },
     "sherborn": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sherbornma.org/meeting-minutes-available/events/50884",
       "status": "fetch_failed"
     },
     "shutesbury school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://shutesbury.org/calendars",
       "status": "fetch_failed"
     },
     "shutesbury": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://shutesbury.org/calendars",
       "status": "fetch_failed"
     },
     "somerset school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.somersetschools.org/School-Committee/",
       "status": "no_future_date"
     },
     "somerset": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.somersetschools.org/School-Committee/",
       "status": "no_future_date"
     },
     "southampton school district": {
       "next_meeting": "2026-08-12",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townofsouthampton.org/government/boards-and-committees/school-committee-hrhs",
       "status": "ok"
     },
     "southampton": {
       "next_meeting": "2026-08-12",
       "additional_upcoming": [],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townofsouthampton.org/government/boards-and-committees/school-committee-hrhs",
       "status": "ok"
     },
     "southborough school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nsboro.k12.ma.us/school-committees/southborough",
       "status": "no_future_date"
     },
     "southborough": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nsboro.k12.ma.us/school-committees/southborough",
       "status": "no_future_date"
     },
     "sturbridge school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sturbridge.gov/town-clerk/agenda/sturbridge-school-committee",
       "status": "fetch_failed"
     },
     "sturbridge": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sturbridge.gov/town-clerk/agenda/sturbridge-school-committee",
       "status": "fetch_failed"
     },
     "sudbury school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sudbury.k12.ma.us/school-committee/meeting-schedule",
       "status": "no_future_date"
     },
     "sudbury": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.sudbury.k12.ma.us/school-committee/meeting-schedule",
       "status": "no_future_date"
     },
     "sunderland school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.frsu38.org/sunderland-school-committee/",
       "status": "no_future_date"
     },
     "sunderland": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.frsu38.org/sunderland-school-committee/",
       "status": "no_future_date"
     },
     "topsfield school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.topsfield-ma.gov/schools-school-committees",
       "status": "fetch_failed"
     },
     "topsfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.topsfield-ma.gov/schools-school-committees",
       "status": "fetch_failed"
     },
     "truro school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.truro-ma.gov/559/School-Committee",
       "status": "no_future_date"
     },
     "truro": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.truro-ma.gov/559/School-Committee",
       "status": "no_future_date"
     },
     "wales school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townofwales.net/school-committee/minutes/school-committee-minutes-4",
       "status": "fetch_failed"
     },
     "wales": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townofwales.net/school-committee/minutes/school-committee-minutes-4",
       "status": "fetch_failed"
     },
     "wellfleet school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wellfleet-ma.gov/wellfleet-elementary-school-committee",
       "status": "fetch_failed"
     },
     "wellfleet": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wellfleet-ma.gov/wellfleet-elementary-school-committee",
       "status": "fetch_failed"
     },
     "westhampton school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://hampshireregional.schoolblocks.com/en-US/westhampton-school-committee-c459134b",
       "status": "no_future_date"
     },
     "westhampton": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://hampshireregional.schoolblocks.com/en-US/westhampton-school-committee-c459134b",
       "status": "no_future_date"
     },
     "whately school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.frsu38.org/whately-school-committee/",
       "status": "no_future_date"
     },
     "whately": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.frsu38.org/whately-school-committee/",
       "status": "no_future_date"
     },
     "williamsburg school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.burgy.org/school-department/pages/williamsburg-school-committee-values",
       "status": "fetch_failed"
     },
     "williamsburg": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.burgy.org/school-department/pages/williamsburg-school-committee-values",
       "status": "fetch_failed"
     },
     "worthington school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://worthington-ma.us/municipal-directory/school-district/worthington-school-committee/",
       "status": "no_future_date"
     },
     "worthington": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://worthington-ma.us/municipal-directory/school-district/worthington-school-committee/",
       "status": "no_future_date"
     },
@@ -3438,7 +3442,7 @@
       "additional_upcoming": [
         "2028-08-26"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wrentham.k12.ma.us/our-district/school-committee/index.html",
       "status": "ok"
     },
@@ -3447,67 +3451,67 @@
       "additional_upcoming": [
         "2028-08-26"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.wrentham.k12.ma.us/our-district/school-committee/index.html",
       "status": "ok"
     },
     "farmington river regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://frrsd.org/district-information/school-committee-members/meeting-dates-location/",
       "status": "no_future_date"
     },
     "farmington river regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://frrsd.org/district-information/school-committee-members/meeting-dates-location/",
       "status": "no_future_date"
     },
     "warwick school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://warwickma.org/school-committee/",
       "status": "no_future_date"
     },
     "warwick": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://warwickma.org/school-committee/",
       "status": "no_future_date"
     },
     "old rochester regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.oldrochester.org/district/sc",
       "status": "no_future_date"
     },
     "old rochester regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.oldrochester.org/district/sc",
       "status": "no_future_date"
     },
     "silver lake regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.slrsd.org/school-committees/silver-lake-school-committee",
       "status": "fetch_failed"
     },
     "silver lake regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.slrsd.org/school-committees/silver-lake-school-committee",
       "status": "fetch_failed"
     },
     "masconomet regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.masconomet.org/school-committee/meeting-schedule",
       "status": "no_future_date"
     },
     "masconomet regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.masconomet.org/school-committee/meeting-schedule",
       "status": "no_future_date"
     },
@@ -3518,7 +3522,7 @@
         "2026-09-23",
         "2026-10-07"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.concordps.org/school-committee/meetings-and-minutes",
       "status": "ok"
     },
@@ -3529,163 +3533,163 @@
         "2026-09-23",
         "2026-10-07"
       ],
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.concordps.org/school-committee/meetings-and-minutes",
       "status": "ok"
     },
     "dover-sherborn regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.doversherborn.org/school-committee",
       "status": "no_future_date"
     },
     "dover-sherborn regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.doversherborn.org/school-committee",
       "status": "no_future_date"
     },
     "lincoln-sudbury regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lsrhs.net/about/school_committee",
       "status": "fetch_failed"
     },
     "lincoln-sudbury regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.lsrhs.net/about/school_committee",
       "status": "fetch_failed"
     },
     "king philip regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.kingphilip.org/about/school-committee/",
       "status": "no_future_date"
     },
     "king philip regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.kingphilip.org/about/school-committee/",
       "status": "no_future_date"
     },
     "hampshire regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hr-k12.org/calendar",
       "status": "no_future_date"
     },
     "hampshire regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.hr-k12.org/calendar",
       "status": "no_future_date"
     },
     "somerset-berkley regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.somersetschools.org/School-Committee/Somerset-Berkley-Regional/Calendar/index.html",
       "status": "no_future_date"
     },
     "somerset-berkley regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.somersetschools.org/School-Committee/Somerset-Berkley-Regional/Calendar/index.html",
       "status": "no_future_date"
     },
     "nauset regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nausetschools.org/page/regional-school-committee-agendas-minutes",
       "status": "no_future_date"
     },
     "nauset regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.nausetschools.org/page/regional-school-committee-agendas-minutes",
       "status": "no_future_date"
     },
     "amherst-pelham regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://arps.org/school-committee/",
       "status": "fetch_failed"
     },
     "amherst-pelham regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://arps.org/school-committee/",
       "status": "fetch_failed"
     },
     "frontier regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.frsu38.org/frontier-regional-school-committee/",
       "status": "no_future_date"
     },
     "frontier regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.frsu38.org/frontier-regional-school-committee/",
       "status": "no_future_date"
     },
     "ralph c. mahar regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.rcmahar.org/school-committee",
       "status": "no_future_date"
     },
     "ralph c. mahar regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.rcmahar.org/school-committee",
       "status": "no_future_date"
     },
     "tantasqua regional school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.tantasqua.org/apps/pages/index.jsp?uREC_ID=3617321",
       "status": "fetch_failed"
     },
     "tantasqua regional": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.tantasqua.org/apps/pages/index.jsp?uREC_ID=3617321",
       "status": "fetch_failed"
     },
     "gosnold school district": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townofgosnold.org/school",
       "status": "fetch_failed"
     },
     "gosnold": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townofgosnold.org/school",
       "status": "fetch_failed"
     },
     "berkley public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townofberkleyma.com/school-committee",
       "status": "fetch_failed"
     },
     "berkley": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://www.townofberkleyma.com/school-committee",
       "status": "fetch_failed"
     },
     "brookfield public schools": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://brookfield.bpsma.org/",
       "status": "no_future_date"
     },
     "brookfield": {
       "next_meeting": null,
-      "checked": "2026-07-13",
+      "checked": "2026-07-14",
       "source_url": "https://brookfield.bpsma.org/",
       "status": "no_future_date"
     }
